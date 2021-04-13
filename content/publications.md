@@ -15,6 +15,8 @@ Computer Graphics Forum, Vol 40(2), 2021 (Eurographics 2021, Vienna Austria)
 
 [Paper](/data/4axis.pdf) | [Code](https://github.com/cg3hci/4AxisMilling) | [Data]() | [BibTex](/bibtex/20214axis) | [Digital Library]()
 
+&nbsp;
+
 #### [Split and Mill: user assisted height-field block decomposition for fabrication](/pages/split_and_mill)
 
 ![splitandmill](/images/splitandmill.png)
