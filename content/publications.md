@@ -9,7 +9,7 @@ description: publications
 
 ![4axis](/images/4axis.png)
 
-Stefano Nuvoli, Alessandro Tola, Alessandro Muntoni, Nico Pietroni, Enrico Gobbetti, [Riccardo Scateni](http://people.unica.it/riccardoscateni/)
+Stefano Nuvoli, Alessandro Tola, Alessandro Muntoni, [Nico Pietroni](http://vcg.isti.cnr.it/~pietroni/), [Enrico Gobbetti](https://www.crs4.it/it/peopledetails/8/enrico-gobbetti/), [Riccardo Scateni](http://people.unica.it/riccardoscateni/)
 
 Computer Graphics Forum, Vol 40(2), 2021 (Eurographics 2021, Vienna Austria)
 
