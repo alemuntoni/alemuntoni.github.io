@@ -1,4 +1,9 @@
-# Publications
+---
+title: Publications
+description: publications
+---
+
+### Papers
 
 #### [Split and Mill: user assisted height-field block decomposition for fabrication](/pages/split_and_mill)
 
