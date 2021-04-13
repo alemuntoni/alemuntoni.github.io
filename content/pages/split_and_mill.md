@@ -1,4 +1,7 @@
-# Split and Mill: user assisted height-field block decomposition for fabrication
+---
+title: "Split and Mill: user assisted height-field block decomposition for fabrication"
+description: "Split and Mill"
+---
 
 Alessandro Muntoni (a,b), Lucio Davide Spano (b), Riccardo Scateni (b)
 
