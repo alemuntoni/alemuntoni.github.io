@@ -1,0 +1,22 @@
+```
+@article{muntoni2018axis,
+ author = {Muntoni, Alessandro and Livesu, Marco and Scateni, Riccardo and Sheffer, Alla and Panozzo, Daniele},
+ title = {Axis-Aligned Height-Field Block Decomposition of 3D Shapes},
+ journal = {ACM Trans. Graph.},
+ issue_date = {October 2018},
+ volume = {37},
+ number = {5},
+ month = oct,
+ year = {2018},
+ issn = {0730-0301},
+ pages = {169:1--169:15},
+ articleno = {169},
+ numpages = {15},
+ url = {http://doi.acm.org/10.1145/3204458},
+ doi = {10.1145/3204458},
+ acmid = {3204458},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {Shape decomposition, fabrication},
+}
+```
