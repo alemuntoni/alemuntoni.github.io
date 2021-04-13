@@ -23,7 +23,7 @@ Smart Tools and Applications in Graphics, 2019 (Cagliari, Italy)
 
 Alessandro Muntoni, Stefano Nuvoli, Andreas Scalas, Alessandro Tola, [Luigi Malomo](http://vcg.isti.cnr.it/~malomo/),  [Riccardo Scateni](http://people.unica.it/riccardoscateni/)
 
-Computer & Graphics, 2019
+Computer & Graphics, Vol 80, 17-28, 2019
 
 [Paper](/data/mill_and_fold.pdf) | [Additional Material](/data/mill_and_fold_am.pdf) | [BibTex](/bibtex/2019millandfold) | [Digital Library](https://www.sciencedirect.com/science/article/pii/S0097849319300263#%21)
 
