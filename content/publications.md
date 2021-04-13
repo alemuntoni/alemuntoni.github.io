@@ -13,7 +13,7 @@ Stefano Nuvoli, Alessandro Tola, Alessandro Muntoni, [Nico Pietroni](http://vcg.
 
 Computer Graphics Forum, Vol 40(2), 2021 (Eurographics 2021, Vienna Austria)
 
-[Paper](/data/4axis.pdf) | [Code](https://github.com/cg3hci/4AxisMilling) | [Data]() | [BibTex](/bibtex/20214axis) | [Digital Library]()
+[Paper](/data/4axis.pdf) | [Code](https://github.com/cg3hci/4AxisMilling) | [Data](https://github.com/cg3hci/4AxisMilling/releases/tag/v1.0) | [BibTex](/bibtex/20214axis) | [Digital Library]()
 
 &nbsp;
 
