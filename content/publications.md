@@ -5,7 +5,7 @@ description: publications
 
 ### Papers
 
-#### Automatic surface segmentation for seamless fabrication using 4-axis milling machines
+#### [Automatic surface segmentation for seamless fabrication using 4-axis milling machines](/pages/4_axis_milling)
 
 ![4axis](/images/4axis.png)
 
