@@ -50,6 +50,7 @@ results to demonstrate the quality and efficiency of our approach to a range of 
     volume = {40},
     number = {2},
     year = {2021},
+    doi = {10.1111/cgf.142625},
     note = {To appear},
 }
 ```
