@@ -5,6 +5,26 @@ description: publications
 
 ### Papers
 
+#### TagLab: AI-assisted annotation for the fast and accurate semantic segmentation of coral reef orthoimages
+
+![taglab_ai](/images/taglab_ai.png)
+
+[Gaia Pavoni](http://vcg.isti.cnr.it/~pavoni/), [Massimiliano Corsini](http://vcg.isti.cnr.it/~corsini/), [Federico Ponchio](http://vcg.isti.cnr.it/~ponchio/), Alessandro Muntoni, Nicole Pedersen, Clinton Edwards, Stuart Sandin, [Paolo Cignoni](http://vcg.isti.cnr.it/~cignoni/)
+
+Journal of Field Robotics, 2021, Wiley Online Library.
+
+[Paper](/data/taglab_ai.pdf) | [BibTex](/bibtex/2021taglab_ai) | [Digital Library](https://onlinelibrary.wiley.com/doi/full/10.1002/rob.22049)
+
+#### Taglab: An human-centric AI system for interactive semantic segmentation
+
+![taglab_human_centric_ai](/images/taglab_hcai.png)
+
+[Gaia Pavoni](http://vcg.isti.cnr.it/~pavoni/), [Massimiliano Corsini](http://vcg.isti.cnr.it/~corsini/), [Federico Ponchio](http://vcg.isti.cnr.it/~ponchio/), Alessandro Muntoni, [Paolo Cignoni](http://vcg.isti.cnr.it/~cignoni/)
+
+Human Centered AI Workshop, NeurIPS 2021
+
+[Paper](https://arxiv.org/pdf/2112.12702.pdf) | [BibTex](/bibtex/2021taglab_hcai) | [Digital Library](https://neurips.cc/Conferences/2021/ScheduleMultitrack?event=21841)
+
 #### [Automatic surface segmentation for seamless fabrication using 4-axis milling machines](/pages/4_axis_milling)
 
 ![4axis](/images/4axis.png)
