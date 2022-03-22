@@ -1,5 +1,5 @@
 ```
-@article{pavoni2021taglab,
+@article{pavoni2021taglab_hcai,
   title={TagLab: A human-centric AI system for interactive semantic segmentation},
   author={Pavoni, Gaia and Corsini, Massimiliano and Ponchio, Federico and Muntoni, Alessandro and Cignoni, Paolo},
   journal={arXiv preprint arXiv:2112.12702},

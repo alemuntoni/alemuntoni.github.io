@@ -1,5 +1,5 @@
 ```
-@Article{Nuvoli:2021:ASS,
+@Article{pavoni2021taglab_ai_assisted,
     title={TagLab: AI-assisted annotation for the fast and accurate semantic segmentation of coral reef orthoimages},
     author={Pavoni, Gaia and Corsini, Massimiliano and Ponchio, Federico and Muntoni, Alessandro and Edwards, Clinton and Pedersen, Nicole and Sandin, Stuart and Cignoni, Paolo},
     journal={Journal of Field Robotics},
