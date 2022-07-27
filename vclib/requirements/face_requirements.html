@@ -1,46 +1,34 @@
-<!doctype html>
-<html class="no-js" lang="en">
-  <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Mesh Requirement Functions" href="mesh_requirements.html" /><link rel="prev" title="Vertex Requirement Functions" href="vertex_requirements.html" />
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <meta name="generator" content="sphinx-5.1.1, furo 2022.06.21"/>
-        <title>Face Requirement Functions - VCLib documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
-    <link rel="stylesheet" type="text/css" href="https://assets.readthedocs.org/static/css/badge_only.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
-    
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Face Requirement Functions &mdash; VCLib  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="https://assets.readthedocs.org/static/css/badge_only.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="https://assets.readthedocs.org/static/javascript/readthedocs-doc-embed.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Mesh Requirement Functions" href="mesh_requirements.html" />
+    <link rel="prev" title="Vertex Requirement Functions" href="vertex_requirements.html" /> 
 
-
-<style>
-  body {
-    --color-code-background: #f8f8f8;
-  --color-code-foreground: black;
-  
-  }
-  @media not print {
-    body[data-theme="dark"] {
-      --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
-  
-    }
-    @media (prefers-color-scheme: dark) {
-      body:not([data-theme="light"]) {
-        --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
-  
-      }
-    }
-  }
-</style>
 <!-- RTD Extra Head -->
 
 <link rel="stylesheet" href="https://assets.readthedocs.org/static/css/readthedocs-doc-embed.css" type="text/css" />
 
-<script type="application/json" id="READTHEDOCS_DATA">{"ad_free": "", "api_host": "", "build_date": "2022-07-27T11:33:18Z", "builder": "sphinx", "canonical_url": "", "commit": "", "docroot": "", "features": {"docsearch_disabled": false}, "global_analytics_code": null, "language": "", "page": "requirements/face_requirements", "programming_language": "", "project": "", "source_suffix": ".rst", "subprojects": {}, "theme": "", "user_analytics_code": null, "version": ""}</script>
+<script type="application/json" id="READTHEDOCS_DATA">{"ad_free": "", "api_host": "", "build_date": "2022-07-27T14:13:01Z", "builder": "sphinx", "canonical_url": "", "commit": "", "docroot": "", "features": {"docsearch_disabled": false}, "global_analytics_code": null, "language": "", "page": "requirements/face_requirements", "programming_language": "", "project": "", "source_suffix": ".rst", "subprojects": {}, "theme": "", "user_analytics_code": null, "version": ""}</script>
 
 <!--
 Using this variable directly instead of using `JSON.parse` is deprecated.
@@ -54,237 +42,67 @@ READTHEDOCS_DATA = JSON.parse(document.getElementById('READTHEDOCS_DATA').innerH
 
 <!-- end RTD <extrahead> -->
 </head>
-  <body>
-    
-    <script>
-      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
-    </script>
-    
 
-<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-  <symbol id="svg-toc" viewBox="0 0 24 24">
-    <title>Contents</title>
-    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
-      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
-    </svg>
-  </symbol>
-  <symbol id="svg-menu" viewBox="0 0 24 24">
-    <title>Menu</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
-      <line x1="3" y1="12" x2="21" y2="12"></line>
-      <line x1="3" y1="6" x2="21" y2="6"></line>
-      <line x1="3" y1="18" x2="21" y2="18"></line>
-    </svg>
-  </symbol>
-  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
-    <title>Expand</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
-      <polyline points="9 18 15 12 9 6"></polyline>
-    </svg>
-  </symbol>
-  <symbol id="svg-sun" viewBox="0 0 24 24">
-    <title>Light mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
-      <circle cx="12" cy="12" r="5"></circle>
-      <line x1="12" y1="1" x2="12" y2="3"></line>
-      <line x1="12" y1="21" x2="12" y2="23"></line>
-      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-      <line x1="1" y1="12" x2="3" y2="12"></line>
-      <line x1="21" y1="12" x2="23" y2="12"></line>
-      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-    </svg>
-  </symbol>
-  <symbol id="svg-moon" viewBox="0 0 24 24">
-    <title>Dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
-    </svg>
-  </symbol>
-  <symbol id="svg-sun-half" viewBox="0 0 24 24">
-    <title>Auto light/dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-      <circle cx="12" cy="12" r="9" />
-      <path d="M13 12h5" />
-      <path d="M13 15h4" />
-      <path d="M13 18h1" />
-      <path d="M13 9h4" />
-      <path d="M13 6h1" />
-    </svg>
-  </symbol>
-</svg>
-
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
-<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
-<label class="overlay sidebar-overlay" for="__navigation">
-  <div class="visually-hidden">Hide navigation sidebar</div>
-</label>
-<label class="overlay toc-overlay" for="__toc">
-  <div class="visually-hidden">Hide table of contents sidebar</div>
-</label>
-
-
-
-<div class="page">
-  <header class="mobile-header">
-    <div class="header-left">
-      <label class="nav-overlay-icon" for="__navigation">
-        <div class="visually-hidden">Toggle site navigation sidebar</div>
-        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
-      </label>
-    </div>
-    <div class="header-center">
-      <a href="../index.html"><div class="brand">VCLib  documentation</div></a>
-    </div>
-    <div class="header-right">
-      <div class="theme-toggle-container theme-toggle-header">
-        <button class="theme-toggle">
-          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
-          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
-          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
-          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
-        </button>
-      </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
-        <div class="visually-hidden">Toggle table of contents sidebar</div>
-        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
-      </label>
-    </div>
-  </header>
-  <aside class="sidebar-drawer">
-    <div class="sidebar-container">
-      
-      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
-  
-  
-  <span class="sidebar-brand-text">VCLib  documentation</span>
-  
-</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
-  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
-  <input type="hidden" name="check_keywords" value="yes">
-  <input type="hidden" name="area" value="default">
-</form>
-<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <ul class="current">
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> VCLib
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../basic_concepts.html">Basic Concepts</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../space.html">Spatial and other Data Structures</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../space/box.html">Box</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../space/color.html">Color</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../space/point.html">Point</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../space/principal_curvature.html">Principal Curvature</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../space/tex_coord.html">TexCoord</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../misc/tokenizer.html">Tokenizer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../misc/timer.html">Timer</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../mesh_documentation.html">Mesh Documentation</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../mesh/elements.html">Elements</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../mesh/elements/vertex.html">The Vertex Class</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../mesh/elements/face.html">The Face Class</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../mesh/elements/edge.html">The Edge Class</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../mesh/components.html">Components</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../mesh/components/adjacent_edges.html">Adjacent Edges Component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../mesh/components/adjacent_faces.html">Adjacent Faces Component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../mesh/components/adjacent_vertices.html">Adjacent Vertices Component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../mesh/components/bit_flags.html">Bit Flags Component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../mesh/components/bounding_box.html">Bounding Box Component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../mesh/components/color.html">Color Component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../mesh/components/coordinate.html">Coordinate Component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../mesh/components/mark.html">Mark Component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../mesh/components/normal.html">Normal Component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../mesh/components/scalar.html">Scalar Component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../mesh/components/tex_coord.html">Tex Coord Component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../mesh/components/texture_file_names.html">Texture File Names Component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../mesh/components/transform_matrix.html">Transform Matrix Component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../mesh/components/vertex_references.html">Vertex References Component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../mesh/components/wedge_colors.html">Wedge Colors Component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../mesh/components/wedge_tex_coords.html">Wedge Tex Coords Component</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../mesh/containers.html">Element Containers</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../mesh/containers/vertex_container.html">Vertex Container</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../mesh/containers/face_container.html">Face Container</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../mesh/containers/edge_container.html">Edge Container</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../mesh/mesh_doc.html">Mesh</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../mesh/meshes.html">Built-in Mesh Data Structures</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../mesh/trimesh/trimesh.html">TriMesh</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l4"><a class="reference internal" href="../mesh/mesh_doc.html">Mesh</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../mesh/containers/vertex_container.html">Vertex Container</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../mesh/containers/face_container.html">Face Container</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../mesh/polymesh/polymesh.html">PolyMesh</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1 current has-children"><a class="reference internal" href="../requirements.html">Mesh Requirements</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../space.html">Spatial and other Data Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mesh_documentation.html">Mesh Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../requirements.html">Mesh Requirements</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="element_requirements.html">Element Requirement Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="vertex_requirements.html">Vertex Requirement Functions</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Face Requirement Functions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Face Requirement Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mesh_requirements.html">Mesh Requirement Functions</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../algorithms.html">Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../algorithms/create.html">Create Algorithms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../algorithms/cleaning.html">Cleaning Algorithms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../algorithms/smoothing.html">Smoothing Algorithms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../algorithms/update.html">Update Algorithms</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../algorithms.html">Algorithms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../io.html">Input/Output</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exceptions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../mesh_customization.html">Mesh Customization</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../tutorials.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials</a></li>
 </ul>
 
-</div>
-</div>
-
-      </div>
-      
-    </div>
-  </aside>
-  <div class="main">
-    <div class="content">
-      <div class="article-container">
-        <a href="#" class="back-to-top muted-link">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
-          </svg>
-          <span>Back to top</span>
-        </a>
-        <div class="content-icon-container">
-          <div class="theme-toggle-container theme-toggle-content">
-            <button class="theme-toggle">
-              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
-              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
-              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
-              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
-            </button>
-          </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
-            <div class="visually-hidden">Toggle table of contents sidebar</div>
-            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
-          </label>
         </div>
-        <article role="main">
-          <section id="face-requirement-functions">
-<span id="face-requirements"></span><h1>Face Requirement Functions<a class="headerlink" href="#face-requirement-functions" title="Permalink to this heading">#</a></h1>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VCLib</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../requirements.html">Mesh Requirements</a> &raquo;</li>
+      <li>Face Requirement Functions</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/requirements/face_requirements.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="face-requirement-functions">
+<span id="face-requirements"></span><h1>Face Requirement Functions<a class="headerlink" href="#face-requirement-functions" title="Permalink to this heading"></a></h1>
 <dl class="cpp type">
 <dt class="sig sig-object cpp" id="_CPPv43vcl">
 <span id="_CPPv33vcl"></span><span id="_CPPv23vcl"></span><span id="vcl"></span><span class="target" id="namespacevcl"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vcl</span></span></span><br /></dt>
@@ -292,7 +110,7 @@ READTHEDOCS_DATA = JSON.parse(document.getElementById('READTHEDOCS_DATA').innerH
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl22isFaceContainerCompactEbRK8MeshType">
-<span id="_CPPv3I0EN3vcl22isFaceContainerCompactERK8MeshType"></span><span id="_CPPv2I0EN3vcl22isFaceContainerCompactERK8MeshType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1aca827384c3a3069cf55d77dc48e3f4fa"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isFaceContainerCompact</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl22isFaceContainerCompactEbRK8MeshType" title="vcl::isFaceContainerCompact::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3vcl22isFaceContainerCompactEbRK8MeshType" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3I0EN3vcl22isFaceContainerCompactERK8MeshType"></span><span id="_CPPv2I0EN3vcl22isFaceContainerCompactERK8MeshType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1aca827384c3a3069cf55d77dc48e3f4fa"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isFaceContainerCompact</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl22isFaceContainerCompactEbRK8MeshType" title="vcl::isFaceContainerCompact::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3vcl22isFaceContainerCompactEbRK8MeshType" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the given mesh has its <a class="reference internal" href="../mesh/elements/face.html#classvcl_1_1_face"><span class="std std-ref">Face</span></a> Container compact. Returns <code class="docutils literal notranslate"><span class="pre">false</span></code> if the mesh has no <a class="reference internal" href="../mesh/elements/face.html#classvcl_1_1_face"><span class="std std-ref">Face</span></a> Container. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -306,127 +124,127 @@ READTHEDOCS_DATA = JSON.parse(document.getElementById('READTHEDOCS_DATA').innerH
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl29isPerFaceAdjacentFacesEnabledEbRK8MeshType">
-<span id="_CPPv3I0EN3vcl29isPerFaceAdjacentFacesEnabledERK8MeshType"></span><span id="_CPPv2I0EN3vcl29isPerFaceAdjacentFacesEnabledERK8MeshType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1a0486aed98c9b93d69825d29579c8cefa"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isPerFaceAdjacentFacesEnabled</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl29isPerFaceAdjacentFacesEnabledEbRK8MeshType" title="vcl::isPerFaceAdjacentFacesEnabled::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3vcl29isPerFaceAdjacentFacesEnabledEbRK8MeshType" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3I0EN3vcl29isPerFaceAdjacentFacesEnabledERK8MeshType"></span><span id="_CPPv2I0EN3vcl29isPerFaceAdjacentFacesEnabledERK8MeshType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1a0486aed98c9b93d69825d29579c8cefa"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isPerFaceAdjacentFacesEnabled</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl29isPerFaceAdjacentFacesEnabledEbRK8MeshType" title="vcl::isPerFaceAdjacentFacesEnabled::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3vcl29isPerFaceAdjacentFacesEnabledEbRK8MeshType" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl36enableIfPerFaceAdjacentFacesOptionalEbR8MeshType">
-<span id="_CPPv3I0EN3vcl36enableIfPerFaceAdjacentFacesOptionalER8MeshType"></span><span id="_CPPv2I0EN3vcl36enableIfPerFaceAdjacentFacesOptionalER8MeshType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1acb30f645e6cc1b2c1d8655f445bf1843"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enableIfPerFaceAdjacentFacesOptional</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN3vcl36enableIfPerFaceAdjacentFacesOptionalEbR8MeshType" title="vcl::enableIfPerFaceAdjacentFacesOptional::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3vcl36enableIfPerFaceAdjacentFacesOptionalEbR8MeshType" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3I0EN3vcl36enableIfPerFaceAdjacentFacesOptionalER8MeshType"></span><span id="_CPPv2I0EN3vcl36enableIfPerFaceAdjacentFacesOptionalER8MeshType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1acb30f645e6cc1b2c1d8655f445bf1843"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enableIfPerFaceAdjacentFacesOptional</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN3vcl36enableIfPerFaceAdjacentFacesOptionalEbR8MeshType" title="vcl::enableIfPerFaceAdjacentFacesOptional::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3vcl36enableIfPerFaceAdjacentFacesOptionalEbR8MeshType" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl21isPerFaceColorEnabledEbRK8MeshType">
-<span id="_CPPv3I0EN3vcl21isPerFaceColorEnabledERK8MeshType"></span><span id="_CPPv2I0EN3vcl21isPerFaceColorEnabledERK8MeshType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1af39819c217b9f787d0c228d1c570d327"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isPerFaceColorEnabled</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl21isPerFaceColorEnabledEbRK8MeshType" title="vcl::isPerFaceColorEnabled::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3vcl21isPerFaceColorEnabledEbRK8MeshType" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3I0EN3vcl21isPerFaceColorEnabledERK8MeshType"></span><span id="_CPPv2I0EN3vcl21isPerFaceColorEnabledERK8MeshType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1af39819c217b9f787d0c228d1c570d327"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isPerFaceColorEnabled</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl21isPerFaceColorEnabledEbRK8MeshType" title="vcl::isPerFaceColorEnabled::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3vcl21isPerFaceColorEnabledEbRK8MeshType" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl28enableIfPerFaceColorOptionalEbR8MeshType">
-<span id="_CPPv3I0EN3vcl28enableIfPerFaceColorOptionalER8MeshType"></span><span id="_CPPv2I0EN3vcl28enableIfPerFaceColorOptionalER8MeshType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1af3262073d55561ee24b5cfcc22250ee1"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enableIfPerFaceColorOptional</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN3vcl28enableIfPerFaceColorOptionalEbR8MeshType" title="vcl::enableIfPerFaceColorOptional::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3vcl28enableIfPerFaceColorOptionalEbR8MeshType" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3I0EN3vcl28enableIfPerFaceColorOptionalER8MeshType"></span><span id="_CPPv2I0EN3vcl28enableIfPerFaceColorOptionalER8MeshType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1af3262073d55561ee24b5cfcc22250ee1"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enableIfPerFaceColorOptional</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN3vcl28enableIfPerFaceColorOptionalEbR8MeshType" title="vcl::enableIfPerFaceColorOptional::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3vcl28enableIfPerFaceColorOptionalEbR8MeshType" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl20isPerFaceMarkEnabledEbRK8MeshType">
-<span id="_CPPv3I0EN3vcl20isPerFaceMarkEnabledERK8MeshType"></span><span id="_CPPv2I0EN3vcl20isPerFaceMarkEnabledERK8MeshType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1a882e488c25ef1d9a8de741319f5ab35e"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isPerFaceMarkEnabled</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl20isPerFaceMarkEnabledEbRK8MeshType" title="vcl::isPerFaceMarkEnabled::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3vcl20isPerFaceMarkEnabledEbRK8MeshType" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3I0EN3vcl20isPerFaceMarkEnabledERK8MeshType"></span><span id="_CPPv2I0EN3vcl20isPerFaceMarkEnabledERK8MeshType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1a882e488c25ef1d9a8de741319f5ab35e"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isPerFaceMarkEnabled</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl20isPerFaceMarkEnabledEbRK8MeshType" title="vcl::isPerFaceMarkEnabled::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3vcl20isPerFaceMarkEnabledEbRK8MeshType" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl27enableIfPerFaceMarkOptionalEbR8MeshType">
-<span id="_CPPv3I0EN3vcl27enableIfPerFaceMarkOptionalER8MeshType"></span><span id="_CPPv2I0EN3vcl27enableIfPerFaceMarkOptionalER8MeshType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1a0efcb1c23b82c5c20f26149672806012"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enableIfPerFaceMarkOptional</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN3vcl27enableIfPerFaceMarkOptionalEbR8MeshType" title="vcl::enableIfPerFaceMarkOptional::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3vcl27enableIfPerFaceMarkOptionalEbR8MeshType" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3I0EN3vcl27enableIfPerFaceMarkOptionalER8MeshType"></span><span id="_CPPv2I0EN3vcl27enableIfPerFaceMarkOptionalER8MeshType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1a0efcb1c23b82c5c20f26149672806012"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enableIfPerFaceMarkOptional</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN3vcl27enableIfPerFaceMarkOptionalEbR8MeshType" title="vcl::enableIfPerFaceMarkOptional::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3vcl27enableIfPerFaceMarkOptionalEbR8MeshType" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl22isPerFaceNormalEnabledEbRK8MeshType">
-<span id="_CPPv3I0EN3vcl22isPerFaceNormalEnabledERK8MeshType"></span><span id="_CPPv2I0EN3vcl22isPerFaceNormalEnabledERK8MeshType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1ab2d03c59d458283eca7e0eb2fbaf7053"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isPerFaceNormalEnabled</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl22isPerFaceNormalEnabledEbRK8MeshType" title="vcl::isPerFaceNormalEnabled::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3vcl22isPerFaceNormalEnabledEbRK8MeshType" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3I0EN3vcl22isPerFaceNormalEnabledERK8MeshType"></span><span id="_CPPv2I0EN3vcl22isPerFaceNormalEnabledERK8MeshType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1ab2d03c59d458283eca7e0eb2fbaf7053"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isPerFaceNormalEnabled</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl22isPerFaceNormalEnabledEbRK8MeshType" title="vcl::isPerFaceNormalEnabled::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3vcl22isPerFaceNormalEnabledEbRK8MeshType" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl29enableIfPerFaceNormalOptionalEbR8MeshType">
-<span id="_CPPv3I0EN3vcl29enableIfPerFaceNormalOptionalER8MeshType"></span><span id="_CPPv2I0EN3vcl29enableIfPerFaceNormalOptionalER8MeshType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1af07e8fad913b41d5db61c140e24d35c4"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enableIfPerFaceNormalOptional</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN3vcl29enableIfPerFaceNormalOptionalEbR8MeshType" title="vcl::enableIfPerFaceNormalOptional::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3vcl29enableIfPerFaceNormalOptionalEbR8MeshType" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3I0EN3vcl29enableIfPerFaceNormalOptionalER8MeshType"></span><span id="_CPPv2I0EN3vcl29enableIfPerFaceNormalOptionalER8MeshType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1af07e8fad913b41d5db61c140e24d35c4"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enableIfPerFaceNormalOptional</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN3vcl29enableIfPerFaceNormalOptionalEbR8MeshType" title="vcl::enableIfPerFaceNormalOptional::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3vcl29enableIfPerFaceNormalOptionalEbR8MeshType" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl34isPerFacePrincipalCurvatureEnabledEbRK8MeshType">
-<span id="_CPPv3I0EN3vcl34isPerFacePrincipalCurvatureEnabledERK8MeshType"></span><span id="_CPPv2I0EN3vcl34isPerFacePrincipalCurvatureEnabledERK8MeshType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1a66bf0c5e88fa00f72ef1ed429d1bf9c8"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isPerFacePrincipalCurvatureEnabled</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl34isPerFacePrincipalCurvatureEnabledEbRK8MeshType" title="vcl::isPerFacePrincipalCurvatureEnabled::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3vcl34isPerFacePrincipalCurvatureEnabledEbRK8MeshType" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3I0EN3vcl34isPerFacePrincipalCurvatureEnabledERK8MeshType"></span><span id="_CPPv2I0EN3vcl34isPerFacePrincipalCurvatureEnabledERK8MeshType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1a66bf0c5e88fa00f72ef1ed429d1bf9c8"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isPerFacePrincipalCurvatureEnabled</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl34isPerFacePrincipalCurvatureEnabledEbRK8MeshType" title="vcl::isPerFacePrincipalCurvatureEnabled::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3vcl34isPerFacePrincipalCurvatureEnabledEbRK8MeshType" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl41enableIfPerFacePrincipalCurvatureOptionalEbR8MeshType">
-<span id="_CPPv3I0EN3vcl41enableIfPerFacePrincipalCurvatureOptionalER8MeshType"></span><span id="_CPPv2I0EN3vcl41enableIfPerFacePrincipalCurvatureOptionalER8MeshType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1a7e4d93cc27448070bbb26df5cf3c200a"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enableIfPerFacePrincipalCurvatureOptional</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN3vcl41enableIfPerFacePrincipalCurvatureOptionalEbR8MeshType" title="vcl::enableIfPerFacePrincipalCurvatureOptional::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3vcl41enableIfPerFacePrincipalCurvatureOptionalEbR8MeshType" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3I0EN3vcl41enableIfPerFacePrincipalCurvatureOptionalER8MeshType"></span><span id="_CPPv2I0EN3vcl41enableIfPerFacePrincipalCurvatureOptionalER8MeshType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1a7e4d93cc27448070bbb26df5cf3c200a"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enableIfPerFacePrincipalCurvatureOptional</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN3vcl41enableIfPerFacePrincipalCurvatureOptionalEbR8MeshType" title="vcl::enableIfPerFacePrincipalCurvatureOptional::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3vcl41enableIfPerFacePrincipalCurvatureOptionalEbR8MeshType" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl22isPerFaceScalarEnabledEbRK8MeshType">
-<span id="_CPPv3I0EN3vcl22isPerFaceScalarEnabledERK8MeshType"></span><span id="_CPPv2I0EN3vcl22isPerFaceScalarEnabledERK8MeshType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1a2103ff0400b90b291072164ef4112794"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isPerFaceScalarEnabled</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl22isPerFaceScalarEnabledEbRK8MeshType" title="vcl::isPerFaceScalarEnabled::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3vcl22isPerFaceScalarEnabledEbRK8MeshType" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3I0EN3vcl22isPerFaceScalarEnabledERK8MeshType"></span><span id="_CPPv2I0EN3vcl22isPerFaceScalarEnabledERK8MeshType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1a2103ff0400b90b291072164ef4112794"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isPerFaceScalarEnabled</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl22isPerFaceScalarEnabledEbRK8MeshType" title="vcl::isPerFaceScalarEnabled::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3vcl22isPerFaceScalarEnabledEbRK8MeshType" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl29enableIfPerFaceScalarOptionalEbR8MeshType">
-<span id="_CPPv3I0EN3vcl29enableIfPerFaceScalarOptionalER8MeshType"></span><span id="_CPPv2I0EN3vcl29enableIfPerFaceScalarOptionalER8MeshType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1ac0eb8cf1210036e1819699354a854a76"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enableIfPerFaceScalarOptional</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN3vcl29enableIfPerFaceScalarOptionalEbR8MeshType" title="vcl::enableIfPerFaceScalarOptional::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3vcl29enableIfPerFaceScalarOptionalEbR8MeshType" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3I0EN3vcl29enableIfPerFaceScalarOptionalER8MeshType"></span><span id="_CPPv2I0EN3vcl29enableIfPerFaceScalarOptionalER8MeshType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1ac0eb8cf1210036e1819699354a854a76"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enableIfPerFaceScalarOptional</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN3vcl29enableIfPerFaceScalarOptionalEbR8MeshType" title="vcl::enableIfPerFaceScalarOptional::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3vcl29enableIfPerFaceScalarOptionalEbR8MeshType" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl27isPerFaceWedgeColorsEnabledEbRK8MeshType">
-<span id="_CPPv3I0EN3vcl27isPerFaceWedgeColorsEnabledERK8MeshType"></span><span id="_CPPv2I0EN3vcl27isPerFaceWedgeColorsEnabledERK8MeshType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1a24cf22a3269f6c86954cd90f452f6a91"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isPerFaceWedgeColorsEnabled</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl27isPerFaceWedgeColorsEnabledEbRK8MeshType" title="vcl::isPerFaceWedgeColorsEnabled::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3vcl27isPerFaceWedgeColorsEnabledEbRK8MeshType" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3I0EN3vcl27isPerFaceWedgeColorsEnabledERK8MeshType"></span><span id="_CPPv2I0EN3vcl27isPerFaceWedgeColorsEnabledERK8MeshType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1a24cf22a3269f6c86954cd90f452f6a91"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isPerFaceWedgeColorsEnabled</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl27isPerFaceWedgeColorsEnabledEbRK8MeshType" title="vcl::isPerFaceWedgeColorsEnabled::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3vcl27isPerFaceWedgeColorsEnabledEbRK8MeshType" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl34enableIfPerFaceWedgeColorsOptionalEbR8MeshType">
-<span id="_CPPv3I0EN3vcl34enableIfPerFaceWedgeColorsOptionalER8MeshType"></span><span id="_CPPv2I0EN3vcl34enableIfPerFaceWedgeColorsOptionalER8MeshType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1af2bc7d8c340f922fda76e1d01588433c"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enableIfPerFaceWedgeColorsOptional</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN3vcl34enableIfPerFaceWedgeColorsOptionalEbR8MeshType" title="vcl::enableIfPerFaceWedgeColorsOptional::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3vcl34enableIfPerFaceWedgeColorsOptionalEbR8MeshType" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3I0EN3vcl34enableIfPerFaceWedgeColorsOptionalER8MeshType"></span><span id="_CPPv2I0EN3vcl34enableIfPerFaceWedgeColorsOptionalER8MeshType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1af2bc7d8c340f922fda76e1d01588433c"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enableIfPerFaceWedgeColorsOptional</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN3vcl34enableIfPerFaceWedgeColorsOptionalEbR8MeshType" title="vcl::enableIfPerFaceWedgeColorsOptional::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3vcl34enableIfPerFaceWedgeColorsOptionalEbR8MeshType" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl30isPerFaceWedgeTexCoordsEnabledEbRK8MeshType">
-<span id="_CPPv3I0EN3vcl30isPerFaceWedgeTexCoordsEnabledERK8MeshType"></span><span id="_CPPv2I0EN3vcl30isPerFaceWedgeTexCoordsEnabledERK8MeshType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1aea40a37467f4117bc1d84760bbc8e082"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isPerFaceWedgeTexCoordsEnabled</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl30isPerFaceWedgeTexCoordsEnabledEbRK8MeshType" title="vcl::isPerFaceWedgeTexCoordsEnabled::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3vcl30isPerFaceWedgeTexCoordsEnabledEbRK8MeshType" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3I0EN3vcl30isPerFaceWedgeTexCoordsEnabledERK8MeshType"></span><span id="_CPPv2I0EN3vcl30isPerFaceWedgeTexCoordsEnabledERK8MeshType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1aea40a37467f4117bc1d84760bbc8e082"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isPerFaceWedgeTexCoordsEnabled</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl30isPerFaceWedgeTexCoordsEnabledEbRK8MeshType" title="vcl::isPerFaceWedgeTexCoordsEnabled::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3vcl30isPerFaceWedgeTexCoordsEnabledEbRK8MeshType" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl37enableIfPerFaceWedgeTexCoordsOptionalEbR8MeshType">
-<span id="_CPPv3I0EN3vcl37enableIfPerFaceWedgeTexCoordsOptionalER8MeshType"></span><span id="_CPPv2I0EN3vcl37enableIfPerFaceWedgeTexCoordsOptionalER8MeshType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1a5cfd1a61b06b32978aa70024f8b8e8f3"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enableIfPerFaceWedgeTexCoordsOptional</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN3vcl37enableIfPerFaceWedgeTexCoordsOptionalEbR8MeshType" title="vcl::enableIfPerFaceWedgeTexCoordsOptional::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3vcl37enableIfPerFaceWedgeTexCoordsOptionalEbR8MeshType" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3I0EN3vcl37enableIfPerFaceWedgeTexCoordsOptionalER8MeshType"></span><span id="_CPPv2I0EN3vcl37enableIfPerFaceWedgeTexCoordsOptionalER8MeshType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1a5cfd1a61b06b32978aa70024f8b8e8f3"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enableIfPerFaceWedgeTexCoordsOptional</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN3vcl37enableIfPerFaceWedgeTexCoordsOptionalEbR8MeshType" title="vcl::enableIfPerFaceWedgeTexCoordsOptional::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3vcl37enableIfPerFaceWedgeTexCoordsOptionalEbR8MeshType" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4I_15FaceMeshConceptEN3vcl31requireFaceContainerCompactnessEvRK8MeshType">
-<span id="_CPPv3I_15FaceMeshConceptEN3vcl31requireFaceContainerCompactnessERK8MeshType"></span><span id="_CPPv2I_15FaceMeshConceptEN3vcl31requireFaceContainerCompactnessERK8MeshType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">FaceMeshConcept</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1aa5e8d79003b3a928d430219d244a4855"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requireFaceContainerCompactness</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I_15FaceMeshConceptEN3vcl31requireFaceContainerCompactnessEvRK8MeshType" title="vcl::requireFaceContainerCompactness::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I_15FaceMeshConceptEN3vcl31requireFaceContainerCompactnessEvRK8MeshType" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3I_15FaceMeshConceptEN3vcl31requireFaceContainerCompactnessERK8MeshType"></span><span id="_CPPv2I_15FaceMeshConceptEN3vcl31requireFaceContainerCompactnessERK8MeshType"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">FaceMeshConcept</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1aa5e8d79003b3a928d430219d244a4855"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requireFaceContainerCompactness</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I_15FaceMeshConceptEN3vcl31requireFaceContainerCompactnessEvRK8MeshType" title="vcl::requireFaceContainerCompactness::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I_15FaceMeshConceptEN3vcl31requireFaceContainerCompactnessEvRK8MeshType" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4I_15FaceMeshConceptEIQ23HasPerFaceAdjacentFacesI8MeshTypeEEN3vcl27requirePerFaceAdjacentFacesEvRK8MeshType">
-<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">FaceMeshConcept</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1a192de948b25d011ccbf48489420e7792"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requirePerFaceAdjacentFaces</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I_15FaceMeshConceptEIQ23HasPerFaceAdjacentFacesI8MeshTypeEEN3vcl27requirePerFaceAdjacentFacesEvRK8MeshType" title="vcl::requirePerFaceAdjacentFaces::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I_15FaceMeshConceptEIQ23HasPerFaceAdjacentFacesI8MeshTypeEEN3vcl27requirePerFaceAdjacentFacesEvRK8MeshType" title="Permalink to this definition">#</a><br /><span class="k"><span class="pre">requires</span></span><span class="w"> </span><span class="n"><span class="pre">HasPerFaceAdjacentFaces</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I_15FaceMeshConceptEIQ23HasPerFaceAdjacentFacesI8MeshTypeEEN3vcl27requirePerFaceAdjacentFacesEvRK8MeshType" title="vcl::requirePerFaceAdjacentFaces::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="p"><span class="pre">&gt;</span></span><br /></dt>
+<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">FaceMeshConcept</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1a192de948b25d011ccbf48489420e7792"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requirePerFaceAdjacentFaces</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I_15FaceMeshConceptEIQ23HasPerFaceAdjacentFacesI8MeshTypeEEN3vcl27requirePerFaceAdjacentFacesEvRK8MeshType" title="vcl::requirePerFaceAdjacentFaces::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I_15FaceMeshConceptEIQ23HasPerFaceAdjacentFacesI8MeshTypeEEN3vcl27requirePerFaceAdjacentFacesEvRK8MeshType" title="Permalink to this definition"></a><br /><span class="k"><span class="pre">requires</span></span><span class="w"> </span><span class="n"><span class="pre">HasPerFaceAdjacentFaces</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I_15FaceMeshConceptEIQ23HasPerFaceAdjacentFacesI8MeshTypeEEN3vcl27requirePerFaceAdjacentFacesEvRK8MeshType" title="vcl::requirePerFaceAdjacentFaces::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="p"><span class="pre">&gt;</span></span><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4I_15FaceMeshConceptEIQ15HasPerFaceColorI8MeshTypeEEN3vcl19requirePerFaceColorEvRK8MeshType">
-<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">FaceMeshConcept</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1a4faa80d5d8b8f5664bd2b4aa0f4a29f8"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requirePerFaceColor</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I_15FaceMeshConceptEIQ15HasPerFaceColorI8MeshTypeEEN3vcl19requirePerFaceColorEvRK8MeshType" title="vcl::requirePerFaceColor::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I_15FaceMeshConceptEIQ15HasPerFaceColorI8MeshTypeEEN3vcl19requirePerFaceColorEvRK8MeshType" title="Permalink to this definition">#</a><br /><span class="k"><span class="pre">requires</span></span><span class="w"> </span><span class="n"><span class="pre">HasPerFaceColor</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I_15FaceMeshConceptEIQ15HasPerFaceColorI8MeshTypeEEN3vcl19requirePerFaceColorEvRK8MeshType" title="vcl::requirePerFaceColor::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="p"><span class="pre">&gt;</span></span><br /></dt>
+<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">FaceMeshConcept</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1a4faa80d5d8b8f5664bd2b4aa0f4a29f8"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requirePerFaceColor</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I_15FaceMeshConceptEIQ15HasPerFaceColorI8MeshTypeEEN3vcl19requirePerFaceColorEvRK8MeshType" title="vcl::requirePerFaceColor::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I_15FaceMeshConceptEIQ15HasPerFaceColorI8MeshTypeEEN3vcl19requirePerFaceColorEvRK8MeshType" title="Permalink to this definition"></a><br /><span class="k"><span class="pre">requires</span></span><span class="w"> </span><span class="n"><span class="pre">HasPerFaceColor</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I_15FaceMeshConceptEIQ15HasPerFaceColorI8MeshTypeEEN3vcl19requirePerFaceColorEvRK8MeshType" title="vcl::requirePerFaceColor::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="p"><span class="pre">&gt;</span></span><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4I_15FaceMeshConceptEIQ14HasPerFaceMarkI8MeshTypeEEN3vcl18requirePerFaceMarkEvRK8MeshType">
-<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">FaceMeshConcept</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1a33a928f4a2ee00006fa8b397cdb7082a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requirePerFaceMark</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I_15FaceMeshConceptEIQ14HasPerFaceMarkI8MeshTypeEEN3vcl18requirePerFaceMarkEvRK8MeshType" title="vcl::requirePerFaceMark::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I_15FaceMeshConceptEIQ14HasPerFaceMarkI8MeshTypeEEN3vcl18requirePerFaceMarkEvRK8MeshType" title="Permalink to this definition">#</a><br /><span class="k"><span class="pre">requires</span></span><span class="w"> </span><span class="n"><span class="pre">HasPerFaceMark</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I_15FaceMeshConceptEIQ14HasPerFaceMarkI8MeshTypeEEN3vcl18requirePerFaceMarkEvRK8MeshType" title="vcl::requirePerFaceMark::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="p"><span class="pre">&gt;</span></span><br /></dt>
+<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">FaceMeshConcept</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1a33a928f4a2ee00006fa8b397cdb7082a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requirePerFaceMark</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I_15FaceMeshConceptEIQ14HasPerFaceMarkI8MeshTypeEEN3vcl18requirePerFaceMarkEvRK8MeshType" title="vcl::requirePerFaceMark::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I_15FaceMeshConceptEIQ14HasPerFaceMarkI8MeshTypeEEN3vcl18requirePerFaceMarkEvRK8MeshType" title="Permalink to this definition"></a><br /><span class="k"><span class="pre">requires</span></span><span class="w"> </span><span class="n"><span class="pre">HasPerFaceMark</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I_15FaceMeshConceptEIQ14HasPerFaceMarkI8MeshTypeEEN3vcl18requirePerFaceMarkEvRK8MeshType" title="vcl::requirePerFaceMark::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="p"><span class="pre">&gt;</span></span><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4I_15FaceMeshConceptEIQ16HasPerFaceNormalI8MeshTypeEEN3vcl20requirePerFaceNormalEvRK8MeshType">
-<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">FaceMeshConcept</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1adcafc8bcf6711350e83179e67802cb18"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requirePerFaceNormal</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I_15FaceMeshConceptEIQ16HasPerFaceNormalI8MeshTypeEEN3vcl20requirePerFaceNormalEvRK8MeshType" title="vcl::requirePerFaceNormal::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I_15FaceMeshConceptEIQ16HasPerFaceNormalI8MeshTypeEEN3vcl20requirePerFaceNormalEvRK8MeshType" title="Permalink to this definition">#</a><br /><span class="k"><span class="pre">requires</span></span><span class="w"> </span><span class="n"><span class="pre">HasPerFaceNormal</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I_15FaceMeshConceptEIQ16HasPerFaceNormalI8MeshTypeEEN3vcl20requirePerFaceNormalEvRK8MeshType" title="vcl::requirePerFaceNormal::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="p"><span class="pre">&gt;</span></span><br /></dt>
+<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">FaceMeshConcept</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1adcafc8bcf6711350e83179e67802cb18"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requirePerFaceNormal</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I_15FaceMeshConceptEIQ16HasPerFaceNormalI8MeshTypeEEN3vcl20requirePerFaceNormalEvRK8MeshType" title="vcl::requirePerFaceNormal::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I_15FaceMeshConceptEIQ16HasPerFaceNormalI8MeshTypeEEN3vcl20requirePerFaceNormalEvRK8MeshType" title="Permalink to this definition"></a><br /><span class="k"><span class="pre">requires</span></span><span class="w"> </span><span class="n"><span class="pre">HasPerFaceNormal</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I_15FaceMeshConceptEIQ16HasPerFaceNormalI8MeshTypeEEN3vcl20requirePerFaceNormalEvRK8MeshType" title="vcl::requirePerFaceNormal::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="p"><span class="pre">&gt;</span></span><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4I_15FaceMeshConceptEIQ28HasPerFacePrincipalCurvatureI8MeshTypeEEN3vcl32requirePerFacePrincipalCurvatureEvRK8MeshType">
-<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">FaceMeshConcept</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1aa42daab59912e33251ec36ae63773e6a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requirePerFacePrincipalCurvature</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I_15FaceMeshConceptEIQ28HasPerFacePrincipalCurvatureI8MeshTypeEEN3vcl32requirePerFacePrincipalCurvatureEvRK8MeshType" title="vcl::requirePerFacePrincipalCurvature::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I_15FaceMeshConceptEIQ28HasPerFacePrincipalCurvatureI8MeshTypeEEN3vcl32requirePerFacePrincipalCurvatureEvRK8MeshType" title="Permalink to this definition">#</a><br /><span class="k"><span class="pre">requires</span></span><span class="w"> </span><span class="n"><span class="pre">HasPerFacePrincipalCurvature</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I_15FaceMeshConceptEIQ28HasPerFacePrincipalCurvatureI8MeshTypeEEN3vcl32requirePerFacePrincipalCurvatureEvRK8MeshType" title="vcl::requirePerFacePrincipalCurvature::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="p"><span class="pre">&gt;</span></span><br /></dt>
+<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">FaceMeshConcept</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1aa42daab59912e33251ec36ae63773e6a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requirePerFacePrincipalCurvature</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I_15FaceMeshConceptEIQ28HasPerFacePrincipalCurvatureI8MeshTypeEEN3vcl32requirePerFacePrincipalCurvatureEvRK8MeshType" title="vcl::requirePerFacePrincipalCurvature::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I_15FaceMeshConceptEIQ28HasPerFacePrincipalCurvatureI8MeshTypeEEN3vcl32requirePerFacePrincipalCurvatureEvRK8MeshType" title="Permalink to this definition"></a><br /><span class="k"><span class="pre">requires</span></span><span class="w"> </span><span class="n"><span class="pre">HasPerFacePrincipalCurvature</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I_15FaceMeshConceptEIQ28HasPerFacePrincipalCurvatureI8MeshTypeEEN3vcl32requirePerFacePrincipalCurvatureEvRK8MeshType" title="vcl::requirePerFacePrincipalCurvature::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="p"><span class="pre">&gt;</span></span><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4I_15FaceMeshConceptEIQ16HasPerFaceScalarI8MeshTypeEEN3vcl20requirePerFaceScalarEvRK8MeshType">
-<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">FaceMeshConcept</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1a07dc2393c476906d7fd99b1f42b9e0f5"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requirePerFaceScalar</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I_15FaceMeshConceptEIQ16HasPerFaceScalarI8MeshTypeEEN3vcl20requirePerFaceScalarEvRK8MeshType" title="vcl::requirePerFaceScalar::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I_15FaceMeshConceptEIQ16HasPerFaceScalarI8MeshTypeEEN3vcl20requirePerFaceScalarEvRK8MeshType" title="Permalink to this definition">#</a><br /><span class="k"><span class="pre">requires</span></span><span class="w"> </span><span class="n"><span class="pre">HasPerFaceScalar</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I_15FaceMeshConceptEIQ16HasPerFaceScalarI8MeshTypeEEN3vcl20requirePerFaceScalarEvRK8MeshType" title="vcl::requirePerFaceScalar::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="p"><span class="pre">&gt;</span></span><br /></dt>
+<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">FaceMeshConcept</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1a07dc2393c476906d7fd99b1f42b9e0f5"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requirePerFaceScalar</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I_15FaceMeshConceptEIQ16HasPerFaceScalarI8MeshTypeEEN3vcl20requirePerFaceScalarEvRK8MeshType" title="vcl::requirePerFaceScalar::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I_15FaceMeshConceptEIQ16HasPerFaceScalarI8MeshTypeEEN3vcl20requirePerFaceScalarEvRK8MeshType" title="Permalink to this definition"></a><br /><span class="k"><span class="pre">requires</span></span><span class="w"> </span><span class="n"><span class="pre">HasPerFaceScalar</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I_15FaceMeshConceptEIQ16HasPerFaceScalarI8MeshTypeEEN3vcl20requirePerFaceScalarEvRK8MeshType" title="vcl::requirePerFaceScalar::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="p"><span class="pre">&gt;</span></span><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4I_15FaceMeshConceptEIQ21HasPerFaceWedgeColorsI8MeshTypeEEN3vcl25requirePerFaceWedgeColorsEvRK8MeshType">
-<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">FaceMeshConcept</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1add3c5eff131b01834c4d870da47511a5"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requirePerFaceWedgeColors</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I_15FaceMeshConceptEIQ21HasPerFaceWedgeColorsI8MeshTypeEEN3vcl25requirePerFaceWedgeColorsEvRK8MeshType" title="vcl::requirePerFaceWedgeColors::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I_15FaceMeshConceptEIQ21HasPerFaceWedgeColorsI8MeshTypeEEN3vcl25requirePerFaceWedgeColorsEvRK8MeshType" title="Permalink to this definition">#</a><br /><span class="k"><span class="pre">requires</span></span><span class="w"> </span><span class="n"><span class="pre">HasPerFaceWedgeColors</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I_15FaceMeshConceptEIQ21HasPerFaceWedgeColorsI8MeshTypeEEN3vcl25requirePerFaceWedgeColorsEvRK8MeshType" title="vcl::requirePerFaceWedgeColors::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="p"><span class="pre">&gt;</span></span><br /></dt>
+<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">FaceMeshConcept</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1add3c5eff131b01834c4d870da47511a5"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requirePerFaceWedgeColors</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I_15FaceMeshConceptEIQ21HasPerFaceWedgeColorsI8MeshTypeEEN3vcl25requirePerFaceWedgeColorsEvRK8MeshType" title="vcl::requirePerFaceWedgeColors::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I_15FaceMeshConceptEIQ21HasPerFaceWedgeColorsI8MeshTypeEEN3vcl25requirePerFaceWedgeColorsEvRK8MeshType" title="Permalink to this definition"></a><br /><span class="k"><span class="pre">requires</span></span><span class="w"> </span><span class="n"><span class="pre">HasPerFaceWedgeColors</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I_15FaceMeshConceptEIQ21HasPerFaceWedgeColorsI8MeshTypeEEN3vcl25requirePerFaceWedgeColorsEvRK8MeshType" title="vcl::requirePerFaceWedgeColors::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="p"><span class="pre">&gt;</span></span><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4I_15FaceMeshConceptEIQ24HasPerFaceWedgeTexCoordsI8MeshTypeEEN3vcl28requirePerFaceWedgeTexCoordsEvRK8MeshType">
-<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">FaceMeshConcept</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1ab619b6bba4d1196d55c819e986547b08"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requirePerFaceWedgeTexCoords</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I_15FaceMeshConceptEIQ24HasPerFaceWedgeTexCoordsI8MeshTypeEEN3vcl28requirePerFaceWedgeTexCoordsEvRK8MeshType" title="vcl::requirePerFaceWedgeTexCoords::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I_15FaceMeshConceptEIQ24HasPerFaceWedgeTexCoordsI8MeshTypeEEN3vcl28requirePerFaceWedgeTexCoordsEvRK8MeshType" title="Permalink to this definition">#</a><br /><span class="k"><span class="pre">requires</span></span><span class="w"> </span><span class="n"><span class="pre">HasPerFaceWedgeTexCoords</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I_15FaceMeshConceptEIQ24HasPerFaceWedgeTexCoordsI8MeshTypeEEN3vcl28requirePerFaceWedgeTexCoordsEvRK8MeshType" title="vcl::requirePerFaceWedgeTexCoords::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="p"><span class="pre">&gt;</span></span><br /></dt>
+<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">FaceMeshConcept</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MeshType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1ab619b6bba4d1196d55c819e986547b08"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">requirePerFaceWedgeTexCoords</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I_15FaceMeshConceptEIQ24HasPerFaceWedgeTexCoordsI8MeshTypeEEN3vcl28requirePerFaceWedgeTexCoordsEvRK8MeshType" title="vcl::requirePerFaceWedgeTexCoords::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I_15FaceMeshConceptEIQ24HasPerFaceWedgeTexCoordsI8MeshTypeEEN3vcl28requirePerFaceWedgeTexCoordsEvRK8MeshType" title="Permalink to this definition"></a><br /><span class="k"><span class="pre">requires</span></span><span class="w"> </span><span class="n"><span class="pre">HasPerFaceWedgeTexCoords</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I_15FaceMeshConceptEIQ24HasPerFaceWedgeTexCoordsI8MeshTypeEEN3vcl28requirePerFaceWedgeTexCoordsEvRK8MeshType" title="vcl::requirePerFaceWedgeTexCoords::MeshType"><span class="n"><span class="pre">MeshType</span></span></a><span class="p"><span class="pre">&gt;</span></span><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -434,63 +252,35 @@ READTHEDOCS_DATA = JSON.parse(document.getElementById('READTHEDOCS_DATA').innerH
 
 </section>
 
-        </article>
-      </div>
-      <footer>
-        
-        <div class="related-pages">
-          <a class="next-page" href="mesh_requirements.html">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">Mesh Requirement Functions</div>
-              </div>
-              <svg><use href="#svg-arrow-right"></use></svg>
-            </a>
-          <a class="prev-page" href="vertex_requirements.html">
-              <svg><use href="#svg-arrow-right"></use></svg>
-              <div class="page-info">
-                <div class="context">
-                  <span>Previous</span>
-                </div>
-                
-                <div class="title">Vertex Requirement Functions</div>
-                
-              </div>
-            </a>
-        </div>
-        <div class="bottom-of-page">
-          <div class="left-details">
-            <div class="copyright">
-                Copyright &#169; 2021, Visual Computing Lab, ISTI - CNR
-            </div>
-            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-            
-            <a href="https://github.com/pradyunsg/furo">Furo</a>
-            
+
+           </div>
           </div>
-          <div class="right-details">
-            <div class="icons">
-              
-            </div>
-          </div>
-        </div>
-        
-      </footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="vertex_requirements.html" class="btn btn-neutral float-left" title="Vertex Requirement Functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mesh_requirements.html" class="btn btn-neutral float-right" title="Mesh Requirement Functions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-    <aside class="toc-drawer no-toc">
-      
-      
-      
-    </aside>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Visual Computing Lab, ISTI - CNR.</p>
   </div>
-</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/scripts/furo.js"></script>
-    <script async="async" src="https://assets.readthedocs.org/static/javascript/readthedocs-doc-embed.js"></script>
-    </body>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
 </html>
