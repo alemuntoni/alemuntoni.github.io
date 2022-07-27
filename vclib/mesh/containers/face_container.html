@@ -1,0 +1,645 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Edge Container" href="edge_container.html" /><link rel="prev" title="Vertex Container" href="vertex_container.html" />
+
+    <meta name="generator" content="sphinx-5.1.1, furo 2022.06.21"/>
+        <title>Face Container - VCLib documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
+    <link rel="stylesheet" type="text/css" href="https://assets.readthedocs.org/static/css/badge_only.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style>
+<!-- RTD Extra Head -->
+
+<link rel="stylesheet" href="https://assets.readthedocs.org/static/css/readthedocs-doc-embed.css" type="text/css" />
+
+<script type="application/json" id="READTHEDOCS_DATA">{"ad_free": "", "api_host": "", "build_date": "2022-07-27T11:33:17Z", "builder": "sphinx", "canonical_url": "", "commit": "", "docroot": "", "features": {"docsearch_disabled": false}, "global_analytics_code": null, "language": "", "page": "mesh/containers/face_container", "programming_language": "", "project": "", "source_suffix": ".rst", "subprojects": {}, "theme": "", "user_analytics_code": null, "version": ""}</script>
+
+<!--
+Using this variable directly instead of using `JSON.parse` is deprecated.
+The READTHEDOCS_DATA global variable will be removed in the future.
+-->
+<script type="text/javascript">
+READTHEDOCS_DATA = JSON.parse(document.getElementById('READTHEDOCS_DATA').innerHTML);
+</script>
+
+<script type="text/javascript" src="https://assets.readthedocs.org/static/javascript/readthedocs-analytics.js" async="async"></script>
+
+<!-- end RTD <extrahead> -->
+</head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">VCLib  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  
+  <span class="sidebar-brand-text">VCLib  documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../basic_concepts.html">Basic Concepts</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../space.html">Spatial and other Data Structures</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../space/box.html">Box</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../space/color.html">Color</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../space/point.html">Point</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../space/principal_curvature.html">Principal Curvature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../space/tex_coord.html">TexCoord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/tokenizer.html">Tokenizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/timer.html">Timer</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../../mesh_documentation.html">Mesh Documentation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../elements.html">Elements</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../elements/vertex.html">The Vertex Class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../elements/face.html">The Face Class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../elements/edge.html">The Edge Class</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../components.html">Components</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../components/adjacent_edges.html">Adjacent Edges Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/adjacent_faces.html">Adjacent Faces Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/adjacent_vertices.html">Adjacent Vertices Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/bit_flags.html">Bit Flags Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/bounding_box.html">Bounding Box Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/color.html">Color Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/coordinate.html">Coordinate Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/mark.html">Mark Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/normal.html">Normal Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/scalar.html">Scalar Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/tex_coord.html">Tex Coord Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/texture_file_names.html">Texture File Names Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/transform_matrix.html">Transform Matrix Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/vertex_references.html">Vertex References Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/wedge_colors.html">Wedge Colors Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/wedge_tex_coords.html">Wedge Tex Coords Component</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current has-children"><a class="reference internal" href="../containers.html">Element Containers</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="vertex_container.html">Vertex Container</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Face Container</a></li>
+<li class="toctree-l3"><a class="reference internal" href="edge_container.html">Edge Container</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../mesh_doc.html">Mesh</a></li>
+<li class="toctree-l2 current has-children"><a class="reference internal" href="../meshes.html">Built-in Mesh Data Structures</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3 current has-children"><a class="reference internal" href="../trimesh/trimesh.html">TriMesh</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../mesh_doc.html">Mesh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vertex_container.html">Vertex Container</a></li>
+<li class="toctree-l4 current current-page"><a class="current reference internal" href="#">Face Container</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../polymesh/polymesh.html">PolyMesh</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../requirements.html">Mesh Requirements</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../requirements/element_requirements.html">Element Requirement Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../requirements/vertex_requirements.html">Vertex Requirement Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../requirements/face_requirements.html">Face Requirement Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../requirements/mesh_requirements.html">Mesh Requirement Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../algorithms.html">Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../algorithms/create.html">Create Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algorithms/cleaning.html">Cleaning Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algorithms/smoothing.html">Smoothing Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algorithms/update.html">Update Algorithms</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../io.html">Input/Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exceptions.html">Exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mesh_customization.html">Mesh Customization</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="face-container">
+<span id="id1"></span><h1>Face Container<a class="headerlink" href="#face-container" title="Permalink to this heading">#</a></h1>
+<p>The Face Container class is a container of Faces that can be used in a <a class="reference internal" href="../../mesh_documentation.html#mesh-documentation"><span class="std std-ref">Mesh</span></a> data structure.</p>
+<p>This class adds a container (vector) of faces to the Mesh, making available the accessor members
+to the faces, the face number, iterators… This class will also take care to add
+enablers/disablers of the eventual <a class="reference internal" href="../components.html#components-optional-list"><span class="std std-ref">Optional Components</span></a> of the face.</p>
+<section id="facecontainer-documentation">
+<h2>FaceContainer Documentation<a class="headerlink" href="#facecontainer-documentation" title="Permalink to this heading">#</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4I_11FaceConceptEN3vcl4mesh13FaceContainerE">
+<span id="_CPPv3I_11FaceConceptEN3vcl4mesh13FaceContainerE"></span><span id="_CPPv2I_11FaceConceptEN3vcl4mesh13FaceContainerE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">FaceConcept</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classvcl_1_1mesh_1_1_face_container"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FaceContainer</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">protected</span></span><span class="w"> </span><a class="reference internal" href="../../algorithms/cleaning.html#_CPPv43vcl" title="vcl"><span class="n"><span class="pre">vcl</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">mesh</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ElementContainer</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I_11FaceConceptEN3vcl4mesh13FaceContainerE" title="vcl::mesh::FaceContainer::T"><span class="n"><span class="pre">T</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I_11FaceConceptEN3vcl4mesh13FaceContainerE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>The <a class="reference internal" href="../elements/face.html#classvcl_1_1_face"><span class="std std-ref">Face</span></a> Container class, will be used when the template argument given to the <a class="reference internal" href="../mesh_doc.html#classvcl_1_1_mesh"><span class="std std-ref">Mesh</span></a> is a <a class="reference internal" href="../elements/face.html#classvcl_1_1_face"><span class="std std-ref">Face</span></a>. </p>
+<p>This class adds a container (vector) of faces to the <a class="reference internal" href="../mesh_doc.html#classvcl_1_1_mesh"><span class="std std-ref">Mesh</span></a>, making available the accessors members to the faces, the face number, iterators… This class will also take care to add enablers/disablers of the eventual optional components of the face. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4mesh13FaceContainer4FaceE">
+<span id="_CPPv3N3vcl4mesh13FaceContainer4FaceE"></span><span id="_CPPv2N3vcl4mesh13FaceContainer4FaceE"></span><span class="target" id="classvcl_1_1mesh_1_1_face_container_1a29a1d4bc75492ec6933d8f5925d86512"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Face</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I_11FaceConceptEN3vcl4mesh13FaceContainerE" title="vcl::mesh::FaceContainer::T"><span class="n"><span class="pre">T</span></span></a><a class="headerlink" href="#_CPPv4N3vcl4mesh13FaceContainer4FaceE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4mesh13FaceContainer8FaceTypeE">
+<span id="_CPPv3N3vcl4mesh13FaceContainer8FaceTypeE"></span><span id="_CPPv2N3vcl4mesh13FaceContainer8FaceTypeE"></span><span class="target" id="classvcl_1_1mesh_1_1_face_container_1a95d8f8d22283acc8249d902ad82297e7"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FaceType</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I_11FaceConceptEN3vcl4mesh13FaceContainerE" title="vcl::mesh::FaceContainer::T"><span class="n"><span class="pre">T</span></span></a><a class="headerlink" href="#_CPPv4N3vcl4mesh13FaceContainer8FaceTypeE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4mesh13FaceContainer12FaceIteratorE">
+<span id="_CPPv3N3vcl4mesh13FaceContainer12FaceIteratorE"></span><span id="_CPPv2N3vcl4mesh13FaceContainer12FaceIteratorE"></span><span class="target" id="classvcl_1_1mesh_1_1_face_container_1a9a849f9c60361af35de3a740a61abfe9"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FaceIterator</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="n"><span class="pre">Base</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ElementIterator</span></span><a class="headerlink" href="#_CPPv4N3vcl4mesh13FaceContainer12FaceIteratorE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4mesh13FaceContainer17ConstFaceIteratorE">
+<span id="_CPPv3N3vcl4mesh13FaceContainer17ConstFaceIteratorE"></span><span id="_CPPv2N3vcl4mesh13FaceContainer17ConstFaceIteratorE"></span><span class="target" id="classvcl_1_1mesh_1_1_face_container_1af85d3f776c2bf9d46a6b9eb45c8e07e2"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ConstFaceIterator</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="n"><span class="pre">Base</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ConstElementIterator</span></span><a class="headerlink" href="#_CPPv4N3vcl4mesh13FaceContainer17ConstFaceIteratorE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4mesh13FaceContainer17FaceRangeIteratorE">
+<span id="_CPPv3N3vcl4mesh13FaceContainer17FaceRangeIteratorE"></span><span id="_CPPv2N3vcl4mesh13FaceContainer17FaceRangeIteratorE"></span><span class="target" id="classvcl_1_1mesh_1_1_face_container_1a4f78d7007e251b7e8024248033e21461"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FaceRangeIterator</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="n"><span class="pre">Base</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ElementRangeIterator</span></span><a class="headerlink" href="#_CPPv4N3vcl4mesh13FaceContainer17FaceRangeIteratorE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4mesh13FaceContainer22ConstFaceRangeIteratorE">
+<span id="_CPPv3N3vcl4mesh13FaceContainer22ConstFaceRangeIteratorE"></span><span id="_CPPv2N3vcl4mesh13FaceContainer22ConstFaceRangeIteratorE"></span><span class="target" id="classvcl_1_1mesh_1_1_face_container_1a1c7af7321cee0dd6ae99a0440e51de2f"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ConstFaceRangeIterator</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="n"><span class="pre">Base</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ConstElementRangeIterator</span></span><a class="headerlink" href="#_CPPv4N3vcl4mesh13FaceContainer22ConstFaceRangeIteratorE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4mesh13FaceContainer13FaceContainerEv">
+<span id="_CPPv3N3vcl4mesh13FaceContainer13FaceContainerEv"></span><span id="_CPPv2N3vcl4mesh13FaceContainer13FaceContainerEv"></span><span id="vcl::mesh::FaceContainer::FaceContainer"></span><span class="target" id="classvcl_1_1mesh_1_1_face_container_1abfb773b7cb301c114016762a69c09cbc"></span><span class="sig-name descname"><span class="n"><span class="pre">FaceContainer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl4mesh13FaceContainer13FaceContainerEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Empty constructor that creates an empty container of Faces. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl4mesh13FaceContainer4faceE4uint">
+<span id="_CPPv3NK3vcl4mesh13FaceContainer4faceE4uint"></span><span id="_CPPv2NK3vcl4mesh13FaceContainer4faceE4uint"></span><span id="vcl::mesh::FaceContainer::face__uintC"></span><span class="target" id="classvcl_1_1mesh_1_1_face_container_1a0960fe00b645e7e3e6eb89b596f316b8"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3vcl4mesh13FaceContainer8FaceTypeE" title="vcl::mesh::FaceContainer::FaceType"><span class="n"><span class="pre">FaceType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">face</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">i</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl4mesh13FaceContainer4faceE4uint" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Returns a const reference of the face at the i-th position in the <a class="reference internal" href="../elements/face.html#classvcl_1_1_face"><span class="std std-ref">Face</span></a> Container of the <a class="reference internal" href="../mesh_doc.html#classvcl_1_1_mesh"><span class="std std-ref">Mesh</span></a>, which will be the face having index = i. </p>
+<p>This function does not perform any sanity check: if i is less than <a class="reference internal" href="#classvcl_1_1mesh_1_1_face_container_1a49fed4a20d141d53c42d840b7632f5f3"><span class="std std-ref">faceContainerSize()</span></a>, this function will return a valid <a class="reference internal" href="../elements/face.html#classvcl_1_1_face"><span class="std std-ref">Face</span></a> reference (note that the <a class="reference internal" href="../elements/face.html#classvcl_1_1_face"><span class="std std-ref">Face</span></a> may have been flagged as deleted).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>i</strong> – <strong>[in]</strong> the index of the face that will be returned. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4mesh13FaceContainer4faceE4uint">
+<span id="_CPPv3N3vcl4mesh13FaceContainer4faceE4uint"></span><span id="_CPPv2N3vcl4mesh13FaceContainer4faceE4uint"></span><span id="vcl::mesh::FaceContainer::face__uint"></span><span class="target" id="classvcl_1_1mesh_1_1_face_container_1a5a26ce9b6e3939bac814adc304150618"></span><a class="reference internal" href="#_CPPv4N3vcl4mesh13FaceContainer8FaceTypeE" title="vcl::mesh::FaceContainer::FaceType"><span class="n"><span class="pre">FaceType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">face</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">i</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl4mesh13FaceContainer4faceE4uint" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Returns a reference of the face at the i-th position in the <a class="reference internal" href="../elements/face.html#classvcl_1_1_face"><span class="std std-ref">Face</span></a> Container of the <a class="reference internal" href="../mesh_doc.html#classvcl_1_1_mesh"><span class="std std-ref">Mesh</span></a>, which will be the face having index = i. </p>
+<p>This function does not perform any sanity check: if i is less than <a class="reference internal" href="#classvcl_1_1mesh_1_1_face_container_1a49fed4a20d141d53c42d840b7632f5f3"><span class="std std-ref">faceContainerSize()</span></a>, this function will return a valid <a class="reference internal" href="../elements/face.html#classvcl_1_1_face"><span class="std std-ref">Face</span></a> reference (note that the <a class="reference internal" href="../elements/face.html#classvcl_1_1_face"><span class="std std-ref">Face</span></a> may have been flagged as deleted).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>i</strong> – <strong>[in]</strong> the index of the face that will be returned. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl4mesh13FaceContainer10faceNumberEv">
+<span id="_CPPv3NK3vcl4mesh13FaceContainer10faceNumberEv"></span><span id="_CPPv2NK3vcl4mesh13FaceContainer10faceNumberEv"></span><span id="vcl::mesh::FaceContainer::faceNumberC"></span><span class="target" id="classvcl_1_1mesh_1_1_face_container_1ad63399ad036c6f8b7e1dab9413f0f97e"></span><span class="n"><span class="pre">uint</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">faceNumber</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl4mesh13FaceContainer10faceNumberEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Returns the number of <strong>non-deleted</strong> faces contained in the <a class="reference internal" href="../elements/face.html#classvcl_1_1_face"><span class="std std-ref">Face</span></a> container of the <a class="reference internal" href="../mesh_doc.html#classvcl_1_1_mesh"><span class="std std-ref">Mesh</span></a>. </p>
+<p>If <a class="reference internal" href="#classvcl_1_1mesh_1_1_face_container_1ad63399ad036c6f8b7e1dab9413f0f97e"><span class="std std-ref">faceNumber()</span></a> != <a class="reference internal" href="#classvcl_1_1mesh_1_1_face_container_1a49fed4a20d141d53c42d840b7632f5f3"><span class="std std-ref">faceContainerSize()</span></a>, it means that there are some faces that are flagged as deleted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The number of non-deleted faces of the <a class="reference internal" href="../mesh_doc.html#classvcl_1_1_mesh"><span class="std std-ref">Mesh</span></a>. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl4mesh13FaceContainer17faceContainerSizeEv">
+<span id="_CPPv3NK3vcl4mesh13FaceContainer17faceContainerSizeEv"></span><span id="_CPPv2NK3vcl4mesh13FaceContainer17faceContainerSizeEv"></span><span id="vcl::mesh::FaceContainer::faceContainerSizeC"></span><span class="target" id="classvcl_1_1mesh_1_1_face_container_1a49fed4a20d141d53c42d840b7632f5f3"></span><span class="n"><span class="pre">uint</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">faceContainerSize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl4mesh13FaceContainer17faceContainerSizeEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Returns the number of faces (also deleted) contained in the <a class="reference internal" href="../elements/face.html#classvcl_1_1_face"><span class="std std-ref">Face</span></a> container of the <a class="reference internal" href="../mesh_doc.html#classvcl_1_1_mesh"><span class="std std-ref">Mesh</span></a>. </p>
+<p>If <a class="reference internal" href="#classvcl_1_1mesh_1_1_face_container_1ad63399ad036c6f8b7e1dab9413f0f97e"><span class="std std-ref">faceNumber()</span></a> != <a class="reference internal" href="#classvcl_1_1mesh_1_1_face_container_1a49fed4a20d141d53c42d840b7632f5f3"><span class="std std-ref">faceContainerSize()</span></a>, it means that there are some faces that are flagged as deleted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The number of all the faces contained in the <a class="reference internal" href="../mesh_doc.html#classvcl_1_1_mesh"><span class="std std-ref">Mesh</span></a>. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl4mesh13FaceContainer17deletedFaceNumberEv">
+<span id="_CPPv3NK3vcl4mesh13FaceContainer17deletedFaceNumberEv"></span><span id="_CPPv2NK3vcl4mesh13FaceContainer17deletedFaceNumberEv"></span><span id="vcl::mesh::FaceContainer::deletedFaceNumberC"></span><span class="target" id="classvcl_1_1mesh_1_1_face_container_1aaf73402b0a74e3bcfc5c476dab305fed"></span><span class="n"><span class="pre">uint</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deletedFaceNumber</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl4mesh13FaceContainer17deletedFaceNumberEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Returns the number of deleted faces in the <a class="reference internal" href="../elements/face.html#classvcl_1_1_face"><span class="std std-ref">Face</span></a> container, that is <a class="reference internal" href="#classvcl_1_1mesh_1_1_face_container_1a49fed4a20d141d53c42d840b7632f5f3"><span class="std std-ref">faceContainerSize()</span></a> - <a class="reference internal" href="#classvcl_1_1mesh_1_1_face_container_1ad63399ad036c6f8b7e1dab9413f0f97e"><span class="std std-ref">faceNumber()</span></a>. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The number of deleted faces in the container. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4mesh13FaceContainer10deleteFaceE4uint">
+<span id="_CPPv3N3vcl4mesh13FaceContainer10deleteFaceE4uint"></span><span id="_CPPv2N3vcl4mesh13FaceContainer10deleteFaceE4uint"></span><span id="vcl::mesh::FaceContainer::deleteFace__uint"></span><span class="target" id="classvcl_1_1mesh_1_1_face_container_1ab63d60a0183a9b64577564eb3bf74d89"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deleteFace</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">i</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl4mesh13FaceContainer10deleteFaceE4uint" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Marks as deleted the face with the given id. </p>
+<p>This member function does not perform any reallocation of the faces: the deleted faces will stay in the <a class="reference internal" href="../elements/face.html#classvcl_1_1_face"><span class="std std-ref">Face</span></a> Container, but will be marked as deleted.</p>
+<p>Deleted faces are automatically jumped by the iterators provided by the <a class="reference internal" href="../elements/face.html#classvcl_1_1_face"><span class="std std-ref">Face</span></a> Container.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>i</strong> – <strong>[in]</strong> the id of the face that will be marked as deleted. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4mesh13FaceContainer10deleteFaceEPK8FaceType">
+<span id="_CPPv3N3vcl4mesh13FaceContainer10deleteFaceEPK8FaceType"></span><span id="_CPPv2N3vcl4mesh13FaceContainer10deleteFaceEPK8FaceType"></span><span id="vcl::mesh::FaceContainer::deleteFace__FaceTypeCP"></span><span class="target" id="classvcl_1_1mesh_1_1_face_container_1ab07a6aba8d0ed84b1220cc5b02823ef5"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deleteFace</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3vcl4mesh13FaceContainer8FaceTypeE" title="vcl::mesh::FaceContainer::FaceType"><span class="n"><span class="pre">FaceType</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">f</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl4mesh13FaceContainer10deleteFaceEPK8FaceType" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Marks as deleted the given face, before asserting that the face belongs to this container. </p>
+<p>This member function does not perform any reallocation of the faces: the deleted faces will stay in the <a class="reference internal" href="../elements/face.html#classvcl_1_1_face"><span class="std std-ref">Face</span></a> Container, but will be marked as deleted.</p>
+<p>Deleted faces are automatically jumped by the iterators provided by the <a class="reference internal" href="../elements/face.html#classvcl_1_1_face"><span class="std std-ref">Face</span></a> Container.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>f</strong> – <strong>[in]</strong> the pointer of the face that will be marked as deleted. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl4mesh13FaceContainer18faceIndexIfCompactE4uint">
+<span id="_CPPv3NK3vcl4mesh13FaceContainer18faceIndexIfCompactE4uint"></span><span id="_CPPv2NK3vcl4mesh13FaceContainer18faceIndexIfCompactE4uint"></span><span id="vcl::mesh::FaceContainer::faceIndexIfCompact__uintC"></span><span class="target" id="classvcl_1_1mesh_1_1_face_container_1a9195b86aebc1f0c2d27df42a2d5586c2"></span><span class="n"><span class="pre">uint</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">faceIndexIfCompact</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">id</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl4mesh13FaceContainer18faceIndexIfCompactE4uint" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>This is an utility member function that returns the index of an element if the container would be compact, that is the number of non-deleted elements before the face with the given index. </p>
+<p>Complexity: O(n), with n the number of faces in the container.</p>
+<p>This function does not perform any sanity check on the given index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>i</strong> – <strong>[in]</strong> the index of a face of the container. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The index that the face with index i would have if this container would be compact. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl4mesh13FaceContainer18faceCompactIndicesEv">
+<span id="_CPPv3NK3vcl4mesh13FaceContainer18faceCompactIndicesEv"></span><span id="_CPPv2NK3vcl4mesh13FaceContainer18faceCompactIndicesEv"></span><span id="vcl::mesh::FaceContainer::faceCompactIndicesC"></span><span class="target" id="classvcl_1_1mesh_1_1_face_container_1aa25176c346584a83a7a333e29f9e9b06"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">faceCompactIndices</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl4mesh13FaceContainer18faceCompactIndicesEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Returns a vector that tells, for each actual face index, the new index that the face would have in a compacted container. For each deleted face index, the value of the vector will be -1. </p>
+<p>This is useful if you need to know the indices of the faces that they would have in a compact container, without considering the deleted ones.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A vector containing, for each face index, its index if the container would be compact. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4mesh13FaceContainer9faceBeginEb">
+<span id="_CPPv3N3vcl4mesh13FaceContainer9faceBeginEb"></span><span id="_CPPv2N3vcl4mesh13FaceContainer9faceBeginEb"></span><span id="vcl::mesh::FaceContainer::faceBegin__b"></span><span class="target" id="classvcl_1_1mesh_1_1_face_container_1a7253b4127a51db3e66119569056d2a8b"></span><a class="reference internal" href="#_CPPv4N3vcl4mesh13FaceContainer12FaceIteratorE" title="vcl::mesh::FaceContainer::FaceIterator"><span class="n"><span class="pre">FaceIterator</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">faceBegin</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">jumpDeleted</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl4mesh13FaceContainer9faceBeginEb" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Returns an iterator to the beginning of the container. </p>
+<p>The iterator is automatically initialized to jump deleted faces of the container. You can change this option by calling this function with jumpDeleted=false.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>jumpDeleted</strong> – <strong>[in]</strong> (def: true): boolean that tells if the iterator should jump deleted faces. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator the the first face of the container. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4mesh13FaceContainer7faceEndEv">
+<span id="_CPPv3N3vcl4mesh13FaceContainer7faceEndEv"></span><span id="_CPPv2N3vcl4mesh13FaceContainer7faceEndEv"></span><span id="vcl::mesh::FaceContainer::faceEnd"></span><span class="target" id="classvcl_1_1mesh_1_1_face_container_1a9eae393086ad52311f8e243455212968"></span><a class="reference internal" href="#_CPPv4N3vcl4mesh13FaceContainer12FaceIteratorE" title="vcl::mesh::FaceContainer::FaceIterator"><span class="n"><span class="pre">FaceIterator</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">faceEnd</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl4mesh13FaceContainer7faceEndEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Returns an iterator to the end of the container. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>An iterator to the end of the container. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl4mesh13FaceContainer9faceBeginEb">
+<span id="_CPPv3NK3vcl4mesh13FaceContainer9faceBeginEb"></span><span id="_CPPv2NK3vcl4mesh13FaceContainer9faceBeginEb"></span><span id="vcl::mesh::FaceContainer::faceBegin__bC"></span><span class="target" id="classvcl_1_1mesh_1_1_face_container_1a9169d354e5fd9d1ec11974e6cf2bc8b9"></span><a class="reference internal" href="#_CPPv4N3vcl4mesh13FaceContainer17ConstFaceIteratorE" title="vcl::mesh::FaceContainer::ConstFaceIterator"><span class="n"><span class="pre">ConstFaceIterator</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">faceBegin</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">jumpDeleted</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl4mesh13FaceContainer9faceBeginEb" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Returns a const iterator to the beginning of the container. </p>
+<p>The iterator is automatically initialized to jump deleted faces of the container. You can change this option by calling this function with jumpDeleted=false.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>jumpDeleted</strong> – <strong>[in]</strong> (def: true): boolean that tells if the iterator should jump deleted faces. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A const iterator the the first face of the container. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl4mesh13FaceContainer7faceEndEv">
+<span id="_CPPv3NK3vcl4mesh13FaceContainer7faceEndEv"></span><span id="_CPPv2NK3vcl4mesh13FaceContainer7faceEndEv"></span><span id="vcl::mesh::FaceContainer::faceEndC"></span><span class="target" id="classvcl_1_1mesh_1_1_face_container_1af6dde451b5436bf049fe108264eb26c0"></span><a class="reference internal" href="#_CPPv4N3vcl4mesh13FaceContainer17ConstFaceIteratorE" title="vcl::mesh::FaceContainer::ConstFaceIterator"><span class="n"><span class="pre">ConstFaceIterator</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">faceEnd</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl4mesh13FaceContainer7faceEndEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Returns a const iterator to the end of the container. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A const iterator to the end of the container. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4mesh13FaceContainer5facesEb">
+<span id="_CPPv3N3vcl4mesh13FaceContainer5facesEb"></span><span id="_CPPv2N3vcl4mesh13FaceContainer5facesEb"></span><span id="vcl::mesh::FaceContainer::faces__b"></span><span class="target" id="classvcl_1_1mesh_1_1_face_container_1a7fbdfe62a741fc590ea9b338bd45bc1c"></span><a class="reference internal" href="#_CPPv4N3vcl4mesh13FaceContainer17FaceRangeIteratorE" title="vcl::mesh::FaceContainer::FaceRangeIterator"><span class="n"><span class="pre">FaceRangeIterator</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">faces</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">jumpDeleted</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl4mesh13FaceContainer5facesEb" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Returns a small utility object that allows to iterate over the faces of the containers, providing two member functions begin() and end(). </p>
+<p>This member function is very useful when you want to iterate over the faces using the C++ foreach syntax:</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Face</span><span class="o">&amp;</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">faces</span><span class="p">()){</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// do something with this face</span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</p>
+<p>The iterator used to iterate over faces is automatically initialized to jump deleted faces of the container. You can change this option by calling this function with jumpDeleted=false.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>jumpDeleted</strong> – <strong>[in]</strong> (def: true): boolean that tells if the iterator should jump deleted faces. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An object having begin() and end() function, allowing to iterate over the container. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl4mesh13FaceContainer5facesEb">
+<span id="_CPPv3NK3vcl4mesh13FaceContainer5facesEb"></span><span id="_CPPv2NK3vcl4mesh13FaceContainer5facesEb"></span><span id="vcl::mesh::FaceContainer::faces__bC"></span><span class="target" id="classvcl_1_1mesh_1_1_face_container_1a8fb306a105c0da71bc231d1776431be8"></span><a class="reference internal" href="#_CPPv4N3vcl4mesh13FaceContainer22ConstFaceRangeIteratorE" title="vcl::mesh::FaceContainer::ConstFaceRangeIterator"><span class="n"><span class="pre">ConstFaceRangeIterator</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">faces</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">jumpDeleted</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl4mesh13FaceContainer5facesEb" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Returns a small utility object that allows to iterate over the faces of the containers, providing two member functions begin() and end(). </p>
+<p>This member function is very useful when you want to iterate over the faces using the C++ foreach syntax:</p>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Face</span><span class="o">&amp;</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">faces</span><span class="p">()){</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// do something with this face</span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</p>
+<p>The iterator used to iterate over faces is automatically initialized to jump deleted faces of the container. You can change this option by calling this function with jumpDeleted=false.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>jumpDeleted</strong> – <strong>[in]</strong> (def: true): boolean that tells if the iterator should jump deleted faces. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An object having begin() and end() function, allowing to iterate over the container. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4mesh13FaceContainer34enableAllPerFaceOptionalComponentsEv">
+<span id="_CPPv3N3vcl4mesh13FaceContainer34enableAllPerFaceOptionalComponentsEv"></span><span id="_CPPv2N3vcl4mesh13FaceContainer34enableAllPerFaceOptionalComponentsEv"></span><span id="vcl::mesh::FaceContainer::enableAllPerFaceOptionalComponents"></span><span class="target" id="classvcl_1_1mesh_1_1_face_container_1af23818af311813161dbbcf62b222955b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enableAllPerFaceOptionalComponents</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl4mesh13FaceContainer34enableAllPerFaceOptionalComponentsEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Enables all the optional components associated to the <a class="reference internal" href="../elements/face.html#classvcl_1_1_face"><span class="std std-ref">Face</span></a> type contained in the <a class="reference internal" href="#classvcl_1_1mesh_1_1_face_container"><span class="std std-ref">FaceContainer</span></a>. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4mesh13FaceContainer35disableAllPerFaceOptionalComponentsEv">
+<span id="_CPPv3N3vcl4mesh13FaceContainer35disableAllPerFaceOptionalComponentsEv"></span><span id="_CPPv2N3vcl4mesh13FaceContainer35disableAllPerFaceOptionalComponentsEv"></span><span id="vcl::mesh::FaceContainer::disableAllPerFaceOptionalComponents"></span><span class="target" id="classvcl_1_1mesh_1_1_face_container_1a92d424dfe0ec6171c09a864b68144b98"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">disableAllPerFaceOptionalComponents</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl4mesh13FaceContainer35disableAllPerFaceOptionalComponentsEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Disables all the optional components associated to the <a class="reference internal" href="../elements/face.html#classvcl_1_1_face"><span class="std std-ref">Face</span></a> type contained in the <a class="reference internal" href="#classvcl_1_1mesh_1_1_face_container"><span class="std std-ref">FaceContainer</span></a>. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="edge_container.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Edge Container</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="vertex_container.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Vertex Container</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2021, Visual Computing Lab, ISTI - CNR
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Face Container</a><ul>
+<li><a class="reference internal" href="#facecontainer-documentation">FaceContainer Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/scripts/furo.js"></script>
+    <script async="async" src="https://assets.readthedocs.org/static/javascript/readthedocs-doc-embed.js"></script>
+    </body>
+</html>
