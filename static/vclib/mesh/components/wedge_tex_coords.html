@@ -1,46 +1,34 @@
-<!doctype html>
-<html class="no-js" lang="en">
-  <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Element Containers" href="../containers.html" /><link rel="prev" title="Wedge Colors Component" href="wedge_colors.html" />
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <meta name="generator" content="sphinx-5.1.1, furo 2022.06.21"/>
-        <title>Wedge Tex Coords Component - VCLib documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
-    <link rel="stylesheet" type="text/css" href="https://assets.readthedocs.org/static/css/badge_only.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
-    
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wedge Tex Coords Component &mdash; VCLib  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="https://assets.readthedocs.org/static/css/badge_only.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script async="async" src="https://assets.readthedocs.org/static/javascript/readthedocs-doc-embed.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Element Containers" href="../containers.html" />
+    <link rel="prev" title="Wedge Colors Component" href="wedge_colors.html" /> 
 
-
-<style>
-  body {
-    --color-code-background: #f8f8f8;
-  --color-code-foreground: black;
-  
-  }
-  @media not print {
-    body[data-theme="dark"] {
-      --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
-  
-    }
-    @media (prefers-color-scheme: dark) {
-      body:not([data-theme="light"]) {
-        --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
-  
-      }
-    }
-  }
-</style>
 <!-- RTD Extra Head -->
 
 <link rel="stylesheet" href="https://assets.readthedocs.org/static/css/readthedocs-doc-embed.css" type="text/css" />
 
-<script type="application/json" id="READTHEDOCS_DATA">{"ad_free": "", "api_host": "", "build_date": "2022-07-27T11:33:17Z", "builder": "sphinx", "canonical_url": "", "commit": "", "docroot": "", "features": {"docsearch_disabled": false}, "global_analytics_code": null, "language": "", "page": "mesh/components/wedge_tex_coords", "programming_language": "", "project": "", "source_suffix": ".rst", "subprojects": {}, "theme": "", "user_analytics_code": null, "version": ""}</script>
+<script type="application/json" id="READTHEDOCS_DATA">{"ad_free": "", "api_host": "", "build_date": "2022-07-27T14:13:00Z", "builder": "sphinx", "canonical_url": "", "commit": "", "docroot": "", "features": {"docsearch_disabled": false}, "global_analytics_code": null, "language": "", "page": "mesh/components/wedge_tex_coords", "programming_language": "", "project": "", "source_suffix": ".rst", "subprojects": {}, "theme": "", "user_analytics_code": null, "version": ""}</script>
 
 <!--
 Using this variable directly instead of using `JSON.parse` is deprecated.
@@ -54,265 +42,104 @@ READTHEDOCS_DATA = JSON.parse(document.getElementById('READTHEDOCS_DATA').innerH
 
 <!-- end RTD <extrahead> -->
 </head>
-  <body>
-    
-    <script>
-      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
-    </script>
-    
 
-<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-  <symbol id="svg-toc" viewBox="0 0 24 24">
-    <title>Contents</title>
-    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
-      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
-    </svg>
-  </symbol>
-  <symbol id="svg-menu" viewBox="0 0 24 24">
-    <title>Menu</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
-      <line x1="3" y1="12" x2="21" y2="12"></line>
-      <line x1="3" y1="6" x2="21" y2="6"></line>
-      <line x1="3" y1="18" x2="21" y2="18"></line>
-    </svg>
-  </symbol>
-  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
-    <title>Expand</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
-      <polyline points="9 18 15 12 9 6"></polyline>
-    </svg>
-  </symbol>
-  <symbol id="svg-sun" viewBox="0 0 24 24">
-    <title>Light mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
-      <circle cx="12" cy="12" r="5"></circle>
-      <line x1="12" y1="1" x2="12" y2="3"></line>
-      <line x1="12" y1="21" x2="12" y2="23"></line>
-      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-      <line x1="1" y1="12" x2="3" y2="12"></line>
-      <line x1="21" y1="12" x2="23" y2="12"></line>
-      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-    </svg>
-  </symbol>
-  <symbol id="svg-moon" viewBox="0 0 24 24">
-    <title>Dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
-    </svg>
-  </symbol>
-  <symbol id="svg-sun-half" viewBox="0 0 24 24">
-    <title>Auto light/dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-      <circle cx="12" cy="12" r="9" />
-      <path d="M13 12h5" />
-      <path d="M13 15h4" />
-      <path d="M13 18h1" />
-      <path d="M13 9h4" />
-      <path d="M13 6h1" />
-    </svg>
-  </symbol>
-</svg>
-
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
-<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
-<label class="overlay sidebar-overlay" for="__navigation">
-  <div class="visually-hidden">Hide navigation sidebar</div>
-</label>
-<label class="overlay toc-overlay" for="__toc">
-  <div class="visually-hidden">Hide table of contents sidebar</div>
-</label>
-
-
-
-<div class="page">
-  <header class="mobile-header">
-    <div class="header-left">
-      <label class="nav-overlay-icon" for="__navigation">
-        <div class="visually-hidden">Toggle site navigation sidebar</div>
-        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
-      </label>
-    </div>
-    <div class="header-center">
-      <a href="../../index.html"><div class="brand">VCLib  documentation</div></a>
-    </div>
-    <div class="header-right">
-      <div class="theme-toggle-container theme-toggle-header">
-        <button class="theme-toggle">
-          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
-          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
-          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
-          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
-        </button>
-      </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
-        <div class="visually-hidden">Toggle table of contents sidebar</div>
-        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
-      </label>
-    </div>
-  </header>
-  <aside class="sidebar-drawer">
-    <div class="sidebar-container">
-      
-      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
-  
-  
-  <span class="sidebar-brand-text">VCLib  documentation</span>
-  
-</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
-  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
-  <input type="hidden" name="check_keywords" value="yes">
-  <input type="hidden" name="area" value="default">
-</form>
-<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <ul class="current">
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> VCLib
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../basic_concepts.html">Basic Concepts</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../space.html">Spatial and other Data Structures</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../space/box.html">Box</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../space/color.html">Color</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../space/point.html">Point</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../space/principal_curvature.html">Principal Curvature</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../space/tex_coord.html">TexCoord</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../misc/tokenizer.html">Tokenizer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../misc/timer.html">Timer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../space.html">Spatial and other Data Structures</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../mesh_documentation.html">Mesh Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../mesh_documentation.html#mesh-data-structures">Mesh Data Structures</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../elements.html">Elements</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../components.html">Components</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="../components.html#components-list">Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../components.html#optional-components">Optional Components</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current has-children"><a class="reference internal" href="../../mesh_documentation.html">Mesh Documentation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2 has-children"><a class="reference internal" href="../elements.html">Elements</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../elements/vertex.html">The Vertex Class</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../elements/face.html">The Face Class</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../elements/edge.html">The Edge Class</a></li>
-</ul>
-</li>
-<li class="toctree-l2 current has-children"><a class="reference internal" href="../components.html">Components</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="adjacent_edges.html">Adjacent Edges Component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="adjacent_faces.html">Adjacent Faces Component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="adjacent_vertices.html">Adjacent Vertices Component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bit_flags.html">Bit Flags Component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bounding_box.html">Bounding Box Component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="color.html">Color Component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="coordinate.html">Coordinate Component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="mark.html">Mark Component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="normal.html">Normal Component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="scalar.html">Scalar Component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tex_coord.html">Tex Coord Component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="texture_file_names.html">Texture File Names Component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="transform_matrix.html">Transform Matrix Component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="vertex_references.html">Vertex References Component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wedge_colors.html">Wedge Colors Component</a></li>
-<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Wedge Tex Coords Component</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../containers.html">Element Containers</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../containers/vertex_container.html">Vertex Container</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../containers/face_container.html">Face Container</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../containers/edge_container.html">Edge Container</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../mesh_doc.html">Mesh</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../meshes.html">Built-in Mesh Data Structures</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../trimesh/trimesh.html">TriMesh</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l4"><a class="reference internal" href="../mesh_doc.html">Mesh</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../containers/vertex_container.html">Vertex Container</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../containers/face_container.html">Face Container</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../polymesh/polymesh.html">PolyMesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../containers.html">Element Containers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh_doc.html">Mesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../meshes.html">Built-in Mesh Data Structures</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../requirements.html">Mesh Requirements</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../requirements/element_requirements.html">Element Requirement Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../requirements/vertex_requirements.html">Vertex Requirement Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../requirements/face_requirements.html">Face Requirement Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../requirements/mesh_requirements.html">Mesh Requirement Functions</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../algorithms.html">Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../algorithms/create.html">Create Algorithms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../algorithms/cleaning.html">Cleaning Algorithms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../algorithms/smoothing.html">Smoothing Algorithms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../algorithms/update.html">Update Algorithms</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../requirements.html">Mesh Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../algorithms.html">Algorithms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../io.html">Input/Output</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../exceptions.html">Exceptions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../mesh_customization.html">Mesh Customization</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials.html">Tutorials</a></li>
 </ul>
 
-</div>
-</div>
-
-      </div>
-      
-    </div>
-  </aside>
-  <div class="main">
-    <div class="content">
-      <div class="article-container">
-        <a href="#" class="back-to-top muted-link">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
-          </svg>
-          <span>Back to top</span>
-        </a>
-        <div class="content-icon-container">
-          <div class="theme-toggle-container theme-toggle-content">
-            <button class="theme-toggle">
-              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
-              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
-              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
-              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
-            </button>
-          </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
-            <div class="visually-hidden">Toggle table of contents sidebar</div>
-            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
-          </label>
         </div>
-        <article role="main">
-          <section id="wedge-tex-coords-component">
-<span id="wedge-tex-coords"></span><h1>Wedge Tex Coords Component<a class="headerlink" href="#wedge-tex-coords-component" title="Permalink to this heading">#</a></h1>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">VCLib</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../mesh_documentation.html">Mesh Documentation</a> &raquo;</li>
+          <li><a href="../components.html">Components</a> &raquo;</li>
+      <li>Wedge Tex Coords Component</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/mesh/components/wedge_tex_coords.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="wedge-tex-coords-component">
+<span id="wedge-tex-coords"></span><h1>Wedge Tex Coords Component<a class="headerlink" href="#wedge-tex-coords-component" title="Permalink to this heading"></a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4I0_iEN3vcl4comp14WedgeTexCoordsE">
-<span id="_CPPv3I0_iEN3vcl4comp14WedgeTexCoordsE"></span><span id="_CPPv2I0_iEN3vcl4comp14WedgeTexCoordsE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Scalar</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">N</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WedgeTexCoords</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">protected</span></span><span class="w"> </span><a class="reference internal" href="../../algorithms/cleaning.html#_CPPv43vcl" title="vcl"><span class="n"><span class="pre">vcl</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">internal</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">GenericContainer</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../../algorithms/cleaning.html#_CPPv43vcl" title="vcl"><span class="n"><span class="pre">vcl</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../../space/tex_coord.html#_CPPv4I0EN3vcl8TexCoordE" title="vcl::TexCoord"><span class="n"><span class="pre">TexCoord</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl4comp14WedgeTexCoordsE" title="vcl::comp::WedgeTexCoords::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl4comp14WedgeTexCoordsE" title="vcl::comp::WedgeTexCoords::N"><span class="n"><span class="pre">N</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0_iEN3vcl4comp14WedgeTexCoordsE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3I0_iEN3vcl4comp14WedgeTexCoordsE"></span><span id="_CPPv2I0_iEN3vcl4comp14WedgeTexCoordsE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Scalar</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">N</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WedgeTexCoords</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">protected</span></span><span class="w"> </span><a class="reference internal" href="../../algorithms/cleaning.html#_CPPv43vcl" title="vcl"><span class="n"><span class="pre">vcl</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">internal</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">GenericContainer</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../../algorithms/cleaning.html#_CPPv43vcl" title="vcl"><span class="n"><span class="pre">vcl</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../../space/tex_coord.html#_CPPv4I0EN3vcl8TexCoordE" title="vcl::TexCoord"><span class="n"><span class="pre">TexCoord</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl4comp14WedgeTexCoordsE" title="vcl::comp::WedgeTexCoords::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl4comp14WedgeTexCoordsE" title="vcl::comp::WedgeTexCoords::N"><span class="n"><span class="pre">N</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0_iEN3vcl4comp14WedgeTexCoordsE" title="Permalink to this definition"></a><br /></dt>
 <dd><div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
 <dl class="cpp type">
 <dt class="sig sig-object cpp" id="_CPPv4N3vcl4comp14WedgeTexCoords17WedgeTexCoordTypeE">
-<span id="_CPPv3N3vcl4comp14WedgeTexCoords17WedgeTexCoordTypeE"></span><span id="_CPPv2N3vcl4comp14WedgeTexCoords17WedgeTexCoordTypeE"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1ac4a068bfa57f0bf101a1cf6644683620"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WedgeTexCoordType</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="../../algorithms/cleaning.html#_CPPv43vcl" title="vcl"><span class="n"><span class="pre">vcl</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../../space/tex_coord.html#_CPPv4I0EN3vcl8TexCoordE" title="vcl::TexCoord"><span class="n"><span class="pre">TexCoord</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl4comp14WedgeTexCoordsE" title="vcl::comp::WedgeTexCoords::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N3vcl4comp14WedgeTexCoords17WedgeTexCoordTypeE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3vcl4comp14WedgeTexCoords17WedgeTexCoordTypeE"></span><span id="_CPPv2N3vcl4comp14WedgeTexCoords17WedgeTexCoordTypeE"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1ac4a068bfa57f0bf101a1cf6644683620"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WedgeTexCoordType</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="../../algorithms/cleaning.html#_CPPv43vcl" title="vcl"><span class="n"><span class="pre">vcl</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../../space/tex_coord.html#_CPPv4I0EN3vcl8TexCoordE" title="vcl::TexCoord"><span class="n"><span class="pre">TexCoord</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl4comp14WedgeTexCoordsE" title="vcl::comp::WedgeTexCoords::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N3vcl4comp14WedgeTexCoords17WedgeTexCoordTypeE" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp type">
 <dt class="sig sig-object cpp" id="_CPPv4N3vcl4comp14WedgeTexCoords22WedgeTexCoordsIteratorE">
-<span id="_CPPv3N3vcl4comp14WedgeTexCoords22WedgeTexCoordsIteratorE"></span><span id="_CPPv2N3vcl4comp14WedgeTexCoords22WedgeTexCoordsIteratorE"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1af5dd3065e579e411fa0ef384a0106cea"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WedgeTexCoordsIterator</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="n"><span class="pre">Base</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">GCIterator</span></span><a class="headerlink" href="#_CPPv4N3vcl4comp14WedgeTexCoords22WedgeTexCoordsIteratorE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3vcl4comp14WedgeTexCoords22WedgeTexCoordsIteratorE"></span><span id="_CPPv2N3vcl4comp14WedgeTexCoords22WedgeTexCoordsIteratorE"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1af5dd3065e579e411fa0ef384a0106cea"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WedgeTexCoordsIterator</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="n"><span class="pre">Base</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">GCIterator</span></span><a class="headerlink" href="#_CPPv4N3vcl4comp14WedgeTexCoords22WedgeTexCoordsIteratorE" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp type">
 <dt class="sig sig-object cpp" id="_CPPv4N3vcl4comp14WedgeTexCoords27ConstWedgeTexCoordsIteratorE">
-<span id="_CPPv3N3vcl4comp14WedgeTexCoords27ConstWedgeTexCoordsIteratorE"></span><span id="_CPPv2N3vcl4comp14WedgeTexCoords27ConstWedgeTexCoordsIteratorE"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1a7f185ffd939d26bcffb911fde0448f0d"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ConstWedgeTexCoordsIterator</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="n"><span class="pre">Base</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ConstGCIterator</span></span><a class="headerlink" href="#_CPPv4N3vcl4comp14WedgeTexCoords27ConstWedgeTexCoordsIteratorE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3vcl4comp14WedgeTexCoords27ConstWedgeTexCoordsIteratorE"></span><span id="_CPPv2N3vcl4comp14WedgeTexCoords27ConstWedgeTexCoordsIteratorE"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1a7f185ffd939d26bcffb911fde0448f0d"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ConstWedgeTexCoordsIterator</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="n"><span class="pre">Base</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ConstGCIterator</span></span><a class="headerlink" href="#_CPPv4N3vcl4comp14WedgeTexCoords27ConstWedgeTexCoordsIteratorE" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp type">
 <dt class="sig sig-object cpp" id="_CPPv4N3vcl4comp14WedgeTexCoords27WedgeTexCoordsRangeIteratorE">
-<span id="_CPPv3N3vcl4comp14WedgeTexCoords27WedgeTexCoordsRangeIteratorE"></span><span id="_CPPv2N3vcl4comp14WedgeTexCoords27WedgeTexCoordsRangeIteratorE"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1abbf11502a7c759a2394a2a28812fc38b"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WedgeTexCoordsRangeIterator</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="n"><span class="pre">Base</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">GCRangeIterator</span></span><a class="headerlink" href="#_CPPv4N3vcl4comp14WedgeTexCoords27WedgeTexCoordsRangeIteratorE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3vcl4comp14WedgeTexCoords27WedgeTexCoordsRangeIteratorE"></span><span id="_CPPv2N3vcl4comp14WedgeTexCoords27WedgeTexCoordsRangeIteratorE"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1abbf11502a7c759a2394a2a28812fc38b"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WedgeTexCoordsRangeIterator</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="n"><span class="pre">Base</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">GCRangeIterator</span></span><a class="headerlink" href="#_CPPv4N3vcl4comp14WedgeTexCoords27WedgeTexCoordsRangeIteratorE" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp type">
 <dt class="sig sig-object cpp" id="_CPPv4N3vcl4comp14WedgeTexCoords32ConstWedgeTexCoordsRangeIteratorE">
-<span id="_CPPv3N3vcl4comp14WedgeTexCoords32ConstWedgeTexCoordsRangeIteratorE"></span><span id="_CPPv2N3vcl4comp14WedgeTexCoords32ConstWedgeTexCoordsRangeIteratorE"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1afc9aef84719fbac5674b1842ed08b162"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ConstWedgeTexCoordsRangeIterator</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="n"><span class="pre">Base</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ConstGCRangeIterator</span></span><a class="headerlink" href="#_CPPv4N3vcl4comp14WedgeTexCoords32ConstWedgeTexCoordsRangeIteratorE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3vcl4comp14WedgeTexCoords32ConstWedgeTexCoordsRangeIteratorE"></span><span id="_CPPv2N3vcl4comp14WedgeTexCoords32ConstWedgeTexCoordsRangeIteratorE"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1afc9aef84719fbac5674b1842ed08b162"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ConstWedgeTexCoordsRangeIterator</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="n"><span class="pre">Base</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ConstGCRangeIterator</span></span><a class="headerlink" href="#_CPPv4N3vcl4comp14WedgeTexCoords32ConstWedgeTexCoordsRangeIteratorE" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -320,72 +147,72 @@ READTHEDOCS_DATA = JSON.parse(document.getElementById('READTHEDOCS_DATA').innerH
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3vcl4comp14WedgeTexCoords14WedgeTexCoordsEv">
-<span id="_CPPv3N3vcl4comp14WedgeTexCoords14WedgeTexCoordsEv"></span><span id="_CPPv2N3vcl4comp14WedgeTexCoords14WedgeTexCoordsEv"></span><span id="vcl::comp::WedgeTexCoords::WedgeTexCoords"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1a25b959bbadaf4e52e8c83676852630b2"></span><span class="sig-name descname"><span class="n"><span class="pre">WedgeTexCoords</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl4comp14WedgeTexCoords14WedgeTexCoordsEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3vcl4comp14WedgeTexCoords14WedgeTexCoordsEv"></span><span id="_CPPv2N3vcl4comp14WedgeTexCoords14WedgeTexCoordsEv"></span><span id="vcl::comp::WedgeTexCoords::WedgeTexCoords"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1a25b959bbadaf4e52e8c83676852630b2"></span><span class="sig-name descname"><span class="n"><span class="pre">WedgeTexCoords</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl4comp14WedgeTexCoords14WedgeTexCoordsEv" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3vcl4comp14WedgeTexCoords13wedgeTexCoordE4uint">
-<span id="_CPPv3N3vcl4comp14WedgeTexCoords13wedgeTexCoordE4uint"></span><span id="_CPPv2N3vcl4comp14WedgeTexCoords13wedgeTexCoordE4uint"></span><span id="vcl::comp::WedgeTexCoords::wedgeTexCoord__uint"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1ad7b1f8df8baede11e636b70c4d2a7088"></span><a class="reference internal" href="../../algorithms/cleaning.html#_CPPv43vcl" title="vcl"><span class="n"><span class="pre">vcl</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../../space/tex_coord.html#_CPPv4I0EN3vcl8TexCoordE" title="vcl::TexCoord"><span class="n"><span class="pre">TexCoord</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl4comp14WedgeTexCoordsE" title="vcl::comp::WedgeTexCoords::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">wedgeTexCoord</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">i</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl4comp14WedgeTexCoords13wedgeTexCoordE4uint" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3vcl4comp14WedgeTexCoords13wedgeTexCoordE4uint"></span><span id="_CPPv2N3vcl4comp14WedgeTexCoords13wedgeTexCoordE4uint"></span><span id="vcl::comp::WedgeTexCoords::wedgeTexCoord__uint"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1ad7b1f8df8baede11e636b70c4d2a7088"></span><a class="reference internal" href="../../algorithms/cleaning.html#_CPPv43vcl" title="vcl"><span class="n"><span class="pre">vcl</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../../space/tex_coord.html#_CPPv4I0EN3vcl8TexCoordE" title="vcl::TexCoord"><span class="n"><span class="pre">TexCoord</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl4comp14WedgeTexCoordsE" title="vcl::comp::WedgeTexCoords::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">wedgeTexCoord</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">i</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl4comp14WedgeTexCoords13wedgeTexCoordE4uint" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK3vcl4comp14WedgeTexCoords13wedgeTexCoordE4uint">
-<span id="_CPPv3NK3vcl4comp14WedgeTexCoords13wedgeTexCoordE4uint"></span><span id="_CPPv2NK3vcl4comp14WedgeTexCoords13wedgeTexCoordE4uint"></span><span id="vcl::comp::WedgeTexCoords::wedgeTexCoord__uintC"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1a6c60ee47da66c32f2163c28da2d1551e"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="../../algorithms/cleaning.html#_CPPv43vcl" title="vcl"><span class="n"><span class="pre">vcl</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../../space/tex_coord.html#_CPPv4I0EN3vcl8TexCoordE" title="vcl::TexCoord"><span class="n"><span class="pre">TexCoord</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl4comp14WedgeTexCoordsE" title="vcl::comp::WedgeTexCoords::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">wedgeTexCoord</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">i</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl4comp14WedgeTexCoords13wedgeTexCoordE4uint" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3NK3vcl4comp14WedgeTexCoords13wedgeTexCoordE4uint"></span><span id="_CPPv2NK3vcl4comp14WedgeTexCoords13wedgeTexCoordE4uint"></span><span id="vcl::comp::WedgeTexCoords::wedgeTexCoord__uintC"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1a6c60ee47da66c32f2163c28da2d1551e"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="../../algorithms/cleaning.html#_CPPv43vcl" title="vcl"><span class="n"><span class="pre">vcl</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../../space/tex_coord.html#_CPPv4I0EN3vcl8TexCoordE" title="vcl::TexCoord"><span class="n"><span class="pre">TexCoord</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl4comp14WedgeTexCoordsE" title="vcl::comp::WedgeTexCoords::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">wedgeTexCoord</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">i</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl4comp14WedgeTexCoords13wedgeTexCoordE4uint" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3vcl4comp14WedgeTexCoords16wedgeTexCoordModEi">
-<span id="_CPPv3N3vcl4comp14WedgeTexCoords16wedgeTexCoordModEi"></span><span id="_CPPv2N3vcl4comp14WedgeTexCoords16wedgeTexCoordModEi"></span><span id="vcl::comp::WedgeTexCoords::wedgeTexCoordMod__i"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1a2e91ab42102f4626beec4b5a55cd2c5e"></span><a class="reference internal" href="../../algorithms/cleaning.html#_CPPv43vcl" title="vcl"><span class="n"><span class="pre">vcl</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../../space/tex_coord.html#_CPPv4I0EN3vcl8TexCoordE" title="vcl::TexCoord"><span class="n"><span class="pre">TexCoord</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl4comp14WedgeTexCoordsE" title="vcl::comp::WedgeTexCoords::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">wedgeTexCoordMod</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">i</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl4comp14WedgeTexCoords16wedgeTexCoordModEi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3vcl4comp14WedgeTexCoords16wedgeTexCoordModEi"></span><span id="_CPPv2N3vcl4comp14WedgeTexCoords16wedgeTexCoordModEi"></span><span id="vcl::comp::WedgeTexCoords::wedgeTexCoordMod__i"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1a2e91ab42102f4626beec4b5a55cd2c5e"></span><a class="reference internal" href="../../algorithms/cleaning.html#_CPPv43vcl" title="vcl"><span class="n"><span class="pre">vcl</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../../space/tex_coord.html#_CPPv4I0EN3vcl8TexCoordE" title="vcl::TexCoord"><span class="n"><span class="pre">TexCoord</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl4comp14WedgeTexCoordsE" title="vcl::comp::WedgeTexCoords::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">wedgeTexCoordMod</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">i</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl4comp14WedgeTexCoords16wedgeTexCoordModEi" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK3vcl4comp14WedgeTexCoords16wedgeTexCoordModEi">
-<span id="_CPPv3NK3vcl4comp14WedgeTexCoords16wedgeTexCoordModEi"></span><span id="_CPPv2NK3vcl4comp14WedgeTexCoords16wedgeTexCoordModEi"></span><span id="vcl::comp::WedgeTexCoords::wedgeTexCoordMod__iC"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1ae04fd6baae656a785c897c90614f987b"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="../../algorithms/cleaning.html#_CPPv43vcl" title="vcl"><span class="n"><span class="pre">vcl</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../../space/tex_coord.html#_CPPv4I0EN3vcl8TexCoordE" title="vcl::TexCoord"><span class="n"><span class="pre">TexCoord</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl4comp14WedgeTexCoordsE" title="vcl::comp::WedgeTexCoords::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">wedgeTexCoordMod</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">i</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl4comp14WedgeTexCoords16wedgeTexCoordModEi" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3NK3vcl4comp14WedgeTexCoords16wedgeTexCoordModEi"></span><span id="_CPPv2NK3vcl4comp14WedgeTexCoords16wedgeTexCoordModEi"></span><span id="vcl::comp::WedgeTexCoords::wedgeTexCoordMod__iC"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1ae04fd6baae656a785c897c90614f987b"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="../../algorithms/cleaning.html#_CPPv43vcl" title="vcl"><span class="n"><span class="pre">vcl</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../../space/tex_coord.html#_CPPv4I0EN3vcl8TexCoordE" title="vcl::TexCoord"><span class="n"><span class="pre">TexCoord</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl4comp14WedgeTexCoordsE" title="vcl::comp::WedgeTexCoords::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">wedgeTexCoordMod</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">i</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl4comp14WedgeTexCoords16wedgeTexCoordModEi" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3vcl4comp14WedgeTexCoords16setWedgeTexCoordERKN3vcl8TexCoordI6ScalarEE4uint">
-<span id="_CPPv3N3vcl4comp14WedgeTexCoords16setWedgeTexCoordERKN3vcl8TexCoordI6ScalarEE4uint"></span><span id="_CPPv2N3vcl4comp14WedgeTexCoords16setWedgeTexCoordERKN3vcl8TexCoordI6ScalarEE4uint"></span><span id="vcl::comp::WedgeTexCoords::setWedgeTexCoord__vcl::TexCoord:Scalar:CR.uint"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1a8f045b6bc1336f4eaa39af40b43eb402"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setWedgeTexCoord</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="../../algorithms/cleaning.html#_CPPv43vcl" title="vcl"><span class="n"><span class="pre">vcl</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../../space/tex_coord.html#_CPPv4I0EN3vcl8TexCoordE" title="vcl::TexCoord"><span class="n"><span class="pre">TexCoord</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl4comp14WedgeTexCoordsE" title="vcl::comp::WedgeTexCoords::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">t</span></span>, <span class="n"><span class="pre">uint</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">i</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl4comp14WedgeTexCoords16setWedgeTexCoordERKN3vcl8TexCoordI6ScalarEE4uint" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3vcl4comp14WedgeTexCoords16setWedgeTexCoordERKN3vcl8TexCoordI6ScalarEE4uint"></span><span id="_CPPv2N3vcl4comp14WedgeTexCoords16setWedgeTexCoordERKN3vcl8TexCoordI6ScalarEE4uint"></span><span id="vcl::comp::WedgeTexCoords::setWedgeTexCoord__vcl::TexCoord:Scalar:CR.uint"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1a8f045b6bc1336f4eaa39af40b43eb402"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setWedgeTexCoord</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="../../algorithms/cleaning.html#_CPPv43vcl" title="vcl"><span class="n"><span class="pre">vcl</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../../space/tex_coord.html#_CPPv4I0EN3vcl8TexCoordE" title="vcl::TexCoord"><span class="n"><span class="pre">TexCoord</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl4comp14WedgeTexCoordsE" title="vcl::comp::WedgeTexCoords::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">t</span></span>, <span class="n"><span class="pre">uint</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">i</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl4comp14WedgeTexCoords16setWedgeTexCoordERKN3vcl8TexCoordI6ScalarEE4uint" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3vcl4comp14WedgeTexCoords17setWedgeTexCoordsERKNSt6vectorIN3vcl8TexCoordI6ScalarEEEE">
-<span id="_CPPv3N3vcl4comp14WedgeTexCoords17setWedgeTexCoordsERKNSt6vectorIN3vcl8TexCoordI6ScalarEEEE"></span><span id="_CPPv2N3vcl4comp14WedgeTexCoords17setWedgeTexCoordsERKNSt6vectorIN3vcl8TexCoordI6ScalarEEEE"></span><span id="vcl::comp::WedgeTexCoords::setWedgeTexCoords__std::vector:vcl::TexCoord:Scalar::CR"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1aad920fb1731bc5cc2eb139c365a16518"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setWedgeTexCoords</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../../algorithms/cleaning.html#_CPPv43vcl" title="vcl"><span class="n"><span class="pre">vcl</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../../space/tex_coord.html#_CPPv4I0EN3vcl8TexCoordE" title="vcl::TexCoord"><span class="n"><span class="pre">TexCoord</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl4comp14WedgeTexCoordsE" title="vcl::comp::WedgeTexCoords::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">list</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl4comp14WedgeTexCoords17setWedgeTexCoordsERKNSt6vectorIN3vcl8TexCoordI6ScalarEEEE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3vcl4comp14WedgeTexCoords17setWedgeTexCoordsERKNSt6vectorIN3vcl8TexCoordI6ScalarEEEE"></span><span id="_CPPv2N3vcl4comp14WedgeTexCoords17setWedgeTexCoordsERKNSt6vectorIN3vcl8TexCoordI6ScalarEEEE"></span><span id="vcl::comp::WedgeTexCoords::setWedgeTexCoords__std::vector:vcl::TexCoord:Scalar::CR"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1aad920fb1731bc5cc2eb139c365a16518"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setWedgeTexCoords</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../../algorithms/cleaning.html#_CPPv43vcl" title="vcl"><span class="n"><span class="pre">vcl</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../../space/tex_coord.html#_CPPv4I0EN3vcl8TexCoordE" title="vcl::TexCoord"><span class="n"><span class="pre">TexCoord</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl4comp14WedgeTexCoordsE" title="vcl::comp::WedgeTexCoords::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">list</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl4comp14WedgeTexCoords17setWedgeTexCoordsERKNSt6vectorIN3vcl8TexCoordI6ScalarEEEE" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK3vcl4comp14WedgeTexCoords23isWedgeTexCoordsEnabledEv">
-<span id="_CPPv3NK3vcl4comp14WedgeTexCoords23isWedgeTexCoordsEnabledEv"></span><span id="_CPPv2NK3vcl4comp14WedgeTexCoords23isWedgeTexCoordsEnabledEv"></span><span id="vcl::comp::WedgeTexCoords::isWedgeTexCoordsEnabledCCE"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1a2db645073d73965b876ce2d85c4d605c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">constexpr</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isWedgeTexCoordsEnabled</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl4comp14WedgeTexCoords23isWedgeTexCoordsEnabledEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3NK3vcl4comp14WedgeTexCoords23isWedgeTexCoordsEnabledEv"></span><span id="_CPPv2NK3vcl4comp14WedgeTexCoords23isWedgeTexCoordsEnabledEv"></span><span id="vcl::comp::WedgeTexCoords::isWedgeTexCoordsEnabledCCE"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1a2db645073d73965b876ce2d85c4d605c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">constexpr</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isWedgeTexCoordsEnabled</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl4comp14WedgeTexCoords23isWedgeTexCoordsEnabledEv" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3vcl4comp14WedgeTexCoords18wedgeTexCoordBeginEv">
-<span id="_CPPv3N3vcl4comp14WedgeTexCoords18wedgeTexCoordBeginEv"></span><span id="_CPPv2N3vcl4comp14WedgeTexCoords18wedgeTexCoordBeginEv"></span><span id="vcl::comp::WedgeTexCoords::wedgeTexCoordBegin"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1a358ac9668412e28a5a9c7d34e09c4433"></span><a class="reference internal" href="#_CPPv4N3vcl4comp14WedgeTexCoords22WedgeTexCoordsIteratorE" title="vcl::comp::WedgeTexCoords::WedgeTexCoordsIterator"><span class="n"><span class="pre">WedgeTexCoordsIterator</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">wedgeTexCoordBegin</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl4comp14WedgeTexCoords18wedgeTexCoordBeginEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3vcl4comp14WedgeTexCoords18wedgeTexCoordBeginEv"></span><span id="_CPPv2N3vcl4comp14WedgeTexCoords18wedgeTexCoordBeginEv"></span><span id="vcl::comp::WedgeTexCoords::wedgeTexCoordBegin"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1a358ac9668412e28a5a9c7d34e09c4433"></span><a class="reference internal" href="#_CPPv4N3vcl4comp14WedgeTexCoords22WedgeTexCoordsIteratorE" title="vcl::comp::WedgeTexCoords::WedgeTexCoordsIterator"><span class="n"><span class="pre">WedgeTexCoordsIterator</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">wedgeTexCoordBegin</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl4comp14WedgeTexCoords18wedgeTexCoordBeginEv" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3vcl4comp14WedgeTexCoords16wedgeTexCoordEndEv">
-<span id="_CPPv3N3vcl4comp14WedgeTexCoords16wedgeTexCoordEndEv"></span><span id="_CPPv2N3vcl4comp14WedgeTexCoords16wedgeTexCoordEndEv"></span><span id="vcl::comp::WedgeTexCoords::wedgeTexCoordEnd"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1a98aa4af4bc9e5eb4fe510258467499ad"></span><a class="reference internal" href="#_CPPv4N3vcl4comp14WedgeTexCoords22WedgeTexCoordsIteratorE" title="vcl::comp::WedgeTexCoords::WedgeTexCoordsIterator"><span class="n"><span class="pre">WedgeTexCoordsIterator</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">wedgeTexCoordEnd</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl4comp14WedgeTexCoords16wedgeTexCoordEndEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3vcl4comp14WedgeTexCoords16wedgeTexCoordEndEv"></span><span id="_CPPv2N3vcl4comp14WedgeTexCoords16wedgeTexCoordEndEv"></span><span id="vcl::comp::WedgeTexCoords::wedgeTexCoordEnd"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1a98aa4af4bc9e5eb4fe510258467499ad"></span><a class="reference internal" href="#_CPPv4N3vcl4comp14WedgeTexCoords22WedgeTexCoordsIteratorE" title="vcl::comp::WedgeTexCoords::WedgeTexCoordsIterator"><span class="n"><span class="pre">WedgeTexCoordsIterator</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">wedgeTexCoordEnd</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl4comp14WedgeTexCoords16wedgeTexCoordEndEv" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK3vcl4comp14WedgeTexCoords18wedgeTexCoordBeginEv">
-<span id="_CPPv3NK3vcl4comp14WedgeTexCoords18wedgeTexCoordBeginEv"></span><span id="_CPPv2NK3vcl4comp14WedgeTexCoords18wedgeTexCoordBeginEv"></span><span id="vcl::comp::WedgeTexCoords::wedgeTexCoordBeginC"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1a1dfbb659623179171c8a58f0cbb0090e"></span><a class="reference internal" href="#_CPPv4N3vcl4comp14WedgeTexCoords27ConstWedgeTexCoordsIteratorE" title="vcl::comp::WedgeTexCoords::ConstWedgeTexCoordsIterator"><span class="n"><span class="pre">ConstWedgeTexCoordsIterator</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">wedgeTexCoordBegin</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl4comp14WedgeTexCoords18wedgeTexCoordBeginEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3NK3vcl4comp14WedgeTexCoords18wedgeTexCoordBeginEv"></span><span id="_CPPv2NK3vcl4comp14WedgeTexCoords18wedgeTexCoordBeginEv"></span><span id="vcl::comp::WedgeTexCoords::wedgeTexCoordBeginC"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1a1dfbb659623179171c8a58f0cbb0090e"></span><a class="reference internal" href="#_CPPv4N3vcl4comp14WedgeTexCoords27ConstWedgeTexCoordsIteratorE" title="vcl::comp::WedgeTexCoords::ConstWedgeTexCoordsIterator"><span class="n"><span class="pre">ConstWedgeTexCoordsIterator</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">wedgeTexCoordBegin</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl4comp14WedgeTexCoords18wedgeTexCoordBeginEv" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK3vcl4comp14WedgeTexCoords16wedgeTexCoordEndEv">
-<span id="_CPPv3NK3vcl4comp14WedgeTexCoords16wedgeTexCoordEndEv"></span><span id="_CPPv2NK3vcl4comp14WedgeTexCoords16wedgeTexCoordEndEv"></span><span id="vcl::comp::WedgeTexCoords::wedgeTexCoordEndC"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1ad42f7ac685fb6e4ceaff970cdb731160"></span><a class="reference internal" href="#_CPPv4N3vcl4comp14WedgeTexCoords27ConstWedgeTexCoordsIteratorE" title="vcl::comp::WedgeTexCoords::ConstWedgeTexCoordsIterator"><span class="n"><span class="pre">ConstWedgeTexCoordsIterator</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">wedgeTexCoordEnd</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl4comp14WedgeTexCoords16wedgeTexCoordEndEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3NK3vcl4comp14WedgeTexCoords16wedgeTexCoordEndEv"></span><span id="_CPPv2NK3vcl4comp14WedgeTexCoords16wedgeTexCoordEndEv"></span><span id="vcl::comp::WedgeTexCoords::wedgeTexCoordEndC"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1ad42f7ac685fb6e4ceaff970cdb731160"></span><a class="reference internal" href="#_CPPv4N3vcl4comp14WedgeTexCoords27ConstWedgeTexCoordsIteratorE" title="vcl::comp::WedgeTexCoords::ConstWedgeTexCoordsIterator"><span class="n"><span class="pre">ConstWedgeTexCoordsIterator</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">wedgeTexCoordEnd</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl4comp14WedgeTexCoords16wedgeTexCoordEndEv" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3vcl4comp14WedgeTexCoords14wedgeTexCoordsEv">
-<span id="_CPPv3N3vcl4comp14WedgeTexCoords14wedgeTexCoordsEv"></span><span id="_CPPv2N3vcl4comp14WedgeTexCoords14wedgeTexCoordsEv"></span><span id="vcl::comp::WedgeTexCoords::wedgeTexCoords"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1ae99020fc916ee1f126b13a0ecbc798c8"></span><a class="reference internal" href="#_CPPv4N3vcl4comp14WedgeTexCoords27WedgeTexCoordsRangeIteratorE" title="vcl::comp::WedgeTexCoords::WedgeTexCoordsRangeIterator"><span class="n"><span class="pre">WedgeTexCoordsRangeIterator</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">wedgeTexCoords</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl4comp14WedgeTexCoords14wedgeTexCoordsEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3vcl4comp14WedgeTexCoords14wedgeTexCoordsEv"></span><span id="_CPPv2N3vcl4comp14WedgeTexCoords14wedgeTexCoordsEv"></span><span id="vcl::comp::WedgeTexCoords::wedgeTexCoords"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1ae99020fc916ee1f126b13a0ecbc798c8"></span><a class="reference internal" href="#_CPPv4N3vcl4comp14WedgeTexCoords27WedgeTexCoordsRangeIteratorE" title="vcl::comp::WedgeTexCoords::WedgeTexCoordsRangeIterator"><span class="n"><span class="pre">WedgeTexCoordsRangeIterator</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">wedgeTexCoords</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl4comp14WedgeTexCoords14wedgeTexCoordsEv" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK3vcl4comp14WedgeTexCoords14wedgeTexCoordsEv">
-<span id="_CPPv3NK3vcl4comp14WedgeTexCoords14wedgeTexCoordsEv"></span><span id="_CPPv2NK3vcl4comp14WedgeTexCoords14wedgeTexCoordsEv"></span><span id="vcl::comp::WedgeTexCoords::wedgeTexCoordsC"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1a297e73df103dd8f1975f1735e1c66c71"></span><a class="reference internal" href="#_CPPv4N3vcl4comp14WedgeTexCoords32ConstWedgeTexCoordsRangeIteratorE" title="vcl::comp::WedgeTexCoords::ConstWedgeTexCoordsRangeIterator"><span class="n"><span class="pre">ConstWedgeTexCoordsRangeIterator</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">wedgeTexCoords</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl4comp14WedgeTexCoords14wedgeTexCoordsEv" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3NK3vcl4comp14WedgeTexCoords14wedgeTexCoordsEv"></span><span id="_CPPv2NK3vcl4comp14WedgeTexCoords14wedgeTexCoordsEv"></span><span id="vcl::comp::WedgeTexCoords::wedgeTexCoordsC"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1a297e73df103dd8f1975f1735e1c66c71"></span><a class="reference internal" href="#_CPPv4N3vcl4comp14WedgeTexCoords32ConstWedgeTexCoordsRangeIteratorE" title="vcl::comp::WedgeTexCoords::ConstWedgeTexCoordsRangeIterator"><span class="n"><span class="pre">ConstWedgeTexCoordsRangeIterator</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">wedgeTexCoords</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl4comp14WedgeTexCoords14wedgeTexCoordsEv" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -393,7 +220,7 @@ READTHEDOCS_DATA = JSON.parse(document.getElementById('READTHEDOCS_DATA').innerH
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-attributes">Public Static Attributes</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N3vcl4comp14WedgeTexCoords22WEDGE_TEX_COORD_NUMBERE">
-<span id="_CPPv3N3vcl4comp14WedgeTexCoords22WEDGE_TEX_COORD_NUMBERE"></span><span id="_CPPv2N3vcl4comp14WedgeTexCoords22WEDGE_TEX_COORD_NUMBERE"></span><span id="vcl::comp::WedgeTexCoords::WEDGE_TEX_COORD_NUMBER__iC"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1a339a82d9ce04947a7454649948fbecbf"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WEDGE_TEX_COORD_NUMBER</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">Base</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CONTAINER_SIZE</span></span><a class="headerlink" href="#_CPPv4N3vcl4comp14WedgeTexCoords22WEDGE_TEX_COORD_NUMBERE" title="Permalink to this definition">#</a><br /></dt>
+<span id="_CPPv3N3vcl4comp14WedgeTexCoords22WEDGE_TEX_COORD_NUMBERE"></span><span id="_CPPv2N3vcl4comp14WedgeTexCoords22WEDGE_TEX_COORD_NUMBERE"></span><span id="vcl::comp::WedgeTexCoords::WEDGE_TEX_COORD_NUMBER__iC"></span><span class="target" id="classvcl_1_1comp_1_1_wedge_tex_coords_1a339a82d9ce04947a7454649948fbecbf"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WEDGE_TEX_COORD_NUMBER</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">Base</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CONTAINER_SIZE</span></span><a class="headerlink" href="#_CPPv4N3vcl4comp14WedgeTexCoords22WEDGE_TEX_COORD_NUMBERE" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -401,63 +228,35 @@ READTHEDOCS_DATA = JSON.parse(document.getElementById('READTHEDOCS_DATA').innerH
 
 </section>
 
-        </article>
-      </div>
-      <footer>
-        
-        <div class="related-pages">
-          <a class="next-page" href="../containers.html">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">Element Containers</div>
-              </div>
-              <svg><use href="#svg-arrow-right"></use></svg>
-            </a>
-          <a class="prev-page" href="wedge_colors.html">
-              <svg><use href="#svg-arrow-right"></use></svg>
-              <div class="page-info">
-                <div class="context">
-                  <span>Previous</span>
-                </div>
-                
-                <div class="title">Wedge Colors Component</div>
-                
-              </div>
-            </a>
-        </div>
-        <div class="bottom-of-page">
-          <div class="left-details">
-            <div class="copyright">
-                Copyright &#169; 2021, Visual Computing Lab, ISTI - CNR
-            </div>
-            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-            
-            <a href="https://github.com/pradyunsg/furo">Furo</a>
-            
+
+           </div>
           </div>
-          <div class="right-details">
-            <div class="icons">
-              
-            </div>
-          </div>
-        </div>
-        
-      </footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="wedge_colors.html" class="btn btn-neutral float-left" title="Wedge Colors Component" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../containers.html" class="btn btn-neutral float-right" title="Element Containers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
-    <aside class="toc-drawer no-toc">
-      
-      
-      
-    </aside>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Visual Computing Lab, ISTI - CNR.</p>
   </div>
-</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/scripts/furo.js"></script>
-    <script async="async" src="https://assets.readthedocs.org/static/javascript/readthedocs-doc-embed.js"></script>
-    </body>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
 </html>
