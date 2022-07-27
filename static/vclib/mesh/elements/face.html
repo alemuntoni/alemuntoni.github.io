@@ -1,0 +1,821 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="The Edge Class" href="edge.html" /><link rel="prev" title="The Vertex Class" href="vertex.html" />
+
+    <meta name="generator" content="sphinx-5.1.1, furo 2022.06.21"/>
+        <title>The Face Class - VCLib documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
+    <link rel="stylesheet" type="text/css" href="https://assets.readthedocs.org/static/css/badge_only.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style>
+<!-- RTD Extra Head -->
+
+<link rel="stylesheet" href="https://assets.readthedocs.org/static/css/readthedocs-doc-embed.css" type="text/css" />
+
+<script type="application/json" id="READTHEDOCS_DATA">{"ad_free": "", "api_host": "", "build_date": "2022-07-27T11:33:17Z", "builder": "sphinx", "canonical_url": "", "commit": "", "docroot": "", "features": {"docsearch_disabled": false}, "global_analytics_code": null, "language": "", "page": "mesh/elements/face", "programming_language": "", "project": "", "source_suffix": ".rst", "subprojects": {}, "theme": "", "user_analytics_code": null, "version": ""}</script>
+
+<!--
+Using this variable directly instead of using `JSON.parse` is deprecated.
+The READTHEDOCS_DATA global variable will be removed in the future.
+-->
+<script type="text/javascript">
+READTHEDOCS_DATA = JSON.parse(document.getElementById('READTHEDOCS_DATA').innerHTML);
+</script>
+
+<script type="text/javascript" src="https://assets.readthedocs.org/static/javascript/readthedocs-analytics.js" async="async"></script>
+
+<!-- end RTD <extrahead> -->
+</head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">VCLib  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  
+  <span class="sidebar-brand-text">VCLib  documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../basic_concepts.html">Basic Concepts</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../space.html">Spatial and other Data Structures</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../space/box.html">Box</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../space/color.html">Color</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../space/point.html">Point</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../space/principal_curvature.html">Principal Curvature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../space/tex_coord.html">TexCoord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/tokenizer.html">Tokenizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../misc/timer.html">Timer</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../../mesh_documentation.html">Mesh Documentation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 current has-children"><a class="reference internal" href="../elements.html">Elements</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="vertex.html">The Vertex Class</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">The Face Class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="edge.html">The Edge Class</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../components.html">Components</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../components/adjacent_edges.html">Adjacent Edges Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/adjacent_faces.html">Adjacent Faces Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/adjacent_vertices.html">Adjacent Vertices Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/bit_flags.html">Bit Flags Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/bounding_box.html">Bounding Box Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/color.html">Color Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/coordinate.html">Coordinate Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/mark.html">Mark Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/normal.html">Normal Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/scalar.html">Scalar Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/tex_coord.html">Tex Coord Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/texture_file_names.html">Texture File Names Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/transform_matrix.html">Transform Matrix Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/vertex_references.html">Vertex References Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/wedge_colors.html">Wedge Colors Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/wedge_tex_coords.html">Wedge Tex Coords Component</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../containers.html">Element Containers</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../containers/vertex_container.html">Vertex Container</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../containers/face_container.html">Face Container</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../containers/edge_container.html">Edge Container</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../mesh_doc.html">Mesh</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../meshes.html">Built-in Mesh Data Structures</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../trimesh/trimesh.html">TriMesh</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../mesh_doc.html">Mesh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../containers/vertex_container.html">Vertex Container</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../containers/face_container.html">Face Container</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../polymesh/polymesh.html">PolyMesh</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../requirements.html">Mesh Requirements</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../requirements/element_requirements.html">Element Requirement Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../requirements/vertex_requirements.html">Vertex Requirement Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../requirements/face_requirements.html">Face Requirement Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../requirements/mesh_requirements.html">Mesh Requirement Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../algorithms.html">Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../algorithms/create.html">Create Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algorithms/cleaning.html">Cleaning Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algorithms/smoothing.html">Smoothing Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../algorithms/update.html">Update Algorithms</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../io.html">Input/Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../exceptions.html">Exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mesh_customization.html">Mesh Customization</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="the-face-class">
+<span id="face"></span><h1>The Face Class<a class="headerlink" href="#the-face-class" title="Permalink to this heading">#</a></h1>
+<p>The Face Class is one of the possible <a class="reference internal" href="../elements.html#elements"><span class="std std-ref">Elements</span></a> of a <a class="reference internal" href="../../mesh_documentation.html#mesh-documentation"><span class="std std-ref">Mesh</span></a>
+of VCLib. It’s duty is to contain a set of <a class="reference internal" href="../components.html#components-list"><span class="std std-ref">Components</span></a> or <a class="reference internal" href="../components.html#components-optional-list"><span class="std std-ref">Optional Components</span></a>,
+exposing the member functions of each component.</p>
+<p>All the components that can be part of Faces are defined inside the <code class="docutils literal notranslate"><span class="pre">vcl::face</span></code>
+namespace, but you always can include any other component in your custom Face
+definition.</p>
+<p>When it is included in a Mesh definition, the Mesh will automatically instantiate
+a <a class="reference internal" href="../containers/face_container.html#face-container"><span class="std std-ref">Face Container</span></a>, exposing its members to the <a class="reference internal" href="../../mesh_documentation.html#mesh-documentation"><span class="std std-ref">Mesh</span></a> class.</p>
+<p>Duty of the Face class is also to keep the data contained in its various components
+consistent.</p>
+<p>For example, consider the following Face definition:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vclib/mesh/mesh.h&gt;</span><span class="cp"></span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">MyFace</span><span class="w"> </span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="n">vcl</span><span class="o">::</span><span class="n">Face</span><span class="o">&lt;</span><span class="w"></span>
+<span class="w">        </span><span class="n">vcl</span><span class="o">::</span><span class="n">face</span><span class="o">::</span><span class="n">PolygonVertexRefs</span><span class="o">&lt;</span><span class="n">MyVertex</span><span class="o">&gt;</span><span class="w"></span>
+<span class="w">        </span><span class="n">vcl</span><span class="o">::</span><span class="n">face</span><span class="o">::</span><span class="n">PolygonBitFlags</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="n">vcl</span><span class="o">::</span><span class="n">face</span><span class="o">::</span><span class="n">AdjacentPolygons</span><span class="o">&lt;</span><span class="n">MyFace</span><span class="o">&gt;&gt;</span><span class="w"></span>
+<span class="p">{};</span><span class="w"></span>
+</pre></div>
+</div>
+<p>When a Face is Polygonal and stores <a class="reference internal" href="../components/adjacent_faces.html#adjacent-faces"><span class="std std-ref">Adjacent Faces Component</span></a> (<code class="docutils literal notranslate"><span class="pre">AdjacentPolygons</span></code> component),
+normally the number of adjacent polygons is tied to the number of vertices (that
+is the number of edges) of the polygon. This is automatically done by the Face
+class, that when modifying in some way the number of vertices of the Face, will
+update also all the number of all the components that are tied to the number of
+vertices.
+The automatic update is performed for polygonal faces (dynamic size of the
+<a class="reference internal" href="../components/vertex_references.html#vertex-references"><span class="std std-ref">Vertex References Component</span></a>), but the property of having components tied to the
+number of vertices is valid also for static sized <a class="reference internal" href="../components/vertex_references.html#vertex-references"><span class="std std-ref">Vertex References Component</span></a> (e.g. triangles).
+In fact, when declaring a Face having, for example, <code class="docutils literal notranslate"><span class="pre">TriangleVertexRefs</span></code>, you’ll
+be forced to use the component <code class="docutils literal notranslate"><span class="pre">AdjacentTraingles&lt;Face&gt;</span></code> (or <code class="docutils literal notranslate"><span class="pre">AdjacentFaces&lt;Face,</span> <span class="pre">3&gt;</span></code>).</p>
+<p>Generally speaking, the size of the containers tied to the vertex number of the
+face will always be the same both at compile and at run time.</p>
+<p>Face components tied to the size of the <a class="reference internal" href="../components/vertex_references.html#vertex-references"><span class="std std-ref">Vertex References Component</span></a> are:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../components/adjacent_edges.html#adjacent-edges"><span class="std std-ref">Adjacent Edges Component</span></a></p></li>
+<li><p><a class="reference internal" href="../components/adjacent_faces.html#adjacent-faces"><span class="std std-ref">Adjacent Faces Component</span></a></p></li>
+<li><p><a class="reference internal" href="../components/wedge_colors.html#wedge-colors"><span class="std std-ref">Wedge Colors Component</span></a></p></li>
+<li><p><a class="reference internal" href="../components/wedge_tex_coords.html#wedge-tex-coords"><span class="std std-ref">Wedge Tex Coords Component</span></a></p></li>
+</ul>
+<section id="face-class-definition">
+<h2>Face Class Definition<a class="headerlink" href="#face-class-definition" title="Permalink to this heading">#</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4IDpEN3vcl4FaceE">
+<span id="_CPPv3IDpEN3vcl4FaceE"></span><span id="_CPPv2IDpEN3vcl4FaceE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="sig-name descname"><span class="n"><span class="pre">Args</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classvcl_1_1_face"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Face</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4IDpEN3vcl4FaceE" title="vcl::Face::Args"><span class="n"><span class="pre">Args</span></span></a><a class="headerlink" href="#_CPPv4IDpEN3vcl4FaceE" title="Permalink to this definition">#</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4Face10VertexTypeE">
+<span id="_CPPv3N3vcl4Face10VertexTypeE"></span><span id="_CPPv2N3vcl4Face10VertexTypeE"></span><span class="target" id="classvcl_1_1_face_1ad44af8e8e8aa7e4ccaa8afc5821ce6e1"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VertexType</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="n"><span class="pre">VRefs</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">VertexType</span></span><a class="headerlink" href="#_CPPv4N3vcl4Face10VertexTypeE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4Face4FaceEv">
+<span id="_CPPv3N3vcl4Face4FaceEv"></span><span id="_CPPv2N3vcl4Face4FaceEv"></span><span id="vcl::Face::Face"></span><span class="target" id="classvcl_1_1_face_1aabccc3ab1c8057592bd7f35eb359e9b5"></span><span class="sig-name descname"><span class="n"><span class="pre">Face</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl4Face4FaceEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4Face4FaceERKNSt6vectorIP10VertexTypeEE">
+<span id="_CPPv3N3vcl4Face4FaceERKNSt6vectorIP10VertexTypeEE"></span><span id="_CPPv2N3vcl4Face4FaceERKNSt6vectorIP10VertexTypeEE"></span><span id="vcl::Face::Face__std::vector:VertexTypeP:CR"></span><span class="target" id="classvcl_1_1_face_1a161494eb3ce4ffe2848efeb8631a9770"></span><span class="sig-name descname"><span class="n"><span class="pre">Face</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N3vcl4Face10VertexTypeE" title="vcl::Face::VertexType"><span class="n"><span class="pre">VertexType</span></span></a><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">list</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl4Face4FaceERKNSt6vectorIP10VertexTypeEE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4IDpEN3vcl4Face4FaceEDp1V">
+<span id="_CPPv3IDpEN3vcl4Face4FaceEDp1V"></span><span id="_CPPv2IDpEN3vcl4Face4FaceEDp1V"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="sig-name descname"><span class="n"><span class="pre">V</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classvcl_1_1_face_1a7e3705863282dab2a1f8d8058834dd74"></span><span class="sig-name descname"><span class="n"><span class="pre">Face</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4IDpEN3vcl4Face4FaceEDp1V" title="vcl::Face::Face::V"><span class="n"><span class="pre">V</span></span></a><span class="p"><span class="pre">...</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">args</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4IDpEN3vcl4Face4FaceEDp1V" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4Face11setVerticesERKNSt6vectorIP10VertexTypeEE">
+<span id="_CPPv3N3vcl4Face11setVerticesERKNSt6vectorIP10VertexTypeEE"></span><span id="_CPPv2N3vcl4Face11setVerticesERKNSt6vectorIP10VertexTypeEE"></span><span id="vcl::Face::setVertices__std::vector:VertexTypeP:CR"></span><span class="target" id="classvcl_1_1_face_1a9a1b6ab117ec2c691ea573ac9d28575f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setVertices</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N3vcl4Face10VertexTypeE" title="vcl::Face::VertexType"><span class="n"><span class="pre">VertexType</span></span></a><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">list</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl4Face11setVerticesERKNSt6vectorIP10VertexTypeEE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Sets a list of <a class="reference internal" href="vertex.html#classvcl_1_1_vertex"><span class="std std-ref">Vertex</span></a> references to the face. If the <a class="reference internal" href="#classvcl_1_1_face"><span class="std std-ref">Face</span></a> size is dynamic, will take care to update the also the number of adjacent faces and the number of wedge components, if these components are part of the <a class="reference internal" href="#classvcl_1_1_face"><span class="std std-ref">Face</span></a> and if the size of the <a class="reference internal" href="#classvcl_1_1_face"><span class="std std-ref">Face</span></a> is changed. On the contrary, if the <a class="reference internal" href="#classvcl_1_1_face"><span class="std std-ref">Face</span></a> size is static, the number of vertices of the list must be equal to the size of the <a class="reference internal" href="#classvcl_1_1_face"><span class="std std-ref">Face</span></a>. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>list</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4IDpEN3vcl4Face11setVerticesEvDp1V">
+<span id="_CPPv3IDpEN3vcl4Face11setVerticesEDp1V"></span><span id="_CPPv2IDpEN3vcl4Face11setVerticesEDp1V"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="sig-name descname"><span class="n"><span class="pre">V</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classvcl_1_1_face_1ae1dc21fb6795e4b2f0515239c713f674"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setVertices</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4IDpEN3vcl4Face11setVerticesEvDp1V" title="vcl::Face::setVertices::V"><span class="n"><span class="pre">V</span></span></a><span class="p"><span class="pre">...</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">args</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4IDpEN3vcl4Face11setVerticesEvDp1V" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl4Face10importFromEvRK7Element">
+<span id="_CPPv3I0EN3vcl4Face10importFromERK7Element"></span><span id="_CPPv2I0EN3vcl4Face10importFromERK7Element"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Element</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classvcl_1_1_face_1a536a173d8ddc825632900668608bf915"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">importFrom</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl4Face10importFromEvRK7Element" title="vcl::Face::importFrom::Element"><span class="n"><span class="pre">Element</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">f</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3vcl4Face10importFromEvRK7Element" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="classvcl_1_1_face_1ac1c6e1d77047b0316704330445444960"></span><span class="sig-name descname"><span class="pre">inline</span> <span class="pre">void</span> <span class="pre">resizeVertices</span> <span class="pre">(uint</span> <span class="pre">n)</span> <span class="pre">requires</span> <span class="pre">PolygonFaceConcept&lt;</span> <span class="pre">Face</span> <span class="pre">&gt;</span></span></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="classvcl_1_1_face_1a2bb7600a32c0602204167e57006f468d"></span><span class="sig-name descname"><span class="pre">inline</span> <span class="pre">void</span> <span class="pre">pushVertex</span> <span class="pre">(VertexType</span> <span class="pre">*v)</span> <span class="pre">requires</span> <span class="pre">PolygonFaceConcept&lt;</span> <span class="pre">Face</span> <span class="pre">&gt;</span></span></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="classvcl_1_1_face_1aa02d7784e4281ac2a605cb4ceb2791a2"></span><span class="sig-name descname"><span class="pre">inline</span> <span class="pre">void</span> <span class="pre">insertVertex</span> <span class="pre">(uint</span> <span class="pre">i,</span> <span class="pre">VertexType</span> <span class="pre">*v)</span> <span class="pre">requires</span> <span class="pre">PolygonFaceConcept&lt;</span> <span class="pre">Face</span> <span class="pre">&gt;</span></span></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="classvcl_1_1_face_1a16ff2663b0ab42bce8c41b73d7e9ae36"></span><span class="sig-name descname"><span class="pre">inline</span> <span class="pre">void</span> <span class="pre">eraseVertex</span> <span class="pre">(uint</span> <span class="pre">i)</span> <span class="pre">requires</span> <span class="pre">PolygonFaceConcept&lt;</span> <span class="pre">Face</span> <span class="pre">&gt;</span></span></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="classvcl_1_1_face_1aad59b0caa35363b782b6f0254ded4d60"></span><span class="sig-name descname"><span class="pre">inline</span> <span class="pre">void</span> <span class="pre">clearVertices</span> <span class="pre">()</span> <span class="pre">requires</span> <span class="pre">PolygonFaceConcept&lt;</span> <span class="pre">Face</span> <span class="pre">&gt;</span></span></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-friends">Friends</p>
+<dl>
+<dt class="sig sig-object cpp">
+<em class="property"><span class="pre">friend</span> <span class="pre">class</span></em> <span class="pre">mesh::FaceContainer</span></dt>
+</dl>
+
+<dl>
+<dt class="sig sig-object cpp">
+<em class="property"><span class="pre">friend</span> <span class="pre">class</span></em> <span class="pre">mesh::ElementContainer</span></dt>
+</dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="face-components-vcl-face">
+<h2>Face Components <code class="docutils literal notranslate"><span class="pre">vcl::face</span></code><a class="headerlink" href="#face-components-vcl-face" title="Permalink to this heading">#</a></h2>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv43vcl">
+<span id="_CPPv33vcl"></span><span id="_CPPv23vcl"></span><span id="vcl"></span><span class="target" id="namespacevcl"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vcl</span></span></span><br /></dt>
+<dd><dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4faceE">
+<span id="_CPPv3N3vcl4faceE"></span><span id="_CPPv2N3vcl4faceE"></span><span id="vcl::face"></span><span class="target" id="namespacevcl_1_1face"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">face</span></span></span><a class="headerlink" href="#_CPPv4N3vcl4faceE" title="Permalink to this definition">#</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-typedefs">Typedefs</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl4face20AdjacentPolygonEdgesE">
+<span id="_CPPv3I0EN3vcl4face20AdjacentPolygonEdgesE"></span><span id="_CPPv2I0EN3vcl4face20AdjacentPolygonEdgesE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EdgeType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1ad85bb0b57b939686650e51144521b97b"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AdjacentPolygonEdges</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../components/adjacent_edges.html#_CPPv4I0_iEN3vcl4comp13AdjacentEdgesE" title="vcl::comp::AdjacentEdges"><span class="n"><span class="pre">AdjacentEdges</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3vcl4face20AdjacentPolygonEdgesE" title="vcl::face::AdjacentPolygonEdges::EdgeType"><span class="n"><span class="pre">EdgeType</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN3vcl4face20AdjacentPolygonEdgesE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl4face21AdjacentTriangleEdgesE">
+<span id="_CPPv3I0EN3vcl4face21AdjacentTriangleEdgesE"></span><span id="_CPPv2I0EN3vcl4face21AdjacentTriangleEdgesE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EdgeType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1a2d2970a4646e7c65e82aaa2e38dd1c3a"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AdjacentTriangleEdges</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../components/adjacent_edges.html#_CPPv4I0_iEN3vcl4comp13AdjacentEdgesE" title="vcl::comp::AdjacentEdges"><span class="n"><span class="pre">AdjacentEdges</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3vcl4face21AdjacentTriangleEdgesE" title="vcl::face::AdjacentTriangleEdges::EdgeType"><span class="n"><span class="pre">EdgeType</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN3vcl4face21AdjacentTriangleEdgesE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl4face16AdjacentPolygonsE">
+<span id="_CPPv3I0EN3vcl4face16AdjacentPolygonsE"></span><span id="_CPPv2I0EN3vcl4face16AdjacentPolygonsE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FaceType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1ab7d6ef218111d7522d9286802f930328"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AdjacentPolygons</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../components/adjacent_faces.html#_CPPv4I0_iEN3vcl4comp13AdjacentFacesE" title="vcl::comp::AdjacentFaces"><span class="n"><span class="pre">AdjacentFaces</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3vcl4face16AdjacentPolygonsE" title="vcl::face::AdjacentPolygons::FaceType"><span class="n"><span class="pre">FaceType</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN3vcl4face16AdjacentPolygonsE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl4face17AdjacentTrianglesE">
+<span id="_CPPv3I0EN3vcl4face17AdjacentTrianglesE"></span><span id="_CPPv2I0EN3vcl4face17AdjacentTrianglesE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FaceType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1aa65bc0f502c48909f67ea08983e9fe9d"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AdjacentTriangles</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../components/adjacent_faces.html#_CPPv4I0_iEN3vcl4comp13AdjacentFacesE" title="vcl::comp::AdjacentFaces"><span class="n"><span class="pre">AdjacentFaces</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3vcl4face17AdjacentTrianglesE" title="vcl::face::AdjacentTriangles::FaceType"><span class="n"><span class="pre">FaceType</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN3vcl4face17AdjacentTrianglesE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4face8BitFlagsE">
+<span id="_CPPv3N3vcl4face8BitFlagsE"></span><span id="_CPPv2N3vcl4face8BitFlagsE"></span><span class="target" id="namespacevcl_1_1face_1a3961cef8103d3444c6a3604db3484a29"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BitFlags</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../components/bit_flags.html#_CPPv4N3vcl4comp8BitFlagsE" title="vcl::comp::BitFlags"><span class="n"><span class="pre">BitFlags</span></span></a><a class="headerlink" href="#_CPPv4N3vcl4face8BitFlagsE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4face5ColorE">
+<span id="_CPPv3N3vcl4face5ColorE"></span><span id="_CPPv2N3vcl4face5ColorE"></span><span class="target" id="namespacevcl_1_1face_1a7a71e8bb043cc73ced5b2bd78d41f591"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Color</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../components/color.html#_CPPv4N3vcl4comp5ColorE" title="vcl::comp::Color"><span class="n"><span class="pre">Color</span></span></a><a class="headerlink" href="#_CPPv4N3vcl4face5ColorE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl4face17HalfEdgeReferenceE">
+<span id="_CPPv3I0EN3vcl4face17HalfEdgeReferenceE"></span><span id="_CPPv2I0EN3vcl4face17HalfEdgeReferenceE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HalfEdge</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1aa89bdfea31708ffc2e6a8000ff76efe3"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HalfEdgeReference</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">FaceHalfEdgeReference</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3vcl4face17HalfEdgeReferenceE" title="vcl::face::HalfEdgeReference::HalfEdge"><span class="n"><span class="pre">HalfEdge</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN3vcl4face17HalfEdgeReferenceE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4face4MarkE">
+<span id="_CPPv3N3vcl4face4MarkE"></span><span id="_CPPv2N3vcl4face4MarkE"></span><span class="target" id="namespacevcl_1_1face_1adaa0e5b005256b46f556f04bc92e18c4"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Mark</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../components/mark.html#_CPPv4N3vcl4comp4MarkE" title="vcl::comp::Mark"><span class="n"><span class="pre">Mark</span></span></a><a class="headerlink" href="#_CPPv4N3vcl4face4MarkE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0_iEN3vcl4face6NormalE">
+<span id="_CPPv3I0_iEN3vcl4face6NormalE"></span><span id="_CPPv2I0_iEN3vcl4face6NormalE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ScalarType</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">N</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1ab2f7a48cdce166a52ae227a970000614"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Normal</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Normal</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl4face6NormalE" title="vcl::face::Normal::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl4face6NormalE" title="vcl::face::Normal::N"><span class="n"><span class="pre">N</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0_iEN3vcl4face6NormalE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl4face7Normal3E">
+<span id="_CPPv3I0EN3vcl4face7Normal3E"></span><span id="_CPPv2I0EN3vcl4face7Normal3E"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ScalarType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1a7553f8013e718ed87d12ebeaecf2929d"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Normal3</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Normal3</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3vcl4face7Normal3E" title="vcl::face::Normal3::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN3vcl4face7Normal3E" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4face8Normal3fE">
+<span id="_CPPv3N3vcl4face8Normal3fE"></span><span id="_CPPv2N3vcl4face8Normal3fE"></span><span class="target" id="namespacevcl_1_1face_1a6ef8d7054314b0e11874302b49c069d5"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Normal3f</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Normal3f</span></span><a class="headerlink" href="#_CPPv4N3vcl4face8Normal3fE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4face8Normal3dE">
+<span id="_CPPv3N3vcl4face8Normal3dE"></span><span id="_CPPv2N3vcl4face8Normal3dE"></span><span class="target" id="namespacevcl_1_1face_1a78f41a1cb9fd50fe3a2f65d79be7c525"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Normal3d</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Normal3d</span></span><a class="headerlink" href="#_CPPv4N3vcl4face8Normal3dE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4face15PolygonBitFlagsE">
+<span id="_CPPv3N3vcl4face15PolygonBitFlagsE"></span><span id="_CPPv2N3vcl4face15PolygonBitFlagsE"></span><span class="target" id="namespacevcl_1_1face_1a0edbae833ea14560167531b460f9a134"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PolygonBitFlags</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../components/bit_flags.html#_CPPv4N3vcl4comp15PolygonBitFlagsE" title="vcl::comp::PolygonBitFlags"><span class="n"><span class="pre">PolygonBitFlags</span></span></a><a class="headerlink" href="#_CPPv4N3vcl4face15PolygonBitFlagsE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl4face18PrincipalCurvatureE">
+<span id="_CPPv3I0EN3vcl4face18PrincipalCurvatureE"></span><span id="_CPPv2I0EN3vcl4face18PrincipalCurvatureE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FaceType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1a8a0a53949e9cb5eb27b9d36051514713"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PrincipalCurvature</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">PrincipalCurvature</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3vcl4face18PrincipalCurvatureE" title="vcl::face::PrincipalCurvature::FaceType"><span class="n"><span class="pre">FaceType</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN3vcl4face18PrincipalCurvatureE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4face19PrincipalCurvaturefE">
+<span id="_CPPv3N3vcl4face19PrincipalCurvaturefE"></span><span id="_CPPv2N3vcl4face19PrincipalCurvaturefE"></span><span class="target" id="namespacevcl_1_1face_1aa0dc9e1dcce219f91821c359dbbddca9"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PrincipalCurvaturef</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">PrincipalCurvaturef</span></span><a class="headerlink" href="#_CPPv4N3vcl4face19PrincipalCurvaturefE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4face19PrincipalCurvaturedE">
+<span id="_CPPv3N3vcl4face19PrincipalCurvaturedE"></span><span id="_CPPv2N3vcl4face19PrincipalCurvaturedE"></span><span class="target" id="namespacevcl_1_1face_1a2c11782b94aa73b6f7f9ca4f64345b5f"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PrincipalCurvatured</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">PrincipalCurvatured</span></span><a class="headerlink" href="#_CPPv4N3vcl4face19PrincipalCurvaturedE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl4face6ScalarE">
+<span id="_CPPv3I0EN3vcl4face6ScalarE"></span><span id="_CPPv2I0EN3vcl4face6ScalarE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ScalarType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1aa19bb8167544f3c09adb0942a50818bd"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Scalar</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../components/scalar.html#_CPPv4I0EN3vcl4comp6ScalarE" title="vcl::comp::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3vcl4face6ScalarE" title="vcl::face::Scalar::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN3vcl4face6ScalarE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4face7ScalarfE">
+<span id="_CPPv3N3vcl4face7ScalarfE"></span><span id="_CPPv2N3vcl4face7ScalarfE"></span><span class="target" id="namespacevcl_1_1face_1a599db4c3fc7e4d4ced5a82f18b0f7862"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Scalarf</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Scalarf</span></span><a class="headerlink" href="#_CPPv4N3vcl4face7ScalarfE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4face7ScalardE">
+<span id="_CPPv3N3vcl4face7ScalardE"></span><span id="_CPPv2N3vcl4face7ScalardE"></span><span class="target" id="namespacevcl_1_1face_1ab56d70d5fe6b8114a6e13c668a586fa9"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Scalard</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Scalard</span></span><a class="headerlink" href="#_CPPv4N3vcl4face7ScalardE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4face16TriangleBitFlagsE">
+<span id="_CPPv3N3vcl4face16TriangleBitFlagsE"></span><span id="_CPPv2N3vcl4face16TriangleBitFlagsE"></span><span class="target" id="namespacevcl_1_1face_1aa5e66e7ef0eebf7f56a4a254bc598ed8"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TriangleBitFlags</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../components/bit_flags.html#_CPPv4N3vcl4comp16TriangleBitFlagsE" title="vcl::comp::TriangleBitFlags"><span class="n"><span class="pre">TriangleBitFlags</span></span></a><a class="headerlink" href="#_CPPv4N3vcl4face16TriangleBitFlagsE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0_iEN3vcl4face16VertexReferencesE">
+<span id="_CPPv3I0_iEN3vcl4face16VertexReferencesE"></span><span id="_CPPv2I0_iEN3vcl4face16VertexReferencesE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Vertex</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">N</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1aabf368d6a00c37a803b55d1a2d38c402"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VertexReferences</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../components/vertex_references.html#_CPPv4I0_iEN3vcl4comp16VertexReferencesE" title="vcl::comp::VertexReferences"><span class="n"><span class="pre">VertexReferences</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl4face16VertexReferencesE" title="vcl::face::VertexReferences::Vertex"><span class="n"><span class="pre">Vertex</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl4face16VertexReferencesE" title="vcl::face::VertexReferences::N"><span class="n"><span class="pre">N</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0_iEN3vcl4face16VertexReferencesE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl4face18TriangleVertexRefsE">
+<span id="_CPPv3I0EN3vcl4face18TriangleVertexRefsE"></span><span id="_CPPv2I0EN3vcl4face18TriangleVertexRefsE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Vertex</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1a74756c17fa8f07b874670755cc56cbe2"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TriangleVertexRefs</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../components/vertex_references.html#_CPPv4I0_iEN3vcl4comp16VertexReferencesE" title="vcl::comp::VertexReferences"><span class="n"><span class="pre">VertexReferences</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3vcl4face18TriangleVertexRefsE" title="vcl::face::TriangleVertexRefs::Vertex"><span class="n"><span class="pre">Vertex</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN3vcl4face18TriangleVertexRefsE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl4face17PolygonVertexRefsE">
+<span id="_CPPv3I0EN3vcl4face17PolygonVertexRefsE"></span><span id="_CPPv2I0EN3vcl4face17PolygonVertexRefsE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Vertex</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1a05e58c5142a79021379fe1c9d24ab065"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PolygonVertexRefs</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../components/vertex_references.html#_CPPv4I0_iEN3vcl4comp16VertexReferencesE" title="vcl::comp::VertexReferences"><span class="n"><span class="pre">VertexReferences</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3vcl4face17PolygonVertexRefsE" title="vcl::face::PolygonVertexRefs::Vertex"><span class="n"><span class="pre">Vertex</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN3vcl4face17PolygonVertexRefsE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4face18PolygonWedgeColorsE">
+<span id="_CPPv3N3vcl4face18PolygonWedgeColorsE"></span><span id="_CPPv2N3vcl4face18PolygonWedgeColorsE"></span><span class="target" id="namespacevcl_1_1face_1a4214009e0c7f3c0e71f165898f47a50a"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PolygonWedgeColors</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../components/wedge_colors.html#_CPPv4I_iEN3vcl4comp11WedgeColorsE" title="vcl::comp::WedgeColors"><span class="n"><span class="pre">WedgeColors</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N3vcl4face18PolygonWedgeColorsE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4face19TriangleWedgeColorsE">
+<span id="_CPPv3N3vcl4face19TriangleWedgeColorsE"></span><span id="_CPPv2N3vcl4face19TriangleWedgeColorsE"></span><span class="target" id="namespacevcl_1_1face_1a349aad8c774ca2aa103452c16d7b7814"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TriangleWedgeColors</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../components/wedge_colors.html#_CPPv4I_iEN3vcl4comp11WedgeColorsE" title="vcl::comp::WedgeColors"><span class="n"><span class="pre">WedgeColors</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N3vcl4face19TriangleWedgeColorsE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl4face21PolygonWedgeTexCoordsE">
+<span id="_CPPv3I0EN3vcl4face21PolygonWedgeTexCoordsE"></span><span id="_CPPv2I0EN3vcl4face21PolygonWedgeTexCoordsE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ScalarType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1ace888ba066ec3fe9b662187a56513bc2"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PolygonWedgeTexCoords</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../components/wedge_tex_coords.html#_CPPv4I0_iEN3vcl4comp14WedgeTexCoordsE" title="vcl::comp::WedgeTexCoords"><span class="n"><span class="pre">WedgeTexCoords</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3vcl4face21PolygonWedgeTexCoordsE" title="vcl::face::PolygonWedgeTexCoords::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN3vcl4face21PolygonWedgeTexCoordsE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl4face22TriangleWedgeTexCoordsE">
+<span id="_CPPv3I0EN3vcl4face22TriangleWedgeTexCoordsE"></span><span id="_CPPv2I0EN3vcl4face22TriangleWedgeTexCoordsE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ScalarType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1a13e263c2353f2d5408035f6c496ba39b"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TriangleWedgeTexCoords</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../components/wedge_tex_coords.html#_CPPv4I0_iEN3vcl4comp14WedgeTexCoordsE" title="vcl::comp::WedgeTexCoords"><span class="n"><span class="pre">WedgeTexCoords</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3vcl4face22TriangleWedgeTexCoordsE" title="vcl::face::TriangleWedgeTexCoords::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN3vcl4face22TriangleWedgeTexCoordsE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4face22PolygonWedgeTexCoordsfE">
+<span id="_CPPv3N3vcl4face22PolygonWedgeTexCoordsfE"></span><span id="_CPPv2N3vcl4face22PolygonWedgeTexCoordsfE"></span><span class="target" id="namespacevcl_1_1face_1aaddac854ccd1d029098a0b605d5cb0b0"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PolygonWedgeTexCoordsf</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../components/wedge_tex_coords.html#_CPPv4I0_iEN3vcl4comp14WedgeTexCoordsE" title="vcl::comp::WedgeTexCoords"><span class="n"><span class="pre">WedgeTexCoords</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N3vcl4face22PolygonWedgeTexCoordsfE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4face22PolygonWedgeTexCoordsdE">
+<span id="_CPPv3N3vcl4face22PolygonWedgeTexCoordsdE"></span><span id="_CPPv2N3vcl4face22PolygonWedgeTexCoordsdE"></span><span class="target" id="namespacevcl_1_1face_1a64d879f0622cd4ae72efd259ce9308b8"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PolygonWedgeTexCoordsd</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../components/wedge_tex_coords.html#_CPPv4I0_iEN3vcl4comp14WedgeTexCoordsE" title="vcl::comp::WedgeTexCoords"><span class="n"><span class="pre">WedgeTexCoords</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N3vcl4face22PolygonWedgeTexCoordsdE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4face23TriangleWedgeTexCoordsfE">
+<span id="_CPPv3N3vcl4face23TriangleWedgeTexCoordsfE"></span><span id="_CPPv2N3vcl4face23TriangleWedgeTexCoordsfE"></span><span class="target" id="namespacevcl_1_1face_1ace40117483a6b92095849fb0f0b118c4"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TriangleWedgeTexCoordsf</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl4face22TriangleWedgeTexCoordsE" title="vcl::face::TriangleWedgeTexCoords"><span class="n"><span class="pre">TriangleWedgeTexCoords</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N3vcl4face23TriangleWedgeTexCoordsfE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl4face23TriangleWedgeTexCoordsdE">
+<span id="_CPPv3N3vcl4face23TriangleWedgeTexCoordsdE"></span><span id="_CPPv2N3vcl4face23TriangleWedgeTexCoordsdE"></span><span class="target" id="namespacevcl_1_1face_1ac8dcab6aa945eeaf4eefae486a64899c"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TriangleWedgeTexCoordsd</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl4face22TriangleWedgeTexCoordsE" title="vcl::face::TriangleWedgeTexCoords"><span class="n"><span class="pre">TriangleWedgeTexCoords</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N3vcl4face23TriangleWedgeTexCoordsdE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="face-optional-components-vcl-face">
+<h2>Face Optional Components <code class="docutils literal notranslate"><span class="pre">vcl::face</span></code><a class="headerlink" href="#face-optional-components-vcl-face" title="Permalink to this heading">#</a></h2>
+<dl class="cpp type">
+<dt class="sig sig-object cpp">
+<span class="target" id="namespacevcl"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vcl</span></span></span><br /></dt>
+<dd><dl class="cpp type">
+<dt class="sig sig-object cpp">
+<span class="target" id="namespacevcl_1_1face"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">face</span></span></span><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-typedefs">Typedefs</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I00EN3vcl4face28OptionalAdjacentPolygonEdgesE">
+<span id="_CPPv3I00EN3vcl4face28OptionalAdjacentPolygonEdgesE"></span><span id="_CPPv2I00EN3vcl4face28OptionalAdjacentPolygonEdgesE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EdgeType</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FaceType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1ad0fe489e4454eca737831c78d6073b59"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OptionalAdjacentPolygonEdges</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">OptionalAdjacentEdges</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I00EN3vcl4face28OptionalAdjacentPolygonEdgesE" title="vcl::face::OptionalAdjacentPolygonEdges::EdgeType"><span class="n"><span class="pre">EdgeType</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3vcl4face28OptionalAdjacentPolygonEdgesE" title="vcl::face::OptionalAdjacentPolygonEdges::FaceType"><span class="n"><span class="pre">FaceType</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I00EN3vcl4face28OptionalAdjacentPolygonEdgesE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I00EN3vcl4face29OptionalAdjacentTriangleEdgesE">
+<span id="_CPPv3I00EN3vcl4face29OptionalAdjacentTriangleEdgesE"></span><span id="_CPPv2I00EN3vcl4face29OptionalAdjacentTriangleEdgesE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EdgeType</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FaceType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1ac0712141470f278eed2811c9caeb3a73"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OptionalAdjacentTriangleEdges</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">OptionalAdjacentEdges</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I00EN3vcl4face29OptionalAdjacentTriangleEdgesE" title="vcl::face::OptionalAdjacentTriangleEdges::EdgeType"><span class="n"><span class="pre">EdgeType</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3vcl4face29OptionalAdjacentTriangleEdgesE" title="vcl::face::OptionalAdjacentTriangleEdges::FaceType"><span class="n"><span class="pre">FaceType</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I00EN3vcl4face29OptionalAdjacentTriangleEdgesE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl4face24OptionalAdjacentPolygonsE">
+<span id="_CPPv3I0EN3vcl4face24OptionalAdjacentPolygonsE"></span><span id="_CPPv2I0EN3vcl4face24OptionalAdjacentPolygonsE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FaceType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1a30a0f04aadbef6efb3291759864f8835"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OptionalAdjacentPolygons</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">OptionalAdjacentFaces</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3vcl4face24OptionalAdjacentPolygonsE" title="vcl::face::OptionalAdjacentPolygons::FaceType"><span class="n"><span class="pre">FaceType</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl4face24OptionalAdjacentPolygonsE" title="vcl::face::OptionalAdjacentPolygons::FaceType"><span class="n"><span class="pre">FaceType</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN3vcl4face24OptionalAdjacentPolygonsE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl4face25OptionalAdjacentTrianglesE">
+<span id="_CPPv3I0EN3vcl4face25OptionalAdjacentTrianglesE"></span><span id="_CPPv2I0EN3vcl4face25OptionalAdjacentTrianglesE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FaceType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1a709d6cd75e599519fb059f691cf0a20a"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OptionalAdjacentTriangles</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">OptionalAdjacentFaces</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3vcl4face25OptionalAdjacentTrianglesE" title="vcl::face::OptionalAdjacentTriangles::FaceType"><span class="n"><span class="pre">FaceType</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl4face25OptionalAdjacentTrianglesE" title="vcl::face::OptionalAdjacentTriangles::FaceType"><span class="n"><span class="pre">FaceType</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN3vcl4face25OptionalAdjacentTrianglesE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl4face13OptionalColorE">
+<span id="_CPPv3I0EN3vcl4face13OptionalColorE"></span><span id="_CPPv2I0EN3vcl4face13OptionalColorE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FaceType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1ab8204e7e0001a311f4459e56050f49b3"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OptionalColor</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">OptionalColor</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3vcl4face13OptionalColorE" title="vcl::face::OptionalColor::FaceType"><span class="n"><span class="pre">FaceType</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN3vcl4face13OptionalColorE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl4face12OptionalMarkE">
+<span id="_CPPv3I0EN3vcl4face12OptionalMarkE"></span><span id="_CPPv2I0EN3vcl4face12OptionalMarkE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FaceType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1a6025125cb9972cf538607af62d47e076"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OptionalMark</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">OptionalMark</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3vcl4face12OptionalMarkE" title="vcl::face::OptionalMark::FaceType"><span class="n"><span class="pre">FaceType</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN3vcl4face12OptionalMarkE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0_i0EN3vcl4face14OptionalNormalE">
+<span id="_CPPv3I0_i0EN3vcl4face14OptionalNormalE"></span><span id="_CPPv2I0_i0EN3vcl4face14OptionalNormalE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ScalarType</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">N</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FaceType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1ad5ad4db67e2c673537960d84327ffbaf"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OptionalNormal</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">OptionalNormal</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0_i0EN3vcl4face14OptionalNormalE" title="vcl::face::OptionalNormal::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_i0EN3vcl4face14OptionalNormalE" title="vcl::face::OptionalNormal::N"><span class="n"><span class="pre">N</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_i0EN3vcl4face14OptionalNormalE" title="vcl::face::OptionalNormal::FaceType"><span class="n"><span class="pre">FaceType</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0_i0EN3vcl4face14OptionalNormalE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I00EN3vcl4face15OptionalNormal3E">
+<span id="_CPPv3I00EN3vcl4face15OptionalNormal3E"></span><span id="_CPPv2I00EN3vcl4face15OptionalNormal3E"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ScalarType</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FaceType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1a1ac22c6e64179e69c5e18d474ba0d98b"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OptionalNormal3</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">OptionalNormal3</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I00EN3vcl4face15OptionalNormal3E" title="vcl::face::OptionalNormal3::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3vcl4face15OptionalNormal3E" title="vcl::face::OptionalNormal3::FaceType"><span class="n"><span class="pre">FaceType</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I00EN3vcl4face15OptionalNormal3E" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl4face16OptionalNormal3fE">
+<span id="_CPPv3I0EN3vcl4face16OptionalNormal3fE"></span><span id="_CPPv2I0EN3vcl4face16OptionalNormal3fE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FaceType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1a32c6261235ccf9529e89a6b7a97811c9"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OptionalNormal3f</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">OptionalNormal3f</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3vcl4face16OptionalNormal3fE" title="vcl::face::OptionalNormal3f::FaceType"><span class="n"><span class="pre">FaceType</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN3vcl4face16OptionalNormal3fE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl4face16OptionalNormal3dE">
+<span id="_CPPv3I0EN3vcl4face16OptionalNormal3dE"></span><span id="_CPPv2I0EN3vcl4face16OptionalNormal3dE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FaceType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1a3e62f8c3d03794f49fcf1422d5214ff6"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OptionalNormal3d</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">OptionalNormal3d</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3vcl4face16OptionalNormal3dE" title="vcl::face::OptionalNormal3d::FaceType"><span class="n"><span class="pre">FaceType</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN3vcl4face16OptionalNormal3dE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I00EN3vcl4face26OptionalPrincipalCurvatureE">
+<span id="_CPPv3I00EN3vcl4face26OptionalPrincipalCurvatureE"></span><span id="_CPPv2I00EN3vcl4face26OptionalPrincipalCurvatureE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ScalarType</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FaceType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1a8d2c6893b6016e937d54ba9305c2f62a"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OptionalPrincipalCurvature</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">OptionalPrincipalCurvature</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I00EN3vcl4face26OptionalPrincipalCurvatureE" title="vcl::face::OptionalPrincipalCurvature::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3vcl4face26OptionalPrincipalCurvatureE" title="vcl::face::OptionalPrincipalCurvature::FaceType"><span class="n"><span class="pre">FaceType</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I00EN3vcl4face26OptionalPrincipalCurvatureE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl4face27OptionalPrincipalCurvaturefE">
+<span id="_CPPv3I0EN3vcl4face27OptionalPrincipalCurvaturefE"></span><span id="_CPPv2I0EN3vcl4face27OptionalPrincipalCurvaturefE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FaceType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1af8837624a5da7ece4e236ce40484512e"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OptionalPrincipalCurvaturef</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">OptionalPrincipalCurvaturef</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3vcl4face27OptionalPrincipalCurvaturefE" title="vcl::face::OptionalPrincipalCurvaturef::FaceType"><span class="n"><span class="pre">FaceType</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN3vcl4face27OptionalPrincipalCurvaturefE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl4face27OptionalPrincipalCurvaturedE">
+<span id="_CPPv3I0EN3vcl4face27OptionalPrincipalCurvaturedE"></span><span id="_CPPv2I0EN3vcl4face27OptionalPrincipalCurvaturedE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FaceType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1a1e730bd62851afe9e9d2b417faf53d5f"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OptionalPrincipalCurvatured</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">OptionalPrincipalCurvatured</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3vcl4face27OptionalPrincipalCurvaturedE" title="vcl::face::OptionalPrincipalCurvatured::FaceType"><span class="n"><span class="pre">FaceType</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN3vcl4face27OptionalPrincipalCurvaturedE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I00EN3vcl4face14OptionalScalarE">
+<span id="_CPPv3I00EN3vcl4face14OptionalScalarE"></span><span id="_CPPv2I00EN3vcl4face14OptionalScalarE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ScalarType</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FaceType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1aba59109bf807e0049df8f09bcd577458"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OptionalScalar</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">OptionalScalar</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I00EN3vcl4face14OptionalScalarE" title="vcl::face::OptionalScalar::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3vcl4face14OptionalScalarE" title="vcl::face::OptionalScalar::FaceType"><span class="n"><span class="pre">FaceType</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I00EN3vcl4face14OptionalScalarE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl4face15OptionalScalarfE">
+<span id="_CPPv3I0EN3vcl4face15OptionalScalarfE"></span><span id="_CPPv2I0EN3vcl4face15OptionalScalarfE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FaceType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1a0100e3d433af965d8e37a662dda0b898"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OptionalScalarf</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">OptionalScalar</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl4face15OptionalScalarfE" title="vcl::face::OptionalScalarf::FaceType"><span class="n"><span class="pre">FaceType</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN3vcl4face15OptionalScalarfE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl4face15OptionalScalardE">
+<span id="_CPPv3I0EN3vcl4face15OptionalScalardE"></span><span id="_CPPv2I0EN3vcl4face15OptionalScalardE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FaceType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1af69d7d7ca28d0cd3e35ee5042020d81c"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OptionalScalard</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">OptionalScalar</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl4face15OptionalScalardE" title="vcl::face::OptionalScalard::FaceType"><span class="n"><span class="pre">FaceType</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN3vcl4face15OptionalScalardE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl4face26OptionalPolygonWedgeColorsE">
+<span id="_CPPv3I0EN3vcl4face26OptionalPolygonWedgeColorsE"></span><span id="_CPPv2I0EN3vcl4face26OptionalPolygonWedgeColorsE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FaceType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1a4a961144c48574993d60d2e0f244e1d3"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OptionalPolygonWedgeColors</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">OptionalWedgeColors</span></span><span class="p"><span class="pre">&lt;</span></span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl4face26OptionalPolygonWedgeColorsE" title="vcl::face::OptionalPolygonWedgeColors::FaceType"><span class="n"><span class="pre">FaceType</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN3vcl4face26OptionalPolygonWedgeColorsE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl4face27OptionalTriangleWedgeColorsE">
+<span id="_CPPv3I0EN3vcl4face27OptionalTriangleWedgeColorsE"></span><span id="_CPPv2I0EN3vcl4face27OptionalTriangleWedgeColorsE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FaceType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1a5e0605998c4d37314f1211fdf6ccf32b"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OptionalTriangleWedgeColors</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">OptionalWedgeColors</span></span><span class="p"><span class="pre">&lt;</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl4face27OptionalTriangleWedgeColorsE" title="vcl::face::OptionalTriangleWedgeColors::FaceType"><span class="n"><span class="pre">FaceType</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN3vcl4face27OptionalTriangleWedgeColorsE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I00EN3vcl4face29OptionalPolygonWedgeTexCoordsE">
+<span id="_CPPv3I00EN3vcl4face29OptionalPolygonWedgeTexCoordsE"></span><span id="_CPPv2I00EN3vcl4face29OptionalPolygonWedgeTexCoordsE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ScalarType</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FaceType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1a8d7b4865d51ac6612e5f9b6b1d305171"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OptionalPolygonWedgeTexCoords</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">OptionalWedgeTexCoords</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I00EN3vcl4face29OptionalPolygonWedgeTexCoordsE" title="vcl::face::OptionalPolygonWedgeTexCoords::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3vcl4face29OptionalPolygonWedgeTexCoordsE" title="vcl::face::OptionalPolygonWedgeTexCoords::FaceType"><span class="n"><span class="pre">FaceType</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I00EN3vcl4face29OptionalPolygonWedgeTexCoordsE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I00EN3vcl4face30OptionalTriangleWedgeTexCoordsE">
+<span id="_CPPv3I00EN3vcl4face30OptionalTriangleWedgeTexCoordsE"></span><span id="_CPPv2I00EN3vcl4face30OptionalTriangleWedgeTexCoordsE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ScalarType</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FaceType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1acdc6631e05bef3b90b58bf2947f006b4"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OptionalTriangleWedgeTexCoords</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">OptionalWedgeTexCoords</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I00EN3vcl4face30OptionalTriangleWedgeTexCoordsE" title="vcl::face::OptionalTriangleWedgeTexCoords::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN3vcl4face30OptionalTriangleWedgeTexCoordsE" title="vcl::face::OptionalTriangleWedgeTexCoords::FaceType"><span class="n"><span class="pre">FaceType</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I00EN3vcl4face30OptionalTriangleWedgeTexCoordsE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl4face30OptionalPolygonWedgeTexCoordsfE">
+<span id="_CPPv3I0EN3vcl4face30OptionalPolygonWedgeTexCoordsfE"></span><span id="_CPPv2I0EN3vcl4face30OptionalPolygonWedgeTexCoordsfE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FaceType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1a2a4b3957a36c162c1cb66fd3d5fc02dd"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OptionalPolygonWedgeTexCoordsf</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">OptionalWedgeTexCoords</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl4face30OptionalPolygonWedgeTexCoordsfE" title="vcl::face::OptionalPolygonWedgeTexCoordsf::FaceType"><span class="n"><span class="pre">FaceType</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN3vcl4face30OptionalPolygonWedgeTexCoordsfE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl4face30OptionalPolygonWedgeTexCoordsdE">
+<span id="_CPPv3I0EN3vcl4face30OptionalPolygonWedgeTexCoordsdE"></span><span id="_CPPv2I0EN3vcl4face30OptionalPolygonWedgeTexCoordsdE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FaceType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1a4c6e7aae8963aedb72c09074759b31b9"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OptionalPolygonWedgeTexCoordsd</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">OptionalWedgeTexCoords</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl4face30OptionalPolygonWedgeTexCoordsdE" title="vcl::face::OptionalPolygonWedgeTexCoordsd::FaceType"><span class="n"><span class="pre">FaceType</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN3vcl4face30OptionalPolygonWedgeTexCoordsdE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl4face31OptionalTriangleWedgeTexCoordsfE">
+<span id="_CPPv3I0EN3vcl4face31OptionalTriangleWedgeTexCoordsfE"></span><span id="_CPPv2I0EN3vcl4face31OptionalTriangleWedgeTexCoordsfE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FaceType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1a741dbb5941a13a88c3473eb391c68f15"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OptionalTriangleWedgeTexCoordsf</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">OptionalWedgeTexCoords</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl4face31OptionalTriangleWedgeTexCoordsfE" title="vcl::face::OptionalTriangleWedgeTexCoordsf::FaceType"><span class="n"><span class="pre">FaceType</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN3vcl4face31OptionalTriangleWedgeTexCoordsfE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl4face31OptionalTriangleWedgeTexCoordsdE">
+<span id="_CPPv3I0EN3vcl4face31OptionalTriangleWedgeTexCoordsdE"></span><span id="_CPPv2I0EN3vcl4face31OptionalTriangleWedgeTexCoordsdE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FaceType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1ae8f31c87f5aac82335f639a1d0978fe2"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OptionalTriangleWedgeTexCoordsd</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">OptionalWedgeTexCoords</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl4face31OptionalTriangleWedgeTexCoordsdE" title="vcl::face::OptionalTriangleWedgeTexCoordsd::FaceType"><span class="n"><span class="pre">FaceType</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN3vcl4face31OptionalTriangleWedgeTexCoordsdE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl4face16CustomComponentsE">
+<span id="_CPPv3I0EN3vcl4face16CustomComponentsE"></span><span id="_CPPv2I0EN3vcl4face16CustomComponentsE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FaceType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1ae371d236d4a6c45fa64b67a4d898cd75"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CustomComponents</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CustomComponents</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3vcl4face16CustomComponentsE" title="vcl::face::CustomComponents::FaceType"><span class="n"><span class="pre">FaceType</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN3vcl4face16CustomComponentsE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl4face17VerticalComponentE">
+<span id="_CPPv3I0EN3vcl4face17VerticalComponentE"></span><span id="_CPPv2I0EN3vcl4face17VerticalComponentE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FaceType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespacevcl_1_1face_1a2e35c4882dad2ad7c7f8bbea2bfd632a"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VerticalComponent</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">comp</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">VerticalComponent</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3vcl4face17VerticalComponentE" title="vcl::face::VerticalComponent::FaceType"><span class="n"><span class="pre">FaceType</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN3vcl4face17VerticalComponentE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="edge.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">The Edge Class</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="vertex.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">The Vertex Class</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2021, Visual Computing Lab, ISTI - CNR
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">The Face Class</a><ul>
+<li><a class="reference internal" href="#face-class-definition">Face Class Definition</a></li>
+<li><a class="reference internal" href="#face-components-vcl-face">Face Components <code class="docutils literal notranslate"><span class="pre">vcl::face</span></code></a></li>
+<li><a class="reference internal" href="#face-optional-components-vcl-face">Face Optional Components <code class="docutils literal notranslate"><span class="pre">vcl::face</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/scripts/furo.js"></script>
+    <script async="async" src="https://assets.readthedocs.org/static/javascript/readthedocs-doc-embed.js"></script>
+    </body>
+</html>

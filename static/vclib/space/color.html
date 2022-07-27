@@ -1,0 +1,876 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Point" href="point.html" /><link rel="prev" title="Box" href="box.html" />
+
+    <meta name="generator" content="sphinx-5.1.1, furo 2022.06.21"/>
+        <title>Color - VCLib documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
+    <link rel="stylesheet" type="text/css" href="https://assets.readthedocs.org/static/css/badge_only.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style>
+<!-- RTD Extra Head -->
+
+<link rel="stylesheet" href="https://assets.readthedocs.org/static/css/readthedocs-doc-embed.css" type="text/css" />
+
+<script type="application/json" id="READTHEDOCS_DATA">{"ad_free": "", "api_host": "", "build_date": "2022-07-27T11:33:19Z", "builder": "sphinx", "canonical_url": "", "commit": "", "docroot": "", "features": {"docsearch_disabled": false}, "global_analytics_code": null, "language": "", "page": "space/color", "programming_language": "", "project": "", "source_suffix": ".rst", "subprojects": {}, "theme": "", "user_analytics_code": null, "version": ""}</script>
+
+<!--
+Using this variable directly instead of using `JSON.parse` is deprecated.
+The READTHEDOCS_DATA global variable will be removed in the future.
+-->
+<script type="text/javascript">
+READTHEDOCS_DATA = JSON.parse(document.getElementById('READTHEDOCS_DATA').innerHTML);
+</script>
+
+<script type="text/javascript" src="https://assets.readthedocs.org/static/javascript/readthedocs-analytics.js" async="async"></script>
+
+<!-- end RTD <extrahead> -->
+</head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">VCLib  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  
+  <span class="sidebar-brand-text">VCLib  documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../basic_concepts.html">Basic Concepts</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../space.html">Spatial and other Data Structures</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="box.html">Box</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Color</a></li>
+<li class="toctree-l2"><a class="reference internal" href="point.html">Point</a></li>
+<li class="toctree-l2"><a class="reference internal" href="principal_curvature.html">Principal Curvature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tex_coord.html">TexCoord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/tokenizer.html">Tokenizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/timer.html">Timer</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../mesh_documentation.html">Mesh Documentation</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../mesh/elements.html">Elements</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/elements/vertex.html">The Vertex Class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/elements/face.html">The Face Class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/elements/edge.html">The Edge Class</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../mesh/components.html">Components</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/components/adjacent_edges.html">Adjacent Edges Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/components/adjacent_faces.html">Adjacent Faces Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/components/adjacent_vertices.html">Adjacent Vertices Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/components/bit_flags.html">Bit Flags Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/components/bounding_box.html">Bounding Box Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/components/color.html">Color Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/components/coordinate.html">Coordinate Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/components/mark.html">Mark Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/components/normal.html">Normal Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/components/scalar.html">Scalar Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/components/tex_coord.html">Tex Coord Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/components/texture_file_names.html">Texture File Names Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/components/transform_matrix.html">Transform Matrix Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/components/vertex_references.html">Vertex References Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/components/wedge_colors.html">Wedge Colors Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/components/wedge_tex_coords.html">Wedge Tex Coords Component</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../mesh/containers.html">Element Containers</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/containers/vertex_container.html">Vertex Container</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/containers/face_container.html">Face Container</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/containers/edge_container.html">Edge Container</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../mesh/mesh_doc.html">Mesh</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../mesh/meshes.html">Built-in Mesh Data Structures</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../mesh/trimesh/trimesh.html">TriMesh</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../mesh/mesh_doc.html">Mesh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mesh/containers/vertex_container.html">Vertex Container</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mesh/containers/face_container.html">Face Container</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/polymesh/polymesh.html">PolyMesh</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../requirements.html">Mesh Requirements</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../requirements/element_requirements.html">Element Requirement Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../requirements/vertex_requirements.html">Vertex Requirement Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../requirements/face_requirements.html">Face Requirement Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../requirements/mesh_requirements.html">Mesh Requirement Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../algorithms.html">Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../algorithms/create.html">Create Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algorithms/cleaning.html">Cleaning Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algorithms/smoothing.html">Smoothing Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algorithms/update.html">Update Algorithms</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../io.html">Input/Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mesh_customization.html">Mesh Customization</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../tutorials.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="color">
+<span id="space-color"></span><h1>Color<a class="headerlink" href="#color" title="Permalink to this heading">#</a></h1>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5ColorE">
+<span id="_CPPv3N3vcl5ColorE"></span><span id="_CPPv2N3vcl5ColorE"></span><span id="vcl::Color"></span><span class="target" id="classvcl_1_1_color"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Color</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="../algorithms/cleaning.html#_CPPv43vcl" title="vcl"><span class="n"><span class="pre">vcl</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="point.html#_CPPv4I0EN3vcl6Point4E" title="vcl::Point4"><span class="n"><span class="pre">Point4</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">uint8_t</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N3vcl5ColorE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>The <a class="reference internal" href="#classvcl_1_1_color"><span class="std std-ref">Color</span></a> class represents an RGBA color. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color9ColorARGBE">
+<span id="_CPPv3N3vcl5Color9ColorARGBE"></span><span id="_CPPv2N3vcl5Color9ColorARGBE"></span><span class="target" id="classvcl_1_1_color_1a833d6b62f511fcb9d1001f10d9651e37"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ColorARGB</span></span></span><a class="headerlink" href="#_CPPv4N3vcl5Color9ColorARGBE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>ARGB enum with some standard colors. Can be used to initialize a color with an ARGB integer </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color9ColorARGB5BlackE">
+<span id="_CPPv3N3vcl5Color9ColorARGB5BlackE"></span><span id="_CPPv2N3vcl5Color9ColorARGB5BlackE"></span><span class="target" id="classvcl_1_1_color_1a833d6b62f511fcb9d1001f10d9651e37a5777c5f96e2970090b99598c215292f7"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Black</span></span></span><a class="headerlink" href="#_CPPv4N3vcl5Color9ColorARGB5BlackE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color9ColorARGB4GrayE">
+<span id="_CPPv3N3vcl5Color9ColorARGB4GrayE"></span><span id="_CPPv2N3vcl5Color9ColorARGB4GrayE"></span><span class="target" id="classvcl_1_1_color_1a833d6b62f511fcb9d1001f10d9651e37ad77ad42c6a33f92cecf101c0632dfbee"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Gray</span></span></span><a class="headerlink" href="#_CPPv4N3vcl5Color9ColorARGB4GrayE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color9ColorARGB5WhiteE">
+<span id="_CPPv3N3vcl5Color9ColorARGB5WhiteE"></span><span id="_CPPv2N3vcl5Color9ColorARGB5WhiteE"></span><span class="target" id="classvcl_1_1_color_1a833d6b62f511fcb9d1001f10d9651e37a933a633d2d20cec2e05a97a403dcd1d4"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">White</span></span></span><a class="headerlink" href="#_CPPv4N3vcl5Color9ColorARGB5WhiteE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color9ColorARGB3RedE">
+<span id="_CPPv3N3vcl5Color9ColorARGB3RedE"></span><span id="_CPPv2N3vcl5Color9ColorARGB3RedE"></span><span class="target" id="classvcl_1_1_color_1a833d6b62f511fcb9d1001f10d9651e37a9acef5e91bae5a2cc4e481578e3ece42"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Red</span></span></span><a class="headerlink" href="#_CPPv4N3vcl5Color9ColorARGB3RedE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color9ColorARGB5GreenE">
+<span id="_CPPv3N3vcl5Color9ColorARGB5GreenE"></span><span id="_CPPv2N3vcl5Color9ColorARGB5GreenE"></span><span class="target" id="classvcl_1_1_color_1a833d6b62f511fcb9d1001f10d9651e37a1adf4b9d84921fef14b84c21232c1418"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Green</span></span></span><a class="headerlink" href="#_CPPv4N3vcl5Color9ColorARGB5GreenE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color9ColorARGB4BlueE">
+<span id="_CPPv3N3vcl5Color9ColorARGB4BlueE"></span><span id="_CPPv2N3vcl5Color9ColorARGB4BlueE"></span><span class="target" id="classvcl_1_1_color_1a833d6b62f511fcb9d1001f10d9651e37af54d29d341201c1ef87b86671a29b28e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Blue</span></span></span><a class="headerlink" href="#_CPPv4N3vcl5Color9ColorARGB4BlueE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color9ColorARGB4CyanE">
+<span id="_CPPv3N3vcl5Color9ColorARGB4CyanE"></span><span id="_CPPv2N3vcl5Color9ColorARGB4CyanE"></span><span class="target" id="classvcl_1_1_color_1a833d6b62f511fcb9d1001f10d9651e37aa70f19981682325e9f47020f45097ab3"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Cyan</span></span></span><a class="headerlink" href="#_CPPv4N3vcl5Color9ColorARGB4CyanE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color9ColorARGB6YellowE">
+<span id="_CPPv3N3vcl5Color9ColorARGB6YellowE"></span><span id="_CPPv2N3vcl5Color9ColorARGB6YellowE"></span><span class="target" id="classvcl_1_1_color_1a833d6b62f511fcb9d1001f10d9651e37af4479a68051f304598aa760a2682c5ef"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Yellow</span></span></span><a class="headerlink" href="#_CPPv4N3vcl5Color9ColorARGB6YellowE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color9ColorARGB7MagentaE">
+<span id="_CPPv3N3vcl5Color9ColorARGB7MagentaE"></span><span id="_CPPv2N3vcl5Color9ColorARGB7MagentaE"></span><span class="target" id="classvcl_1_1_color_1a833d6b62f511fcb9d1001f10d9651e37a7aeb624483b6defe41f6a36bd806ea08"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Magenta</span></span></span><a class="headerlink" href="#_CPPv4N3vcl5Color9ColorARGB7MagentaE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color9ColorARGB9LightGrayE">
+<span id="_CPPv3N3vcl5Color9ColorARGB9LightGrayE"></span><span id="_CPPv2N3vcl5Color9ColorARGB9LightGrayE"></span><span class="target" id="classvcl_1_1_color_1a833d6b62f511fcb9d1001f10d9651e37a8dbdb70f691bd01e6529660a5b91349a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LightGray</span></span></span><a class="headerlink" href="#_CPPv4N3vcl5Color9ColorARGB9LightGrayE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color9ColorARGB8LightRedE">
+<span id="_CPPv3N3vcl5Color9ColorARGB8LightRedE"></span><span id="_CPPv2N3vcl5Color9ColorARGB8LightRedE"></span><span class="target" id="classvcl_1_1_color_1a833d6b62f511fcb9d1001f10d9651e37ace43615eea851a3aea45fd188accb228"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LightRed</span></span></span><a class="headerlink" href="#_CPPv4N3vcl5Color9ColorARGB8LightRedE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color9ColorARGB10LightGreenE">
+<span id="_CPPv3N3vcl5Color9ColorARGB10LightGreenE"></span><span id="_CPPv2N3vcl5Color9ColorARGB10LightGreenE"></span><span class="target" id="classvcl_1_1_color_1a833d6b62f511fcb9d1001f10d9651e37a147638f930259d0a345cd08878ef1876"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LightGreen</span></span></span><a class="headerlink" href="#_CPPv4N3vcl5Color9ColorARGB10LightGreenE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color9ColorARGB9LightBlueE">
+<span id="_CPPv3N3vcl5Color9ColorARGB9LightBlueE"></span><span id="_CPPv2N3vcl5Color9ColorARGB9LightBlueE"></span><span class="target" id="classvcl_1_1_color_1a833d6b62f511fcb9d1001f10d9651e37a49aca28b5932686c610cc1721358b75b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LightBlue</span></span></span><a class="headerlink" href="#_CPPv4N3vcl5Color9ColorARGB9LightBlueE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color9ColorARGB8DarkGrayE">
+<span id="_CPPv3N3vcl5Color9ColorARGB8DarkGrayE"></span><span id="_CPPv2N3vcl5Color9ColorARGB8DarkGrayE"></span><span class="target" id="classvcl_1_1_color_1a833d6b62f511fcb9d1001f10d9651e37a0e92f068f5b62fafa2b47b631b124dc0"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DarkGray</span></span></span><a class="headerlink" href="#_CPPv4N3vcl5Color9ColorARGB8DarkGrayE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color9ColorARGB7DarkRedE">
+<span id="_CPPv3N3vcl5Color9ColorARGB7DarkRedE"></span><span id="_CPPv2N3vcl5Color9ColorARGB7DarkRedE"></span><span class="target" id="classvcl_1_1_color_1a833d6b62f511fcb9d1001f10d9651e37af8f87ea2245fb598451321ac86213e60"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DarkRed</span></span></span><a class="headerlink" href="#_CPPv4N3vcl5Color9ColorARGB7DarkRedE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color9ColorARGB9DarkGreenE">
+<span id="_CPPv3N3vcl5Color9ColorARGB9DarkGreenE"></span><span id="_CPPv2N3vcl5Color9ColorARGB9DarkGreenE"></span><span class="target" id="classvcl_1_1_color_1a833d6b62f511fcb9d1001f10d9651e37a87e1d2630a5b856b3a7efe2a779fe49e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DarkGreen</span></span></span><a class="headerlink" href="#_CPPv4N3vcl5Color9ColorARGB9DarkGreenE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color9ColorARGB8DarkBlueE">
+<span id="_CPPv3N3vcl5Color9ColorARGB8DarkBlueE"></span><span id="_CPPv2N3vcl5Color9ColorARGB8DarkBlueE"></span><span class="target" id="classvcl_1_1_color_1a833d6b62f511fcb9d1001f10d9651e37a479903a58cba1d3a3e5ce2e46e301b01"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DarkBlue</span></span></span><a class="headerlink" href="#_CPPv4N3vcl5Color9ColorARGB8DarkBlueE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color8ColorMapE">
+<span id="_CPPv3N3vcl5Color8ColorMapE"></span><span id="_CPPv2N3vcl5Color8ColorMapE"></span><span class="target" id="classvcl_1_1_color_1a32ace7bd7fccf742b39f6cd83042a10f"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ColorMap</span></span></span><a class="headerlink" href="#_CPPv4N3vcl5Color8ColorMapE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>List of <a class="reference internal" href="#classvcl_1_1_color"><span class="std std-ref">Color</span></a> Maps. </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color8ColorMap7RedBlueE">
+<span id="_CPPv3N3vcl5Color8ColorMap7RedBlueE"></span><span id="_CPPv2N3vcl5Color8ColorMap7RedBlueE"></span><span class="target" id="classvcl_1_1_color_1a32ace7bd7fccf742b39f6cd83042a10fab41395ae78ccecdb7c2a311a4bb25130"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RedBlue</span></span></span><a class="headerlink" href="#_CPPv4N3vcl5Color8ColorMap7RedBlueE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color8ColorMap6ParulaE">
+<span id="_CPPv3N3vcl5Color8ColorMap6ParulaE"></span><span id="_CPPv2N3vcl5Color8ColorMap6ParulaE"></span><span class="target" id="classvcl_1_1_color_1a32ace7bd7fccf742b39f6cd83042a10faf9a3e7c09df3865685e50d36c45990ce"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Parula</span></span></span><a class="headerlink" href="#_CPPv4N3vcl5Color8ColorMap6ParulaE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color8ColorMap9GreyShadeE">
+<span id="_CPPv3N3vcl5Color8ColorMap9GreyShadeE"></span><span id="_CPPv2N3vcl5Color8ColorMap9GreyShadeE"></span><span class="target" id="classvcl_1_1_color_1a32ace7bd7fccf742b39f6cd83042a10fa6e00efa0b01720ed1dd54df87f58c1a4"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GreyShade</span></span></span><a class="headerlink" href="#_CPPv4N3vcl5Color8ColorMap9GreyShadeE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color5ColorEv">
+<span id="_CPPv3N3vcl5Color5ColorEv"></span><span id="_CPPv2N3vcl5Color5ColorEv"></span><span id="vcl::Color::Color"></span><span class="target" id="classvcl_1_1_color_1a98b1ed982327614fa25d6feaf53baed0"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Color</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl5Color5ColorEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Default constructor. Initializes a black color (with alpha 255). </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color5ColorE9ColorARGB">
+<span id="_CPPv3N3vcl5Color5ColorE9ColorARGB"></span><span id="_CPPv2N3vcl5Color5ColorE9ColorARGB"></span><span id="vcl::Color::Color__ColorARGB"></span><span class="target" id="classvcl_1_1_color_1a957d3f63f5a210e4b57243b50bffe325"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Color</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N3vcl5Color9ColorARGBE" title="vcl::Color::ColorARGB"><span class="n"><span class="pre">ColorARGB</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">cc</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl5Color5ColorE9ColorARGB" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color5ColorE7uint8_t7uint8_t7uint8_t7uint8_t">
+<span id="_CPPv3N3vcl5Color5ColorE7uint8_t7uint8_t7uint8_t7uint8_t"></span><span id="_CPPv2N3vcl5Color5ColorE7uint8_t7uint8_t7uint8_t7uint8_t"></span><span id="vcl::Color::Color__uint8_t.uint8_t.uint8_t.uint8_t"></span><span class="target" id="classvcl_1_1_color_1a4c297ede3982a3b9dadd9a5b3f40749b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Color</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">red</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">green</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">blue</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">alpha</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">255</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl5Color5ColorE7uint8_t7uint8_t7uint8_t7uint8_t" title="Permalink to this definition">#</a><br /></dt>
+<dd><p><a class="reference internal" href="#classvcl_1_1_color"><span class="std std-ref">Color</span></a> constructor. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>red[in]</strong> – red component </p></li>
+<li><p><strong>green</strong> – <strong>[in]</strong> green component </p></li>
+<li><p><strong>blue</strong> – <strong>[in]</strong> blue component </p></li>
+<li><p><strong>alpha</strong> – <strong>[in]</strong> alpha component (default 255) </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5Color3redEv">
+<span id="_CPPv3NK3vcl5Color3redEv"></span><span id="_CPPv2NK3vcl5Color3redEv"></span><span id="vcl::Color::redC"></span><span class="target" id="classvcl_1_1_color_1a58864c5072d97b7d717829a4809da05c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">red</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5Color3redEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Returns the red component of this color [0-255]. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>red component of this color </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5Color5greenEv">
+<span id="_CPPv3NK3vcl5Color5greenEv"></span><span id="_CPPv2NK3vcl5Color5greenEv"></span><span id="vcl::Color::greenC"></span><span class="target" id="classvcl_1_1_color_1a08543224539cd213fa8b7b41a86a5d6c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">green</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5Color5greenEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Returns the green component of this color [0-255]. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>green component of this color </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5Color4blueEv">
+<span id="_CPPv3NK3vcl5Color4blueEv"></span><span id="_CPPv2NK3vcl5Color4blueEv"></span><span id="vcl::Color::blueC"></span><span class="target" id="classvcl_1_1_color_1af6c4cf6b24155ffd1147078341e42d3b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">blue</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5Color4blueEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Returns the blue component of this color [0-255]. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>blue component of this color </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5Color5alphaEv">
+<span id="_CPPv3NK3vcl5Color5alphaEv"></span><span id="_CPPv2NK3vcl5Color5alphaEv"></span><span id="vcl::Color::alphaC"></span><span class="target" id="classvcl_1_1_color_1ad0cff34fadbdcb37717d8f0fe4d72449"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">alpha</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5Color5alphaEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Returns the alpha component of this color [0-255]. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>alpha component of this color </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color3redEv">
+<span id="_CPPv3N3vcl5Color3redEv"></span><span id="_CPPv2N3vcl5Color3redEv"></span><span id="vcl::Color::red"></span><span class="target" id="classvcl_1_1_color_1a7343c1a8970a579ab5380095c93c4deb"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">red</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl5Color3redEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Returns the red component of this color [0-255]. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>red component of this color </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color5greenEv">
+<span id="_CPPv3N3vcl5Color5greenEv"></span><span id="_CPPv2N3vcl5Color5greenEv"></span><span id="vcl::Color::green"></span><span class="target" id="classvcl_1_1_color_1a1fd8edb5ef9a7c00ba2145a84d7831d5"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">green</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl5Color5greenEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Returns the green component of this color [0-255]. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>green component of this color </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color4blueEv">
+<span id="_CPPv3N3vcl5Color4blueEv"></span><span id="_CPPv2N3vcl5Color4blueEv"></span><span id="vcl::Color::blue"></span><span class="target" id="classvcl_1_1_color_1a185abf0fab1046111770f09e9d6b7dc1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">blue</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl5Color4blueEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Returns the blue component of this color [0-255]. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>blue component of this color </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color5alphaEv">
+<span id="_CPPv3N3vcl5Color5alphaEv"></span><span id="_CPPv2N3vcl5Color5alphaEv"></span><span id="vcl::Color::alpha"></span><span class="target" id="classvcl_1_1_color_1a8116d00a12ef282bf5375edd9a993620"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">alpha</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl5Color5alphaEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Returns the alpha component of this color [0-255]. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>alpha component of this color </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5Color4redFEv">
+<span id="_CPPv3NK3vcl5Color4redFEv"></span><span id="_CPPv2NK3vcl5Color4redFEv"></span><span id="vcl::Color::redFC"></span><span class="target" id="classvcl_1_1_color_1a8fa714b76cf16673b229a1a54aa5779e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">redF</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5Color4redFEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Returns the float red component of this color [0-1]. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>float red component of this color </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5Color6greenFEv">
+<span id="_CPPv3NK3vcl5Color6greenFEv"></span><span id="_CPPv2NK3vcl5Color6greenFEv"></span><span id="vcl::Color::greenFC"></span><span class="target" id="classvcl_1_1_color_1a150e2e8defcce07bc6168c425f20e38d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">greenF</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5Color6greenFEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Returns the float green component of this color [0-1]. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>float green component of this color </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5Color5blueFEv">
+<span id="_CPPv3NK3vcl5Color5blueFEv"></span><span id="_CPPv2NK3vcl5Color5blueFEv"></span><span id="vcl::Color::blueFC"></span><span class="target" id="classvcl_1_1_color_1a5f991dbf22a42ce73034788c92fda640"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">blueF</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5Color5blueFEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Returns the float blue component of this color [0-1]. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>float blue component of this color </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5Color6alphaFEv">
+<span id="_CPPv3NK3vcl5Color6alphaFEv"></span><span id="_CPPv2NK3vcl5Color6alphaFEv"></span><span id="vcl::Color::alphaFC"></span><span class="target" id="classvcl_1_1_color_1a67bf1be4c629e2f6dc8467c96b2e80c1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">alphaF</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5Color6alphaFEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Returns the float alpha component of this color [0-1]. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>float alpha component of this color </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5Color6hsvHueEv">
+<span id="_CPPv3NK3vcl5Color6hsvHueEv"></span><span id="_CPPv2NK3vcl5Color6hsvHueEv"></span><span id="vcl::Color::hsvHueC"></span><span class="target" id="classvcl_1_1_color_1a4c4d1cdcf2e86cba2bbab8567ac50041"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hsvHue</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5Color6hsvHueEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Returns the hue color component of this color [0-359]. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>hue color component of this color </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5Color13hsvSaturationEv">
+<span id="_CPPv3NK3vcl5Color13hsvSaturationEv"></span><span id="_CPPv2NK3vcl5Color13hsvSaturationEv"></span><span id="vcl::Color::hsvSaturationC"></span><span class="target" id="classvcl_1_1_color_1a9a4d5f5f2d3eec2063a2263c33cbf09f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hsvSaturation</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5Color13hsvSaturationEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Returns the saturation color component of this color [0-255]. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>saturation color component of this color </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5Color7hsvHueFEv">
+<span id="_CPPv3NK3vcl5Color7hsvHueFEv"></span><span id="_CPPv2NK3vcl5Color7hsvHueFEv"></span><span id="vcl::Color::hsvHueFC"></span><span class="target" id="classvcl_1_1_color_1ad3959e60cab3306eb9048120e009ef23"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hsvHueF</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5Color7hsvHueFEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Returns the float saturation color component of this color [0-1]. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>float saturation color component of this color </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5Color14hsvSaturationFEv">
+<span id="_CPPv3NK3vcl5Color14hsvSaturationFEv"></span><span id="_CPPv2NK3vcl5Color14hsvSaturationFEv"></span><span id="vcl::Color::hsvSaturationFC"></span><span class="target" id="classvcl_1_1_color_1a8c746456e82cac73f786809bd2b3c437"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hsvSaturationF</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5Color14hsvSaturationFEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Returns the float saturation color component of this color [0-1]. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>float saturation color component of this color </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color8setAlphaE7uint8_t">
+<span id="_CPPv3N3vcl5Color8setAlphaE7uint8_t"></span><span id="_CPPv2N3vcl5Color8setAlphaE7uint8_t"></span><span id="vcl::Color::setAlpha__uint8_t"></span><span class="target" id="classvcl_1_1_color_1a8f18a478de52693dba416ecf7deef7be"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setAlpha</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">alpha</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl5Color8setAlphaE7uint8_t" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Sets the alpha of this color [0-255]. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>alpha</strong> – <strong>[in]</strong> </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color6setRedE7uint8_t">
+<span id="_CPPv3N3vcl5Color6setRedE7uint8_t"></span><span id="_CPPv2N3vcl5Color6setRedE7uint8_t"></span><span id="vcl::Color::setRed__uint8_t"></span><span class="target" id="classvcl_1_1_color_1a81a724e0892ea3e75753ba5f5fd9ba35"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setRed</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">red</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl5Color6setRedE7uint8_t" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Sets the red of this color [0-255]. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>red</strong> – <strong>[in]</strong> </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color8setGreenE7uint8_t">
+<span id="_CPPv3N3vcl5Color8setGreenE7uint8_t"></span><span id="_CPPv2N3vcl5Color8setGreenE7uint8_t"></span><span id="vcl::Color::setGreen__uint8_t"></span><span class="target" id="classvcl_1_1_color_1acffd59b24333c3d0da1762d26332b795"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setGreen</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">green</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl5Color8setGreenE7uint8_t" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Sets the green of this color [0-255]. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>green</strong> – <strong>[in]</strong> </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color7setBlueE7uint8_t">
+<span id="_CPPv3N3vcl5Color7setBlueE7uint8_t"></span><span id="_CPPv2N3vcl5Color7setBlueE7uint8_t"></span><span id="vcl::Color::setBlue__uint8_t"></span><span class="target" id="classvcl_1_1_color_1a1dbaaf3735acbd4e3d3f61f822fdc67b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setBlue</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">blue</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl5Color7setBlueE7uint8_t" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Sets the blue of this color [0-255]. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>blue</strong> – <strong>[in]</strong> </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color6setRgbE7uint8_t7uint8_t7uint8_t7uint8_t">
+<span id="_CPPv3N3vcl5Color6setRgbE7uint8_t7uint8_t7uint8_t7uint8_t"></span><span id="_CPPv2N3vcl5Color6setRgbE7uint8_t7uint8_t7uint8_t7uint8_t"></span><span id="vcl::Color::setRgb__uint8_t.uint8_t.uint8_t.uint8_t"></span><span class="target" id="classvcl_1_1_color_1ae46c5ea1f8e9404bc0fbdecae1d6b26d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setRgb</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">red</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">green</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">blue</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">alpha</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">255</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl5Color6setRgbE7uint8_t7uint8_t7uint8_t7uint8_t" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Sets the RGB values of this color. </p>
+<p>All the values must be in the range 0-255.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>red</strong> – <strong>[in]</strong> </p></li>
+<li><p><strong>green</strong> – <strong>[in]</strong> </p></li>
+<li><p><strong>blue</strong> – <strong>[in]</strong> </p></li>
+<li><p><strong>alpha</strong> – <strong>[in]</strong> default 255 </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color6setHsvE4uint7uint8_t7uint8_t7uint8_t">
+<span id="_CPPv3N3vcl5Color6setHsvE4uint7uint8_t7uint8_t7uint8_t"></span><span id="_CPPv2N3vcl5Color6setHsvE4uint7uint8_t7uint8_t7uint8_t"></span><span id="vcl::Color::setHsv__uint.uint8_t.uint8_t.uint8_t"></span><span class="target" id="classvcl_1_1_color_1a9e6cd87abe68b5d5e0d0ff7305277131"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setHsv</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">h</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">s</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">v</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">alpha</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">255</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl5Color6setHsvE4uint7uint8_t7uint8_t7uint8_t" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Sets the HSV values of this color. </p>
+<p>All the values must be in the range 0-255.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>h</strong> – <strong>[in]</strong> </p></li>
+<li><p><strong>s</strong> – <strong>[in]</strong> </p></li>
+<li><p><strong>v</strong> – <strong>[in]</strong> </p></li>
+<li><p><strong>alpha</strong> – <strong>[in]</strong> default 255 </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color9setAlphaFEf">
+<span id="_CPPv3N3vcl5Color9setAlphaFEf"></span><span id="_CPPv2N3vcl5Color9setAlphaFEf"></span><span id="vcl::Color::setAlphaF__float"></span><span class="target" id="classvcl_1_1_color_1a918434ccc507ccc6226480e883283af2"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setAlphaF</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">alpha</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl5Color9setAlphaFEf" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Sets the alpha of this color [0-1]. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>alpha</strong> – <strong>[in]</strong> </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color7setRedFEf">
+<span id="_CPPv3N3vcl5Color7setRedFEf"></span><span id="_CPPv2N3vcl5Color7setRedFEf"></span><span id="vcl::Color::setRedF__float"></span><span class="target" id="classvcl_1_1_color_1a7bbabd9cb15e6ee17d4ba79773b9887e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setRedF</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">red</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl5Color7setRedFEf" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Sets the red of this color [0-1]. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>red</strong> – <strong>[in]</strong> </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color9setGreenFEf">
+<span id="_CPPv3N3vcl5Color9setGreenFEf"></span><span id="_CPPv2N3vcl5Color9setGreenFEf"></span><span id="vcl::Color::setGreenF__float"></span><span class="target" id="classvcl_1_1_color_1afd36d181b7b6f7bfb0c822bacfbe8d3c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setGreenF</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">green</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl5Color9setGreenFEf" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Sets the green of this color [0-1]. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>green</strong> – <strong>[in]</strong> </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color8setBlueFEf">
+<span id="_CPPv3N3vcl5Color8setBlueFEf"></span><span id="_CPPv2N3vcl5Color8setBlueFEf"></span><span id="vcl::Color::setBlueF__float"></span><span class="target" id="classvcl_1_1_color_1aa8b790ef1ca36bcd4e0a1af2f5036022"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setBlueF</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">blue</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl5Color8setBlueFEf" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Sets the blue of this color [0-1]. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>blue</strong> – <strong>[in]</strong> </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color7setRgbFEffff">
+<span id="_CPPv3N3vcl5Color7setRgbFEffff"></span><span id="_CPPv2N3vcl5Color7setRgbFEffff"></span><span id="vcl::Color::setRgbF__float.float.float.float"></span><span class="target" id="classvcl_1_1_color_1a5073ea810a3d16ac301846cf690e3aad"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setRgbF</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">red</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">green</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">blue</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">alpha</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1.0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl5Color7setRgbFEffff" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Sets the RGB values of this color. </p>
+<p>All the values must be in the range 0-1.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>red</strong> – <strong>[in]</strong> red component of the color in as a float value between 0 and 1. </p></li>
+<li><p><strong>green</strong> – <strong>[in]</strong> green component of the color in as a float value between 0 and 1. </p></li>
+<li><p><strong>blue</strong> – <strong>[in]</strong> blue component of the color in as a float value between 0 and 1. </p></li>
+<li><p><strong>alpha</strong> – <strong>[in]</strong> : alpha component of the color in as a float value between 0 and 1, default value is 1. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Color7setHsvFEffff">
+<span id="_CPPv3N3vcl5Color7setHsvFEffff"></span><span id="_CPPv2N3vcl5Color7setHsvFEffff"></span><span id="vcl::Color::setHsvF__float.float.float.float"></span><span class="target" id="classvcl_1_1_color_1a2de983e704a0ba637bde9a163fdd9f6f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setHsvF</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">hf</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sf</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">vf</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">alpha</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1.0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl5Color7setHsvFEffff" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Sets the HSV values of this color. </p>
+<p>All the values must be in the range 0-1. The color will be converted in RGBA and then stored in this color.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>hf</strong> – <strong>[in]</strong> </p></li>
+<li><p><strong>sf</strong> – <strong>[in]</strong> </p></li>
+<li><p><strong>vf</strong> – <strong>[in]</strong> </p></li>
+<li><p><strong>alpha</strong> – <strong>[in]</strong> </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5ColoreqERK5Color">
+<span id="_CPPv3NK3vcl5ColoreqERK5Color"></span><span id="_CPPv2NK3vcl5ColoreqERK5Color"></span><span id="vcl::Color::eq-operator__ColorCRC"></span><span class="target" id="classvcl_1_1_color_1a11263075a87ceba931aa1af01321c84c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">==</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3vcl5ColorE" title="vcl::Color"><span class="n"><span class="pre">Color</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">otherColor</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5ColoreqERK5Color" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Returns true if this color has the same RGB and alpha values as otherColor; otherwise returns false. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>otherColor</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5ColorneERK5Color">
+<span id="_CPPv3NK3vcl5ColorneERK5Color"></span><span id="_CPPv2NK3vcl5ColorneERK5Color"></span><span id="vcl::Color::neq-operator__ColorCRC"></span><span class="target" id="classvcl_1_1_color_1a6c4d8eb80fca95b304b545bd7b8f7abc"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">!=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3vcl5ColorE" title="vcl::Color"><span class="n"><span class="pre">Color</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">otherColor</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5ColorneERK5Color" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Returns false if this color has the same RGB and alpha values as otherColor; otherwise returns true. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>otherColor</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5ColorltERK5Color">
+<span id="_CPPv3NK3vcl5ColorltERK5Color"></span><span id="_CPPv2NK3vcl5ColorltERK5Color"></span><span id="vcl::Color::lt-operator__ColorCRC"></span><span class="target" id="classvcl_1_1_color_1a73b369df71ede4019d54934a4f76c4ed"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">&lt;</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3vcl5ColorE" title="vcl::Color"><span class="n"><span class="pre">Color</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">otherColor</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5ColorltERK5Color" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Returns true if this color is less than otherColor follwing the RGBA order; otherwise returns false. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>otherColor</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="point.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Point</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="box.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Box</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2021, Visual Computing Lab, ISTI - CNR
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/furo.js"></script>
+    <script async="async" src="https://assets.readthedocs.org/static/javascript/readthedocs-doc-embed.js"></script>
+    </body>
+</html>

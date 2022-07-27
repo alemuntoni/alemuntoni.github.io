@@ -1,0 +1,874 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Principal Curvature" href="principal_curvature.html" /><link rel="prev" title="Color" href="color.html" />
+
+    <meta name="generator" content="sphinx-5.1.1, furo 2022.06.21"/>
+        <title>Point - VCLib documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=40978830699223671f4072448e654b5958f38b89" />
+    <link rel="stylesheet" type="text/css" href="https://assets.readthedocs.org/static/css/badge_only.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style>
+<!-- RTD Extra Head -->
+
+<link rel="stylesheet" href="https://assets.readthedocs.org/static/css/readthedocs-doc-embed.css" type="text/css" />
+
+<script type="application/json" id="READTHEDOCS_DATA">{"ad_free": "", "api_host": "", "build_date": "2022-07-27T11:33:19Z", "builder": "sphinx", "canonical_url": "", "commit": "", "docroot": "", "features": {"docsearch_disabled": false}, "global_analytics_code": null, "language": "", "page": "space/point", "programming_language": "", "project": "", "source_suffix": ".rst", "subprojects": {}, "theme": "", "user_analytics_code": null, "version": ""}</script>
+
+<!--
+Using this variable directly instead of using `JSON.parse` is deprecated.
+The READTHEDOCS_DATA global variable will be removed in the future.
+-->
+<script type="text/javascript">
+READTHEDOCS_DATA = JSON.parse(document.getElementById('READTHEDOCS_DATA').innerHTML);
+</script>
+
+<script type="text/javascript" src="https://assets.readthedocs.org/static/javascript/readthedocs-analytics.js" async="async"></script>
+
+<!-- end RTD <extrahead> -->
+</head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">VCLib  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  
+  <span class="sidebar-brand-text">VCLib  documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../basic_concepts.html">Basic Concepts</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../space.html">Spatial and other Data Structures</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="box.html">Box</a></li>
+<li class="toctree-l2"><a class="reference internal" href="color.html">Color</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Point</a></li>
+<li class="toctree-l2"><a class="reference internal" href="principal_curvature.html">Principal Curvature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tex_coord.html">TexCoord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/tokenizer.html">Tokenizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/timer.html">Timer</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../mesh_documentation.html">Mesh Documentation</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../mesh/elements.html">Elements</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/elements/vertex.html">The Vertex Class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/elements/face.html">The Face Class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/elements/edge.html">The Edge Class</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../mesh/components.html">Components</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/components/adjacent_edges.html">Adjacent Edges Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/components/adjacent_faces.html">Adjacent Faces Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/components/adjacent_vertices.html">Adjacent Vertices Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/components/bit_flags.html">Bit Flags Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/components/bounding_box.html">Bounding Box Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/components/color.html">Color Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/components/coordinate.html">Coordinate Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/components/mark.html">Mark Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/components/normal.html">Normal Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/components/scalar.html">Scalar Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/components/tex_coord.html">Tex Coord Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/components/texture_file_names.html">Texture File Names Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/components/transform_matrix.html">Transform Matrix Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/components/vertex_references.html">Vertex References Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/components/wedge_colors.html">Wedge Colors Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/components/wedge_tex_coords.html">Wedge Tex Coords Component</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../mesh/containers.html">Element Containers</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/containers/vertex_container.html">Vertex Container</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/containers/face_container.html">Face Container</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/containers/edge_container.html">Edge Container</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../mesh/mesh_doc.html">Mesh</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../mesh/meshes.html">Built-in Mesh Data Structures</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../mesh/trimesh/trimesh.html">TriMesh</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../mesh/mesh_doc.html">Mesh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mesh/containers/vertex_container.html">Vertex Container</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mesh/containers/face_container.html">Face Container</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/polymesh/polymesh.html">PolyMesh</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../requirements.html">Mesh Requirements</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../requirements/element_requirements.html">Element Requirement Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../requirements/vertex_requirements.html">Vertex Requirement Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../requirements/face_requirements.html">Face Requirement Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../requirements/mesh_requirements.html">Mesh Requirement Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../algorithms.html">Algorithms</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../algorithms/create.html">Create Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algorithms/cleaning.html">Cleaning Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algorithms/smoothing.html">Smoothing Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../algorithms/update.html">Update Algorithms</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../io.html">Input/Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exceptions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mesh_customization.html">Mesh Customization</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../tutorials.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="point">
+<span id="id1"></span><h1>Point<a class="headerlink" href="#point" title="Permalink to this heading">#</a></h1>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4I0_iEN3vcl5PointE">
+<span id="_CPPv3I0_iEN3vcl5PointE"></span><span id="_CPPv2I0_iEN3vcl5PointE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Scalar</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">N</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classvcl_1_1_point"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Point</span></span></span><a class="headerlink" href="#_CPPv4I0_iEN3vcl5PointE" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>The <a class="reference internal" href="#classvcl_1_1_point"><span class="std std-ref">Point</span></a> class represents an N-dimensional point containing N scalar values. </p>
+<p>Subclassed by <a class="reference internal" href="#classvcl_1_1_point2"><span class="std std-ref">vcl::Point2&lt; Scalar &gt;</span></a>, <a class="reference internal" href="#classvcl_1_1_point3"><span class="std std-ref">vcl::Point3&lt; Scalar &gt;</span></a>, <a class="reference internal" href="#classvcl_1_1_point3"><span class="std std-ref">vcl::Point3&lt; float &gt;</span></a>, <a class="reference internal" href="#classvcl_1_1_point4"><span class="std std-ref">vcl::Point4&lt; uint8_t &gt;</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Point10ScalarTypeE">
+<span id="_CPPv3N3vcl5Point10ScalarTypeE"></span><span id="_CPPv2N3vcl5Point10ScalarTypeE"></span><span class="target" id="classvcl_1_1_point_1a3144af688487df6b486e827f70ebdb2a"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ScalarType</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><a class="headerlink" href="#_CPPv4N3vcl5Point10ScalarTypeE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Point5PointEv">
+<span id="_CPPv3N3vcl5Point5PointEv"></span><span id="_CPPv2N3vcl5Point5PointEv"></span><span id="vcl::Point::Point"></span><span class="target" id="classvcl_1_1_point_1a0a703feddf2d85bfb8f0621667cceee9"></span><span class="sig-name descname"><span class="n"><span class="pre">Point</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N3vcl5Point5PointEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Point5PointERKN5Eigen6MatrixI6ScalarXL1EE1NEE">
+<span id="_CPPv3N3vcl5Point5PointERKN5Eigen6MatrixI6ScalarXL1EE1NEE"></span><span id="_CPPv2N3vcl5Point5PointERKN5Eigen6MatrixI6ScalarX1E1NEE"></span><span id="vcl::Point::Point__Eigen::Matrix:Scalar.1.N:CR"></span><span class="target" id="classvcl_1_1_point_1a2848dfe616302da95decf9b894a6b224"></span><span class="sig-name descname"><span class="n"><span class="pre">Point</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Eigen</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Matrix</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point::N"><span class="n"><span class="pre">N</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">v</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl5Point5PointERKN5Eigen6MatrixI6ScalarXL1EE1NEE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0ENK3vcl5Point4castE5PointI1S1NEv">
+<span id="_CPPv3I0ENK3vcl5Point4castEv"></span><span id="_CPPv2I0ENK3vcl5Point4castEv"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">S</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classvcl_1_1_point_1a3963b662ffc5b612b9af3e9887b14fb0"></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point"><span class="n"><span class="pre">Point</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0ENK3vcl5Point4castE5PointI1S1NEv" title="vcl::Point::cast::S"><span class="n"><span class="pre">S</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point::N"><span class="n"><span class="pre">N</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cast</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4I0ENK3vcl5Point4castE5PointI1S1NEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5Point12isDegenerateEv">
+<span id="_CPPv3NK3vcl5Point12isDegenerateEv"></span><span id="_CPPv2NK3vcl5Point12isDegenerateEv"></span><span id="vcl::Point::isDegenerateC"></span><span class="target" id="classvcl_1_1_point_1adda73e2111f40693d9b464022afecd2d"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isDegenerate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5Point12isDegenerateEv" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>Returns true if at least one of its components is NaN or inf. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>true if the point is degenerate, false otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5Point3dotERK5Point">
+<span id="_CPPv3NK3vcl5Point3dotERK5Point"></span><span id="_CPPv2NK3vcl5Point3dotERK5Point"></span><span id="vcl::Point::dot__PointCRC"></span><span class="target" id="classvcl_1_1_point_1afa2f82a7a46e096fe993f2266cd38339"></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dot</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point"><span class="n"><span class="pre">Point</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p1</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5Point3dotERK5Point" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5Point5angleERK5Point">
+<span id="_CPPv3NK3vcl5Point5angleERK5Point"></span><span id="_CPPv2NK3vcl5Point5angleERK5Point"></span><span id="vcl::Point::angle__PointCRC"></span><span class="target" id="classvcl_1_1_point_1a52b8d303f3e830f2749a4c06b86b3d67"></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">angle</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point"><span class="n"><span class="pre">Point</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p1</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5Point5angleERK5Point" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5Point4distERK5Point">
+<span id="_CPPv3NK3vcl5Point4distERK5Point"></span><span id="_CPPv2NK3vcl5Point4distERK5Point"></span><span id="vcl::Point::dist__PointCRC"></span><span class="target" id="classvcl_1_1_point_1a54fa99e271c7ec7f426fa5b8cea86ee8"></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dist</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point"><span class="n"><span class="pre">Point</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p1</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5Point4distERK5Point" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5Point11squaredDistERK5Point">
+<span id="_CPPv3NK3vcl5Point11squaredDistERK5Point"></span><span id="_CPPv2NK3vcl5Point11squaredDistERK5Point"></span><span id="vcl::Point::squaredDist__PointCRC"></span><span class="target" id="classvcl_1_1_point_1a28b409a5fdaed729c24a2a72a0ffea54"></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">squaredDist</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point"><span class="n"><span class="pre">Point</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p1</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5Point11squaredDistERK5Point" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="classvcl_1_1_point_1a530eb3a3acb45730747068c715cc3f58"></span><span class="sig-name descname"><span class="pre">Point</span> <span class="pre">cross</span> <span class="pre">(const</span> <span class="pre">Point</span> <span class="pre">&amp;p1)</span> <span class="pre">const</span> <span class="pre">requires(N</span></span></dt>
+<dd><p>Returns the cross product between two points. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This function is available only on Points having size == 3. </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The cross product between this and the other point. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5Point4normEv">
+<span id="_CPPv3NK3vcl5Point4normEv"></span><span id="_CPPv2NK3vcl5Point4normEv"></span><span id="vcl::Point::normC"></span><span class="target" id="classvcl_1_1_point_1a8e3f51be4e54ceec6e5916c632289a8c"></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">norm</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5Point4normEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5Point11squaredNormEv">
+<span id="_CPPv3NK3vcl5Point11squaredNormEv"></span><span id="_CPPv2NK3vcl5Point11squaredNormEv"></span><span id="vcl::Point::squaredNormC"></span><span class="target" id="classvcl_1_1_point_1a1672bf8621eba13ab7dd995c125a59a9"></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">squaredNorm</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5Point11squaredNormEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5Point4sizeEv">
+<span id="_CPPv3NK3vcl5Point4sizeEv"></span><span id="_CPPv2NK3vcl5Point4sizeEv"></span><span id="vcl::Point::sizeC"></span><span class="target" id="classvcl_1_1_point_1a1c61a702d14d166ca9d4de701d59323f"></span><span class="n"><span class="pre">uint</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">size</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5Point4sizeEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Point11setConstantE6Scalar">
+<span id="_CPPv3N3vcl5Point11setConstantE6Scalar"></span><span id="_CPPv2N3vcl5Point11setConstantE6Scalar"></span><span id="vcl::Point::setConstant__Scalar"></span><span class="target" id="classvcl_1_1_point_1a5db148cf8557f735a24164dfd4d1dce8"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setConstant</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">s</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl5Point11setConstantE6Scalar" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Point7setZeroEv">
+<span id="_CPPv3N3vcl5Point7setZeroEv"></span><span id="_CPPv2N3vcl5Point7setZeroEv"></span><span id="vcl::Point::setZero"></span><span class="target" id="classvcl_1_1_point_1aad6fc04af1fa8feaff7f8a0303333147"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setZero</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl5Point7setZeroEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Point7setOnesEv">
+<span id="_CPPv3N3vcl5Point7setOnesEv"></span><span id="_CPPv2N3vcl5Point7setOnesEv"></span><span id="vcl::Point::setOnes"></span><span class="target" id="classvcl_1_1_point_1a45466940128b8a99846fb0d9406aad9e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setOnes</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl5Point7setOnesEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5Point10normalizedEv">
+<span id="_CPPv3NK3vcl5Point10normalizedEv"></span><span id="_CPPv2NK3vcl5Point10normalizedEv"></span><span id="vcl::Point::normalizedC"></span><span class="target" id="classvcl_1_1_point_1a98f738ad1cdadb40e1262a73d006a1a2"></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point"><span class="n"><span class="pre">Point</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point::N"><span class="n"><span class="pre">N</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">normalized</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5Point10normalizedEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Point9normalizeEv">
+<span id="_CPPv3N3vcl5Point9normalizeEv"></span><span id="_CPPv2N3vcl5Point9normalizeEv"></span><span id="vcl::Point::normalize"></span><span class="target" id="classvcl_1_1_point_1a7086bd9f1cf7e7226a1ee77c9b126102"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">normalize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl5Point9normalizeEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5Point11eigenVectorEv">
+<span id="_CPPv3NK3vcl5Point11eigenVectorEv"></span><span id="_CPPv2NK3vcl5Point11eigenVectorEv"></span><span id="vcl::Point::eigenVectorC"></span><span class="target" id="classvcl_1_1_point_1aa01d97098f01c9b5cd3895ca2bd79bf9"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Eigen</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Matrix</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point::N"><span class="n"><span class="pre">N</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">eigenVector</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5Point11eigenVectorEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5PointclE4uint">
+<span id="_CPPv3N3vcl5PointclE4uint"></span><span id="_CPPv2N3vcl5PointclE4uint"></span><span id="vcl::Point::call-operator__uint"></span><span class="target" id="classvcl_1_1_point_1ae8de4b3928922052b1ecd06db430243f"></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">()</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">i</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl5PointclE4uint" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5PointclE4uint">
+<span id="_CPPv3NK3vcl5PointclE4uint"></span><span id="_CPPv2NK3vcl5PointclE4uint"></span><span id="vcl::Point::call-operator__uintC"></span><span class="target" id="classvcl_1_1_point_1a472895f32db4906d717aaa708eb66bbe"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">()</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">i</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5PointclE4uint" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5PointeqERK5Point">
+<span id="_CPPv3NK3vcl5PointeqERK5Point"></span><span id="_CPPv2NK3vcl5PointeqERK5Point"></span><span id="vcl::Point::eq-operator__PointCRC"></span><span class="target" id="classvcl_1_1_point_1a45788190daf06ce3e683739aff9dddee"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">==</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point"><span class="n"><span class="pre">Point</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p1</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5PointeqERK5Point" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5PointneERK5Point">
+<span id="_CPPv3NK3vcl5PointneERK5Point"></span><span id="_CPPv2NK3vcl5PointneERK5Point"></span><span id="vcl::Point::neq-operator__PointCRC"></span><span class="target" id="classvcl_1_1_point_1a34680c6bd66bc868cafc5a8c7a1fe689"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">!=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point"><span class="n"><span class="pre">Point</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p1</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5PointneERK5Point" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5PointltERK5Point">
+<span id="_CPPv3NK3vcl5PointltERK5Point"></span><span id="_CPPv2NK3vcl5PointltERK5Point"></span><span id="vcl::Point::lt-operator__PointCRC"></span><span class="target" id="classvcl_1_1_point_1aa8ebc034c6773f9ca7be627b15918c62"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">&lt;</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point"><span class="n"><span class="pre">Point</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p1</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5PointltERK5Point" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5PointplERK6Scalar">
+<span id="_CPPv3NK3vcl5PointplERK6Scalar"></span><span id="_CPPv2NK3vcl5PointplERK6Scalar"></span><span id="vcl::Point::add-operator__ScalarCRC"></span><span class="target" id="classvcl_1_1_point_1a16897a2e4c35bfe64493c39e08036f42"></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point"><span class="n"><span class="pre">Point</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">+</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">s</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5PointplERK6Scalar" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5PointplERK5Point">
+<span id="_CPPv3NK3vcl5PointplERK5Point"></span><span id="_CPPv2NK3vcl5PointplERK5Point"></span><span id="vcl::Point::add-operator__PointCRC"></span><span class="target" id="classvcl_1_1_point_1aaaedb62bcab4048900f9bf64c51bebb3"></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point"><span class="n"><span class="pre">Point</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">+</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point"><span class="n"><span class="pre">Point</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p1</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5PointplERK5Point" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5PointmiEv">
+<span id="_CPPv3NK3vcl5PointmiEv"></span><span id="_CPPv2NK3vcl5PointmiEv"></span><span id="vcl::Point::sub-operatorC"></span><span class="target" id="classvcl_1_1_point_1a4d065ab7e11c9b65abe4a16b2b6158df"></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point"><span class="n"><span class="pre">Point</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">-</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5PointmiEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5PointmiERK6Scalar">
+<span id="_CPPv3NK3vcl5PointmiERK6Scalar"></span><span id="_CPPv2NK3vcl5PointmiERK6Scalar"></span><span id="vcl::Point::sub-operator__ScalarCRC"></span><span class="target" id="classvcl_1_1_point_1aef5b8e89c140a7503457d1958c73ce7c"></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point"><span class="n"><span class="pre">Point</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">-</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">s</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5PointmiERK6Scalar" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5PointmiERK5Point">
+<span id="_CPPv3NK3vcl5PointmiERK5Point"></span><span id="_CPPv2NK3vcl5PointmiERK5Point"></span><span id="vcl::Point::sub-operator__PointCRC"></span><span class="target" id="classvcl_1_1_point_1a2cd40102cae97a34ca2187c33fc58739"></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point"><span class="n"><span class="pre">Point</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">-</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point"><span class="n"><span class="pre">Point</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p1</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5PointmiERK5Point" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5PointmlERK6Scalar">
+<span id="_CPPv3NK3vcl5PointmlERK6Scalar"></span><span id="_CPPv2NK3vcl5PointmlERK6Scalar"></span><span id="vcl::Point::mul-operator__ScalarCRC"></span><span class="target" id="classvcl_1_1_point_1ab5e0ae402479efc257dfd301d6937e96"></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point"><span class="n"><span class="pre">Point</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">*</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">s</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5PointmlERK6Scalar" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5PointmlERK5Point">
+<span id="_CPPv3NK3vcl5PointmlERK5Point"></span><span id="_CPPv2NK3vcl5PointmlERK5Point"></span><span id="vcl::Point::mul-operator__PointCRC"></span><span class="target" id="classvcl_1_1_point_1a1e68c130dd1cdb9aaa2717d6fac57c90"></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">*</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point"><span class="n"><span class="pre">Point</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p1</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5PointmlERK5Point" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5PointmlERKN5Eigen6MatrixI6Scalar1N1NEE">
+<span id="_CPPv3NK3vcl5PointmlERKN5Eigen6MatrixI6Scalar1N1NEE"></span><span id="_CPPv2NK3vcl5PointmlERKN5Eigen6MatrixI6Scalar1N1NEE"></span><span id="vcl::Point::mul-operator__Eigen::Matrix:Scalar.N.N:CRC"></span><span class="target" id="classvcl_1_1_point_1a3eee72b4d681b8a44d6b794c8e98cd18"></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point"><span class="n"><span class="pre">Point</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">*</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Eigen</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Matrix</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point::N"><span class="n"><span class="pre">N</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point::N"><span class="n"><span class="pre">N</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5PointmlERKN5Eigen6MatrixI6Scalar1N1NEE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="classvcl_1_1_point_1a9ad812affe5517ea300b6054340058d7"></span><span class="sig-name descname"><span class="pre">Point</span> <span class="pre">operator*</span> <span class="pre">(const</span> <span class="pre">Eigen::Matrix&lt;</span> <span class="pre">Scalar,</span> <span class="pre">N+1,</span> <span class="pre">N+1</span> <span class="pre">&gt;</span> <span class="pre">&amp;m)</span> <span class="pre">const</span> <span class="pre">requires(N</span></span></dt>
+<dd><p>Returns a new 3D point/vector on which has been applied an TRS 4x4 matrix. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5PointdvERK6Scalar">
+<span id="_CPPv3NK3vcl5PointdvERK6Scalar"></span><span id="_CPPv2NK3vcl5PointdvERK6Scalar"></span><span id="vcl::Point::div-operator__ScalarCRC"></span><span class="target" id="classvcl_1_1_point_1a9bd357f8412d9bb5175effe74ca46dec"></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point"><span class="n"><span class="pre">Point</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">/</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">s</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5PointdvERK6Scalar" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5PointpLERK6Scalar">
+<span id="_CPPv3N3vcl5PointpLERK6Scalar"></span><span id="_CPPv2N3vcl5PointpLERK6Scalar"></span><span id="vcl::Point::add-assign-operator__ScalarCR"></span><span class="target" id="classvcl_1_1_point_1a0d548cfd0836c05c0177cdaf47d6d6dc"></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point"><span class="n"><span class="pre">Point</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">+=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">s</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl5PointpLERK6Scalar" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5PointpLERK5Point">
+<span id="_CPPv3N3vcl5PointpLERK5Point"></span><span id="_CPPv2N3vcl5PointpLERK5Point"></span><span id="vcl::Point::add-assign-operator__PointCR"></span><span class="target" id="classvcl_1_1_point_1aa1839a5559e9376f64de357e0dfe6fc2"></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point"><span class="n"><span class="pre">Point</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">+=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point"><span class="n"><span class="pre">Point</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl5PointpLERK5Point" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5PointmIERK6Scalar">
+<span id="_CPPv3N3vcl5PointmIERK6Scalar"></span><span id="_CPPv2N3vcl5PointmIERK6Scalar"></span><span id="vcl::Point::sub-assign-operator__ScalarCR"></span><span class="target" id="classvcl_1_1_point_1a21c39c6d17fe457c5d862f5b7edc95ed"></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point"><span class="n"><span class="pre">Point</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">-=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">s</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl5PointmIERK6Scalar" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5PointmIERK5Point">
+<span id="_CPPv3N3vcl5PointmIERK5Point"></span><span id="_CPPv2N3vcl5PointmIERK5Point"></span><span id="vcl::Point::sub-assign-operator__PointCR"></span><span class="target" id="classvcl_1_1_point_1af81674efd76e89dc4e8b921db7f496da"></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point"><span class="n"><span class="pre">Point</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">-=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point"><span class="n"><span class="pre">Point</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl5PointmIERK5Point" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5PointmLERK6Scalar">
+<span id="_CPPv3N3vcl5PointmLERK6Scalar"></span><span id="_CPPv2N3vcl5PointmLERK6Scalar"></span><span id="vcl::Point::mul-assign-operator__ScalarCR"></span><span class="target" id="classvcl_1_1_point_1ad33d601a0cab6b719d0f5aa884601e04"></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point"><span class="n"><span class="pre">Point</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">*=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">s</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl5PointmLERK6Scalar" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5PointmLERKN5Eigen6MatrixI6Scalar1N1NEE">
+<span id="_CPPv3N3vcl5PointmLERKN5Eigen6MatrixI6Scalar1N1NEE"></span><span id="_CPPv2N3vcl5PointmLERKN5Eigen6MatrixI6Scalar1N1NEE"></span><span id="vcl::Point::mul-assign-operator__Eigen::Matrix:Scalar.N.N:CR"></span><span class="target" id="classvcl_1_1_point_1ad3ed0348657976082de78fa7258be29b"></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point"><span class="n"><span class="pre">Point</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">*=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">Eigen</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Matrix</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point::N"><span class="n"><span class="pre">N</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point::N"><span class="n"><span class="pre">N</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">m</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl5PointmLERKN5Eigen6MatrixI6Scalar1N1NEE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="classvcl_1_1_point_1a8e5e91b230dcb690bb0144670ca0ca45"></span><span class="sig-name descname"><span class="pre">Point</span> <span class="pre">&amp;</span> <span class="pre">operator*=</span> <span class="pre">(const</span> <span class="pre">Eigen::Matrix&lt;</span> <span class="pre">Scalar,</span> <span class="pre">N+1,</span> <span class="pre">N+1</span> <span class="pre">&gt;</span> <span class="pre">&amp;m)</span> <span class="pre">requires(N</span></span></dt>
+<dd><p>Applies to the given point/vector an TRS 4x4 matrix. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>m</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5PointdVERK6Scalar">
+<span id="_CPPv3N3vcl5PointdVERK6Scalar"></span><span id="_CPPv2N3vcl5PointdVERK6Scalar"></span><span id="vcl::Point::div-assign-operator__ScalarCR"></span><span class="target" id="classvcl_1_1_point_1a0bf1c46df0c0d45364d2f61c92f3ab2a"></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point"><span class="n"><span class="pre">Point</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">/=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">s</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl5PointdVERK6Scalar" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5PointixE4uint">
+<span id="_CPPv3N3vcl5PointixE4uint"></span><span id="_CPPv2N3vcl5PointixE4uint"></span><span id="vcl::Point::subscript-operator__uint"></span><span class="target" id="classvcl_1_1_point_1a949ac0fc87ec4e2f2dfafc51a4b4f1b4"></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">[]</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">i</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl5PointixE4uint" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl5PointixE4uint">
+<span id="_CPPv3NK3vcl5PointixE4uint"></span><span id="_CPPv2NK3vcl5PointixE4uint"></span><span id="vcl::Point::subscript-operator__uintC"></span><span class="target" id="classvcl_1_1_point_1af111fa7d07056cf218ffab80ba944757"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point::Scalar"><span class="n"><span class="pre">Scalar</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">[]</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">i</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl5PointixE4uint" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-attributes">Public Static Attributes</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl5Point3DIME">
+<span id="_CPPv3N3vcl5Point3DIME"></span><span id="_CPPv2N3vcl5Point3DIME"></span><span id="vcl::Point::DIM__iC"></span><span class="target" id="classvcl_1_1_point_1abe3abae8e8be53b1fac5fdee2d7c4fb9"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DIM</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point::N"><span class="n"><span class="pre">N</span></span></a><a class="headerlink" href="#_CPPv4N3vcl5Point3DIME" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<section id="specializations">
+<h2>Specializations<a class="headerlink" href="#specializations" title="Permalink to this heading">#</a></h2>
+<section id="point2">
+<h3>Point2<a class="headerlink" href="#point2" title="Permalink to this heading">#</a></h3>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl6Point2E">
+<span id="_CPPv3I0EN3vcl6Point2E"></span><span id="_CPPv2I0EN3vcl6Point2E"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ScalarType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classvcl_1_1_point2"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Point2</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="../algorithms/cleaning.html#_CPPv43vcl" title="vcl"><span class="n"><span class="pre">vcl</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point"><span class="n"><span class="pre">Point</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point2E" title="vcl::Point2::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN3vcl6Point2E" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>The <a class="reference internal" href="#classvcl_1_1_point2"><span class="std std-ref">Point2</span></a> class represents a 2-dimensional point containing 2 scalar values. Specializes the <a class="reference internal" href="#classvcl_1_1_point"><span class="std std-ref">Point</span></a> class, providing some additional member functions useful for 2D points. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl6Point26Point2Ev">
+<span id="_CPPv3N3vcl6Point26Point2Ev"></span><span id="_CPPv2N3vcl6Point26Point2Ev"></span><span id="vcl::Point2::Point2"></span><span class="target" id="classvcl_1_1_point2_1abc81a5d9f9b8474c5ec3df1065795989"></span><span class="sig-name descname"><span class="n"><span class="pre">Point2</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N3vcl6Point26Point2Ev" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl6Point26Point2ERK5PointI10ScalarTypeXL2EEE">
+<span id="_CPPv3N3vcl6Point26Point2ERK5PointI10ScalarTypeXL2EEE"></span><span id="_CPPv2N3vcl6Point26Point2ERK5PointI10ScalarTypeX2EE"></span><span id="vcl::Point2::Point2__Point:ScalarType.2:CR"></span><span class="target" id="classvcl_1_1_point2_1ab25b2eb0a87a7c1227daa0cbf3500901"></span><span class="sig-name descname"><span class="n"><span class="pre">Point2</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point"><span class="n"><span class="pre">Point</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point2E" title="vcl::Point2::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl6Point26Point2ERK5PointI10ScalarTypeXL2EEE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl6Point26Point2ERK10ScalarTypeRK10ScalarType">
+<span id="_CPPv3N3vcl6Point26Point2ERK10ScalarTypeRK10ScalarType"></span><span id="_CPPv2N3vcl6Point26Point2ERK10ScalarTypeRK10ScalarType"></span><span id="vcl::Point2::Point2__ScalarTypeCR.ScalarTypeCR"></span><span class="target" id="classvcl_1_1_point2_1a4bda8d9f639c541c94c5202fb51d1724"></span><span class="sig-name descname"><span class="n"><span class="pre">Point2</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point2E" title="vcl::Point2::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">x</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point2E" title="vcl::Point2::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">y</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl6Point26Point2ERK10ScalarTypeRK10ScalarType" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl6Point21xEv">
+<span id="_CPPv3NK3vcl6Point21xEv"></span><span id="_CPPv2NK3vcl6Point21xEv"></span><span id="vcl::Point2::xC"></span><span class="target" id="classvcl_1_1_point2_1a0d9bd0e4e04907ac469eb7d1651d8413"></span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point2E" title="vcl::Point2::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">x</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl6Point21xEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl6Point21yEv">
+<span id="_CPPv3NK3vcl6Point21yEv"></span><span id="_CPPv2NK3vcl6Point21yEv"></span><span id="vcl::Point2::yC"></span><span class="target" id="classvcl_1_1_point2_1a229305b261aa28f58856017ef2c9d644"></span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point2E" title="vcl::Point2::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">y</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl6Point21yEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl6Point21xEv">
+<span id="_CPPv3N3vcl6Point21xEv"></span><span id="_CPPv2N3vcl6Point21xEv"></span><span id="vcl::Point2::x"></span><span class="target" id="classvcl_1_1_point2_1ad55441cacf0b68af92c2cb1a4402d4ba"></span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point2E" title="vcl::Point2::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">x</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl6Point21xEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl6Point21yEv">
+<span id="_CPPv3N3vcl6Point21yEv"></span><span id="_CPPv2N3vcl6Point21yEv"></span><span id="vcl::Point2::y"></span><span class="target" id="classvcl_1_1_point2_1a9d3adda754e016c340b1b0a0b6c2730e"></span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point2E" title="vcl::Point2::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">y</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl6Point21yEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<section id="point2-definitions">
+<h4>Point2 definitions<a class="headerlink" href="#point2-definitions" title="Permalink to this heading">#</a></h4>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl7Point2iE">
+<span id="_CPPv3N3vcl7Point2iE"></span><span id="_CPPv2N3vcl7Point2iE"></span><span class="target" id="namespacevcl_1a94bdb300286f9b4bf31987102e011f8d"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="../algorithms/cleaning.html#_CPPv43vcl" title="vcl"><span class="n"><span class="pre">vcl</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">Point2i</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point2E" title="vcl::Point2"><span class="n"><span class="pre">Point2</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N3vcl7Point2iE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl7Point2fE">
+<span id="_CPPv3N3vcl7Point2fE"></span><span id="_CPPv2N3vcl7Point2fE"></span><span class="target" id="namespacevcl_1ac9560ad588438ce539ec3fdc5658746a"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="../algorithms/cleaning.html#_CPPv43vcl" title="vcl"><span class="n"><span class="pre">vcl</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">Point2f</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point2E" title="vcl::Point2"><span class="n"><span class="pre">Point2</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N3vcl7Point2fE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl7Point2dE">
+<span id="_CPPv3N3vcl7Point2dE"></span><span id="_CPPv2N3vcl7Point2dE"></span><span class="target" id="namespacevcl_1a4b02e85ff4d51fe7d689f8dd0e87ecd5"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="../algorithms/cleaning.html#_CPPv43vcl" title="vcl"><span class="n"><span class="pre">vcl</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">Point2d</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point2E" title="vcl::Point2"><span class="n"><span class="pre">Point2</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N3vcl7Point2dE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+<section id="point3">
+<h3>Point3<a class="headerlink" href="#point3" title="Permalink to this heading">#</a></h3>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl6Point3E">
+<span id="_CPPv3I0EN3vcl6Point3E"></span><span id="_CPPv2I0EN3vcl6Point3E"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ScalarType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classvcl_1_1_point3"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Point3</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="../algorithms/cleaning.html#_CPPv43vcl" title="vcl"><span class="n"><span class="pre">vcl</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point"><span class="n"><span class="pre">Point</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point3E" title="vcl::Point3::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN3vcl6Point3E" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>The <a class="reference internal" href="#classvcl_1_1_point3"><span class="std std-ref">Point3</span></a> class represents a 3-dimensional point containing 3 ScalarType values. Specializes the <a class="reference internal" href="#classvcl_1_1_point"><span class="std std-ref">Point</span></a> class, providing some additional member functions useful for 3D points. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl6Point36Point3Ev">
+<span id="_CPPv3N3vcl6Point36Point3Ev"></span><span id="_CPPv2N3vcl6Point36Point3Ev"></span><span id="vcl::Point3::Point3"></span><span class="target" id="classvcl_1_1_point3_1a1fc38ce25566b67ae2d046bc8c84dfa4"></span><span class="sig-name descname"><span class="n"><span class="pre">Point3</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N3vcl6Point36Point3Ev" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl6Point36Point3ERK5PointI10ScalarTypeXL3EEE">
+<span id="_CPPv3N3vcl6Point36Point3ERK5PointI10ScalarTypeXL3EEE"></span><span id="_CPPv2N3vcl6Point36Point3ERK5PointI10ScalarTypeX3EE"></span><span id="vcl::Point3::Point3__Point:ScalarType.3:CR"></span><span class="target" id="classvcl_1_1_point3_1a1b3acc7f08b5f8184f1d173c4d22bcd1"></span><span class="sig-name descname"><span class="n"><span class="pre">Point3</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point"><span class="n"><span class="pre">Point</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point3E" title="vcl::Point3::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl6Point36Point3ERK5PointI10ScalarTypeXL3EEE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl6Point36Point3ERK10ScalarTypeRK10ScalarTypeRK10ScalarType">
+<span id="_CPPv3N3vcl6Point36Point3ERK10ScalarTypeRK10ScalarTypeRK10ScalarType"></span><span id="_CPPv2N3vcl6Point36Point3ERK10ScalarTypeRK10ScalarTypeRK10ScalarType"></span><span id="vcl::Point3::Point3__ScalarTypeCR.ScalarTypeCR.ScalarTypeCR"></span><span class="target" id="classvcl_1_1_point3_1addff64b1bd1e6a9d4efc3b7a182b92b9"></span><span class="sig-name descname"><span class="n"><span class="pre">Point3</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point3E" title="vcl::Point3::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">x</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point3E" title="vcl::Point3::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">y</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point3E" title="vcl::Point3::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">z</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl6Point36Point3ERK10ScalarTypeRK10ScalarTypeRK10ScalarType" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl6Point31xEv">
+<span id="_CPPv3NK3vcl6Point31xEv"></span><span id="_CPPv2NK3vcl6Point31xEv"></span><span id="vcl::Point3::xC"></span><span class="target" id="classvcl_1_1_point3_1ad97166b630069471d87d04658928e05e"></span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point3E" title="vcl::Point3::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">x</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl6Point31xEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl6Point31yEv">
+<span id="_CPPv3NK3vcl6Point31yEv"></span><span id="_CPPv2NK3vcl6Point31yEv"></span><span id="vcl::Point3::yC"></span><span class="target" id="classvcl_1_1_point3_1a4d802f789577311d9fb091fed32932c7"></span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point3E" title="vcl::Point3::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">y</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl6Point31yEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl6Point31zEv">
+<span id="_CPPv3NK3vcl6Point31zEv"></span><span id="_CPPv2NK3vcl6Point31zEv"></span><span id="vcl::Point3::zC"></span><span class="target" id="classvcl_1_1_point3_1adb4905a9f1baa2ed17a4ae0217a129d1"></span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point3E" title="vcl::Point3::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">z</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl6Point31zEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl6Point31xEv">
+<span id="_CPPv3N3vcl6Point31xEv"></span><span id="_CPPv2N3vcl6Point31xEv"></span><span id="vcl::Point3::x"></span><span class="target" id="classvcl_1_1_point3_1a76b815c0f9d0219dee4338ac425041fc"></span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point3E" title="vcl::Point3::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">x</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl6Point31xEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl6Point31yEv">
+<span id="_CPPv3N3vcl6Point31yEv"></span><span id="_CPPv2N3vcl6Point31yEv"></span><span id="vcl::Point3::y"></span><span class="target" id="classvcl_1_1_point3_1acbde572fa5cf9b1da38cbdc084642963"></span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point3E" title="vcl::Point3::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">y</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl6Point31yEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl6Point31zEv">
+<span id="_CPPv3N3vcl6Point31zEv"></span><span id="_CPPv2N3vcl6Point31zEv"></span><span id="vcl::Point3::z"></span><span class="target" id="classvcl_1_1_point3_1a7304bcf237acd0838fb7c16316b27a24"></span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point3E" title="vcl::Point3::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">z</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl6Point31zEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<section id="point3-definitions">
+<h4>Point3 definitions<a class="headerlink" href="#point3-definitions" title="Permalink to this heading">#</a></h4>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl7Point3iE">
+<span id="_CPPv3N3vcl7Point3iE"></span><span id="_CPPv2N3vcl7Point3iE"></span><span class="target" id="namespacevcl_1a54b0dffe79fabd0458fc78332c91e73a"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="../algorithms/cleaning.html#_CPPv43vcl" title="vcl"><span class="n"><span class="pre">vcl</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">Point3i</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point3E" title="vcl::Point3"><span class="n"><span class="pre">Point3</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N3vcl7Point3iE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl7Point3fE">
+<span id="_CPPv3N3vcl7Point3fE"></span><span id="_CPPv2N3vcl7Point3fE"></span><span class="target" id="namespacevcl_1ae19b0e9639a4f90c91e46910ee66f54c"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="../algorithms/cleaning.html#_CPPv43vcl" title="vcl"><span class="n"><span class="pre">vcl</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">Point3f</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point3E" title="vcl::Point3"><span class="n"><span class="pre">Point3</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N3vcl7Point3fE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl7Point3dE">
+<span id="_CPPv3N3vcl7Point3dE"></span><span id="_CPPv2N3vcl7Point3dE"></span><span class="target" id="namespacevcl_1abb47c1364fb2fe1464a54417684f011e"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="../algorithms/cleaning.html#_CPPv43vcl" title="vcl"><span class="n"><span class="pre">vcl</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">Point3d</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point3E" title="vcl::Point3"><span class="n"><span class="pre">Point3</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N3vcl7Point3dE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+<section id="point4">
+<h3>Point4<a class="headerlink" href="#point4" title="Permalink to this heading">#</a></h3>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN3vcl6Point4E">
+<span id="_CPPv3I0EN3vcl6Point4E"></span><span id="_CPPv2I0EN3vcl6Point4E"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ScalarType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classvcl_1_1_point4"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Point4</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="../algorithms/cleaning.html#_CPPv43vcl" title="vcl"><span class="n"><span class="pre">vcl</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point"><span class="n"><span class="pre">Point</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point4E" title="vcl::Point4::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN3vcl6Point4E" title="Permalink to this definition">#</a><br /></dt>
+<dd><p>The <a class="reference internal" href="#classvcl_1_1_point4"><span class="std std-ref">Point4</span></a> class represents a 4-dimensional point containing 4 ScalarType values. Specializes the <a class="reference internal" href="#classvcl_1_1_point"><span class="std std-ref">Point</span></a> class, providing some additional member functions useful for 4D points. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl6Point46Point4Ev">
+<span id="_CPPv3N3vcl6Point46Point4Ev"></span><span id="_CPPv2N3vcl6Point46Point4Ev"></span><span id="vcl::Point4::Point4"></span><span class="target" id="classvcl_1_1_point4_1a04a5b4b59d03803fa451c1e401dd82ad"></span><span class="sig-name descname"><span class="n"><span class="pre">Point4</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N3vcl6Point46Point4Ev" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl6Point46Point4ERK5PointI10ScalarTypeXL4EEE">
+<span id="_CPPv3N3vcl6Point46Point4ERK5PointI10ScalarTypeXL4EEE"></span><span id="_CPPv2N3vcl6Point46Point4ERK5PointI10ScalarTypeX4EE"></span><span id="vcl::Point4::Point4__Point:ScalarType.4:CR"></span><span class="target" id="classvcl_1_1_point4_1ac8fcb0ba653040ee09c36db704f72695"></span><span class="sig-name descname"><span class="n"><span class="pre">Point4</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_iEN3vcl5PointE" title="vcl::Point"><span class="n"><span class="pre">Point</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point4E" title="vcl::Point4::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">p1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl6Point46Point4ERK5PointI10ScalarTypeXL4EEE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl6Point46Point4ERK10ScalarTypeRK10ScalarTypeRK10ScalarTypeRK10ScalarType">
+<span id="_CPPv3N3vcl6Point46Point4ERK10ScalarTypeRK10ScalarTypeRK10ScalarTypeRK10ScalarType"></span><span id="_CPPv2N3vcl6Point46Point4ERK10ScalarTypeRK10ScalarTypeRK10ScalarTypeRK10ScalarType"></span><span id="vcl::Point4::Point4__ScalarTypeCR.ScalarTypeCR.ScalarTypeCR.ScalarTypeCR"></span><span class="target" id="classvcl_1_1_point4_1a0d7a50522f3039c3eab777bc92f2bdc7"></span><span class="sig-name descname"><span class="n"><span class="pre">Point4</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point4E" title="vcl::Point4::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">x</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point4E" title="vcl::Point4::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">y</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point4E" title="vcl::Point4::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">z</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point4E" title="vcl::Point4::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">w</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl6Point46Point4ERK10ScalarTypeRK10ScalarTypeRK10ScalarTypeRK10ScalarType" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl6Point41xEv">
+<span id="_CPPv3NK3vcl6Point41xEv"></span><span id="_CPPv2NK3vcl6Point41xEv"></span><span id="vcl::Point4::xC"></span><span class="target" id="classvcl_1_1_point4_1a9ec069eeebfe0a21a31f72a107f7d94d"></span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point4E" title="vcl::Point4::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">x</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl6Point41xEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl6Point41yEv">
+<span id="_CPPv3NK3vcl6Point41yEv"></span><span id="_CPPv2NK3vcl6Point41yEv"></span><span id="vcl::Point4::yC"></span><span class="target" id="classvcl_1_1_point4_1a9770caa1110bf3815e17bd712062dac8"></span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point4E" title="vcl::Point4::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">y</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl6Point41yEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl6Point41zEv">
+<span id="_CPPv3NK3vcl6Point41zEv"></span><span id="_CPPv2NK3vcl6Point41zEv"></span><span id="vcl::Point4::zC"></span><span class="target" id="classvcl_1_1_point4_1a19a394f0c071c4b8d8c55e8f0cc487aa"></span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point4E" title="vcl::Point4::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">z</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl6Point41zEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK3vcl6Point41wEv">
+<span id="_CPPv3NK3vcl6Point41wEv"></span><span id="_CPPv2NK3vcl6Point41wEv"></span><span id="vcl::Point4::wC"></span><span class="target" id="classvcl_1_1_point4_1ae7a50d02d56e1822fd988aa29eec4ce5"></span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point4E" title="vcl::Point4::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">w</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK3vcl6Point41wEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl6Point41xEv">
+<span id="_CPPv3N3vcl6Point41xEv"></span><span id="_CPPv2N3vcl6Point41xEv"></span><span id="vcl::Point4::x"></span><span class="target" id="classvcl_1_1_point4_1ad3e66821414f679d6734450f6b3b8296"></span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point4E" title="vcl::Point4::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">x</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl6Point41xEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl6Point41yEv">
+<span id="_CPPv3N3vcl6Point41yEv"></span><span id="_CPPv2N3vcl6Point41yEv"></span><span id="vcl::Point4::y"></span><span class="target" id="classvcl_1_1_point4_1a1b94dca953f4f4c690b7fbb8f01aba17"></span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point4E" title="vcl::Point4::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">y</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl6Point41yEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl6Point41zEv">
+<span id="_CPPv3N3vcl6Point41zEv"></span><span id="_CPPv2N3vcl6Point41zEv"></span><span id="vcl::Point4::z"></span><span class="target" id="classvcl_1_1_point4_1aee88214cc324c1415c457a02dc062da2"></span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point4E" title="vcl::Point4::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">z</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl6Point41zEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl6Point41wEv">
+<span id="_CPPv3N3vcl6Point41wEv"></span><span id="_CPPv2N3vcl6Point41wEv"></span><span id="vcl::Point4::w"></span><span class="target" id="classvcl_1_1_point4_1a98091e977302d948182ab790287d0d46"></span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point4E" title="vcl::Point4::ScalarType"><span class="n"><span class="pre">ScalarType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">w</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl6Point41wEv" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<section id="point4-definitions">
+<h4>Point4 definitions<a class="headerlink" href="#point4-definitions" title="Permalink to this heading">#</a></h4>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl7Point4iE">
+<span id="_CPPv3N3vcl7Point4iE"></span><span id="_CPPv2N3vcl7Point4iE"></span><span class="target" id="namespacevcl_1ac86981d787ccd11247f7774e3be3c7b2"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="../algorithms/cleaning.html#_CPPv43vcl" title="vcl"><span class="n"><span class="pre">vcl</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">Point4i</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point4E" title="vcl::Point4"><span class="n"><span class="pre">Point4</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N3vcl7Point4iE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl7Point4fE">
+<span id="_CPPv3N3vcl7Point4fE"></span><span id="_CPPv2N3vcl7Point4fE"></span><span class="target" id="namespacevcl_1a876dce2d8f1042f58d6ee413cd66b2e1"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="../algorithms/cleaning.html#_CPPv43vcl" title="vcl"><span class="n"><span class="pre">vcl</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">Point4f</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point4E" title="vcl::Point4"><span class="n"><span class="pre">Point4</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N3vcl7Point4fE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N3vcl7Point4dE">
+<span id="_CPPv3N3vcl7Point4dE"></span><span id="_CPPv2N3vcl7Point4dE"></span><span class="target" id="namespacevcl_1a648562f0e0989c853d13b8b0338f3646"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="../algorithms/cleaning.html#_CPPv43vcl" title="vcl"><span class="n"><span class="pre">vcl</span></span></a><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">Point4d</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN3vcl6Point4E" title="vcl::Point4"><span class="n"><span class="pre">Point4</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N3vcl7Point4dE" title="Permalink to this definition">#</a><br /></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="principal_curvature.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Principal Curvature</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="color.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Color</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2021, Visual Computing Lab, ISTI - CNR
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Point</a><ul>
+<li><a class="reference internal" href="#specializations">Specializations</a><ul>
+<li><a class="reference internal" href="#point2">Point2</a><ul>
+<li><a class="reference internal" href="#point2-definitions">Point2 definitions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#point3">Point3</a><ul>
+<li><a class="reference internal" href="#point3-definitions">Point3 definitions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#point4">Point4</a><ul>
+<li><a class="reference internal" href="#point4-definitions">Point4 definitions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/furo.js"></script>
+    <script async="async" src="https://assets.readthedocs.org/static/javascript/readthedocs-doc-embed.js"></script>
+    </body>
+</html>
