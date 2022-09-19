@@ -28,7 +28,7 @@
 
 <link rel="stylesheet" href="https://assets.readthedocs.org/static/css/readthedocs-doc-embed.css" type="text/css" />
 
-<script type="application/json" id="READTHEDOCS_DATA">{"ad_free": "", "api_host": "", "build_date": "2022-07-28T08:45:40Z", "builder": "sphinx", "canonical_url": "", "commit": "", "docroot": "", "features": {"docsearch_disabled": false}, "global_analytics_code": null, "language": "", "page": "mesh/elements/face", "programming_language": "", "project": "", "source_suffix": ".rst", "subprojects": {}, "theme": "", "user_analytics_code": null, "version": ""}</script>
+<script type="application/json" id="READTHEDOCS_DATA">{"ad_free": "", "api_host": "", "build_date": "2022-09-19T10:28:28Z", "builder": "sphinx", "canonical_url": "", "commit": "", "docroot": "", "features": {"docsearch_disabled": false}, "global_analytics_code": null, "language": "", "page": "mesh/elements/face", "programming_language": "", "project": "", "source_suffix": ".rst", "subprojects": {}, "theme": "", "user_analytics_code": null, "version": ""}</script>
 
 <!--
 Using this variable directly instead of using `JSON.parse` is deprecated.
@@ -59,6 +59,7 @@ READTHEDOCS_DATA = JSON.parse(document.getElementById('READTHEDOCS_DATA').innerH
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../get_started.html">Get Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../basic_concepts.html">Basic Concepts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../space.html">Spatial and other Data Structures</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../mesh_documentation.html">Mesh Documentation</a><ul class="current">
@@ -177,20 +178,41 @@ face will always be the same both at compile and at run time.</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3vcl4Face4FaceERKNSt6vectorIP10VertexTypeEE">
 <span id="_CPPv3N3vcl4Face4FaceERKNSt6vectorIP10VertexTypeEE"></span><span id="_CPPv2N3vcl4Face4FaceERKNSt6vectorIP10VertexTypeEE"></span><span id="vcl::Face::Face__std::vector:VertexTypeP:CR"></span><span class="target" id="classvcl_1_1_face_1a161494eb3ce4ffe2848efeb8631a9770"></span><span class="sig-name descname"><span class="n"><span class="pre">Face</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N3vcl4Face10VertexTypeE" title="vcl::Face::VertexType"><span class="n"><span class="pre">VertexType</span></span></a><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">list</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl4Face4FaceERKNSt6vectorIP10VertexTypeEE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
+<dd><p>Constructs a <a class="reference internal" href="#classvcl_1_1_face"><span class="std std-ref">Face</span></a> with the given set of vertices. </p>
+<p>Sets a list of <a class="reference internal" href="vertex.html#classvcl_1_1_vertex"><span class="std std-ref">Vertex</span></a> references to the face. If the <a class="reference internal" href="#classvcl_1_1_face"><span class="std std-ref">Face</span></a> size is non-dcel dynamic, will take care to update the also the number of adjacent faces and the number of wedge components, if these components are part of the <a class="reference internal" href="#classvcl_1_1_face"><span class="std std-ref">Face</span></a> and if the size of the <a class="reference internal" href="#classvcl_1_1_face"><span class="std std-ref">Face</span></a> is changed. On the contrary, if the <a class="reference internal" href="#classvcl_1_1_face"><span class="std std-ref">Face</span></a> size is static or it belongs to a Dcel mesh, the number of vertices of the list must be equal to the size of the <a class="reference internal" href="#classvcl_1_1_face"><span class="std std-ref">Face</span></a> (the value returned by vertexNumber()).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This constructor cannot be called if the <a class="reference internal" href="#classvcl_1_1_face"><span class="std std-ref">Face</span></a> type belongs to a Dcel mesh.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>list</strong> – <strong>[in]</strong> a container of vertex pointers in counterclockwise order that will be set as vertices of the face. </p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4IDpEN3vcl4Face4FaceEDp1V">
 <span id="_CPPv3IDpEN3vcl4Face4FaceEDp1V"></span><span id="_CPPv2IDpEN3vcl4Face4FaceEDp1V"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="sig-name descname"><span class="n"><span class="pre">V</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classvcl_1_1_face_1a7e3705863282dab2a1f8d8058834dd74"></span><span class="sig-name descname"><span class="n"><span class="pre">Face</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4IDpEN3vcl4Face4FaceEDp1V" title="vcl::Face::Face::V"><span class="n"><span class="pre">V</span></span></a><span class="p"><span class="pre">...</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">args</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4IDpEN3vcl4Face4FaceEDp1V" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
+<dd><p>Sets a list of <a class="reference internal" href="vertex.html#classvcl_1_1_vertex"><span class="std std-ref">Vertex</span></a> references to the face. If the <a class="reference internal" href="#classvcl_1_1_face"><span class="std std-ref">Face</span></a> size is non-dcel dynamic, will take care to update the also the number of adjacent faces and the number of wedge components, if these components are part of the <a class="reference internal" href="#classvcl_1_1_face"><span class="std std-ref">Face</span></a> and if the size of the <a class="reference internal" href="#classvcl_1_1_face"><span class="std std-ref">Face</span></a> is changed. On the contrary, if the <a class="reference internal" href="#classvcl_1_1_face"><span class="std std-ref">Face</span></a> size is static or it belongs to a Dcel mesh, the number of arguments of this function must be equal to the size of the <a class="reference internal" href="#classvcl_1_1_face"><span class="std std-ref">Face</span></a> (the value returned by vertexNumber()). </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This constructor cannot be called if the <a class="reference internal" href="#classvcl_1_1_face"><span class="std std-ref">Face</span></a> type belongs to a Dcel mesh.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>args</strong> – <strong>[in]</strong> a variable number of vertex pointers in counterclockwise order that will be set as vertices of the face. </p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3vcl4Face11setVerticesERKNSt6vectorIP10VertexTypeEE">
 <span id="_CPPv3N3vcl4Face11setVerticesERKNSt6vectorIP10VertexTypeEE"></span><span id="_CPPv2N3vcl4Face11setVerticesERKNSt6vectorIP10VertexTypeEE"></span><span id="vcl::Face::setVertices__std::vector:VertexTypeP:CR"></span><span class="target" id="classvcl_1_1_face_1a9a1b6ab117ec2c691ea573ac9d28575f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setVertices</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N3vcl4Face10VertexTypeE" title="vcl::Face::VertexType"><span class="n"><span class="pre">VertexType</span></span></a><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">list</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3vcl4Face11setVerticesERKNSt6vectorIP10VertexTypeEE" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Sets a list of <a class="reference internal" href="vertex.html#classvcl_1_1_vertex"><span class="std std-ref">Vertex</span></a> references to the face. If the <a class="reference internal" href="#classvcl_1_1_face"><span class="std std-ref">Face</span></a> size is dynamic, will take care to update the also the number of adjacent faces and the number of wedge components, if these components are part of the <a class="reference internal" href="#classvcl_1_1_face"><span class="std std-ref">Face</span></a> and if the size of the <a class="reference internal" href="#classvcl_1_1_face"><span class="std std-ref">Face</span></a> is changed. On the contrary, if the <a class="reference internal" href="#classvcl_1_1_face"><span class="std std-ref">Face</span></a> size is static, the number of vertices of the list must be equal to the size of the <a class="reference internal" href="#classvcl_1_1_face"><span class="std std-ref">Face</span></a>. </p>
+<dd><p>Sets a list of <a class="reference internal" href="vertex.html#classvcl_1_1_vertex"><span class="std std-ref">Vertex</span></a> references to the face. If the <a class="reference internal" href="#classvcl_1_1_face"><span class="std std-ref">Face</span></a> size is non-dcel dynamic, will take care to update the also the number of adjacent faces and the number of wedge components, if these components are part of the <a class="reference internal" href="#classvcl_1_1_face"><span class="std std-ref">Face</span></a> and if the size of the <a class="reference internal" href="#classvcl_1_1_face"><span class="std std-ref">Face</span></a> is changed. On the contrary, if the <a class="reference internal" href="#classvcl_1_1_face"><span class="std std-ref">Face</span></a> size is static or it belongs to a Dcel mesh, the number of vertices of the list must be equal to the size of the <a class="reference internal" href="#classvcl_1_1_face"><span class="std std-ref">Face</span></a> (the value returned by vertexNumber()). </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>list</strong> – </p>
+<dd class="field-odd"><p><strong>list</strong> – <strong>[in]</strong> a container of vertex pointers in counterclockwise order that will be set as vertices of the face. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -207,27 +229,27 @@ face will always be the same both at compile and at run time.</p>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp">
-<span class="target" id="classvcl_1_1_face_1ac1c6e1d77047b0316704330445444960"></span><span class="sig-name descname"><span class="pre">inline</span> <span class="pre">void</span> <span class="pre">resizeVertices</span> <span class="pre">(uint</span> <span class="pre">n)</span> <span class="pre">requires</span> <span class="pre">PolygonFaceConcept&lt;</span> <span class="pre">Face</span> <span class="pre">&gt;</span></span></dt>
+<span class="target" id="classvcl_1_1_face_1a4bd461471e1048953aacffc4dd8db2e4"></span><span class="sig-name descname"><span class="pre">inline</span> <span class="pre">void</span> <span class="pre">resizeVertices</span> <span class="pre">(uint</span> <span class="pre">n)</span> <span class="pre">requires</span> <span class="pre">NonDcelPolygonFaceConcept&lt;</span> <span class="pre">Face</span> <span class="pre">&gt;</span></span></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp">
-<span class="target" id="classvcl_1_1_face_1a2bb7600a32c0602204167e57006f468d"></span><span class="sig-name descname"><span class="pre">inline</span> <span class="pre">void</span> <span class="pre">pushVertex</span> <span class="pre">(VertexType</span> <span class="pre">*v)</span> <span class="pre">requires</span> <span class="pre">PolygonFaceConcept&lt;</span> <span class="pre">Face</span> <span class="pre">&gt;</span></span></dt>
+<span class="target" id="classvcl_1_1_face_1a7d913ae160c4efdd704ab8ae055a41a0"></span><span class="sig-name descname"><span class="pre">inline</span> <span class="pre">void</span> <span class="pre">pushVertex</span> <span class="pre">(VertexType</span> <span class="pre">*v)</span> <span class="pre">requires</span> <span class="pre">NonDcelPolygonFaceConcept&lt;</span> <span class="pre">Face</span> <span class="pre">&gt;</span></span></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp">
-<span class="target" id="classvcl_1_1_face_1aa02d7784e4281ac2a605cb4ceb2791a2"></span><span class="sig-name descname"><span class="pre">inline</span> <span class="pre">void</span> <span class="pre">insertVertex</span> <span class="pre">(uint</span> <span class="pre">i,</span> <span class="pre">VertexType</span> <span class="pre">*v)</span> <span class="pre">requires</span> <span class="pre">PolygonFaceConcept&lt;</span> <span class="pre">Face</span> <span class="pre">&gt;</span></span></dt>
+<span class="target" id="classvcl_1_1_face_1a74a4afc0036b3a76977fb8eb8762133b"></span><span class="sig-name descname"><span class="pre">inline</span> <span class="pre">void</span> <span class="pre">insertVertex</span> <span class="pre">(uint</span> <span class="pre">i,</span> <span class="pre">VertexType</span> <span class="pre">*v)</span> <span class="pre">requires</span> <span class="pre">NonDcelPolygonFaceConcept&lt;</span> <span class="pre">Face</span> <span class="pre">&gt;</span></span></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp">
-<span class="target" id="classvcl_1_1_face_1a16ff2663b0ab42bce8c41b73d7e9ae36"></span><span class="sig-name descname"><span class="pre">inline</span> <span class="pre">void</span> <span class="pre">eraseVertex</span> <span class="pre">(uint</span> <span class="pre">i)</span> <span class="pre">requires</span> <span class="pre">PolygonFaceConcept&lt;</span> <span class="pre">Face</span> <span class="pre">&gt;</span></span></dt>
+<span class="target" id="classvcl_1_1_face_1a187844242199b9e49b102ad88141f050"></span><span class="sig-name descname"><span class="pre">inline</span> <span class="pre">void</span> <span class="pre">eraseVertex</span> <span class="pre">(uint</span> <span class="pre">i)</span> <span class="pre">requires</span> <span class="pre">NonDcelPolygonFaceConcept&lt;</span> <span class="pre">Face</span> <span class="pre">&gt;</span></span></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp">
-<span class="target" id="classvcl_1_1_face_1aad59b0caa35363b782b6f0254ded4d60"></span><span class="sig-name descname"><span class="pre">inline</span> <span class="pre">void</span> <span class="pre">clearVertices</span> <span class="pre">()</span> <span class="pre">requires</span> <span class="pre">PolygonFaceConcept&lt;</span> <span class="pre">Face</span> <span class="pre">&gt;</span></span></dt>
+<span class="target" id="classvcl_1_1_face_1a6f65d162a5a90d72281ad09fbf7dd8cd"></span><span class="sig-name descname"><span class="pre">inline</span> <span class="pre">void</span> <span class="pre">clearVertices</span> <span class="pre">()</span> <span class="pre">requires</span> <span class="pre">NonDcelPolygonFaceConcept&lt;</span> <span class="pre">Face</span> <span class="pre">&gt;</span></span></dt>
 <dd></dd></dl>
 
 </div>
