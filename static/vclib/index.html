@@ -21,13 +21,13 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Basic Concepts" href="basic_concepts.html" /> 
+    <link rel="next" title="Get Started" href="get_started.html" /> 
 
 <!-- RTD Extra Head -->
 
 <link rel="stylesheet" href="https://assets.readthedocs.org/static/css/readthedocs-doc-embed.css" type="text/css" />
 
-<script type="application/json" id="READTHEDOCS_DATA">{"ad_free": "", "api_host": "", "build_date": "2022-07-28T08:45:39Z", "builder": "sphinx", "canonical_url": "", "commit": "", "docroot": "", "features": {"docsearch_disabled": false}, "global_analytics_code": null, "language": "", "page": "index", "programming_language": "", "project": "", "source_suffix": ".rst", "subprojects": {}, "theme": "", "user_analytics_code": null, "version": ""}</script>
+<script type="application/json" id="READTHEDOCS_DATA">{"ad_free": "", "api_host": "", "build_date": "2022-09-19T10:28:26Z", "builder": "sphinx", "canonical_url": "", "commit": "", "docroot": "", "features": {"docsearch_disabled": false}, "global_analytics_code": null, "language": "", "page": "index", "programming_language": "", "project": "", "source_suffix": ".rst", "subprojects": {}, "theme": "", "user_analytics_code": null, "version": ""}</script>
 
 <!--
 Using this variable directly instead of using `JSON.parse` is deprecated.
@@ -58,6 +58,7 @@ READTHEDOCS_DATA = JSON.parse(document.getElementById('READTHEDOCS_DATA').innerH
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
+<li class="toctree-l1"><a class="reference internal" href="get_started.html">Get Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basic_concepts.html">Basic Concepts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="space.html">Spatial and other Data Structures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mesh_documentation.html">Mesh Documentation</a></li>
@@ -97,21 +98,56 @@ READTHEDOCS_DATA = JSON.parse(document.getElementById('READTHEDOCS_DATA').innerH
 <span id="index"></span><h1>Visual Computing Library<a class="headerlink" href="#visual-computing-library" title="Permalink to this heading"></a></h1>
 <p>This is a C++20 modern and header only Mesh and Geometry Processing templated library.</p>
 <p>The goal of this library is to provide a set of tools and algorithms in a well-structured Object Oriented paradigm exploiting the powerfullness of C++20.</p>
-<p>To get started, you can either add the <code class="docutils literal notranslate"><span class="pre">vclib/include</span></code> directory into your <code class="docutils literal notranslate"><span class="pre">INCLUDE_PATH</span></code> (depending on your operative system), or
-you can add the libary path as subdirectory in your <code class="docutils literal notranslate"><span class="pre">cmake</span></code> project, and link the <code class="docutils literal notranslate"><span class="pre">vclib</span></code> target.</p>
 <section id="id1">
 <h2>Index<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="basic_concepts.html">Basic Concepts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="space.html">Spatial and other Data Structures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mesh_documentation.html">Mesh Documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="requirements.html">Mesh Requirements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="algorithms.html">Algorithms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_started.html">Get Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#supported-compilers">Supported Compilers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#dependencies">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#usage-with-include-path">Usage with <code class="docutils literal notranslate"><span class="pre">INCLUDE_PATH</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="get_started.html#cmake-configuration">CMake Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="basic_concepts.html">Basic Concepts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="basic_concepts.html#let-s-start">Let’s start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic_concepts.html#add-set-and-delete-elements">Add, set and delete Elements</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="space.html">Spatial and other Data Structures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="space.html#spatial-data-structures">Spatial Data Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="space.html#utility-data-structures">Utility Data Structures</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mesh_documentation.html">Mesh Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mesh_documentation.html#mesh-data-structures">Mesh Data Structures</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">Mesh Requirements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="requirements/element_requirements.html">Element Requirement Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements/vertex_requirements.html">Vertex Requirement Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements/face_requirements.html">Face Requirement Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements/mesh_requirements.html">Mesh Requirement Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="algorithms.html">Algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="algorithms/create.html">Create Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="algorithms/cleaning.html">Cleaning Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="algorithms/smoothing.html">Smoothing Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="algorithms/update.html">Update Algorithms</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="io.html">Input/Output</a></li>
 <li class="toctree-l1"><a class="reference internal" href="exceptions.html">Exceptions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mesh_customization.html">Mesh Customization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mesh_customization.html">Mesh Customization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mesh_customization.html#customize-an-element">Customize an Element</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mesh_customization.html#customize-a-mesh">Customize a Mesh</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a><ul class="simple">
+</ul>
+</li>
 </ul>
 </div>
 </section>
@@ -121,7 +157,7 @@ you can add the libary path as subdirectory in your <code class="docutils litera
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="basic_concepts.html" class="btn btn-neutral float-right" title="Basic Concepts" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="get_started.html" class="btn btn-neutral float-right" title="Get Started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
