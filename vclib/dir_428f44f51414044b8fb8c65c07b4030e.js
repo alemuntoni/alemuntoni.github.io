@@ -1,0 +1,26 @@
+var dir_428f44f51414044b8fb8c65c07b4030e =
+[
+    [ "adjacent_edges.h", "concepts_2mesh_2components_2adjacent__edges_8h.html", "concepts_2mesh_2components_2adjacent__edges_8h" ],
+    [ "adjacent_faces.h", "concepts_2mesh_2components_2adjacent__faces_8h.html", "concepts_2mesh_2components_2adjacent__faces_8h" ],
+    [ "adjacent_vertices.h", "concepts_2mesh_2components_2adjacent__vertices_8h.html", "concepts_2mesh_2components_2adjacent__vertices_8h" ],
+    [ "bit_flags.h", "concepts_2mesh_2components_2bit__flags_8h.html", "concepts_2mesh_2components_2bit__flags_8h" ],
+    [ "bounding_box.h", "concepts_2mesh_2components_2bounding__box_8h.html", "concepts_2mesh_2components_2bounding__box_8h" ],
+    [ "color.h", "concepts_2mesh_2components_2color_8h.html", "concepts_2mesh_2components_2color_8h" ],
+    [ "component.h", "component_8h.html", "component_8h" ],
+    [ "coordinate.h", "concepts_2mesh_2components_2coordinate_8h.html", "concepts_2mesh_2components_2coordinate_8h" ],
+    [ "custom_components.h", "concepts_2mesh_2components_2custom__components_8h.html", "concepts_2mesh_2components_2custom__components_8h" ],
+    [ "face_half_edge_reference.h", "concepts_2mesh_2components_2face__half__edge__reference_8h.html", "concepts_2mesh_2components_2face__half__edge__reference_8h" ],
+    [ "half_edge_references.h", "concepts_2mesh_2components_2half__edge__references_8h.html", "concepts_2mesh_2components_2half__edge__references_8h" ],
+    [ "mark.h", "concepts_2mesh_2components_2mark_8h.html", "concepts_2mesh_2components_2mark_8h" ],
+    [ "name.h", "concepts_2mesh_2components_2name_8h.html", "concepts_2mesh_2components_2name_8h" ],
+    [ "normal.h", "concepts_2mesh_2components_2normal_8h.html", "concepts_2mesh_2components_2normal_8h" ],
+    [ "principal_curvature.h", "concepts_2mesh_2components_2principal__curvature_8h.html", "concepts_2mesh_2components_2principal__curvature_8h" ],
+    [ "scalar.h", "concepts_2mesh_2components_2scalar_8h.html", "concepts_2mesh_2components_2scalar_8h" ],
+    [ "tex_coord.h", "concepts_2mesh_2components_2tex__coord_8h.html", "concepts_2mesh_2components_2tex__coord_8h" ],
+    [ "texture_paths.h", "concepts_2mesh_2components_2texture__paths_8h.html", "concepts_2mesh_2components_2texture__paths_8h" ],
+    [ "transform_matrix.h", "concepts_2mesh_2components_2transform__matrix_8h.html", "concepts_2mesh_2components_2transform__matrix_8h" ],
+    [ "vertex_half_edge_reference.h", "concepts_2mesh_2components_2vertex__half__edge__reference_8h.html", "concepts_2mesh_2components_2vertex__half__edge__reference_8h" ],
+    [ "vertex_references.h", "concepts_2mesh_2components_2vertex__references_8h.html", "concepts_2mesh_2components_2vertex__references_8h" ],
+    [ "wedge_colors.h", "concepts_2mesh_2components_2wedge__colors_8h.html", "concepts_2mesh_2components_2wedge__colors_8h" ],
+    [ "wedge_tex_coords.h", "concepts_2mesh_2components_2wedge__tex__coords_8h.html", "concepts_2mesh_2components_2wedge__tex__coords_8h" ]
+];

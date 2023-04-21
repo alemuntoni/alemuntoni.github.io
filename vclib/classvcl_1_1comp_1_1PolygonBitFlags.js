@@ -1,0 +1,28 @@
+var classvcl_1_1comp_1_1PolygonBitFlags =
+[
+    [ "BitFlagsComponent", "classvcl_1_1comp_1_1PolygonBitFlags.html#aa71b6d90d4d3c0b23119b6b9df970b97", null ],
+    [ "__polygonBitFlags", "classvcl_1_1comp_1_1PolygonBitFlags.html#a711122ea4451c339ba7b17a8cd4f15e1", null ],
+    [ "exportToVCGFlags", "classvcl_1_1comp_1_1PolygonBitFlags.html#a410b8fccd26b627b156a851618810e46", null ],
+    [ "importFrom", "classvcl_1_1comp_1_1PolygonBitFlags.html#a9b5d7ac770fc4611bf1c09460144ad5b", null ],
+    [ "importFromVCGFlags", "classvcl_1_1comp_1_1PolygonBitFlags.html#a1edc675f3a1e69ca130021edd60ca875", null ],
+    [ "isAnyEdgeFaux", "classvcl_1_1comp_1_1PolygonBitFlags.html#a330f7559d5afe2eedea3df9cde06cbf8", null ],
+    [ "isAnyEdgeOnBorder", "classvcl_1_1comp_1_1PolygonBitFlags.html#a8fd8ebcb0d52d805434dcb097ab27126", null ],
+    [ "isAnyEdgeSelected", "classvcl_1_1comp_1_1PolygonBitFlags.html#a614be884bc4fdfbe7bb5e8c6fbeb786c", null ],
+    [ "isEdgeFaux", "classvcl_1_1comp_1_1PolygonBitFlags.html#a7a374e2f1d6e6ad14fb52d0d8ba60049", null ],
+    [ "isEdgeOnBorder", "classvcl_1_1comp_1_1PolygonBitFlags.html#a15e9e721a87b1d3ed36dfc3bdc7e1577", null ],
+    [ "isEdgeSelected", "classvcl_1_1comp_1_1PolygonBitFlags.html#ae1a5a3970e07952338e465d88cd38786", null ],
+    [ "isOnBorder", "classvcl_1_1comp_1_1PolygonBitFlags.html#aec4a778de4c82e49351238e40970a8be", null ],
+    [ "setEdgeFaux", "classvcl_1_1comp_1_1PolygonBitFlags.html#adc31b13d4579231d82f303e3f70b379a", null ],
+    [ "setEdgeOnBorder", "classvcl_1_1comp_1_1PolygonBitFlags.html#aab717f0e55836d518cc61e2dfbb45f99", null ],
+    [ "setEdgeSelected", "classvcl_1_1comp_1_1PolygonBitFlags.html#a0915503813ebfcc525953119e78dae67", null ],
+    [ "setUserBit", "classvcl_1_1comp_1_1PolygonBitFlags.html#af7621d85be7c9b1debe4441383e4a297", null ],
+    [ "unsetAllEdgesFaux", "classvcl_1_1comp_1_1PolygonBitFlags.html#a720a02ec6bc8dead9843f9b604399592", null ],
+    [ "unsetAllEdgesOnBorder", "classvcl_1_1comp_1_1PolygonBitFlags.html#a4a72f85e813cc763a86476cb71115fd8", null ],
+    [ "unsetAllEdgesSelected", "classvcl_1_1comp_1_1PolygonBitFlags.html#a474c102f5000c55b0d159d6766499930", null ],
+    [ "unsetEdgeFaux", "classvcl_1_1comp_1_1PolygonBitFlags.html#a36ace7bf107fc67a21a0967f77023971", null ],
+    [ "unsetEdgeOnBorder", "classvcl_1_1comp_1_1PolygonBitFlags.html#a6b1016990a36eb64a8e988dca19d60f1", null ],
+    [ "unsetEdgeSelected", "classvcl_1_1comp_1_1PolygonBitFlags.html#a980dc1b616e85516fed34c84bfe9580e", null ],
+    [ "unsetUserBit", "classvcl_1_1comp_1_1PolygonBitFlags.html#aec4682df9f2dd57fc32f5b20b37f6cdc", null ],
+    [ "userBitFlag", "classvcl_1_1comp_1_1PolygonBitFlags.html#ac35db761a7a79f048c354757045e033e", null ],
+    [ "FIRST_USER_BIT", "classvcl_1_1comp_1_1PolygonBitFlags.html#a3dba5611ffcfa20b707e90d3ac87b49e", null ]
+];
