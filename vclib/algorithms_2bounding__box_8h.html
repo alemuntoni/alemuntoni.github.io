@@ -101,10 +101,11 @@ $(document).ready(function(){initNavTree('algorithms_2bounding__box_8h.html','')
   <div class="headertitle"><div class="title">bounding_box.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="concepts_2mesh_2elements_2edge_8h_source.html">vclib/concepts/mesh/elements/edge.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="requirements_8h_source.html">vclib/mesh/requirements.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="requirements_8h_source.html">vclib/mesh/requirements.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="space_2segment_8h_source.html">vclib/space/segment.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="space_2sphere_8h_source.html">vclib/space/sphere.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="concepts_2mesh_2elements_2edge_8h_source.html">vclib/concepts/mesh/elements/edge.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="range_8h_source.html">vclib/concepts/range.h</a>&gt;</code><br />
 <code>#include &quot;<a class="el" href="algorithms_2bounding__box_8cpp.html">bounding_box.cpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for bounding_box.h:</div>
@@ -126,39 +127,54 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a1ad883eeb58e2a302d15ce6ba179752f"><td class="memTemplParams" colspan="2">template&lt;PointConcept PointType&gt; </td></tr>
-<tr class="memitem:a1ad883eeb58e2a302d15ce6ba179752f"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevcl.html#a1ad883eeb58e2a302d15ce6ba179752f">vcl::boundingBox</a> (const PointType &amp;p)</td></tr>
-<tr class="separator:a1ad883eeb58e2a302d15ce6ba179752f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a776dc863a78918d5a0f104907ab8a26f"><td class="memTemplParams" colspan="2">template&lt;SegmentConcept SegmentType&gt; </td></tr>
-<tr class="memitem:a776dc863a78918d5a0f104907ab8a26f"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevcl.html#a776dc863a78918d5a0f104907ab8a26f">vcl::boundingBox</a> (const SegmentType &amp;s)</td></tr>
-<tr class="separator:a776dc863a78918d5a0f104907ab8a26f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8f4fd4f0f5ffcf56b82e44e7bb6a1dd"><td class="memTemplParams" colspan="2">template&lt;SphereConcept SphereType&gt; </td></tr>
-<tr class="memitem:ab8f4fd4f0f5ffcf56b82e44e7bb6a1dd"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevcl.html#ab8f4fd4f0f5ffcf56b82e44e7bb6a1dd">vcl::boundingBox</a> (const SphereType &amp;s)</td></tr>
-<tr class="separator:ab8f4fd4f0f5ffcf56b82e44e7bb6a1dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2aa52bf969238c1f809e218722e63ccf"><td class="memTemplParams" colspan="2">template&lt;MeshConcept MeshType&gt; </td></tr>
-<tr class="memitem:a2aa52bf969238c1f809e218722e63ccf"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevcl.html#a2aa52bf969238c1f809e218722e63ccf">vcl::boundingBox</a> (const MeshType &amp;m)</td></tr>
-<tr class="separator:a2aa52bf969238c1f809e218722e63ccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5394cef99570de3bb2538e6c4dae69f7"><td class="memTemplParams" colspan="2">template&lt;VertexConcept VertexType&gt; </td></tr>
-<tr class="memitem:a5394cef99570de3bb2538e6c4dae69f7"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevcl.html#a5394cef99570de3bb2538e6c4dae69f7">vcl::boundingBox</a> (const VertexType &amp;v)</td></tr>
-<tr class="separator:a5394cef99570de3bb2538e6c4dae69f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65283494a83b003698a6f37d3157384a"><td class="memTemplParams" colspan="2">template&lt;VertexConcept VertexType&gt; </td></tr>
-<tr class="memitem:a65283494a83b003698a6f37d3157384a"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevcl.html#a65283494a83b003698a6f37d3157384a">vcl::boundingBox</a> (const VertexType *v)</td></tr>
-<tr class="separator:a65283494a83b003698a6f37d3157384a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af568c42e98a48937632002951ba1a0c7"><td class="memTemplParams" colspan="2">template&lt;FaceConcept FaceType&gt; </td></tr>
-<tr class="memitem:af568c42e98a48937632002951ba1a0c7"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevcl.html#af568c42e98a48937632002951ba1a0c7">vcl::boundingBox</a> (const FaceType &amp;f)</td></tr>
-<tr class="separator:af568c42e98a48937632002951ba1a0c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcd15ef8e31e650a8e3714feb5c6efcc"><td class="memTemplParams" colspan="2">template&lt;FaceConcept FaceType&gt; </td></tr>
-<tr class="memitem:afcd15ef8e31e650a8e3714feb5c6efcc"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevcl.html#afcd15ef8e31e650a8e3714feb5c6efcc">vcl::boundingBox</a> (const FaceType *f)</td></tr>
-<tr class="separator:afcd15ef8e31e650a8e3714feb5c6efcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3364ecfcc22e860e202e0c4edc2bbc79"><td class="memTemplParams" colspan="2">template&lt;EdgeConcept EdgeType&gt; </td></tr>
-<tr class="memitem:a3364ecfcc22e860e202e0c4edc2bbc79"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevcl.html#a3364ecfcc22e860e202e0c4edc2bbc79">vcl::boundingBox</a> (const EdgeType &amp;e)</td></tr>
-<tr class="separator:a3364ecfcc22e860e202e0c4edc2bbc79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac83361d6c2d4182da008a6e198fe4465"><td class="memTemplParams" colspan="2">template&lt;EdgeConcept EdgeType&gt; </td></tr>
-<tr class="memitem:ac83361d6c2d4182da008a6e198fe4465"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevcl.html#ac83361d6c2d4182da008a6e198fe4465">vcl::boundingBox</a> (const EdgeType *e)</td></tr>
-<tr class="separator:ac83361d6c2d4182da008a6e198fe4465"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c874831bf64431e53535e966bccb9e9"><td class="memTemplParams" colspan="2">template&lt;typename Iterator &gt; </td></tr>
-<tr class="memitem:a6c874831bf64431e53535e966bccb9e9"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevcl.html#a6c874831bf64431e53535e966bccb9e9">vcl::boundingBox</a> (Iterator begin, Iterator end)</td></tr>
-<tr class="separator:a6c874831bf64431e53535e966bccb9e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1ad883eeb58e2a302d15ce6ba179752f"><td class="memTemplParams" colspan="2">template&lt;PointConcept PointType&gt; </td></tr>
+<tr class="memitem:ga1ad883eeb58e2a302d15ce6ba179752f"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__bounding__box.html#ga1ad883eeb58e2a302d15ce6ba179752f">vcl::boundingBox</a> (const PointType &amp;p)</td></tr>
+<tr class="memdesc:ga1ad883eeb58e2a302d15ce6ba179752f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the bounding box of a single point.  <br /></td></tr>
+<tr class="separator:ga1ad883eeb58e2a302d15ce6ba179752f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga776dc863a78918d5a0f104907ab8a26f"><td class="memTemplParams" colspan="2">template&lt;SegmentConcept SegmentType&gt; </td></tr>
+<tr class="memitem:ga776dc863a78918d5a0f104907ab8a26f"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__bounding__box.html#ga776dc863a78918d5a0f104907ab8a26f">vcl::boundingBox</a> (const SegmentType &amp;s)</td></tr>
+<tr class="memdesc:ga776dc863a78918d5a0f104907ab8a26f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the bounding box of a line segment.  <br /></td></tr>
+<tr class="separator:ga776dc863a78918d5a0f104907ab8a26f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab8f4fd4f0f5ffcf56b82e44e7bb6a1dd"><td class="memTemplParams" colspan="2">template&lt;SphereConcept SphereType&gt; </td></tr>
+<tr class="memitem:gab8f4fd4f0f5ffcf56b82e44e7bb6a1dd"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__bounding__box.html#gab8f4fd4f0f5ffcf56b82e44e7bb6a1dd">vcl::boundingBox</a> (const SphereType &amp;s)</td></tr>
+<tr class="memdesc:gab8f4fd4f0f5ffcf56b82e44e7bb6a1dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the bounding box of a sphere.  <br /></td></tr>
+<tr class="separator:gab8f4fd4f0f5ffcf56b82e44e7bb6a1dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2aa52bf969238c1f809e218722e63ccf"><td class="memTemplParams" colspan="2">template&lt;MeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga2aa52bf969238c1f809e218722e63ccf"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__bounding__box.html#ga2aa52bf969238c1f809e218722e63ccf">vcl::boundingBox</a> (const MeshType &amp;m)</td></tr>
+<tr class="memdesc:ga2aa52bf969238c1f809e218722e63ccf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the bounding box of a mesh.  <br /></td></tr>
+<tr class="separator:ga2aa52bf969238c1f809e218722e63ccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5394cef99570de3bb2538e6c4dae69f7"><td class="memTemplParams" colspan="2">template&lt;VertexConcept VertexType&gt; </td></tr>
+<tr class="memitem:ga5394cef99570de3bb2538e6c4dae69f7"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__bounding__box.html#ga5394cef99570de3bb2538e6c4dae69f7">vcl::boundingBox</a> (const VertexType &amp;v)</td></tr>
+<tr class="memdesc:ga5394cef99570de3bb2538e6c4dae69f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the bounding box of a vertex.  <br /></td></tr>
+<tr class="separator:ga5394cef99570de3bb2538e6c4dae69f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga65283494a83b003698a6f37d3157384a"><td class="memTemplParams" colspan="2">template&lt;VertexConcept VertexType&gt; </td></tr>
+<tr class="memitem:ga65283494a83b003698a6f37d3157384a"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__bounding__box.html#ga65283494a83b003698a6f37d3157384a">vcl::boundingBox</a> (const VertexType *v)</td></tr>
+<tr class="memdesc:ga65283494a83b003698a6f37d3157384a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the bounding box of a vertex pointer.  <br /></td></tr>
+<tr class="separator:ga65283494a83b003698a6f37d3157384a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf568c42e98a48937632002951ba1a0c7"><td class="memTemplParams" colspan="2">template&lt;FaceConcept FaceType&gt; </td></tr>
+<tr class="memitem:gaf568c42e98a48937632002951ba1a0c7"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__bounding__box.html#gaf568c42e98a48937632002951ba1a0c7">vcl::boundingBox</a> (const FaceType &amp;f)</td></tr>
+<tr class="memdesc:gaf568c42e98a48937632002951ba1a0c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the bounding box of a face.  <br /></td></tr>
+<tr class="separator:gaf568c42e98a48937632002951ba1a0c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafcd15ef8e31e650a8e3714feb5c6efcc"><td class="memTemplParams" colspan="2">template&lt;FaceConcept FaceType&gt; </td></tr>
+<tr class="memitem:gafcd15ef8e31e650a8e3714feb5c6efcc"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__bounding__box.html#gafcd15ef8e31e650a8e3714feb5c6efcc">vcl::boundingBox</a> (const FaceType *f)</td></tr>
+<tr class="memdesc:gafcd15ef8e31e650a8e3714feb5c6efcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the bounding box of a face pointer.  <br /></td></tr>
+<tr class="separator:gafcd15ef8e31e650a8e3714feb5c6efcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3364ecfcc22e860e202e0c4edc2bbc79"><td class="memTemplParams" colspan="2">template&lt;EdgeConcept EdgeType&gt; </td></tr>
+<tr class="memitem:ga3364ecfcc22e860e202e0c4edc2bbc79"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__bounding__box.html#ga3364ecfcc22e860e202e0c4edc2bbc79">vcl::boundingBox</a> (const EdgeType &amp;e)</td></tr>
+<tr class="memdesc:ga3364ecfcc22e860e202e0c4edc2bbc79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the bounding box of an edge.  <br /></td></tr>
+<tr class="separator:ga3364ecfcc22e860e202e0c4edc2bbc79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac83361d6c2d4182da008a6e198fe4465"><td class="memTemplParams" colspan="2">template&lt;EdgeConcept EdgeType&gt; </td></tr>
+<tr class="memitem:gac83361d6c2d4182da008a6e198fe4465"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__bounding__box.html#gac83361d6c2d4182da008a6e198fe4465">vcl::boundingBox</a> (const EdgeType *e)</td></tr>
+<tr class="memdesc:gac83361d6c2d4182da008a6e198fe4465"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the bounding box of an edge pointer.  <br /></td></tr>
+<tr class="separator:gac83361d6c2d4182da008a6e198fe4465"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6c874831bf64431e53535e966bccb9e9"><td class="memTemplParams" colspan="2">template&lt;typename Iterator &gt; </td></tr>
+<tr class="memitem:ga6c874831bf64431e53535e966bccb9e9"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__bounding__box.html#ga6c874831bf64431e53535e966bccb9e9">vcl::boundingBox</a> (Iterator begin, Iterator end)</td></tr>
+<tr class="memdesc:ga6c874831bf64431e53535e966bccb9e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the bounding box of a set of objects.  <br /></td></tr>
+<tr class="separator:ga6c874831bf64431e53535e966bccb9e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga780e912fa6dbf0a2a7d0e49445f65347"><td class="memTemplParams" colspan="2">template&lt;Range Rng&gt; </td></tr>
+<tr class="memitem:ga780e912fa6dbf0a2a7d0e49445f65347"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__bounding__box.html#ga780e912fa6dbf0a2a7d0e49445f65347">vcl::boundingBox</a> (Rng &amp;&amp;r)</td></tr>
+<tr class="memdesc:ga780e912fa6dbf0a2a7d0e49445f65347"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the bounding box of a range of objects.  <br /></td></tr>
+<tr class="separator:ga780e912fa6dbf0a2a7d0e49445f65347"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

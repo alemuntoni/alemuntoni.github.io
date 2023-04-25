@@ -95,13 +95,24 @@ $(document).ready(function(){initNavTree('classvcl_1_1NullLogger.html',''); init
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">vcl::NullLogger Class Reference</div></div>
+  <div class="headertitle"><div class="title">vcl::NullLogger Class Reference<div class="ingroups"><a class="el" href="group__miscellaneous.html">Miscellaneous</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="concepts_2logger_8h_source.html">logger.h</a>&gt;</code></p>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/runner/work/vclib/vclib/include/vclib/concepts/<a class="el" href="concepts_2logger_8h_source.html">logger.h</a></li>
+<p>The <a class="el" href="classvcl_1_1NullLogger.html" title="The NullLogger class is an empty class that is used as default type in all the library functions that...">NullLogger</a> class is an empty class that is used as default type in all the library functions that take as input a logger type.  
+ <a href="classvcl_1_1NullLogger.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="null__logger_8h_source.html">null_logger.h</a>&gt;</code></p>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="classvcl_1_1NullLogger.html" title="The NullLogger class is an empty class that is used as default type in all the library functions that...">NullLogger</a> class is an empty class that is used as default type in all the library functions that take as input a logger type. </p>
+<p>This class satisfies the LoggerConcept.</p>
+<p>Before using a logger object, you should check if the type of the logger is valid in the following way:</p>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span> <span class="keyword">constexpr</span> (vcl::isLoggerValid&lt;LoggerType&gt;()) {</div>
+<div class="line">    <span class="comment">// use here the log object</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><p>This allows to compile the log code only when the user gives a proper <a class="el" href="classvcl_1_1Logger.html">Logger</a> object that satisfies the LoggerConcept. </p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
+<li>/home/runner/work/vclib/vclib/include/vclib/misc/logger/<a class="el" href="null__logger_8h_source.html">null_logger.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -8,6 +8,6 @@ var searchData=
   ['notnull_5',['notNull',['../namespacevcl_1_1views.html#aeb8235ba7d93b8622ef4eed832382f2d',1,'vcl::views']]],
   ['notselected_6',['notSelected',['../namespacevcl_1_1views.html#ad666b0a1eb772fc5f2b6491de70c3bef',1,'vcl::views']]],
   ['ns_7',['Ns',['../structvcl_1_1io_1_1obj_1_1Material.html#a47882589c25f9217b9c816fcc88476fb',1,'vcl::io::obj::Material']]],
-  ['nulllogger_8',['nullLogger',['../namespacevcl.html#a3377e3c875ec245e90ac5a395105ce99',1,'vcl']]],
+  ['nulllogger_8',['nullLogger',['../group__miscellaneous.html#ga3377e3c875ec245e90ac5a395105ce99',1,'vcl']]],
   ['numberelements_9',['numberElements',['../structvcl_1_1io_1_1ply_1_1Element.html#affc98c1de5153bf22a17aa6d5c65cc4f',1,'vcl::io::ply::Element']]]
 ];

@@ -1,6 +1,5 @@
 var space_2segment_8h =
 [
-    [ "vcl::Segment< PointT >", "classvcl_1_1Segment.html", "classvcl_1_1Segment" ],
     [ "Segment2", "space_2segment_8h.html#af8c7ce5479499796837976d3247e4df8", null ],
     [ "Segment2d", "space_2segment_8h.html#ae5da8472ea5b5275ab7109e52d50af04", null ],
     [ "Segment2f", "space_2segment_8h.html#a83dc041e1243c07111706a89433af7a9", null ],

@@ -8,13 +8,6 @@ var concepts_2mesh_8h =
     [ "vcl::mesh::HasName", "conceptvcl_1_1mesh_1_1HasName.html", null ],
     [ "vcl::mesh::HasTexturePaths", "conceptvcl_1_1mesh_1_1HasTexturePaths.html", null ],
     [ "vcl::mesh::HasTransformMatrix", "conceptvcl_1_1mesh_1_1HasTransformMatrix.html", null ],
-    [ "vcl::HasBoundingBox", "conceptvcl_1_1HasBoundingBox.html", null ],
-    [ "vcl::HasColor", "conceptvcl_1_1HasColor.html", null ],
-    [ "vcl::HasMark", "conceptvcl_1_1HasMark.html", null ],
-    [ "vcl::HasName", "conceptvcl_1_1HasName.html", null ],
-    [ "vcl::HasTexturePaths", "conceptvcl_1_1HasTexturePaths.html", null ],
-    [ "vcl::HasTransformMatrix", "conceptvcl_1_1HasTransformMatrix.html", null ],
-    [ "vcl::BaseMeshConcept", "conceptvcl_1_1BaseMeshConcept.html", null ],
     [ "vcl::HasTriangles", "conceptvcl_1_1HasTriangles.html", null ],
     [ "vcl::HasQuads", "conceptvcl_1_1HasQuads.html", null ],
     [ "vcl::HasPolygons", "conceptvcl_1_1HasPolygons.html", null ],
@@ -23,7 +16,5 @@ var concepts_2mesh_8h =
     [ "vcl::QuadMeshConcept", "conceptvcl_1_1QuadMeshConcept.html", null ],
     [ "vcl::PolygonMeshConcept", "conceptvcl_1_1PolygonMeshConcept.html", null ],
     [ "vcl::EdgeMeshConcept", "conceptvcl_1_1EdgeMeshConcept.html", null ],
-    [ "vcl::DcelMeshConcept", "conceptvcl_1_1DcelMeshConcept.html", null ],
-    [ "vcl::MeshConcept", "conceptvcl_1_1MeshConcept.html", null ],
     [ "IsDerivedFromMesh", "concepts_2mesh_8h.html#a2510663966aedd208b045d45642a4e3f", null ]
 ];

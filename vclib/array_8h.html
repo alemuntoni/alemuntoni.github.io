@@ -95,12 +95,21 @@ $(document).ready(function(){initNavTree('array_8h.html',''); initResizable(); }
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">array.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="array2_8h_source.html">array/array2.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="array3_8h_source.html">array/array3.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="array4_8h_source.html">array/array4.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;assert.h&gt;</code><br />
+<code>#include &lt;array&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;<a class="el" href="range_8h_source.html">vclib/concepts/range.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="nested__initializer__lists_8h_source.html">vclib/misc/nested_initializer_lists.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="types_8h_source.html">vclib/types.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="array_8cpp.html">array.cpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for array.h:</div>
 <div class="dyncontent">
@@ -113,6 +122,39 @@ This graph shows which files directly or indirectly include this file:</div>
 </div>
 </div>
 <p><a href="array_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html">vcl::Array&lt; T, N &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array stored in RowWise mode.">Array</a> class is a dynamically allocated N-dimensional array stored in RowWise mode.  <a href="classvcl_1_1Array.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacevcl"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevcl.html">vcl</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:gaba483b2c91a7c9b1505b87003bdf14d9"><td class="memTemplParams" colspan="2">template&lt;typename Scalar &gt; </td></tr>
+<tr class="memitem:gaba483b2c91a7c9b1505b87003bdf14d9"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__space.html#gaba483b2c91a7c9b1505b87003bdf14d9">vcl::Array2</a> = Array&lt; Scalar, 2 &gt;</td></tr>
+<tr class="memdesc:gaba483b2c91a7c9b1505b87003bdf14d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">A convenience alias for a 2-dimensional <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array stored in RowWise mode.">Array</a>.  <br /></td></tr>
+<tr class="separator:gaba483b2c91a7c9b1505b87003bdf14d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6e4b5482856d73dda9465ed9cb7111ea"><td class="memTemplParams" colspan="2">template&lt;typename Scalar &gt; </td></tr>
+<tr class="memitem:ga6e4b5482856d73dda9465ed9cb7111ea"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__space.html#ga6e4b5482856d73dda9465ed9cb7111ea">vcl::Array3</a> = Array&lt; Scalar, 3 &gt;</td></tr>
+<tr class="memdesc:ga6e4b5482856d73dda9465ed9cb7111ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">A convenience alias for a 3-dimensional <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array stored in RowWise mode.">Array</a>.  <br /></td></tr>
+<tr class="separator:ga6e4b5482856d73dda9465ed9cb7111ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab8fae8ad3697a3fd5f463d428f1b99d0"><td class="memTemplParams" colspan="2">template&lt;typename Scalar &gt; </td></tr>
+<tr class="memitem:gab8fae8ad3697a3fd5f463d428f1b99d0"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__space.html#gab8fae8ad3697a3fd5f463d428f1b99d0">vcl::Array4</a> = Array&lt; Scalar, 4 &gt;</td></tr>
+<tr class="memdesc:gab8fae8ad3697a3fd5f463d428f1b99d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">A convenience alias for a 4-dimensional <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array stored in RowWise mode.">Array</a>.  <br /></td></tr>
+<tr class="separator:gab8fae8ad3697a3fd5f463d428f1b99d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a10783cb155a40826adff62ef42123efe"><td class="memTemplParams" colspan="2">template&lt;typename Scalar &gt; </td></tr>
+<tr class="memitem:a10783cb155a40826adff62ef42123efe"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevcl.html#a10783cb155a40826adff62ef42123efe">vcl::operator&lt;&lt;</a> (std::ostream &amp;out, const Array&lt; Scalar, 2 &gt; &amp;a)</td></tr>
+<tr class="separator:a10783cb155a40826adff62ef42123efe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

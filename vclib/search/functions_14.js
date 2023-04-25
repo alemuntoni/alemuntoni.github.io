@@ -18,7 +18,7 @@ var searchData=
   ['unsetselected_15',['unsetSelected',['../classvcl_1_1comp_1_1BitFlagsT.html#af790cbd244d61fe05608c7bb834f013e',1,'vcl::comp::BitFlagsT']]],
   ['unsetuserbit_16',['unsetUserBit',['../classvcl_1_1comp_1_1BitFlagsT.html#a899ef3d92260de7ff9b568eb9b330de1',1,'vcl::comp::BitFlagsT::unsetUserBit(uint bit)'],['../classvcl_1_1comp_1_1BitFlagsT.html#a94f6478bda2ce904884eeadf0416c19a',1,'vcl::comp::BitFlagsT::unsetUserBit(uint bit, uint firstBit)'],['../classvcl_1_1comp_1_1PolygonBitFlags.html#aec4682df9f2dd57fc32f5b20b37f6cdc',1,'vcl::comp::PolygonBitFlags::unsetUserBit()'],['../classvcl_1_1comp_1_1TriangleBitFlags.html#a0bfd6ade3c1c08869accbfbe74c2334b',1,'vcl::comp::TriangleBitFlags::unsetUserBit()']]],
   ['updateborder_17',['updateBorder',['../namespacevcl.html#a359b253b8af6d1ae3ac24625e8ac7a56',1,'vcl']]],
-  ['updateboundingbox_18',['updateBoundingBox',['../namespacevcl.html#ae8e263ac49e1169ced376c44dd529326',1,'vcl']]],
+  ['updateboundingbox_18',['updateBoundingBox',['../namespacevcl.html#a8ecd18a495232ac86d4c81913a1ad3f7',1,'vcl']]],
   ['updatebuffers_19',['updateBuffers',['../classvcl_1_1DrawableMesh.html#aaff750e833017534d286fe1ee1f36e64',1,'vcl::DrawableMesh']]],
   ['updateperfaceadjacentfaces_20',['updatePerFaceAdjacentFaces',['../namespacevcl.html#a3db69fc234fc8072747aabf1724f9b92',1,'vcl']]],
   ['updateperfacenormals_21',['updatePerFaceNormals',['../namespacevcl.html#a9a15ac19d4224a7a140430d7c209203c',1,'vcl']]],
