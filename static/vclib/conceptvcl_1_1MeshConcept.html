@@ -95,39 +95,46 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1MeshConcept.html',''); i
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">vcl::MeshConcept Concept Reference</div></div>
+  <div class="headertitle"><div class="title">vcl::MeshConcept Concept Reference<div class="ingroups"><a class="el" href="group__concepts.html">Concepts</a> &raquo; <a class="el" href="group__lconcepts.html">Library Concepts</a> &raquo; <a class="el" href="group__mesh__concepts.html">Mesh Concepts</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>The MeshConcept is satisfied when a Mesh data structure is considered valid.  
+<p>The Mesh Concept is evaluated to true when the type is a Mesh.  
 <a href="conceptvcl_1_1MeshConcept.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="concepts_2mesh_8h_source.html">mesh.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1MeshConcept.html">vcl::MeshConcept</a> = </div>
-<div class="line">    <a class="code hl_concept" href="conceptvcl_1_1BaseMeshConcept.html">BaseMeshConcept&lt;T&gt;</a> &amp;&amp;</div>
-<div class="line">    (<a class="code hl_concept" href="conceptvcl_1_1DcelMeshConcept.html">DcelMeshConcept&lt;T&gt;</a> ||</div>
-<div class="line">     (!<a class="code hl_concept" href="conceptvcl_1_1HasHalfEdges.html">HasHalfEdges&lt;T&gt;</a> &amp;&amp; !<a class="code hl_concept" href="conceptvcl_1_1HasPerFaceHalfEdgeReference.html">HasPerFaceHalfEdgeReference&lt;T&gt;</a> &amp;&amp; !<a class="code hl_concept" href="conceptvcl_1_1HasPerVertexHalfEdgeReference.html">HasPerVertexHalfEdgeReference&lt;T&gt;</a>))</div>
-<div class="ttc" id="aconceptvcl_1_1BaseMeshConcept_html"><div class="ttname"><a href="conceptvcl_1_1BaseMeshConcept.html">vcl::BaseMeshConcept</a></div><div class="ttdef"><b>Definition:</b> mesh.h:98</div></div>
-<div class="ttc" id="aconceptvcl_1_1DcelMeshConcept_html"><div class="ttname"><a href="conceptvcl_1_1DcelMeshConcept.html">vcl::DcelMeshConcept</a></div><div class="ttdoc">The DcelMeshConcept is satisfied when:</div><div class="ttdef"><b>Definition:</b> mesh.h:199</div></div>
-<div class="ttc" id="aconceptvcl_1_1HasHalfEdges_html"><div class="ttname"><a href="conceptvcl_1_1HasHalfEdges.html">vcl::HasHalfEdges</a></div><div class="ttdoc">HasHalfEdges concepts is satisfied when at least one of its types is (or inherits from) a HalfEdgeCon...</div><div class="ttdef"><b>Definition:</b> containers.h:181</div></div>
-<div class="ttc" id="aconceptvcl_1_1HasPerFaceHalfEdgeReference_html"><div class="ttname"><a href="conceptvcl_1_1HasPerFaceHalfEdgeReference.html">vcl::HasPerFaceHalfEdgeReference</a></div><div class="ttdef"><b>Definition:</b> per_face.h:45</div></div>
-<div class="ttc" id="aconceptvcl_1_1HasPerVertexHalfEdgeReference_html"><div class="ttname"><a href="conceptvcl_1_1HasPerVertexHalfEdgeReference.html">vcl::HasPerVertexHalfEdgeReference</a></div><div class="ttdef"><b>Definition:</b> per_vertex.h:49</div></div>
-<div class="ttc" id="aconceptvcl_1_1MeshConcept_html"><div class="ttname"><a href="conceptvcl_1_1MeshConcept.html">vcl::MeshConcept</a></div><div class="ttdoc">The MeshConcept is satisfied when a Mesh data structure is considered valid.</div><div class="ttdef"><b>Definition:</b> mesh.h:235</div></div>
+<div class="line">    (mesh::IsDerivedFromMesh&lt;T&gt;::value || mesh::IsAMesh&lt;T&gt;::value) &amp;&amp;</div>
+<div class="line">    <a class="code hl_concept" href="conceptvcl_1_1mesh_1_1HasVertexContainer.html">mesh::HasVertexContainer&lt;T&gt;</a> &amp;&amp;</div>
+<div class="line">    <span class="keyword">requires</span>(</div>
+<div class="line">        T o,</div>
+<div class="line">        <span class="keyword">const</span> T&amp; co,</div>
+<div class="line">        <span class="keyword">typename</span> T::VertexType v,</div>
+<div class="line">        <span class="keyword">typename</span> T::VertexType::CoordType c)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">typename</span> T::VertexType;</div>
+<div class="line">    <span class="keyword">typename</span> T::VertexContainer;</div>
+<div class="line"> </div>
+<div class="line">    { o.clear() } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">    { o.enableSameOptionalComponentsOf(T()) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">    { o.importFrom(T()) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">    { co.index(v) } -&gt; std::same_as&lt;uint&gt;;</div>
+<div class="line">    { co.index(&amp;v) } -&gt; std::same_as&lt;uint&gt;;</div>
+<div class="line">    { o.addVertex() } -&gt; std::same_as&lt;uint&gt;;</div>
+<div class="line">    { o.addVertex(c) } -&gt; std::same_as&lt;uint&gt;;</div>
+<div class="line">    { o.addVertices(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;uint&gt;;</div>
+<div class="line">    { o.addVertices(c, c, c, c) } -&gt; std::same_as&lt;uint&gt;;</div>
+<div class="line">    { o.reserveVertices(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">    { o.compactVertices() } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">}</div>
+<div class="ttc" id="aconceptvcl_1_1MeshConcept_html"><div class="ttname"><a href="conceptvcl_1_1MeshConcept.html">vcl::MeshConcept</a></div><div class="ttdoc">The Mesh Concept is evaluated to true when the type is a Mesh.</div><div class="ttdef"><b>Definition:</b> mesh.h:91</div></div>
+<div class="ttc" id="aconceptvcl_1_1mesh_1_1HasVertexContainer_html"><div class="ttname"><a href="conceptvcl_1_1mesh_1_1HasVertexContainer.html">vcl::mesh::HasVertexContainer</a></div><div class="ttdef"><b>Definition:</b> containers.h:96</div></div>
+<div class="ttc" id="atypes_2base_8h_html_a69aa29b598b851b0640aa225a9e5d61d"><div class="ttname"><a href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> base.h:31</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The MeshConcept is satisfied when a Mesh data structure is considered valid. </p>
-<p>It is valid if:</p><ul>
-<li>the type is derived or is a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">vcl::Mesh</a><ul>
-<li>to be a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">vcl::Mesh</a>, a type must contain (derive from) a vcl::VertexContainer</li>
-</ul>
-</li>
-<li>if the mesh is a Dcel, the DcelMeshConcept must be satisfied</li>
-<li>if the mesh is not a Dcel:<ul>
-<li>the mesh must not have half edges and per vertex/face half edge reference. </li>
-</ul>
-</li>
-</ul>
+<div class="textblock"><p>The Mesh Concept is evaluated to true when the type is a Mesh. </p>
+<p>A type T is a Mesh whem it inherits from or it is a template specialization of the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">vcl::Mesh</a> class, and it contains a VertexContainer, which is the only container that is mandatory in a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">vcl::Mesh</a>. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

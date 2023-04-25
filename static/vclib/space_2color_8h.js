@@ -1,6 +1,5 @@
 var space_2color_8h =
 [
-    [ "vcl::Color", "classvcl_1_1Color.html", "classvcl_1_1Color" ],
     [ "colorFromInterval", "space_2color_8h.html#ab5a54ddc3c9d67e0c7ed179e78c2ca06", null ],
     [ "colorFromInterval", "space_2color_8h.html#a5851edce0478bfc7f4084e3529ae6962", null ],
     [ "colorFromIntervalGreyShade", "space_2color_8h.html#a99b591f2eba1ded24ebf6f4b0ee4353f", null ],

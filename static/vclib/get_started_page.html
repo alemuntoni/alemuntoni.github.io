@@ -101,10 +101,10 @@ $(document).ready(function(){initNavTree('get_started_page.html',''); initResiza
 <div class="textblock"><p><a class="anchor" id="md_pages_1_get_started"></a> </p>
 <h1><a class="anchor" id="autotoc_md1"></a>
 Introduction</h1>
-<p>VCLib is a C++20 header-only library, which means that you just need to add the library (and a few dependencies) in your <code>INCLUDE_PATH</code> to start to use the library. However, VCLib comes also with a <code>cmake</code> ready configuration, that we strongly suggest to use. Therefore, if you use <code>cmake</code> for your C++ projects, you can derectly jump to the <a class="el" href="get_started_page.html#cmake_config">CMake paragraph</a>.</p>
+<p>VCLib is a header-only C++20 library, which means that you only need to add the library (and a few dependencies) to your <code>INCLUDE_PATH</code> to start using it. However, VCLib also comes with a <code>cmake</code>-ready configuration that we strongly recommend using. Therefore, if you use <code>cmake</code> for your C++ projects, you can directly jump to the <a class="el" href="get_started_page.html#cmake_config">CMake paragraph</a>.</p>
 <h1><a class="anchor" id="autotoc_md2"></a>
 Supported Compilers</h1>
-<p>Since the C++20 standard is recent, VCLib works only with recent C++ compilers:</p>
+<p>As the C++20 standard is new, VCLib is designed to work exclusively with recent C++ compilers::</p>
 <ul>
 <li>GCC: 11.2</li>
 <li>Clang: 14.0</li>
@@ -112,25 +112,25 @@ Supported Compilers</h1>
 </ul>
 <h1><a class="anchor" id="autotoc_md3"></a>
 Dependencies</h1>
-<p>To access to the basic functionalities of VCLib, you don't need to install any dependency. The libraries on which VCLib depends are header only, and they are bundled in the repository. There libraries are the following:</p>
+<p>To access the basic functionalities of VCLib, you don't need to install any dependencies. The libraries that VCLib depends on are header-only and are bundled in the repository. These libraries are as follows:</p>
 <ul>
 <li><a href="https://eigen.tuxfamily.org/index.php?title=Main_Page">Eigen</a></li>
 <li><a href="https://github.com/mapbox/earcut.hpp">MapBox Earcut</a></li>
 <li><a href="https://github.com/nothings/stb">STB</a></li>
 </ul>
-<p>However, at the at the time of writing, some functionalities of standard C++17 require a bit of attention to be used in some platforms. Specifically, VCLib uses C++17 parallel STL, which:</p>
+<p>However, at the time of writing, some functionalities of standard C++17 require attention when used on certain platforms. Specifically, VCLib uses C++17 parallel STL, which:</p>
 <ul>
-<li>On Apple systems using CLang can be used thanks to <a href="https://github.com/mikekazakov/pstld">pstld</a> (header only, bundled in VCLib, nothing to do);</li>
-<li>It is supported by MSVC (nothing to do);</li>
-<li>It is supported by GCC + libstdc++ when the <a href="https://github.com/oneapi-src/oneTBB">Threading Building Blocks</a> library is linked (need to link it);</li>
-<li>It is not supported by CLang + libc++ (with the exception of Apple systems, thanks to <code>pstld</code>);</li>
+<li>On Apple systems using CLang, it can be used thanks to <a href="https://github.com/mikekazakov/pstld">pstld</a> (header only, bundled in VCLib, no additional action required);</li>
+<li>It is supported by MSVC without requiring additional action;</li>
+<li>It is supported by GCC + libstdc++ when the <a href="https://github.com/oneapi-src/oneTBB">Threading Building Blocks</a> library is linked (linking is required);</li>
+<li>It is not supported by CLang + libc++ (except for Apple systems, thanks to <code>pstld</code>);</li>
 </ul>
-<p>To have access to the parallel speedup of VCLib, we suggest to use the <a class="el" href="get_started_page.html#cmake_config">CMake</a> that will check automatically if this feature is available in your system.</p>
-<p>On Ubuntu, you can download the <code>Threading Building Blocks</code> library by running on terminal:</p>
+<p>To access the parallel speedup of VCLib, we suggest using <a class="el" href="get_started_page.html#cmake_config">CMake</a> which will automatically check whether this feature is available on your system.</p>
+<p>If you are using Ubuntu, you can download the <code>Threading Building Blocks</code> library by running the following command in the terminal:</p>
 <div class="fragment"><div class="line">sudo apt install libtbb-dev</div>
 </div><!-- fragment --><h1><a class="anchor" id="cmake_config"></a>
 CMake Configuration</h1>
-<p>To include VCLib in your CMake project, you'll first need to place the VCLib directory inside your project directory. Then, in your <code>CMakeLists.txt</code>:</p>
+<p>To include VCLib in your CMake project, first copy the VCLib directory into your project directory. Then, in your <code>CMakeLists.txt</code>:</p>
 <div class="fragment"><div class="line">add_subdirectory(vclib)</div>
 <div class="line"> </div>
 <div class="line">[...]</div>
@@ -139,9 +139,8 @@ CMake Configuration</h1>
 </div><!-- fragment --><p>Where <code>my_target</code> is the target of your project. </p>
 <h1><a class="anchor" id="autotoc_md4"></a>
 Usage with INCLUDE_PATH</h1>
-<p>To work with VCLib, you need to have Eigen accessible in your <code>INCLUDE_PATH</code>. MapBox Earcut, STB and (if you are using Apple Clang) pstld are already included automatically by VCLib and you don't need to include it manually.</p>
-<p>Eigen is also provided inside the <code>external</code> directory of VCLib.</p>
-<p>Set your <code>INCLUDE_PATH</code> in the following way:</p>
+<p>In order to work with VCLib, you must ensure that Eigen is accessible in your <code>INCLUDE_PATH</code>. MapBox Earcut, STB, and (if you're using Apple Clang) pstld are already included automatically by VCLib, so you don't need to include them manually. Eigen is also provided within the <code>external</code> directory of VCLib.</p>
+<p>To set your <code>INCLUDE_PATH</code> correctly, follow these steps:</p>
 <div class="fragment"><div class="line">INCLUDE_PATH += path/to/vclib/external/eigen-3.4.0/ # or your favorite Eigen version</div>
 <div class="line">INCLUDE_PATH += path/to/vclib/include/</div>
 </div><!-- fragment --><p>and you are ready to go.</p>

@@ -92,22 +92,8 @@ var hierarchy =
         [ "vcl::TriMeshT< Scalar >", "classvcl_1_1TriMeshT.html", null ]
       ] ]
     ] ],
-    [ "vcl::Array< T, N >", "classvcl_1_1Array.html", [
-      [ "vcl::Array2< uint32_t >", "classvcl_1_1Array2.html", null ]
-    ] ],
-    [ "vcl::Array< T, 2 >", "classvcl_1_1Array.html", [
-      [ "vcl::Array2< T >", "classvcl_1_1Array2.html", null ]
-    ] ],
-    [ "vcl::Array< T, 3 >", "classvcl_1_1Array.html", [
-      [ "vcl::Array3D< T >", "classvcl_1_1Array3D.html", null ]
-    ] ],
-    [ "vcl::Array< T, 4 >", "classvcl_1_1Array.html", [
-      [ "vcl::Array4D< T >", "classvcl_1_1Array4D.html", null ]
-    ] ],
-    [ "vcl::Array< uint32_t, 2 >", "classvcl_1_1Array.html", null ],
-    [ "vcl::Array< uint8_t, N >", "classvcl_1_1Array.html", [
-      [ "vcl::Array< bool, N >", "classvcl_1_1Array_3_01bool_00_01N_01_4.html", null ]
-    ] ],
+    [ "vcl::Array< T, N >", "classvcl_1_1Array.html", null ],
+    [ "vcl::Array< uint32_t >", "classvcl_1_1Array.html", null ],
     [ "vcl::ConstStaticGridIterator< KeyType, ValueType, GridType >::ArrowHelper", "classvcl_1_1ConstStaticGridIterator_1_1ArrowHelper.html", null ],
     [ "vcl::StaticGridIterator< KeyType, ValueType, GridType >::ArrowHelper", "classvcl_1_1StaticGridIterator_1_1ArrowHelper.html", null ],
     [ "vcl::BipartiteGraph< T1, T2 >", "classvcl_1_1BipartiteGraph.html", null ],
@@ -160,6 +146,22 @@ var hierarchy =
       [ "vcl::comp::AdjacentFaces< Face, N, ElementType, optional >", "classvcl_1_1comp_1_1AdjacentFaces.html", null ],
       [ "vcl::comp::AdjacentVertices< Vertex, ElementType, optional >", "classvcl_1_1comp_1_1AdjacentVertices.html", null ],
       [ "vcl::comp::VertexReferences< Vertex, N, ElementType, optional >", "classvcl_1_1comp_1_1VertexReferences.html", null ]
+    ] ],
+    [ "std::exception", null, [
+      [ "std::runtime_error", null, [
+        [ "vcl::BadCustomComponentTypeException", "classvcl_1_1BadCustomComponentTypeException.html", null ],
+        [ "vcl::BadVertexIndexException", "classvcl_1_1BadVertexIndexException.html", null ],
+        [ "vcl::CannotOpenFileException", "classvcl_1_1CannotOpenFileException.html", null ],
+        [ "vcl::MalformedFileException", "classvcl_1_1MalformedFileException.html", null ],
+        [ "vcl::MissingCompactnessException", "classvcl_1_1MissingCompactnessException.html", null ],
+        [ "vcl::MissingComponentException", "classvcl_1_1MissingComponentException.html", null ],
+        [ "vcl::MissingPolygonalRequirementException", "classvcl_1_1MissingPolygonalRequirementException.html", null ],
+        [ "vcl::MissingPreconditionException", "classvcl_1_1MissingPreconditionException.html", null ],
+        [ "vcl::MissingQuadRequirementException", "classvcl_1_1MissingQuadRequirementException.html", null ],
+        [ "vcl::MissingTriangularRequirementException", "classvcl_1_1MissingTriangularRequirementException.html", null ],
+        [ "vcl::NoIntersectionException", "classvcl_1_1NoIntersectionException.html", null ],
+        [ "vcl::UnknownFileFormatException", "classvcl_1_1UnknownFileFormatException.html", null ]
+      ] ]
     ] ],
     [ "std::false_type", null, [
       [ "vcl::edge::IsAnEdge< T >", "structvcl_1_1edge_1_1IsAnEdge.html", null ],
@@ -304,26 +306,6 @@ var hierarchy =
       [ "vcl::KeyRefValueRefPair< T1, T2 >", "classvcl_1_1KeyRefValueRefPair.html", null ]
     ] ],
     [ "vcl::RegularGrid< Scalar, N >", "classvcl_1_1RegularGrid.html", null ],
-    [ "vcl::RegularGrid< Scalar, 2 >", "classvcl_1_1RegularGrid.html", [
-      [ "vcl::RegularGrid2< Scalar >", "classvcl_1_1RegularGrid2.html", null ]
-    ] ],
-    [ "vcl::RegularGrid< Scalar, 3 >", "classvcl_1_1RegularGrid.html", [
-      [ "vcl::RegularGrid3< Scalar >", "classvcl_1_1RegularGrid3.html", null ]
-    ] ],
-    [ "std::runtime_error", null, [
-      [ "vcl::BadCustomComponentTypeException", "classvcl_1_1BadCustomComponentTypeException.html", null ],
-      [ "vcl::BadVertexIndexException", "classvcl_1_1BadVertexIndexException.html", null ],
-      [ "vcl::CannotOpenFileException", "classvcl_1_1CannotOpenFileException.html", null ],
-      [ "vcl::MalformedFileException", "classvcl_1_1MalformedFileException.html", null ],
-      [ "vcl::MissingCompactnessException", "classvcl_1_1MissingCompactnessException.html", null ],
-      [ "vcl::MissingComponentException", "classvcl_1_1MissingComponentException.html", null ],
-      [ "vcl::MissingPolygonalRequirementException", "classvcl_1_1MissingPolygonalRequirementException.html", null ],
-      [ "vcl::MissingPreconditionException", "classvcl_1_1MissingPreconditionException.html", null ],
-      [ "vcl::MissingQuadRequirementException", "classvcl_1_1MissingQuadRequirementException.html", null ],
-      [ "vcl::MissingTriangularRequirementException", "classvcl_1_1MissingTriangularRequirementException.html", null ],
-      [ "vcl::NoIntersectionException", "classvcl_1_1NoIntersectionException.html", null ],
-      [ "vcl::UnknownFileFormatException", "classvcl_1_1UnknownFileFormatException.html", null ]
-    ] ],
     [ "vcl::comp::Scalar< T, ElementType, optional >", "classvcl_1_1comp_1_1Scalar.html", null ],
     [ "vcl::SecondRefPair< T1, T2 >", "classvcl_1_1SecondRefPair.html", [
       [ "vcl::KeyValueRefPair< T1, T2 >", "classvcl_1_1KeyValueRefPair.html", null ]

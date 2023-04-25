@@ -1,6 +1,5 @@
 var space_2box_8h =
 [
-    [ "vcl::Box< PointT >", "classvcl_1_1Box.html", "classvcl_1_1Box" ],
     [ "Box2", "space_2box_8h.html#ad892770b57d7187fe007fc5c7b8e28c6", null ],
     [ "Box2d", "space_2box_8h.html#a77d7b12e8258d508469b505f056917f1", null ],
     [ "Box2f", "space_2box_8h.html#ae6dc1589c361fc5f1b6444b74aae377d", null ],

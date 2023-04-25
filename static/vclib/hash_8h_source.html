@@ -128,18 +128,18 @@ $(document).ready(function(){initNavTree('hash_8h_source.html',''); initResizabl
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Rest&gt;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="namespacevcl.html#aeb189433c1c9d7bf52a96ff359f364ec">   41</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacevcl.html#aeb189433c1c9d7bf52a96ff359f364ec">hashCombine</a>(std::size_t&amp; seed, <span class="keyword">const</span> T&amp; v, <span class="keyword">const</span> Rest&amp;... rest)</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>{</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    seed ^= std::hash&lt;T&gt;{}(v) + 0x9e3779b9 + (seed &lt;&lt; 6) + (seed &gt;&gt; 2);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    (<a class="code hl_function" href="namespacevcl.html#aeb189433c1c9d7bf52a96ff359f364ec">hashCombine</a>(seed, rest), ...);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>}</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>} <span class="comment">// endif</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Rest&gt;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="namespacevcl.html#aeb189433c1c9d7bf52a96ff359f364ec">   43</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacevcl.html#aeb189433c1c9d7bf52a96ff359f364ec">hashCombine</a>(std::size_t&amp; seed, <span class="keyword">const</span> T&amp; v, <span class="keyword">const</span> Rest&amp;... rest)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>{</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    seed ^= std::hash&lt;T&gt;{}(v) + 0x9e3779b9 + (seed &lt;&lt; 6) + (seed &gt;&gt; 2);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    (<a class="code hl_function" href="namespacevcl.html#aeb189433c1c9d7bf52a96ff359f364ec">hashCombine</a>(seed, rest), ...);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#endif </span><span class="comment">// VCL_MISC_HASH_H</span></div>
-<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition:</b> bounding_box.cpp:28</div></div>
-<div class="ttc" id="anamespacevcl_html_aeb189433c1c9d7bf52a96ff359f364ec"><div class="ttname"><a href="namespacevcl.html#aeb189433c1c9d7bf52a96ff359f364ec">vcl::hashCombine</a></div><div class="ttdeci">void hashCombine(std::size_t &amp;seed, const T &amp;v, const Rest &amp;... rest)</div><div class="ttdoc">Starting a seed, computes the hash of a series of objects.</div><div class="ttdef"><b>Definition:</b> hash.h:41</div></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>} <span class="comment">// endif</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#endif </span><span class="comment">// VCL_MISC_HASH_H</span></div>
+<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition:</b> bounding_box.cpp:29</div></div>
+<div class="ttc" id="anamespacevcl_html_aeb189433c1c9d7bf52a96ff359f364ec"><div class="ttname"><a href="namespacevcl.html#aeb189433c1c9d7bf52a96ff359f364ec">vcl::hashCombine</a></div><div class="ttdeci">void hashCombine(std::size_t &amp;seed, const T &amp;v, const Rest &amp;... rest)</div><div class="ttdoc">Starting from a seed, computes the hash of a series of objects.</div><div class="ttdef"><b>Definition:</b> hash.h:43</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

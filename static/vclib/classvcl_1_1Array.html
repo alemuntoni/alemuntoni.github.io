@@ -96,63 +96,94 @@ $(document).ready(function(){initNavTree('classvcl_1_1Array.html',''); initResiz
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classvcl_1_1Array-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">vcl::Array&lt; T, N &gt; Class Template Reference</div></div>
+  <div class="headertitle"><div class="title">vcl::Array&lt; T, N &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__space.html">Spatial Data Structures</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>The <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array, stored in RowWise mode....">Array</a> class is a dynamically allocated N-dimensional array, stored in RowWise mode. All its elements are stored contiguously. For array 1D please use std::vector or std::array.  
+<p>The <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array stored in RowWise mode.">Array</a> class is a dynamically allocated N-dimensional array stored in RowWise mode.  
  <a href="classvcl_1_1Array.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="array__t_8h_source.html">array_t.h</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for vcl::Array&lt; T, N &gt;:</div>
-<div class="dyncontent">
-<div class="center"><img src="classvcl_1_1Array__inherit__graph.png" border="0" usemap="#avcl_1_1Array_3_01T_00_01N_01_4_inherit__map" alt="Inheritance graph"/></div>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<p><code>#include &lt;<a class="el" href="array_8h_source.html">array.h</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a93fd16abc77f8f0d1d6a632a7464ac66"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#a93fd16abc77f8f0d1d6a632a7464ac66">ValueType</a> = typename std::vector&lt; T &gt;::value_type</td></tr>
+<tr class="separator:a93fd16abc77f8f0d1d6a632a7464ac66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af58c39901916405af285818dcd2e0619"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#af58c39901916405af285818dcd2e0619">ConstReference</a> = typename std::vector&lt; T &gt;::const_reference</td></tr>
+<tr class="separator:af58c39901916405af285818dcd2e0619"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5cfc15ccf35961f06c40bed0d596b44"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#ae5cfc15ccf35961f06c40bed0d596b44">Reference</a> = typename std::vector&lt; T &gt;::reference</td></tr>
+<tr class="separator:ae5cfc15ccf35961f06c40bed0d596b44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a6de785be400f1079e781db1799253d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#a9a6de785be400f1079e781db1799253d">ConstPointer</a> = typename std::vector&lt; T &gt;::const_pointer</td></tr>
+<tr class="separator:a9a6de785be400f1079e781db1799253d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab934c540ed7b8c9817d158082ab22e05"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#ab934c540ed7b8c9817d158082ab22e05">Pointer</a> = typename std::vector&lt; T &gt;::pointer</td></tr>
+<tr class="separator:ab934c540ed7b8c9817d158082ab22e05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea361d83fa12ceff1498a8889c434b97"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#aea361d83fa12ceff1498a8889c434b97">Iterator</a> = typename std::vector&lt; T &gt;::iterator</td></tr>
+<tr class="separator:aea361d83fa12ceff1498a8889c434b97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25678889ffca9fd2a419a832388be418"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#a25678889ffca9fd2a419a832388be418">ConstIterator</a> = typename std::vector&lt; T &gt;::const_iterator</td></tr>
+<tr class="separator:a25678889ffca9fd2a419a832388be418"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a046fce610329e9647c33d37cc6d822e6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#a046fce610329e9647c33d37cc6d822e6">Array</a> ()</td></tr>
-<tr class="memdesc:a046fce610329e9647c33d37cc6d822e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an N-Dimensional <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array, stored in RowWise mode....">Array</a> with size 0 for every dimension.  <br /></td></tr>
+<tr class="memdesc:a046fce610329e9647c33d37cc6d822e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for the <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array stored in RowWise mode.">Array</a> class.  <br /></td></tr>
 <tr class="separator:a046fce610329e9647c33d37cc6d822e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af92c52645aaa8b17b5f988fbd79117e0"><td class="memTemplParams" colspan="2">template&lt;typename... Sizes&gt; </td></tr>
-<tr class="memitem:af92c52645aaa8b17b5f988fbd79117e0"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#af92c52645aaa8b17b5f988fbd79117e0">Array</a> (Sizes... <a class="el" href="classvcl_1_1Array.html#aaa61d8862a54f17299b469aa08289b79">sizes</a>)</td></tr>
-<tr class="memdesc:af92c52645aaa8b17b5f988fbd79117e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an N-Dimensional <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array, stored in RowWise mode....">Array</a> with the given sizes. All its elements are initialized to 0.  <br /></td></tr>
-<tr class="separator:af92c52645aaa8b17b5f988fbd79117e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0833954c934d4820fc5a7b8f47e41f4"><td class="memTemplParams" colspan="2">template&lt;typename... Sizes&gt; <br />
+requires (sizeof...(sizes) == N)</td></tr>
+<tr class="memitem:ac0833954c934d4820fc5a7b8f47e41f4"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#ac0833954c934d4820fc5a7b8f47e41f4">Array</a> (Sizes... sizes)</td></tr>
+<tr class="memdesc:ac0833954c934d4820fc5a7b8f47e41f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array stored in RowWise mode.">Array</a> class that creates an N-dimensional array with the given sizes. All its elements are initialized to 0.  <br /></td></tr>
+<tr class="separator:ac0833954c934d4820fc5a7b8f47e41f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab41e12c66603c3e8dd42d9c941311088"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#ab41e12c66603c3e8dd42d9c941311088">Array</a> (<a class="el" href="namespacevcl.html#ad7449b441f4e1a24adf73b0964fb0953">vcl::NestedInitializerLists</a>&lt; T, N &gt; values)</td></tr>
-<tr class="memdesc:ab41e12c66603c3e8dd42d9c941311088"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and initializes an N-Dimensional <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array, stored in RowWise mode....">Array</a>. Sizes are given by the maximum size of the initializer lists for every dimension, and missing values are automatically setted to zero.  <br /></td></tr>
+<tr class="memdesc:ab41e12c66603c3e8dd42d9c941311088"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and initializes an N-dimensional array. Sizes are given by the maximum size of the initializer lists for every dimension, and missing values are automatically set to zero.  <br /></td></tr>
 <tr class="separator:ab41e12c66603c3e8dd42d9c941311088"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02971a96eb6d9b2f31c57b8a1e080ec5"><td class="memItemLeft" align="right" valign="top">constexpr unsigned long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#a02971a96eb6d9b2f31c57b8a1e080ec5">dimensions</a> () const</td></tr>
-<tr class="memdesc:a02971a96eb6d9b2f31c57b8a1e080ec5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of dimensions of the array.  <br /></td></tr>
-<tr class="separator:a02971a96eb6d9b2f31c57b8a1e080ec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab09bd341a395c55d573e01c83c5d55ef"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#ab09bd341a395c55d573e01c83c5d55ef">empty</a> () const</td></tr>
+<tr class="memdesc:ab09bd341a395c55d573e01c83c5d55ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether the array is empty.  <br /></td></tr>
 <tr class="separator:ab09bd341a395c55d573e01c83c5d55ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23344e924aba006bf6b6cd3effaebb27"><td class="memTemplParams" colspan="2">template&lt;typename... I&gt; </td></tr>
-<tr class="memitem:a23344e924aba006bf6b6cd3effaebb27"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#a23344e924aba006bf6b6cd3effaebb27">operator()</a> (I... indices)</td></tr>
-<tr class="memdesc:a23344e924aba006bf6b6cd3effaebb27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator () that allows to access one element of the array. It can be used as left or right value.  <br /></td></tr>
-<tr class="separator:a23344e924aba006bf6b6cd3effaebb27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a423f00cf86733a02a4a91b55b19967d8"><td class="memTemplParams" colspan="2">template&lt;typename... I&gt; </td></tr>
-<tr class="memitem:a423f00cf86733a02a4a91b55b19967d8"><td class="memTemplItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#a423f00cf86733a02a4a91b55b19967d8">operator()</a> (I... indices) const</td></tr>
-<tr class="memdesc:a423f00cf86733a02a4a91b55b19967d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator () that allows to access one element of the array. It can be used only as right value.  <br /></td></tr>
-<tr class="separator:a423f00cf86733a02a4a91b55b19967d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3122296598c0886d602d58db3082d570"><td class="memTemplParams" colspan="2">template&lt;typename... I&gt; </td></tr>
-<tr class="memitem:a3122296598c0886d602d58db3082d570"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#a3122296598c0886d602d58db3082d570">cArray</a> (I... indices)</td></tr>
-<tr class="memdesc:a3122296598c0886d602d58db3082d570"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows to get a C array of the <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array, stored in RowWise mode....">Array</a>, that can be also modified. Example:  <br /></td></tr>
-<tr class="separator:a3122296598c0886d602d58db3082d570"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40e1275449a1a86e9f39f4fdddf47842"><td class="memTemplParams" colspan="2">template&lt;typename... I&gt; </td></tr>
-<tr class="memitem:a40e1275449a1a86e9f39f4fdddf47842"><td class="memTemplItemLeft" align="right" valign="top">const T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#a40e1275449a1a86e9f39f4fdddf47842">cArray</a> (I... indices) const</td></tr>
-<tr class="memdesc:a40e1275449a1a86e9f39f4fdddf47842"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows to get a C array of the <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array, stored in RowWise mode....">Array</a>, that cannot be modified. Example:  <br /></td></tr>
-<tr class="separator:a40e1275449a1a86e9f39f4fdddf47842"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acef20c4ba98525ecca2456ab294941e6"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#acef20c4ba98525ecca2456ab294941e6">data</a> ()</td></tr>
-<tr class="separator:acef20c4ba98525ecca2456ab294941e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a062f52230900b2b8f78541804c9ab2af"><td class="memItemLeft" align="right" valign="top">const T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#a062f52230900b2b8f78541804c9ab2af">data</a> () const</td></tr>
-<tr class="separator:a062f52230900b2b8f78541804c9ab2af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1efd1ae823d83a9463c602d7364bfc64"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#a1efd1ae823d83a9463c602d7364bfc64">size</a> (std::size_t dim) const</td></tr>
+<tr class="memdesc:a1efd1ae823d83a9463c602d7364bfc64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the given dimension.  <br /></td></tr>
+<tr class="separator:a1efd1ae823d83a9463c602d7364bfc64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a547b9f5e1fe03fbc16ab1891b7e60163"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#a547b9f5e1fe03fbc16ab1891b7e60163">rows</a> () const</td></tr>
+<tr class="memdesc:a547b9f5e1fe03fbc16ab1891b7e60163"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of rows of a 2-dimensional array.  <br /></td></tr>
+<tr class="separator:a547b9f5e1fe03fbc16ab1891b7e60163"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c1932d4b9fa4d7d48fa7bdf173cfa61"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#a4c1932d4b9fa4d7d48fa7bdf173cfa61">cols</a> () const</td></tr>
+<tr class="memdesc:a4c1932d4b9fa4d7d48fa7bdf173cfa61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of columns of a 2-dimensional array.  <br /></td></tr>
+<tr class="separator:a4c1932d4b9fa4d7d48fa7bdf173cfa61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc65e35968c636b53c1eb0ee72d92009"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#abc65e35968c636b53c1eb0ee72d92009">sizeX</a> () const</td></tr>
+<tr class="memdesc:abc65e35968c636b53c1eb0ee72d92009"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the X dimension of the array.  <br /></td></tr>
+<tr class="separator:abc65e35968c636b53c1eb0ee72d92009"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaba804f6881af40f933e558c087af34b"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#aaba804f6881af40f933e558c087af34b">sizeY</a> () const</td></tr>
+<tr class="memdesc:aaba804f6881af40f933e558c087af34b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the Y dimension of the array.  <br /></td></tr>
+<tr class="separator:aaba804f6881af40f933e558c087af34b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f44dc667cc22db453d6a3b8e3c841e8"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#a0f44dc667cc22db453d6a3b8e3c841e8">sizeZ</a> () const</td></tr>
+<tr class="memdesc:a0f44dc667cc22db453d6a3b8e3c841e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the Z dimension of the array.  <br /></td></tr>
+<tr class="separator:a0f44dc667cc22db453d6a3b8e3c841e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaf7b5e18c960f11f0793e8da6092699"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#aaaf7b5e18c960f11f0793e8da6092699">sizeW</a> () const</td></tr>
+<tr class="memdesc:aaaf7b5e18c960f11f0793e8da6092699"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the W dimension of the array.  <br /></td></tr>
+<tr class="separator:aaaf7b5e18c960f11f0793e8da6092699"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f381ae3ab4ab362aeeae960ea267eb9"><td class="memTemplParams" colspan="2">template&lt;typename... I&gt; <br />
+requires (sizeof...(indices) == N)</td></tr>
+<tr class="memitem:a7f381ae3ab4ab362aeeae960ea267eb9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Array.html#ae5cfc15ccf35961f06c40bed0d596b44">Reference</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#a7f381ae3ab4ab362aeeae960ea267eb9">operator()</a> (I... indices)</td></tr>
+<tr class="memdesc:a7f381ae3ab4ab362aeeae960ea267eb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator () that allows to access one element of the array. It can be used as left or right value.  <br /></td></tr>
+<tr class="separator:a7f381ae3ab4ab362aeeae960ea267eb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcf839c0894ceba98739a06b780c2dee"><td class="memTemplParams" colspan="2">template&lt;typename... I&gt; <br />
+requires (sizeof...(indices) == N)</td></tr>
+<tr class="memitem:adcf839c0894ceba98739a06b780c2dee"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Array.html#af58c39901916405af285818dcd2e0619">ConstReference</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#adcf839c0894ceba98739a06b780c2dee">operator()</a> (I... indices) const</td></tr>
+<tr class="memdesc:adcf839c0894ceba98739a06b780c2dee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator () that allows to access one element of the array. It can be used only as right value.  <br /></td></tr>
+<tr class="separator:adcf839c0894ceba98739a06b780c2dee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31ec5b767b912786777a36df2b3149e3"><td class="memTemplParams" colspan="2">template&lt;typename... I&gt; <br />
+requires (sizeof...(indices) &lt; N)</td></tr>
+<tr class="memitem:a31ec5b767b912786777a36df2b3149e3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Array.html#ab934c540ed7b8c9817d158082ab22e05">Pointer</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#a31ec5b767b912786777a36df2b3149e3">data</a> (I... indices)</td></tr>
+<tr class="memdesc:a31ec5b767b912786777a36df2b3149e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows to get the data of the <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array stored in RowWise mode.">Array</a>, through a pointer to the first element.  <br /></td></tr>
+<tr class="separator:a31ec5b767b912786777a36df2b3149e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f8d33191ddbfbf7f568ea82b6eb3bd4"><td class="memTemplParams" colspan="2">template&lt;typename... I&gt; <br />
+requires (sizeof...(indices) &lt; N)</td></tr>
+<tr class="memitem:a6f8d33191ddbfbf7f568ea82b6eb3bd4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Array.html#a9a6de785be400f1079e781db1799253d">ConstPointer</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#a6f8d33191ddbfbf7f568ea82b6eb3bd4">data</a> (I... indices) const</td></tr>
+<tr class="memdesc:a6f8d33191ddbfbf7f568ea82b6eb3bd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows to get the data of the <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array stored in RowWise mode.">Array</a>, through a pointer to the first element.  <br /></td></tr>
+<tr class="separator:a6f8d33191ddbfbf7f568ea82b6eb3bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4382cb46214fd181ee9237e04cc8563"><td class="memItemLeft" align="right" valign="top">std::vector&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#ab4382cb46214fd181ee9237e04cc8563">stdVector</a> ()</td></tr>
 <tr class="memdesc:ab4382cb46214fd181ee9237e04cc8563"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a std::vector containing the elements of the array in row-major order.  <br /></td></tr>
 <tr class="separator:ab4382cb46214fd181ee9237e04cc8563"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -160,131 +191,218 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2a7f2bfaf6470618b6b382e56bf1dc4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a std::vector containing the elements of the array in row-major order.  <br /></td></tr>
 <tr class="separator:a2a7f2bfaf6470618b6b382e56bf1dc4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a407d9b5b1037d76be01f224237e839ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#a407d9b5b1037d76be01f224237e839ac">fill</a> (const T &amp;t)</td></tr>
-<tr class="memdesc:a407d9b5b1037d76be01f224237e839ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills the entire <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array, stored in RowWise mode....">Array</a> with the value t.  <br /></td></tr>
+<tr class="memdesc:a407d9b5b1037d76be01f224237e839ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills the entire <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array stored in RowWise mode.">Array</a> with the value t.  <br /></td></tr>
 <tr class="separator:a407d9b5b1037d76be01f224237e839ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8efd18a5ba2a3f8a41fb56b258b2938"><td class="memTemplParams" colspan="2">template&lt;typename C &gt; </td></tr>
-<tr class="memitem:ac8efd18a5ba2a3f8a41fb56b258b2938"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#ac8efd18a5ba2a3f8a41fb56b258b2938">fillContainer</a> (const C &amp;container)</td></tr>
-<tr class="memdesc:ac8efd18a5ba2a3f8a41fb56b258b2938"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills the entire <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array, stored in RowWise mode....">Array</a> with the values contained in the container c, in row-major order.  <br /></td></tr>
-<tr class="separator:ac8efd18a5ba2a3f8a41fb56b258b2938"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1cacd022104c0d88aea23844eb4bd32"><td class="memItemLeft" align="right" valign="top">unsigned long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#ac1cacd022104c0d88aea23844eb4bd32">size</a> (unsigned long int dim) const</td></tr>
-<tr class="memdesc:ac1cacd022104c0d88aea23844eb4bd32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the given dimension.  <br /></td></tr>
-<tr class="separator:ac1cacd022104c0d88aea23844eb4bd32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a703e5677f3ad2daa0b7d41f68fd032cb"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#a703e5677f3ad2daa0b7d41f68fd032cb">min</a> ()</td></tr>
-<tr class="memdesc:a703e5677f3ad2daa0b7d41f68fd032cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the element which is the minimum contained in the array.  <br /></td></tr>
-<tr class="separator:a703e5677f3ad2daa0b7d41f68fd032cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44e5e57ebb98527de5d0ad3d54f313f9"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#a44e5e57ebb98527de5d0ad3d54f313f9">min</a> () const</td></tr>
-<tr class="memdesc:a44e5e57ebb98527de5d0ad3d54f313f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the element which is the minimum contained in the array.  <br /></td></tr>
-<tr class="separator:a44e5e57ebb98527de5d0ad3d54f313f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a161189799f0fcc0b7129ca89da5f71bc"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#a161189799f0fcc0b7129ca89da5f71bc">max</a> ()</td></tr>
-<tr class="memdesc:a161189799f0fcc0b7129ca89da5f71bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the element which is the maximum contained in the array.  <br /></td></tr>
-<tr class="separator:a161189799f0fcc0b7129ca89da5f71bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33db9bbbb8dda6496abb23ba1761ecbd"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#a33db9bbbb8dda6496abb23ba1761ecbd">max</a> () const</td></tr>
-<tr class="memdesc:a33db9bbbb8dda6496abb23ba1761ecbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the element which is the maximum contained in the array.  <br /></td></tr>
-<tr class="separator:a33db9bbbb8dda6496abb23ba1761ecbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3157bfb4517d05d1d16eaa8f61b28563"><td class="memTemplParams" colspan="2">template&lt;typename... Sizes&gt; </td></tr>
-<tr class="memitem:a3157bfb4517d05d1d16eaa8f61b28563"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#a3157bfb4517d05d1d16eaa8f61b28563">resize</a> (Sizes... s)</td></tr>
-<tr class="memdesc:a3157bfb4517d05d1d16eaa8f61b28563"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows to resize the <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array, stored in RowWise mode....">Array</a>, not conserving the values of the previous array.  <br /></td></tr>
-<tr class="separator:a3157bfb4517d05d1d16eaa8f61b28563"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7fa968c7ead114d0ed423db9dc29c3d"><td class="memTemplParams" colspan="2">template&lt;typename... Sizes&gt; </td></tr>
-<tr class="memitem:aa7fa968c7ead114d0ed423db9dc29c3d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#aa7fa968c7ead114d0ed423db9dc29c3d">conservativeResize</a> (Sizes... s)</td></tr>
-<tr class="memdesc:aa7fa968c7ead114d0ed423db9dc29c3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows to resize the <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array, stored in RowWise mode....">Array</a>, conserving the values of the previous array.  <br /></td></tr>
-<tr class="separator:aa7fa968c7ead114d0ed423db9dc29c3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b4020353450cc9fa0bed1fa34de2f16"><td class="memTemplParams" colspan="2">template&lt;Range Rng&gt; </td></tr>
+<tr class="memitem:a7b4020353450cc9fa0bed1fa34de2f16"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#a7b4020353450cc9fa0bed1fa34de2f16">fill</a> (Rng &amp;&amp;r)</td></tr>
+<tr class="memdesc:a7b4020353450cc9fa0bed1fa34de2f16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills the entire <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array stored in RowWise mode.">Array</a> with the values contained in the range r, in row-major order.  <br /></td></tr>
+<tr class="separator:a7b4020353450cc9fa0bed1fa34de2f16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c891203bac1838e2ccef171b4d26c27"><td class="memTemplParams" colspan="2">template&lt;typename... Sizes&gt; <br />
+requires (sizeof...(s) == N)</td></tr>
+<tr class="memitem:a3c891203bac1838e2ccef171b4d26c27"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#a3c891203bac1838e2ccef171b4d26c27">resize</a> (Sizes... s)</td></tr>
+<tr class="memdesc:a3c891203bac1838e2ccef171b4d26c27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows to resize the <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array stored in RowWise mode.">Array</a>, not conserving the values of the previous array.  <br /></td></tr>
+<tr class="separator:a3c891203bac1838e2ccef171b4d26c27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab80dd741bc127a7207d5b7eae99bc874"><td class="memTemplParams" colspan="2">template&lt;typename... Sizes&gt; <br />
+requires (sizeof...(s) == N)</td></tr>
+<tr class="memitem:ab80dd741bc127a7207d5b7eae99bc874"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#ab80dd741bc127a7207d5b7eae99bc874">conservativeResize</a> (Sizes... s)</td></tr>
+<tr class="memdesc:ab80dd741bc127a7207d5b7eae99bc874"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows to resize the <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array stored in RowWise mode.">Array</a>, conserving the values of the previous array.  <br /></td></tr>
+<tr class="separator:ab80dd741bc127a7207d5b7eae99bc874"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1e318a975488b1df465c90af6b8502e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#ae1e318a975488b1df465c90af6b8502e">clear</a> ()</td></tr>
 <tr class="memdesc:ae1e318a975488b1df465c90af6b8502e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the entire array, setting every dimension to size 0.  <br /></td></tr>
 <tr class="separator:ae1e318a975488b1df465c90af6b8502e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e8d63f1ebf3c9d0565108a677b2c8b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Array.html">Array</a>&lt; T, N - 1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#a7e8d63f1ebf3c9d0565108a677b2c8b0">subArray</a> (unsigned int r) const</td></tr>
-<tr class="memdesc:a7e8d63f1ebf3c9d0565108a677b2c8b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new subArray of dimension N-1, starting from the given index at its first dimension.  <br /></td></tr>
-<tr class="separator:a7e8d63f1ebf3c9d0565108a677b2c8b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f5aab97aa392a2994f2c62b7d59d116"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Array.html">Array</a>&lt; T, N - 1 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#a2f5aab97aa392a2994f2c62b7d59d116">subArray</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> r) const</td></tr>
+<tr class="memdesc:a2f5aab97aa392a2994f2c62b7d59d116"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new subArray of dimension N-1, starting from the given index at its first dimension.  <br /></td></tr>
+<tr class="separator:a2f5aab97aa392a2994f2c62b7d59d116"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8367799b109d65cf5136e24358eac86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Array.html#aea361d83fa12ceff1498a8889c434b97">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#ae8367799b109d65cf5136e24358eac86">begin</a> ()</td></tr>
+<tr class="memdesc:ae8367799b109d65cf5136e24358eac86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterator to the beginning of the array.  <br /></td></tr>
+<tr class="separator:ae8367799b109d65cf5136e24358eac86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0bb87f15792f1e19f599bb4c76585e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Array.html#aea361d83fa12ceff1498a8889c434b97">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#ad0bb87f15792f1e19f599bb4c76585e3">end</a> ()</td></tr>
+<tr class="memdesc:ad0bb87f15792f1e19f599bb4c76585e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterator to the end of the array.  <br /></td></tr>
+<tr class="separator:ad0bb87f15792f1e19f599bb4c76585e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4afae7d4b4b25e636fbfeda74e8ad3b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Array.html#a25678889ffca9fd2a419a832388be418">ConstIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#a4afae7d4b4b25e636fbfeda74e8ad3b1">begin</a> () const</td></tr>
+<tr class="memdesc:a4afae7d4b4b25e636fbfeda74e8ad3b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const iterator to the beginning of the array.  <br /></td></tr>
+<tr class="separator:a4afae7d4b4b25e636fbfeda74e8ad3b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cb295e8f618fdbb514124e98e9eebc3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Array.html#a25678889ffca9fd2a419a832388be418">ConstIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#a9cb295e8f618fdbb514124e98e9eebc3">end</a> () const</td></tr>
+<tr class="memdesc:a9cb295e8f618fdbb514124e98e9eebc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const iterator to the end of the array.  <br /></td></tr>
+<tr class="separator:a9cb295e8f618fdbb514124e98e9eebc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:af2c52950da7c460ed3ad7b933f3aee72"><td class="memItemLeft" align="right" valign="top">unsigned long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#af2c52950da7c460ed3ad7b933f3aee72">getIndex</a> (const unsigned long int indices[]) const</td></tr>
-<tr class="separator:af2c52950da7c460ed3ad7b933f3aee72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef42353f5fc2693cd517e3d7295a3174"><td class="memItemLeft" align="right" valign="top">std::array&lt; unsigned long int, N &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#aef42353f5fc2693cd517e3d7295a3174">reverseIndex</a> (unsigned int index)</td></tr>
-<tr class="separator:aef42353f5fc2693cd517e3d7295a3174"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f297075e10fe963441aafc9fa84ba92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#a9f297075e10fe963441aafc9fa84ba92">initializeNestedLists</a> (<a class="el" href="namespacevcl.html#ad7449b441f4e1a24adf73b0964fb0953">vcl::NestedInitializerLists</a>&lt; T, N &gt; values)</td></tr>
-<tr class="separator:a9f297075e10fe963441aafc9fa84ba92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-static-methods" name="pro-static-methods"></a>
-Static Protected Member Functions</h2></td></tr>
-<tr class="memitem:a13b07faf87f17239a51ac83b41f025bd"><td class="memItemLeft" align="right" valign="top">static unsigned long int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#a13b07faf87f17239a51ac83b41f025bd">getIndex</a> (const unsigned long int indices[], const unsigned long int <a class="el" href="classvcl_1_1Array.html#aaa61d8862a54f17299b469aa08289b79">sizes</a>[])</td></tr>
-<tr class="separator:a13b07faf87f17239a51ac83b41f025bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:aaa61d8862a54f17299b469aa08289b79"><td class="memItemLeft" align="right" valign="top">std::array&lt; unsigned long int, N &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#aaa61d8862a54f17299b469aa08289b79">sizes</a></td></tr>
-<tr class="separator:aaa61d8862a54f17299b469aa08289b79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0abffdcaaff0e2225b4f360978c244e0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#a0abffdcaaff0e2225b4f360978c244e0">v</a></td></tr>
-<tr class="separator:a0abffdcaaff0e2225b4f360978c244e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a4f8a25f6a9adb48f6f8454936fb282b5"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#a4f8a25f6a9adb48f6f8454936fb282b5">DIM</a> = N</td></tr>
+<tr class="separator:a4f8a25f6a9adb48f6f8454936fb282b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:ac9f556ef4a01719619a54a05db6fe51f"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#ac9f556ef4a01719619a54a05db6fe51f">Array&lt; T, N+1 &gt;</a></td></tr>
 <tr class="separator:ac9f556ef4a01719619a54a05db6fe51f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94db4c7688b5bd36827f4112d8af4f4a"><td class="memTemplParams" colspan="2">template&lt;typename S &gt; </td></tr>
+<tr class="memitem:a94db4c7688b5bd36827f4112d8af4f4a"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1Array.html#a94db4c7688b5bd36827f4112d8af4f4a">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classvcl_1_1Array.html">Array</a>&lt; S, 2 &gt; &amp;a)</td></tr>
+<tr class="separator:a94db4c7688b5bd36827f4112d8af4f4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;class T, size_t N&gt;<br />
-class vcl::Array&lt; T, N &gt;</div><p>The <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array, stored in RowWise mode....">Array</a> class is a dynamically allocated N-dimensional array, stored in RowWise mode. All its elements are stored contiguously. For array 1D please use std::vector or std::array. </p>
-<p>For D-dimensional array you can declare your array in this way: </p><div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Array.html">vcl::Array&lt;Type, D&gt;</a> array;</div>
-<div class="ttc" id="aclassvcl_1_1Array_html"><div class="ttname"><a href="classvcl_1_1Array.html">vcl::Array</a></div><div class="ttdoc">The Array class is a dynamically allocated N-dimensional array, stored in RowWise mode....</div><div class="ttdef"><b>Definition:</b> array_t.h:88</div></div>
-</div><!-- fragment --><p>Where Type is a generic primitive or user-defined type and D is an unsigned integer that represents the dimensions of the array.</p>
-<p>You can also specify the sizes of the array on initialization: </p><div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Array.html">vcl::Array&lt;int, 3&gt;</a> array(n,m,l);</div>
-</div><!-- fragment --><p>In this example, array is a 3-dimensional array with sizes n*m*l. The sizes of the array can be accessed using "size" member function. You can access to its elements by using () operator: </p><div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; array.<a class="code hl_function" href="classvcl_1_1Array.html#ac1cacd022104c0d88aea23844eb4bd32">size</a>(0); i++)</div>
-<div class="line">    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> j = 0; j &lt; array.<a class="code hl_function" href="classvcl_1_1Array.html#ac1cacd022104c0d88aea23844eb4bd32">size</a>(1); j++)</div>
-<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> k = 0; k &lt; array.<a class="code hl_function" href="classvcl_1_1Array.html#ac1cacd022104c0d88aea23844eb4bd32">size</a>(2); k++)</div>
-<div class="line">            array(i,j,k) = someFunction();</div>
-<div class="ttc" id="aclassvcl_1_1Array_html_ac1cacd022104c0d88aea23844eb4bd32"><div class="ttname"><a href="classvcl_1_1Array.html#ac1cacd022104c0d88aea23844eb4bd32">vcl::Array::size</a></div><div class="ttdeci">unsigned long int size(unsigned long int dim) const</div><div class="ttdoc">Returns the size of the given dimension.</div><div class="ttdef"><b>Definition:</b> array_t.cpp:293</div></div>
-</div><!-- fragment --><p>You can also declare and initialize a generic N-Dimensional <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array, stored in RowWise mode....">Array</a> with nested initializer lists (<a class="el" href="namespacevcl.html#ad7449b441f4e1a24adf73b0964fb0953" title="The NestedInitializerLists class manages nested std::initializer_list&lt;T&gt; types of L levels L must be ...">vcl::NestedInitializerLists</a>).</p>
-<div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Array.html">vcl::Array&lt;int, 3&gt;</a> array =</div>
-<div class="line">{</div>
-<div class="line">    {</div>
-<div class="line">        {1, 2, 3},</div>
-<div class="line">        {1, 2   }</div>
-<div class="line">    },</div>
-<div class="line">    {</div>
-<div class="line">        {1},</div>
-<div class="line">        {1, 4, 7},</div>
-<div class="line">        {2, 4},</div>
-<div class="line">        {5}</div>
-<div class="line">    }</div>
-<div class="line">}</div>
-</div><!-- fragment --><p>In this example, array is a 3-dimensional array with sizes 2*4*3. All the missing numbers are filled with zeros (in every dimension). </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class T, <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt;<br />
+class vcl::Array&lt; T, N &gt;</div><p>The <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array stored in RowWise mode.">Array</a> class is a dynamically allocated N-dimensional array stored in RowWise mode. </p>
+<p>This class is suitable for storing multi-dimensional data that has a fixed size, as it provides efficient access to its elements. All the elements of the array are stored contiguously in memory, so the access to them using the () operator is faster than accessing them through nested vectors.</p>
+<p>The size of the array is specified at compile time via the template parameter N, which indicates the number of dimensions of the array. The size of each dimension can be specified at runtime either on initialization or by calling the <code>resize</code> or <code>conservativeResize</code> member functions.</p>
+<p>For one-dimensional arrays, it is recommended to use <code>std::vector</code> or <code>std::array</code>, as they are more efficient.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of the elements stored in the array. </td></tr>
+    <tr><td class="paramname">N</td><td>The number of dimensions of the array. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a25678889ffca9fd2a419a832388be418" name="a25678889ffca9fd2a419a832388be418"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25678889ffca9fd2a419a832388be418">&#9670;&#160;</a></span>ConstIterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::ConstIterator =  typename std::vector&lt;T&gt;::const_iterator</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A const iterator to the elements of the array. </p>
+
+</div>
+</div>
+<a id="a9a6de785be400f1079e781db1799253d" name="a9a6de785be400f1079e781db1799253d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a6de785be400f1079e781db1799253d">&#9670;&#160;</a></span>ConstPointer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::ConstPointer =  typename std::vector&lt;T&gt;::const_pointer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A const pointer to the type of the elements stored in the array. </p>
+
+</div>
+</div>
+<a id="af58c39901916405af285818dcd2e0619" name="af58c39901916405af285818dcd2e0619"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af58c39901916405af285818dcd2e0619">&#9670;&#160;</a></span>ConstReference</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::ConstReference =  typename std::vector&lt;T&gt;::const_reference</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A const reference to the type of the elements stored in the array. </p>
+
+</div>
+</div>
+<a id="aea361d83fa12ceff1498a8889c434b97" name="aea361d83fa12ceff1498a8889c434b97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea361d83fa12ceff1498a8889c434b97">&#9670;&#160;</a></span>Iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::Iterator =  typename std::vector&lt;T&gt;::iterator</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>An iterator to the elements of the array. </p>
+
+</div>
+</div>
+<a id="ab934c540ed7b8c9817d158082ab22e05" name="ab934c540ed7b8c9817d158082ab22e05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab934c540ed7b8c9817d158082ab22e05">&#9670;&#160;</a></span>Pointer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::Pointer =  typename std::vector&lt;T&gt;::pointer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A pointer to the type of the elements stored in the array. </p>
+
+</div>
+</div>
+<a id="ae5cfc15ccf35961f06c40bed0d596b44" name="ae5cfc15ccf35961f06c40bed0d596b44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5cfc15ccf35961f06c40bed0d596b44">&#9670;&#160;</a></span>Reference</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::Reference =  typename std::vector&lt;T&gt;::reference</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A reference to the type of the elements stored in the array. </p>
+
+</div>
+</div>
+<a id="a93fd16abc77f8f0d1d6a632a7464ac66" name="a93fd16abc77f8f0d1d6a632a7464ac66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93fd16abc77f8f0d1d6a632a7464ac66">&#9670;&#160;</a></span>ValueType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::ValueType =  typename std::vector&lt;T&gt;::value_type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The type of the elements stored in the array. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a046fce610329e9647c33d37cc6d822e6" name="a046fce610329e9647c33d37cc6d822e6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a046fce610329e9647c33d37cc6d822e6">&#9670;&#160;</a></span>Array() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T , size_t N&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::Array</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Creates an N-Dimensional <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array, stored in RowWise mode....">Array</a> with size 0 for every dimension. </p>
+<p>Default constructor for the <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array stored in RowWise mode.">Array</a> class. </p>
+<p>Creates an N-dimensional array with size 0 for every dimension. </p>
 
 </div>
 </div>
-<a id="af92c52645aaa8b17b5f988fbd79117e0" name="af92c52645aaa8b17b5f988fbd79117e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af92c52645aaa8b17b5f988fbd79117e0">&#9670;&#160;</a></span>Array() <span class="overload">[2/3]</span></h2>
+<a id="ac0833954c934d4820fc5a7b8f47e41f4" name="ac0833954c934d4820fc5a7b8f47e41f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0833954c934d4820fc5a7b8f47e41f4">&#9670;&#160;</a></span>Array() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T , size_t N&gt; </div>
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; <br />
+requires (sizeof...(sizes) == N)</div>
 <div class="memtemplate">
-template&lt;typename... Sizes&gt; </div>
+template&lt;typename... Sizes&gt; <br />
+requires (sizeof...(sizes) == N)</div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::Array </td>
@@ -296,13 +414,20 @@ template&lt;typename... Sizes&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Creates an N-Dimensional <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array, stored in RowWise mode....">Array</a> with the given sizes. All its elements are initialized to 0. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">s</td><td>N sizes, one for every dimension of the array. </td></tr>
+<p>Constructor for the <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array stored in RowWise mode.">Array</a> class that creates an N-dimensional array with the given sizes. All its elements are initialized to 0. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Sizes</td><td>Variadic parameter pack containing N sizes, one for every dimension of the array.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">s</td><td>Variadic parameter pack containing N sizes, one for every dimension of the array.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>The number of arguments must match the number of dimensions of the array. </dd></dl>
 
 </div>
 </div>
@@ -312,7 +437,7 @@ template&lt;typename... Sizes&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T , size_t N&gt; </div>
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::Array </td>
@@ -324,109 +449,58 @@ template&lt;class T , size_t N&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Creates and initializes an N-Dimensional <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array, stored in RowWise mode....">Array</a>. Sizes are given by the maximum size of the initializer lists for every dimension, and missing values are automatically setted to zero. </p>
+<p>Creates and initializes an N-dimensional array. Sizes are given by the maximum size of the initializer lists for every dimension, and missing values are automatically set to zero. </p>
 <p>Example code: </p><div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Array.html">Array&lt;int, 2&gt;</a> array = { {1,2,3,4}, {5}, {9, 10} };</div>
+<div class="ttc" id="aclassvcl_1_1Array_html"><div class="ttname"><a href="classvcl_1_1Array.html">vcl::Array</a></div><div class="ttdoc">The Array class is a dynamically allocated N-dimensional array stored in RowWise mode.</div><div class="ttdef"><b>Definition:</b> array.h:59</div></div>
 </div><!-- fragment --><p>This code initializes a 3x4 2D array with the following values: </p><div class="fragment"><div class="line">1  2  3  4</div>
 <div class="line">5  0  0  0</div>
 <div class="line">9 10  0  0</div>
-</div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>The number of levels of the nested initializer lists must correspond to the number of dimensions of the array. The following example generates a compilation error: <div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Array.html">Array&lt;int, 2&gt;</a> array = {1, 2, 3}; <span class="comment">// Error: it is a 2 dimensional array but the initializer list</span></div>
-<div class="line">                                 <span class="comment">// has one level.</span></div>
-</div><!-- fragment --> </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">values</td><td>the nested initializer lists of values. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">values</td><td>The nested initializer lists of values.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section warning"><dt>Warning</dt><dd>The number of levels of the nested initializer lists must correspond to the number of dimensions of the array. </dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a3122296598c0886d602d58db3082d570" name="a3122296598c0886d602d58db3082d570"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3122296598c0886d602d58db3082d570">&#9670;&#160;</a></span>cArray() <span class="overload">[1/2]</span></h2>
+<a id="ae8367799b109d65cf5136e24358eac86" name="ae8367799b109d65cf5136e24358eac86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8367799b109d65cf5136e24358eac86">&#9670;&#160;</a></span>begin() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T , size_t N&gt; </div>
-<div class="memtemplate">
-template&lt;typename... I&gt; </div>
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">T * <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::cArray </td>
-          <td>(</td>
-          <td class="paramtype">I...&#160;</td>
-          <td class="paramname"><em>indices</em></td><td>)</td>
-          <td></td>
+          <td class="memname"><a class="el" href="classvcl_1_1Array.html">Array</a>&lt; T, N &gt;<a class="el" href="classvcl_1_1Array.html#aea361d83fa12ceff1498a8889c434b97">::Iterator</a> <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::begin</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Allows to get a C array of the <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array, stored in RowWise mode....">Array</a>, that can be also modified. Example: </p>
-<div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Array.html">Array&lt;int, 3&gt;</a> array(10, 13, 4);</div>
-<div class="line"><span class="comment">//...</span></div>
-<div class="line"><span class="keywordtype">int</span>* carray = array.cArray(3); <span class="comment">//carray will point to the element in position (3,0,0).</span></div>
-<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; 13*4; i++)</div>
-<div class="line">   std::cout &lt;&lt; carry[i]; <span class="comment">// will print all the elements of the sub 2D array starting from</span></div>
-<div class="line">                          <span class="comment">// (3,0,0).</span></div>
-<div class="line"> </div>
-<div class="line">carray = array.cArray(4, 2); <span class="comment">// carray will point to the element in position (4, 2, 0).</span></div>
-<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; 4; i++)</div>
-<div class="line">   std::cout &lt;&lt; carry[i]; <span class="comment">// will print all the elements of the sub 1D array starting from</span></div>
-<div class="line">                          <span class="comment">// (4,2,0).</span></div>
-<div class="line"> </div>
-<div class="line">carray = array.cArray(); <span class="comment">// carray will point to the element in position (0, 0, 0).</span></div>
-</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">indices</td><td>a number of indices that is less than the number of dimensions of the array. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>a C array starting from the indicized element. </dd></dl>
+<p>Returns an iterator to the beginning of the array. </p>
+<dl class="section return"><dt>Returns</dt><dd>Iterator to the beginning of the array. </dd></dl>
 
 </div>
 </div>
-<a id="a40e1275449a1a86e9f39f4fdddf47842" name="a40e1275449a1a86e9f39f4fdddf47842"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40e1275449a1a86e9f39f4fdddf47842">&#9670;&#160;</a></span>cArray() <span class="overload">[2/2]</span></h2>
+<a id="a4afae7d4b4b25e636fbfeda74e8ad3b1" name="a4afae7d4b4b25e636fbfeda74e8ad3b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4afae7d4b4b25e636fbfeda74e8ad3b1">&#9670;&#160;</a></span>begin() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T , size_t N&gt; </div>
-<div class="memtemplate">
-template&lt;typename... I&gt; </div>
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const T * <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::cArray </td>
-          <td>(</td>
-          <td class="paramtype">I...&#160;</td>
-          <td class="paramname"><em>indices</em></td><td>)</td>
-          <td> const</td>
+          <td class="memname"><a class="el" href="classvcl_1_1Array.html">Array</a>&lt; T, N &gt;<a class="el" href="classvcl_1_1Array.html#a25678889ffca9fd2a419a832388be418">::ConstIterator</a> <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::begin</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Allows to get a C array of the <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array, stored in RowWise mode....">Array</a>, that cannot be modified. Example: </p>
-<div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Array.html">Array&lt;int, 3&gt;</a> array(10, 13, 4);</div>
-<div class="line"><span class="comment">//...</span></div>
-<div class="line"><span class="keyword">const</span> <span class="keywordtype">int</span>* carray = array.cArray(3); <span class="comment">//carray will point to the element in position (3,0,0).</span></div>
-<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; 13*4; i++)</div>
-<div class="line">   std::cout &lt;&lt; carry[i]; <span class="comment">// will print all the elements of the sub 2D array starting from</span></div>
-<div class="line">                          <span class="comment">// (3,0,0).</span></div>
-<div class="line"> </div>
-<div class="line">carray = array.cArray(4, 2); <span class="comment">// carray will point to the element in position (4, 2, 0).</span></div>
-<div class="line"><span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; 4; i++)</div>
-<div class="line">   std::cout &lt;&lt; carry[i]; <span class="comment">// will print all the elements of the sub 1D array starting from</span></div>
-<div class="line">                          <span class="comment">// (4,2,0).</span></div>
-<div class="line"> </div>
-<div class="line">carray = array.cArray(); <span class="comment">// carray will point to the element in position (0, 0, 0).</span></div>
-</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">indices</td><td>a number of indices that is less than the number of dimensions of the array. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>a C array starting from the indicized element. </dd></dl>
+<p>Returns a const iterator to the beginning of the array. </p>
+<dl class="section return"><dt>Returns</dt><dd>Const iterator to the beginning of the array. </dd></dl>
 
 </div>
 </div>
@@ -436,7 +510,7 @@ template&lt;typename... I&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T , size_t N&gt; </div>
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::clear</td>
@@ -448,15 +522,38 @@ template&lt;class T , size_t N&gt; </div>
 
 </div>
 </div>
-<a id="aa7fa968c7ead114d0ed423db9dc29c3d" name="aa7fa968c7ead114d0ed423db9dc29c3d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7fa968c7ead114d0ed423db9dc29c3d">&#9670;&#160;</a></span>conservativeResize()</h2>
+<a id="a4c1932d4b9fa4d7d48fa7bdf173cfa61" name="a4c1932d4b9fa4d7d48fa7bdf173cfa61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c1932d4b9fa4d7d48fa7bdf173cfa61">&#9670;&#160;</a></span>cols()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T , size_t N&gt; </div>
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; <br />
+requires (N == 2)</div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::cols</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the number of columns of a 2-dimensional array. </p>
+<dl class="section return"><dt>Returns</dt><dd>The number of columns of the array.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function can only be called for 2-dimensional arrays. </dd></dl>
+
+</div>
+</div>
+<a id="ab80dd741bc127a7207d5b7eae99bc874" name="ab80dd741bc127a7207d5b7eae99bc874"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab80dd741bc127a7207d5b7eae99bc874">&#9670;&#160;</a></span>conservativeResize()</h2>
+
+<div class="memitem">
+<div class="memproto">
 <div class="memtemplate">
-template&lt;typename... Sizes&gt; </div>
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; <br />
+requires (sizeof...(s) == N)</div>
+<div class="memtemplate">
+template&lt;typename... Sizes&gt; <br />
+requires (sizeof...(s) == N)</div>
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::conservativeResize </td>
@@ -468,71 +565,114 @@ template&lt;typename... Sizes&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Allows to resize the <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array, stored in RowWise mode....">Array</a>, conserving the values of the previous array. </p>
+<p>Allows to resize the <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array stored in RowWise mode.">Array</a>, conserving the values of the previous array. </p>
+<p>The new array will have the specified sizes if possible, but if any dimension is smaller than the previous size, then the values in those dimensions will be conserved.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Sizes</td><td>Types of the arguments representing the new sizes of the <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array stored in RowWise mode.">Array</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">s</td><td>N elements representing the new sizes of the <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array, stored in RowWise mode....">Array</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">s</td><td>N elements representing the new sizes of the <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array stored in RowWise mode.">Array</a>. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="acef20c4ba98525ecca2456ab294941e6" name="acef20c4ba98525ecca2456ab294941e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acef20c4ba98525ecca2456ab294941e6">&#9670;&#160;</a></span>data() <span class="overload">[1/2]</span></h2>
+<a id="a31ec5b767b912786777a36df2b3149e3" name="a31ec5b767b912786777a36df2b3149e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31ec5b767b912786777a36df2b3149e3">&#9670;&#160;</a></span>data() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T , size_t N&gt; </div>
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; <br />
+requires (sizeof...(indices) &lt; N)</div>
+<div class="memtemplate">
+template&lt;typename... I&gt; <br />
+requires (sizeof...(indices) &lt; N)</div>
       <table class="memname">
         <tr>
-          <td class="memname">T * <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::data</td>
+          <td class="memname"><a class="el" href="classvcl_1_1Array.html">Array</a>&lt; T, N &gt;<a class="el" href="classvcl_1_1Array.html#ab934c540ed7b8c9817d158082ab22e05">::Pointer</a> <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::data </td>
+          <td>(</td>
+          <td class="paramtype">I...&#160;</td>
+          <td class="paramname"><em>indices</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Allows to get the data of the <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array stored in RowWise mode.">Array</a>, through a pointer to the first element. </p>
+<p>The function also allows to get the pointer of a specific position in the array.</p>
+<p>Example: </p><div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Array.html">Array&lt;int, 3&gt;</a> array(10, 13, 4);</div>
+<div class="line"><span class="comment">//...</span></div>
+<div class="line"><span class="keywordtype">int</span>* carray = array.data(3); <span class="comment">//carray will point to the element in position (3, 0, 0).</span></div>
+<div class="line"> </div>
+<div class="line">carray = array.data(5, 2); <span class="comment">// carray will point to the element in position (5, 2, 0).</span></div>
+<div class="line"> </div>
+<div class="line">carray = array.data(); <span class="comment">// carray will point to the element in position (0, 0, 0).</span></div>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">I</td><td>Types of the indices used to access a subarray of the array.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">indices</td><td>A number of indices that is less than the number of dimensions of the array.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the requested subarray. </dd></dl>
+
 </div>
 </div>
-<a id="a062f52230900b2b8f78541804c9ab2af" name="a062f52230900b2b8f78541804c9ab2af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a062f52230900b2b8f78541804c9ab2af">&#9670;&#160;</a></span>data() <span class="overload">[2/2]</span></h2>
+<a id="a6f8d33191ddbfbf7f568ea82b6eb3bd4" name="a6f8d33191ddbfbf7f568ea82b6eb3bd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f8d33191ddbfbf7f568ea82b6eb3bd4">&#9670;&#160;</a></span>data() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T , size_t N&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">const T * <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::data</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a02971a96eb6d9b2f31c57b8a1e080ec5" name="a02971a96eb6d9b2f31c57b8a1e080ec5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a02971a96eb6d9b2f31c57b8a1e080ec5">&#9670;&#160;</a></span>dimensions()</h2>
-
-<div class="memitem">
-<div class="memproto">
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; <br />
+requires (sizeof...(indices) &lt; N)</div>
 <div class="memtemplate">
-template&lt;class T , size_t N&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
+template&lt;typename... I&gt; <br />
+requires (sizeof...(indices) &lt; N)</div>
       <table class="memname">
         <tr>
-          <td class="memname">constexpr unsigned long int <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::dimensions</td>
+          <td class="memname"><a class="el" href="classvcl_1_1Array.html">Array</a>&lt; T, N &gt;<a class="el" href="classvcl_1_1Array.html#a9a6de785be400f1079e781db1799253d">::ConstPointer</a> <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::data </td>
+          <td>(</td>
+          <td class="paramtype">I...&#160;</td>
+          <td class="paramname"><em>indices</em></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Returns the number of dimensions of the array. </p>
+<p>Allows to get the data of the <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array stored in RowWise mode.">Array</a>, through a pointer to the first element. </p>
+<p>The function also allows to get the pointer of a specific position in the array.</p>
+<p>Example: </p><div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Array.html">Array&lt;int, 3&gt;</a> array(10, 13, 4);</div>
+<div class="line"><span class="comment">//...</span></div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">int</span>* carray = array.data(3); <span class="comment">//carray will point to the element in position (3, 0, 0).</span></div>
+<div class="line"> </div>
+<div class="line">carray = array.data(5, 2); <span class="comment">// carray will point to the element in position (5, 2, 0).</span></div>
+<div class="line"> </div>
+<div class="line">carray = array.data(); <span class="comment">// carray will point to the element in position (0, 0, 0).</span></div>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">I</td><td>Types of the indices used to access a subarray of the array.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">indices</td><td>A number of indices that is less than the number of dimensions of the array.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A const pointer to the requested subarray. </dd></dl>
 
 </div>
 </div>
@@ -542,7 +682,7 @@ template&lt;class T , size_t N&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T , size_t N&gt; </div>
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">bool <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::empty</td>
@@ -550,15 +690,56 @@ template&lt;class T , size_t N&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Checks whether the array is empty. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the array is empty, <code>false</code> otherwise. </dd></dl>
+
 </div>
 </div>
-<a id="a407d9b5b1037d76be01f224237e839ac" name="a407d9b5b1037d76be01f224237e839ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a407d9b5b1037d76be01f224237e839ac">&#9670;&#160;</a></span>fill()</h2>
+<a id="ad0bb87f15792f1e19f599bb4c76585e3" name="ad0bb87f15792f1e19f599bb4c76585e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0bb87f15792f1e19f599bb4c76585e3">&#9670;&#160;</a></span>end() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T , size_t N&gt; </div>
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Array.html">Array</a>&lt; T, N &gt;<a class="el" href="classvcl_1_1Array.html#aea361d83fa12ceff1498a8889c434b97">::Iterator</a> <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::end</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns an iterator to the end of the array. </p>
+<dl class="section return"><dt>Returns</dt><dd>Iterator to the end of the array. </dd></dl>
+
+</div>
+</div>
+<a id="a9cb295e8f618fdbb514124e98e9eebc3" name="a9cb295e8f618fdbb514124e98e9eebc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cb295e8f618fdbb514124e98e9eebc3">&#9670;&#160;</a></span>end() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Array.html">Array</a>&lt; T, N &gt;<a class="el" href="classvcl_1_1Array.html#a25678889ffca9fd2a419a832388be418">::ConstIterator</a> <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::end</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a const iterator to the end of the array. </p>
+<dl class="section return"><dt>Returns</dt><dd>Const iterator to the end of the array. </dd></dl>
+
+</div>
+</div>
+<a id="a407d9b5b1037d76be01f224237e839ac" name="a407d9b5b1037d76be01f224237e839ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a407d9b5b1037d76be01f224237e839ac">&#9670;&#160;</a></span>fill() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::fill </td>
@@ -570,225 +751,67 @@ template&lt;class T , size_t N&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Fills the entire <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array, stored in RowWise mode....">Array</a> with the value t. </p>
+<p>Fills the entire <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array stored in RowWise mode.">Array</a> with the value t. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">t</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">t</td><td>The value to fill the array with. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="ac8efd18a5ba2a3f8a41fb56b258b2938" name="ac8efd18a5ba2a3f8a41fb56b258b2938"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac8efd18a5ba2a3f8a41fb56b258b2938">&#9670;&#160;</a></span>fillContainer()</h2>
+<a id="a7b4020353450cc9fa0bed1fa34de2f16" name="a7b4020353450cc9fa0bed1fa34de2f16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b4020353450cc9fa0bed1fa34de2f16">&#9670;&#160;</a></span>fill() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T , size_t N&gt; </div>
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; </div>
 <div class="memtemplate">
-template&lt;typename C &gt; </div>
+template&lt;Range Rng&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::fillContainer </td>
+          <td class="memname">void <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::fill </td>
           <td>(</td>
-          <td class="paramtype">const C &amp;&#160;</td>
-          <td class="paramname"><em>container</em></td><td>)</td>
+          <td class="paramtype">Rng &amp;&amp;&#160;</td>
+          <td class="paramname"><em>r</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Fills the entire <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array, stored in RowWise mode....">Array</a> with the values contained in the container c, in row-major order. </p>
-<p>If the size of the container is greater than the total size of the array, the remaining of the container will be ignored. If otherwise the size of the container is less, the remaining values in the array will be left as they were.</p>
+<p>Fills the entire <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array stored in RowWise mode.">Array</a> with the values contained in the range r, in row-major order. </p>
+<p>If the size of the container is greater than the total size of the array, the remaining elements of the container will be ignored. If the size of the container is less than the total size of the array, the remaining values in the array will be left unchanged.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Rng</td><td>Type of the range of values to fill the array with. It must satisfy the Range concept.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">container</td><td>a container of the same type of the array (begin() and end() members must be provided in the container). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>A range of the same type as the array. The range must have <code><a class="el" href="classvcl_1_1Array.html#ae8367799b109d65cf5136e24358eac86" title="Returns an iterator to the beginning of the array.">begin()</a></code> and <code><a class="el" href="classvcl_1_1Array.html#ad0bb87f15792f1e19f599bb4c76585e3" title="Returns an iterator to the end of the array.">end()</a></code> members provided. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="af2c52950da7c460ed3ad7b933f3aee72" name="af2c52950da7c460ed3ad7b933f3aee72"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2c52950da7c460ed3ad7b933f3aee72">&#9670;&#160;</a></span>getIndex() <span class="overload">[1/2]</span></h2>
+<a id="a7f381ae3ab4ab362aeeae960ea267eb9" name="a7f381ae3ab4ab362aeeae960ea267eb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f381ae3ab4ab362aeeae960ea267eb9">&#9670;&#160;</a></span>operator()() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T , size_t N&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; <br />
+requires (sizeof...(indices) == N)</div>
+<div class="memtemplate">
+template&lt;typename... I&gt; <br />
+requires (sizeof...(indices) == N)</div>
       <table class="memname">
         <tr>
-          <td class="memname">unsigned long int <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::getIndex </td>
-          <td>(</td>
-          <td class="paramtype">const unsigned long int&#160;</td>
-          <td class="paramname"><em>indices</em>[]</td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a13b07faf87f17239a51ac83b41f025bd" name="a13b07faf87f17239a51ac83b41f025bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13b07faf87f17239a51ac83b41f025bd">&#9670;&#160;</a></span>getIndex() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T , size_t N&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static unsigned long int <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::getIndex </td>
-          <td>(</td>
-          <td class="paramtype">const unsigned long int&#160;</td>
-          <td class="paramname"><em>indices</em>[], </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const unsigned long int&#160;</td>
-          <td class="paramname"><em>sizes</em>[]&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9f297075e10fe963441aafc9fa84ba92" name="a9f297075e10fe963441aafc9fa84ba92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f297075e10fe963441aafc9fa84ba92">&#9670;&#160;</a></span>initializeNestedLists()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T , size_t N&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::initializeNestedLists </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacevcl.html#ad7449b441f4e1a24adf73b0964fb0953">vcl::NestedInitializerLists</a>&lt; T, N &gt;&#160;</td>
-          <td class="paramname"><em>values</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a161189799f0fcc0b7129ca89da5f71bc" name="a161189799f0fcc0b7129ca89da5f71bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a161189799f0fcc0b7129ca89da5f71bc">&#9670;&#160;</a></span>max() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T , size_t N&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">T &amp; <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::max</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns a reference to the element which is the maximum contained in the array. </p>
-
-</div>
-</div>
-<a id="a33db9bbbb8dda6496abb23ba1761ecbd" name="a33db9bbbb8dda6496abb23ba1761ecbd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33db9bbbb8dda6496abb23ba1761ecbd">&#9670;&#160;</a></span>max() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T , size_t N&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">const T &amp; <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::max</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns a const reference to the element which is the maximum contained in the array. </p>
-
-</div>
-</div>
-<a id="a703e5677f3ad2daa0b7d41f68fd032cb" name="a703e5677f3ad2daa0b7d41f68fd032cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a703e5677f3ad2daa0b7d41f68fd032cb">&#9670;&#160;</a></span>min() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T , size_t N&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">T &amp; <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::min</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns a reference to the element which is the minimum contained in the array. </p>
-
-</div>
-</div>
-<a id="a44e5e57ebb98527de5d0ad3d54f313f9" name="a44e5e57ebb98527de5d0ad3d54f313f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44e5e57ebb98527de5d0ad3d54f313f9">&#9670;&#160;</a></span>min() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T , size_t N&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">const T &amp; <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::min</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns a const reference to the element which is the minimum contained in the array. </p>
-
-</div>
-</div>
-<a id="a23344e924aba006bf6b6cd3effaebb27" name="a23344e924aba006bf6b6cd3effaebb27"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23344e924aba006bf6b6cd3effaebb27">&#9670;&#160;</a></span>operator()() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T , size_t N&gt; </div>
-<div class="memtemplate">
-template&lt;typename... I&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">T &amp; <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::operator() </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Array.html">Array</a>&lt; T, N &gt;<a class="el" href="classvcl_1_1Array.html#ae5cfc15ccf35961f06c40bed0d596b44">::Reference</a> <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::operator() </td>
           <td>(</td>
           <td class="paramtype">I...&#160;</td>
           <td class="paramname"><em>indices</em></td><td>)</td>
@@ -798,28 +821,36 @@ template&lt;typename... I&gt; </div>
 </div><div class="memdoc">
 
 <p>Operator () that allows to access one element of the array. It can be used as left or right value. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">indices</td><td>N indices that allows to access to an element of the array. A number of indices not equal to N will generate a compilation error. </td></tr>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">I</td><td>Types of the indices used to access the element of the array.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>a reference to the element of the array. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">indices</td><td>N indices that allow to access an element of the array. A number of indices not equal to N will generate a compilation error.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the element of the array. </dd></dl>
 
 </div>
 </div>
-<a id="a423f00cf86733a02a4a91b55b19967d8" name="a423f00cf86733a02a4a91b55b19967d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a423f00cf86733a02a4a91b55b19967d8">&#9670;&#160;</a></span>operator()() <span class="overload">[2/2]</span></h2>
+<a id="adcf839c0894ceba98739a06b780c2dee" name="adcf839c0894ceba98739a06b780c2dee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcf839c0894ceba98739a06b780c2dee">&#9670;&#160;</a></span>operator()() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T , size_t N&gt; </div>
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; <br />
+requires (sizeof...(indices) == N)</div>
 <div class="memtemplate">
-template&lt;typename... I&gt; </div>
+template&lt;typename... I&gt; <br />
+requires (sizeof...(indices) == N)</div>
       <table class="memname">
         <tr>
-          <td class="memname">const T &amp; <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::operator() </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Array.html">Array</a>&lt; T, N &gt;<a class="el" href="classvcl_1_1Array.html#af58c39901916405af285818dcd2e0619">::ConstReference</a> <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::operator() </td>
           <td>(</td>
           <td class="paramtype">I...&#160;</td>
           <td class="paramname"><em>indices</em></td><td>)</td>
@@ -829,25 +860,33 @@ template&lt;typename... I&gt; </div>
 </div><div class="memdoc">
 
 <p>Operator () that allows to access one element of the array. It can be used only as right value. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">indices</td><td>N indices that allows to access to an element of the array. A number of indices not equal to N will generate a compilation error. </td></tr>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">I</td><td>Types of the indices used to access the element of the array.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>a reference to the element of the array. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">indices</td><td>N indices that allow to access an element of the array. A number of indices not equal to N will generate a compilation error.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A const reference to the element of the array. </dd></dl>
 
 </div>
 </div>
-<a id="a3157bfb4517d05d1d16eaa8f61b28563" name="a3157bfb4517d05d1d16eaa8f61b28563"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3157bfb4517d05d1d16eaa8f61b28563">&#9670;&#160;</a></span>resize()</h2>
+<a id="a3c891203bac1838e2ccef171b4d26c27" name="a3c891203bac1838e2ccef171b4d26c27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c891203bac1838e2ccef171b4d26c27">&#9670;&#160;</a></span>resize()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T , size_t N&gt; </div>
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; <br />
+requires (sizeof...(s) == N)</div>
 <div class="memtemplate">
-template&lt;typename... Sizes&gt; </div>
+template&lt;typename... Sizes&gt; <br />
+requires (sizeof...(s) == N)</div>
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::resize </td>
@@ -859,56 +898,55 @@ template&lt;typename... Sizes&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Allows to resize the <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array, stored in RowWise mode....">Array</a>, not conserving the values of the previous array. </p>
+<p>Allows to resize the <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array stored in RowWise mode.">Array</a>, not conserving the values of the previous array. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Sizes</td><td>Types of the arguments representing the new sizes of the <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array stored in RowWise mode.">Array</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">s</td><td>N elements representing the new sizes of the <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array, stored in RowWise mode....">Array</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">s</td><td>N elements representing the new sizes of the <a class="el" href="classvcl_1_1Array.html" title="The Array class is a dynamically allocated N-dimensional array stored in RowWise mode.">Array</a>. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="aef42353f5fc2693cd517e3d7295a3174" name="aef42353f5fc2693cd517e3d7295a3174"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef42353f5fc2693cd517e3d7295a3174">&#9670;&#160;</a></span>reverseIndex()</h2>
+<a id="a547b9f5e1fe03fbc16ab1891b7e60163" name="a547b9f5e1fe03fbc16ab1891b7e60163"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a547b9f5e1fe03fbc16ab1891b7e60163">&#9670;&#160;</a></span>rows()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T , size_t N&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; <br />
+requires (N == 2)</div>
       <table class="memname">
         <tr>
-          <td class="memname">std::array&lt; unsigned long int, N &gt; <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::reverseIndex </td>
-          <td>(</td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>index</em></td><td>)</td>
-          <td></td>
+          <td class="memname">std::size_t <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::rows</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p>Returns the number of rows of a 2-dimensional array. </p>
+<dl class="section return"><dt>Returns</dt><dd>The number of rows of the array.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function can only be called for 2-dimensional arrays. </dd></dl>
 
 </div>
 </div>
-<a id="ac1cacd022104c0d88aea23844eb4bd32" name="ac1cacd022104c0d88aea23844eb4bd32"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac1cacd022104c0d88aea23844eb4bd32">&#9670;&#160;</a></span>size()</h2>
+<a id="a1efd1ae823d83a9463c602d7364bfc64" name="a1efd1ae823d83a9463c602d7364bfc64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1efd1ae823d83a9463c602d7364bfc64">&#9670;&#160;</a></span>size()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T , size_t N&gt; </div>
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">unsigned long int <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::size </td>
+          <td class="memname">std::size_t <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::size </td>
           <td>(</td>
-          <td class="paramtype">unsigned long int&#160;</td>
+          <td class="paramtype">std::size_t&#160;</td>
           <td class="paramname"><em>dim</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -918,10 +956,95 @@ template&lt;class T , size_t N&gt; </div>
 <p>Returns the size of the given dimension. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">dim</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dim</td><td>The dimension to query the size of.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>The size of the given dimension. </dd></dl>
+
+</div>
+</div>
+<a id="aaaf7b5e18c960f11f0793e8da6092699" name="aaaf7b5e18c960f11f0793e8da6092699"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaf7b5e18c960f11f0793e8da6092699">&#9670;&#160;</a></span>sizeW()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; <br />
+requires (N &gt;= 4)</div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::sizeW</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the size of the W dimension of the array. </p>
+<dl class="section return"><dt>Returns</dt><dd>The size of the W dimension of the array.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function can only be called for arrays with at least four dimensions. </dd></dl>
+
+</div>
+</div>
+<a id="abc65e35968c636b53c1eb0ee72d92009" name="abc65e35968c636b53c1eb0ee72d92009"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc65e35968c636b53c1eb0ee72d92009">&#9670;&#160;</a></span>sizeX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; <br />
+requires (N &gt;= 1)</div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::sizeX</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the size of the X dimension of the array. </p>
+<dl class="section return"><dt>Returns</dt><dd>The size of the X dimension of the array.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function can only be called for arrays with at least one dimension. </dd></dl>
+
+</div>
+</div>
+<a id="aaba804f6881af40f933e558c087af34b" name="aaba804f6881af40f933e558c087af34b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaba804f6881af40f933e558c087af34b">&#9670;&#160;</a></span>sizeY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; <br />
+requires (N &gt;= 2)</div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::sizeY</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the size of the Y dimension of the array. </p>
+<dl class="section return"><dt>Returns</dt><dd>The size of the Y dimension of the array.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function can only be called for arrays with at least two dimensions. </dd></dl>
+
+</div>
+</div>
+<a id="a0f44dc667cc22db453d6a3b8e3c841e8" name="a0f44dc667cc22db453d6a3b8e3c841e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f44dc667cc22db453d6a3b8e3c841e8">&#9670;&#160;</a></span>sizeZ()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; <br />
+requires (N &gt;= 3)</div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::sizeZ</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the size of the Z dimension of the array. </p>
+<dl class="section return"><dt>Returns</dt><dd>The size of the Z dimension of the array.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function can only be called for arrays with at least three dimensions. </dd></dl>
 
 </div>
 </div>
@@ -931,7 +1054,7 @@ template&lt;class T , size_t N&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T , size_t N&gt; </div>
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">std::vector&lt; T &gt; <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::stdVector</td>
@@ -940,6 +1063,7 @@ template&lt;class T , size_t N&gt; </div>
 </div><div class="memdoc">
 
 <p>Returns a std::vector containing the elements of the array in row-major order. </p>
+<dl class="section return"><dt>Returns</dt><dd>A std::vector containing the elements of the array in row-major order. </dd></dl>
 
 </div>
 </div>
@@ -949,7 +1073,7 @@ template&lt;class T , size_t N&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T , size_t N&gt; </div>
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">const std::vector&lt; T &gt; &amp; <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::stdVector</td>
@@ -958,21 +1082,23 @@ template&lt;class T , size_t N&gt; </div>
 </div><div class="memdoc">
 
 <p>Returns a std::vector containing the elements of the array in row-major order. </p>
+<dl class="section return"><dt>Returns</dt><dd>A const reference to a std::vector containing the elements of the array in row-major order. </dd></dl>
 
 </div>
 </div>
-<a id="a7e8d63f1ebf3c9d0565108a677b2c8b0" name="a7e8d63f1ebf3c9d0565108a677b2c8b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e8d63f1ebf3c9d0565108a677b2c8b0">&#9670;&#160;</a></span>subArray()</h2>
+<a id="a2f5aab97aa392a2994f2c62b7d59d116" name="a2f5aab97aa392a2994f2c62b7d59d116"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f5aab97aa392a2994f2c62b7d59d116">&#9670;&#160;</a></span>subArray()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T , size_t N&gt; </div>
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; <br />
+requires (N &gt; 1)</div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classvcl_1_1Array.html">Array</a>&lt; T, N - 1 &gt; <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::subArray </td>
           <td>(</td>
-          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramtype"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td>
           <td class="paramname"><em>r</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -980,16 +1106,21 @@ template&lt;class T , size_t N&gt; </div>
 </div><div class="memdoc">
 
 <p>Creates a new subArray of dimension N-1, starting from the given index at its first dimension. </p>
+<p>The new subArray has the same type as the original array, but one dimension less, and contains the elements of the original array starting from the given index at its first dimension.</p>
 <p>Example: </p><div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Array.html">Array&lt;int, 3&gt;</a> a(4,2,6);</div>
-<div class="line"><a class="code hl_class" href="classvcl_1_1Array.html">Array&lt;int, 2&gt;</a> sa = a.<a class="code hl_function" href="classvcl_1_1Array.html#a7e8d63f1ebf3c9d0565108a677b2c8b0">subArray</a>(1);</div>
+<div class="line"><a class="code hl_class" href="classvcl_1_1Array.html">Array&lt;int, 2&gt;</a> sa = a.<a class="code hl_function" href="classvcl_1_1Array.html#a2f5aab97aa392a2994f2c62b7d59d116">subArray</a>(1);</div>
 <div class="line"><span class="comment">// sa is a 2x6 2D Array, containing the elements at the second &quot;row&quot; of Array a.</span></div>
-<div class="ttc" id="aclassvcl_1_1Array_html_a7e8d63f1ebf3c9d0565108a677b2c8b0"><div class="ttname"><a href="classvcl_1_1Array.html#a7e8d63f1ebf3c9d0565108a677b2c8b0">vcl::Array::subArray</a></div><div class="ttdeci">Array&lt; T, N - 1 &gt; subArray(unsigned int r) const</div><div class="ttdoc">Creates a new subArray of dimension N-1, starting from the given index at its first dimension.</div><div class="ttdef"><b>Definition:</b> array_t.cpp:411</div></div>
+<div class="ttc" id="aclassvcl_1_1Array_html_a2f5aab97aa392a2994f2c62b7d59d116"><div class="ttname"><a href="classvcl_1_1Array.html#a2f5aab97aa392a2994f2c62b7d59d116">vcl::Array::subArray</a></div><div class="ttdeci">Array&lt; T, N - 1 &gt; subArray(uint r) const</div><div class="ttdoc">Creates a new subArray of dimension N-1, starting from the given index at its first dimension.</div><div class="ttdef"><b>Definition:</b> array.cpp:456</div></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">r</td><td></td></tr>
+    <tr><td class="paramname">r</td><td>Index at the first dimension to start the sub-array.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>The sub-array of dimension N-1.</dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>N &gt; 1 </dd>
+<dd>
+r &lt; size(0) </dd></dl>
 
 </div>
 </div>
@@ -1000,7 +1131,7 @@ template&lt;class T , size_t N&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T , size_t N&gt; </div>
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1018,58 +1149,75 @@ template&lt;class T , size_t N&gt; </div>
 
 </div>
 </div>
+<a id="a94db4c7688b5bd36827f4112d8af4f4a" name="a94db4c7688b5bd36827f4112d8af4f4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94db4c7688b5bd36827f4112d8af4f4a">&#9670;&#160;</a></span>operator&lt;&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; </div>
+<div class="memtemplate">
+template&lt;typename S &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classvcl_1_1Array.html">Array</a>&lt; S, 2 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>a</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="aaa61d8862a54f17299b469aa08289b79" name="aaa61d8862a54f17299b469aa08289b79"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa61d8862a54f17299b469aa08289b79">&#9670;&#160;</a></span>sizes</h2>
+<a id="a4f8a25f6a9adb48f6f8454936fb282b5" name="a4f8a25f6a9adb48f6f8454936fb282b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f8a25f6a9adb48f6f8454936fb282b5">&#9670;&#160;</a></span>DIM</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;class T , size_t N&gt; </div>
+template&lt;class T , <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::array&lt;unsigned long int, N&gt; <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::sizes</td>
+          <td class="memname">constexpr <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::DIM = N</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0abffdcaaff0e2225b4f360978c244e0" name="a0abffdcaaff0e2225b4f360978c244e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0abffdcaaff0e2225b4f360978c244e0">&#9670;&#160;</a></span>v</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class T , size_t N&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;T&gt; <a class="el" href="classvcl_1_1Array.html">vcl::Array</a>&lt; T, N &gt;::v</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>The number of dimensions of the array. </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/runner/work/vclib/vclib/include/vclib/space/array/<a class="el" href="array__t_8h_source.html">array_t.h</a></li>
-<li>/home/runner/work/vclib/vclib/include/vclib/space/array/<a class="el" href="array__t_8cpp.html">array_t.cpp</a></li>
+<li>/home/runner/work/vclib/vclib/include/vclib/space/<a class="el" href="array_8h_source.html">array.h</a></li>
+<li>/home/runner/work/vclib/vclib/include/vclib/space/<a class="el" href="array_8cpp.html">array.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

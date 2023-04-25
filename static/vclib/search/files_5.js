@@ -8,7 +8,7 @@ var searchData=
   ['adjacent_5fedges_2ecpp_5',['adjacent_edges.cpp',['../adjacent__edges_8cpp.html',1,'']]],
   ['adjacent_5fedges_2eh_6',['adjacent_edges.h',['../concepts_2mesh_2components_2adjacent__edges_8h.html',1,'(Global Namespace)'],['../mesh_2components_2adjacent__edges_8h.html',1,'(Global Namespace)']]],
   ['adjacent_5ffaces_2ecpp_7',['adjacent_faces.cpp',['../adjacent__faces_8cpp.html',1,'']]],
-  ['adjacent_5ffaces_2eh_8',['adjacent_faces.h',['../concepts_2mesh_2components_2adjacent__faces_8h.html',1,'(Global Namespace)'],['../mesh_2components_2adjacent__faces_8h.html',1,'(Global Namespace)']]],
+  ['adjacent_5ffaces_2eh_8',['adjacent_faces.h',['../mesh_2components_2adjacent__faces_8h.html',1,'(Global Namespace)'],['../concepts_2mesh_2components_2adjacent__faces_8h.html',1,'(Global Namespace)']]],
   ['adjacent_5fleft_5fnode_5fiterator_2eh_9',['adjacent_left_node_iterator.h',['../adjacent__left__node__iterator_8h.html',1,'']]],
   ['adjacent_5fnode_5fiterator_2ecpp_10',['adjacent_node_iterator.cpp',['../adjacent__node__iterator_8cpp.html',1,'']]],
   ['adjacent_5fnode_5fiterator_2eh_11',['adjacent_node_iterator.h',['../adjacent__node__iterator_8h.html',1,'']]],
@@ -16,14 +16,6 @@ var searchData=
   ['adjacent_5fvertices_2ecpp_13',['adjacent_vertices.cpp',['../adjacent__vertices_8cpp.html',1,'']]],
   ['adjacent_5fvertices_2eh_14',['adjacent_vertices.h',['../mesh_2components_2adjacent__vertices_8h.html',1,'(Global Namespace)'],['../concepts_2mesh_2components_2adjacent__vertices_8h.html',1,'(Global Namespace)']]],
   ['algorithms_2eh_15',['algorithms.h',['../algorithms_8h.html',1,'']]],
-  ['array_2eh_16',['array.h',['../array_8h.html',1,'']]],
-  ['array2_2ecpp_17',['array2.cpp',['../array2_8cpp.html',1,'']]],
-  ['array2_2eh_18',['array2.h',['../array2_8h.html',1,'']]],
-  ['array3_2ecpp_19',['array3.cpp',['../array3_8cpp.html',1,'']]],
-  ['array3_2eh_20',['array3.h',['../array3_8h.html',1,'']]],
-  ['array4_2ecpp_21',['array4.cpp',['../array4_8cpp.html',1,'']]],
-  ['array4_2eh_22',['array4.h',['../array4_8h.html',1,'']]],
-  ['array_5fbool_2eh_23',['array_bool.h',['../array__bool_8h.html',1,'']]],
-  ['array_5ft_2ecpp_24',['array_t.cpp',['../array__t_8cpp.html',1,'']]],
-  ['array_5ft_2eh_25',['array_t.h',['../array__t_8h.html',1,'']]]
+  ['array_2ecpp_16',['array.cpp',['../array_8cpp.html',1,'']]],
+  ['array_2eh_17',['array.h',['../array_8h.html',1,'']]]
 ];
