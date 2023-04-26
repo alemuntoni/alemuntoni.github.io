@@ -124,7 +124,7 @@ $(document).ready(function(){initNavTree('element__references_8h_source.html',''
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef VCL_MESH_COMPONENTS_ELEMENT_REFERENCES_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define VCL_MESH_COMPONENTS_ELEMENT_REFERENCES_H</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="random__access__container_8h.html">vclib/misc/random_access_container.h</a>&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="vector_8h.html">vclib/space/vector.h</a>&gt;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &quot;<a class="code" href="component__data_8h.html">component_data.h</a>&quot;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
@@ -134,18 +134,18 @@ $(document).ready(function(){initNavTree('element__references_8h_source.html',''
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">class </span>ElementReferences</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>{</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">using </span>Base = RandomAccessContainer&lt;Elem*, N&gt;;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">using </span>Base = Vector&lt;Elem*, N&gt;;</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> IS_VERTICAL = !std::is_same_v&lt;ElementType, void&gt;;</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">using </span>DataValueType = RandomAccessContainer&lt;Elem*, N&gt;; <span class="comment">// data that the component stores internally (or vertically)</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> CONTAINER_SIZE = <a class="code hl_variable" href="classvcl_1_1RandomAccessContainer.html#ad1de43178b9e01dd65a4641e433a0253">Base::CONTAINER_SIZE</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">using </span>DataValueType = Vector&lt;Elem*, N&gt;; <span class="comment">// data that the component stores internally (or vertically)</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> CONTAINER_SIZE = <a class="code hl_variable" href="classvcl_1_1Vector.html#af303936623d10f51443b3b597d65d61b">Base::SIZE</a>;</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="comment">/* Iterator Types declaration */</span></div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">using </span>Iterator              = <span class="keyword">typename</span> <a class="code hl_typedef" href="classvcl_1_1RandomAccessContainer.html#a84f67188beb5ee26099f762ec4ad9086">Base::Iterator</a>;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">using </span>ConstIterator         = <span class="keyword">typename</span> <a class="code hl_typedef" href="classvcl_1_1RandomAccessContainer.html#a31a74ab0f21488c33d9508caef829330">Base::ConstIterator</a>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">using </span>Iterator              = <span class="keyword">typename</span> <a class="code hl_typedef" href="classvcl_1_1Vector.html#ad3ce2354e76f640763a20133cff5209c">Base::Iterator</a>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">using </span>ConstIterator         = <span class="keyword">typename</span> <a class="code hl_typedef" href="classvcl_1_1Vector.html#a0331869b7760a17e13ebef44785f0ce7">Base::ConstIterator</a>;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="comment">/* Constructor and isEnabled */</span></div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
@@ -165,10 +165,10 @@ $(document).ready(function(){initNavTree('element__references_8h_source.html',''
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordtype">void</span> updateElementReferencesAfterCompact(<span class="keyword">const</span> Elem* base, <span class="keyword">const</span> std::vector&lt;int&gt;&amp; newIndices, Comp* comp);</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Comp&gt;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    RandomAccessContainer&lt;Elem*, N&gt;&amp; container(Comp* comp);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    Vector&lt;Elem*, N&gt;&amp; container(Comp* comp);</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Comp&gt;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keyword">const</span> RandomAccessContainer&lt;Elem*, N&gt;&amp; container(<span class="keyword">const</span> Comp* comp) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keyword">const</span> Vector&lt;Elem*, N&gt;&amp; container(<span class="keyword">const</span> Comp* comp) <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    internal::ComponentData&lt;DataValueType, IS_VERTICAL&gt; data;</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>};</div>
@@ -178,12 +178,12 @@ $(document).ready(function(){initNavTree('element__references_8h_source.html',''
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">#include &quot;<a class="code" href="element__references_8cpp.html">element_references.cpp</a>&quot;</span></div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">#endif </span><span class="comment">// VCL_MESH_COMPONENTS_ELEMENT_REFERENCES_H</span></div>
-<div class="ttc" id="aclassvcl_1_1RandomAccessContainer_html_a31a74ab0f21488c33d9508caef829330"><div class="ttname"><a href="classvcl_1_1RandomAccessContainer.html#a31a74ab0f21488c33d9508caef829330">vcl::RandomAccessContainer::ConstIterator</a></div><div class="ttdeci">typename std::conditional&lt;(N &gt;=0), typename std::array&lt; C, ARRAY_SIZE &gt;::const_iterator, typename std::vector&lt; C &gt;::const_iterator &gt;::type ConstIterator</div><div class="ttdef"><b>Definition:</b> random_access_container.h:68</div></div>
-<div class="ttc" id="aclassvcl_1_1RandomAccessContainer_html_a84f67188beb5ee26099f762ec4ad9086"><div class="ttname"><a href="classvcl_1_1RandomAccessContainer.html#a84f67188beb5ee26099f762ec4ad9086">vcl::RandomAccessContainer::Iterator</a></div><div class="ttdeci">typename std::conditional&lt;(N &gt;=0), typename std::array&lt; C, ARRAY_SIZE &gt;::iterator, typename std::vector&lt; C &gt;::iterator &gt;::type Iterator</div><div class="ttdef"><b>Definition:</b> random_access_container.h:63</div></div>
-<div class="ttc" id="aclassvcl_1_1RandomAccessContainer_html_ad1de43178b9e01dd65a4641e433a0253"><div class="ttname"><a href="classvcl_1_1RandomAccessContainer.html#ad1de43178b9e01dd65a4641e433a0253">vcl::RandomAccessContainer::CONTAINER_SIZE</a></div><div class="ttdeci">static const int CONTAINER_SIZE</div><div class="ttdef"><b>Definition:</b> random_access_container.h:55</div></div>
+<div class="ttc" id="aclassvcl_1_1Vector_html_a0331869b7760a17e13ebef44785f0ce7"><div class="ttname"><a href="classvcl_1_1Vector.html#a0331869b7760a17e13ebef44785f0ce7">vcl::Vector::ConstIterator</a></div><div class="ttdeci">typename Container::const_iterator ConstIterator</div><div class="ttdef"><b>Definition:</b> vector.h:90</div></div>
+<div class="ttc" id="aclassvcl_1_1Vector_html_ad3ce2354e76f640763a20133cff5209c"><div class="ttname"><a href="classvcl_1_1Vector.html#ad3ce2354e76f640763a20133cff5209c">vcl::Vector::Iterator</a></div><div class="ttdeci">typename Container::iterator Iterator</div><div class="ttdef"><b>Definition:</b> vector.h:87</div></div>
+<div class="ttc" id="aclassvcl_1_1Vector_html_af303936623d10f51443b3b597d65d61b"><div class="ttname"><a href="classvcl_1_1Vector.html#af303936623d10f51443b3b597d65d61b">vcl::Vector::SIZE</a></div><div class="ttdeci">static const int SIZE</div><div class="ttdef"><b>Definition:</b> vector.h:93</div></div>
 <div class="ttc" id="acomponent__data_8h_html"><div class="ttname"><a href="component__data_8h.html">component_data.h</a></div></div>
 <div class="ttc" id="aelement__references_8cpp_html"><div class="ttname"><a href="element__references_8cpp.html">element_references.cpp</a></div></div>
-<div class="ttc" id="arandom__access__container_8h_html"><div class="ttname"><a href="random__access__container_8h.html">random_access_container.h</a></div></div>
+<div class="ttc" id="avector_8h_html"><div class="ttname"><a href="vector_8h.html">vector.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

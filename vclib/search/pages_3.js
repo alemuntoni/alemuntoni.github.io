@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mesh_20documentation_0',['Mesh Documentation',['../mesh_documentation_page.html',1,'']]]
+  ['spatial_20and_20other_20data_20structures_0',['Spatial and other Data Structures',['../space_page.html',1,'']]]
 ];

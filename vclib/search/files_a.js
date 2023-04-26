@@ -1,7 +1,7 @@
 var searchData=
 [
   ['face_2ecpp_0',['face.cpp',['../face_8cpp.html',1,'']]],
-  ['face_2eh_1',['face.h',['../concepts_2mesh_2elements_2face_8h.html',1,'(Global Namespace)'],['../mesh_2elements_2face_8h.html',1,'(Global Namespace)'],['../mesh_2iterators_2face_8h.html',1,'(Global Namespace)']]],
+  ['face_2eh_1',['face.h',['../mesh_2elements_2face_8h.html',1,'(Global Namespace)'],['../iterators_2mesh_2face_8h.html',1,'(Global Namespace)'],['../concepts_2mesh_2elements_2face_8h.html',1,'(Global Namespace)']]],
   ['face_5fadj_5fface_5fiterator_2eh_2',['face_adj_face_iterator.h',['../face__adj__face__iterator_8h.html',1,'']]],
   ['face_5fbase_5fiterator_2eh_3',['face_base_iterator.h',['../face__base__iterator_8h.html',1,'']]],
   ['face_5fcomponents_2eh_4',['face_components.h',['../face__components_8h.html',1,'']]],
@@ -9,7 +9,7 @@ var searchData=
   ['face_5fcontainer_2eh_6',['face_container.h',['../face__container_8h.html',1,'']]],
   ['face_5fhalf_5fedge_5fiterator_2eh_7',['face_half_edge_iterator.h',['../face__half__edge__iterator_8h.html',1,'']]],
   ['face_5fhalf_5fedge_5freference_2ecpp_8',['face_half_edge_reference.cpp',['../face__half__edge__reference_8cpp.html',1,'']]],
-  ['face_5fhalf_5fedge_5freference_2eh_9',['face_half_edge_reference.h',['../concepts_2mesh_2components_2face__half__edge__reference_8h.html',1,'(Global Namespace)'],['../mesh_2components_2face__half__edge__reference_8h.html',1,'(Global Namespace)']]],
+  ['face_5fhalf_5fedge_5freference_2eh_9',['face_half_edge_reference.h',['../mesh_2components_2face__half__edge__reference_8h.html',1,'(Global Namespace)'],['../concepts_2mesh_2components_2face__half__edge__reference_8h.html',1,'(Global Namespace)']]],
   ['face_5frequirements_2ecpp_10',['face_requirements.cpp',['../face__requirements_8cpp.html',1,'']]],
   ['face_5frequirements_2eh_11',['face_requirements.h',['../face__requirements_8h.html',1,'']]],
   ['face_5fvertex_5fiterator_2eh_12',['face_vertex_iterator.h',['../face__vertex__iterator_8h.html',1,'']]],

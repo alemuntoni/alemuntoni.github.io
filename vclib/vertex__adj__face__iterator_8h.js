@@ -1,5 +1,5 @@
 var vertex__adj__face__iterator_8h =
 [
-    [ "ConstVertexAdjFaceIterator", "vertex__adj__face__iterator_8h.html#a29ac9f3b0916442fc504edc0f98e266a", null ],
-    [ "VertexAdjFaceIterator", "vertex__adj__face__iterator_8h.html#adaa61b445ccc55754ab8b8fea3dfeeef", null ]
+    [ "vcl::VertexAdjFaceIterator< HalfEdge, CNST >", "classvcl_1_1VertexAdjFaceIterator.html", "classvcl_1_1VertexAdjFaceIterator" ],
+    [ "ConstVertexAdjFaceIterator", "vertex__adj__face__iterator_8h.html#a2a3067a6c32d447288eb7b9adf676eab", null ]
 ];

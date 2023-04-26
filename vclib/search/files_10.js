@@ -9,9 +9,9 @@ var searchData=
   ['material_2eh_6',['material.h',['../material_8h.html',1,'']]],
   ['math_2eh_7',['math.h',['../math_8h.html',1,'']]],
   ['matrix_2ecpp_8',['matrix.cpp',['../matrix_8cpp.html',1,'']]],
-  ['matrix_2eh_9',['matrix.h',['../space_2matrix_8h.html',1,'(Global Namespace)'],['../concepts_2space_2matrix_8h.html',1,'(Global Namespace)']]],
+  ['matrix_2eh_9',['matrix.h',['../concepts_2space_2matrix_8h.html',1,'(Global Namespace)'],['../space_2matrix_8h.html',1,'(Global Namespace)']]],
   ['mesh_2ecpp_10',['mesh.cpp',['../algorithms_2intersection_2mesh_8cpp.html',1,'(Global Namespace)'],['../algorithms_2distance_2mesh_8cpp.html',1,'(Global Namespace)'],['../mesh_2mesh_8cpp.html',1,'(Global Namespace)']]],
-  ['mesh_2eh_11',['mesh.h',['../algorithms_2distance_2mesh_8h.html',1,'(Global Namespace)'],['../algorithms_2intersection_2mesh_8h.html',1,'(Global Namespace)'],['../concepts_2mesh_8h.html',1,'(Global Namespace)'],['../concepts_2ranges_2mesh_8h.html',1,'(Global Namespace)'],['../mesh_2mesh_8h.html',1,'(Global Namespace)'],['../views_2mesh_8h.html',1,'(Global Namespace)']]],
+  ['mesh_2eh_11',['mesh.h',['../views_2mesh_8h.html',1,'(Global Namespace)'],['../algorithms_2distance_2mesh_8h.html',1,'(Global Namespace)'],['../algorithms_2intersection_2mesh_8h.html',1,'(Global Namespace)'],['../concepts_2mesh_8h.html',1,'(Global Namespace)'],['../concepts_2ranges_2mesh_8h.html',1,'(Global Namespace)'],['../iterators_2mesh_8h.html',1,'(Global Namespace)'],['../mesh_2mesh_8h.html',1,'(Global Namespace)']]],
   ['mesh_5fcomponents_2eh_12',['mesh_components.h',['../mesh__components_8h.html',1,'']]],
   ['mesh_5fedge_5futil_2eh_13',['mesh_edge_util.h',['../mesh__edge__util_8h.html',1,'']]],
   ['mesh_5fexceptions_2eh_14',['mesh_exceptions.h',['../mesh__exceptions_8h.html',1,'']]],
@@ -33,7 +33,7 @@ var searchData=
   ['min_5fmax_2ecpp_30',['min_max.cpp',['../min__max_8cpp.html',1,'']]],
   ['min_5fmax_2eh_31',['min_max.h',['../min__max_8h.html',1,'']]],
   ['misc_2ecpp_32',['misc.cpp',['../intersection_2misc_8cpp.html',1,'(Global Namespace)'],['../distance_2misc_8cpp.html',1,'(Global Namespace)']]],
-  ['misc_2eh_33',['misc.h',['../distance_2misc_8h.html',1,'(Global Namespace)'],['../intersection_2misc_8h.html',1,'(Global Namespace)']]],
+  ['misc_2eh_33',['misc.h',['../intersection_2misc_8h.html',1,'(Global Namespace)'],['../distance_2misc_8h.html',1,'(Global Namespace)']]],
   ['misc_5fexceptions_2eh_34',['misc_exceptions.h',['../misc__exceptions_8h.html',1,'']]],
   ['miscellaneous_2eh_35',['miscellaneous.h',['../miscellaneous_8h.html',1,'']]]
 ];

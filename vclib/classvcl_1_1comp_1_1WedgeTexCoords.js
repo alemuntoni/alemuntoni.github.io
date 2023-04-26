@@ -28,8 +28,8 @@ var classvcl_1_1comp_1_1WedgeTexCoords =
     [ "wedgeTexCoordEnd", "classvcl_1_1comp_1_1WedgeTexCoords.html#a32f7cce556b85d0ed0546cb38fe7d34b", null ],
     [ "wedgeTexCoordMod", "classvcl_1_1comp_1_1WedgeTexCoords.html#a75f289015fd8e68a281571e8f8208dd0", null ],
     [ "wedgeTexCoordMod", "classvcl_1_1comp_1_1WedgeTexCoords.html#ac10d523428b1e6862ca9bb36b6d42e6b", null ],
-    [ "wedgeTexCoords", "classvcl_1_1comp_1_1WedgeTexCoords.html#a19b0664a2baedac514e7013560e9427e", null ],
-    [ "wedgeTexCoords", "classvcl_1_1comp_1_1WedgeTexCoords.html#a62d2d9d12b0dbed8bd3dee6cc658dc8b", null ],
+    [ "wedgeTexCoords", "classvcl_1_1comp_1_1WedgeTexCoords.html#a4697bd5467e9c68223d6022556248fd1", null ],
+    [ "wedgeTexCoords", "classvcl_1_1comp_1_1WedgeTexCoords.html#aebeca9089644777940ea601b5edf4586", null ],
     [ "IS_OPTIONAL", "classvcl_1_1comp_1_1WedgeTexCoords.html#a8d4d0e2a7839264ecfd894b05f46a286", null ],
     [ "IS_VERTICAL", "classvcl_1_1comp_1_1WedgeTexCoords.html#aadd6fc797a10439519bf783af57d15f3", null ],
     [ "WEDGE_TEX_COORD_NUMBER", "classvcl_1_1comp_1_1WedgeTexCoords.html#a18adaf35716b9d1de165aa2e04132693", null ]

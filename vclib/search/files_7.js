@@ -4,7 +4,7 @@ var searchData=
   ['cell_5fiterator_2eh_1',['cell_iterator.h',['../cell__iterator_8h.html',1,'']]],
   ['clean_2ecpp_2',['clean.cpp',['../clean_8cpp.html',1,'']]],
   ['clean_2eh_3',['clean.h',['../clean_8h.html',1,'']]],
-  ['color_2ecpp_4',['color.cpp',['../algorithms_2update_2color_8cpp.html',1,'(Global Namespace)'],['../mesh_2components_2color_8cpp.html',1,'(Global Namespace)'],['../space_2color_8cpp.html',1,'(Global Namespace)']]],
+  ['color_2ecpp_4',['color.cpp',['../space_2color_8cpp.html',1,'(Global Namespace)'],['../mesh_2components_2color_8cpp.html',1,'(Global Namespace)'],['../algorithms_2update_2color_8cpp.html',1,'(Global Namespace)']]],
   ['color_2eh_5',['color.h',['../algorithms_2update_2color_8h.html',1,'(Global Namespace)'],['../concepts_2mesh_2components_2color_8h.html',1,'(Global Namespace)'],['../mesh_2components_2color_8h.html',1,'(Global Namespace)'],['../space_2color_8h.html',1,'(Global Namespace)']]],
   ['colors_2eh_6',['colors.h',['../colors_8h.html',1,'']]],
   ['compactness_2ecpp_7',['compactness.cpp',['../compactness_8cpp.html',1,'']]],
