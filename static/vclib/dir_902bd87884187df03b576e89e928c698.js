@@ -4,7 +4,7 @@ var dir_902bd87884187df03b576e89e928c698 =
     [ "edge.h", "mesh_2elements_2edge_8h.html", "mesh_2elements_2edge_8h" ],
     [ "edge_components.h", "edge__components_8h.html", "edge__components_8h" ],
     [ "element.cpp", "mesh_2elements_2element_8cpp.html", null ],
-    [ "element.h", "mesh_2elements_2element_8h.html", "mesh_2elements_2element_8h" ],
+    [ "element.h", "mesh_2elements_2element_8h.html", null ],
     [ "face.cpp", "face_8cpp.html", null ],
     [ "face.h", "mesh_2elements_2face_8h.html", "mesh_2elements_2face_8h" ],
     [ "face_components.h", "face__components_8h.html", "face__components_8h" ],

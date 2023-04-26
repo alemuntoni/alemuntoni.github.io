@@ -101,7 +101,7 @@ $(document).ready(function(){initNavTree('classvcl_1_1comp_1_1BoundingBox.html',
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classvcl_1_1comp_1_1BoundingBox-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">vcl::comp::BoundingBox&lt; PointType, ElementType, optional &gt; Class Template Reference</div></div>
+  <div class="headertitle"><div class="title">vcl::comp::BoundingBox&lt; PointType, ElementType, optional &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__components.html">Components</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -130,7 +130,7 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a62e5ce38ca57cef9113ad3af9ef9dca4"><td class="memItemLeft" align="right" valign="top">static const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1BoundingBox.html#a62e5ce38ca57cef9113ad3af9ef9dca4">IS_VERTICAL</a> = !std::is_same_v&lt;<a class="el" href="namespacevcl.html#ad79a41a614e99b6f2382637b8376123a">ElementType</a>, void&gt;</td></tr>
+<tr class="memitem:a62e5ce38ca57cef9113ad3af9ef9dca4"><td class="memItemLeft" align="right" valign="top">static const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1BoundingBox.html#a62e5ce38ca57cef9113ad3af9ef9dca4">IS_VERTICAL</a> = !std::is_same_v&lt;ElementType, void&gt;</td></tr>
 <tr class="separator:a62e5ce38ca57cef9113ad3af9ef9dca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8f9a9089044d194bb7d8b3651f6f102"><td class="memItemLeft" align="right" valign="top">static const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1BoundingBox.html#ab8f9a9089044d194bb7d8b3651f6f102">IS_OPTIONAL</a> = optional</td></tr>
 <tr class="separator:ab8f9a9089044d194bb7d8b3651f6f102"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -142,9 +142,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:ae629e945ffec81a58b0f86df090c47f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;PointConcept PointType, typename <a class="el" href="namespacevcl.html#ad79a41a614e99b6f2382637b8376123a">ElementType</a> = void, bool optional = false&gt;<br />
+<div class="textblock"><div class="compoundTemplParams">template&lt;PointConcept PointType, typename ElementType = void, bool optional = false&gt;<br />
 class vcl::comp::BoundingBox&lt; PointType, ElementType, optional &gt;</div><p>The <a class="el" href="classvcl_1_1comp_1_1BoundingBox.html" title="The BoundingBox component class represents an axis aligned bounding box. This class is usually used a...">BoundingBox</a> component class represents an axis aligned bounding box. This class is usually used as a component of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. </p>
-<p>The member functions of this class will be available in the instance of any <a class="el" href="classvcl_1_1Element.html">Element</a> or <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> that will contain this component.</p>
+<p>The member functions of this class will be available in the instance of any <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> or <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> that will contain this component.</p>
 <p>For example, if you have a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> <code>m</code> with the <a class="el" href="classvcl_1_1comp_1_1BoundingBox.html" title="The BoundingBox component class represents an axis aligned bounding box. This class is usually used a...">BoundingBox</a> component, you'll be able to access to this component member functions from <code>m</code>:</p>
 <div class="fragment"><div class="line">m.boundingBox();</div>
 </div><!-- fragment --> </div><h2 class="groupheader">Member Typedef Documentation</h2>
@@ -154,10 +154,10 @@ class vcl::comp::BoundingBox&lt; PointType, ElementType, optional &gt;</div><p>T
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;PointConcept PointType, typename <a class="el" href="namespacevcl.html#ad79a41a614e99b6f2382637b8376123a">ElementType</a>  = void, bool optional = false&gt; </div>
+template&lt;PointConcept PointType, typename ElementType  = void, bool optional = false&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classvcl_1_1comp_1_1BoundingBox.html">vcl::comp::BoundingBox</a>&lt; PointType, <a class="el" href="namespacevcl.html#ad79a41a614e99b6f2382637b8376123a">ElementType</a>, optional &gt;::BoundingBoxComponent =  <a class="el" href="classvcl_1_1comp_1_1BoundingBox.html">ThisType</a></td>
+          <td class="memname">using <a class="el" href="classvcl_1_1comp_1_1BoundingBox.html">vcl::comp::BoundingBox</a>&lt; PointType, ElementType, optional &gt;::BoundingBoxComponent =  <a class="el" href="classvcl_1_1comp_1_1BoundingBox.html">ThisType</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -170,10 +170,10 @@ template&lt;PointConcept PointType, typename <a class="el" href="namespacevcl.ht
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;PointConcept PointType, typename <a class="el" href="namespacevcl.html#ad79a41a614e99b6f2382637b8376123a">ElementType</a>  = void, bool optional = false&gt; </div>
+template&lt;PointConcept PointType, typename ElementType  = void, bool optional = false&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classvcl_1_1comp_1_1BoundingBox.html">vcl::comp::BoundingBox</a>&lt; PointType, <a class="el" href="namespacevcl.html#ad79a41a614e99b6f2382637b8376123a">ElementType</a>, optional &gt;::BoundingBoxType =  <a class="el" href="classvcl_1_1Box.html">Box</a>&lt;PointType&gt;</td>
+          <td class="memname">using <a class="el" href="classvcl_1_1comp_1_1BoundingBox.html">vcl::comp::BoundingBox</a>&lt; PointType, ElementType, optional &gt;::BoundingBoxType =  <a class="el" href="classvcl_1_1Box.html">Box</a>&lt;PointType&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -186,10 +186,10 @@ template&lt;PointConcept PointType, typename <a class="el" href="namespacevcl.ht
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;PointConcept PointType, typename <a class="el" href="namespacevcl.html#ad79a41a614e99b6f2382637b8376123a">ElementType</a>  = void, bool optional = false&gt; </div>
+template&lt;PointConcept PointType, typename ElementType  = void, bool optional = false&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classvcl_1_1comp_1_1BoundingBox.html">vcl::comp::BoundingBox</a>&lt; PointType, <a class="el" href="namespacevcl.html#ad79a41a614e99b6f2382637b8376123a">ElementType</a>, optional &gt;::DataValueType =  <a class="el" href="classvcl_1_1Box.html">Box</a>&lt;PointType&gt;</td>
+          <td class="memname">using <a class="el" href="classvcl_1_1comp_1_1BoundingBox.html">vcl::comp::BoundingBox</a>&lt; PointType, ElementType, optional &gt;::DataValueType =  <a class="el" href="classvcl_1_1Box.html">Box</a>&lt;PointType&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -272,13 +272,13 @@ template&lt;typename <a class="el" href="classvcl_1_1Element.html">Element</a> &
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;PointConcept PointType, typename <a class="el" href="namespacevcl.html#ad79a41a614e99b6f2382637b8376123a">ElementType</a>  = void, bool optional = false&gt; </div>
+template&lt;PointConcept PointType, typename ElementType  = void, bool optional = false&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const bool <a class="el" href="classvcl_1_1comp_1_1BoundingBox.html">vcl::comp::BoundingBox</a>&lt; PointType, <a class="el" href="namespacevcl.html#ad79a41a614e99b6f2382637b8376123a">ElementType</a>, optional &gt;::IS_OPTIONAL = optional</td>
+          <td class="memname">const bool <a class="el" href="classvcl_1_1comp_1_1BoundingBox.html">vcl::comp::BoundingBox</a>&lt; PointType, ElementType, optional &gt;::IS_OPTIONAL = optional</td>
         </tr>
       </table>
   </td>
@@ -296,13 +296,13 @@ template&lt;PointConcept PointType, typename <a class="el" href="namespacevcl.ht
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;PointConcept PointType, typename <a class="el" href="namespacevcl.html#ad79a41a614e99b6f2382637b8376123a">ElementType</a>  = void, bool optional = false&gt; </div>
+template&lt;PointConcept PointType, typename ElementType  = void, bool optional = false&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const bool <a class="el" href="classvcl_1_1comp_1_1BoundingBox.html">vcl::comp::BoundingBox</a>&lt; PointType, <a class="el" href="namespacevcl.html#ad79a41a614e99b6f2382637b8376123a">ElementType</a>, optional &gt;::IS_VERTICAL = !std::is_same_v&lt;<a class="el" href="namespacevcl.html#ad79a41a614e99b6f2382637b8376123a">ElementType</a>, void&gt;</td>
+          <td class="memname">const bool <a class="el" href="classvcl_1_1comp_1_1BoundingBox.html">vcl::comp::BoundingBox</a>&lt; PointType, ElementType, optional &gt;::IS_VERTICAL = !std::is_same_v&lt;ElementType, void&gt;</td>
         </tr>
       </table>
   </td>

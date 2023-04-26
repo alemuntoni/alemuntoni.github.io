@@ -101,8 +101,6 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1comp_1_1HasWedgeTexCoord
 
 <p>HasWedgeTexCoordsComponent concept.  
 <a href="conceptvcl_1_1comp_1_1HasWedgeTexCoordsComponent.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="concepts_2mesh_2components_2wedge__tex__coords_8h_source.html">wedge_tex_coords.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasWedgeTexCoordsComponent.html">vcl::comp::HasWedgeTexCoordsComponent</a> =  <span class="keyword">requires</span>(T o)</div>
@@ -110,8 +108,8 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1comp_1_1HasWedgeTexCoord
 <div class="line">    <span class="keyword">requires</span> <a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasWedgeTexCoords.html">HasWedgeTexCoords&lt;T&gt;</a>;</div>
 <div class="line">    <span class="keyword">typename</span> T::WedgeTexCoordsComponent;</div>
 <div class="line">}</div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasWedgeTexCoordsComponent_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasWedgeTexCoordsComponent.html">vcl::comp::HasWedgeTexCoordsComponent</a></div><div class="ttdoc">HasWedgeTexCoordsComponent concept.</div><div class="ttdef"><b>Definition:</b> wedge_tex_coords.h:87</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasWedgeTexCoords_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasWedgeTexCoords.html">vcl::comp::HasWedgeTexCoords</a></div><div class="ttdoc">HasWedgeTexCoords concept is satisfied only if a Element class provides the types and member function...</div><div class="ttdef"><b>Definition:</b> wedge_tex_coords.h:47</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasWedgeTexCoordsComponent_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasWedgeTexCoordsComponent.html">vcl::comp::HasWedgeTexCoordsComponent</a></div><div class="ttdoc">HasWedgeTexCoordsComponent concept.</div><div class="ttdef"><b>Definition:</b> wedge_tex_coords.h:88</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasWedgeTexCoords_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasWedgeTexCoords.html">vcl::comp::HasWedgeTexCoords</a></div><div class="ttdoc">HasWedgeTexCoords concept is satisfied only if a Element class provides the types and member function...</div><div class="ttdef"><b>Definition:</b> wedge_tex_coords.h:49</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>HasWedgeTexCoordsComponent concept. </p>
 <p>This concept is used to discriminate between the WedgeTexCoords (or OptionalWedgeTexCoords) component, and the FaceHalfEdgeReferences component, which using half edges allows to access to wedge tex coords. This concept is intended only for internal use, useful to check that a Face does not have both WedgeTexCoords and FaceHalfEdgeReferences components. </p>

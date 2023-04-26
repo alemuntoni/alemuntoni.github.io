@@ -130,18 +130,16 @@ $(document).ready(function(){initNavTree('concepts_2mesh_2components_2adjacent__
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl_1_1comp.html">vcl::comp</a> {</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1HasAdjacentVertices.html">   47</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasAdjacentVertices.html">HasAdjacentVertices</a> = <span class="keyword">requires</span>(</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    T o,</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">const</span> T&amp; co,</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">typename</span> T::AdjacentVertexType v,</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    std::vector&lt;typename T::AdjacentVertexType*&gt; vec)</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>{</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">typename</span> T::AdjacentVertexType;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">typename</span> T::AdjacentVertexIterator;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">typename</span> T::ConstAdjacentVertexIterator;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">typename</span> T::AdjacentVertexView;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">typename</span> T::ConstAdjacentVertexView;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1HasAdjacentVertices.html">   49</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasAdjacentVertices.html">HasAdjacentVertices</a> = <span class="keyword">requires</span>(</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    T o,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">const</span> T&amp; co,</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">typename</span> T::AdjacentVertexType v,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    std::vector&lt;typename T::AdjacentVertexType*&gt; vec)</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>{</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">typename</span> T::AdjacentVertexType;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">typename</span> T::AdjacentVertexIterator;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">typename</span> T::ConstAdjacentVertexIterator;</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    { o.adjVerticesNumber() } -&gt; std::same_as&lt;uint&gt;;</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    { o.adjVertex(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;typename T::AdjacentVertexType*&amp;&gt;;</div>
@@ -161,44 +159,30 @@ $(document).ready(function(){initNavTree('concepts_2mesh_2components_2adjacent__
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    { o.adjVertexEnd() } -&gt; std::same_as&lt;typename T::AdjacentVertexIterator&gt;;</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    { co.adjVertexBegin() } -&gt; std::same_as&lt;typename T::ConstAdjacentVertexIterator&gt;;</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    { co.adjVertexEnd() } -&gt; std::same_as&lt;typename T::ConstAdjacentVertexIterator&gt;;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    { o.adjVertices() } -&gt; std::same_as&lt;typename T::AdjacentVertexView&gt;;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    { co.adjVertices() } -&gt; std::same_as&lt;typename T::ConstAdjacentVertexView&gt;;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    o.adjVertices();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    co.adjVertices();</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>};</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1HasAdjacentVerticesComponent.html">   89</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasAdjacentVerticesComponent.html">HasAdjacentVerticesComponent</a> = <span class="keyword">requires</span>(T o)</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>{</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keyword">requires</span> <a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasAdjacentVertices.html">HasAdjacentVertices&lt;T&gt;</a>;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keyword">typename</span> T::AdjacentVerticesComponent;</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>};</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1HasOptionalAdjacentVertices.html">  100</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasOptionalAdjacentVertices.html">HasOptionalAdjacentVertices</a> =</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasAdjacentVerticesComponent.html">HasAdjacentVerticesComponent&lt;T&gt;</a> &amp;&amp; <a class="code hl_concept" href="conceptvcl_1_1comp_1_1IsOptionalComponent.html">IsOptionalComponent&lt;typename T::AdjacentVerticesComponent&gt;</a>;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment">/* Detector function to check if a class has AdjacentVertices enabled */</span></div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="namespacevcl_1_1comp.html#a18fec937cfc949c6c5302c053b2e5bfa">  106</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="namespacevcl_1_1comp.html#a18fec937cfc949c6c5302c053b2e5bfa">isAdjacentVerticesEnabledOn</a>(<span class="keyword">const</span> T&amp; element)</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>{</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasOptionalAdjacentVertices.html">HasOptionalAdjacentVertices&lt;T&gt;</a>) {</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keywordflow">return</span> element.isAdjVerticesEnabled();</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    }</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keywordflow">return</span> <a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasAdjacentVertices.html">HasAdjacentVertices&lt;T&gt;</a>;</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    }</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>}</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>} <span class="comment">// namespace vcl::comp</span></div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="preprocessor">#endif </span><span class="comment">// VCL_CONCEPTS_MESH_COMPONENTS_ADJACENT_VERTICES_H</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1HasAdjacentVerticesComponent.html">   90</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasAdjacentVerticesComponent.html">HasAdjacentVerticesComponent</a> = <span class="keyword">requires</span>(T o)</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>{</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keyword">requires</span> <a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasAdjacentVertices.html">HasAdjacentVertices&lt;T&gt;</a>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keyword">typename</span> T::AdjacentVerticesComponent;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>};</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1HasOptionalAdjacentVertices.html">  103</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasOptionalAdjacentVertices.html">HasOptionalAdjacentVertices</a> =</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasAdjacentVerticesComponent.html">HasAdjacentVerticesComponent&lt;T&gt;</a> &amp;&amp; <a class="code hl_concept" href="conceptvcl_1_1comp_1_1IsOptionalComponent.html">IsOptionalComponent&lt;typename T::AdjacentVerticesComponent&gt;</a>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>} <span class="comment">// namespace vcl::comp</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="preprocessor">#endif </span><span class="comment">// VCL_CONCEPTS_MESH_COMPONENTS_ADJACENT_VERTICES_H</span></div>
 <div class="ttc" id="acomponent_8h_html"><div class="ttname"><a href="component_8h.html">component.h</a></div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasAdjacentVerticesComponent_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasAdjacentVerticesComponent.html">vcl::comp::HasAdjacentVerticesComponent</a></div><div class="ttdoc">HasAdjacentVerticesComponent concept is used to discriminate between the AdjacentVertices (or Optiona...</div><div class="ttdef"><b>Definition:</b> adjacent_vertices.h:89</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasAdjacentVertices_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasAdjacentVertices.html">vcl::comp::HasAdjacentVertices</a></div><div class="ttdoc">HasAdjacentVertices concept is satisfied only if a Element class provides the types and member functi...</div><div class="ttdef"><b>Definition:</b> adjacent_vertices.h:47</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasOptionalAdjacentVertices_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasOptionalAdjacentVertices.html">vcl::comp::HasOptionalAdjacentVertices</a></div><div class="ttdoc">HasOptionalAdjacentVertices concept is satisfied only if a class satisfies the HasAdjacentVertices co...</div><div class="ttdef"><b>Definition:</b> adjacent_vertices.h:100</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasAdjacentVerticesComponent_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasAdjacentVerticesComponent.html">vcl::comp::HasAdjacentVerticesComponent</a></div><div class="ttdoc">HasAdjacentVerticesComponent concept is used to discriminate between the AdjacentVertices (or Optiona...</div><div class="ttdef"><b>Definition:</b> adjacent_vertices.h:90</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasAdjacentVertices_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasAdjacentVertices.html">vcl::comp::HasAdjacentVertices</a></div><div class="ttdoc">HasAdjacentVertices concept is satisfied only if a Element class provides the types and member functi...</div><div class="ttdef"><b>Definition:</b> adjacent_vertices.h:49</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasOptionalAdjacentVertices_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasOptionalAdjacentVertices.html">vcl::comp::HasOptionalAdjacentVertices</a></div><div class="ttdoc">HasOptionalAdjacentVertices concept is satisfied only if a class satisfies the HasAdjacentVertices co...</div><div class="ttdef"><b>Definition:</b> adjacent_vertices.h:103</div></div>
 <div class="ttc" id="aconceptvcl_1_1comp_1_1IsOptionalComponent_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1IsOptionalComponent.html">vcl::comp::IsOptionalComponent</a></div><div class="ttdef"><b>Definition:</b> component.h:57</div></div>
 <div class="ttc" id="anamespacevcl_1_1comp_html"><div class="ttname"><a href="namespacevcl_1_1comp.html">vcl::comp</a></div><div class="ttdef"><b>Definition:</b> adjacent_edges.h:31</div></div>
-<div class="ttc" id="anamespacevcl_1_1comp_html_a18fec937cfc949c6c5302c053b2e5bfa"><div class="ttname"><a href="namespacevcl_1_1comp.html#a18fec937cfc949c6c5302c053b2e5bfa">vcl::comp::isAdjacentVerticesEnabledOn</a></div><div class="ttdeci">bool isAdjacentVerticesEnabledOn(const T &amp;element)</div><div class="ttdef"><b>Definition:</b> adjacent_vertices.h:106</div></div>
 <div class="ttc" id="atypes_2base_8h_html_a69aa29b598b851b0640aa225a9e5d61d"><div class="ttname"><a href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> base.h:31</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

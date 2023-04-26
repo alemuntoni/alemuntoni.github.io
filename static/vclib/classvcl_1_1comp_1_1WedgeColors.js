@@ -1,10 +1,8 @@
 var classvcl_1_1comp_1_1WedgeColors =
 [
     [ "ConstWedgeColorsIterator", "classvcl_1_1comp_1_1WedgeColors.html#a424fab03ca1848fb614933a2d5b948b9", null ],
-    [ "ConstWedgeColorsView", "classvcl_1_1comp_1_1WedgeColors.html#afefb4f1edf0cbdc9df7cfae91abb4918", null ],
-    [ "DataValueType", "classvcl_1_1comp_1_1WedgeColors.html#acfe94986fe343546795eb0f46375d5ad", null ],
+    [ "DataValueType", "classvcl_1_1comp_1_1WedgeColors.html#a6ac9ce8d9c7fa81d71f54ebb475659b1", null ],
     [ "WedgeColorsIterator", "classvcl_1_1comp_1_1WedgeColors.html#a271418753a100fa995fc2ff11c885275", null ],
-    [ "WedgeColorsView", "classvcl_1_1comp_1_1WedgeColors.html#a0d43ddd4e0dfd58430d437eac34c9c4e", null ],
     [ "WedgeTexCoordsComponent", "classvcl_1_1comp_1_1WedgeColors.html#a0d0186336cde5867449bde813ee7f5e6", null ],
     [ "clearWedgeColor", "classvcl_1_1comp_1_1WedgeColors.html#a43157ebf533dd4eb0b44fa60d0fb109d", null ],
     [ "eraseWedgeColor", "classvcl_1_1comp_1_1WedgeColors.html#a1e1bfb3c8dc48327ac01b5d97b9f78a2", null ],
@@ -24,8 +22,8 @@ var classvcl_1_1comp_1_1WedgeColors =
     [ "wedgeColorEnd", "classvcl_1_1comp_1_1WedgeColors.html#a2c49ea688fd5917d011b80992c357035", null ],
     [ "wedgeColorMod", "classvcl_1_1comp_1_1WedgeColors.html#ab9108f0a7c8a8075ebd3a92a2243b55e", null ],
     [ "wedgeColorMod", "classvcl_1_1comp_1_1WedgeColors.html#a8a954ef274fc27e16f96a52ef7b97224", null ],
-    [ "wedgeColors", "classvcl_1_1comp_1_1WedgeColors.html#ac44136ab8a1a67efec25529f2e0f3bc2", null ],
-    [ "wedgeColors", "classvcl_1_1comp_1_1WedgeColors.html#a2d625f66f2055afcb3a63f02dae82c24", null ],
+    [ "wedgeColors", "classvcl_1_1comp_1_1WedgeColors.html#af32a986da871589af25ae49aba2929e3", null ],
+    [ "wedgeColors", "classvcl_1_1comp_1_1WedgeColors.html#a65334d5a3487565e1c1eff3e6050c190", null ],
     [ "IS_OPTIONAL", "classvcl_1_1comp_1_1WedgeColors.html#abfd7afab783580a41ef01f0b70fcb5ff", null ],
     [ "IS_VERTICAL", "classvcl_1_1comp_1_1WedgeColors.html#a7b808b751129ac386f4eb7f998c4ed61", null ],
     [ "WEDGE_COLOR_NUMBER", "classvcl_1_1comp_1_1WedgeColors.html#a0e31c0615bd67e0594661aa87d72b7de", null ]

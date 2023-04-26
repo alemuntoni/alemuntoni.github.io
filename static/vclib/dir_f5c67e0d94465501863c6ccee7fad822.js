@@ -33,5 +33,7 @@ var dir_f5c67e0d94465501863c6ccee7fad822 =
     [ "triangle.cpp", "triangle_8cpp.html", null ],
     [ "triangle.h", "space_2triangle_8h.html", "space_2triangle_8h" ],
     [ "triangle_wrapper.cpp", "triangle__wrapper_8cpp.html", null ],
-    [ "triangle_wrapper.h", "triangle__wrapper_8h.html", "triangle__wrapper_8h" ]
+    [ "triangle_wrapper.h", "triangle__wrapper_8h.html", "triangle__wrapper_8h" ],
+    [ "vector.cpp", "vector_8cpp.html", null ],
+    [ "vector.h", "vector_8h.html", null ]
 ];

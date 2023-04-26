@@ -4,5 +4,6 @@ var searchData=
   ['second_1',['second',['../classvcl_1_1RefPair.html#a019772b234005207f60f6687049ce9ba',1,'vcl::RefPair::second()'],['../classvcl_1_1FirstRefPair.html#a7e2bf5473dbdc5d7a88f2d6ff76f3d6f',1,'vcl::FirstRefPair::second()'],['../classvcl_1_1SecondRefPair.html#a889485c1e54d502fd1a3b7ed5e849b7b',1,'vcl::SecondRefPair::second()']]],
   ['selected_2',['selected',['../namespacevcl_1_1views.html#ae1a8a5b5cff2ac468a5a6620fd460bed',1,'vcl::views']]],
   ['selection_3',['selection',['../namespacevcl_1_1views.html#a05ca39459ce3b28207ebca6127aa7f38',1,'vcl::views']]],
-  ['sum_4',['sum',['../classvcl_1_1Histogram.html#acbe071457de7757759983dcb1d2e79c5',1,'vcl::Histogram']]]
+  ['size_4',['SIZE',['../classvcl_1_1Vector.html#af303936623d10f51443b3b597d65d61b',1,'vcl::Vector']]],
+  ['sum_5',['sum',['../classvcl_1_1Histogram.html#acbe071457de7757759983dcb1d2e79c5',1,'vcl::Histogram']]]
 ];

@@ -1,5 +1,7 @@
 var group__mesh__concepts =
 [
+    [ "Element Concepts", "group__element__concepts.html", "group__element__concepts" ],
+    [ "Components Concepts", "group__components__concepts.html", "group__components__concepts" ],
     [ "vcl::MeshConcept", "conceptvcl_1_1MeshConcept.html", null ],
     [ "vcl::DcelMeshConcept", "conceptvcl_1_1DcelMeshConcept.html", null ],
     [ "vcl::HasBoundingBox", "conceptvcl_1_1HasBoundingBox.html", null ],

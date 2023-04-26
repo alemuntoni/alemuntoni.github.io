@@ -1,12 +1,10 @@
 var classvcl_1_1comp_1_1VertexReferences =
 [
     [ "ConstVertexIterator", "classvcl_1_1comp_1_1VertexReferences.html#a2fa28b043700f37e56458259df51df14", null ],
-    [ "ConstVertexView", "classvcl_1_1comp_1_1VertexReferences.html#ac0bfe0fcbbbedde99a351d750a534f87", null ],
     [ "DataValueType", "classvcl_1_1comp_1_1VertexReferences.html#aa5d3bf6884e21dcb795d062d08cec53e", null ],
     [ "VertexIterator", "classvcl_1_1comp_1_1VertexReferences.html#a6d45f9f27dcf502789747553ce6b1199", null ],
     [ "VertexReferencesComponent", "classvcl_1_1comp_1_1VertexReferences.html#aaa898edb499ae000e270f6ab7703b2ec", null ],
     [ "VertexType", "classvcl_1_1comp_1_1VertexReferences.html#ae7fab349e2fc0f070a960e5e316d4f94", null ],
-    [ "VertexView", "classvcl_1_1comp_1_1VertexReferences.html#a6092bb20a868fb16174a35a068ec17c4", null ],
     [ "VertexReferences", "classvcl_1_1comp_1_1VertexReferences.html#ac088c49a4555525047b2255317856b4b", null ],
     [ "clearVertices", "classvcl_1_1comp_1_1VertexReferences.html#aea4faf569c9a3f8f6d2a499ee35000c6", null ],
     [ "containsVertex", "classvcl_1_1comp_1_1VertexReferences.html#a1b814c59fa16bd9479e03e80c9cee351", null ],
@@ -35,8 +33,8 @@ var classvcl_1_1comp_1_1VertexReferences =
     [ "vertexMod", "classvcl_1_1comp_1_1VertexReferences.html#a7453a6520d6cbddeb622f6d8281bdf84", null ],
     [ "vertexMod", "classvcl_1_1comp_1_1VertexReferences.html#a62094d8a150e5c80d3319b44b86ed239", null ],
     [ "vertexNumber", "classvcl_1_1comp_1_1VertexReferences.html#ab6c1a72e601a5ce738140c869b2075da", null ],
-    [ "vertices", "classvcl_1_1comp_1_1VertexReferences.html#a3d1d77484380708c43702d7d45449f9e", null ],
-    [ "vertices", "classvcl_1_1comp_1_1VertexReferences.html#a6e971db09ecdaa0e8071666575ae185f", null ],
+    [ "vertices", "classvcl_1_1comp_1_1VertexReferences.html#acdb5eb2466d56e345d68e0b15b2e7b57", null ],
+    [ "vertices", "classvcl_1_1comp_1_1VertexReferences.html#abcc16f0057adaa6868ecba39d7d20178", null ],
     [ "IS_OPTIONAL", "classvcl_1_1comp_1_1VertexReferences.html#a17169c5df3336b6bd993c2de58e98f6e", null ],
     [ "IS_VERTICAL", "classvcl_1_1comp_1_1VertexReferences.html#a2b3774a49d40877304eaabc2b4c32c6e", null ],
     [ "VERTEX_NUMBER", "classvcl_1_1comp_1_1VertexReferences.html#a0cfbced138898ce8cd50d23dcb5db48d", null ]

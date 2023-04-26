@@ -95,7 +95,7 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1comp_1_1HasVertexReferen
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">vcl::comp::HasVertexReferences Concept Reference</div></div>
+  <div class="headertitle"><div class="title">vcl::comp::HasVertexReferences Concept Reference<div class="ingroups"><a class="el" href="group__concepts.html">Concepts</a> &raquo; <a class="el" href="group__lconcepts.html">Library Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__concepts.html">Mesh Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__components.html">Components</a> &raquo; <a class="el" href="group__components__concepts.html">Components Concepts</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -115,8 +115,6 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1comp_1_1HasVertexReferen
 <div class="line">    <span class="keyword">typename</span> T::VertexType;</div>
 <div class="line">    <span class="keyword">typename</span> T::VertexIterator;</div>
 <div class="line">    <span class="keyword">typename</span> T::ConstVertexIterator;</div>
-<div class="line">    <span class="keyword">typename</span> T::VertexView;</div>
-<div class="line">    <span class="keyword">typename</span> T::ConstVertexView;</div>
 <div class="line"> </div>
 <div class="line">    { co.vertexNumber() } -&gt; std::same_as&lt;uint&gt;;</div>
 <div class="line">    { o.vertex(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;typename T::VertexType*&amp;&gt;;</div>
@@ -138,10 +136,10 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1comp_1_1HasVertexReferen
 <div class="line">    { o.vertexEnd() } -&gt; std::same_as&lt;typename T::VertexIterator&gt;;</div>
 <div class="line">    { co.vertexBegin() } -&gt; std::same_as&lt;typename T::ConstVertexIterator&gt;;</div>
 <div class="line">    { co.vertexEnd() } -&gt; std::same_as&lt;typename T::ConstVertexIterator&gt;;</div>
-<div class="line">    { o.vertices() } -&gt; std::same_as&lt;typename T::VertexView&gt;;</div>
-<div class="line">    { co.vertices() } -&gt; std::same_as&lt;typename T::ConstVertexView&gt;;</div>
+<div class="line">    o.vertices();</div>
+<div class="line">    co.vertices();</div>
 <div class="line">}</div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasVertexReferences_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasVertexReferences.html">vcl::comp::HasVertexReferences</a></div><div class="ttdoc">HasVertexReferences concept is satisfied only if a Element class provides the types and member functi...</div><div class="ttdef"><b>Definition:</b> vertex_references.h:39</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasVertexReferences_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasVertexReferences.html">vcl::comp::HasVertexReferences</a></div><div class="ttdoc">HasVertexReferences concept is satisfied only if a Element class provides the types and member functi...</div><div class="ttdef"><b>Definition:</b> vertex_references.h:41</div></div>
 <div class="ttc" id="atypes_2base_8h_html_a69aa29b598b851b0640aa225a9e5d61d"><div class="ttname"><a href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> base.h:31</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>HasVertexReferences concept is satisfied only if a Element class provides the types and member functions specified in this concept. These types and member functions allow to access to an VertexReferences component of a given element. </p>

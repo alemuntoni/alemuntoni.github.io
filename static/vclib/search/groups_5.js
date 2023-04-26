@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['point_20sampling_20algorithms_0',['Point Sampling Algorithms',['../group__point__sampling.html',1,'']]]
+  ['halfedge_20components_0',['HalfEdge Components',['../group__hedge__components.html',1,'']]],
+  ['halfedge_20concepts_1',['HalfEdge Concepts',['../group__hedge__concepts.html',1,'']]]
 ];

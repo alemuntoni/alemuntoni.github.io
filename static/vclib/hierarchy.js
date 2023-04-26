@@ -132,7 +132,9 @@ var hierarchy =
       ] ]
     ] ],
     [ "vcl::DrawableObjectVector", "classvcl_1_1DrawableObjectVector.html", null ],
+    [ "vcl::EdgeAdjFaceIterator< FaceType, CNST >", "classvcl_1_1EdgeAdjFaceIterator.html", null ],
     [ "vcl::io::ply::Element", "structvcl_1_1io_1_1ply_1_1Element.html", null ],
+    [ "vcl::ElementContainerIterator< Container, T, CNST >", "classvcl_1_1ElementContainerIterator.html", null ],
     [ "vcl::mesh::ElementContainerTriggerer", "classvcl_1_1mesh_1_1ElementContainerTriggerer.html", [
       [ "vcl::mesh::ElementContainer< T >", "classvcl_1_1mesh_1_1ElementContainer.html", [
         [ "vcl::mesh::EdgeContainer< T >", "classvcl_1_1mesh_1_1EdgeContainer.html", null ],
@@ -163,6 +165,11 @@ var hierarchy =
         [ "vcl::UnknownFileFormatException", "classvcl_1_1UnknownFileFormatException.html", null ]
       ] ]
     ] ],
+    [ "vcl::FaceAdjFaceIterator< HalfEdge, CNST >", "classvcl_1_1FaceAdjFaceIterator.html", null ],
+    [ "vcl::FaceHalfEdgeIterator< HalfEdge, CNST >", "classvcl_1_1FaceHalfEdgeIterator.html", null ],
+    [ "vcl::FaceVertexIterator< HalfEdge, CNST >", "classvcl_1_1FaceVertexIterator.html", null ],
+    [ "vcl::FaceWedgeColorIterator< HalfEdge, CNST >", "classvcl_1_1FaceWedgeColorIterator.html", null ],
+    [ "vcl::FaceWedgeTexCoordIterator< HalfEdge, CNST >", "classvcl_1_1FaceWedgeTexCoordIterator.html", null ],
     [ "std::false_type", null, [
       [ "vcl::edge::IsAnEdge< T >", "structvcl_1_1edge_1_1IsAnEdge.html", null ],
       [ "vcl::face::IsAFace< T >", "structvcl_1_1face_1_1IsAFace.html", null ],
@@ -236,24 +243,6 @@ var hierarchy =
       [ "vcl::NumberOfTypes< TypeWrapper< Args... > >", "structvcl_1_1NumberOfTypes_3_01TypeWrapper_3_01Args_8_8_8_01_4_01_4.html", null ]
     ] ],
     [ "vcl::PairComparator< Pair >", "structvcl_1_1PairComparator.html", null ],
-    [ "vcl::comp::ParentMeshPointer< MeshType >", "classvcl_1_1comp_1_1ParentMeshPointer.html", [
-      [ "vcl::Element< MeshType, Args... >", "classvcl_1_1Element.html", null ],
-      [ "vcl::Element< DcelMeshT< Scalar >, Args... >", "classvcl_1_1Element.html", null ],
-      [ "vcl::Element< EdgeMeshT< Scalar >, Args... >", "classvcl_1_1Element.html", null ],
-      [ "vcl::Element< TMPSimplePolyMesh, Args... >", "classvcl_1_1Element.html", null ],
-      [ "vcl::Element< TMPSimpleTriMesh, Args... >", "classvcl_1_1Element.html", null ],
-      [ "vcl::Element< PointCloudT< Scalar >, Args... >", "classvcl_1_1Element.html", null ],
-      [ "vcl::Element< PolyMeshT< Scalar >, Args... >", "classvcl_1_1Element.html", null ],
-      [ "vcl::Element< TriMeshT< Scalar >, Args... >", "classvcl_1_1Element.html", null ],
-      [ "vcl::Element< MeshType, Args >", "classvcl_1_1Element.html", null ]
-    ] ],
-    [ "vcl::comp::ParentMeshPointer< DcelMeshT< Scalar > >", "classvcl_1_1comp_1_1ParentMeshPointer.html", null ],
-    [ "vcl::comp::ParentMeshPointer< EdgeMeshT< Scalar > >", "classvcl_1_1comp_1_1ParentMeshPointer.html", null ],
-    [ "vcl::comp::ParentMeshPointer< PointCloudT< Scalar > >", "classvcl_1_1comp_1_1ParentMeshPointer.html", null ],
-    [ "vcl::comp::ParentMeshPointer< PolyMeshT< Scalar > >", "classvcl_1_1comp_1_1ParentMeshPointer.html", null ],
-    [ "vcl::comp::ParentMeshPointer< TMPSimplePolyMesh >", "classvcl_1_1comp_1_1ParentMeshPointer.html", null ],
-    [ "vcl::comp::ParentMeshPointer< TMPSimpleTriMesh >", "classvcl_1_1comp_1_1ParentMeshPointer.html", null ],
-    [ "vcl::comp::ParentMeshPointer< TriMeshT< Scalar > >", "classvcl_1_1comp_1_1ParentMeshPointer.html", null ],
     [ "vcl::Plane< Scalar, NORM >", "classvcl_1_1Plane.html", null ],
     [ "vcl::io::ply::PlyHeader", "classvcl_1_1io_1_1ply_1_1PlyHeader.html", null ],
     [ "vcl::Point< Scalar, N >", "classvcl_1_1Point.html", [
@@ -282,8 +271,6 @@ var hierarchy =
     [ "QMainWindow", null, [
       [ "vcl::ViewerMainWindow", "classvcl_1_1ViewerMainWindow.html", null ]
     ] ],
-    [ "vcl::RandomAccessContainer< C, N >", "classvcl_1_1RandomAccessContainer.html", null ],
-    [ "vcl::RandomAccessContainer< vcl::TexCoord< vcl::comp::Scalar >, N >", "classvcl_1_1RandomAccessContainer.html", null ],
     [ "vcl::comp::ReferencesComponentTriggerer< T >", "classvcl_1_1comp_1_1ReferencesComponentTriggerer.html", null ],
     [ "vcl::comp::ReferencesComponentTriggerer< Edge >", "classvcl_1_1comp_1_1ReferencesComponentTriggerer.html", [
       [ "vcl::comp::AdjacentEdges< Edge, N, ElementType, optional >", "classvcl_1_1comp_1_1AdjacentEdges.html", null ]
@@ -336,6 +323,10 @@ var hierarchy =
     [ "vcl::TypeWrapper<... >", "structvcl_1_1TypeWrapper.html", null ],
     [ "vcl::UndirectedNode< T >", "classvcl_1_1UndirectedNode.html", null ],
     [ "vcl::UnorderedPairComparator< T >", "structvcl_1_1UnorderedPairComparator.html", null ],
+    [ "vcl::Vector< T, N >", "classvcl_1_1Vector.html", null ],
+    [ "vcl::Vector< vcl::TexCoord< vcl::comp::Scalar >, N >", "classvcl_1_1Vector.html", null ],
+    [ "vcl::VertexAdjFaceIterator< HalfEdge, CNST >", "classvcl_1_1VertexAdjFaceIterator.html", null ],
+    [ "vcl::VertexAdjVertexIterator< HalfEdge, CNST >", "classvcl_1_1VertexAdjVertexIterator.html", null ],
     [ "vcl::mesh::VerticalComponentsVectorTuple< Comp >", "classvcl_1_1mesh_1_1VerticalComponentsVectorTuple.html", null ],
     [ "vcl::mesh::VerticalComponentsVectorTuple< Comp... >", "classvcl_1_1mesh_1_1VerticalComponentsVectorTuple.html", [
       [ "vcl::mesh::VerticalComponentsVectorTuple< TypeWrapper< Comp... > >", "classvcl_1_1mesh_1_1VerticalComponentsVectorTuple_3_01TypeWrapper_3_01Comp_8_8_8_01_4_01_4.html", null ]

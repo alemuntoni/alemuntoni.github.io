@@ -95,7 +95,7 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1comp_1_1HasAdjacentVerti
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">vcl::comp::HasAdjacentVertices Concept Reference</div></div>
+  <div class="headertitle"><div class="title">vcl::comp::HasAdjacentVertices Concept Reference<div class="ingroups"><a class="el" href="group__concepts.html">Concepts</a> &raquo; <a class="el" href="group__lconcepts.html">Library Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__concepts.html">Mesh Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__components.html">Components</a> &raquo; <a class="el" href="group__components__concepts.html">Components Concepts</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -114,8 +114,6 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1comp_1_1HasAdjacentVerti
 <div class="line">    <span class="keyword">typename</span> T::AdjacentVertexType;</div>
 <div class="line">    <span class="keyword">typename</span> T::AdjacentVertexIterator;</div>
 <div class="line">    <span class="keyword">typename</span> T::ConstAdjacentVertexIterator;</div>
-<div class="line">    <span class="keyword">typename</span> T::AdjacentVertexView;</div>
-<div class="line">    <span class="keyword">typename</span> T::ConstAdjacentVertexView;</div>
 <div class="line"> </div>
 <div class="line">    { o.adjVerticesNumber() } -&gt; std::same_as&lt;uint&gt;;</div>
 <div class="line">    { o.adjVertex(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;typename T::AdjacentVertexType*&amp;&gt;;</div>
@@ -135,10 +133,10 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1comp_1_1HasAdjacentVerti
 <div class="line">    { o.adjVertexEnd() } -&gt; std::same_as&lt;typename T::AdjacentVertexIterator&gt;;</div>
 <div class="line">    { co.adjVertexBegin() } -&gt; std::same_as&lt;typename T::ConstAdjacentVertexIterator&gt;;</div>
 <div class="line">    { co.adjVertexEnd() } -&gt; std::same_as&lt;typename T::ConstAdjacentVertexIterator&gt;;</div>
-<div class="line">    { o.adjVertices() } -&gt; std::same_as&lt;typename T::AdjacentVertexView&gt;;</div>
-<div class="line">    { co.adjVertices() } -&gt; std::same_as&lt;typename T::ConstAdjacentVertexView&gt;;</div>
+<div class="line">    o.adjVertices();</div>
+<div class="line">    co.adjVertices();</div>
 <div class="line">}</div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasAdjacentVertices_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasAdjacentVertices.html">vcl::comp::HasAdjacentVertices</a></div><div class="ttdoc">HasAdjacentVertices concept is satisfied only if a Element class provides the types and member functi...</div><div class="ttdef"><b>Definition:</b> adjacent_vertices.h:47</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasAdjacentVertices_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasAdjacentVertices.html">vcl::comp::HasAdjacentVertices</a></div><div class="ttdoc">HasAdjacentVertices concept is satisfied only if a Element class provides the types and member functi...</div><div class="ttdef"><b>Definition:</b> adjacent_vertices.h:49</div></div>
 <div class="ttc" id="atypes_2base_8h_html_a69aa29b598b851b0640aa225a9e5d61d"><div class="ttname"><a href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> base.h:31</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>HasAdjacentVertices concept is satisfied only if a Element class provides the types and member functions specified in this concept. These types and member functions allow to access to an AdjacentVertices component of a given element. </p>
