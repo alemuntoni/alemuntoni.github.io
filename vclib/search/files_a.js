@@ -1,7 +1,7 @@
 var searchData=
 [
   ['face_2ecpp_0',['face.cpp',['../face_8cpp.html',1,'']]],
-  ['face_2eh_1',['face.h',['../mesh_2elements_2face_8h.html',1,'(Global Namespace)'],['../iterators_2mesh_2face_8h.html',1,'(Global Namespace)'],['../concepts_2mesh_2elements_2face_8h.html',1,'(Global Namespace)']]],
+  ['face_2eh_1',['face.h',['../concepts_2mesh_2elements_2face_8h.html',1,'(Global Namespace)'],['../iterators_2mesh_2face_8h.html',1,'(Global Namespace)'],['../mesh_2elements_2face_8h.html',1,'(Global Namespace)']]],
   ['face_5fadj_5fface_5fiterator_2eh_2',['face_adj_face_iterator.h',['../face__adj__face__iterator_8h.html',1,'']]],
   ['face_5fbase_5fiterator_2eh_3',['face_base_iterator.h',['../face__base__iterator_8h.html',1,'']]],
   ['face_5fcomponents_2eh_4',['face_components.h',['../face__components_8h.html',1,'']]],

@@ -1,5 +1,6 @@
 var NAVTREEINDEX22 =
 {
+"group__face__concepts.html":[7,3,2,0,1],
 "group__face__concepts.html":[7,1,1,0,0,1],
 "group__hedge__components.html":[7,3,3,3],
 "group__hedge__components.html#ga08be499635aa940872ac3c58b705251f":[7,3,3,3,12],
@@ -31,9 +32,9 @@ var NAVTREEINDEX22 =
 "group__hedge__components.html#gaed4641ac56de640a798602ce633401fb":[7,3,3,3,19],
 "group__hedge__components.html#gaf7c8d97afe9239cb8f6d533cfda760bf":[7,3,3,3,24],
 "group__hedge__components.html#gaf987bec8addb1e2b77a8baa23c973880":[7,3,3,3,22],
+"group__hedge__concepts.html":[7,1,1,0,0,2],
 "group__hedge__concepts.html":[7,3,2,0,2],
 "group__hedge__concepts.html":[7,3,0,0,2],
-"group__hedge__concepts.html":[7,1,1,0,0,2],
 "group__lconcepts.html":[7,1,1],
 "group__load.html":[7,2,0],
 "group__load.html#ga00d543d48ac427d67e2e7fc19047acfd":[7,2,0,2],
@@ -55,8 +56,8 @@ var NAVTREEINDEX22 =
 "group__mesh__components.html#gab61aa8a9d92782fc117651e7d748d1a3":[7,3,3,5,3],
 "group__mesh__components.html#gaea990551fbe7c5542d4c4e90e6ed1cb2":[7,3,3,5,8],
 "group__mesh__components.html#gafe91ef8acde3dc39b3bf717a5901ff1a":[7,3,3,5,5],
-"group__mesh__concepts.html":[7,1,1,0],
 "group__mesh__concepts.html":[7,3,0],
+"group__mesh__concepts.html":[7,1,1,0],
 "group__meshes.html":[7,4],
 "group__meshes.html#gaa63bf0911d51c7377fd467056b2914ff":[7,4,2],
 "group__meshes.html#gadc7d9c9e25692d22fc9015ac3b3fa4d5":[7,4,1],
@@ -169,9 +170,9 @@ var NAVTREEINDEX22 =
 "group__vert__components.html#gafa8c7f8930beb4d9bf9522e87e411928":[7,3,3,4,54],
 "group__vert__components.html#gafb860c2fabae4e332010803ba729b1b3":[7,3,3,4,79],
 "group__vert__components.html#gafe78bbc27171bcddb1b5f115c75380f5":[7,3,3,4,77],
-"group__vert__concepts.html":[7,3,0,0,3],
 "group__vert__concepts.html":[7,3,2,0,3],
 "group__vert__concepts.html":[7,1,1,0,0,3],
+"group__vert__concepts.html":[7,3,0,0,3],
 "half__edge_8cpp.html":[11,0,0,0,8,2,8],
 "half__edge__components_8h.html":[11,0,0,0,8,2,10],
 "half__edge__components_8h_source.html":[11,0,0,0,8,2,10],
@@ -248,6 +249,5 @@ var NAVTREEINDEX22 =
 "index.html#autotoc_md0":[0],
 "inheritance_8h.html":[11,0,0,0,13,2],
 "inheritance_8h.html#a05b7c68fb0aa1b6e92e4719859adc941":[11,0,0,0,13,2,0],
-"inheritance_8h_source.html":[11,0,0,0,13,2],
-"intersection_2functions_8h.html":[11,0,0,0,0,2,2]
+"inheritance_8h_source.html":[11,0,0,0,13,2]
 };

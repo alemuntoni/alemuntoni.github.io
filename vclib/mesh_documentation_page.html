@@ -98,7 +98,12 @@ $(document).ready(function(){initNavTree('mesh_documentation_page.html',''); ini
   <div class="headertitle"><div class="title">VCLib Meshes </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md_pages_3_mesh"></a> VCLib provides a set of prebuilt mesh data structures:</p>
+<div class="textblock"><p><a class="anchor" id="md_pages_3_mesh"></a> </p>
+<h1><a class="anchor" id="autotoc_md7"></a>
+Overview</h1>
+<h2><a class="anchor" id="autotoc_md8"></a>
+Prebuilt Mesh data structures</h2>
+<p>VCLib provides a set of prebuilt mesh data structures:</p>
 <ul>
 <li><a class="el" href="group__meshes.html#gadc7d9c9e25692d22fc9015ac3b3fa4d5" title="The TriMesh class is a specialization of TriMeshT that uses double as scalar.">vcl::TriMesh</a>: a simple Triangle Mesh data structure, allows to store a container of Vertices, a container of Triangles and some other components;</li>
 <li><a class="el" href="namespacevcl.html#a416d891cfc10982e070d934a5ab00e7b">vcl::PolyMesh</a>: a Polygon Mesh data structure, allows to store a container of Vertices, a container of Polygons (no costraints on the number of vertices of each polygon) and some other components;</li>
@@ -111,13 +116,69 @@ $(document).ready(function(){initNavTree('mesh_documentation_page.html',''); ini
 <p>All these meshes store scalar values using <code>double</code> floating-point precision, but the library provides also the alternative with the <code>f</code> suffix that stores scalars using single floating point precision (<a class="el" href="group__meshes.html#gaa63bf0911d51c7377fd467056b2914ff" title="The TriMeshf class is a specialization of TriMeshT that uses float as scalar.">vcl::TriMeshf</a>, <a class="el" href="namespacevcl.html#adde03ea7837ce8e0d2e4e5aef04a1792">vcl::PolyMeshf</a>, ...).</p>
 <p>All the prebuilt data structures are documented in the <a class="el" href="group__meshes.html">Meshes</a> group.</p>
 <p>All these data structures are implemented by customizing the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">vcl::Mesh</a> data structure, which is a highly customizable mesh data structure.</p>
-<p>To explain how this customization is possible, we first need to introduce what are the main characteristics of a VCLib Mesh:</p>
+<h2><a class="anchor" id="autotoc_md9"></a>
+Mesh Structure</h2>
+<p>To explain how Mesh customization is possible, we first need to define the entities involved that compose a VCLib Mesh, and to do that we analyze the TriMesh example:</p>
+<div class="image">
+<object type="image/svg+xml" data="trimesh.svg" style="pointer-events: none;"></object>
+<div class="caption">
+TriMesh</div></div>
+    <p>In this simplified scheme of the TriMesh, there are several entities involved:</p>
 <ul>
-<li>Components: a Component represent a characteristic of something else, and it contains data structure representing that characteristic. Examples of Components are Coordinate, BoundingBox, Color, etc. Components may be part of an Element or a Mesh; All the components are listed in the <a class="el" href="group__components.html">Components</a> group, and they can be found under the <a class="el" href="namespacevcl_1_1comp.html">vcl::comp</a> namespace;</li>
-<li>Elements: an Element is a entity that is composed of one or more components. Examples of Elements are Vertex, Face, .... When an Element is an argument of a Mesh data structure, the Mesh automatically creates a Container of Elements;</li>
-<li>Containers: a Container is a collection of £lements of the same type. </li>
+<li>The overall Mesh data structure (blue);</li>
+<li>Elements (green);</li>
+<li>Element Containers (red);</li>
+<li>Components (yellow) and the data they store internally (orange);</li>
 </ul>
-</div></div><!-- contents -->
+<p>The overal Mesh data structure is composed of two Containers of Vertex and Face Elements, and some other Components that store some data. Looking the Elements in detail, we see that each Element is composed of Components: for example, a Vertex could be organized as follows:</p>
+<div class="image">
+<object type="image/svg+xml" data="trimesh_vertex.svg" style="pointer-events: none;"></object>
+<div class="caption">
+A Vertex Element</div></div>
+    <p>In this case, the Vertex Element has for example the Coordinate, Flags, Normal and Color components, each one of them stores its data and expose it trough appropriate member functions.</p>
+<p>To understand how these entities are organized and implemented, we suggest to take a look at the <a class="el" href="mesh_components_page.html">Components</a>, <a class="el" href="mesh_elements_page.html">Elements</a> and <a class="el" href="mesh_containers_page.html">Containers</a> pages.</p>
+<p>The next sections will introduce some concpets that you should know before using the VCLib Meshes.</p>
+<h2><a class="anchor" id="autotoc_md10"></a>
+Components</h2>
+<p>As you may have already noticed, components can be part of both Elements and Meshes. In fact, Components in VCLib are implemented as generic as possible, in such a way that can be used in different contexts (the main reason behind this choice is to avoid code duplication).</p>
+<p>For example, the <a class="el" href="classvcl_1_1comp_1_1Color.html" title="The Color class represents a RGBA color that will be part of an Element (e.g. Vertex,...">vcl::comp::Color</a> component can be used by Elements, but also by the Mesh (it may be useful sometimes to assign a uniform color to the Mesh). The color component exposes the member functions <code>color()</code> and <code>color() const</code>, meaning that it will be possible to call these functions from all the Elements/Meshes that will have that component:</p>
+<div class="fragment"><div class="line">AMeshType m; <span class="comment">// A Mesh type that has the Color component</span></div>
+<div class="line"> </div>
+<div class="line">m.color() = <a class="code hl_enumvalue" href="classvcl_1_1Color.html#afab49834d923b1e26589efe2eef9a135a9acef5e91bae5a2cc4e481578e3ece42">vcl::Color::Red</a>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">auto</span>&amp; v : m.vertex(0); <span class="comment">// Get a vertex from the mesh</span></div>
+<div class="line"> </div>
+<div class="line">v.color() = <a class="code hl_enumvalue" href="classvcl_1_1Color.html#afab49834d923b1e26589efe2eef9a135a1adf4b9d84921fef14b84c21232c1418">vcl::Color::Green</a>; <span class="comment">// The Vertex Element of AMeshType has the Color component</span></div>
+<div class="ttc" id="aclassvcl_1_1Color_html_afab49834d923b1e26589efe2eef9a135a1adf4b9d84921fef14b84c21232c1418"><div class="ttname"><a href="classvcl_1_1Color.html#afab49834d923b1e26589efe2eef9a135a1adf4b9d84921fef14b84c21232c1418">vcl::Color::Green</a></div><div class="ttdeci">@ Green</div><div class="ttdef"><b>Definition:</b> color.h:49</div></div>
+<div class="ttc" id="aclassvcl_1_1Color_html_afab49834d923b1e26589efe2eef9a135a9acef5e91bae5a2cc4e481578e3ece42"><div class="ttname"><a href="classvcl_1_1Color.html#afab49834d923b1e26589efe2eef9a135a9acef5e91bae5a2cc4e481578e3ece42">vcl::Color::Red</a></div><div class="ttdeci">@ Red</div><div class="ttdef"><b>Definition:</b> color.h:48</div></div>
+</div><!-- fragment --><p>When Components are part of Elements, they can actually be of two categories:</p>
+<ul>
+<li>Horizontal (default): The data of the Component is stored inside the Component itself;</li>
+<li>Vertical: The Component does not store its data, but it only exposes the member functions that allow to access it. The storage is demanded to the parent Container. When a Component is Vertical, could be:<ul>
+<li>Persistent: data is always available in the parent Container;</li>
+<li>Optional: data can be enabled and disabled at runtime, allowing to avoid memory usage for components that are not needed in some contexts.</li>
+</ul>
+</li>
+</ul>
+<p>For example, the <a class="el" href="classvcl_1_1trimesh_1_1Vertex.html">vcl::trimesh::Vertex</a> class (that is the Vertex Element of the TriMesh class), has some horizontal components (Coordinate, Flags, Normal, Color, the components that are used more often), and some optional (Adjacent Faces, Adjacent Vertices, Texture Coordinates, the one that are used only on some contexts). This means that each Vertex will store internally only the horizontal components:</p>
+<div class="image">
+<object type="image/svg+xml" data="trimesh_vertex_components.svg" style="pointer-events: none;"></object>
+<div class="caption">
+Vertex Components</div></div>
+    <p>The Vertex container will then store both the Elements and the Vertical components (if they are optional, only the enabled ones) of the Elements. For example, assuming that we enable only the Adjacent Faces of the previous Vertex Element:</p>
+<div class="image">
+<object type="image/svg+xml" data="vertex_container.svg" style="pointer-events: none;"></object>
+<div class="caption">
+Vertex Container with Optional Components</div></div>
+    <p>For the user, the usage of Horizontal or Vertical components is the same. The only thing that the user must check is wether a Component is Optional, and in that case, enable that component before using it. Every VCLib Container provides a list of member functions for all the Components that may be Optional for certain Components (note: these member functions are available <em>only when the component is actually optional</em>). These member functions are:</p>
+<ul>
+<li><code>m.isPer&lt;Element&gt;&lt;Component&gt;Enabled()</code>: returns a boolean indicating whether the optional <code>Component</code> of the <code>Element</code> is enabled;</li>
+<li><code>m.enablePer&lt;Element&gt;&lt;Component&gt;()</code>: enables the optional <code>Component</code> of the <code>Element</code>;</li>
+<li><code>m.disablePer&lt;Element&gt;&lt;Component&gt;()</code>: disable and free the memory of the optional <code>Component</code> of the <code>Element</code>.</li>
+</ul>
+<p>In the example before, to use the <code>AdjacentFaces</code> component of the <code>Vertex</code> element of a mesh <code>m</code>, you should call first:</p>
+<div class="fragment"><div class="line">m.enablePerVertexAdjacentFaces();</div>
+</div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -1,5 +1,13 @@
 var NAVTREEINDEX26 =
 {
+"namespacevcl.html#afef4c14e85563ae0db11815309e9a5cc":[8,0,0,676],
+"namespacevcl.html#aff1028f512578880b9d45e7557df8478":[8,0,0,647],
+"namespacevcl.html#aff3602e750a1d1c93374f642be47a6b0":[8,0,0,598],
+"namespacevcl_1_1Ui.html":[8,0,0,12],
+"namespacevcl_1_1comp.html":[8,0,0,0],
+"namespacevcl_1_1comp.html#a061a40d6311951a19a525e6da87424c6":[8,0,0,0,83],
+"namespacevcl_1_1comp.html#a0cce983c67de9f439f28ed828361711e":[8,0,0,0,96],
+"namespacevcl_1_1comp.html#a1071570337f91fa8e16302455d625e0b":[8,0,0,0,97],
 "namespacevcl_1_1comp.html#a18fec937cfc949c6c5302c053b2e5bfa":[8,0,0,0,101],
 "namespacevcl_1_1comp.html#a1ed313858bb6c81ffaf351c6586bdb17":[8,0,0,0,109],
 "namespacevcl_1_1comp.html#a21ca1c391ee311d202c3e172534639a1":[8,0,0,0,103],
@@ -241,13 +249,5 @@ var NAVTREEINDEX26 =
 "ply_8h.html#a78b5af43f267ecc24ce3262f59f331a2":[11,0,0,0,5,3,2,5],
 "ply_8h.html#a78b5af43f267ecc24ce3262f59f331a2a2c2a69ac0b9a0bcce9e89a0090c81abb":[11,0,0,0,5,3,2,5,2],
 "ply_8h.html#a78b5af43f267ecc24ce3262f59f331a2a3fdbeefdbce57a4469f4cdd232a128b8":[11,0,0,0,5,3,2,5,1],
-"ply_8h.html#a78b5af43f267ecc24ce3262f59f331a2ae70b5d07a29646ae8d8f906e29cbade6":[11,0,0,0,5,3,2,5,0],
-"ply_8h.html#a946f89ddbbd89f741967aa02704b842b":[11,0,0,0,5,3,2,2],
-"ply_8h.html#ab6978d1c3ac5e80bd46c2132b4567acb":[11,0,0,0,5,3,2,4],
-"ply_8h.html#ab6978d1c3ac5e80bd46c2132b4567acba2d1f6a84b6eab4e8194ff2eb034a6ac8":[11,0,0,0,5,3,2,4,5],
-"ply_8h.html#ab6978d1c3ac5e80bd46c2132b4567acba624842c17fd881ddae7326fbdbc50eb9":[11,0,0,0,5,3,2,4,0],
-"ply_8h.html#ab6978d1c3ac5e80bd46c2132b4567acba7387ee3a5f4ab94a61029c54a03db219":[11,0,0,0,5,3,2,4,2],
-"ply_8h.html#ab6978d1c3ac5e80bd46c2132b4567acbadc9fd8bcd2ebe9bc29169f770356efe0":[11,0,0,0,5,3,2,4,1],
-"ply_8h.html#ab6978d1c3ac5e80bd46c2132b4567acbae3645a9fe4a4b04d66e43a079cb35522":[11,0,0,0,5,3,2,4,3],
-"ply_8h.html#ab6978d1c3ac5e80bd46c2132b4567acbae806b3465d68d1f8ea5a455c8488c9dd":[11,0,0,0,5,3,2,4,4]
+"ply_8h.html#a78b5af43f267ecc24ce3262f59f331a2ae70b5d07a29646ae8d8f906e29cbade6":[11,0,0,0,5,3,2,5,0]
 };

@@ -1,5 +1,13 @@
 var NAVTREEINDEX24 =
 {
+"min__max_8h.html#a49a9bdba85989ec5842081c5c84d4fc7":[11,0,0,0,7,9,1],
+"min__max_8h.html#a69cc63a5ad2974d082145ed1dee7846b":[11,0,0,0,7,9,2],
+"min__max_8h.html#a9c1835cef3addd7dbae2b21a43523f3a":[11,0,0,0,7,9,3],
+"min__max_8h.html#ac11460526cb6d79733a8dfe0e15614f4":[11,0,0,0,7,9,4],
+"min__max_8h_source.html":[11,0,0,0,7,9],
+"misc_2logger_2logger_8h.html":[11,0,0,0,10,1,3],
+"misc_2logger_2logger_8h_source.html":[11,0,0,0,10,1,3],
+"misc_2logger_8h.html":[11,0,0,0,10,10],
 "misc_2logger_8h_source.html":[11,0,0,0,10,10],
 "misc_2mark_8h.html":[11,0,0,0,10,11],
 "misc_2mark_8h_source.html":[11,0,0,0,10,11],
@@ -54,8 +62,8 @@ var NAVTREEINDEX24 =
 "namespacemembers_r.html":[8,1,0,16],
 "namespacemembers_s.html":[8,1,0,17],
 "namespacemembers_t.html":[8,1,0,18],
-"namespacemembers_type.html":[8,1,3],
 "namespacemembers_type.html":[8,1,3,0],
+"namespacemembers_type.html":[8,1,3],
 "namespacemembers_type_b.html":[8,1,3,1],
 "namespacemembers_type_c.html":[8,1,3,2],
 "namespacemembers_type_d.html":[8,1,3,3],
@@ -241,13 +249,5 @@ var NAVTREEINDEX24 =
 "namespacevcl.html#a64bde18cc07f8804c0c96e5def984f26":[8,0,0,453],
 "namespacevcl.html#a64e691de6b710b9fd1dc3d5db66a6f7a":[8,0,0,340],
 "namespacevcl.html#a64e691de6b710b9fd1dc3d5db66a6f7aa0deacef785932de145d594f20e312b58":[8,0,0,340,1],
-"namespacevcl.html#a64e691de6b710b9fd1dc3d5db66a6f7aa277eb4b09247da79fe02b8a334452e67":[8,0,0,340,2],
-"namespacevcl.html#a64e691de6b710b9fd1dc3d5db66a6f7aa2b976bb23bc172fe0c729ce8f367b76e":[8,0,0,340,0],
-"namespacevcl.html#a64e691de6b710b9fd1dc3d5db66a6f7aabb582b413a6845c1f70f5198e603bd04":[8,0,0,340,3],
-"namespacevcl.html#a650b9887818f5833f6784a0a879ca2b6":[8,0,0,418],
-"namespacevcl.html#a6539e58b4183d50e78e631047cd7ad12":[8,0,0,248],
-"namespacevcl.html#a665881ae7f71a35814e41147c4bcd417":[8,0,0,307],
-"namespacevcl.html#a667ab307eae18191ae03623ea329be05":[8,0,0,492],
-"namespacevcl.html#a66bf0c5e88fa00f72ef1ed429d1bf9c8":[8,0,0,508],
-"namespacevcl.html#a66e2e1e0ec5d91e9def735ecf4f84b0e":[8,0,0,355]
+"namespacevcl.html#a64e691de6b710b9fd1dc3d5db66a6f7aa277eb4b09247da79fe02b8a334452e67":[8,0,0,340,2]
 };
