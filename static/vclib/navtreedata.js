@@ -37,10 +37,10 @@ var NAVTREE =
       [ "Let's start", "basic_concepts_page.html#autotoc_md5", null ],
       [ "Add, set and delete Elements", "basic_concepts_page.html#autotoc_md6", null ]
     ] ],
-    [ "VCLib Meshes", "mesh_documentation_page.html", null ],
+    [ "VCLib Meshes", "mesh_documentation_page.html", "mesh_documentation_page" ],
     [ "Spatial and other Data Structures", "space_page.html", [
-      [ "Spatial Data Structures", "space_page.html#autotoc_md7", null ],
-      [ "Utility and Miscellanous Data Structures", "space_page.html#autotoc_md8", null ]
+      [ "Spatial Data Structures", "space_page.html#autotoc_md11", null ],
+      [ "Utility and Miscellanous Data Structures", "space_page.html#autotoc_md12", null ]
     ] ],
     [ "Load/Save", "load_save_page.html", null ],
     [ "Todo List", "todo.html", null ],
@@ -105,17 +105,17 @@ var NAVTREEINDEX =
 "concepts_2space_2triangle_8h.html",
 "conceptvcl_1_1comp_1_1HasOptionalColor.html",
 "conceptvcl_1_1hedge_1_1HasHalfEdgeReferences.html",
-"distance_8h_source.html",
-"functions_func_x.html",
+"distance_8h.html",
+"functions_func_w.html",
 "group__face__concepts.html",
-"intersection_2functions_8h.html#a70dad48ffd4a840c11d422b0c3121393",
-"misc_2logger_8h_source.html",
-"namespacevcl.html#a6891233f7166ae9569a840d151cfe140",
-"namespacevcl_1_1comp.html#a18fec937cfc949c6c5302c053b2e5bfa",
-"ply_8h.html#ae59b1615f98338e68cfa5b0612c249c4",
-"space_2polygon_8h.html#a4a359353bfe1b3e56f12a750b2de4abc",
-"structvcl_1_1PairComparator.html#a53479db851c84c9ce895913fd860707c",
-"vertex__requirements_8cpp.html#ae5e94dd9b89e9bc4fb21701af6e788ca"
+"intersection_2functions_8h.html",
+"min__max_8h.html#a49a9bdba85989ec5842081c5c84d4fc7",
+"namespacevcl.html#a64e691de6b710b9fd1dc3d5db66a6f7aa2b976bb23bc172fe0c729ce8f367b76e",
+"namespacevcl.html#afef4c14e85563ae0db11815309e9a5cc",
+"ply_8h.html#a946f89ddbbd89f741967aa02704b842b",
+"space_2plane_8h_source.html",
+"structvcl_1_1NumberOfTypes.html",
+"vertex__requirements_8cpp.html#a7a42ac0f4ca25059bc805e9a5238a083"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

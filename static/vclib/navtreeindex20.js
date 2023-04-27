@@ -1,5 +1,6 @@
 var NAVTREEINDEX20 =
 {
+"distance_8h.html":[11,0,0,0,0,11],
 "distance_8h_source.html":[11,0,0,0,0,11],
 "distribution_8cpp.html":[11,0,0,0,7,2],
 "distribution_8h.html":[11,0,0,0,7,3],
@@ -216,8 +217,8 @@ var NAVTREEINDEX20 =
 "flag_8h.html":[11,0,0,0,0,5,7],
 "flag_8h.html#a359b253b8af6d1ae3ac24625e8ac7a56":[11,0,0,0,0,5,7,0],
 "flag_8h_source.html":[11,0,0,0,0,5,7],
-"functions.html":[10,3,0,0],
 "functions.html":[10,3,0],
+"functions.html":[10,3,0,0],
 "functions_a.html":[10,3,0,1],
 "functions_b.html":[10,3,0,2],
 "functions_c.html":[10,3,0,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX20 =
 "functions_func_s.html":[10,3,1,18],
 "functions_func_t.html":[10,3,1,19],
 "functions_func_u.html":[10,3,1,20],
-"functions_func_v.html":[10,3,1,21],
-"functions_func_w.html":[10,3,1,22]
+"functions_func_v.html":[10,3,1,21]
 };
