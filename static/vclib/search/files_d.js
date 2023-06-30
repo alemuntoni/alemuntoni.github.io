@@ -3,7 +3,7 @@ var searchData=
   ['icosahedron_2ecpp_0',['icosahedron.cpp',['../icosahedron_8cpp.html',1,'']]],
   ['icosahedron_2eh_1',['icosahedron.h',['../icosahedron_8h.html',1,'']]],
   ['image_2ecpp_2',['image.cpp',['../image_8cpp.html',1,'']]],
-  ['image_2eh_3',['image.h',['../image_2image_8h.html',1,'(Global Namespace)'],['../image_8h.html',1,'(Global Namespace)']]],
+  ['image_2eh_3',['image.h',['../space_2image_8h.html',1,'(Global Namespace)'],['../image_8h.html',1,'(Global Namespace)']]],
   ['index_2emd_4',['index.md',['../index_8md.html',1,'']]],
   ['inheritance_2eh_5',['inheritance.h',['../inheritance_8h.html',1,'']]],
   ['intersection_2eh_6',['intersection.h',['../intersection_8h.html',1,'']]],

@@ -126,67 +126,68 @@ $(document).ready(function(){initNavTree('concepts_2mesh_2components_2wedge__tex
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &quot;<a class="code" href="component_8h.html">component.h</a>&quot;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &quot;<a class="code" href="mesh_2components_2bases_2component_8h.html">component.h</a>&quot;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl_1_1comp.html">vcl::comp</a> {</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1HasWedgeTexCoords.html">   49</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasWedgeTexCoords.html">HasWedgeTexCoords</a> = <span class="keyword">requires</span>(</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    T o,</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">const</span> T&amp; co,</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">const</span> <span class="keyword">typename</span> T::WedgeTexCoordType&amp; t,</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    std::vector&lt;typename T::WedgeTexCoordType&gt; v)</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>{</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    T::WEDGE_TEX_COORD_NUMBER;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">typename</span> T::WedgeTexCoordType;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">typename</span> T::WedgeTexCoordsIterator;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">typename</span> T::ConstWedgeTexCoordsIterator;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    { o.wedgeTexCoord(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;typename T::WedgeTexCoordType&amp;&gt;;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    { co.wedgeTexCoord(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;const typename T::WedgeTexCoordType&amp;&gt;;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    { o.wedgeTexCoordMod(<span class="keywordtype">int</span>()) } -&gt; std::same_as&lt;typename T::WedgeTexCoordType&amp;&gt;;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    { co.wedgeTexCoordMod(<span class="keywordtype">int</span>()) } -&gt; std::same_as&lt;const typename T::WedgeTexCoordType&amp;&gt;;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    { o.setWedgeTexCoord(t, <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    { o.setWedgeTexCoords(v) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    { o.textureIndex() } -&gt; std::same_as&lt;short&amp;&gt;;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    { co.textureIndex() } -&gt; std::same_as&lt;short&gt;;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    { co.isWedgeTexCoordsEnabled() } -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    { o.wedgeTexCoordBegin() } -&gt; std::same_as&lt;typename T::WedgeTexCoordsIterator&gt;;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    { o.wedgeTexCoordEnd() } -&gt; std::same_as&lt;typename T::WedgeTexCoordsIterator&gt;;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    { co.wedgeTexCoordBegin() } -&gt; std::same_as&lt;typename T::ConstWedgeTexCoordsIterator&gt;;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    { co.wedgeTexCoordEnd() } -&gt; std::same_as&lt;typename T::ConstWedgeTexCoordsIterator&gt;;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    o.wedgeTexCoords();</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    co.wedgeTexCoords();</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>};</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1HasWedgeTexCoordsComponent.html">   88</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasWedgeTexCoordsComponent.html">HasWedgeTexCoordsComponent</a> = <span class="keyword">requires</span>(T o)</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>{</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keyword">requires</span> <a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasWedgeTexCoords.html">HasWedgeTexCoords&lt;T&gt;</a>;</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keyword">typename</span> T::WedgeTexCoordsComponent;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>};</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1HasOptionalWedgeTexCoords.html">  101</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasOptionalWedgeTexCoords.html">HasOptionalWedgeTexCoords</a> =</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasWedgeTexCoordsComponent.html">HasWedgeTexCoordsComponent&lt;T&gt;</a> &amp;&amp; <a class="code hl_concept" href="conceptvcl_1_1comp_1_1IsOptionalComponent.html">IsOptionalComponent&lt;typename T::WedgeTexCoordsComponent&gt;</a>;</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1HasRightNumberOfWedgeTexCoords.html">  115</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasRightNumberOfWedgeTexCoords.html">HasRightNumberOfWedgeTexCoords</a> = T::VERTEX_NUMBER == T::WEDGE_TEX_COORD_NUMBER;</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1SanityCheckWedgeTexCoords.html">  129</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1SanityCheckWedgeTexCoords.html">SanityCheckWedgeTexCoords</a> = !<a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasWedgeTexCoords.html">HasWedgeTexCoords&lt;T&gt;</a> || <a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasRightNumberOfWedgeTexCoords.html">HasRightNumberOfWedgeTexCoords&lt;T&gt;</a>;</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>} <span class="comment">// namespace vcl::comp</span></div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="preprocessor">#endif </span><span class="comment">// VCL_CONCEPTS_MESH_COMPONENTS_WEDGE_TEX_COORDS_H</span></div>
-<div class="ttc" id="acomponent_8h_html"><div class="ttname"><a href="component_8h.html">component.h</a></div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasOptionalWedgeTexCoords_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasOptionalWedgeTexCoords.html">vcl::comp::HasOptionalWedgeTexCoords</a></div><div class="ttdoc">HasOptionalWedgeTexCoords concept is satisfied only if a class satisfied the HasWedgeCoordsComponent ...</div><div class="ttdef"><b>Definition:</b> wedge_tex_coords.h:101</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasRightNumberOfWedgeTexCoords_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasRightNumberOfWedgeTexCoords.html">vcl::comp::HasRightNumberOfWedgeTexCoords</a></div><div class="ttdoc">HasRightNumberOfWedgeTexCoords concept.</div><div class="ttdef"><b>Definition:</b> wedge_tex_coords.h:115</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasWedgeTexCoordsComponent_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasWedgeTexCoordsComponent.html">vcl::comp::HasWedgeTexCoordsComponent</a></div><div class="ttdoc">HasWedgeTexCoordsComponent concept.</div><div class="ttdef"><b>Definition:</b> wedge_tex_coords.h:88</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasWedgeTexCoords_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasWedgeTexCoords.html">vcl::comp::HasWedgeTexCoords</a></div><div class="ttdoc">HasWedgeTexCoords concept is satisfied only if a Element class provides the types and member function...</div><div class="ttdef"><b>Definition:</b> wedge_tex_coords.h:49</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1IsOptionalComponent_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1IsOptionalComponent.html">vcl::comp::IsOptionalComponent</a></div><div class="ttdef"><b>Definition:</b> component.h:57</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1SanityCheckWedgeTexCoords_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1SanityCheckWedgeTexCoords.html">vcl::comp::SanityCheckWedgeTexCoords</a></div><div class="ttdoc">SanityCheckWedgeTexCoords concept.</div><div class="ttdef"><b>Definition:</b> wedge_tex_coords.h:129</div></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1HasWedgeTexCoords.html">   51</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasWedgeTexCoords.html">HasWedgeTexCoords</a> = <span class="keyword">requires</span>(</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    T o,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">const</span> T&amp; co,</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">const</span> <span class="keyword">typename</span> T::WedgeTexCoordType&amp; t,</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    std::vector&lt;typename T::WedgeTexCoordType&gt; v)</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>{</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    T::WEDGE_TEX_COORD_NUMBER;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">typename</span> T::WedgeTexCoordType;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">typename</span> T::WedgeTexCoordsIterator;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">typename</span> T::ConstWedgeTexCoordsIterator;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    { o.wedgeTexCoord(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;typename T::WedgeTexCoordType&amp;&gt;;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    { co.wedgeTexCoord(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        std::same_as&lt;const typename T::WedgeTexCoordType&amp;&gt;;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    { o.wedgeTexCoordMod(<span class="keywordtype">int</span>()) } -&gt;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        std::same_as&lt;typename T::WedgeTexCoordType&amp;&gt;;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    { co.wedgeTexCoordMod(<span class="keywordtype">int</span>()) } -&gt;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        std::same_as&lt;const typename T::WedgeTexCoordType&amp;&gt;;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    { o.setWedgeTexCoord(t, <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    { o.setWedgeTexCoords(v) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    { o.textureIndex() } -&gt; std::same_as&lt;short&amp;&gt;;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    { co.textureIndex() } -&gt; std::same_as&lt;short&gt;;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    { co.isWedgeTexCoordsEnabled() } -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    { o.wedgeTexCoordBegin() } -&gt;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        std::same_as&lt;typename T::WedgeTexCoordsIterator&gt;;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    { o.wedgeTexCoordEnd() } -&gt;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        std::same_as&lt;typename T::WedgeTexCoordsIterator&gt;;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    { co.wedgeTexCoordBegin() } -&gt;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        std::same_as&lt;typename T::ConstWedgeTexCoordsIterator&gt;;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    { co.wedgeTexCoordEnd() } -&gt;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        std::same_as&lt;typename T::ConstWedgeTexCoordsIterator&gt;;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    o.wedgeTexCoords();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    co.wedgeTexCoords();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>};</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1HasOptionalWedgeTexCoords.html">   95</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasOptionalWedgeTexCoords.html">HasOptionalWedgeTexCoords</a> =</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasWedgeTexCoords.html">HasWedgeTexCoords&lt;T&gt;</a> &amp;&amp; <a class="code hl_concept" href="conceptvcl_1_1comp_1_1IsOptionalComponent.html">IsOptionalComponent&lt;typename T::WedgeTexCoords&gt;</a>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1HasRightNumberOfWedgeTexCoords.html">  109</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasRightNumberOfWedgeTexCoords.html">HasRightNumberOfWedgeTexCoords</a> =</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    T::VERTEX_NUMBER == T::WEDGE_TEX_COORD_NUMBER;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1SanityCheckWedgeTexCoords.html">  125</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1SanityCheckWedgeTexCoords.html">SanityCheckWedgeTexCoords</a> =</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    !<a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasWedgeTexCoords.html">HasWedgeTexCoords&lt;T&gt;</a> || <a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasRightNumberOfWedgeTexCoords.html">HasRightNumberOfWedgeTexCoords&lt;T&gt;</a>;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>} <span class="comment">// namespace vcl::comp</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="preprocessor">#endif </span><span class="comment">// VCL_CONCEPTS_MESH_COMPONENTS_WEDGE_TEX_COORDS_H</span></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasOptionalWedgeTexCoords_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasOptionalWedgeTexCoords.html">vcl::comp::HasOptionalWedgeTexCoords</a></div><div class="ttdoc">HasOptionalWedgeTexCoords concept is satisfied only if a class satisfied the HasWedgeCoordsComponent ...</div><div class="ttdef"><b>Definition:</b> wedge_tex_coords.h:95</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasRightNumberOfWedgeTexCoords_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasRightNumberOfWedgeTexCoords.html">vcl::comp::HasRightNumberOfWedgeTexCoords</a></div><div class="ttdoc">HasRightNumberOfWedgeTexCoords concept.</div><div class="ttdef"><b>Definition:</b> wedge_tex_coords.h:109</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasWedgeTexCoords_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasWedgeTexCoords.html">vcl::comp::HasWedgeTexCoords</a></div><div class="ttdoc">HasWedgeTexCoords concept is satisfied only if a Element class provides the types and member function...</div><div class="ttdef"><b>Definition:</b> wedge_tex_coords.h:51</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1IsOptionalComponent_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1IsOptionalComponent.html">vcl::comp::IsOptionalComponent</a></div><div class="ttdef"><b>Definition:</b> component.h:125</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1SanityCheckWedgeTexCoords_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1SanityCheckWedgeTexCoords.html">vcl::comp::SanityCheckWedgeTexCoords</a></div><div class="ttdoc">SanityCheckWedgeTexCoords concept.</div><div class="ttdef"><b>Definition:</b> wedge_tex_coords.h:125</div></div>
+<div class="ttc" id="amesh_2components_2bases_2component_8h_html"><div class="ttname"><a href="mesh_2components_2bases_2component_8h.html">component.h</a></div></div>
 <div class="ttc" id="anamespacevcl_1_1comp_html"><div class="ttname"><a href="namespacevcl_1_1comp.html">vcl::comp</a></div><div class="ttdef"><b>Definition:</b> adjacent_edges.h:31</div></div>
 <div class="ttc" id="atypes_2base_8h_html_a69aa29b598b851b0640aa225a9e5d61d"><div class="ttname"><a href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> base.h:31</div></div>
 </div><!-- fragment --></div><!-- contents -->

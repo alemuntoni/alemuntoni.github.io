@@ -127,7 +127,7 @@ Functions</h2></td></tr>
 <tr class="memitem:gabce801a437aa06438837271fde16cb5a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__clean.html#gabce801a437aa06438837271fde16cb5a">vcl::removeDuplicatedVertices</a> (MeshType &amp;m)</td></tr>
 <tr class="memdesc:gabce801a437aa06438837271fde16cb5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks as deleted the duplicate vertices of the mesh, by looking only at their spatial positions.  <br /></td></tr>
 <tr class="separator:gabce801a437aa06438837271fde16cb5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6e771a075c5db04274b407af212d2c2b"><td class="memTemplParams" colspan="2">template&lt;TriangleMeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga6e771a075c5db04274b407af212d2c2b"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
 <tr class="memitem:ga6e771a075c5db04274b407af212d2c2b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__clean.html#ga6e771a075c5db04274b407af212d2c2b">vcl::removeDuplicatedFaces</a> (MeshType &amp;m)</td></tr>
 <tr class="memdesc:ga6e771a075c5db04274b407af212d2c2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all duplicate faces of the mesh by looking only at their vertex references.  <br /></td></tr>
 <tr class="separator:ga6e771a075c5db04274b407af212d2c2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -186,7 +186,7 @@ requires <a class="el" href="conceptvcl_1_1HasPerFaceAdjacentFaces.html">vcl::Ha
 </div><div class="memdoc">
 
 <p>Computes the connected components of the input mesh based on its topology. </p>
-<p>This function computes the connected components of the input mesh based on its topology, and returns a vector of sets, where each set represents a connected component and contains the face indices of the mesh that compose it. The function uses a depth-first search algorithm to traverse the mesh and find the connected components. The function requires the input MeshType to have per-face adjacent faces, and uses the <code><a class="el" href="namespacevcl.html#aff3602e750a1d1c93374f642be47a6b0">vcl::requirePerFaceAdjacentFaces</a></code> function to enforce this requirement.</p>
+<p>This function computes the connected components of the input mesh based on its topology, and returns a vector of sets, where each set represents a connected component and contains the face indices of the mesh that compose it. The function uses a depth-first search algorithm to traverse the mesh and find the connected components. The function requires the input MeshType to have per-face adjacent faces, and uses the <code><a class="el" href="group__face__requirements.html#gaff3602e750a1d1c93374f642be47a6b0" title="This function asserts that a Mesh has a FaceContainer, the Face has a AdjacentFaces Component,...">vcl::requirePerFaceAdjacentFaces</a></code> function to enforce this requirement.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">MeshType</td><td>The type of the input <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. It must satisfy the FaceMeshConcept and have per-face adjacent faces.</td></tr>
@@ -295,7 +295,7 @@ requires <a class="el" href="conceptvcl_1_1HasPerFaceAdjacentFaces.html">vcl::Ha
 </div><div class="memdoc">
 
 <p>Counts the number of holes in the input mesh. </p>
-<p>This function counts the number of holes in the input mesh, where a hole is defined as a closed loop of border edges. The function uses a depth-first search algorithm to traverse the mesh and find all the holes. The function requires the input MeshType to have per-face adjacent faces, and uses the <code><a class="el" href="namespacevcl.html#aff3602e750a1d1c93374f642be47a6b0">vcl::requirePerFaceAdjacentFaces</a></code> function to enforce this requirement.</p>
+<p>This function counts the number of holes in the input mesh, where a hole is defined as a closed loop of border edges. The function uses a depth-first search algorithm to traverse the mesh and find all the holes. The function requires the input MeshType to have per-face adjacent faces, and uses the <code><a class="el" href="group__face__requirements.html#gaff3602e750a1d1c93374f642be47a6b0" title="This function asserts that a Mesh has a FaceContainer, the Face has a AdjacentFaces Component,...">vcl::requirePerFaceAdjacentFaces</a></code> function to enforce this requirement.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">MeshType</td><td>The type of the input <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. It must satisfy the FaceMeshConcept and have per-face adjacent faces.</td></tr>
@@ -473,7 +473,7 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;TriangleMeshConcept MeshType&gt; </div>
+template&lt;FaceMeshConcept MeshType&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> vcl::removeDuplicatedFaces </td>

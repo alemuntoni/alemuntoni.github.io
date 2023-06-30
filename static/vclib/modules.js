@@ -6,5 +6,6 @@ var modules =
     [ "Mesh", "group__mesh.html", "group__mesh" ],
     [ "Meshes", "group__meshes.html", "group__meshes" ],
     [ "Miscellaneous", "group__miscellaneous.html", "group__miscellaneous" ],
-    [ "Spatial Data Structures", "group__space.html", "group__space" ]
+    [ "Spatial Data Structures", "group__space.html", "group__space" ],
+    [ "Range Views", "group__views.html", "group__views" ]
 ];

@@ -124,25 +124,25 @@ $(document).ready(function(){initNavTree('concepts_2mesh_2components_2bounding__
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef VCL_CONCEPTS_MESH_COMPONENTS_BOUNDING_BOX_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define VCL_CONCEPTS_MESH_COMPONENTS_BOUNDING_BOX_H</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;<a class="code" href="component_8h.html">component.h</a>&quot;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;<a class="code" href="mesh_2components_2bases_2component_8h.html">component.h</a>&quot;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl_1_1comp.html">vcl::comp</a> {</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1HasBoundingBox.html">   39</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasBoundingBox.html">HasBoundingBox</a> = <span class="keyword">requires</span>(</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    T o,</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">const</span> T&amp; co)</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>{</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">typename</span> T::BoundingBoxType;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    { o.boundingBox() } -&gt; std::same_as&lt;typename T::BoundingBoxType&amp;&gt;;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    { co.boundingBox() } -&gt; std::same_as&lt;const typename T::BoundingBoxType&amp;&gt;;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>};</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>} <span class="comment">// namespace vcl::comp</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#endif </span><span class="comment">// VCL_MESH_COMPONENTS_CONCEPTS_BOUNDING_BOX_H</span></div>
-<div class="ttc" id="acomponent_8h_html"><div class="ttname"><a href="component_8h.html">component.h</a></div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasBoundingBox_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasBoundingBox.html">vcl::comp::HasBoundingBox</a></div><div class="ttdoc">HasBoundingBox concept is satisfied only if a Element or Mesh class provides the member functions spe...</div><div class="ttdef"><b>Definition:</b> bounding_box.h:39</div></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1HasBoundingBox.html">   40</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasBoundingBox.html">HasBoundingBox</a> = <span class="keyword">requires</span>(</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    T o,</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">const</span> T&amp; co)</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>{</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">typename</span> T::BoundingBoxType;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    { o.boundingBox() } -&gt; std::same_as&lt;typename T::BoundingBoxType&amp;&gt;;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    { co.boundingBox() } -&gt; std::same_as&lt;const typename T::BoundingBoxType&amp;&gt;;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>};</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>} <span class="comment">// namespace vcl::comp</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#endif </span><span class="comment">// VCL_MESH_COMPONENTS_CONCEPTS_BOUNDING_BOX_H</span></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasBoundingBox_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasBoundingBox.html">vcl::comp::HasBoundingBox</a></div><div class="ttdoc">HasBoundingBox concept is satisfied only if a Element or Mesh class provides the member functions spe...</div><div class="ttdef"><b>Definition:</b> bounding_box.h:40</div></div>
+<div class="ttc" id="amesh_2components_2bases_2component_8h_html"><div class="ttname"><a href="mesh_2components_2bases_2component_8h.html">component.h</a></div></div>
 <div class="ttc" id="anamespacevcl_1_1comp_html"><div class="ttname"><a href="namespacevcl_1_1comp.html">vcl::comp</a></div><div class="ttdef"><b>Definition:</b> adjacent_edges.h:31</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

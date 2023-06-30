@@ -97,13 +97,14 @@ $(document).ready(function(){initNavTree('classvcl_1_1comp_1_1CustomComponents.h
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classvcl_1_1comp_1_1CustomComponents-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">vcl::comp::CustomComponents&lt; ElementType &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__components.html">Components</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>The <a class="el" href="classvcl_1_1comp_1_1CustomComponents.html" title="The CustomComponents class is a container of custom and additional components associated to an Elemen...">CustomComponents</a> class is a container of custom and additional components associated to an <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> (e.g. <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class.">Vertex</a>, <a class="el" href="classvcl_1_1Face.html" title="The Face class.">Face</a>).  
+<p>The <a class="el" href="classvcl_1_1comp_1_1CustomComponents.html" title="The CustomComponents Component is a container of additional components associated to an Element (e....">CustomComponents</a> <a class="el" href="classvcl_1_1comp_1_1Component.html" title="The Component class is the base class for almost all the components of VCLib (with the exception of C...">Component</a> is a container of additional components associated to an <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> (e.g. <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a>, <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a>).  
  <a href="classvcl_1_1comp_1_1CustomComponents.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="mesh_2components_2custom__components_8h_source.html">vclib/mesh/components/custom_components.h</a>&gt;</code></p>
@@ -112,14 +113,14 @@ $(document).ready(function(){initNavTree('classvcl_1_1comp_1_1CustomComponents.h
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1c981e4797886c9a573adf1b6638f36f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1CustomComponents.html#a1c981e4797886c9a573adf1b6638f36f">hasCustomComponent</a> (const std::string &amp;attrName) const</td></tr>
 <tr class="separator:a1c981e4797886c9a573adf1b6638f36f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67363391eb96b9d6ce2b79e782462c5c"><td class="memTemplParams" colspan="2">template&lt;typename CompType &gt; <br />
-requires (!IS_VERTICAL)</td></tr>
-<tr class="memitem:a67363391eb96b9d6ce2b79e782462c5c"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1CustomComponents.html#a67363391eb96b9d6ce2b79e782462c5c">isCustomComponentOfType</a> (const std::string &amp;compName) const</td></tr>
-<tr class="separator:a67363391eb96b9d6ce2b79e782462c5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf46c4baee5b724f711e803d80931ab8"><td class="memTemplParams" colspan="2">template&lt;typename CompType &gt; <br />
-requires (!IS_VERTICAL)</td></tr>
-<tr class="memitem:abf46c4baee5b724f711e803d80931ab8"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1CustomComponents.html#abf46c4baee5b724f711e803d80931ab8">customComponentNamesOfType</a> () const</td></tr>
-<tr class="separator:abf46c4baee5b724f711e803d80931ab8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a860a63fcaf32fbbaa5eeb78a5bf35c69"><td class="memTemplParams" colspan="2">template&lt;typename CompType &gt; </td></tr>
+<tr class="memitem:a860a63fcaf32fbbaa5eeb78a5bf35c69"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1CustomComponents.html#a860a63fcaf32fbbaa5eeb78a5bf35c69">isCustomComponentOfType</a> (const std::string &amp;compName) const</td></tr>
+<tr class="separator:a860a63fcaf32fbbaa5eeb78a5bf35c69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe661041fb8d1a0372f51bbf62e0920f"><td class="memItemLeft" align="right" valign="top">std::type_index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1CustomComponents.html#abe661041fb8d1a0372f51bbf62e0920f">customComponentType</a> (const std::string &amp;compName) const</td></tr>
+<tr class="separator:abe661041fb8d1a0372f51bbf62e0920f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa76844d8e96648aebacf9d46bf6c0cbc"><td class="memTemplParams" colspan="2">template&lt;typename CompType &gt; </td></tr>
+<tr class="memitem:aa76844d8e96648aebacf9d46bf6c0cbc"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1CustomComponents.html#aa76844d8e96648aebacf9d46bf6c0cbc">customComponentNamesOfType</a> () const</td></tr>
+<tr class="separator:aa76844d8e96648aebacf9d46bf6c0cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a032121d7217614d88df5fef5cfe8f3bb"><td class="memTemplParams" colspan="2">template&lt;typename CompType &gt; </td></tr>
 <tr class="memitem:a032121d7217614d88df5fef5cfe8f3bb"><td class="memTemplItemLeft" align="right" valign="top">const CompType &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1CustomComponents.html#a032121d7217614d88df5fef5cfe8f3bb">customComponent</a> (const std::string &amp;attrName) const</td></tr>
 <tr class="separator:a032121d7217614d88df5fef5cfe8f3bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,6 +134,11 @@ requires (!IS_VERTICAL)</td></tr>
 <tr class="memitem:af343f08e32f9a2979ba49f5c35ede8cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1CustomComponents.html#af343f08e32f9a2979ba49f5c35ede8cf">deleteCustomComponent</a> (const std::string &amp;compName)</td></tr>
 <tr class="separator:af343f08e32f9a2979ba49f5c35ede8cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a1b1a4a9d9f26d944a58cfab4e75200d5"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1CustomComponents.html#a1b1a4a9d9f26d944a58cfab4e75200d5">COMPONENT_TYPE</a> = <a class="el" href="namespacevcl.html#a0274eac92d4c318a35911da5b7bd4aa2a14a144ed134908cae680884da549edfa">CUSTOM_COMPONENTS</a></td></tr>
+<tr class="separator:a1b1a4a9d9f26d944a58cfab4e75200d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:aab6d151d3b38de1300317370a10ba8ae"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="classvcl_1_1Element.html">Element</a> &gt; </td></tr>
@@ -141,7 +147,21 @@ Protected Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename ElementType = void&gt;<br />
-class vcl::comp::CustomComponents&lt; ElementType &gt;</div><p>The <a class="el" href="classvcl_1_1comp_1_1CustomComponents.html" title="The CustomComponents class is a container of custom and additional components associated to an Elemen...">CustomComponents</a> class is a container of custom and additional components associated to an <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> (e.g. <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class.">Vertex</a>, <a class="el" href="classvcl_1_1Face.html" title="The Face class.">Face</a>). </p>
+class vcl::comp::CustomComponents&lt; ElementType &gt;</div><p>The <a class="el" href="classvcl_1_1comp_1_1CustomComponents.html" title="The CustomComponents Component is a container of additional components associated to an Element (e....">CustomComponents</a> <a class="el" href="classvcl_1_1comp_1_1Component.html" title="The Component class is the base class for almost all the components of VCLib (with the exception of C...">Component</a> is a container of additional components associated to an <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> (e.g. <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a>, <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a>). </p>
+<p><a class="el" href="classvcl_1_1comp_1_1CustomComponents.html" title="The CustomComponents Component is a container of additional components associated to an Element (e....">CustomComponents</a> are components that can be added at runtime. Each custom component is composed of:</p><ul>
+<li>a name, which is an std::string</li>
+<li>a type, which needs to be known at compile time</li>
+</ul>
+<p>E.g., to access to a CustomComponent of type 'int' called "myCustomComponent" from an element el:</p>
+<div class="fragment"><div class="line">el.customComponent&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;myCustomComponent&quot;</span>);</div>
+</div><!-- fragment --><p><a class="el" href="classvcl_1_1comp_1_1CustomComponents.html" title="The CustomComponents Component is a container of additional components associated to an Element (e....">CustomComponents</a> can be stored horizontally or vertically.</p>
+<p>If the <a class="el" href="classvcl_1_1comp_1_1CustomComponents.html" title="The CustomComponents Component is a container of additional components associated to an Element (e....">CustomComponents</a> component is horizontal (this happens mostly on <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> data structures), a custom component can be added or removed from the object itself.</p>
+<p>For example, having a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> m of type 'MyMesh' that has horizontal <a class="el" href="classvcl_1_1comp_1_1CustomComponents.html" title="The CustomComponents Component is a container of additional components associated to an Element (e....">CustomComponents</a>:</p>
+<div class="fragment"><div class="line">m.addCustomComponent&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;myCustomComponent&quot;</span>);</div>
+</div><!-- fragment --><p>Otherwise, if the <a class="el" href="classvcl_1_1comp_1_1CustomComponents.html" title="The CustomComponents Component is a container of additional components associated to an Element (e....">CustomComponents</a> component is vertical (this happens mostly on <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> types, like <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a>, <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a>...), the addition/deletion of a custom component cannot be performed by the object, because its storage its managed by the Container of objects (that must provide a proper member function to do that).</p>
+<p>For exampl, having a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> m of type MyMesh that has a VertexContainer where its <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> has (vertical) <a class="el" href="classvcl_1_1comp_1_1CustomComponents.html" title="The CustomComponents Component is a container of additional components associated to an Element (e....">CustomComponents</a>:</p>
+<div class="fragment"><div class="line">m.addPerVertexCustomComponent&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;myCustomComponent&quot;</span>);</div>
+</div><!-- fragment --><p>After this call, all the Vertices of the VertexContainer will have their custom component of type int called "myCustomComponent". The member function addPerVertexCustomComponent is provided by the VertexContainer and can be accessed directly from the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a10272be1d6445283d517d959e0bba3f5" name="a10272be1d6445283d517d959e0bba3f5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a10272be1d6445283d517d959e0bba3f5">&#9670;&#160;</a></span>addCustomComponent()</h2>
@@ -228,32 +248,40 @@ template&lt;typename CompType &gt; </div>
 
 </div>
 </div>
-<a id="abf46c4baee5b724f711e803d80931ab8" name="abf46c4baee5b724f711e803d80931ab8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf46c4baee5b724f711e803d80931ab8">&#9670;&#160;</a></span>customComponentNamesOfType()</h2>
+<a id="aa76844d8e96648aebacf9d46bf6c0cbc" name="aa76844d8e96648aebacf9d46bf6c0cbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa76844d8e96648aebacf9d46bf6c0cbc">&#9670;&#160;</a></span>customComponentNamesOfType()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ElementType  = void&gt; </div>
+template&lt;typename El &gt; </div>
 <div class="memtemplate">
-template&lt;typename CompType &gt; <br />
-requires (!IS_VERTICAL)</div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
+template&lt;typename CompType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; std::string &gt; <a class="el" href="classvcl_1_1comp_1_1CustomComponents.html">vcl::comp::CustomComponents</a>&lt; ElementType &gt;::customComponentNamesOfType </td>
+          <td class="memname">std::vector&lt; std::string &gt; <a class="el" href="classvcl_1_1comp_1_1CustomComponents.html">vcl::comp::CustomComponents</a>&lt; El &gt;::customComponentNamesOfType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe661041fb8d1a0372f51bbf62e0920f" name="abe661041fb8d1a0372f51bbf62e0920f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe661041fb8d1a0372f51bbf62e0920f">&#9670;&#160;</a></span>customComponentType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename El &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::type_index <a class="el" href="classvcl_1_1comp_1_1CustomComponents.html">vcl::comp::CustomComponents</a>&lt; El &gt;::customComponentType </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>compName</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
@@ -336,31 +364,47 @@ template&lt;typename <a class="el" href="classvcl_1_1Element.html">Element</a> &
 
 </div>
 </div>
-<a id="a67363391eb96b9d6ce2b79e782462c5c" name="a67363391eb96b9d6ce2b79e782462c5c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67363391eb96b9d6ce2b79e782462c5c">&#9670;&#160;</a></span>isCustomComponentOfType()</h2>
+<a id="a860a63fcaf32fbbaa5eeb78a5bf35c69" name="a860a63fcaf32fbbaa5eeb78a5bf35c69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a860a63fcaf32fbbaa5eeb78a5bf35c69">&#9670;&#160;</a></span>isCustomComponentOfType()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename ElementType  = void&gt; </div>
+template&lt;typename El &gt; </div>
 <div class="memtemplate">
-template&lt;typename CompType &gt; <br />
-requires (!IS_VERTICAL)</div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
+template&lt;typename CompType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classvcl_1_1comp_1_1CustomComponents.html">vcl::comp::CustomComponents</a>&lt; ElementType &gt;::isCustomComponentOfType </td>
+          <td class="memname">bool <a class="el" href="classvcl_1_1comp_1_1CustomComponents.html">vcl::comp::CustomComponents</a>&lt; El &gt;::isCustomComponentOfType </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>compName</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a1b1a4a9d9f26d944a58cfab4e75200d5" name="a1b1a4a9d9f26d944a58cfab4e75200d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b1a4a9d9f26d944a58cfab4e75200d5">&#9670;&#160;</a></span>COMPONENT_TYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ElementType  = void&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> <a class="el" href="classvcl_1_1comp_1_1CustomComponents.html">vcl::comp::CustomComponents</a>&lt; ElementType &gt;::COMPONENT_TYPE = <a class="el" href="namespacevcl.html#a0274eac92d4c318a35911da5b7bd4aa2a14a144ed134908cae680884da549edfa">CUSTOM_COMPONENTS</a></td>
+        </tr>
+      </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visual Computing Library: vcl::comp::AdjacentEdges&lt; Edge, N, ElementType, optional &gt; Class Template Reference</title>
+<title>Visual Computing Library: vcl::comp::AdjacentEdges&lt; Edge, N, TTVN, ElementType, OPT &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -101,201 +101,220 @@ $(document).ready(function(){initNavTree('classvcl_1_1comp_1_1AdjacentEdges.html
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classvcl_1_1comp_1_1AdjacentEdges-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">vcl::comp::AdjacentEdges&lt; Edge, N, ElementType, optional &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__components.html">Components</a></div></div></div>
+  <div class="headertitle"><div class="title">vcl::comp::AdjacentEdges&lt; Edge, N, TTVN, ElementType, OPT &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__components.html">Components</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>The <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html" title="The AdjacentEdges class is a container of Edge references. It could be used by any Element to save ad...">AdjacentEdges</a> class is a container of <a class="el" href="classvcl_1_1Edge.html" title="The Edge class.">Edge</a> references. It could be used by any <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> to save adjacencies information (also the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class.">Edge</a> element itself).  
+<p>The <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html" title="The AdjacentEdges class is a container of Edge pointers. It could be used by any Element to save adja...">AdjacentEdges</a> class is a container of <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> pointers. It could be used by any <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> to save adjacencies information (also the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> element itself).  
  <a href="classvcl_1_1comp_1_1AdjacentEdges.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="mesh_2components_2adjacent__edges_8h_source.html">vclib/mesh/components/adjacent_edges.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for vcl::comp::AdjacentEdges&lt; Edge, N, ElementType, optional &gt;:</div>
+Inheritance diagram for vcl::comp::AdjacentEdges&lt; Edge, N, TTVN, ElementType, OPT &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="classvcl_1_1comp_1_1AdjacentEdges__inherit__graph.png" border="0" usemap="#avcl_1_1comp_1_1AdjacentEdges_3_01Edge_00_01N_00_01ElementType_00_01optional_01_4_inherit__map" alt="Inheritance graph"/></div>
-<map name="avcl_1_1comp_1_1AdjacentEdges_3_01Edge_00_01N_00_01ElementType_00_01optional_01_4_inherit__map" id="avcl_1_1comp_1_1AdjacentEdges_3_01Edge_00_01N_00_01ElementType_00_01optional_01_4_inherit__map">
-<area shape="rect" title="The AdjacentEdges class is a container of Edge references. It could be used by any Element to save ad..." alt="" coords="295,34,484,89"/>
-<area shape="rect" href="classvcl_1_1comp_1_1ReferencesComponentTriggerer.html" title=" " alt="" coords="5,5,247,45"/>
-<area shape="rect" title=" " alt="" coords="29,70,223,125"/>
+<div class="center"><img src="classvcl_1_1comp_1_1AdjacentEdges__inherit__graph.png" border="0" usemap="#avcl_1_1comp_1_1AdjacentEdges_3_01Edge_00_01N_00_01TTVN_00_01ElementType_00_01OPT_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="avcl_1_1comp_1_1AdjacentEdges_3_01Edge_00_01N_00_01TTVN_00_01ElementType_00_01OPT_01_4_inherit__map" id="avcl_1_1comp_1_1AdjacentEdges_3_01Edge_00_01N_00_01TTVN_00_01ElementType_00_01OPT_01_4_inherit__map">
+<area shape="rect" title="The AdjacentEdges class is a container of Edge pointers. It could be used by any Element to save adja..." alt="" coords="843,20,1113,60"/>
+<area shape="rect" href="classvcl_1_1comp_1_1PointersContainerComponent.html" title="The PointersContainerComponent is the base class for all the components of VCLib that store a contain..." alt="" coords="560,13,795,67"/>
+<area shape="rect" href="classvcl_1_1comp_1_1ContainerComponent.html" title=" " alt="" coords="269,13,512,67"/>
+<area shape="rect" title=" " alt="" coords="5,5,221,75"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
-Collaboration diagram for vcl::comp::AdjacentEdges&lt; Edge, N, ElementType, optional &gt;:</div>
+Collaboration diagram for vcl::comp::AdjacentEdges&lt; Edge, N, TTVN, ElementType, OPT &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="classvcl_1_1comp_1_1AdjacentEdges__coll__graph.png" border="0" usemap="#avcl_1_1comp_1_1AdjacentEdges_3_01Edge_00_01N_00_01ElementType_00_01optional_01_4_coll__map" alt="Collaboration graph"/></div>
-<map name="avcl_1_1comp_1_1AdjacentEdges_3_01Edge_00_01N_00_01ElementType_00_01optional_01_4_coll__map" id="avcl_1_1comp_1_1AdjacentEdges_3_01Edge_00_01N_00_01ElementType_00_01optional_01_4_coll__map">
-<area shape="rect" title="The AdjacentEdges class is a container of Edge references. It could be used by any Element to save ad..." alt="" coords="295,34,484,89"/>
-<area shape="rect" href="classvcl_1_1comp_1_1ReferencesComponentTriggerer.html" title=" " alt="" coords="5,5,247,45"/>
-<area shape="rect" title=" " alt="" coords="29,70,223,125"/>
+<div class="center"><img src="classvcl_1_1comp_1_1AdjacentEdges__coll__graph.png" border="0" usemap="#avcl_1_1comp_1_1AdjacentEdges_3_01Edge_00_01N_00_01TTVN_00_01ElementType_00_01OPT_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="avcl_1_1comp_1_1AdjacentEdges_3_01Edge_00_01N_00_01TTVN_00_01ElementType_00_01OPT_01_4_coll__map" id="avcl_1_1comp_1_1AdjacentEdges_3_01Edge_00_01N_00_01TTVN_00_01ElementType_00_01OPT_01_4_coll__map">
+<area shape="rect" title="The AdjacentEdges class is a container of Edge pointers. It could be used by any Element to save adja..." alt="" coords="843,20,1113,60"/>
+<area shape="rect" href="classvcl_1_1comp_1_1PointersContainerComponent.html" title="The PointersContainerComponent is the base class for all the components of VCLib that store a contain..." alt="" coords="560,13,795,67"/>
+<area shape="rect" href="classvcl_1_1comp_1_1ContainerComponent.html" title=" " alt="" coords="269,13,512,67"/>
+<area shape="rect" title=" " alt="" coords="5,5,221,75"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:aeec8fd4c7ac55e0404a6dd91b201839b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#aeec8fd4c7ac55e0404a6dd91b201839b">AdjacentEdgesComponent</a> = <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">ThisType</a></td></tr>
-<tr class="memdesc:aeec8fd4c7ac55e0404a6dd91b201839b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows access to this component type from a derived class type/instance.  <br /></td></tr>
-<tr class="separator:aeec8fd4c7ac55e0404a6dd91b201839b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae651c8fb80b01a4ceb446b64aa22ed40"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#ae651c8fb80b01a4ceb446b64aa22ed40">AdjacentEdgeType</a> = <a class="el" href="classvcl_1_1Edge.html">Edge</a></td></tr>
-<tr class="separator:ae651c8fb80b01a4ceb446b64aa22ed40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af61e59b3299d00e08e9fd72c416e6a6a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#af61e59b3299d00e08e9fd72c416e6a6a">AdjacentEdgeIterator</a> = typename Base::Iterator</td></tr>
-<tr class="separator:af61e59b3299d00e08e9fd72c416e6a6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adff732312c835c4481a838f87d6e8418"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#adff732312c835c4481a838f87d6e8418">ConstAdjacentEdgeIterator</a> = typename Base::ConstIterator</td></tr>
-<tr class="separator:adff732312c835c4481a838f87d6e8418"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affd6214865be7e7dc60ae3638f3dfdb8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#affd6214865be7e7dc60ae3638f3dfdb8">AdjacentEdgeType</a> = <a class="el" href="classvcl_1_1Edge.html">Edge</a></td></tr>
+<tr class="separator:affd6214865be7e7dc60ae3638f3dfdb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e48b845144ff72543293d818d48a37b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a3e48b845144ff72543293d818d48a37b">AdjacentEdgeIterator</a> = typename <a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html#a2fc6d19893973b97cbb658027af61b34">Base::Iterator</a></td></tr>
+<tr class="separator:a3e48b845144ff72543293d818d48a37b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f4b23ab91005fa3ffb23a1136036928"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a9f4b23ab91005fa3ffb23a1136036928">ConstAdjacentEdgeIterator</a> = typename <a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html#a65c8c52cc8df6b29510de9111f12acfc">Base::ConstIterator</a></td></tr>
+<tr class="separator:a9f4b23ab91005fa3ffb23a1136036928"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1dcd43e2827d2cd4c7dc579d67c77003"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a1dcd43e2827d2cd4c7dc579d67c77003">init</a> ()</td></tr>
-<tr class="separator:a1dcd43e2827d2cd4c7dc579d67c77003"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25e05af749183e8ed9661403bcf3c743"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a25e05af749183e8ed9661403bcf3c743">isEnabled</a> () const</td></tr>
-<tr class="separator:a25e05af749183e8ed9661403bcf3c743"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bca7ba5837c8843283c756a0c8ddbac"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a9bca7ba5837c8843283c756a0c8ddbac">isAdjEdgesEnabled</a> () const</td></tr>
-<tr class="separator:a9bca7ba5837c8843283c756a0c8ddbac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac92e829ef4a594b60249c038c9cf2de7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#ac92e829ef4a594b60249c038c9cf2de7">adjEdgesNumber</a> () const</td></tr>
-<tr class="memdesc:ac92e829ef4a594b60249c038c9cf2de7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of adjacent edges of this element.  <br /></td></tr>
-<tr class="separator:ac92e829ef4a594b60249c038c9cf2de7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac605d2bba4f65ec036507d0e00661871"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Edge.html">Edge</a> *&amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#ac605d2bba4f65ec036507d0e00661871">adjEdge</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i)</td></tr>
-<tr class="memdesc:ac605d2bba4f65ec036507d0e00661871"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference of the pointer to the i-th adjacent edge of this element.  <br /></td></tr>
-<tr class="separator:ac605d2bba4f65ec036507d0e00661871"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a076d6a42a84f38b8bee21e2dc1d61c69"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classvcl_1_1Edge.html">Edge</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a076d6a42a84f38b8bee21e2dc1d61c69">adjEdge</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i) const</td></tr>
-<tr class="memdesc:a076d6a42a84f38b8bee21e2dc1d61c69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const pointer to the i-th adjacent edge of this element.  <br /></td></tr>
-<tr class="separator:a076d6a42a84f38b8bee21e2dc1d61c69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14d39acb59790c07f5aedd8efafdddb2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Edge.html">Edge</a> *&amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a14d39acb59790c07f5aedd8efafdddb2">adjEdgeMod</a> (int i)</td></tr>
-<tr class="memdesc:a14d39acb59790c07f5aedd8efafdddb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference of the pointer to the i-th adjacent edge of this element but using as index the module between i and the number of adjacent edges. You can use this function if you need to get the "next adjacent edge after position k", without check if it is less than the number of adj edges. Works also for negative numbers:  <br /></td></tr>
-<tr class="separator:a14d39acb59790c07f5aedd8efafdddb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a326df62e6586fe1bb4e0a6280811eb96"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classvcl_1_1Edge.html">Edge</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a326df62e6586fe1bb4e0a6280811eb96">adjEdgeMod</a> (int i) const</td></tr>
-<tr class="memdesc:a326df62e6586fe1bb4e0a6280811eb96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same of adjEdgeMod, but returns a const Pointer to the adjacent edge.  <br /></td></tr>
-<tr class="separator:a326df62e6586fe1bb4e0a6280811eb96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65a5e04482eed7904724f77d7df8b5fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a65a5e04482eed7904724f77d7df8b5fb">setAdjEdge</a> (<a class="el" href="classvcl_1_1Edge.html">Edge</a> *f, <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i)</td></tr>
-<tr class="memdesc:a65a5e04482eed7904724f77d7df8b5fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the i-th adjacent edge of this element.  <br /></td></tr>
-<tr class="separator:a65a5e04482eed7904724f77d7df8b5fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91c4872f665dac1956d04a8fdc13fc52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a91c4872f665dac1956d04a8fdc13fc52">setAdjEdges</a> (const std::vector&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a> * &gt; &amp;list)</td></tr>
-<tr class="memdesc:a91c4872f665dac1956d04a8fdc13fc52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all the adjacent edges of this element.  <br /></td></tr>
-<tr class="separator:a91c4872f665dac1956d04a8fdc13fc52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd6210bbf859464f51db70ae2df91a9c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#abd6210bbf859464f51db70ae2df91a9c">containsAdjEdge</a> (const <a class="el" href="classvcl_1_1Edge.html">Edge</a> *e) const</td></tr>
-<tr class="separator:abd6210bbf859464f51db70ae2df91a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeeffb7f81b0e6e5aed1e2ab5540c5be2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#af61e59b3299d00e08e9fd72c416e6a6a">AdjacentEdgeIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#aeeffb7f81b0e6e5aed1e2ab5540c5be2">findAdjEdge</a> (const <a class="el" href="classvcl_1_1Edge.html">Edge</a> *e)</td></tr>
-<tr class="separator:aeeffb7f81b0e6e5aed1e2ab5540c5be2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdc3bcd8d618a158f97ca5dd5204c68a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#adff732312c835c4481a838f87d6e8418">ConstAdjacentEdgeIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#afdc3bcd8d618a158f97ca5dd5204c68a">findAdjEdge</a> (const <a class="el" href="classvcl_1_1Edge.html">Edge</a> *e) const</td></tr>
-<tr class="separator:afdc3bcd8d618a158f97ca5dd5204c68a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4899624c9ab68fbfc5e701db6b01095e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a4899624c9ab68fbfc5e701db6b01095e">indexOfAdjEdge</a> (const <a class="el" href="classvcl_1_1Edge.html">Edge</a> *e) const</td></tr>
-<tr class="separator:a4899624c9ab68fbfc5e701db6b01095e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3be18acabf4e2f5478e050d0d975accd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a3be18acabf4e2f5478e050d0d975accd">resizeAdjEdges</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> n)</td></tr>
-<tr class="memdesc:a3be18acabf4e2f5478e050d0d975accd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize the container of the adjacent edges to the given size.  <br /></td></tr>
-<tr class="separator:a3be18acabf4e2f5478e050d0d975accd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2825367ad9f8f33d8f107da270331f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#aa2825367ad9f8f33d8f107da270331f1">pushAdjEdge</a> (<a class="el" href="classvcl_1_1Edge.html">Edge</a> *e)</td></tr>
-<tr class="separator:aa2825367ad9f8f33d8f107da270331f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a9657dcce5de9e571e211e2336e4e99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a4a9657dcce5de9e571e211e2336e4e99">insertAdjEdge</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i, <a class="el" href="classvcl_1_1Edge.html">Edge</a> *e)</td></tr>
-<tr class="separator:a4a9657dcce5de9e571e211e2336e4e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa06d54270ca8713cd12424d6d936568e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#aa06d54270ca8713cd12424d6d936568e">eraseAdjEdge</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i)</td></tr>
-<tr class="separator:aa06d54270ca8713cd12424d6d936568e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35bf380dbf59c895370bae8b32635abf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a35bf380dbf59c895370bae8b32635abf">clearAdjEdges</a> ()</td></tr>
-<tr class="separator:a35bf380dbf59c895370bae8b32635abf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91a78417a635a8a4111dea33cdf68c64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#af61e59b3299d00e08e9fd72c416e6a6a">AdjacentEdgeIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a91a78417a635a8a4111dea33cdf68c64">adjEdgeBegin</a> ()</td></tr>
-<tr class="separator:a91a78417a635a8a4111dea33cdf68c64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29c4cb934e5ceb041b5f0377b8507903"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#af61e59b3299d00e08e9fd72c416e6a6a">AdjacentEdgeIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a29c4cb934e5ceb041b5f0377b8507903">adjEdgeEnd</a> ()</td></tr>
-<tr class="separator:a29c4cb934e5ceb041b5f0377b8507903"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf552f5554587309de23f97131655c56"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#adff732312c835c4481a838f87d6e8418">ConstAdjacentEdgeIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#acf552f5554587309de23f97131655c56">adjEdgeBegin</a> () const</td></tr>
-<tr class="separator:acf552f5554587309de23f97131655c56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9ad9feb73d7fcbf70b909ac4174e518"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#adff732312c835c4481a838f87d6e8418">ConstAdjacentEdgeIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#ae9ad9feb73d7fcbf70b909ac4174e518">adjEdgeEnd</a> () const</td></tr>
-<tr class="separator:ae9ad9feb73d7fcbf70b909ac4174e518"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c5a669f9ae7d653efd29bd0e032559e"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a9c5a669f9ae7d653efd29bd0e032559e">adjEdges</a> ()</td></tr>
-<tr class="separator:a9c5a669f9ae7d653efd29bd0e032559e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad888c4983c715c95abb0a62b9802b8f6"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#ad888c4983c715c95abb0a62b9802b8f6">adjEdges</a> () const</td></tr>
-<tr class="separator:ad888c4983c715c95abb0a62b9802b8f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a919b689a5a7caa8da5f23363fcf44eab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a919b689a5a7caa8da5f23363fcf44eab">init</a> ()</td></tr>
+<tr class="separator:a919b689a5a7caa8da5f23363fcf44eab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab88e0031e63acd0ea9a6067b223bc5eb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#ab88e0031e63acd0ea9a6067b223bc5eb">isEnabled</a> () const</td></tr>
+<tr class="separator:ab88e0031e63acd0ea9a6067b223bc5eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acddeb1f38011fed240c15cd9e6a7ac89"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#acddeb1f38011fed240c15cd9e6a7ac89">isAdjEdgesEnabled</a> () const</td></tr>
+<tr class="separator:acddeb1f38011fed240c15cd9e6a7ac89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab70ef81352cb7afca3b02eea1ce0095d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#ab70ef81352cb7afca3b02eea1ce0095d">adjEdgesNumber</a> () const</td></tr>
+<tr class="memdesc:ab70ef81352cb7afca3b02eea1ce0095d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of adjacent edges of this element.  <br /></td></tr>
+<tr class="separator:ab70ef81352cb7afca3b02eea1ce0095d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08872be2b004007b788749ac32b00cf2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Edge.html">Edge</a> *&amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a08872be2b004007b788749ac32b00cf2">adjEdge</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i)</td></tr>
+<tr class="memdesc:a08872be2b004007b788749ac32b00cf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference of the pointer to the i-th adjacent edge of this element.  <br /></td></tr>
+<tr class="separator:a08872be2b004007b788749ac32b00cf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98d324273b40f345a89bf037b1d6e0de"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classvcl_1_1Edge.html">Edge</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a98d324273b40f345a89bf037b1d6e0de">adjEdge</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i) const</td></tr>
+<tr class="memdesc:a98d324273b40f345a89bf037b1d6e0de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const pointer to the i-th adjacent edge of this element.  <br /></td></tr>
+<tr class="separator:a98d324273b40f345a89bf037b1d6e0de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58ddbd5f73f8de92f884a717ead3672e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Edge.html">Edge</a> *&amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a58ddbd5f73f8de92f884a717ead3672e">adjEdgeMod</a> (int i)</td></tr>
+<tr class="memdesc:a58ddbd5f73f8de92f884a717ead3672e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference of the pointer to the i-th adjacent edge of this element but using as index the module between i and the number of adjacent edges. You can use this function if you need to get the "next adjacent edge after position k", without check if it is less than the number of adj edges. Works also for negative numbers:  <br /></td></tr>
+<tr class="separator:a58ddbd5f73f8de92f884a717ead3672e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b723c8e9965fe0b6f58c115f85de56d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classvcl_1_1Edge.html">Edge</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a8b723c8e9965fe0b6f58c115f85de56d">adjEdgeMod</a> (int i) const</td></tr>
+<tr class="memdesc:a8b723c8e9965fe0b6f58c115f85de56d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same of adjEdgeMod, but returns a const Pointer to the adjacent edge.  <br /></td></tr>
+<tr class="separator:a8b723c8e9965fe0b6f58c115f85de56d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48d18457e9a0745c1ca47e6e51ab846a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a48d18457e9a0745c1ca47e6e51ab846a">setAdjEdge</a> (<a class="el" href="classvcl_1_1Edge.html">Edge</a> *f, <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i)</td></tr>
+<tr class="memdesc:a48d18457e9a0745c1ca47e6e51ab846a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the i-th adjacent edge of this element.  <br /></td></tr>
+<tr class="separator:a48d18457e9a0745c1ca47e6e51ab846a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ca2d0e6f3f22dde1a7126233dd2b9b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a2ca2d0e6f3f22dde1a7126233dd2b9b6">setAdjEdges</a> (const std::vector&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a> * &gt; &amp;list)</td></tr>
+<tr class="memdesc:a2ca2d0e6f3f22dde1a7126233dd2b9b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all the adjacent edges of this element.  <br /></td></tr>
+<tr class="separator:a2ca2d0e6f3f22dde1a7126233dd2b9b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afef4f1d72d4a2c5e75ff19c3f491be3d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#afef4f1d72d4a2c5e75ff19c3f491be3d">containsAdjEdge</a> (const <a class="el" href="classvcl_1_1Edge.html">Edge</a> *e) const</td></tr>
+<tr class="separator:afef4f1d72d4a2c5e75ff19c3f491be3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0d065d521b6127c896560f041d858a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a3e48b845144ff72543293d818d48a37b">AdjacentEdgeIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#aa0d065d521b6127c896560f041d858a5">findAdjEdge</a> (const <a class="el" href="classvcl_1_1Edge.html">Edge</a> *e)</td></tr>
+<tr class="separator:aa0d065d521b6127c896560f041d858a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf72bb7de740e87cf35991602eb12b95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a9f4b23ab91005fa3ffb23a1136036928">ConstAdjacentEdgeIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#acf72bb7de740e87cf35991602eb12b95">findAdjEdge</a> (const <a class="el" href="classvcl_1_1Edge.html">Edge</a> *e) const</td></tr>
+<tr class="separator:acf72bb7de740e87cf35991602eb12b95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a865a8cb027c98be6bdbc67ad5ea490d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a865a8cb027c98be6bdbc67ad5ea490d4">indexOfAdjEdge</a> (const <a class="el" href="classvcl_1_1Edge.html">Edge</a> *e) const</td></tr>
+<tr class="separator:a865a8cb027c98be6bdbc67ad5ea490d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9f5f3f2603e0cb7e6da9028c5d44688"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#ac9f5f3f2603e0cb7e6da9028c5d44688">resizeAdjEdges</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> n)</td></tr>
+<tr class="memdesc:ac9f5f3f2603e0cb7e6da9028c5d44688"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize the container of the adjacent edges to the given size.  <br /></td></tr>
+<tr class="separator:ac9f5f3f2603e0cb7e6da9028c5d44688"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b9697d8fc9d22bf7f2f15cca29a0939"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a4b9697d8fc9d22bf7f2f15cca29a0939">pushAdjEdge</a> (<a class="el" href="classvcl_1_1Edge.html">Edge</a> *e)</td></tr>
+<tr class="separator:a4b9697d8fc9d22bf7f2f15cca29a0939"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add0ccafd62c6c018b8a62d88e6c06903"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#add0ccafd62c6c018b8a62d88e6c06903">insertAdjEdge</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i, <a class="el" href="classvcl_1_1Edge.html">Edge</a> *e)</td></tr>
+<tr class="separator:add0ccafd62c6c018b8a62d88e6c06903"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d493dd6e802e55d555c905d9c2d07ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a4d493dd6e802e55d555c905d9c2d07ee">eraseAdjEdge</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i)</td></tr>
+<tr class="separator:a4d493dd6e802e55d555c905d9c2d07ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f378ad4fcbd1e98cf4240fc2d8bdcf8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a1f378ad4fcbd1e98cf4240fc2d8bdcf8">clearAdjEdges</a> ()</td></tr>
+<tr class="separator:a1f378ad4fcbd1e98cf4240fc2d8bdcf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a750858ffc57c4e3165df28a2debcddae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a3e48b845144ff72543293d818d48a37b">AdjacentEdgeIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a750858ffc57c4e3165df28a2debcddae">adjEdgeBegin</a> ()</td></tr>
+<tr class="separator:a750858ffc57c4e3165df28a2debcddae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a672a49883f27fa3d080233a0ee24be86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a3e48b845144ff72543293d818d48a37b">AdjacentEdgeIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a672a49883f27fa3d080233a0ee24be86">adjEdgeEnd</a> ()</td></tr>
+<tr class="separator:a672a49883f27fa3d080233a0ee24be86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dab8ef8f4ebef61df0280144834af6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a9f4b23ab91005fa3ffb23a1136036928">ConstAdjacentEdgeIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a6dab8ef8f4ebef61df0280144834af6c">adjEdgeBegin</a> () const</td></tr>
+<tr class="separator:a6dab8ef8f4ebef61df0280144834af6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ff6383d4816bddaa9b0fb802f0ff6e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a9f4b23ab91005fa3ffb23a1136036928">ConstAdjacentEdgeIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a8ff6383d4816bddaa9b0fb802f0ff6e3">adjEdgeEnd</a> () const</td></tr>
+<tr class="separator:a8ff6383d4816bddaa9b0fb802f0ff6e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a954bb6e2e7ea35bcdac291a757e2c89b"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a954bb6e2e7ea35bcdac291a757e2c89b">adjEdges</a> ()</td></tr>
+<tr class="separator:a954bb6e2e7ea35bcdac291a757e2c89b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47b0f182844d136e0f10d658a4be6212"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a47b0f182844d136e0f10d658a4be6212">adjEdges</a> () const</td></tr>
+<tr class="separator:a47b0f182844d136e0f10d658a4be6212"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a621ae71ab92519ea81f049d9434c9648"><td class="memItemLeft" align="right" valign="top">static const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a621ae71ab92519ea81f049d9434c9648">IS_VERTICAL</a> = !std::is_same_v&lt;ElementType, void&gt;</td></tr>
-<tr class="memdesc:a621ae71ab92519ea81f049d9434c9648"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean that tells if this component type stores its data vertically (not in the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> frame memory, but in another vector).  <br /></td></tr>
-<tr class="separator:a621ae71ab92519ea81f049d9434c9648"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad116d81ccff4ff9a935801c481f340da"><td class="memItemLeft" align="right" valign="top">static const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#ad116d81ccff4ff9a935801c481f340da">IS_OPTIONAL</a> = optional</td></tr>
-<tr class="memdesc:ad116d81ccff4ff9a935801c481f340da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean that tells if this component is optional. Makes sense only when the component is vertical.  <br /></td></tr>
-<tr class="separator:ad116d81ccff4ff9a935801c481f340da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86ad1783442be1b0e61c4c6dc81d81cc"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a86ad1783442be1b0e61c4c6dc81d81cc">ADJ_EDGE_NUMBER</a> = Base::CONTAINER_SIZE</td></tr>
-<tr class="separator:a86ad1783442be1b0e61c4c6dc81d81cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87d1f9b44b3a999fd242e042b9607fc4"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a87d1f9b44b3a999fd242e042b9607fc4">ADJ_EDGE_NUMBER</a> = <a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html#a884be8c64a380423ada7cef74a23c8e7">Base::SIZE</a></td></tr>
+<tr class="separator:a87d1f9b44b3a999fd242e042b9607fc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_attribs_classvcl_1_1comp_1_1ContainerComponent"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classvcl_1_1comp_1_1ContainerComponent')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html">vcl::comp::ContainerComponent&lt; COMP_TYPE, Elem *, N, void, ElementType, OPT, TTVN, Elem &gt;</a></td></tr>
+<tr class="memitem:ac691dabcac26d322c5aed9704fe3bc65 inherit pub_static_attribs_classvcl_1_1comp_1_1ContainerComponent"><td class="memItemLeft" align="right" valign="top">static const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html#ac691dabcac26d322c5aed9704fe3bc65">TIED_TO_VERTEX_NUMBER</a></td></tr>
+<tr class="memdesc:ac691dabcac26d322c5aed9704fe3bc65 inherit pub_static_attribs_classvcl_1_1comp_1_1ContainerComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean that tells if this component stores a container having its size tied to the number of the vertices of the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a>.  <br /></td></tr>
+<tr class="separator:ac691dabcac26d322c5aed9704fe3bc65 inherit pub_static_attribs_classvcl_1_1comp_1_1ContainerComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a884be8c64a380423ada7cef74a23c8e7 inherit pub_static_attribs_classvcl_1_1comp_1_1ContainerComponent"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html#a884be8c64a380423ada7cef74a23c8e7">SIZE</a></td></tr>
+<tr class="separator:a884be8c64a380423ada7cef74a23c8e7 inherit pub_static_attribs_classvcl_1_1comp_1_1ContainerComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a8d3cf6f95653f5c9edc31f474e9d573f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a8d3cf6f95653f5c9edc31f474e9d573f">updateReferences</a> (const <a class="el" href="classvcl_1_1Edge.html">Edge</a> *oldBase, const <a class="el" href="classvcl_1_1Edge.html">Edge</a> *newBase)</td></tr>
-<tr class="separator:a8d3cf6f95653f5c9edc31f474e9d573f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac07e4241d1c20928a48a64ab991c9e1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#ac07e4241d1c20928a48a64ab991c9e1d">updateReferencesAfterCompact</a> (const <a class="el" href="classvcl_1_1Edge.html">Edge</a> *base, const std::vector&lt; int &gt; &amp;newIndices)</td></tr>
-<tr class="separator:ac07e4241d1c20928a48a64ab991c9e1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcc0f022976be29aec4b9f7b625b31c4"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="classvcl_1_1Element.html">Element</a> &gt; </td></tr>
-<tr class="memitem:afcc0f022976be29aec4b9f7b625b31c4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#afcc0f022976be29aec4b9f7b625b31c4">importFrom</a> (const <a class="el" href="classvcl_1_1Element.html">Element</a> &amp;e)</td></tr>
-<tr class="separator:afcc0f022976be29aec4b9f7b625b31c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2897f9f77c0d72089f74bd226530f7cd"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="classvcl_1_1Element.html">Element</a> , typename ElEType &gt; </td></tr>
-<tr class="memitem:a2897f9f77c0d72089f74bd226530f7cd"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a2897f9f77c0d72089f74bd226530f7cd">importReferencesFrom</a> (const <a class="el" href="classvcl_1_1Element.html">Element</a> &amp;e, <a class="el" href="classvcl_1_1Edge.html">Edge</a> *base, const ElEType *ebase)</td></tr>
-<tr class="separator:a2897f9f77c0d72089f74bd226530f7cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38bc822a5cb82b9065611ebe19f8988e"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="classvcl_1_1Element.html">Element</a> &gt; </td></tr>
+<tr class="memitem:a38bc822a5cb82b9065611ebe19f8988e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a38bc822a5cb82b9065611ebe19f8988e">importFrom</a> (const <a class="el" href="classvcl_1_1Element.html">Element</a> &amp;e)</td></tr>
+<tr class="separator:a38bc822a5cb82b9065611ebe19f8988e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42a592b1815cbc59f322545cf30f5161"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="classvcl_1_1Element.html">Element</a> , typename ElEType &gt; </td></tr>
+<tr class="memitem:a42a592b1815cbc59f322545cf30f5161"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a42a592b1815cbc59f322545cf30f5161">importPointersFrom</a> (const <a class="el" href="classvcl_1_1Element.html">Element</a> &amp;e, <a class="el" href="classvcl_1_1Edge.html">Edge</a> *base, const ElEType *ebase)</td></tr>
+<tr class="separator:a42a592b1815cbc59f322545cf30f5161"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a508b0e44230818b3be4d51ffd2cd46dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a508b0e44230818b3be4d51ffd2cd46dd">updatePointers</a> (const <a class="el" href="classvcl_1_1Edge.html">Edge</a> *oldBase, const <a class="el" href="classvcl_1_1Edge.html">Edge</a> *newBase)</td></tr>
+<tr class="separator:a508b0e44230818b3be4d51ffd2cd46dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3b09cec568dd3c5bfeea34945d941e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#ad3b09cec568dd3c5bfeea34945d941e6">updatePointers</a> (const <a class="el" href="classvcl_1_1Edge.html">Edge</a> *base, const std::vector&lt; <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> &gt; &amp;newIndices)</td></tr>
+<tr class="separator:ad3b09cec568dd3c5bfeea34945d941e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc560ae7a972682a5e73eb41eee804ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#afc560ae7a972682a5e73eb41eee804ff">resize</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> n)</td></tr>
+<tr class="separator:afc560ae7a972682a5e73eb41eee804ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33543725576a5df01da4d367082438f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a33543725576a5df01da4d367082438f4">pushBack</a> (<a class="el" href="classvcl_1_1Edge.html">Edge</a> *e=nullptr)</td></tr>
+<tr class="separator:a33543725576a5df01da4d367082438f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a253fbb3c67251377622117efedba643f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a253fbb3c67251377622117efedba643f">insert</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i, <a class="el" href="classvcl_1_1Edge.html">Edge</a> *e=nullptr)</td></tr>
+<tr class="separator:a253fbb3c67251377622117efedba643f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13e8c514e7803411fb5abbe078a49eab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a13e8c514e7803411fb5abbe078a49eab">erase</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i)</td></tr>
+<tr class="separator:a13e8c514e7803411fb5abbe078a49eab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af29d7514554d92b99668a8d351886eaf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#af29d7514554d92b99668a8d351886eaf">clear</a> ()</td></tr>
+<tr class="separator:af29d7514554d92b99668a8d351886eaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classvcl_1_1comp_1_1PointersContainerComponent"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classvcl_1_1comp_1_1PointersContainerComponent')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classvcl_1_1comp_1_1PointersContainerComponent.html">vcl::comp::PointersContainerComponent&lt; COMP_TYPE, Elem, N, ElementType, OPT, TTVN &gt;</a></td></tr>
+<tr class="memitem:ac92ee764afbe33f873b50bcde04e6450 inherit pro_methods_classvcl_1_1comp_1_1PointersContainerComponent"><td class="memTemplParams" colspan="2">template&lt;typename Comp &gt; </td></tr>
+<tr class="memitem:ac92ee764afbe33f873b50bcde04e6450 inherit pro_methods_classvcl_1_1comp_1_1PointersContainerComponent"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PointersContainerComponent.html#ac92ee764afbe33f873b50bcde04e6450">updateElementPointers</a> (const Elem *oldBase, const Elem *newBase, Comp *comp)</td></tr>
+<tr class="separator:ac92ee764afbe33f873b50bcde04e6450 inherit pro_methods_classvcl_1_1comp_1_1PointersContainerComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab90e0d3b681a666250e849242db95824 inherit pro_methods_classvcl_1_1comp_1_1PointersContainerComponent"><td class="memTemplParams" colspan="2">template&lt;typename Comp &gt; </td></tr>
+<tr class="memitem:ab90e0d3b681a666250e849242db95824 inherit pro_methods_classvcl_1_1comp_1_1PointersContainerComponent"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PointersContainerComponent.html#ab90e0d3b681a666250e849242db95824">updateElementPointers</a> (const Elem *base, const std::vector&lt; <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> &gt; &amp;newIndices, Comp *comp)</td></tr>
+<tr class="separator:ab90e0d3b681a666250e849242db95824 inherit pro_methods_classvcl_1_1comp_1_1PointersContainerComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classvcl_1_1comp_1_1ContainerComponent"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classvcl_1_1comp_1_1ContainerComponent')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html">vcl::comp::ContainerComponent&lt; COMP_TYPE, Elem *, N, void, ElementType, OPT, TTVN, Elem &gt;</a></td></tr>
+<tr class="memitem:aed05cb7f876fb512202cf809689ec74b inherit pro_methods_classvcl_1_1comp_1_1ContainerComponent"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html#aed05cb7f876fb512202cf809689ec74b">ContainerComponent</a> ()</td></tr>
+<tr class="separator:aed05cb7f876fb512202cf809689ec74b inherit pro_methods_classvcl_1_1comp_1_1ContainerComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdf6db4944458d0fb97b26711e64b914 inherit pro_methods_classvcl_1_1comp_1_1ContainerComponent"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html#abdf6db4944458d0fb97b26711e64b914">init</a> (Comp *comp)</td></tr>
+<tr class="separator:abdf6db4944458d0fb97b26711e64b914 inherit pro_methods_classvcl_1_1comp_1_1ContainerComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b94704f941d248c3794c5dba8666045 inherit pro_methods_classvcl_1_1comp_1_1ContainerComponent"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Vector.html">Vector</a>&lt; Elem *, N &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html#a4b94704f941d248c3794c5dba8666045">container</a> (Comp *comp)</td></tr>
+<tr class="separator:a4b94704f941d248c3794c5dba8666045 inherit pro_methods_classvcl_1_1comp_1_1ContainerComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1b118e4b4a33cd37db56262837a5ba9 inherit pro_methods_classvcl_1_1comp_1_1ContainerComponent"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classvcl_1_1Vector.html">Vector</a>&lt; Elem *, N &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html#ac1b118e4b4a33cd37db56262837a5ba9">container</a> (const Comp *comp) const</td></tr>
+<tr class="separator:ac1b118e4b4a33cd37db56262837a5ba9 inherit pro_methods_classvcl_1_1comp_1_1ContainerComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0205f26af17d5c6a20f891444627aa92 inherit pro_methods_classvcl_1_1comp_1_1ContainerComponent"><td class="memItemLeft" align="right" valign="top">AdDt &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html#a0205f26af17d5c6a20f891444627aa92">additionalData</a> (Comp *comp)</td></tr>
+<tr class="separator:a0205f26af17d5c6a20f891444627aa92 inherit pro_methods_classvcl_1_1comp_1_1ContainerComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae37605dfddc68b67f180702386ab4d2d inherit pro_methods_classvcl_1_1comp_1_1ContainerComponent"><td class="memItemLeft" align="right" valign="top">const AdDt &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html#ae37605dfddc68b67f180702386ab4d2d">additionalData</a> (const Comp *comp) const</td></tr>
+<tr class="separator:ae37605dfddc68b67f180702386ab4d2d inherit pro_methods_classvcl_1_1comp_1_1ContainerComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_types_classvcl_1_1comp_1_1ContainerComponent"><td colspan="2" onclick="javascript:toggleInherit('pro_types_classvcl_1_1comp_1_1ContainerComponent')"><img src="closed.png" alt="-"/>&#160;Protected Types inherited from <a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html">vcl::comp::ContainerComponent&lt; COMP_TYPE, Elem *, N, void, ElementType, OPT, TTVN, Elem &gt;</a></td></tr>
+<tr class="memitem:a2fc6d19893973b97cbb658027af61b34 inherit pro_types_classvcl_1_1comp_1_1ContainerComponent"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html#a2fc6d19893973b97cbb658027af61b34">Iterator</a> = typename <a class="el" href="classvcl_1_1Vector.html">Vector</a>&lt; Elem *, N &gt;::Iterator</td></tr>
+<tr class="separator:a2fc6d19893973b97cbb658027af61b34 inherit pro_types_classvcl_1_1comp_1_1ContainerComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65c8c52cc8df6b29510de9111f12acfc inherit pro_types_classvcl_1_1comp_1_1ContainerComponent"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html#a65c8c52cc8df6b29510de9111f12acfc">ConstIterator</a> = typename <a class="el" href="classvcl_1_1Vector.html">Vector</a>&lt; Elem *, N &gt;::ConstIterator</td></tr>
+<tr class="separator:a65c8c52cc8df6b29510de9111f12acfc inherit pro_types_classvcl_1_1comp_1_1ContainerComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a>, int N, typename ElementType = void, bool optional = false&gt;<br />
-class vcl::comp::AdjacentEdges&lt; Edge, N, ElementType, optional &gt;</div><p>The <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html" title="The AdjacentEdges class is a container of Edge references. It could be used by any Element to save ad...">AdjacentEdges</a> class is a container of <a class="el" href="classvcl_1_1Edge.html" title="The Edge class.">Edge</a> references. It could be used by any <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> to save adjacencies information (also the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class.">Edge</a> element itself). </p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a>, int N, bool TTVN, typename ElementType = void, bool OPT = false&gt;<br />
+class vcl::comp::AdjacentEdges&lt; Edge, N, TTVN, ElementType, OPT &gt;</div><p>The <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html" title="The AdjacentEdges class is a container of Edge pointers. It could be used by any Element to save adja...">AdjacentEdges</a> class is a container of <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> pointers. It could be used by any <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> to save adjacencies information (also the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> element itself). </p>
 <p>It is a random access container having static or dynamic size, depending on the value of N (a negative number means dynamic).</p>
 <p>The member functions of this class will be available in the instance of any <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> that will contain this component.</p>
-<p>For example, if you have a <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class.">Vertex</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> <code>v</code> that has the <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html" title="The AdjacentEdges class is a container of Edge references. It could be used by any Element to save ad...">AdjacentEdges</a> component, you'll be able to access to this component member functions from <code>v</code>:</p>
+<p>For example, if you have a <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> <code>v</code> that has the <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html" title="The AdjacentEdges class is a container of Edge pointers. It could be used by any Element to save adja...">AdjacentEdges</a> component, you'll be able to access to this component member functions from <code>v</code>:</p>
 <div class="fragment"><div class="line">v.adjEdgesNumber();</div>
-</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>If this component is part of a <a class="el" href="classvcl_1_1Face.html" title="The Face class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a>, the number of Adjacent Edges is tied to the <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class.">Vertex</a> Number of the <a class="el" href="classvcl_1_1Face.html" title="The Face class.">Face</a>, therefore all the members that allows to modify the number of Adjacent Edges in case of dynamic size won't be available on <a class="el" href="classvcl_1_1Face.html" title="The Face class.">Face</a> Elements. </dd></dl>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>This component can be <em>Tied To <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Number</em>: it means that the size of the container, if dynamic, will change automatically along the <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Number of the <a class="el" href="classvcl_1_1comp_1_1Component.html" title="The Component class is the base class for almost all the components of VCLib (with the exception of C...">Component</a>. Check the <code>TTVN</code> template value on the specialization of your component to check if it is tied to the <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Number. For further details check the documentation of the <a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html">ContainerComponent</a> class. </dd></dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="af61e59b3299d00e08e9fd72c416e6a6a" name="af61e59b3299d00e08e9fd72c416e6a6a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af61e59b3299d00e08e9fd72c416e6a6a">&#9670;&#160;</a></span>AdjacentEdgeIterator</h2>
+<a id="a3e48b845144ff72543293d818d48a37b" name="a3e48b845144ff72543293d818d48a37b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e48b845144ff72543293d818d48a37b">&#9670;&#160;</a></span>AdjacentEdgeIterator</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, typename ElementType  = void, bool optional = false&gt; </div>
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TTVN, typename ElementType  = void, bool OPT = false&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, ElementType, optional &gt;::AdjacentEdgeIterator =  typename Base::Iterator</td>
+          <td class="memname">using <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TTVN, ElementType, OPT &gt;::AdjacentEdgeIterator =  typename <a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html#a2fc6d19893973b97cbb658027af61b34">Base::Iterator</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="aeec8fd4c7ac55e0404a6dd91b201839b" name="aeec8fd4c7ac55e0404a6dd91b201839b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeec8fd4c7ac55e0404a6dd91b201839b">&#9670;&#160;</a></span>AdjacentEdgesComponent</h2>
+<a id="affd6214865be7e7dc60ae3638f3dfdb8" name="affd6214865be7e7dc60ae3638f3dfdb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affd6214865be7e7dc60ae3638f3dfdb8">&#9670;&#160;</a></span>AdjacentEdgeType</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, typename ElementType  = void, bool optional = false&gt; </div>
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TTVN, typename ElementType  = void, bool OPT = false&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, ElementType, optional &gt;::AdjacentEdgesComponent =  <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">ThisType</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Allows access to this component type from a derived class type/instance. </p>
-
-</div>
-</div>
-<a id="ae651c8fb80b01a4ceb446b64aa22ed40" name="ae651c8fb80b01a4ceb446b64aa22ed40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae651c8fb80b01a4ceb446b64aa22ed40">&#9670;&#160;</a></span>AdjacentEdgeType</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, typename ElementType  = void, bool optional = false&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, ElementType, optional &gt;::AdjacentEdgeType =  <a class="el" href="classvcl_1_1Edge.html">Edge</a></td>
+          <td class="memname">using <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TTVN, ElementType, OPT &gt;::AdjacentEdgeType =  <a class="el" href="classvcl_1_1Edge.html">Edge</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="adff732312c835c4481a838f87d6e8418" name="adff732312c835c4481a838f87d6e8418"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adff732312c835c4481a838f87d6e8418">&#9670;&#160;</a></span>ConstAdjacentEdgeIterator</h2>
+<a id="a9f4b23ab91005fa3ffb23a1136036928" name="a9f4b23ab91005fa3ffb23a1136036928"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f4b23ab91005fa3ffb23a1136036928">&#9670;&#160;</a></span>ConstAdjacentEdgeIterator</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, typename ElementType  = void, bool optional = false&gt; </div>
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TTVN, typename ElementType  = void, bool OPT = false&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, ElementType, optional &gt;::ConstAdjacentEdgeIterator =  typename Base::ConstIterator</td>
+          <td class="memname">using <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TTVN, ElementType, OPT &gt;::ConstAdjacentEdgeIterator =  typename <a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html#a65c8c52cc8df6b29510de9111f12acfc">Base::ConstIterator</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -303,16 +322,16 @@ template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ac605d2bba4f65ec036507d0e00661871" name="ac605d2bba4f65ec036507d0e00661871"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac605d2bba4f65ec036507d0e00661871">&#9670;&#160;</a></span>adjEdge() <span class="overload">[1/2]</span></h2>
+<a id="a08872be2b004007b788749ac32b00cf2" name="a08872be2b004007b788749ac32b00cf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08872be2b004007b788749ac32b00cf2">&#9670;&#160;</a></span>adjEdge() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, typename El , bool o&gt; </div>
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TT, typename El , bool O&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Edge.html">Edge</a> *&amp; <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, El, o &gt;::adjEdge </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Edge.html">Edge</a> *&amp; <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::adjEdge </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
@@ -334,16 +353,16 @@ template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N
 
 </div>
 </div>
-<a id="a076d6a42a84f38b8bee21e2dc1d61c69" name="a076d6a42a84f38b8bee21e2dc1d61c69"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a076d6a42a84f38b8bee21e2dc1d61c69">&#9670;&#160;</a></span>adjEdge() <span class="overload">[2/2]</span></h2>
+<a id="a98d324273b40f345a89bf037b1d6e0de" name="a98d324273b40f345a89bf037b1d6e0de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98d324273b40f345a89bf037b1d6e0de">&#9670;&#160;</a></span>adjEdge() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, typename El , bool o&gt; </div>
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TT, typename El , bool O&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classvcl_1_1Edge.html">Edge</a> * <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, El, o &gt;::adjEdge </td>
+          <td class="memname">const <a class="el" href="classvcl_1_1Edge.html">Edge</a> * <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::adjEdge </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
@@ -363,80 +382,80 @@ template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N
 
 </div>
 </div>
-<a id="a91a78417a635a8a4111dea33cdf68c64" name="a91a78417a635a8a4111dea33cdf68c64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91a78417a635a8a4111dea33cdf68c64">&#9670;&#160;</a></span>adjEdgeBegin() <span class="overload">[1/2]</span></h2>
+<a id="a750858ffc57c4e3165df28a2debcddae" name="a750858ffc57c4e3165df28a2debcddae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a750858ffc57c4e3165df28a2debcddae">&#9670;&#160;</a></span>adjEdgeBegin() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, typename El , bool o&gt; </div>
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TT, typename El , bool O&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, El, o &gt;<a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#af61e59b3299d00e08e9fd72c416e6a6a">::AdjacentEdgeIterator</a> <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, El, o &gt;::adjEdgeBegin</td>
+          <td class="memname"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;<a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a3e48b845144ff72543293d818d48a37b">::AdjacentEdgeIterator</a> <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::adjEdgeBegin</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="acf552f5554587309de23f97131655c56" name="acf552f5554587309de23f97131655c56"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf552f5554587309de23f97131655c56">&#9670;&#160;</a></span>adjEdgeBegin() <span class="overload">[2/2]</span></h2>
+<a id="a6dab8ef8f4ebef61df0280144834af6c" name="a6dab8ef8f4ebef61df0280144834af6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dab8ef8f4ebef61df0280144834af6c">&#9670;&#160;</a></span>adjEdgeBegin() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, typename El , bool o&gt; </div>
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TT, typename El , bool O&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, El, o &gt;<a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#adff732312c835c4481a838f87d6e8418">::ConstAdjacentEdgeIterator</a> <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, El, o &gt;::adjEdgeBegin</td>
+          <td class="memname"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;<a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a9f4b23ab91005fa3ffb23a1136036928">::ConstAdjacentEdgeIterator</a> <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::adjEdgeBegin</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a29c4cb934e5ceb041b5f0377b8507903" name="a29c4cb934e5ceb041b5f0377b8507903"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29c4cb934e5ceb041b5f0377b8507903">&#9670;&#160;</a></span>adjEdgeEnd() <span class="overload">[1/2]</span></h2>
+<a id="a672a49883f27fa3d080233a0ee24be86" name="a672a49883f27fa3d080233a0ee24be86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a672a49883f27fa3d080233a0ee24be86">&#9670;&#160;</a></span>adjEdgeEnd() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, typename El , bool o&gt; </div>
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TT, typename El , bool O&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, El, o &gt;<a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#af61e59b3299d00e08e9fd72c416e6a6a">::AdjacentEdgeIterator</a> <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, El, o &gt;::adjEdgeEnd</td>
+          <td class="memname"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;<a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a3e48b845144ff72543293d818d48a37b">::AdjacentEdgeIterator</a> <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::adjEdgeEnd</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ae9ad9feb73d7fcbf70b909ac4174e518" name="ae9ad9feb73d7fcbf70b909ac4174e518"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9ad9feb73d7fcbf70b909ac4174e518">&#9670;&#160;</a></span>adjEdgeEnd() <span class="overload">[2/2]</span></h2>
+<a id="a8ff6383d4816bddaa9b0fb802f0ff6e3" name="a8ff6383d4816bddaa9b0fb802f0ff6e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ff6383d4816bddaa9b0fb802f0ff6e3">&#9670;&#160;</a></span>adjEdgeEnd() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, typename El , bool o&gt; </div>
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TT, typename El , bool O&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, El, o &gt;<a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#adff732312c835c4481a838f87d6e8418">::ConstAdjacentEdgeIterator</a> <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, El, o &gt;::adjEdgeEnd</td>
+          <td class="memname"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;<a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a9f4b23ab91005fa3ffb23a1136036928">::ConstAdjacentEdgeIterator</a> <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::adjEdgeEnd</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a14d39acb59790c07f5aedd8efafdddb2" name="a14d39acb59790c07f5aedd8efafdddb2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a14d39acb59790c07f5aedd8efafdddb2">&#9670;&#160;</a></span>adjEdgeMod() <span class="overload">[1/2]</span></h2>
+<a id="a58ddbd5f73f8de92f884a717ead3672e" name="a58ddbd5f73f8de92f884a717ead3672e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58ddbd5f73f8de92f884a717ead3672e">&#9670;&#160;</a></span>adjEdgeMod() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, typename El , bool o&gt; </div>
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TT, typename El , bool O&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Edge.html">Edge</a> *&amp; <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, El, o &gt;::adjEdgeMod </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Edge.html">Edge</a> *&amp; <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::adjEdgeMod </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
@@ -459,16 +478,16 @@ template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N
 
 </div>
 </div>
-<a id="a326df62e6586fe1bb4e0a6280811eb96" name="a326df62e6586fe1bb4e0a6280811eb96"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a326df62e6586fe1bb4e0a6280811eb96">&#9670;&#160;</a></span>adjEdgeMod() <span class="overload">[2/2]</span></h2>
+<a id="a8b723c8e9965fe0b6f58c115f85de56d" name="a8b723c8e9965fe0b6f58c115f85de56d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b723c8e9965fe0b6f58c115f85de56d">&#9670;&#160;</a></span>adjEdgeMod() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, typename El , bool o&gt; </div>
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TT, typename El , bool O&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classvcl_1_1Edge.html">Edge</a> * <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, El, o &gt;::adjEdgeMod </td>
+          <td class="memname">const <a class="el" href="classvcl_1_1Edge.html">Edge</a> * <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::adjEdgeMod </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
@@ -488,48 +507,48 @@ template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N
 
 </div>
 </div>
-<a id="a9c5a669f9ae7d653efd29bd0e032559e" name="a9c5a669f9ae7d653efd29bd0e032559e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c5a669f9ae7d653efd29bd0e032559e">&#9670;&#160;</a></span>adjEdges() <span class="overload">[1/2]</span></h2>
+<a id="a954bb6e2e7ea35bcdac291a757e2c89b" name="a954bb6e2e7ea35bcdac291a757e2c89b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a954bb6e2e7ea35bcdac291a757e2c89b">&#9670;&#160;</a></span>adjEdges() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, typename El , bool o&gt; </div>
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TT, typename El , bool O&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, El, o &gt;::adjEdges</td>
+          <td class="memname">auto <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::adjEdges</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ad888c4983c715c95abb0a62b9802b8f6" name="ad888c4983c715c95abb0a62b9802b8f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad888c4983c715c95abb0a62b9802b8f6">&#9670;&#160;</a></span>adjEdges() <span class="overload">[2/2]</span></h2>
+<a id="a47b0f182844d136e0f10d658a4be6212" name="a47b0f182844d136e0f10d658a4be6212"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47b0f182844d136e0f10d658a4be6212">&#9670;&#160;</a></span>adjEdges() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, typename El , bool o&gt; </div>
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TT, typename El , bool O&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">auto <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, El, o &gt;::adjEdges</td>
+          <td class="memname">auto <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::adjEdges</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ac92e829ef4a594b60249c038c9cf2de7" name="ac92e829ef4a594b60249c038c9cf2de7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac92e829ef4a594b60249c038c9cf2de7">&#9670;&#160;</a></span>adjEdgesNumber()</h2>
+<a id="ab70ef81352cb7afca3b02eea1ce0095d" name="ab70ef81352cb7afca3b02eea1ce0095d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab70ef81352cb7afca3b02eea1ce0095d">&#9670;&#160;</a></span>adjEdgesNumber()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, typename El , bool o&gt; </div>
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TT, typename El , bool O&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, El, o &gt;::adjEdgesNumber</td>
+          <td class="memname"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::adjEdgesNumber</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -539,33 +558,58 @@ template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N
 
 </div>
 </div>
-<a id="a35bf380dbf59c895370bae8b32635abf" name="a35bf380dbf59c895370bae8b32635abf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35bf380dbf59c895370bae8b32635abf">&#9670;&#160;</a></span>clearAdjEdges()</h2>
+<a id="af29d7514554d92b99668a8d351886eaf" name="af29d7514554d92b99668a8d351886eaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af29d7514554d92b99668a8d351886eaf">&#9670;&#160;</a></span>clear()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, typename El , bool o&gt; <br />
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TT, typename El , bool O&gt; <br />
 requires (N &lt; 0)</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, El, o &gt;::clearAdjEdges</td>
+          <td class="memname">void <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::clear</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1f378ad4fcbd1e98cf4240fc2d8bdcf8" name="a1f378ad4fcbd1e98cf4240fc2d8bdcf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f378ad4fcbd1e98cf4240fc2d8bdcf8">&#9670;&#160;</a></span>clearAdjEdges()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TT, typename El , bool O&gt; <br />
+requires (N &lt; 0 &amp;&amp; !TTVN)</div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::clearAdjEdges</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="abd6210bbf859464f51db70ae2df91a9c" name="abd6210bbf859464f51db70ae2df91a9c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd6210bbf859464f51db70ae2df91a9c">&#9670;&#160;</a></span>containsAdjEdge()</h2>
+<a id="afef4f1d72d4a2c5e75ff19c3f491be3d" name="afef4f1d72d4a2c5e75ff19c3f491be3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afef4f1d72d4a2c5e75ff19c3f491be3d">&#9670;&#160;</a></span>containsAdjEdge()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, typename El , bool o&gt; </div>
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TT, typename El , bool O&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, El, o &gt;::containsAdjEdge </td>
+          <td class="memname">bool <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::containsAdjEdge </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classvcl_1_1Edge.html">Edge</a> *&#160;</td>
           <td class="paramname"><em>e</em></td><td>)</td>
@@ -576,17 +620,46 @@ template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N
 
 </div>
 </div>
-<a id="aa06d54270ca8713cd12424d6d936568e" name="aa06d54270ca8713cd12424d6d936568e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa06d54270ca8713cd12424d6d936568e">&#9670;&#160;</a></span>eraseAdjEdge()</h2>
+<a id="a13e8c514e7803411fb5abbe078a49eab" name="a13e8c514e7803411fb5abbe078a49eab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13e8c514e7803411fb5abbe078a49eab">&#9670;&#160;</a></span>erase()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, typename El , bool o&gt; <br />
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TT, typename El , bool O&gt; <br />
 requires (N &lt; 0)</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, El, o &gt;::eraseAdjEdge </td>
+          <td class="memname">void <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::erase </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4d493dd6e802e55d555c905d9c2d07ee" name="a4d493dd6e802e55d555c905d9c2d07ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d493dd6e802e55d555c905d9c2d07ee">&#9670;&#160;</a></span>eraseAdjEdge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TT, typename El , bool O&gt; <br />
+requires (N &lt; 0 &amp;&amp; !TTVN)</div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::eraseAdjEdge </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
@@ -597,16 +670,16 @@ requires (N &lt; 0)</div>
 
 </div>
 </div>
-<a id="aeeffb7f81b0e6e5aed1e2ab5540c5be2" name="aeeffb7f81b0e6e5aed1e2ab5540c5be2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeeffb7f81b0e6e5aed1e2ab5540c5be2">&#9670;&#160;</a></span>findAdjEdge() <span class="overload">[1/2]</span></h2>
+<a id="aa0d065d521b6127c896560f041d858a5" name="aa0d065d521b6127c896560f041d858a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0d065d521b6127c896560f041d858a5">&#9670;&#160;</a></span>findAdjEdge() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, typename El , bool o&gt; </div>
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TT, typename El , bool O&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, El, o &gt;<a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#af61e59b3299d00e08e9fd72c416e6a6a">::AdjacentEdgeIterator</a> <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, El, o &gt;::findAdjEdge </td>
+          <td class="memname"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;<a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a3e48b845144ff72543293d818d48a37b">::AdjacentEdgeIterator</a> <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::findAdjEdge </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classvcl_1_1Edge.html">Edge</a> *&#160;</td>
           <td class="paramname"><em>e</em></td><td>)</td>
@@ -617,16 +690,16 @@ template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N
 
 </div>
 </div>
-<a id="afdc3bcd8d618a158f97ca5dd5204c68a" name="afdc3bcd8d618a158f97ca5dd5204c68a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afdc3bcd8d618a158f97ca5dd5204c68a">&#9670;&#160;</a></span>findAdjEdge() <span class="overload">[2/2]</span></h2>
+<a id="acf72bb7de740e87cf35991602eb12b95" name="acf72bb7de740e87cf35991602eb12b95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf72bb7de740e87cf35991602eb12b95">&#9670;&#160;</a></span>findAdjEdge() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, typename El , bool o&gt; </div>
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TT, typename El , bool O&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, El, o &gt;<a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#adff732312c835c4481a838f87d6e8418">::ConstAdjacentEdgeIterator</a> <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, El, o &gt;::findAdjEdge </td>
+          <td class="memname"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;<a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a9f4b23ab91005fa3ffb23a1136036928">::ConstAdjacentEdgeIterator</a> <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::findAdjEdge </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classvcl_1_1Edge.html">Edge</a> *&#160;</td>
           <td class="paramname"><em>e</em></td><td>)</td>
@@ -637,13 +710,13 @@ template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N
 
 </div>
 </div>
-<a id="afcc0f022976be29aec4b9f7b625b31c4" name="afcc0f022976be29aec4b9f7b625b31c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afcc0f022976be29aec4b9f7b625b31c4">&#9670;&#160;</a></span>importFrom()</h2>
+<a id="a38bc822a5cb82b9065611ebe19f8988e" name="a38bc822a5cb82b9065611ebe19f8988e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38bc822a5cb82b9065611ebe19f8988e">&#9670;&#160;</a></span>importFrom()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, typename El , bool o&gt; </div>
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TT, typename El , bool O&gt; </div>
 <div class="memtemplate">
 template&lt;typename <a class="el" href="classvcl_1_1Element.html">Element</a> &gt; </div>
 <table class="mlabels">
@@ -651,7 +724,7 @@ template&lt;typename <a class="el" href="classvcl_1_1Element.html">Element</a> &
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, El, o &gt;::importFrom </td>
+          <td class="memname">void <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::importFrom </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classvcl_1_1Element.html">Element</a> &amp;&#160;</td>
           <td class="paramname"><em>e</em></td><td>)</td>
@@ -667,13 +740,13 @@ template&lt;typename <a class="el" href="classvcl_1_1Element.html">Element</a> &
 
 </div>
 </div>
-<a id="a2897f9f77c0d72089f74bd226530f7cd" name="a2897f9f77c0d72089f74bd226530f7cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2897f9f77c0d72089f74bd226530f7cd">&#9670;&#160;</a></span>importReferencesFrom()</h2>
+<a id="a42a592b1815cbc59f322545cf30f5161" name="a42a592b1815cbc59f322545cf30f5161"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42a592b1815cbc59f322545cf30f5161">&#9670;&#160;</a></span>importPointersFrom()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, typename El , bool o&gt; </div>
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TT, typename El , bool O&gt; </div>
 <div class="memtemplate">
 template&lt;typename <a class="el" href="classvcl_1_1Element.html">Element</a> , typename ElEType &gt; </div>
 <table class="mlabels">
@@ -681,7 +754,7 @@ template&lt;typename <a class="el" href="classvcl_1_1Element.html">Element</a> ,
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, El, o &gt;::importReferencesFrom </td>
+          <td class="memname">void <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::importPointersFrom </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classvcl_1_1Element.html">Element</a> &amp;&#160;</td>
           <td class="paramname"><em>e</em>, </td>
@@ -713,16 +786,16 @@ template&lt;typename <a class="el" href="classvcl_1_1Element.html">Element</a> ,
 
 </div>
 </div>
-<a id="a4899624c9ab68fbfc5e701db6b01095e" name="a4899624c9ab68fbfc5e701db6b01095e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4899624c9ab68fbfc5e701db6b01095e">&#9670;&#160;</a></span>indexOfAdjEdge()</h2>
+<a id="a865a8cb027c98be6bdbc67ad5ea490d4" name="a865a8cb027c98be6bdbc67ad5ea490d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a865a8cb027c98be6bdbc67ad5ea490d4">&#9670;&#160;</a></span>indexOfAdjEdge()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, typename El , bool o&gt; </div>
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TT, typename El , bool O&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, El, o &gt;::indexOfAdjEdge </td>
+          <td class="memname">int <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::indexOfAdjEdge </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classvcl_1_1Edge.html">Edge</a> *&#160;</td>
           <td class="paramname"><em>e</em></td><td>)</td>
@@ -733,33 +806,72 @@ template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N
 
 </div>
 </div>
-<a id="a1dcd43e2827d2cd4c7dc579d67c77003" name="a1dcd43e2827d2cd4c7dc579d67c77003"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1dcd43e2827d2cd4c7dc579d67c77003">&#9670;&#160;</a></span>init()</h2>
+<a id="a919b689a5a7caa8da5f23363fcf44eab" name="a919b689a5a7caa8da5f23363fcf44eab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a919b689a5a7caa8da5f23363fcf44eab">&#9670;&#160;</a></span>init()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, typename El , bool o&gt; </div>
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TT, typename El , bool O&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, El, o &gt;::init</td>
+          <td class="memname">void <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::init</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a4a9657dcce5de9e571e211e2336e4e99" name="a4a9657dcce5de9e571e211e2336e4e99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a9657dcce5de9e571e211e2336e4e99">&#9670;&#160;</a></span>insertAdjEdge()</h2>
+<a id="a253fbb3c67251377622117efedba643f" name="a253fbb3c67251377622117efedba643f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a253fbb3c67251377622117efedba643f">&#9670;&#160;</a></span>insert()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, typename El , bool o&gt; <br />
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TT, typename El , bool O&gt; <br />
 requires (N &lt; 0)</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, El, o &gt;::insertAdjEdge </td>
+          <td class="memname">void <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::insert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Edge.html">Edge</a> *&#160;</td>
+          <td class="paramname"><em>e</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="add0ccafd62c6c018b8a62d88e6c06903" name="add0ccafd62c6c018b8a62d88e6c06903"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add0ccafd62c6c018b8a62d88e6c06903">&#9670;&#160;</a></span>insertAdjEdge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TT, typename El , bool O&gt; <br />
+requires (N &lt; 0 &amp;&amp; !TTVN)</div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::insertAdjEdge </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td>
           <td class="paramname"><em>i</em>, </td>
@@ -780,49 +892,49 @@ requires (N &lt; 0)</div>
 
 </div>
 </div>
-<a id="a9bca7ba5837c8843283c756a0c8ddbac" name="a9bca7ba5837c8843283c756a0c8ddbac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9bca7ba5837c8843283c756a0c8ddbac">&#9670;&#160;</a></span>isAdjEdgesEnabled()</h2>
+<a id="acddeb1f38011fed240c15cd9e6a7ac89" name="acddeb1f38011fed240c15cd9e6a7ac89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acddeb1f38011fed240c15cd9e6a7ac89">&#9670;&#160;</a></span>isAdjEdgesEnabled()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, typename El , bool o&gt; </div>
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TT, typename El , bool O&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, El, o &gt;::isAdjEdgesEnabled</td>
+          <td class="memname">bool <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::isAdjEdgesEnabled</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a25e05af749183e8ed9661403bcf3c743" name="a25e05af749183e8ed9661403bcf3c743"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25e05af749183e8ed9661403bcf3c743">&#9670;&#160;</a></span>isEnabled()</h2>
+<a id="ab88e0031e63acd0ea9a6067b223bc5eb" name="ab88e0031e63acd0ea9a6067b223bc5eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab88e0031e63acd0ea9a6067b223bc5eb">&#9670;&#160;</a></span>isEnabled()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, typename El , bool o&gt; </div>
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TT, typename El , bool O&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, El, o &gt;::isEnabled</td>
+          <td class="memname">bool <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::isEnabled</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="aa2825367ad9f8f33d8f107da270331f1" name="aa2825367ad9f8f33d8f107da270331f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2825367ad9f8f33d8f107da270331f1">&#9670;&#160;</a></span>pushAdjEdge()</h2>
+<a id="a4b9697d8fc9d22bf7f2f15cca29a0939" name="a4b9697d8fc9d22bf7f2f15cca29a0939"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b9697d8fc9d22bf7f2f15cca29a0939">&#9670;&#160;</a></span>pushAdjEdge()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, typename El , bool o&gt; <br />
-requires (N &lt; 0)</div>
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TT, typename El , bool O&gt; <br />
+requires (N &lt; 0 &amp;&amp; !TTVN)</div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, El, o &gt;::pushAdjEdge </td>
+          <td class="memname">void <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::pushAdjEdge </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classvcl_1_1Edge.html">Edge</a> *&#160;</td>
           <td class="paramname"><em>e</em></td><td>)</td>
@@ -833,17 +945,75 @@ requires (N &lt; 0)</div>
 
 </div>
 </div>
-<a id="a3be18acabf4e2f5478e050d0d975accd" name="a3be18acabf4e2f5478e050d0d975accd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3be18acabf4e2f5478e050d0d975accd">&#9670;&#160;</a></span>resizeAdjEdges()</h2>
+<a id="a33543725576a5df01da4d367082438f4" name="a33543725576a5df01da4d367082438f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33543725576a5df01da4d367082438f4">&#9670;&#160;</a></span>pushBack()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, typename El , bool o&gt; <br />
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TT, typename El , bool O&gt; <br />
 requires (N &lt; 0)</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, El, o &gt;::resizeAdjEdges </td>
+          <td class="memname">void <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::pushBack </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Edge.html">Edge</a> *&#160;</td>
+          <td class="paramname"><em>e</em> = <code>nullptr</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc560ae7a972682a5e73eb41eee804ff" name="afc560ae7a972682a5e73eb41eee804ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc560ae7a972682a5e73eb41eee804ff">&#9670;&#160;</a></span>resize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TT, typename El , bool O&gt; <br />
+requires (N &lt; 0)</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::resize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac9f5f3f2603e0cb7e6da9028c5d44688" name="ac9f5f3f2603e0cb7e6da9028c5d44688"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9f5f3f2603e0cb7e6da9028c5d44688">&#9670;&#160;</a></span>resizeAdjEdges()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TT, typename El , bool O&gt; <br />
+requires (N &lt; 0 &amp;&amp; !TTVN)</div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::resizeAdjEdges </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td>
           <td class="paramname"><em>n</em></td><td>)</td>
@@ -863,16 +1033,16 @@ requires (N &lt; 0)</div>
 
 </div>
 </div>
-<a id="a65a5e04482eed7904724f77d7df8b5fb" name="a65a5e04482eed7904724f77d7df8b5fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65a5e04482eed7904724f77d7df8b5fb">&#9670;&#160;</a></span>setAdjEdge()</h2>
+<a id="a48d18457e9a0745c1ca47e6e51ab846a" name="a48d18457e9a0745c1ca47e6e51ab846a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48d18457e9a0745c1ca47e6e51ab846a">&#9670;&#160;</a></span>setAdjEdge()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, typename El , bool o&gt; </div>
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TT, typename El , bool O&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, El, o &gt;::setAdjEdge </td>
+          <td class="memname">void <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::setAdjEdge </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classvcl_1_1Edge.html">Edge</a> *&#160;</td>
           <td class="paramname"><em>e</em>, </td>
@@ -902,16 +1072,16 @@ template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N
 
 </div>
 </div>
-<a id="a91c4872f665dac1956d04a8fdc13fc52" name="a91c4872f665dac1956d04a8fdc13fc52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91c4872f665dac1956d04a8fdc13fc52">&#9670;&#160;</a></span>setAdjEdges()</h2>
+<a id="a2ca2d0e6f3f22dde1a7126233dd2b9b6" name="a2ca2d0e6f3f22dde1a7126233dd2b9b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ca2d0e6f3f22dde1a7126233dd2b9b6">&#9670;&#160;</a></span>setAdjEdges()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, typename El , bool o&gt; </div>
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TT, typename El , bool O&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, El, o &gt;::setAdjEdges </td>
+          <td class="memname">void <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::setAdjEdges </td>
           <td>(</td>
           <td class="paramtype">const std::vector&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a> * &gt; &amp;&#160;</td>
           <td class="paramname"><em>list</em></td><td>)</td>
@@ -931,19 +1101,57 @@ template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N
 
 </div>
 </div>
-<a id="a8d3cf6f95653f5c9edc31f474e9d573f" name="a8d3cf6f95653f5c9edc31f474e9d573f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d3cf6f95653f5c9edc31f474e9d573f">&#9670;&#160;</a></span>updateReferences()</h2>
+<a id="ad3b09cec568dd3c5bfeea34945d941e6" name="ad3b09cec568dd3c5bfeea34945d941e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3b09cec568dd3c5bfeea34945d941e6">&#9670;&#160;</a></span>updatePointers() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, typename El , bool o&gt; </div>
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TT, typename El , bool O&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, El, o &gt;::updateReferences </td>
+          <td class="memname">void <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::updatePointers </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classvcl_1_1Edge.html">Edge</a> *&#160;</td>
+          <td class="paramname"><em>base</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>newIndices</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a508b0e44230818b3be4d51ffd2cd46dd" name="a508b0e44230818b3be4d51ffd2cd46dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a508b0e44230818b3be4d51ffd2cd46dd">&#9670;&#160;</a></span>updatePointers() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TT, typename El , bool O&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::updatePointers </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classvcl_1_1Edge.html">Edge</a> *&#160;</td>
           <td class="paramname"><em>oldBase</em>, </td>
@@ -969,58 +1177,20 @@ template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N
 
 </div>
 </div>
-<a id="ac07e4241d1c20928a48a64ab991c9e1d" name="ac07e4241d1c20928a48a64ab991c9e1d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac07e4241d1c20928a48a64ab991c9e1d">&#9670;&#160;</a></span>updateReferencesAfterCompact()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, typename El , bool o&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, El, o &gt;::updateReferencesAfterCompact </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classvcl_1_1Edge.html">Edge</a> *&#160;</td>
-          <td class="paramname"><em>base</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; int &gt; &amp;&#160;</td>
-          <td class="paramname"><em>newIndices</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a86ad1783442be1b0e61c4c6dc81d81cc" name="a86ad1783442be1b0e61c4c6dc81d81cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a86ad1783442be1b0e61c4c6dc81d81cc">&#9670;&#160;</a></span>ADJ_EDGE_NUMBER</h2>
+<a id="a87d1f9b44b3a999fd242e042b9607fc4" name="a87d1f9b44b3a999fd242e042b9607fc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87d1f9b44b3a999fd242e042b9607fc4">&#9670;&#160;</a></span>ADJ_EDGE_NUMBER</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, typename ElementType  = void, bool optional = false&gt; </div>
+template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TTVN, typename ElementType  = void, bool OPT = false&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const int <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, ElementType, optional &gt;::ADJ_EDGE_NUMBER = Base::CONTAINER_SIZE</td>
+          <td class="memname">const int <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TTVN, ElementType, OPT &gt;::ADJ_EDGE_NUMBER = <a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html#a884be8c64a380423ada7cef74a23c8e7">Base::SIZE</a></td>
         </tr>
       </table>
   </td>
@@ -1029,59 +1199,7 @@ template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Static size of the container. If the container is dynamic, this value will be negative and you should use the <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#ac92e829ef4a594b60249c038c9cf2de7" title="Returns the number of adjacent edges of this element.">adjEdgesNumber()</a> member function. </p>
-
-</div>
-</div>
-<a id="ad116d81ccff4ff9a935801c481f340da" name="ad116d81ccff4ff9a935801c481f340da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad116d81ccff4ff9a935801c481f340da">&#9670;&#160;</a></span>IS_OPTIONAL</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, typename ElementType  = void, bool optional = false&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const bool <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, ElementType, optional &gt;::IS_OPTIONAL = optional</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Boolean that tells if this component is optional. Makes sense only when the component is vertical. </p>
-
-</div>
-</div>
-<a id="a621ae71ab92519ea81f049d9434c9648" name="a621ae71ab92519ea81f049d9434c9648"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a621ae71ab92519ea81f049d9434c9648">&#9670;&#160;</a></span>IS_VERTICAL</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, typename ElementType  = void, bool optional = false&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const bool <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, ElementType, optional &gt;::IS_VERTICAL = !std::is_same_v&lt;ElementType, void&gt;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Boolean that tells if this component type stores its data vertically (not in the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> frame memory, but in another vector). </p>
+<p>Static size of the container. If the container is dynamic, this value will be negative and you should use the <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#ab70ef81352cb7afca3b02eea1ce0095d" title="Returns the number of adjacent edges of this element.">adjEdgesNumber()</a> member function. </p>
 
 </div>
 </div>

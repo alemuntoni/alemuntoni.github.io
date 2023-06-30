@@ -33,7 +33,7 @@ var namespacevcl_1_1io_1_1ply =
       [ "green", "namespacevcl_1_1io_1_1ply.html#ae59b1615f98338e68cfa5b0612c249c4ac7928c80d785d6cbb15a6802bf4699d2", null ],
       [ "blue", "namespacevcl_1_1io_1_1ply.html#ae59b1615f98338e68cfa5b0612c249c4a1d2643153d11bec0df3774712d184ec9", null ],
       [ "alpha", "namespacevcl_1_1io_1_1ply.html#ae59b1615f98338e68cfa5b0612c249c4a1bc3401f7be7806e6c5395245422623c", null ],
-      [ "scalar", "namespacevcl_1_1io_1_1ply.html#ae59b1615f98338e68cfa5b0612c249c4a37665b7b41f600fd4ae834e0f739a93a", null ],
+      [ "quality", "namespacevcl_1_1io_1_1ply.html#ae59b1615f98338e68cfa5b0612c249c4a3cb839f640d30bbce06fe78d93d634df", null ],
       [ "texture_u", "namespacevcl_1_1io_1_1ply.html#ae59b1615f98338e68cfa5b0612c249c4a9fbae30c3644ffcd842a0db9103bf653", null ],
       [ "texture_v", "namespacevcl_1_1io_1_1ply.html#ae59b1615f98338e68cfa5b0612c249c4acb3a3080db4b9341134d8cee676ba8fe", null ],
       [ "texnumber", "namespacevcl_1_1io_1_1ply.html#ae59b1615f98338e68cfa5b0612c249c4a312936be4d78e07ea4a0d40f8ba9ce32", null ],

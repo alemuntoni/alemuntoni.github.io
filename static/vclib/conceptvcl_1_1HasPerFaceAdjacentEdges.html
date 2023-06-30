@@ -95,19 +95,31 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1HasPerFaceAdjacentEdges.
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">vcl::HasPerFaceAdjacentEdges Concept Reference</div></div>
+  <div class="headertitle"><div class="title">vcl::HasPerFaceAdjacentEdges Concept Reference<div class="ingroups"><a class="el" href="group__concepts.html">Concepts</a> &raquo; <a class="el" href="group__lconcepts.html">Library Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__concepts.html">Mesh Concepts</a> &raquo; <a class="el" href="group__face__mesh__concepts.html">FaceMesh Concepts</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Concept that checks if a Mesh has the per Face AdjacentEdges component.  
+<a href="conceptvcl_1_1HasPerFaceAdjacentEdges.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="per__face_8h_source.html">vclib/concepts/mesh/per_face.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType&gt;</div>
 <div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1HasPerFaceAdjacentEdges.html">vcl::HasPerFaceAdjacentEdges</a> = </div>
 <div class="line">    <a class="code hl_concept" href="conceptvcl_1_1HasFaces.html">HasFaces&lt;MeshType&gt;</a> &amp;&amp; <a class="code hl_concept" href="conceptvcl_1_1face_1_1HasAdjacentEdges.html">vcl::face::HasAdjacentEdges&lt;typename MeshType::FaceType&gt;</a></div>
-<div class="ttc" id="aconceptvcl_1_1HasFaces_html"><div class="ttname"><a href="conceptvcl_1_1HasFaces.html">vcl::HasFaces</a></div><div class="ttdoc">HasFaces concepts is satisfied when at least one of its types is (or inherits from) a FaceContainer....</div><div class="ttdef"><b>Definition:</b> containers.h:211</div></div>
-<div class="ttc" id="aconceptvcl_1_1HasPerFaceAdjacentEdges_html"><div class="ttname"><a href="conceptvcl_1_1HasPerFaceAdjacentEdges.html">vcl::HasPerFaceAdjacentEdges</a></div><div class="ttdef"><b>Definition:</b> per_face.h:33</div></div>
+<div class="ttc" id="aconceptvcl_1_1HasFaces_html"><div class="ttname"><a href="conceptvcl_1_1HasFaces.html">vcl::HasFaces</a></div><div class="ttdoc">HasFaces concepts is satisfied when at least one of its template types is (or inherits from) a FaceCo...</div><div class="ttdef"><b>Definition:</b> face_container.h:104</div></div>
+<div class="ttc" id="aconceptvcl_1_1HasPerFaceAdjacentEdges_html"><div class="ttname"><a href="conceptvcl_1_1HasPerFaceAdjacentEdges.html">vcl::HasPerFaceAdjacentEdges</a></div><div class="ttdoc">Concept that checks if a Mesh has the per Face AdjacentEdges component.</div><div class="ttdef"><b>Definition:</b> per_face.h:50</div></div>
 <div class="ttc" id="aconceptvcl_1_1face_1_1HasAdjacentEdges_html"><div class="ttname"><a href="conceptvcl_1_1face_1_1HasAdjacentEdges.html">vcl::face::HasAdjacentEdges</a></div><div class="ttdef"><b>Definition:</b> face.h:69</div></div>
-</div><!-- fragment --></div><!-- contents -->
+</div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Concept that checks if a Mesh has the per Face AdjacentEdges component. </p>
+<p>Evaluates to true if AdjacentEdges is part of the Face element, whether it is horizontal, vertical or optional.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>mesh type to check. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

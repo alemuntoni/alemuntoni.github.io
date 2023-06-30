@@ -99,15 +99,45 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1mesh_1_1HasEdgeContainer
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="concepts_2mesh_2containers_8h_source.html">vclib/concepts/mesh/containers.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="concepts_2mesh_2containers_2edge__container_8h_source.html">vclib/concepts/mesh/containers/edge_container.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1mesh_1_1HasEdgeContainer.html">vcl::mesh::HasEdgeContainer</a> =  <span class="keyword">requires</span>(T o)</div>
+<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1mesh_1_1HasEdgeContainer.html">vcl::mesh::HasEdgeContainer</a> =  <span class="keyword">requires</span>(</div>
+<div class="line">    T o,</div>
+<div class="line">    <span class="keyword">const</span> T&amp; co,</div>
+<div class="line">    <span class="keyword">typename</span> T::EdgeType* e)</div>
 <div class="line">{</div>
 <div class="line">    <span class="keyword">typename</span> T::EdgeType;</div>
-<div class="line">    o.edge(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>());</div>
+<div class="line">    <span class="keyword">typename</span> T::EdgeIterator;</div>
+<div class="line">    <span class="keyword">typename</span> T::ConstEdgeIterator;</div>
+<div class="line"> </div>
+<div class="line">    { o.edge(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;typename T::EdgeType&amp;&gt;;</div>
+<div class="line">    { co.edge(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;const typename T::EdgeType&amp;&gt;;</div>
+<div class="line"> </div>
+<div class="line">    { co.edgeNumber() } -&gt; std::same_as&lt;uint&gt;;</div>
+<div class="line">    { co.edgeContainerSize() } -&gt; std::same_as&lt;uint&gt;;</div>
+<div class="line">    { co.deletedEdgeNumber() } -&gt; std::same_as&lt;uint&gt;;</div>
+<div class="line">    o.deleteEdge(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>());</div>
+<div class="line">    o.deleteEdge(e);</div>
+<div class="line">    { o.edgeIndexIfCompact(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;uint&gt;;</div>
+<div class="line">    { o.edgeCompactIndices() } -&gt; std::same_as&lt;std::vector&lt;uint&gt;&gt;;</div>
+<div class="line"> </div>
+<div class="line">    { o.addEdge() } -&gt; std::same_as&lt;uint&gt;;</div>
+<div class="line">    { o.addEdges(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;uint&gt;;</div>
+<div class="line">    { o.reserveEdges(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">    { o.compactEdges() } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line"> </div>
+<div class="line">    { o.edgeBegin() } -&gt; std::same_as&lt;typename T::EdgeIterator&gt;;</div>
+<div class="line">    { co.edgeBegin() } -&gt; std::same_as&lt;typename T::ConstEdgeIterator&gt;;</div>
+<div class="line">    { o.edgeEnd() } -&gt; std::same_as&lt;typename T::EdgeIterator&gt;;</div>
+<div class="line">    { co.edgeEnd() } -&gt; std::same_as&lt;typename T::ConstEdgeIterator&gt;;</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"> </div>
 <div class="line">}</div>
-<div class="ttc" id="aconceptvcl_1_1mesh_1_1HasEdgeContainer_html"><div class="ttname"><a href="conceptvcl_1_1mesh_1_1HasEdgeContainer.html">vcl::mesh::HasEdgeContainer</a></div><div class="ttdef"><b>Definition:</b> containers.h:56</div></div>
+<div class="ttc" id="aconceptvcl_1_1mesh_1_1HasEdgeContainer_html"><div class="ttname"><a href="conceptvcl_1_1mesh_1_1HasEdgeContainer.html">vcl::mesh::HasEdgeContainer</a></div><div class="ttdef"><b>Definition:</b> edge_container.h:36</div></div>
 <div class="ttc" id="atypes_2base_8h_html_a69aa29b598b851b0640aa225a9e5d61d"><div class="ttname"><a href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> base.h:31</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

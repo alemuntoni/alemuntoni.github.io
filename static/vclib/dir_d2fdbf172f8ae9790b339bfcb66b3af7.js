@@ -4,7 +4,6 @@ var dir_d2fdbf172f8ae9790b339bfcb66b3af7 =
     [ "concepts", "dir_d8d31096cdb23314816d0514c2e28657.html", "dir_d8d31096cdb23314816d0514c2e28657" ],
     [ "exceptions", "dir_faecc92ba3fe640bc81c479e685075f2.html", "dir_faecc92ba3fe640bc81c479e685075f2" ],
     [ "ext", "dir_26aa4e13160f9d189845a6fb46a0a84e.html", "dir_26aa4e13160f9d189845a6fb46a0a84e" ],
-    [ "image", "dir_b10b512ed4c4c27ec85062738fac8832.html", "dir_b10b512ed4c4c27ec85062738fac8832" ],
     [ "io", "dir_d71e4c2580782f77754656728837316e.html", "dir_d71e4c2580782f77754656728837316e" ],
     [ "iterators", "dir_48539028f9f417e400eda4b9af7b4212.html", "dir_48539028f9f417e400eda4b9af7b4212" ],
     [ "math", "dir_96ccdd9de2e0c21b924c5a2b723ad6a0.html", "dir_96ccdd9de2e0c21b924c5a2b723ad6a0" ],

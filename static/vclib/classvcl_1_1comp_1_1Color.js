@@ -1,13 +1,9 @@
 var classvcl_1_1comp_1_1Color =
 [
-    [ "ColorComponent", "classvcl_1_1comp_1_1Color.html#aa67f7459bcc81455ac656b43c40edb61", null ],
-    [ "ColorType", "classvcl_1_1comp_1_1Color.html#a4f02272831411aab9a9b7e21531b29ef", null ],
-    [ "DataValueType", "classvcl_1_1comp_1_1Color.html#ad6a9e7eb1508cfb3b51b33c7b01bbaed", null ],
-    [ "color", "classvcl_1_1comp_1_1Color.html#a32bb885983c3991046d03d196e67c294", null ],
-    [ "color", "classvcl_1_1comp_1_1Color.html#acf4d2ac2b716e0b4339f0aa6129cbe6b", null ],
-    [ "importFrom", "classvcl_1_1comp_1_1Color.html#a2b11b7fa3221661d64cfd276b95fa0c3", null ],
-    [ "isColorEnabled", "classvcl_1_1comp_1_1Color.html#abc99d3c1ed47290cbe6150e4303e3218", null ],
-    [ "isEnabled", "classvcl_1_1comp_1_1Color.html#a00f17b21d7e4c4716d1fb085ac5eea0c", null ],
-    [ "IS_OPTIONAL", "classvcl_1_1comp_1_1Color.html#a72050d2b2d15f97da8fed81390b011c5", null ],
-    [ "IS_VERTICAL", "classvcl_1_1comp_1_1Color.html#ace6e93741933e618075bf6d35032d7c9", null ]
+    [ "ColorType", "classvcl_1_1comp_1_1Color.html#a7e4e91aa0ec4ce9a9292bd9f9e10f6af", null ],
+    [ "color", "classvcl_1_1comp_1_1Color.html#ac32c5ce9c56ee98c993fefb5458f1e20", null ],
+    [ "color", "classvcl_1_1comp_1_1Color.html#ab773433214a364b6fb46ad94840bfe56", null ],
+    [ "importFrom", "classvcl_1_1comp_1_1Color.html#a25add9289ff1d2247a0249afd08a6c86", null ],
+    [ "isColorEnabled", "classvcl_1_1comp_1_1Color.html#a0b0d76a37aa6de7cd82b79e37b3e3ad1", null ],
+    [ "isEnabled", "classvcl_1_1comp_1_1Color.html#ac82c4b4d70b34464cd580e4813af055f", null ]
 ];

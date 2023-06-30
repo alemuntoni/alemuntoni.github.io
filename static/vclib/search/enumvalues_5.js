@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['face_0',['FACE',['../namespacevcl.html#a64e691de6b710b9fd1dc3d5db66a6f7aa0deacef785932de145d594f20e312b58',1,'vcl::FACE()'],['../namespacevcl_1_1io_1_1ply.html#ab6978d1c3ac5e80bd46c2132b4567acbadc9fd8bcd2ebe9bc29169f770356efe0',1,'vcl::io::ply::FACE()']]],
-  ['faux0_1',['FAUX0',['../classvcl_1_1comp_1_1PolygonBitFlags.html#ab8d42af749b3f89f5be6290271f0705da8ce391afdf846aad0bab3fbb37637422',1,'vcl::comp::PolygonBitFlags::FAUX0()'],['../classvcl_1_1comp_1_1TriangleBitFlags.html#af43d4377bf034082892ce49ecfe1c5c3a87c30a3f1338a6960ccb585730f3937f',1,'vcl::comp::TriangleBitFlags::FAUX0()']]],
-  ['float_2',['FLOAT',['../classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65a00b5d3b0c37a6f446b9e705aab7d3a5a',1,'vcl::FileMeshInfo']]]
+  ['face_0',['FACE',['../classvcl_1_1FileMeshInfo.html#ae66b19c3da76ef7e459755cc05de3957a8b699664fb2e46e7abc250cf8f42e253',1,'vcl::FileMeshInfo::FACE()'],['../namespacevcl_1_1io_1_1ply.html#ab6978d1c3ac5e80bd46c2132b4567acbadc9fd8bcd2ebe9bc29169f770356efe0',1,'vcl::io::ply::FACE()'],['../namespacevcl.html#a64e691de6b710b9fd1dc3d5db66a6f7aa0deacef785932de145d594f20e312b58',1,'vcl::FACE()']]],
+  ['float_1',['FLOAT',['../classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68a00b5d3b0c37a6f446b9e705aab7d3a5a',1,'vcl::FileMeshInfo']]]
 ];

@@ -5,13 +5,13 @@ var indexSectionsWithContent =
   2: "v",
   3: "12345abcdefghiklmnpqrstuvw",
   4: "_abcdefghiklmnopqrstuvwxyz~",
-  5: "abcdefghiklmnprstuvw",
+  5: "abcdefghiklmnpqrstuvw",
   6: "abcdefhiklmnopqrstuvw",
-  7: "cefhlmpv",
+  7: "cdefhlmpv",
   8: "abcdefghilmnopqrstuvwxyz",
-  9: "abefhmopstv",
+  9: "aefmopstv",
   10: "cs",
-  11: "abcefhlmpsuv",
+  11: "abcdefilmprsuv",
   12: "bceglstv",
   13: "v"
 };

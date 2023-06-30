@@ -96,10 +96,11 @@ $(document).ready(function(){initNavTree('classvcl_1_1FileMeshInfo.html',''); in
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classvcl_1_1FileMeshInfo-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">vcl::FileMeshInfo Class Reference</div></div>
+  <div class="headertitle"><div class="title">vcl::FileMeshInfo Class Reference<div class="ingroups"><a class="el" href="group__load__save.html">Load/Save functions</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -108,67 +109,126 @@ $(document).ready(function(){initNavTree('classvcl_1_1FileMeshInfo.html',''); in
 
 <p><code>#include &lt;<a class="el" href="file__mesh__info_8h_source.html">vclib/io/file_mesh_info.h</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvcl_1_1FileMeshInfo_1_1CustomComponent.html">CustomComponent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="structvcl_1_1FileMeshInfo_1_1CustomComponent.html" title="The CustomComponent struct is a simple structure that describes a custom component of an Element (or ...">CustomComponent</a> struct is a simple structure that describes a custom component of an <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> (or of the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>)  <a href="structvcl_1_1FileMeshInfo_1_1CustomComponent.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a62e51687a97b242fa868b745f2ae9e98"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a62e51687a97b242fa868b745f2ae9e98">MeshType</a> { <a class="el" href="classvcl_1_1FileMeshInfo.html#a62e51687a97b242fa868b745f2ae9e98a802ee56936a7c9fd401f26a3983d28c0">TRIANGLE_MESH</a>
 , <a class="el" href="classvcl_1_1FileMeshInfo.html#a62e51687a97b242fa868b745f2ae9e98a63fd40ffbd9fd94c994556ba59f702e1">QUAD_MESH</a>
 , <a class="el" href="classvcl_1_1FileMeshInfo.html#a62e51687a97b242fa868b745f2ae9e98a2a33168780ed90acbac5809b147ab7ae">POLYGON_MESH</a>
  }</td></tr>
+<tr class="memdesc:a62e51687a97b242fa868b745f2ae9e98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum used to describe the type of the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> - by default, a mesh is considered polygonal.  <a href="classvcl_1_1FileMeshInfo.html#a62e51687a97b242fa868b745f2ae9e98">More...</a><br /></td></tr>
 <tr class="separator:a62e51687a97b242fa868b745f2ae9e98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a564278e6ec082388f59446f2098cad65"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">PropType</a> { <br />
-&#160;&#160;<a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65ad9bb3495286e9cc43c97692917329176">CHAR</a>
-, <a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65a8de9ea4809550da281b2c3283069efc1">UCHAR</a>
-, <a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65a4dca6862668e09c2e9450c8348a00717">SHORT</a>
-, <a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65a4c1bf5200b14adc19f0cc7d762dfd15a">USHORT</a>
+<tr class="memitem:ae66b19c3da76ef7e459755cc05de3957"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#ae66b19c3da76ef7e459755cc05de3957">Element</a> { <br />
+&#160;&#160;<a class="el" href="classvcl_1_1FileMeshInfo.html#ae66b19c3da76ef7e459755cc05de3957a26ce8a656d8205856e3778c82e39d8c1">VERTEX</a>
+, <a class="el" href="classvcl_1_1FileMeshInfo.html#ae66b19c3da76ef7e459755cc05de3957a8b699664fb2e46e7abc250cf8f42e253">FACE</a>
+, <a class="el" href="classvcl_1_1FileMeshInfo.html#ae66b19c3da76ef7e459755cc05de3957a473202c150cc074701d84b7f03273ba6">EDGE</a>
+, <a class="el" href="classvcl_1_1FileMeshInfo.html#ae66b19c3da76ef7e459755cc05de3957a358dcc3f993580d2b2bdd43c3bb9d1ab">MESH</a>
 , <br />
-&#160;&#160;<a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65a4952874d30f3b527c19c23863fdb783f">INT</a>
-, <a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65abc3ed3961e360f8ac9e8dba2336fd582">UINT</a>
-, <a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65a00b5d3b0c37a6f446b9e705aab7d3a5a">FLOAT</a>
-, <a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65a852831f6ea9fa717188d8771b5684c18">DOUBLE</a>
-, <br />
-&#160;&#160;<a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65a7f9b9aa08c5a6d66128b66d19fdfc35f">UNKNOWN</a>
+&#160;&#160;<a class="el" href="classvcl_1_1FileMeshInfo.html#ae66b19c3da76ef7e459755cc05de3957a2d1987a4005efc676b310d57ffdb5870">NUM_ELEMENTS</a>
 <br />
  }</td></tr>
-<tr class="separator:a564278e6ec082388f59446f2098cad65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:ae66b19c3da76ef7e459755cc05de3957"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum used to describe the type of Elements that can be found in a file.  <a href="classvcl_1_1FileMeshInfo.html#ae66b19c3da76ef7e459755cc05de3957">More...</a><br /></td></tr>
+<tr class="separator:ae66b19c3da76ef7e459755cc05de3957"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0568f5cb1c9d2ddeedb4d5e813baf96a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a0568f5cb1c9d2ddeedb4d5e813baf96a">Component</a> { <br />
+&#160;&#160;<a class="el" href="classvcl_1_1FileMeshInfo.html#a0568f5cb1c9d2ddeedb4d5e813baf96aaf8a41ae8905a9a7eb3661e49f2d160db">COORD</a>
+, <a class="el" href="classvcl_1_1FileMeshInfo.html#a0568f5cb1c9d2ddeedb4d5e813baf96aa2774efc5536c552fd1f45f0f7b97fb00">VREFS</a>
+, <a class="el" href="classvcl_1_1FileMeshInfo.html#a0568f5cb1c9d2ddeedb4d5e813baf96aa325b723088331449963e13f26781679c">NORMAL</a>
+, <a class="el" href="classvcl_1_1FileMeshInfo.html#a0568f5cb1c9d2ddeedb4d5e813baf96aa3a2a3bc8092db73d3d53df2675ed85c4">COLOR</a>
+, <br />
+&#160;&#160;<a class="el" href="classvcl_1_1FileMeshInfo.html#a0568f5cb1c9d2ddeedb4d5e813baf96aa6b970364124c538f318825dbfa572bb9">QUALITY</a>
+, <a class="el" href="classvcl_1_1FileMeshInfo.html#a0568f5cb1c9d2ddeedb4d5e813baf96aa1f816bdfa80f36cface564e0a8cc29db">TEXCOORD</a>
+, <a class="el" href="classvcl_1_1FileMeshInfo.html#a0568f5cb1c9d2ddeedb4d5e813baf96aa7542bbf57547f7c35dc610e30bf19c47">WEDGE_TEXCOORDS</a>
+, <a class="el" href="classvcl_1_1FileMeshInfo.html#a0568f5cb1c9d2ddeedb4d5e813baf96aa1baaf21f0fc22ebe60dd993e76e281ba">CUSTOM_COMPONENTS</a>
+, <br />
+&#160;&#160;<a class="el" href="classvcl_1_1FileMeshInfo.html#a0568f5cb1c9d2ddeedb4d5e813baf96aa8bc0571f1351dfa0d5bc6c9239ab6829">TEXTURES</a>
+, <a class="el" href="classvcl_1_1FileMeshInfo.html#a0568f5cb1c9d2ddeedb4d5e813baf96aa157b18d6e880a059fb90203e3a59d0cc">NUM_COMPONENTS</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a0568f5cb1c9d2ddeedb4d5e813baf96a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum used to describe the type of Components that each <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> can have.  <a href="classvcl_1_1FileMeshInfo.html#a0568f5cb1c9d2ddeedb4d5e813baf96a">More...</a><br /></td></tr>
+<tr class="separator:a0568f5cb1c9d2ddeedb4d5e813baf96a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e8893b99b316909beff5aca50e13f68"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a> { <br />
+&#160;&#160;<a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68ad9bb3495286e9cc43c97692917329176">CHAR</a>
+, <a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68a8de9ea4809550da281b2c3283069efc1">UCHAR</a>
+, <a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68a4dca6862668e09c2e9450c8348a00717">SHORT</a>
+, <a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68a4c1bf5200b14adc19f0cc7d762dfd15a">USHORT</a>
+, <br />
+&#160;&#160;<a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68a4952874d30f3b527c19c23863fdb783f">INT</a>
+, <a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68abc3ed3961e360f8ac9e8dba2336fd582">UINT</a>
+, <a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68a00b5d3b0c37a6f446b9e705aab7d3a5a">FLOAT</a>
+, <a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68a852831f6ea9fa717188d8771b5684c18">DOUBLE</a>
+, <br />
+&#160;&#160;<a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68a7f9b9aa08c5a6d66128b66d19fdfc35f">UNKNOWN</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a5e8893b99b316909beff5aca50e13f68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum used to describe the type of Data stored in a component.  <a href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">More...</a><br /></td></tr>
+<tr class="separator:a5e8893b99b316909beff5aca50e13f68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a96b5482711315c8c307b0fe1fbc8948c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a96b5482711315c8c307b0fe1fbc8948c">FileMeshInfo</a> ()</td></tr>
+<tr class="memdesc:a96b5482711315c8c307b0fe1fbc8948c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <br /></td></tr>
 <tr class="separator:a96b5482711315c8c307b0fe1fbc8948c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad841f4938da2c103eedc7f8a53814d05"><td class="memTemplParams" colspan="2">template&lt;MeshConcept Mesh&gt; </td></tr>
 <tr class="memitem:ad841f4938da2c103eedc7f8a53814d05"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#ad841f4938da2c103eedc7f8a53814d05">FileMeshInfo</a> (const <a class="el" href="classvcl_1_1Mesh.html">Mesh</a> &amp;m)</td></tr>
+<tr class="memdesc:ad841f4938da2c103eedc7f8a53814d05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current status of the <a class="el" href="classvcl_1_1FileMeshInfo.html" title="A simple class that allows to store which components has been loaded or are going to be saved on a me...">FileMeshInfo</a> object from the input mesh.  <br /></td></tr>
 <tr class="separator:ad841f4938da2c103eedc7f8a53814d05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a860976f66427384602783055040643f5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a860976f66427384602783055040643f5">isTriangleMesh</a> () const</td></tr>
+<tr class="memdesc:a860976f66427384602783055040643f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the current object has <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> type set to <a class="el" href="classvcl_1_1FileMeshInfo.html#a62e51687a97b242fa868b745f2ae9e98a63fd40ffbd9fd94c994556ba59f702e1">MeshType::QUAD_MESH</a>.  <br /></td></tr>
 <tr class="separator:a860976f66427384602783055040643f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13bf5fcb049f4d27fd9cb9e6c4b1cc06"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a13bf5fcb049f4d27fd9cb9e6c4b1cc06">isQuadMesh</a> () const</td></tr>
+<tr class="memdesc:a13bf5fcb049f4d27fd9cb9e6c4b1cc06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the current object has <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> type set to <a class="el" href="classvcl_1_1FileMeshInfo.html#a62e51687a97b242fa868b745f2ae9e98a802ee56936a7c9fd401f26a3983d28c0">MeshType::TRIANGLE_MESH</a>.  <br /></td></tr>
 <tr class="separator:a13bf5fcb049f4d27fd9cb9e6c4b1cc06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb0525cfa0c076df59edf7f7cc45fa62"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#acb0525cfa0c076df59edf7f7cc45fa62">isPolygonMesh</a> () const</td></tr>
+<tr class="memdesc:acb0525cfa0c076df59edf7f7cc45fa62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the current object has <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> type set to <a class="el" href="classvcl_1_1FileMeshInfo.html#a62e51687a97b242fa868b745f2ae9e98a2a33168780ed90acbac5809b147ab7ae">MeshType::POLYGON_MESH</a>.  <br /></td></tr>
 <tr class="separator:acb0525cfa0c076df59edf7f7cc45fa62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77391be02dca2a2f8843f04b2e785267"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a77391be02dca2a2f8843f04b2e785267">hasElement</a> (<a class="el" href="classvcl_1_1FileMeshInfo.html#ae66b19c3da76ef7e459755cc05de3957">Element</a> el) const</td></tr>
+<tr class="separator:a77391be02dca2a2f8843f04b2e785267"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7019fb125aa01647f4b01134147c9e4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#ab7019fb125aa01647f4b01134147c9e4">hasPerElementComponent</a> (<a class="el" href="classvcl_1_1FileMeshInfo.html#ae66b19c3da76ef7e459755cc05de3957">Element</a> el, <a class="el" href="classvcl_1_1FileMeshInfo.html#a0568f5cb1c9d2ddeedb4d5e813baf96a">Component</a> comp) const</td></tr>
+<tr class="separator:ab7019fb125aa01647f4b01134147c9e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace4c3eb15b1d98b351e7207135dfbb03"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#ace4c3eb15b1d98b351e7207135dfbb03">hasVertices</a> () const</td></tr>
+<tr class="memdesc:ace4c3eb15b1d98b351e7207135dfbb03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the current object has <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Elements.  <br /></td></tr>
 <tr class="separator:ace4c3eb15b1d98b351e7207135dfbb03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae582923b66393aa879aa00d901e4f87a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#ae582923b66393aa879aa00d901e4f87a">hasVertexCoords</a> () const</td></tr>
+<tr class="memdesc:ae582923b66393aa879aa00d901e4f87a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the current object has <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Coordinates.  <br /></td></tr>
 <tr class="separator:ae582923b66393aa879aa00d901e4f87a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec0f13ff6133950d3405aeaf5dc382f0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#aec0f13ff6133950d3405aeaf5dc382f0">hasVertexNormals</a> () const</td></tr>
+<tr class="memdesc:aec0f13ff6133950d3405aeaf5dc382f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the current object has <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Normals.  <br /></td></tr>
 <tr class="separator:aec0f13ff6133950d3405aeaf5dc382f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac13bd2a56316cee9b6765b0e15d6a3ed"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#ac13bd2a56316cee9b6765b0e15d6a3ed">hasVertexColors</a> () const</td></tr>
+<tr class="memdesc:ac13bd2a56316cee9b6765b0e15d6a3ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the current object has <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Colors.  <br /></td></tr>
 <tr class="separator:ac13bd2a56316cee9b6765b0e15d6a3ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b5f6adedea2f8a2144e23d8167087a7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a0b5f6adedea2f8a2144e23d8167087a7">hasVertexScalars</a> () const</td></tr>
-<tr class="separator:a0b5f6adedea2f8a2144e23d8167087a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a211f50fe78555beb5c4f5746dddb0c7a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a211f50fe78555beb5c4f5746dddb0c7a">hasVertexQuality</a> () const</td></tr>
+<tr class="memdesc:a211f50fe78555beb5c4f5746dddb0c7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the current object has <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Quality.  <br /></td></tr>
+<tr class="separator:a211f50fe78555beb5c4f5746dddb0c7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4e95e97a7ae3a0aa04b3fdf210904c6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#aa4e95e97a7ae3a0aa04b3fdf210904c6">hasVertexTexCoords</a> () const</td></tr>
+<tr class="memdesc:aa4e95e97a7ae3a0aa04b3fdf210904c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the current object has <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Texture Coordinates.  <br /></td></tr>
 <tr class="separator:aa4e95e97a7ae3a0aa04b3fdf210904c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61a1c0e6f025eb86d9fef70133d8379d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a61a1c0e6f025eb86d9fef70133d8379d">hasVertexCustomComponents</a> () const</td></tr>
+<tr class="memdesc:a61a1c0e6f025eb86d9fef70133d8379d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the current object has <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Custom Components.  <br /></td></tr>
+<tr class="separator:a61a1c0e6f025eb86d9fef70133d8379d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35a1cdcc7713734bb0f1f24bcd1191cf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a35a1cdcc7713734bb0f1f24bcd1191cf">hasFaces</a> () const</td></tr>
+<tr class="memdesc:a35a1cdcc7713734bb0f1f24bcd1191cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the current object has <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> Elements.  <br /></td></tr>
 <tr class="separator:a35a1cdcc7713734bb0f1f24bcd1191cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a9116e354ae5b1f69eeaba1451bbe85"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a1a9116e354ae5b1f69eeaba1451bbe85">hasFaceVRefs</a> () const</td></tr>
+<tr class="memdesc:a1a9116e354ae5b1f69eeaba1451bbe85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the current object has per <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> References.  <br /></td></tr>
 <tr class="separator:a1a9116e354ae5b1f69eeaba1451bbe85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80d79cc4ba0645f9666216a4ba767b8f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a80d79cc4ba0645f9666216a4ba767b8f">hasFaceNormals</a> () const</td></tr>
 <tr class="separator:a80d79cc4ba0645f9666216a4ba767b8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec0941f74c6b6458849bb546b2567ffd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#aec0941f74c6b6458849bb546b2567ffd">hasFaceColors</a> () const</td></tr>
 <tr class="separator:aec0941f74c6b6458849bb546b2567ffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abfb2fb5209d68c79f460d1ed2276e578"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#abfb2fb5209d68c79f460d1ed2276e578">hasFaceScalars</a> () const</td></tr>
-<tr class="separator:abfb2fb5209d68c79f460d1ed2276e578"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9484773eb4ca90e0fd1f470325c2087a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a9484773eb4ca90e0fd1f470325c2087a">hasFaceQuality</a> () const</td></tr>
+<tr class="separator:a9484773eb4ca90e0fd1f470325c2087a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69fbbe79dda802ffb3a0ec8e5d5f30b8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a69fbbe79dda802ffb3a0ec8e5d5f30b8">hasFaceWedgeTexCoords</a> () const</td></tr>
 <tr class="separator:a69fbbe79dda802ffb3a0ec8e5d5f30b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab37137b8b747cba4e112790baebc3a0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#aab37137b8b747cba4e112790baebc3a0">hasFaceCustomComponents</a> () const</td></tr>
+<tr class="separator:aab37137b8b747cba4e112790baebc3a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35f098099bb0c550051116331b7ccfdf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a35f098099bb0c550051116331b7ccfdf">hasEdges</a> () const</td></tr>
+<tr class="memdesc:a35f098099bb0c550051116331b7ccfdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the current object has <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> Elements.  <br /></td></tr>
 <tr class="separator:a35f098099bb0c550051116331b7ccfdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad086eff86180f43d028f0bb89d8ef8b1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#ad086eff86180f43d028f0bb89d8ef8b1">hasEdgeVRefs</a> () const</td></tr>
 <tr class="separator:ad086eff86180f43d028f0bb89d8ef8b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -184,66 +244,196 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6bfa87aa2a995aaa5ccb27b030fa413d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7e4deaeb6690f414d5e36932a4b51ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#ac7e4deaeb6690f414d5e36932a4b51ed">setMeshType</a> (<a class="el" href="classvcl_1_1FileMeshInfo.html#a62e51687a97b242fa868b745f2ae9e98">MeshType</a> t)</td></tr>
 <tr class="separator:ac7e4deaeb6690f414d5e36932a4b51ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2b8f3c5a829feb60430ceb0bafa83f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#ad2b8f3c5a829feb60430ceb0bafa83f3">setElement</a> (<a class="el" href="classvcl_1_1FileMeshInfo.html#ae66b19c3da76ef7e459755cc05de3957">Element</a> el, bool b=true)</td></tr>
+<tr class="separator:ad2b8f3c5a829feb60430ceb0bafa83f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3722b0774c09b974bf9ba941619d4388"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a3722b0774c09b974bf9ba941619d4388">setElementComponents</a> (<a class="el" href="classvcl_1_1FileMeshInfo.html#ae66b19c3da76ef7e459755cc05de3957">Element</a> el, <a class="el" href="classvcl_1_1FileMeshInfo.html#a0568f5cb1c9d2ddeedb4d5e813baf96a">Component</a> c, bool b, <a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a> t)</td></tr>
+<tr class="separator:a3722b0774c09b974bf9ba941619d4388"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca46ae065e45efb9ad135d586591babf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#aca46ae065e45efb9ad135d586591babf">setVertices</a> (bool b=true)</td></tr>
 <tr class="separator:aca46ae065e45efb9ad135d586591babf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a167d348bd2554feee4f1e2e0cdb14ef8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a167d348bd2554feee4f1e2e0cdb14ef8">setVertexCoords</a> (bool b=true, <a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">PropType</a> t=<a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65a852831f6ea9fa717188d8771b5684c18">DOUBLE</a>)</td></tr>
-<tr class="separator:a167d348bd2554feee4f1e2e0cdb14ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63f64366ef77dc3c2466e6d114a77cc9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a63f64366ef77dc3c2466e6d114a77cc9">setVertexNormals</a> (bool b=true, <a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">PropType</a> t=<a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65a00b5d3b0c37a6f446b9e705aab7d3a5a">FLOAT</a>)</td></tr>
-<tr class="separator:a63f64366ef77dc3c2466e6d114a77cc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac640024b88aea1da099675e2f36860b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#ac640024b88aea1da099675e2f36860b0">setVertexColors</a> (bool b=true, <a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">PropType</a> t=<a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65a8de9ea4809550da281b2c3283069efc1">UCHAR</a>)</td></tr>
-<tr class="separator:ac640024b88aea1da099675e2f36860b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a095a7fe1eb07f461dcabcd836a116092"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a095a7fe1eb07f461dcabcd836a116092">setVertexScalars</a> (bool b=true, <a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">PropType</a> t=<a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65a852831f6ea9fa717188d8771b5684c18">DOUBLE</a>)</td></tr>
-<tr class="separator:a095a7fe1eb07f461dcabcd836a116092"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b61b9e046569ba93062ec67400ff7bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a9b61b9e046569ba93062ec67400ff7bb">setVertexTexCoords</a> (bool b=true, <a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">PropType</a> t=<a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65a00b5d3b0c37a6f446b9e705aab7d3a5a">FLOAT</a>)</td></tr>
-<tr class="separator:a9b61b9e046569ba93062ec67400ff7bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf1404f57fcfd8f49defa7717df151fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#adf1404f57fcfd8f49defa7717df151fe">setVertexCoords</a> (bool b=true, <a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a> t=<a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68a852831f6ea9fa717188d8771b5684c18">DOUBLE</a>)</td></tr>
+<tr class="separator:adf1404f57fcfd8f49defa7717df151fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72a1e6409e56a72eb6ffadbb01313a64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a72a1e6409e56a72eb6ffadbb01313a64">setVertexNormals</a> (bool b=true, <a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a> t=<a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68a00b5d3b0c37a6f446b9e705aab7d3a5a">FLOAT</a>)</td></tr>
+<tr class="separator:a72a1e6409e56a72eb6ffadbb01313a64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad769240d9b0bd22b870f361ea084b29c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#ad769240d9b0bd22b870f361ea084b29c">setVertexColors</a> (bool b=true, <a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a> t=<a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68a8de9ea4809550da281b2c3283069efc1">UCHAR</a>)</td></tr>
+<tr class="separator:ad769240d9b0bd22b870f361ea084b29c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abed08222b3815c63c92549f721b90e0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#abed08222b3815c63c92549f721b90e0f">setVertexQuality</a> (bool b=true, <a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a> t=<a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68a852831f6ea9fa717188d8771b5684c18">DOUBLE</a>)</td></tr>
+<tr class="separator:abed08222b3815c63c92549f721b90e0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b51111b51b04d3e8908387628772b20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a1b51111b51b04d3e8908387628772b20">setVertexTexCoords</a> (bool b=true, <a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a> t=<a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68a00b5d3b0c37a6f446b9e705aab7d3a5a">FLOAT</a>)</td></tr>
+<tr class="separator:a1b51111b51b04d3e8908387628772b20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c740361ae0f3d2aeeffababdc28d35e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a0c740361ae0f3d2aeeffababdc28d35e">setVertexCustomComponents</a> (bool b=true)</td></tr>
+<tr class="separator:a0c740361ae0f3d2aeeffababdc28d35e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a4cfcf23f6ac72fa363e69dd2f9ccff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a0a4cfcf23f6ac72fa363e69dd2f9ccff">setFaces</a> (bool b=true)</td></tr>
 <tr class="separator:a0a4cfcf23f6ac72fa363e69dd2f9ccff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84ce168bcd3fadb58f6d6e4676f16569"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a84ce168bcd3fadb58f6d6e4676f16569">setFaceVRefs</a> (bool b=true)</td></tr>
 <tr class="separator:a84ce168bcd3fadb58f6d6e4676f16569"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f2a512e828447f881854dd02eea8c3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a9f2a512e828447f881854dd02eea8c3e">setFaceNormals</a> (bool b=true, <a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">PropType</a> t=<a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65a00b5d3b0c37a6f446b9e705aab7d3a5a">FLOAT</a>)</td></tr>
-<tr class="separator:a9f2a512e828447f881854dd02eea8c3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8911067f10cb718267145d665ce9f352"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a8911067f10cb718267145d665ce9f352">setFaceColors</a> (bool b=true, <a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">PropType</a> t=<a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65a8de9ea4809550da281b2c3283069efc1">UCHAR</a>)</td></tr>
-<tr class="separator:a8911067f10cb718267145d665ce9f352"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aebde2a3c446ad8b4bd31ac169a26c970"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#aebde2a3c446ad8b4bd31ac169a26c970">setFaceScalars</a> (bool b=true, <a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">PropType</a> t=<a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65a852831f6ea9fa717188d8771b5684c18">DOUBLE</a>)</td></tr>
-<tr class="separator:aebde2a3c446ad8b4bd31ac169a26c970"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af847387fc2221850351bbfaa252a9618"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#af847387fc2221850351bbfaa252a9618">setFaceWedgeTexCoords</a> (bool b=true, <a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">PropType</a> t=<a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65a00b5d3b0c37a6f446b9e705aab7d3a5a">FLOAT</a>)</td></tr>
-<tr class="separator:af847387fc2221850351bbfaa252a9618"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bdfc14cd7f12e753bf781836f3f6307"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a1bdfc14cd7f12e753bf781836f3f6307">setFaceNormals</a> (bool b=true, <a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a> t=<a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68a00b5d3b0c37a6f446b9e705aab7d3a5a">FLOAT</a>)</td></tr>
+<tr class="separator:a1bdfc14cd7f12e753bf781836f3f6307"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab297fac3e27b0724a8f7585a4b7328df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#ab297fac3e27b0724a8f7585a4b7328df">setFaceColors</a> (bool b=true, <a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a> t=<a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68a8de9ea4809550da281b2c3283069efc1">UCHAR</a>)</td></tr>
+<tr class="separator:ab297fac3e27b0724a8f7585a4b7328df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a9c48380ae05a2191097bff503f4200"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a4a9c48380ae05a2191097bff503f4200">setFaceQuality</a> (bool b=true, <a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a> t=<a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68a852831f6ea9fa717188d8771b5684c18">DOUBLE</a>)</td></tr>
+<tr class="separator:a4a9c48380ae05a2191097bff503f4200"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae802d61e4d07ae322835ae3d4326b7f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#ae802d61e4d07ae322835ae3d4326b7f6">setFaceWedgeTexCoords</a> (bool b=true, <a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a> t=<a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68a00b5d3b0c37a6f446b9e705aab7d3a5a">FLOAT</a>)</td></tr>
+<tr class="separator:ae802d61e4d07ae322835ae3d4326b7f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0067d40efc846684d460d7ec310bd978"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a0067d40efc846684d460d7ec310bd978">setFaceCustomComponents</a> (bool b=true)</td></tr>
+<tr class="separator:a0067d40efc846684d460d7ec310bd978"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0285b8297eefce914af8393c0cc5c14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#ae0285b8297eefce914af8393c0cc5c14">setEdges</a> (bool b=true)</td></tr>
 <tr class="separator:ae0285b8297eefce914af8393c0cc5c14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe0f3171d95445fd0faec4cb0a3ad526"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#afe0f3171d95445fd0faec4cb0a3ad526">setEdgeVRefs</a> (bool b=true)</td></tr>
 <tr class="separator:afe0f3171d95445fd0faec4cb0a3ad526"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38bca704c5a24407129352ea2612cdc0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a38bca704c5a24407129352ea2612cdc0">setEdgeColors</a> (bool b=true, <a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">PropType</a> t=<a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65a8de9ea4809550da281b2c3283069efc1">UCHAR</a>)</td></tr>
-<tr class="separator:a38bca704c5a24407129352ea2612cdc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a427a849eebab47ecc69f1c3ce365621d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a427a849eebab47ecc69f1c3ce365621d">setEdgeColors</a> (bool b=true, <a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a> t=<a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68a8de9ea4809550da281b2c3283069efc1">UCHAR</a>)</td></tr>
+<tr class="separator:a427a849eebab47ecc69f1c3ce365621d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6771f7bdc5b92407cfba642958355d61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a6771f7bdc5b92407cfba642958355d61">setTextures</a> (bool b=true)</td></tr>
 <tr class="separator:a6771f7bdc5b92407cfba642958355d61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6504ccc1353924f662ecb0f285ed3695"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">PropType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a6504ccc1353924f662ecb0f285ed3695">vertexCoordsType</a> () const</td></tr>
-<tr class="separator:a6504ccc1353924f662ecb0f285ed3695"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2bd2764544f315ad57d63fd42987920"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">PropType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#aa2bd2764544f315ad57d63fd42987920">vertexNormalsType</a> () const</td></tr>
-<tr class="separator:aa2bd2764544f315ad57d63fd42987920"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0550dc8abb161c621e537e7baec2e3b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">PropType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a0550dc8abb161c621e537e7baec2e3b9">vertexColorsType</a> () const</td></tr>
-<tr class="separator:a0550dc8abb161c621e537e7baec2e3b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ea997547b0c137cc1e49a12b34944e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">PropType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5ea997547b0c137cc1e49a12b34944e5">vertexScalarsType</a> () const</td></tr>
-<tr class="separator:a5ea997547b0c137cc1e49a12b34944e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8a74fd46c124d436239d6354b1d153c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">PropType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#ac8a74fd46c124d436239d6354b1d153c">vertexTexCoordsType</a> () const</td></tr>
-<tr class="separator:ac8a74fd46c124d436239d6354b1d153c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d44716ef9e6f5ea7501191c94d20524"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">PropType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a7d44716ef9e6f5ea7501191c94d20524">faceNormalsType</a> () const</td></tr>
-<tr class="separator:a7d44716ef9e6f5ea7501191c94d20524"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3585a7b2161b4f04d1a6a0599fa4eea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">PropType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#ac3585a7b2161b4f04d1a6a0599fa4eea">faceColorsType</a> () const</td></tr>
-<tr class="separator:ac3585a7b2161b4f04d1a6a0599fa4eea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a676906ff01a40098496c078fd87db1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">PropType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a4a676906ff01a40098496c078fd87db1">faceScalarsType</a> () const</td></tr>
-<tr class="separator:a4a676906ff01a40098496c078fd87db1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3280f48e88f060baec369237ef0d0ba3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">PropType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a3280f48e88f060baec369237ef0d0ba3">faceWedgeTexCoordsType</a> () const</td></tr>
-<tr class="separator:a3280f48e88f060baec369237ef0d0ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6d05819d9ff4bc13ba54d8c6dbea3ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">PropType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#af6d05819d9ff4bc13ba54d8c6dbea3ee">edgeColorsType</a> () const</td></tr>
-<tr class="separator:af6d05819d9ff4bc13ba54d8c6dbea3ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af35cd0d665e4127b0b28787040c473a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#af35cd0d665e4127b0b28787040c473a2">addElementCustomComponent</a> (<a class="el" href="classvcl_1_1FileMeshInfo.html#ae66b19c3da76ef7e459755cc05de3957">Element</a> el, const std::string &amp;name, <a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a> t)</td></tr>
+<tr class="separator:af35cd0d665e4127b0b28787040c473a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba276dfc7aabad8dea282586f4042849"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#aba276dfc7aabad8dea282586f4042849">clearElementCustomComponents</a> (<a class="el" href="classvcl_1_1FileMeshInfo.html#ae66b19c3da76ef7e459755cc05de3957">Element</a> el)</td></tr>
+<tr class="separator:aba276dfc7aabad8dea282586f4042849"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10281e940875b2afbc1b44483989e482"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a10281e940875b2afbc1b44483989e482">addVertexCustomComponent</a> (const std::string &amp;name, <a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a> t)</td></tr>
+<tr class="separator:a10281e940875b2afbc1b44483989e482"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d8209d736b39d17063ec3104efc9c24"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a1d8209d736b39d17063ec3104efc9c24">clearVertexCustomComponents</a> ()</td></tr>
+<tr class="separator:a1d8209d736b39d17063ec3104efc9c24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b20281aca5211dec4dbb7a4d150ef38"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a4b20281aca5211dec4dbb7a4d150ef38">addFaceCustomComponent</a> (const std::string &amp;name, <a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a> t)</td></tr>
+<tr class="separator:a4b20281aca5211dec4dbb7a4d150ef38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb76ca490ff9c7413a4254720583df0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#abb76ca490ff9c7413a4254720583df0d">clearFaceCustomComponents</a> ()</td></tr>
+<tr class="separator:abb76ca490ff9c7413a4254720583df0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93c608506e37740595077ef1a0a4f28f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a93c608506e37740595077ef1a0a4f28f">elementComponentType</a> (<a class="el" href="classvcl_1_1FileMeshInfo.html#ae66b19c3da76ef7e459755cc05de3957">Element</a> el, <a class="el" href="classvcl_1_1FileMeshInfo.html#a0568f5cb1c9d2ddeedb4d5e813baf96a">Component</a> comp) const</td></tr>
+<tr class="separator:a93c608506e37740595077ef1a0a4f28f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89b5813e12e0d4c88b02d48f010ddcb0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a89b5813e12e0d4c88b02d48f010ddcb0">vertexCoordsType</a> () const</td></tr>
+<tr class="separator:a89b5813e12e0d4c88b02d48f010ddcb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0ffa65495ae925076b2300ea494b5d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#ac0ffa65495ae925076b2300ea494b5d1">vertexNormalsType</a> () const</td></tr>
+<tr class="separator:ac0ffa65495ae925076b2300ea494b5d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e38c3fbccd202b1eb008c66057a69a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e38c3fbccd202b1eb008c66057a69a7">vertexColorsType</a> () const</td></tr>
+<tr class="separator:a5e38c3fbccd202b1eb008c66057a69a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9320c0a4e2e6957e5978cba798c3ce28"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a9320c0a4e2e6957e5978cba798c3ce28">vertexQualityType</a> () const</td></tr>
+<tr class="separator:a9320c0a4e2e6957e5978cba798c3ce28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9003eff4d93971550ee39968f5e336f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a9003eff4d93971550ee39968f5e336f7">vertexTexCoordsType</a> () const</td></tr>
+<tr class="separator:a9003eff4d93971550ee39968f5e336f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9ec3b2b5d7022cc061f3251b634a02e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#aa9ec3b2b5d7022cc061f3251b634a02e">faceNormalsType</a> () const</td></tr>
+<tr class="separator:aa9ec3b2b5d7022cc061f3251b634a02e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43385c5dbea68e816f6b8a7c6bae65d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a43385c5dbea68e816f6b8a7c6bae65d4">faceColorsType</a> () const</td></tr>
+<tr class="separator:a43385c5dbea68e816f6b8a7c6bae65d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a7fa9170aff3f978dcb8d4c6b6e4de1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a6a7fa9170aff3f978dcb8d4c6b6e4de1">faceQualityType</a> () const</td></tr>
+<tr class="separator:a6a7fa9170aff3f978dcb8d4c6b6e4de1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3e6caeb17a738b2897dc8258b95a35b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#ac3e6caeb17a738b2897dc8258b95a35b">faceWedgeTexCoordsType</a> () const</td></tr>
+<tr class="separator:ac3e6caeb17a738b2897dc8258b95a35b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30ebb9199e02426f72b3fe23ea81077e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a30ebb9199e02426f72b3fe23ea81077e">edgeColorsType</a> () const</td></tr>
+<tr class="separator:a30ebb9199e02426f72b3fe23ea81077e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa457f575ccd9602c6ac43b4c31a01d01"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="structvcl_1_1FileMeshInfo_1_1CustomComponent.html">CustomComponent</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#aa457f575ccd9602c6ac43b4c31a01d01">vertexCustomComponents</a> () const</td></tr>
+<tr class="separator:aa457f575ccd9602c6ac43b4c31a01d01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a857ae69a91da104b3b666c88e832e57e"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="structvcl_1_1FileMeshInfo_1_1CustomComponent.html">CustomComponent</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a857ae69a91da104b3b666c88e832e57e">faceCustomComponents</a> () const</td></tr>
+<tr class="separator:a857ae69a91da104b3b666c88e832e57e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbd92f86476aaa9af40d3c13977cb9bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1FileMeshInfo.html">FileMeshInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#adbd92f86476aaa9af40d3c13977cb9bd">intersect</a> (const <a class="el" href="classvcl_1_1FileMeshInfo.html">FileMeshInfo</a> &amp;i) const</td></tr>
+<tr class="memdesc:adbd92f86476aaa9af40d3c13977cb9bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a <a class="el" href="classvcl_1_1FileMeshInfo.html" title="A simple class that allows to store which components has been loaded or are going to be saved on a me...">FileMeshInfo</a> object that is the intersection between this and <code>info</code>.  <br /></td></tr>
 <tr class="separator:adbd92f86476aaa9af40d3c13977cb9bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b4f8d7579354fb91310d79d44a72f97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1FileMeshInfo.html#a0b4f8d7579354fb91310d79d44a72f97">reset</a> ()</td></tr>
 <tr class="separator:a0b4f8d7579354fb91310d79d44a72f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A simple class that allows to store which components has been loaded or are going to be saved on a mesh file. </p>
-</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<p>When loading a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> from a file, an object of this type is used to know which Elements/Components have been loaded from the file, using the getter functions:</p>
+<div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1FileMeshInfo.html">FileMeshInfo</a> info;</div>
+<div class="line">AMeshType m = vcl::load&lt;AMeshType&gt;(<span class="stringliteral">&quot;meshfile.ply&quot;</span>, info);</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordflow">if</span> (info.<a class="code hl_function" href="classvcl_1_1FileMeshInfo.html#a35a1cdcc7713734bb0f1f24bcd1191cf">hasFaces</a>()) { <span class="comment">// the file had faces</span></div>
+<div class="line">    (info.<a class="code hl_function" href="classvcl_1_1FileMeshInfo.html#aec0941f74c6b6458849bb546b2567ffd">hasFaceColors</a>()) { <span class="comment">// the file had face colors</span></div>
+<div class="line">        <span class="comment">// ...</span></div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassvcl_1_1FileMeshInfo_html"><div class="ttname"><a href="classvcl_1_1FileMeshInfo.html">vcl::FileMeshInfo</a></div><div class="ttdoc">A simple class that allows to store which components has been loaded or are going to be saved on a me...</div><div class="ttdef"><b>Definition:</b> file_mesh_info.h:73</div></div>
+<div class="ttc" id="aclassvcl_1_1FileMeshInfo_html_a35a1cdcc7713734bb0f1f24bcd1191cf"><div class="ttname"><a href="classvcl_1_1FileMeshInfo.html#a35a1cdcc7713734bb0f1f24bcd1191cf">vcl::FileMeshInfo::hasFaces</a></div><div class="ttdeci">bool hasFaces() const</div><div class="ttdoc">Returns true if the current object has Face Elements.</div><div class="ttdef"><b>Definition:</b> file_mesh_info.cpp:228</div></div>
+<div class="ttc" id="aclassvcl_1_1FileMeshInfo_html_aec0941f74c6b6458849bb546b2567ffd"><div class="ttname"><a href="classvcl_1_1FileMeshInfo.html#aec0941f74c6b6458849bb546b2567ffd">vcl::FileMeshInfo::hasFaceColors</a></div><div class="ttdeci">bool hasFaceColors() const</div><div class="ttdef"><b>Definition:</b> file_mesh_info.cpp:247</div></div>
+</div><!-- fragment --><p>When saving a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> to a file, an object of this type is used to tell which Elements/Components save on the file and, when the file format supports it, to choose the type used to store a specific component:</p>
+<div class="fragment"><div class="line">AMeshType m;</div>
+<div class="line"><a class="code hl_class" href="classvcl_1_1FileMeshInfo.html">FileMeshInfo</a> info(m); <span class="comment">// compute the default FileMeshInfo object from the Mesh</span></div>
+<div class="line"> </div>
+<div class="line">info.<a class="code hl_function" href="classvcl_1_1FileMeshInfo.html#adf1404f57fcfd8f49defa7717df151fe">setVertexCoords</a>(<span class="keyword">true</span>, <a class="code hl_enumvalue" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68a00b5d3b0c37a6f446b9e705aab7d3a5a">FileMeshInfo::FLOAT</a>); <span class="comment">// force to store vertex coords using floats</span></div>
+<div class="line">info.<a class="code hl_function" href="classvcl_1_1FileMeshInfo.html#ad769240d9b0bd22b870f361ea084b29c">setVertexColors</a>(<span class="keyword">false</span>); <span class="comment">// do not store</span></div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_function" href="namespacevcl.html#a4d724a376d90559c72f63a862d0bc895">vcl::save</a>(m, <span class="stringliteral">&quot;meshfile.ply&quot;</span>, info);</div>
+<div class="ttc" id="aclassvcl_1_1FileMeshInfo_html_a5e8893b99b316909beff5aca50e13f68a00b5d3b0c37a6f446b9e705aab7d3a5a"><div class="ttname"><a href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68a00b5d3b0c37a6f446b9e705aab7d3a5a">vcl::FileMeshInfo::FLOAT</a></div><div class="ttdeci">@ FLOAT</div><div class="ttdef"><b>Definition:</b> file_mesh_info.h:107</div></div>
+<div class="ttc" id="aclassvcl_1_1FileMeshInfo_html_ad769240d9b0bd22b870f361ea084b29c"><div class="ttname"><a href="classvcl_1_1FileMeshInfo.html#ad769240d9b0bd22b870f361ea084b29c">vcl::FileMeshInfo::setVertexColors</a></div><div class="ttdeci">void setVertexColors(bool b=true, DataType t=UCHAR)</div><div class="ttdef"><b>Definition:</b> file_mesh_info.cpp:339</div></div>
+<div class="ttc" id="aclassvcl_1_1FileMeshInfo_html_adf1404f57fcfd8f49defa7717df151fe"><div class="ttname"><a href="classvcl_1_1FileMeshInfo.html#adf1404f57fcfd8f49defa7717df151fe">vcl::FileMeshInfo::setVertexCoords</a></div><div class="ttdeci">void setVertexCoords(bool b=true, DataType t=DOUBLE)</div><div class="ttdef"><b>Definition:</b> file_mesh_info.cpp:329</div></div>
+<div class="ttc" id="anamespacevcl_html_a4d724a376d90559c72f63a862d0bc895"><div class="ttname"><a href="namespacevcl.html#a4d724a376d90559c72f63a862d0bc895">vcl::save</a></div><div class="ttdeci">void save(const MeshType &amp;m, const std::string &amp;filename, LogType &amp;log, bool binary)</div><div class="ttdef"><b>Definition:</b> save.cpp:29</div></div>
+</div><!-- fragment --> </div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a0568f5cb1c9d2ddeedb4d5e813baf96a" name="a0568f5cb1c9d2ddeedb4d5e813baf96a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0568f5cb1c9d2ddeedb4d5e813baf96a">&#9670;&#160;</a></span>Component</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classvcl_1_1FileMeshInfo.html#a0568f5cb1c9d2ddeedb4d5e813baf96a">vcl::FileMeshInfo::Component</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enum used to describe the type of Components that each <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> can have. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a0568f5cb1c9d2ddeedb4d5e813baf96aaf8a41ae8905a9a7eb3661e49f2d160db" name="a0568f5cb1c9d2ddeedb4d5e813baf96aaf8a41ae8905a9a7eb3661e49f2d160db"></a>COORD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0568f5cb1c9d2ddeedb4d5e813baf96aa2774efc5536c552fd1f45f0f7b97fb00" name="a0568f5cb1c9d2ddeedb4d5e813baf96aa2774efc5536c552fd1f45f0f7b97fb00"></a>VREFS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0568f5cb1c9d2ddeedb4d5e813baf96aa325b723088331449963e13f26781679c" name="a0568f5cb1c9d2ddeedb4d5e813baf96aa325b723088331449963e13f26781679c"></a>NORMAL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0568f5cb1c9d2ddeedb4d5e813baf96aa3a2a3bc8092db73d3d53df2675ed85c4" name="a0568f5cb1c9d2ddeedb4d5e813baf96aa3a2a3bc8092db73d3d53df2675ed85c4"></a>COLOR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0568f5cb1c9d2ddeedb4d5e813baf96aa6b970364124c538f318825dbfa572bb9" name="a0568f5cb1c9d2ddeedb4d5e813baf96aa6b970364124c538f318825dbfa572bb9"></a>QUALITY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0568f5cb1c9d2ddeedb4d5e813baf96aa1f816bdfa80f36cface564e0a8cc29db" name="a0568f5cb1c9d2ddeedb4d5e813baf96aa1f816bdfa80f36cface564e0a8cc29db"></a>TEXCOORD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0568f5cb1c9d2ddeedb4d5e813baf96aa7542bbf57547f7c35dc610e30bf19c47" name="a0568f5cb1c9d2ddeedb4d5e813baf96aa7542bbf57547f7c35dc610e30bf19c47"></a>WEDGE_TEXCOORDS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0568f5cb1c9d2ddeedb4d5e813baf96aa1baaf21f0fc22ebe60dd993e76e281ba" name="a0568f5cb1c9d2ddeedb4d5e813baf96aa1baaf21f0fc22ebe60dd993e76e281ba"></a>CUSTOM_COMPONENTS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0568f5cb1c9d2ddeedb4d5e813baf96aa8bc0571f1351dfa0d5bc6c9239ab6829" name="a0568f5cb1c9d2ddeedb4d5e813baf96aa8bc0571f1351dfa0d5bc6c9239ab6829"></a>TEXTURES&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0568f5cb1c9d2ddeedb4d5e813baf96aa157b18d6e880a059fb90203e3a59d0cc" name="a0568f5cb1c9d2ddeedb4d5e813baf96aa157b18d6e880a059fb90203e3a59d0cc"></a>NUM_COMPONENTS&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a5e8893b99b316909beff5aca50e13f68" name="a5e8893b99b316909beff5aca50e13f68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e8893b99b316909beff5aca50e13f68">&#9670;&#160;</a></span>DataType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">vcl::FileMeshInfo::DataType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enum used to describe the type of Data stored in a component. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5e8893b99b316909beff5aca50e13f68ad9bb3495286e9cc43c97692917329176" name="a5e8893b99b316909beff5aca50e13f68ad9bb3495286e9cc43c97692917329176"></a>CHAR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5e8893b99b316909beff5aca50e13f68a8de9ea4809550da281b2c3283069efc1" name="a5e8893b99b316909beff5aca50e13f68a8de9ea4809550da281b2c3283069efc1"></a>UCHAR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5e8893b99b316909beff5aca50e13f68a4dca6862668e09c2e9450c8348a00717" name="a5e8893b99b316909beff5aca50e13f68a4dca6862668e09c2e9450c8348a00717"></a>SHORT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5e8893b99b316909beff5aca50e13f68a4c1bf5200b14adc19f0cc7d762dfd15a" name="a5e8893b99b316909beff5aca50e13f68a4c1bf5200b14adc19f0cc7d762dfd15a"></a>USHORT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5e8893b99b316909beff5aca50e13f68a4952874d30f3b527c19c23863fdb783f" name="a5e8893b99b316909beff5aca50e13f68a4952874d30f3b527c19c23863fdb783f"></a>INT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5e8893b99b316909beff5aca50e13f68abc3ed3961e360f8ac9e8dba2336fd582" name="a5e8893b99b316909beff5aca50e13f68abc3ed3961e360f8ac9e8dba2336fd582"></a>UINT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5e8893b99b316909beff5aca50e13f68a00b5d3b0c37a6f446b9e705aab7d3a5a" name="a5e8893b99b316909beff5aca50e13f68a00b5d3b0c37a6f446b9e705aab7d3a5a"></a>FLOAT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5e8893b99b316909beff5aca50e13f68a852831f6ea9fa717188d8771b5684c18" name="a5e8893b99b316909beff5aca50e13f68a852831f6ea9fa717188d8771b5684c18"></a>DOUBLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5e8893b99b316909beff5aca50e13f68a7f9b9aa08c5a6d66128b66d19fdfc35f" name="a5e8893b99b316909beff5aca50e13f68a7f9b9aa08c5a6d66128b66d19fdfc35f"></a>UNKNOWN&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="ae66b19c3da76ef7e459755cc05de3957" name="ae66b19c3da76ef7e459755cc05de3957"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66b19c3da76ef7e459755cc05de3957">&#9670;&#160;</a></span>Element</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classvcl_1_1FileMeshInfo.html#ae66b19c3da76ef7e459755cc05de3957">vcl::FileMeshInfo::Element</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enum used to describe the type of Elements that can be found in a file. </p>
+<dl class="section note"><dt>Note</dt><dd>: MESH is not an element, but it is used since some components can be stored per mesh. </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ae66b19c3da76ef7e459755cc05de3957a26ce8a656d8205856e3778c82e39d8c1" name="ae66b19c3da76ef7e459755cc05de3957a26ce8a656d8205856e3778c82e39d8c1"></a>VERTEX&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae66b19c3da76ef7e459755cc05de3957a8b699664fb2e46e7abc250cf8f42e253" name="ae66b19c3da76ef7e459755cc05de3957a8b699664fb2e46e7abc250cf8f42e253"></a>FACE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae66b19c3da76ef7e459755cc05de3957a473202c150cc074701d84b7f03273ba6" name="ae66b19c3da76ef7e459755cc05de3957a473202c150cc074701d84b7f03273ba6"></a>EDGE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae66b19c3da76ef7e459755cc05de3957a358dcc3f993580d2b2bdd43c3bb9d1ab" name="ae66b19c3da76ef7e459755cc05de3957a358dcc3f993580d2b2bdd43c3bb9d1ab"></a>MESH&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae66b19c3da76ef7e459755cc05de3957a2d1987a4005efc676b310d57ffdb5870" name="ae66b19c3da76ef7e459755cc05de3957a2d1987a4005efc676b310d57ffdb5870"></a>NUM_ELEMENTS&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
 <a id="a62e51687a97b242fa868b745f2ae9e98" name="a62e51687a97b242fa868b745f2ae9e98"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a62e51687a97b242fa868b745f2ae9e98">&#9670;&#160;</a></span>MeshType</h2>
 
@@ -255,35 +445,12 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Enum used to describe the type of the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> - by default, a mesh is considered polygonal. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a62e51687a97b242fa868b745f2ae9e98a802ee56936a7c9fd401f26a3983d28c0" name="a62e51687a97b242fa868b745f2ae9e98a802ee56936a7c9fd401f26a3983d28c0"></a>TRIANGLE_MESH&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a62e51687a97b242fa868b745f2ae9e98a63fd40ffbd9fd94c994556ba59f702e1" name="a62e51687a97b242fa868b745f2ae9e98a63fd40ffbd9fd94c994556ba59f702e1"></a>QUAD_MESH&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a62e51687a97b242fa868b745f2ae9e98a2a33168780ed90acbac5809b147ab7ae" name="a62e51687a97b242fa868b745f2ae9e98a2a33168780ed90acbac5809b147ab7ae"></a>POLYGON_MESH&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-</div>
-</div>
-<a id="a564278e6ec082388f59446f2098cad65" name="a564278e6ec082388f59446f2098cad65"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a564278e6ec082388f59446f2098cad65">&#9670;&#160;</a></span>PropType</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">vcl::FileMeshInfo::PropType</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a564278e6ec082388f59446f2098cad65ad9bb3495286e9cc43c97692917329176" name="a564278e6ec082388f59446f2098cad65ad9bb3495286e9cc43c97692917329176"></a>CHAR&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a564278e6ec082388f59446f2098cad65a8de9ea4809550da281b2c3283069efc1" name="a564278e6ec082388f59446f2098cad65a8de9ea4809550da281b2c3283069efc1"></a>UCHAR&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a564278e6ec082388f59446f2098cad65a4dca6862668e09c2e9450c8348a00717" name="a564278e6ec082388f59446f2098cad65a4dca6862668e09c2e9450c8348a00717"></a>SHORT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a564278e6ec082388f59446f2098cad65a4c1bf5200b14adc19f0cc7d762dfd15a" name="a564278e6ec082388f59446f2098cad65a4c1bf5200b14adc19f0cc7d762dfd15a"></a>USHORT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a564278e6ec082388f59446f2098cad65a4952874d30f3b527c19c23863fdb783f" name="a564278e6ec082388f59446f2098cad65a4952874d30f3b527c19c23863fdb783f"></a>INT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a564278e6ec082388f59446f2098cad65abc3ed3961e360f8ac9e8dba2336fd582" name="a564278e6ec082388f59446f2098cad65abc3ed3961e360f8ac9e8dba2336fd582"></a>UINT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a564278e6ec082388f59446f2098cad65a00b5d3b0c37a6f446b9e705aab7d3a5a" name="a564278e6ec082388f59446f2098cad65a00b5d3b0c37a6f446b9e705aab7d3a5a"></a>FLOAT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a564278e6ec082388f59446f2098cad65a852831f6ea9fa717188d8771b5684c18" name="a564278e6ec082388f59446f2098cad65a852831f6ea9fa717188d8771b5684c18"></a>DOUBLE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a564278e6ec082388f59446f2098cad65a7f9b9aa08c5a6d66128b66d19fdfc35f" name="a564278e6ec082388f59446f2098cad65a7f9b9aa08c5a6d66128b66d19fdfc35f"></a>UNKNOWN&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -312,6 +479,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Default constructor. </p>
+<p>All the Elements/Components are disabled, their type is set to <a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68a7f9b9aa08c5a6d66128b66d19fdfc35f">DataType::UNKNOWN</a> and the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> Type is set to <a class="el" href="classvcl_1_1FileMeshInfo.html#a62e51687a97b242fa868b745f2ae9e98a2a33168780ed90acbac5809b147ab7ae">MeshType::POLYGON_MESH</a>. </p>
+
 </div>
 </div>
 <a id="ad841f4938da2c103eedc7f8a53814d05" name="ad841f4938da2c103eedc7f8a53814d05"></a>
@@ -321,15 +491,162 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;MeshConcept Mesh&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">vcl::FileMeshInfo::FileMeshInfo </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classvcl_1_1Mesh.html">Mesh</a> &amp;&#160;</td>
           <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the current status of the <a class="el" href="classvcl_1_1FileMeshInfo.html" title="A simple class that allows to store which components has been loaded or are going to be saved on a me...">FileMeshInfo</a> object from the input mesh. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname"><a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a></td><td>The type of the input mesh, it must satisfy the MeshConcept.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>the mesh from which construct the <a class="el" href="classvcl_1_1FileMeshInfo.html" title="A simple class that allows to store which components has been loaded or are going to be saved on a me...">FileMeshInfo</a> object </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="af35cd0d665e4127b0b28787040c473a2" name="af35cd0d665e4127b0b28787040c473a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af35cd0d665e4127b0b28787040c473a2">&#9670;&#160;</a></span>addElementCustomComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vcl::FileMeshInfo::addElementCustomComponent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1FileMeshInfo.html#ae66b19c3da76ef7e459755cc05de3957">Element</a>&#160;</td>
+          <td class="paramname"><em>el</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a>&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b20281aca5211dec4dbb7a4d150ef38" name="a4b20281aca5211dec4dbb7a4d150ef38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b20281aca5211dec4dbb7a4d150ef38">&#9670;&#160;</a></span>addFaceCustomComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vcl::FileMeshInfo::addFaceCustomComponent </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a>&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a10281e940875b2afbc1b44483989e482" name="a10281e940875b2afbc1b44483989e482"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10281e940875b2afbc1b44483989e482">&#9670;&#160;</a></span>addVertexCustomComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vcl::FileMeshInfo::addVertexCustomComponent </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a>&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aba276dfc7aabad8dea282586f4042849" name="aba276dfc7aabad8dea282586f4042849"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba276dfc7aabad8dea282586f4042849">&#9670;&#160;</a></span>clearElementCustomComponents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vcl::FileMeshInfo::clearElementCustomComponents </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1FileMeshInfo.html#ae66b19c3da76ef7e459755cc05de3957">Element</a>&#160;</td>
+          <td class="paramname"><em>el</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -342,9 +659,8 @@ template&lt;MeshConcept Mesh&gt; </div>
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="af6d05819d9ff4bc13ba54d8c6dbea3ee" name="af6d05819d9ff4bc13ba54d8c6dbea3ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6d05819d9ff4bc13ba54d8c6dbea3ee">&#9670;&#160;</a></span>edgeColorsType()</h2>
+<a id="abb76ca490ff9c7413a4254720583df0d" name="abb76ca490ff9c7413a4254720583df0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb76ca490ff9c7413a4254720583df0d">&#9670;&#160;</a></span>clearFaceCustomComponents()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -353,7 +669,57 @@ template&lt;MeshConcept Mesh&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">FileMeshInfo::PropType</a> vcl::FileMeshInfo::edgeColorsType </td>
+          <td class="memname">void vcl::FileMeshInfo::clearFaceCustomComponents </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1d8209d736b39d17063ec3104efc9c24" name="a1d8209d736b39d17063ec3104efc9c24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d8209d736b39d17063ec3104efc9c24">&#9670;&#160;</a></span>clearVertexCustomComponents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vcl::FileMeshInfo::clearVertexCustomComponents </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a30ebb9199e02426f72b3fe23ea81077e" name="a30ebb9199e02426f72b3fe23ea81077e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30ebb9199e02426f72b3fe23ea81077e">&#9670;&#160;</a></span>edgeColorsType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">FileMeshInfo::DataType</a> vcl::FileMeshInfo::edgeColorsType </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -368,8 +734,36 @@ template&lt;MeshConcept Mesh&gt; </div>
 
 </div>
 </div>
-<a id="ac3585a7b2161b4f04d1a6a0599fa4eea" name="ac3585a7b2161b4f04d1a6a0599fa4eea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3585a7b2161b4f04d1a6a0599fa4eea">&#9670;&#160;</a></span>faceColorsType()</h2>
+<a id="a93c608506e37740595077ef1a0a4f28f" name="a93c608506e37740595077ef1a0a4f28f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93c608506e37740595077ef1a0a4f28f">&#9670;&#160;</a></span>elementComponentType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">FileMeshInfo::DataType</a> vcl::FileMeshInfo::elementComponentType </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1FileMeshInfo.html#ae66b19c3da76ef7e459755cc05de3957">Element</a>&#160;</td>
+          <td class="paramname"><em>el</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1FileMeshInfo.html#a0568f5cb1c9d2ddeedb4d5e813baf96a">Component</a>&#160;</td>
+          <td class="paramname"><em>comp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a43385c5dbea68e816f6b8a7c6bae65d4" name="a43385c5dbea68e816f6b8a7c6bae65d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43385c5dbea68e816f6b8a7c6bae65d4">&#9670;&#160;</a></span>faceColorsType()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -378,7 +772,7 @@ template&lt;MeshConcept Mesh&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">FileMeshInfo::PropType</a> vcl::FileMeshInfo::faceColorsType </td>
+          <td class="memname"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">FileMeshInfo::DataType</a> vcl::FileMeshInfo::faceColorsType </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -393,8 +787,8 @@ template&lt;MeshConcept Mesh&gt; </div>
 
 </div>
 </div>
-<a id="a7d44716ef9e6f5ea7501191c94d20524" name="a7d44716ef9e6f5ea7501191c94d20524"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d44716ef9e6f5ea7501191c94d20524">&#9670;&#160;</a></span>faceNormalsType()</h2>
+<a id="a857ae69a91da104b3b666c88e832e57e" name="a857ae69a91da104b3b666c88e832e57e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a857ae69a91da104b3b666c88e832e57e">&#9670;&#160;</a></span>faceCustomComponents()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -403,7 +797,7 @@ template&lt;MeshConcept Mesh&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">FileMeshInfo::PropType</a> vcl::FileMeshInfo::faceNormalsType </td>
+          <td class="memname">const std::vector&lt; <a class="el" href="structvcl_1_1FileMeshInfo_1_1CustomComponent.html">FileMeshInfo::CustomComponent</a> &gt; &amp; vcl::FileMeshInfo::faceCustomComponents </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -418,8 +812,8 @@ template&lt;MeshConcept Mesh&gt; </div>
 
 </div>
 </div>
-<a id="a4a676906ff01a40098496c078fd87db1" name="a4a676906ff01a40098496c078fd87db1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a676906ff01a40098496c078fd87db1">&#9670;&#160;</a></span>faceScalarsType()</h2>
+<a id="aa9ec3b2b5d7022cc061f3251b634a02e" name="aa9ec3b2b5d7022cc061f3251b634a02e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9ec3b2b5d7022cc061f3251b634a02e">&#9670;&#160;</a></span>faceNormalsType()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -428,7 +822,7 @@ template&lt;MeshConcept Mesh&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">FileMeshInfo::PropType</a> vcl::FileMeshInfo::faceScalarsType </td>
+          <td class="memname"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">FileMeshInfo::DataType</a> vcl::FileMeshInfo::faceNormalsType </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -443,19 +837,52 @@ template&lt;MeshConcept Mesh&gt; </div>
 
 </div>
 </div>
-<a id="a3280f48e88f060baec369237ef0d0ba3" name="a3280f48e88f060baec369237ef0d0ba3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3280f48e88f060baec369237ef0d0ba3">&#9670;&#160;</a></span>faceWedgeTexCoordsType()</h2>
+<a id="a6a7fa9170aff3f978dcb8d4c6b6e4de1" name="a6a7fa9170aff3f978dcb8d4c6b6e4de1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a7fa9170aff3f978dcb8d4c6b6e4de1">&#9670;&#160;</a></span>faceQualityType()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">FileMeshInfo::PropType</a> vcl::FileMeshInfo::faceWedgeTexCoordsType </td>
+          <td class="memname"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">FileMeshInfo::DataType</a> vcl::FileMeshInfo::faceQualityType </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac3e6caeb17a738b2897dc8258b95a35b" name="ac3e6caeb17a738b2897dc8258b95a35b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3e6caeb17a738b2897dc8258b95a35b">&#9670;&#160;</a></span>faceWedgeTexCoordsType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">FileMeshInfo::DataType</a> vcl::FileMeshInfo::faceWedgeTexCoordsType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -508,6 +935,9 @@ template&lt;MeshConcept Mesh&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns true if the current object has <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> Elements. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if the current object has <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> Elements. </dd></dl>
+
 </div>
 </div>
 <a id="ad086eff86180f43d028f0bb89d8ef8b1" name="ad086eff86180f43d028f0bb89d8ef8b1"></a>
@@ -515,6 +945,9 @@ template&lt;MeshConcept Mesh&gt; </div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool vcl::FileMeshInfo::hasEdgeVRefs </td>
@@ -523,6 +956,37 @@ template&lt;MeshConcept Mesh&gt; </div>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a77391be02dca2a2f8843f04b2e785267" name="a77391be02dca2a2f8843f04b2e785267"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77391be02dca2a2f8843f04b2e785267">&#9670;&#160;</a></span>hasElement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool vcl::FileMeshInfo::hasElement </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1FileMeshInfo.html#ae66b19c3da76ef7e459755cc05de3957">Element</a>&#160;</td>
+          <td class="paramname"><em>el</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -538,6 +1002,31 @@ template&lt;MeshConcept Mesh&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">bool vcl::FileMeshInfo::hasFaceColors </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aab37137b8b747cba4e112790baebc3a0" name="aab37137b8b747cba4e112790baebc3a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab37137b8b747cba4e112790baebc3a0">&#9670;&#160;</a></span>hasFaceCustomComponents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool vcl::FileMeshInfo::hasFaceCustomComponents </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -577,6 +1066,31 @@ template&lt;MeshConcept Mesh&gt; </div>
 
 </div>
 </div>
+<a id="a9484773eb4ca90e0fd1f470325c2087a" name="a9484773eb4ca90e0fd1f470325c2087a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9484773eb4ca90e0fd1f470325c2087a">&#9670;&#160;</a></span>hasFaceQuality()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool vcl::FileMeshInfo::hasFaceQuality </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a35a1cdcc7713734bb0f1f24bcd1191cf" name="a35a1cdcc7713734bb0f1f24bcd1191cf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a35a1cdcc7713734bb0f1f24bcd1191cf">&#9670;&#160;</a></span>hasFaces()</h2>
 
@@ -600,30 +1114,8 @@ template&lt;MeshConcept Mesh&gt; </div>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="abfb2fb5209d68c79f460d1ed2276e578" name="abfb2fb5209d68c79f460d1ed2276e578"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abfb2fb5209d68c79f460d1ed2276e578">&#9670;&#160;</a></span>hasFaceScalars()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool vcl::FileMeshInfo::hasFaceScalars </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>Returns true if the current object has <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> Elements. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if the current object has <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> Elements. </dd></dl>
 
 </div>
 </div>
@@ -650,6 +1142,9 @@ template&lt;MeshConcept Mesh&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns true if the current object has per <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> References. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if the current object has per <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> References. </dd></dl>
+
 </div>
 </div>
 <a id="a69fbbe79dda802ffb3a0ec8e5d5f30b8" name="a69fbbe79dda802ffb3a0ec8e5d5f30b8"></a>
@@ -657,6 +1152,9 @@ template&lt;MeshConcept Mesh&gt; </div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool vcl::FileMeshInfo::hasFaceWedgeTexCoords </td>
@@ -665,6 +1163,47 @@ template&lt;MeshConcept Mesh&gt; </div>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab7019fb125aa01647f4b01134147c9e4" name="ab7019fb125aa01647f4b01134147c9e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7019fb125aa01647f4b01134147c9e4">&#9670;&#160;</a></span>hasPerElementComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool vcl::FileMeshInfo::hasPerElementComponent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1FileMeshInfo.html#ae66b19c3da76ef7e459755cc05de3957">Element</a>&#160;</td>
+          <td class="paramname"><em>el</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1FileMeshInfo.html#a0568f5cb1c9d2ddeedb4d5e813baf96a">Component</a>&#160;</td>
+          <td class="paramname"><em>comp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -674,6 +1213,9 @@ template&lt;MeshConcept Mesh&gt; </div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool vcl::FileMeshInfo::hasTextures </td>
@@ -682,6 +1224,11 @@ template&lt;MeshConcept Mesh&gt; </div>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -709,6 +1256,9 @@ template&lt;MeshConcept Mesh&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns true if the current object has <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Colors. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if the current object has <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Colors. </dd></dl>
+
 </div>
 </div>
 <a id="ae582923b66393aa879aa00d901e4f87a" name="ae582923b66393aa879aa00d901e4f87a"></a>
@@ -733,6 +1283,37 @@ template&lt;MeshConcept Mesh&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns true if the current object has <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Coordinates. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if the current object has <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Coordinates. </dd></dl>
+
+</div>
+</div>
+<a id="a61a1c0e6f025eb86d9fef70133d8379d" name="a61a1c0e6f025eb86d9fef70133d8379d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61a1c0e6f025eb86d9fef70133d8379d">&#9670;&#160;</a></span>hasVertexCustomComponents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool vcl::FileMeshInfo::hasVertexCustomComponents </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns true if the current object has <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Custom Components. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if the current object has <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Custom Components. </dd></dl>
 
 </div>
 </div>
@@ -759,10 +1340,13 @@ template&lt;MeshConcept Mesh&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns true if the current object has <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Normals. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if the current object has <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Normals. </dd></dl>
+
 </div>
 </div>
-<a id="a0b5f6adedea2f8a2144e23d8167087a7" name="a0b5f6adedea2f8a2144e23d8167087a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0b5f6adedea2f8a2144e23d8167087a7">&#9670;&#160;</a></span>hasVertexScalars()</h2>
+<a id="a211f50fe78555beb5c4f5746dddb0c7a" name="a211f50fe78555beb5c4f5746dddb0c7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a211f50fe78555beb5c4f5746dddb0c7a">&#9670;&#160;</a></span>hasVertexQuality()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -771,7 +1355,7 @@ template&lt;MeshConcept Mesh&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool vcl::FileMeshInfo::hasVertexScalars </td>
+          <td class="memname">bool vcl::FileMeshInfo::hasVertexQuality </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -784,6 +1368,9 @@ template&lt;MeshConcept Mesh&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns true if the current object has <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Quality. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if the current object has <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Quality. </dd></dl>
+
 </div>
 </div>
 <a id="aa4e95e97a7ae3a0aa04b3fdf210904c6" name="aa4e95e97a7ae3a0aa04b3fdf210904c6"></a>
@@ -791,6 +1378,9 @@ template&lt;MeshConcept Mesh&gt; </div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool vcl::FileMeshInfo::hasVertexTexCoords </td>
@@ -799,7 +1389,15 @@ template&lt;MeshConcept Mesh&gt; </div>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Returns true if the current object has <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Texture Coordinates. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if the current object has <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Texture Coordinates. </dd></dl>
 
 </div>
 </div>
@@ -826,6 +1424,9 @@ template&lt;MeshConcept Mesh&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns true if the current object has <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Elements. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if the current object has <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Elements. </dd></dl>
+
 </div>
 </div>
 <a id="adbd92f86476aaa9af40d3c13977cb9bd" name="adbd92f86476aaa9af40d3c13977cb9bd"></a>
@@ -833,16 +1434,34 @@ template&lt;MeshConcept Mesh&gt; </div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classvcl_1_1FileMeshInfo.html">FileMeshInfo</a> vcl::FileMeshInfo::intersect </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classvcl_1_1FileMeshInfo.html">FileMeshInfo</a> &amp;&#160;</td>
-          <td class="paramname"><em>i</em></td><td>)</td>
+          <td class="paramname"><em>info</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Returns a <a class="el" href="classvcl_1_1FileMeshInfo.html" title="A simple class that allows to store which components has been loaded or are going to be saved on a me...">FileMeshInfo</a> object that is the intersection between this and <code>info</code>. </p>
+<p>The intersection is a <a class="el" href="classvcl_1_1FileMeshInfo.html" title="A simple class that allows to store which components has been loaded or are going to be saved on a me...">FileMeshInfo</a> object that has Elements/Components enable only if they are enabled both in this object and in <code>info</code>. Types are imported from this <a class="el" href="classvcl_1_1FileMeshInfo.html" title="A simple class that allows to store which components has been loaded or are going to be saved on a me...">FileMeshInfo</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>The info object to compute the intersection with. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The intersection between this and <code>info</code>. </dd></dl>
 
 </div>
 </div>
@@ -869,6 +1488,9 @@ template&lt;MeshConcept Mesh&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns true if the current object has <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> type set to <a class="el" href="classvcl_1_1FileMeshInfo.html#a62e51687a97b242fa868b745f2ae9e98a2a33168780ed90acbac5809b147ab7ae">MeshType::POLYGON_MESH</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if the current <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> type is set to <a class="el" href="classvcl_1_1FileMeshInfo.html#a62e51687a97b242fa868b745f2ae9e98a2a33168780ed90acbac5809b147ab7ae">MeshType::POLYGON_MESH</a>. </dd></dl>
+
 </div>
 </div>
 <a id="a13bf5fcb049f4d27fd9cb9e6c4b1cc06" name="a13bf5fcb049f4d27fd9cb9e6c4b1cc06"></a>
@@ -894,6 +1516,9 @@ template&lt;MeshConcept Mesh&gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns true if the current object has <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> type set to <a class="el" href="classvcl_1_1FileMeshInfo.html#a62e51687a97b242fa868b745f2ae9e98a802ee56936a7c9fd401f26a3983d28c0">MeshType::TRIANGLE_MESH</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if the current <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> type is set to <a class="el" href="classvcl_1_1FileMeshInfo.html#a62e51687a97b242fa868b745f2ae9e98a802ee56936a7c9fd401f26a3983d28c0">MeshType::TRIANGLE_MESH</a>. </dd></dl>
+
 </div>
 </div>
 <a id="a860976f66427384602783055040643f5" name="a860976f66427384602783055040643f5"></a>
@@ -918,6 +1543,9 @@ template&lt;MeshConcept Mesh&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns true if the current object has <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> type set to <a class="el" href="classvcl_1_1FileMeshInfo.html#a62e51687a97b242fa868b745f2ae9e98a63fd40ffbd9fd94c994556ba59f702e1">MeshType::QUAD_MESH</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if the current <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> type is set to <a class="el" href="classvcl_1_1FileMeshInfo.html#a62e51687a97b242fa868b745f2ae9e98a63fd40ffbd9fd94c994556ba59f702e1">MeshType::QUAD_MESH</a>. </dd></dl>
 
 </div>
 </div>
@@ -946,8 +1574,8 @@ template&lt;MeshConcept Mesh&gt; </div>
 
 </div>
 </div>
-<a id="a38bca704c5a24407129352ea2612cdc0" name="a38bca704c5a24407129352ea2612cdc0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a38bca704c5a24407129352ea2612cdc0">&#9670;&#160;</a></span>setEdgeColors()</h2>
+<a id="a427a849eebab47ecc69f1c3ce365621d" name="a427a849eebab47ecc69f1c3ce365621d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a427a849eebab47ecc69f1c3ce365621d">&#9670;&#160;</a></span>setEdgeColors()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -964,8 +1592,8 @@ template&lt;MeshConcept Mesh&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">PropType</a>&#160;</td>
-          <td class="paramname"><em>t</em> = <code><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65a8de9ea4809550da281b2c3283069efc1">UCHAR</a></code>&#160;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a>&#160;</td>
+          <td class="paramname"><em>t</em> = <code><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68a8de9ea4809550da281b2c3283069efc1">UCHAR</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1013,6 +1641,9 @@ template&lt;MeshConcept Mesh&gt; </div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void vcl::FileMeshInfo::setEdgeVRefs </td>
@@ -1022,12 +1653,85 @@ template&lt;MeshConcept Mesh&gt; </div>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a8911067f10cb718267145d665ce9f352" name="a8911067f10cb718267145d665ce9f352"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8911067f10cb718267145d665ce9f352">&#9670;&#160;</a></span>setFaceColors()</h2>
+<a id="ad2b8f3c5a829feb60430ceb0bafa83f3" name="ad2b8f3c5a829feb60430ceb0bafa83f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2b8f3c5a829feb60430ceb0bafa83f3">&#9670;&#160;</a></span>setElement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vcl::FileMeshInfo::setElement </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1FileMeshInfo.html#ae66b19c3da76ef7e459755cc05de3957">Element</a>&#160;</td>
+          <td class="paramname"><em>el</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>b</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3722b0774c09b974bf9ba941619d4388" name="a3722b0774c09b974bf9ba941619d4388"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3722b0774c09b974bf9ba941619d4388">&#9670;&#160;</a></span>setElementComponents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vcl::FileMeshInfo::setElementComponents </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1FileMeshInfo.html#ae66b19c3da76ef7e459755cc05de3957">Element</a>&#160;</td>
+          <td class="paramname"><em>el</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1FileMeshInfo.html#a0568f5cb1c9d2ddeedb4d5e813baf96a">Component</a>&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a>&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab297fac3e27b0724a8f7585a4b7328df" name="ab297fac3e27b0724a8f7585a4b7328df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab297fac3e27b0724a8f7585a4b7328df">&#9670;&#160;</a></span>setFaceColors()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1044,8 +1748,8 @@ template&lt;MeshConcept Mesh&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">PropType</a>&#160;</td>
-          <td class="paramname"><em>t</em> = <code><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65a8de9ea4809550da281b2c3283069efc1">UCHAR</a></code>&#160;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a>&#160;</td>
+          <td class="paramname"><em>t</em> = <code><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68a8de9ea4809550da281b2c3283069efc1">UCHAR</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1062,8 +1766,34 @@ template&lt;MeshConcept Mesh&gt; </div>
 
 </div>
 </div>
-<a id="a9f2a512e828447f881854dd02eea8c3e" name="a9f2a512e828447f881854dd02eea8c3e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f2a512e828447f881854dd02eea8c3e">&#9670;&#160;</a></span>setFaceNormals()</h2>
+<a id="a0067d40efc846684d460d7ec310bd978" name="a0067d40efc846684d460d7ec310bd978"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0067d40efc846684d460d7ec310bd978">&#9670;&#160;</a></span>setFaceCustomComponents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vcl::FileMeshInfo::setFaceCustomComponents </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>b</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1bdfc14cd7f12e753bf781836f3f6307" name="a1bdfc14cd7f12e753bf781836f3f6307"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bdfc14cd7f12e753bf781836f3f6307">&#9670;&#160;</a></span>setFaceNormals()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1080,8 +1810,44 @@ template&lt;MeshConcept Mesh&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">PropType</a>&#160;</td>
-          <td class="paramname"><em>t</em> = <code><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65a00b5d3b0c37a6f446b9e705aab7d3a5a">FLOAT</a></code>&#160;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a>&#160;</td>
+          <td class="paramname"><em>t</em> = <code><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68a00b5d3b0c37a6f446b9e705aab7d3a5a">FLOAT</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a9c48380ae05a2191097bff503f4200" name="a4a9c48380ae05a2191097bff503f4200"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a9c48380ae05a2191097bff503f4200">&#9670;&#160;</a></span>setFaceQuality()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vcl::FileMeshInfo::setFaceQuality </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>b</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a>&#160;</td>
+          <td class="paramname"><em>t</em> = <code><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68a852831f6ea9fa717188d8771b5684c18">DOUBLE</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1124,42 +1890,6 @@ template&lt;MeshConcept Mesh&gt; </div>
 
 </div>
 </div>
-<a id="aebde2a3c446ad8b4bd31ac169a26c970" name="aebde2a3c446ad8b4bd31ac169a26c970"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aebde2a3c446ad8b4bd31ac169a26c970">&#9670;&#160;</a></span>setFaceScalars()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void vcl::FileMeshInfo::setFaceScalars </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>b</em> = <code>true</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">PropType</a>&#160;</td>
-          <td class="paramname"><em>t</em> = <code><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65a852831f6ea9fa717188d8771b5684c18">DOUBLE</a></code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a84ce168bcd3fadb58f6d6e4676f16569" name="a84ce168bcd3fadb58f6d6e4676f16569"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a84ce168bcd3fadb58f6d6e4676f16569">&#9670;&#160;</a></span>setFaceVRefs()</h2>
 
@@ -1186,11 +1916,14 @@ template&lt;MeshConcept Mesh&gt; </div>
 
 </div>
 </div>
-<a id="af847387fc2221850351bbfaa252a9618" name="af847387fc2221850351bbfaa252a9618"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af847387fc2221850351bbfaa252a9618">&#9670;&#160;</a></span>setFaceWedgeTexCoords()</h2>
+<a id="ae802d61e4d07ae322835ae3d4326b7f6" name="ae802d61e4d07ae322835ae3d4326b7f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae802d61e4d07ae322835ae3d4326b7f6">&#9670;&#160;</a></span>setFaceWedgeTexCoords()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void vcl::FileMeshInfo::setFaceWedgeTexCoords </td>
@@ -1201,8 +1934,8 @@ template&lt;MeshConcept Mesh&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">PropType</a>&#160;</td>
-          <td class="paramname"><em>t</em> = <code><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65a00b5d3b0c37a6f446b9e705aab7d3a5a">FLOAT</a></code>&#160;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a>&#160;</td>
+          <td class="paramname"><em>t</em> = <code><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68a00b5d3b0c37a6f446b9e705aab7d3a5a">FLOAT</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1210,6 +1943,11 @@ template&lt;MeshConcept Mesh&gt; </div>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -1295,6 +2033,9 @@ template&lt;MeshConcept Mesh&gt; </div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void vcl::FileMeshInfo::setTextures </td>
@@ -1304,6 +2045,11 @@ template&lt;MeshConcept Mesh&gt; </div>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -1333,8 +2079,8 @@ template&lt;MeshConcept Mesh&gt; </div>
 
 </div>
 </div>
-<a id="ac640024b88aea1da099675e2f36860b0" name="ac640024b88aea1da099675e2f36860b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac640024b88aea1da099675e2f36860b0">&#9670;&#160;</a></span>setVertexColors()</h2>
+<a id="ad769240d9b0bd22b870f361ea084b29c" name="ad769240d9b0bd22b870f361ea084b29c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad769240d9b0bd22b870f361ea084b29c">&#9670;&#160;</a></span>setVertexColors()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1351,8 +2097,8 @@ template&lt;MeshConcept Mesh&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">PropType</a>&#160;</td>
-          <td class="paramname"><em>t</em> = <code><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65a8de9ea4809550da281b2c3283069efc1">UCHAR</a></code>&#160;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a>&#160;</td>
+          <td class="paramname"><em>t</em> = <code><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68a8de9ea4809550da281b2c3283069efc1">UCHAR</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1369,8 +2115,8 @@ template&lt;MeshConcept Mesh&gt; </div>
 
 </div>
 </div>
-<a id="a167d348bd2554feee4f1e2e0cdb14ef8" name="a167d348bd2554feee4f1e2e0cdb14ef8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a167d348bd2554feee4f1e2e0cdb14ef8">&#9670;&#160;</a></span>setVertexCoords()</h2>
+<a id="adf1404f57fcfd8f49defa7717df151fe" name="adf1404f57fcfd8f49defa7717df151fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf1404f57fcfd8f49defa7717df151fe">&#9670;&#160;</a></span>setVertexCoords()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1387,8 +2133,8 @@ template&lt;MeshConcept Mesh&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">PropType</a>&#160;</td>
-          <td class="paramname"><em>t</em> = <code><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65a852831f6ea9fa717188d8771b5684c18">DOUBLE</a></code>&#160;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a>&#160;</td>
+          <td class="paramname"><em>t</em> = <code><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68a852831f6ea9fa717188d8771b5684c18">DOUBLE</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1405,8 +2151,34 @@ template&lt;MeshConcept Mesh&gt; </div>
 
 </div>
 </div>
-<a id="a63f64366ef77dc3c2466e6d114a77cc9" name="a63f64366ef77dc3c2466e6d114a77cc9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63f64366ef77dc3c2466e6d114a77cc9">&#9670;&#160;</a></span>setVertexNormals()</h2>
+<a id="a0c740361ae0f3d2aeeffababdc28d35e" name="a0c740361ae0f3d2aeeffababdc28d35e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c740361ae0f3d2aeeffababdc28d35e">&#9670;&#160;</a></span>setVertexCustomComponents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vcl::FileMeshInfo::setVertexCustomComponents </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>b</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a72a1e6409e56a72eb6ffadbb01313a64" name="a72a1e6409e56a72eb6ffadbb01313a64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72a1e6409e56a72eb6ffadbb01313a64">&#9670;&#160;</a></span>setVertexNormals()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1423,8 +2195,8 @@ template&lt;MeshConcept Mesh&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">PropType</a>&#160;</td>
-          <td class="paramname"><em>t</em> = <code><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65a00b5d3b0c37a6f446b9e705aab7d3a5a">FLOAT</a></code>&#160;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a>&#160;</td>
+          <td class="paramname"><em>t</em> = <code><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68a00b5d3b0c37a6f446b9e705aab7d3a5a">FLOAT</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1441,8 +2213,8 @@ template&lt;MeshConcept Mesh&gt; </div>
 
 </div>
 </div>
-<a id="a095a7fe1eb07f461dcabcd836a116092" name="a095a7fe1eb07f461dcabcd836a116092"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a095a7fe1eb07f461dcabcd836a116092">&#9670;&#160;</a></span>setVertexScalars()</h2>
+<a id="abed08222b3815c63c92549f721b90e0f" name="abed08222b3815c63c92549f721b90e0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abed08222b3815c63c92549f721b90e0f">&#9670;&#160;</a></span>setVertexQuality()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1451,7 +2223,7 @@ template&lt;MeshConcept Mesh&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void vcl::FileMeshInfo::setVertexScalars </td>
+          <td class="memname">void vcl::FileMeshInfo::setVertexQuality </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>b</em> = <code>true</code>, </td>
@@ -1459,8 +2231,8 @@ template&lt;MeshConcept Mesh&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">PropType</a>&#160;</td>
-          <td class="paramname"><em>t</em> = <code><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65a852831f6ea9fa717188d8771b5684c18">DOUBLE</a></code>&#160;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a>&#160;</td>
+          <td class="paramname"><em>t</em> = <code><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68a852831f6ea9fa717188d8771b5684c18">DOUBLE</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1477,8 +2249,8 @@ template&lt;MeshConcept Mesh&gt; </div>
 
 </div>
 </div>
-<a id="a9b61b9e046569ba93062ec67400ff7bb" name="a9b61b9e046569ba93062ec67400ff7bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b61b9e046569ba93062ec67400ff7bb">&#9670;&#160;</a></span>setVertexTexCoords()</h2>
+<a id="a1b51111b51b04d3e8908387628772b20" name="a1b51111b51b04d3e8908387628772b20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b51111b51b04d3e8908387628772b20">&#9670;&#160;</a></span>setVertexTexCoords()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1492,8 +2264,8 @@ template&lt;MeshConcept Mesh&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">PropType</a>&#160;</td>
-          <td class="paramname"><em>t</em> = <code><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65a00b5d3b0c37a6f446b9e705aab7d3a5a">FLOAT</a></code>&#160;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">DataType</a>&#160;</td>
+          <td class="paramname"><em>t</em> = <code><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68a00b5d3b0c37a6f446b9e705aab7d3a5a">FLOAT</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1531,8 +2303,8 @@ template&lt;MeshConcept Mesh&gt; </div>
 
 </div>
 </div>
-<a id="a0550dc8abb161c621e537e7baec2e3b9" name="a0550dc8abb161c621e537e7baec2e3b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0550dc8abb161c621e537e7baec2e3b9">&#9670;&#160;</a></span>vertexColorsType()</h2>
+<a id="a5e38c3fbccd202b1eb008c66057a69a7" name="a5e38c3fbccd202b1eb008c66057a69a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e38c3fbccd202b1eb008c66057a69a7">&#9670;&#160;</a></span>vertexColorsType()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1541,7 +2313,7 @@ template&lt;MeshConcept Mesh&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">FileMeshInfo::PropType</a> vcl::FileMeshInfo::vertexColorsType </td>
+          <td class="memname"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">FileMeshInfo::DataType</a> vcl::FileMeshInfo::vertexColorsType </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1556,8 +2328,8 @@ template&lt;MeshConcept Mesh&gt; </div>
 
 </div>
 </div>
-<a id="a6504ccc1353924f662ecb0f285ed3695" name="a6504ccc1353924f662ecb0f285ed3695"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6504ccc1353924f662ecb0f285ed3695">&#9670;&#160;</a></span>vertexCoordsType()</h2>
+<a id="a89b5813e12e0d4c88b02d48f010ddcb0" name="a89b5813e12e0d4c88b02d48f010ddcb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89b5813e12e0d4c88b02d48f010ddcb0">&#9670;&#160;</a></span>vertexCoordsType()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1566,7 +2338,7 @@ template&lt;MeshConcept Mesh&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">FileMeshInfo::PropType</a> vcl::FileMeshInfo::vertexCoordsType </td>
+          <td class="memname"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">FileMeshInfo::DataType</a> vcl::FileMeshInfo::vertexCoordsType </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1581,8 +2353,8 @@ template&lt;MeshConcept Mesh&gt; </div>
 
 </div>
 </div>
-<a id="aa2bd2764544f315ad57d63fd42987920" name="aa2bd2764544f315ad57d63fd42987920"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2bd2764544f315ad57d63fd42987920">&#9670;&#160;</a></span>vertexNormalsType()</h2>
+<a id="aa457f575ccd9602c6ac43b4c31a01d01" name="aa457f575ccd9602c6ac43b4c31a01d01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa457f575ccd9602c6ac43b4c31a01d01">&#9670;&#160;</a></span>vertexCustomComponents()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1591,7 +2363,7 @@ template&lt;MeshConcept Mesh&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">FileMeshInfo::PropType</a> vcl::FileMeshInfo::vertexNormalsType </td>
+          <td class="memname">const std::vector&lt; <a class="el" href="structvcl_1_1FileMeshInfo_1_1CustomComponent.html">FileMeshInfo::CustomComponent</a> &gt; &amp; vcl::FileMeshInfo::vertexCustomComponents </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1606,8 +2378,8 @@ template&lt;MeshConcept Mesh&gt; </div>
 
 </div>
 </div>
-<a id="a5ea997547b0c137cc1e49a12b34944e5" name="a5ea997547b0c137cc1e49a12b34944e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ea997547b0c137cc1e49a12b34944e5">&#9670;&#160;</a></span>vertexScalarsType()</h2>
+<a id="ac0ffa65495ae925076b2300ea494b5d1" name="ac0ffa65495ae925076b2300ea494b5d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0ffa65495ae925076b2300ea494b5d1">&#9670;&#160;</a></span>vertexNormalsType()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1616,7 +2388,7 @@ template&lt;MeshConcept Mesh&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">FileMeshInfo::PropType</a> vcl::FileMeshInfo::vertexScalarsType </td>
+          <td class="memname"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">FileMeshInfo::DataType</a> vcl::FileMeshInfo::vertexNormalsType </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1631,19 +2403,52 @@ template&lt;MeshConcept Mesh&gt; </div>
 
 </div>
 </div>
-<a id="ac8a74fd46c124d436239d6354b1d153c" name="ac8a74fd46c124d436239d6354b1d153c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac8a74fd46c124d436239d6354b1d153c">&#9670;&#160;</a></span>vertexTexCoordsType()</h2>
+<a id="a9320c0a4e2e6957e5978cba798c3ce28" name="a9320c0a4e2e6957e5978cba798c3ce28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9320c0a4e2e6957e5978cba798c3ce28">&#9670;&#160;</a></span>vertexQualityType()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1FileMeshInfo.html#a564278e6ec082388f59446f2098cad65">FileMeshInfo::PropType</a> vcl::FileMeshInfo::vertexTexCoordsType </td>
+          <td class="memname"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">FileMeshInfo::DataType</a> vcl::FileMeshInfo::vertexQualityType </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9003eff4d93971550ee39968f5e336f7" name="a9003eff4d93971550ee39968f5e336f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9003eff4d93971550ee39968f5e336f7">&#9670;&#160;</a></span>vertexTexCoordsType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1FileMeshInfo.html#a5e8893b99b316909beff5aca50e13f68">FileMeshInfo::DataType</a> vcl::FileMeshInfo::vertexTexCoordsType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>

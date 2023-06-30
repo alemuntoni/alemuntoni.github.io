@@ -163,14 +163,14 @@ Functions</h2></td></tr>
 <tr class="memitem:ga85fae359ca5c28f2e2a7e1735249b765"><td class="memTemplItemLeft" align="right" valign="top">SamplerType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__point__sampling.html#ga85fae359ca5c28f2e2a7e1735249b765">vcl::faceWeightedPointSampling</a> (const MeshType &amp;m, const std::vector&lt; ScalarType &gt; &amp;weights, <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> nSamples, bool deterministic)</td></tr>
 <tr class="memdesc:ga85fae359ca5c28f2e2a7e1735249b765"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a SamplerType object that contains the given number of samples taken from the faces of the given mesh. Each face has the same probability of being chosen. If onlySelected is true, only the selected faces are sampled.  <br /></td></tr>
 <tr class="separator:ga85fae359ca5c28f2e2a7e1735249b765"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9f721d1906d9162a569331a614b4830b"><td class="memTemplParams" colspan="2">template&lt;SamplerConcept SamplerType, MeshConcept MeshType&gt; </td></tr>
-<tr class="memitem:ga9f721d1906d9162a569331a614b4830b"><td class="memTemplItemLeft" align="right" valign="top">SamplerType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__point__sampling.html#ga9f721d1906d9162a569331a614b4830b">vcl::vertexScalarWeightedPointSampling</a> (const MeshType &amp;m, <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> nSamples, bool deterministic)</td></tr>
-<tr class="memdesc:ga9f721d1906d9162a569331a614b4830b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Samples the vertices in a weighted way, using the per vertex Scalar component. Each vertex has a probability of being chosen that is proportional to its scalar value.  <br /></td></tr>
-<tr class="separator:ga9f721d1906d9162a569331a614b4830b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8fd0bc03ed59b595624f4493b0c4bf4e"><td class="memTemplParams" colspan="2">template&lt;SamplerConcept SamplerType, FaceMeshConcept MeshType&gt; </td></tr>
-<tr class="memitem:ga8fd0bc03ed59b595624f4493b0c4bf4e"><td class="memTemplItemLeft" align="right" valign="top">SamplerType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__point__sampling.html#ga8fd0bc03ed59b595624f4493b0c4bf4e">vcl::faceScalarWeightedPointSampling</a> (const MeshType &amp;m, <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> nSamples, bool deterministic)</td></tr>
-<tr class="memdesc:ga8fd0bc03ed59b595624f4493b0c4bf4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Samples the faces in a weighted way, using the per face Scalar component. Each face has a probability of being chosen that is proportional to its scalar value.  <br /></td></tr>
-<tr class="separator:ga8fd0bc03ed59b595624f4493b0c4bf4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9610d197e9781537b36dfd630ecd8150"><td class="memTemplParams" colspan="2">template&lt;SamplerConcept SamplerType, MeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga9610d197e9781537b36dfd630ecd8150"><td class="memTemplItemLeft" align="right" valign="top">SamplerType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__point__sampling.html#ga9610d197e9781537b36dfd630ecd8150">vcl::vertexQualityWeightedPointSampling</a> (const MeshType &amp;m, <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> nSamples, bool deterministic)</td></tr>
+<tr class="memdesc:ga9610d197e9781537b36dfd630ecd8150"><td class="mdescLeft">&#160;</td><td class="mdescRight">Samples the vertices in a weighted way, using the per vertex Quality component. Each vertex has a probability of being chosen that is proportional to its quality value.  <br /></td></tr>
+<tr class="separator:ga9610d197e9781537b36dfd630ecd8150"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaac5bac489b31846cd38af0979c2d404f"><td class="memTemplParams" colspan="2">template&lt;SamplerConcept SamplerType, FaceMeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:gaac5bac489b31846cd38af0979c2d404f"><td class="memTemplItemLeft" align="right" valign="top">SamplerType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__point__sampling.html#gaac5bac489b31846cd38af0979c2d404f">vcl::faceQualityWeightedPointSampling</a> (const MeshType &amp;m, <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> nSamples, bool deterministic)</td></tr>
+<tr class="memdesc:gaac5bac489b31846cd38af0979c2d404f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Samples the faces in a weighted way, using the per face Quality component. Each face has a probability of being chosen that is proportional to its quality value.  <br /></td></tr>
+<tr class="separator:gaac5bac489b31846cd38af0979c2d404f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga35b842f769c4ad52c01eff2afa97efe4"><td class="memTemplParams" colspan="2">template&lt;SamplerConcept SamplerType, FaceMeshConcept MeshType&gt; </td></tr>
 <tr class="memitem:ga35b842f769c4ad52c01eff2afa97efe4"><td class="memTemplItemLeft" align="right" valign="top">SamplerType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__point__sampling.html#ga35b842f769c4ad52c01eff2afa97efe4">vcl::vertexAreaWeightedPointSampling</a> (const MeshType &amp;m, <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> nSamples, bool deterministic)</td></tr>
 <tr class="memdesc:ga35b842f769c4ad52c01eff2afa97efe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Samples the vertices in a weighted way, using the area. Each vertex has a probability of being chosen that is proportional to the average area of its adjacent faces.  <br /></td></tr>
@@ -451,8 +451,8 @@ template&lt;SamplerConcept SamplerType, FaceMeshConcept MeshType&gt; </div>
 
 </div>
 </div>
-<a id="ga8fd0bc03ed59b595624f4493b0c4bf4e" name="ga8fd0bc03ed59b595624f4493b0c4bf4e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga8fd0bc03ed59b595624f4493b0c4bf4e">&#9670;&#160;</a></span>faceScalarWeightedPointSampling()</h2>
+<a id="gaac5bac489b31846cd38af0979c2d404f" name="gaac5bac489b31846cd38af0979c2d404f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaac5bac489b31846cd38af0979c2d404f">&#9670;&#160;</a></span>faceQualityWeightedPointSampling()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -460,7 +460,7 @@ template&lt;SamplerConcept SamplerType, FaceMeshConcept MeshType&gt; </div>
 template&lt;SamplerConcept SamplerType, FaceMeshConcept MeshType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">SamplerType vcl::faceScalarWeightedPointSampling </td>
+          <td class="memname">SamplerType vcl::faceQualityWeightedPointSampling </td>
           <td>(</td>
           <td class="paramtype">const MeshType &amp;&#160;</td>
           <td class="paramname"><em>m</em>, </td>
@@ -485,7 +485,7 @@ template&lt;SamplerConcept SamplerType, FaceMeshConcept MeshType&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Samples the faces in a weighted way, using the per face Scalar component. Each face has a probability of being chosen that is proportional to its scalar value. </p>
+<p>Samples the faces in a weighted way, using the per face Quality component. Each face has a probability of being chosen that is proportional to its quality value. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">m</td><td></td></tr>
@@ -971,8 +971,8 @@ template&lt;SamplerConcept SamplerType, FaceMeshConcept MeshType&gt; </div>
 
 </div>
 </div>
-<a id="ga9f721d1906d9162a569331a614b4830b" name="ga9f721d1906d9162a569331a614b4830b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9f721d1906d9162a569331a614b4830b">&#9670;&#160;</a></span>vertexScalarWeightedPointSampling()</h2>
+<a id="ga9610d197e9781537b36dfd630ecd8150" name="ga9610d197e9781537b36dfd630ecd8150"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9610d197e9781537b36dfd630ecd8150">&#9670;&#160;</a></span>vertexQualityWeightedPointSampling()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -980,7 +980,7 @@ template&lt;SamplerConcept SamplerType, FaceMeshConcept MeshType&gt; </div>
 template&lt;SamplerConcept SamplerType, MeshConcept MeshType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">SamplerType vcl::vertexScalarWeightedPointSampling </td>
+          <td class="memname">SamplerType vcl::vertexQualityWeightedPointSampling </td>
           <td>(</td>
           <td class="paramtype">const MeshType &amp;&#160;</td>
           <td class="paramname"><em>m</em>, </td>
@@ -1005,7 +1005,7 @@ template&lt;SamplerConcept SamplerType, MeshConcept MeshType&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Samples the vertices in a weighted way, using the per vertex Scalar component. Each vertex has a probability of being chosen that is proportional to its scalar value. </p>
+<p>Samples the vertices in a weighted way, using the per vertex Quality component. Each vertex has a probability of being chosen that is proportional to its quality value. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">m</td><td></td></tr>

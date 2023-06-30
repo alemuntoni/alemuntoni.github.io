@@ -95,19 +95,31 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1HasPerVertexCustomCompon
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">vcl::HasPerVertexCustomComponents Concept Reference</div></div>
+  <div class="headertitle"><div class="title">vcl::HasPerVertexCustomComponents Concept Reference<div class="ingroups"><a class="el" href="group__concepts.html">Concepts</a> &raquo; <a class="el" href="group__lconcepts.html">Library Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__concepts.html">Mesh Concepts</a> &raquo; <a class="el" href="group__vertex__mesh__concepts.html">VertexMesh Concepts</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Concept that checks if a Mesh has the per Vertex CustomComponents.  
+<a href="conceptvcl_1_1HasPerVertexCustomComponents.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="per__vertex_8h_source.html">vclib/concepts/mesh/per_vertex.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType&gt;</div>
 <div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1HasPerVertexCustomComponents.html">vcl::HasPerVertexCustomComponents</a> = </div>
 <div class="line">    <a class="code hl_concept" href="conceptvcl_1_1HasVertices.html">HasVertices&lt;MeshType&gt;</a> &amp;&amp; <a class="code hl_concept" href="conceptvcl_1_1vert_1_1HasCustomComponents.html">vcl::vert::HasCustomComponents&lt;typename MeshType::VertexType&gt;</a></div>
-<div class="ttc" id="aconceptvcl_1_1HasPerVertexCustomComponents_html"><div class="ttname"><a href="conceptvcl_1_1HasPerVertexCustomComponents.html">vcl::HasPerVertexCustomComponents</a></div><div class="ttdef"><b>Definition:</b> per_vertex.h:73</div></div>
-<div class="ttc" id="aconceptvcl_1_1HasVertices_html"><div class="ttname"><a href="conceptvcl_1_1HasVertices.html">vcl::HasVertices</a></div><div class="ttdoc">HasVertices concepts is satisfied when at least one of its types is (or inherits from) a VertexContai...</div><div class="ttdef"><b>Definition:</b> containers.h:241</div></div>
+<div class="ttc" id="aconceptvcl_1_1HasPerVertexCustomComponents_html"><div class="ttname"><a href="conceptvcl_1_1HasPerVertexCustomComponents.html">vcl::HasPerVertexCustomComponents</a></div><div class="ttdoc">Concept that checks if a Mesh has the per Vertex CustomComponents.</div><div class="ttdef"><b>Definition:</b> per_vertex.h:167</div></div>
+<div class="ttc" id="aconceptvcl_1_1HasVertices_html"><div class="ttname"><a href="conceptvcl_1_1HasVertices.html">vcl::HasVertices</a></div><div class="ttdoc">HasVertices concepts is satisfied when at least one of its types is (or inherits from) a VertexContai...</div><div class="ttdef"><b>Definition:</b> vertex_container.h:107</div></div>
 <div class="ttc" id="aconceptvcl_1_1vert_1_1HasCustomComponents_html"><div class="ttname"><a href="conceptvcl_1_1vert_1_1HasCustomComponents.html">vcl::vert::HasCustomComponents</a></div><div class="ttdef"><b>Definition:</b> vertex.h:87</div></div>
-</div><!-- fragment --></div><!-- contents -->
+</div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Concept that checks if a Mesh has the per Vertex CustomComponents. </p>
+<p>Evaluates to true if CustomComponents is part of the Vertex element.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>mesh type to check. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

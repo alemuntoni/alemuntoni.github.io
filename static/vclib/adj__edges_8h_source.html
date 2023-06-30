@@ -132,7 +132,7 @@ $(document).ready(function(){initNavTree('adj__edges_8h_source.html',''); initRe
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">namespace </span>internal {</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">concept </span>CleanAdjEdgesConcept = <a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasAdjacentEdges.html">comp::HasAdjacentEdges&lt;RemoveConstRef&lt;T&gt;</a>&gt;;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">concept </span>CleanAdjEdgesConcept = <a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasAdjacentEdges.html">comp::HasAdjacentEdges&lt;std::remove_cvref_t&lt;T&gt;</a>&gt;;</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">struct </span>AdjEdgesView</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>{</div>
@@ -150,16 +150,16 @@ $(document).ready(function(){initNavTree('adj__edges_8h_source.html',''); initRe
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>} <span class="comment">// namespace vcl::views::internal</span></div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="namespacevcl_1_1views.html#af0a655daca62b0693bc2520565c1d431">   65</a></span><span class="keyword">inline</span> <span class="keyword">constexpr</span> internal::AdjEdgesView <a class="code hl_variable" href="namespacevcl_1_1views.html#af0a655daca62b0693bc2520565c1d431">adjEdges</a>;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>} <span class="comment">// namespace vcl::views</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="group__views.html#gaf0a655daca62b0693bc2520565c1d431">   67</a></span><span class="keyword">inline</span> <span class="keyword">constexpr</span> internal::AdjEdgesView <a class="code hl_variable" href="group__views.html#gaf0a655daca62b0693bc2520565c1d431">adjEdges</a>;</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#endif </span><span class="comment">// VCL_VIEWS_MESH_COMPONENTS_ADJ_EDGES_H</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>} <span class="comment">// namespace vcl::views</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#endif </span><span class="comment">// VCL_VIEWS_MESH_COMPONENTS_ADJ_EDGES_H</span></div>
 <div class="ttc" id="aconcepts_8h_html"><div class="ttname"><a href="concepts_8h.html">concepts.h</a></div></div>
-<div class="ttc" id="aconceptvcl_1_1IsPointer_html"><div class="ttname"><a href="conceptvcl_1_1IsPointer.html">vcl::IsPointer</a></div><div class="ttdoc">Utility concept that is evaluated true if T is a Pointer.</div><div class="ttdef"><b>Definition:</b> pointers.h:37</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasAdjacentEdges_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasAdjacentEdges.html">vcl::comp::HasAdjacentEdges</a></div><div class="ttdoc">HasAdjacentEdges concept is satisfied only if a Element class provides the types and member functions...</div><div class="ttdef"><b>Definition:</b> adjacent_edges.h:49</div></div>
+<div class="ttc" id="aconceptvcl_1_1IsPointer_html"><div class="ttname"><a href="conceptvcl_1_1IsPointer.html">vcl::IsPointer</a></div><div class="ttdoc">Utility concept that is evaluated true if T is a Pointer, even if the type is a T is a reference to a...</div><div class="ttdef"><b>Definition:</b> pointers.h:38</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasAdjacentEdges_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasAdjacentEdges.html">vcl::comp::HasAdjacentEdges</a></div><div class="ttdoc">HasAdjacentEdges concept is satisfied only if a Element class provides the types and member functions...</div><div class="ttdef"><b>Definition:</b> adjacent_edges.h:51</div></div>
+<div class="ttc" id="agroup__views_html_gaf0a655daca62b0693bc2520565c1d431"><div class="ttname"><a href="group__views.html#gaf0a655daca62b0693bc2520565c1d431">vcl::views::adjEdges</a></div><div class="ttdeci">constexpr internal::AdjEdgesView adjEdges</div><div class="ttdoc">The adjEdges view allows to obtain a view that access to the adjacent edges of the object that has be...</div><div class="ttdef"><b>Definition:</b> adj_edges.h:67</div></div>
 <div class="ttc" id="anamespacevcl_1_1views_html"><div class="ttname"><a href="namespacevcl_1_1views.html">vcl::views</a></div><div class="ttdef"><b>Definition:</b> adj_edges.h:30</div></div>
-<div class="ttc" id="anamespacevcl_1_1views_html_af0a655daca62b0693bc2520565c1d431"><div class="ttname"><a href="namespacevcl_1_1views.html#af0a655daca62b0693bc2520565c1d431">vcl::views::adjEdges</a></div><div class="ttdeci">constexpr internal::AdjEdgesView adjEdges</div><div class="ttdoc">The adjEdges view allows to obtain a view that access to the adjacent edges of the object that has be...</div><div class="ttdef"><b>Definition:</b> adj_edges.h:65</div></div>
 <div class="ttc" id="atypes_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

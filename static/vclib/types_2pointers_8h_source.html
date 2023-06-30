@@ -125,40 +125,62 @@ $(document).ready(function(){initNavTree('types_2pointers_8h_source.html',''); i
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define VCL_TYPES_POINTERS_H</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;type_traits&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment"> * Utility to get clean type from an input type that could have a reference or a pointer.</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="namespacevcl.html#a997ae3296c55d244ddd31c5037ca4a7b">   35</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacevcl.html#a997ae3296c55d244ddd31c5037ca4a7b">RemoveRefAndPointer</a> =</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">typename</span> std::remove_pointer_t&lt;typename std::remove_reference_t&lt;T&gt;&gt;;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment"> * Utility to get clean type from an input type that could have a const reference.</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="namespacevcl.html#a6f737a463fe0a1daa8f1c21c96cb4ff5">   42</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacevcl.html#a6f737a463fe0a1daa8f1c21c96cb4ff5">RemoveConstRef</a> = <span class="keyword">typename</span> std::remove_const_t&lt;std::remove_reference_t&lt;T&gt;&gt;;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment"> * Utility to get a pointer type without the constness.</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment"> * e.g. If T is const int*, the resulting type is int*</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment"> * If the type is not a pointer, it is left as it was</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="namespacevcl.html#a665881ae7f71a35814e41147c4bcd417">   50</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacevcl.html#a665881ae7f71a35814e41147c4bcd417">RemoveConstPointer</a> =</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    std::conditional_t&lt;std::is_pointer_v&lt;T&gt;, </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    std::add_pointer_t&lt;typename std::remove_cv_t&lt;typename std::remove_pointer_t&lt;T&gt;&gt;&gt;,</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    T&gt;;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#endif </span><span class="comment">// VCL_TYPES_POINTERS_H</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;<a class="code" href="concepts_2pointers_8h.html">vclib/concepts/pointers.h</a>&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment"> * Utility to get clean type from an input type that could have a reference or a pointer.</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="namespacevcl.html#a2ec2f45ee6feff2a4aff0f15d6b0b0b0">   38</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacevcl.html#a2ec2f45ee6feff2a4aff0f15d6b0b0b0">RemoveCVRefAndPointer</a> =</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">typename</span> std::remove_cvref_t&lt;std::remove_pointer_t&lt;T&gt;&gt;;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment"> * Utility to get a pointer type without the constness.</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment"> * e.g. If T is const int*, the resulting type is int*</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment"> * If the type is not a pointer, it is left as it was</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="namespacevcl.html#a8a8e5224d2d66eae96da5ec5f8bd7eb5">   47</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacevcl.html#a8a8e5224d2d66eae96da5ec5f8bd7eb5">RemoveConstFromPointer</a> =</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    std::conditional_t&lt;std::is_pointer_v&lt;T&gt;, </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    std::add_pointer_t&lt;typename std::remove_cv_t&lt;typename std::remove_pointer_t&lt;T&gt;&gt;&gt;,</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    T&gt;;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="namespacevcl.html#aada6c7f7d741d8f7885af287bcc6f746">   60</a></span><span class="keyword">auto</span> <a class="code hl_function" href="namespacevcl.html#aada6c7f7d741d8f7885af287bcc6f746">dereferencePtr</a>(T&amp;&amp; obj)</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>{</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<a class="code hl_concept" href="conceptvcl_1_1IsPointer.html">IsPointer&lt;T&gt;</a>) {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordflow">return</span> *obj;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">return</span> std::forward&lt;T&gt;(obj);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="namespacevcl.html#ae32401c3c5edbdeead1769b4d6160f87">   78</a></span><span class="keyword">auto</span> <a class="code hl_function" href="namespacevcl.html#ae32401c3c5edbdeead1769b4d6160f87">addressOfObj</a>(T&amp; obj)</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>{</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<a class="code hl_concept" href="conceptvcl_1_1IsPointer.html">IsPointer&lt;T&gt;</a>) {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordflow">return</span> obj;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordflow">return</span> &amp;obj;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>}</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">#endif </span><span class="comment">// VCL_TYPES_POINTERS_H</span></div>
+<div class="ttc" id="aconcepts_2pointers_8h_html"><div class="ttname"><a href="concepts_2pointers_8h.html">pointers.h</a></div></div>
+<div class="ttc" id="aconceptvcl_1_1IsPointer_html"><div class="ttname"><a href="conceptvcl_1_1IsPointer.html">vcl::IsPointer</a></div><div class="ttdoc">Utility concept that is evaluated true if T is a Pointer, even if the type is a T is a reference to a...</div><div class="ttdef"><b>Definition:</b> pointers.h:38</div></div>
 <div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition:</b> bounding_box.cpp:29</div></div>
-<div class="ttc" id="anamespacevcl_html_a665881ae7f71a35814e41147c4bcd417"><div class="ttname"><a href="namespacevcl.html#a665881ae7f71a35814e41147c4bcd417">vcl::RemoveConstPointer</a></div><div class="ttdeci">std::conditional_t&lt; std::is_pointer_v&lt; T &gt;, std::add_pointer_t&lt; typename std::remove_cv_t&lt; typename std::remove_pointer_t&lt; T &gt; &gt; &gt;, T &gt; RemoveConstPointer</div><div class="ttdef"><b>Definition:</b> pointers.h:53</div></div>
-<div class="ttc" id="anamespacevcl_html_a6f737a463fe0a1daa8f1c21c96cb4ff5"><div class="ttname"><a href="namespacevcl.html#a6f737a463fe0a1daa8f1c21c96cb4ff5">vcl::RemoveConstRef</a></div><div class="ttdeci">typename std::remove_const_t&lt; std::remove_reference_t&lt; T &gt; &gt; RemoveConstRef</div><div class="ttdef"><b>Definition:</b> pointers.h:42</div></div>
-<div class="ttc" id="anamespacevcl_html_a997ae3296c55d244ddd31c5037ca4a7b"><div class="ttname"><a href="namespacevcl.html#a997ae3296c55d244ddd31c5037ca4a7b">vcl::RemoveRefAndPointer</a></div><div class="ttdeci">typename std::remove_pointer_t&lt; typename std::remove_reference_t&lt; T &gt; &gt; RemoveRefAndPointer</div><div class="ttdef"><b>Definition:</b> pointers.h:36</div></div>
+<div class="ttc" id="anamespacevcl_html_a2ec2f45ee6feff2a4aff0f15d6b0b0b0"><div class="ttname"><a href="namespacevcl.html#a2ec2f45ee6feff2a4aff0f15d6b0b0b0">vcl::RemoveCVRefAndPointer</a></div><div class="ttdeci">typename std::remove_cvref_t&lt; std::remove_pointer_t&lt; T &gt; &gt; RemoveCVRefAndPointer</div><div class="ttdef"><b>Definition:</b> pointers.h:39</div></div>
+<div class="ttc" id="anamespacevcl_html_a8a8e5224d2d66eae96da5ec5f8bd7eb5"><div class="ttname"><a href="namespacevcl.html#a8a8e5224d2d66eae96da5ec5f8bd7eb5">vcl::RemoveConstFromPointer</a></div><div class="ttdeci">std::conditional_t&lt; std::is_pointer_v&lt; T &gt;, std::add_pointer_t&lt; typename std::remove_cv_t&lt; typename std::remove_pointer_t&lt; T &gt; &gt; &gt;, T &gt; RemoveConstFromPointer</div><div class="ttdef"><b>Definition:</b> pointers.h:50</div></div>
+<div class="ttc" id="anamespacevcl_html_aada6c7f7d741d8f7885af287bcc6f746"><div class="ttname"><a href="namespacevcl.html#aada6c7f7d741d8f7885af287bcc6f746">vcl::dereferencePtr</a></div><div class="ttdeci">auto dereferencePtr(T &amp;&amp;obj)</div><div class="ttdoc">Utility function that applies the unary operator '*' to the argument only if the object is a pointer.</div><div class="ttdef"><b>Definition:</b> pointers.h:60</div></div>
+<div class="ttc" id="anamespacevcl_html_ae32401c3c5edbdeead1769b4d6160f87"><div class="ttname"><a href="namespacevcl.html#ae32401c3c5edbdeead1769b4d6160f87">vcl::addressOfObj</a></div><div class="ttdeci">auto addressOfObj(T &amp;obj)</div><div class="ttdoc">Utility function that applies the unary operator '&amp;' to the argument only if it is not a pointer.</div><div class="ttdef"><b>Definition:</b> pointers.h:78</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
