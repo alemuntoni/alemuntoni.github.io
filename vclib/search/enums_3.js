@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hausdorffsamplingmethod_0',['HausdorffSamplingMethod',['../namespacevcl.html#a5a4e8376b2d47797f9167f2a8dd6fb0e',1,'vcl']]]
+  ['format_0',['Format',['../namespacevcl_1_1io_1_1ply.html#a78b5af43f267ecc24ce3262f59f331a2',1,'vcl::io::ply']]]
 ];

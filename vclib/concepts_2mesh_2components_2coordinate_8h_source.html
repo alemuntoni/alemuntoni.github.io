@@ -124,27 +124,27 @@ $(document).ready(function(){initNavTree('concepts_2mesh_2components_2coordinate
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef VCL_CONCEPTS_MESH_COMPONENTS_COORDINATE_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define VCL_CONCEPTS_MESH_COMPONENTS_COORDINATE_H</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;<a class="code" href="component_8h.html">component.h</a>&quot;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;<a class="code" href="mesh_2components_2bases_2component_8h.html">component.h</a>&quot;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="space_2point_8h.html">vclib/space/point.h</a>&gt;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl_1_1comp.html">vcl::comp</a> {</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1HasCoordinate.html">   41</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasCoordinate.html">HasCoordinate</a> = <span class="keyword">requires</span>(</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    T o,</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">const</span> T&amp; co)</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>{</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">typename</span> T::CoordType;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    { o.coord() } -&gt; std::same_as&lt;typename T::CoordType&amp;&gt;;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    { co.coord() } -&gt; std::same_as&lt;const typename T::CoordType&amp;&gt;;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>};</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>} <span class="comment">// namespace vcl::comp</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#endif </span><span class="comment">// VCL_CONCEPTS_MESH_COMPONENTS_COORDINATE_H</span></div>
-<div class="ttc" id="acomponent_8h_html"><div class="ttname"><a href="component_8h.html">component.h</a></div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasCoordinate_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasCoordinate.html">vcl::comp::HasCoordinate</a></div><div class="ttdoc">HasCoordinate concept is satisfied only if a Element class provides the types and member functions sp...</div><div class="ttdef"><b>Definition:</b> coordinate.h:41</div></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1HasCoordinate.html">   42</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasCoordinate.html">HasCoordinate</a> = <span class="keyword">requires</span>(</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    T o,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">const</span> T&amp; co)</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>{</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">typename</span> T::CoordType;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    { o.coord() } -&gt; std::same_as&lt;typename T::CoordType&amp;&gt;;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    { co.coord() } -&gt; std::same_as&lt;const typename T::CoordType&amp;&gt;;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>};</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>} <span class="comment">// namespace vcl::comp</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#endif </span><span class="comment">// VCL_CONCEPTS_MESH_COMPONENTS_COORDINATE_H</span></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasCoordinate_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasCoordinate.html">vcl::comp::HasCoordinate</a></div><div class="ttdoc">HasCoordinate concept is satisfied only if a Element class provides the types and member functions sp...</div><div class="ttdef"><b>Definition:</b> coordinate.h:42</div></div>
+<div class="ttc" id="amesh_2components_2bases_2component_8h_html"><div class="ttname"><a href="mesh_2components_2bases_2component_8h.html">component.h</a></div></div>
 <div class="ttc" id="anamespacevcl_1_1comp_html"><div class="ttname"><a href="namespacevcl_1_1comp.html">vcl::comp</a></div><div class="ttdef"><b>Definition:</b> adjacent_edges.h:31</div></div>
 <div class="ttc" id="aspace_2point_8h_html"><div class="ttname"><a href="space_2point_8h.html">point.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

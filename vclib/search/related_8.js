@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['swap_0',['swap',['../classvcl_1_1DrawableObjectVector.html#af840103767bfea7b623a0b1ed1b3760e',1,'vcl::DrawableObjectVector']]]
+  ['vertexcontainer_0',['VertexContainer',['../classvcl_1_1mesh_1_1VertexContainer.html#a30bc2bb15c0d6f6bcd7211755523e8d1',1,'vcl::mesh::VertexContainer']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vclibprincipalcurvaturealgorithm_0',['VCLibPrincipalCurvatureAlgorithm',['../namespacevcl.html#aaca879a6bfd47ff8429d6b2f6cfa9440',1,'vcl']]]
+  ['propertyname_0',['PropertyName',['../namespacevcl_1_1io_1_1ply.html#ae59b1615f98338e68cfa5b0612c249c4',1,'vcl::io::ply']]]
 ];

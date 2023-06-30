@@ -134,12 +134,12 @@ $(document).ready(function(){initNavTree('adjacent__right__node__iterator_8h_sou
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">using </span>Base = AdjacentNodeIterator&lt;Graph, Iterator&gt;;</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">using </span>value_type = <span class="keyword">typename</span> Graph::LeftType;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">using </span><a class="code hl_variable" href="namespacevcl_1_1views.html#a9efe174b2b2d353fb8b3ff4b0268bf20">reference</a>  = <span class="keyword">const</span> value_type&amp;;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">using </span>reference  = <span class="keyword">const</span> value_type&amp;;</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">using </span>pointer    = <span class="keyword">const</span> value_type*;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">using </span>AdjacentNodeIterator&lt;Graph, Iterator&gt;::AdjacentNodeIterator;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_variable" href="namespacevcl_1_1views.html#a9efe174b2b2d353fb8b3ff4b0268bf20">reference</a> <a class="code hl_function" href="namespacevcl.html#a25bd91133ba21843329a21218fa52069">operator*</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> Base::g-&gt;nodesL[Base::it].info(); }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    reference <a class="code hl_function" href="namespacevcl.html#a25bd91133ba21843329a21218fa52069">operator*</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> Base::g-&gt;nodesL[Base::it].info(); }</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    pointer operator-&gt;()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> &amp;Base::g-&gt;nodesL[Base::it].info(); }</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>};</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
@@ -147,7 +147,6 @@ $(document).ready(function(){initNavTree('adjacent__right__node__iterator_8h_sou
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">#endif </span><span class="comment">// VCL_SPACE_GRAPH_BIPARTITE_ITERATOR_ADJACENT_RIGHT_NODE_ITERATOR_H</span></div>
 <div class="ttc" id="aadjacent__node__iterator_8h_html"><div class="ttname"><a href="adjacent__node__iterator_8h.html">adjacent_node_iterator.h</a></div></div>
-<div class="ttc" id="anamespacevcl_1_1views_html_a9efe174b2b2d353fb8b3ff4b0268bf20"><div class="ttname"><a href="namespacevcl_1_1views.html#a9efe174b2b2d353fb8b3ff4b0268bf20">vcl::views::reference</a></div><div class="ttdeci">constexpr internal::ReferenceView reference</div><div class="ttdoc">The reference view allow to reference the objects of a range. The resulting view will iterate over th...</div><div class="ttdef"><b>Definition:</b> views.h:108</div></div>
 <div class="ttc" id="anamespacevcl_html_a25bd91133ba21843329a21218fa52069"><div class="ttname"><a href="namespacevcl.html#a25bd91133ba21843329a21218fa52069">vcl::operator*</a></div><div class="ttdeci">PointType operator*(const MatrixType &amp;m, const PointType &amp;p)</div><div class="ttdoc">Multiplies a matrix and a point.</div><div class="ttdef"><b>Definition:</b> matrix.cpp:44</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

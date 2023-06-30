@@ -6,7 +6,7 @@ var vertex__requirements_8h =
     [ "enableIfPerVertexMarkOptional", "vertex__requirements_8h.html#a64bde18cc07f8804c0c96e5def984f26", null ],
     [ "enableIfPerVertexNormalOptional", "vertex__requirements_8h.html#af4a7a739d6f30a2e4768b7b12c663418", null ],
     [ "enableIfPerVertexPrincipalCurvatureOptional", "vertex__requirements_8h.html#a579b161f8a4132e5106608bebc70e363", null ],
-    [ "enableIfPerVertexScalarOptional", "vertex__requirements_8h.html#ad25a1b222bdd0347c1cdfa9d25ffa191", null ],
+    [ "enableIfPerVertexQualityOptional", "vertex__requirements_8h.html#aa9eb68875b4658e81e104725173df6fd", null ],
     [ "enableIfPerVertexTexCoordOptional", "vertex__requirements_8h.html#a369d2067cce035b7b4a710c5b364a28c", null ],
     [ "isPerVertexAdjacentFacesEnabled", "vertex__requirements_8h.html#a32903e0a292bcdaa77ab10536316c531", null ],
     [ "isPerVertexAdjacentVerticesEnabled", "vertex__requirements_8h.html#a2b69a485cf086be8551cc40210172e6a", null ],
@@ -14,7 +14,7 @@ var vertex__requirements_8h =
     [ "isPerVertexMarkEnabled", "vertex__requirements_8h.html#a3d1e8025d3ef60421266da65134a4311", null ],
     [ "isPerVertexNormalEnabled", "vertex__requirements_8h.html#a7a42ac0f4ca25059bc805e9a5238a083", null ],
     [ "isPerVertexPrincipalCurvatureEnabled", "vertex__requirements_8h.html#a0120edd84580c8e6bd446c913937c937", null ],
-    [ "isPerVertexScalarEnabled", "vertex__requirements_8h.html#a394d8b695689371fc986ddd3a64161dd", null ],
+    [ "isPerVertexQualityEnabled", "vertex__requirements_8h.html#a36dc15b1bda94e69801c220035968716", null ],
     [ "isPerVertexTexCoordEnabled", "vertex__requirements_8h.html#ad553855e74ee03b94f8c7e11c3085cf8", null ],
     [ "isVertexContainerCompact", "vertex__requirements_8h.html#af71077b0dd03e109c80a05dc1bcafdf5", null ],
     [ "requirePerVertexAdjacentFaces", "vertex__requirements_8h.html#a1f6666a7b9cd7293ab07aaf6cbc1dc4c", null ],
@@ -23,7 +23,7 @@ var vertex__requirements_8h =
     [ "requirePerVertexMark", "vertex__requirements_8h.html#ad1b0cb92a48a555d7084bb6fb94ef359", null ],
     [ "requirePerVertexNormal", "vertex__requirements_8h.html#ab43f884f6ca679c8f57255e11ddaa768", null ],
     [ "requirePerVertexPrincipalCurvature", "vertex__requirements_8h.html#af330a765b2c7772ff85378f617ade27b", null ],
-    [ "requirePerVertexScalar", "vertex__requirements_8h.html#aba5f0aba238fdf49f79c8986cee2bfa9", null ],
+    [ "requirePerVertexQuality", "vertex__requirements_8h.html#a49287ff6e3778f10a280b1166006dff9", null ],
     [ "requirePerVertexTexCoord", "vertex__requirements_8h.html#a5f20fd534d1bb822fe5b13f2515025ee", null ],
     [ "requireVertexContainerCompactness", "vertex__requirements_8h.html#ae5e94dd9b89e9bc4fb21701af6e788ca", null ]
 ];

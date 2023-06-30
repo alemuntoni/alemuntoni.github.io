@@ -1,6 +1,7 @@
 var types_2pointers_8h =
 [
-    [ "RemoveConstPointer", "types_2pointers_8h.html#a665881ae7f71a35814e41147c4bcd417", null ],
-    [ "RemoveConstRef", "types_2pointers_8h.html#a6f737a463fe0a1daa8f1c21c96cb4ff5", null ],
-    [ "RemoveRefAndPointer", "types_2pointers_8h.html#a997ae3296c55d244ddd31c5037ca4a7b", null ]
+    [ "RemoveConstFromPointer", "types_2pointers_8h.html#a8a8e5224d2d66eae96da5ec5f8bd7eb5", null ],
+    [ "RemoveCVRefAndPointer", "types_2pointers_8h.html#a2ec2f45ee6feff2a4aff0f15d6b0b0b0", null ],
+    [ "addressOfObj", "types_2pointers_8h.html#ae32401c3c5edbdeead1769b4d6160f87", null ],
+    [ "dereferencePtr", "types_2pointers_8h.html#aada6c7f7d741d8f7885af287bcc6f746", null ]
 ];

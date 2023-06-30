@@ -102,12 +102,12 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1HasVertices.html',''); i
 <p>HasVertices concepts is satisfied when at least one of its types is (or inherits from) a VertexContainer. It can be used both to check if a Mesh has vertices, or if in a list of types there is a VertexContainer.  
 <a href="conceptvcl_1_1HasVertices.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="concepts_2mesh_2containers_8h_source.html">vclib/concepts/mesh/containers.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="concepts_2mesh_2containers_2vertex__container_8h_source.html">vclib/concepts/mesh/containers/vertex_container.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Args&gt;</div>
 <div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1HasVertices.html">vcl::HasVertices</a> =  (<a class="code hl_concept" href="conceptvcl_1_1mesh_1_1HasVertexContainer.html">vcl::mesh::HasVertexContainer&lt;Args&gt;</a> || ...)</div>
-<div class="ttc" id="aconceptvcl_1_1HasVertices_html"><div class="ttname"><a href="conceptvcl_1_1HasVertices.html">vcl::HasVertices</a></div><div class="ttdoc">HasVertices concepts is satisfied when at least one of its types is (or inherits from) a VertexContai...</div><div class="ttdef"><b>Definition:</b> containers.h:241</div></div>
-<div class="ttc" id="aconceptvcl_1_1mesh_1_1HasVertexContainer_html"><div class="ttname"><a href="conceptvcl_1_1mesh_1_1HasVertexContainer.html">vcl::mesh::HasVertexContainer</a></div><div class="ttdef"><b>Definition:</b> containers.h:96</div></div>
+<div class="ttc" id="aconceptvcl_1_1HasVertices_html"><div class="ttname"><a href="conceptvcl_1_1HasVertices.html">vcl::HasVertices</a></div><div class="ttdoc">HasVertices concepts is satisfied when at least one of its types is (or inherits from) a VertexContai...</div><div class="ttdef"><b>Definition:</b> vertex_container.h:107</div></div>
+<div class="ttc" id="aconceptvcl_1_1mesh_1_1HasVertexContainer_html"><div class="ttname"><a href="conceptvcl_1_1mesh_1_1HasVertexContainer.html">vcl::mesh::HasVertexContainer</a></div><div class="ttdef"><b>Definition:</b> vertex_container.h:36</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>HasVertices concepts is satisfied when at least one of its types is (or inherits from) a VertexContainer. It can be used both to check if a Mesh has vertices, or if in a list of types there is a VertexContainer. </p>
 <p>In the following example, a MyMesh type can be instatiated only if one of its template Args is a VertexContainer: </p><div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt; <span class="keyword">requires</span> <a class="code hl_concept" href="conceptvcl_1_1HasVertices.html">HasVertices</a>&lt;Args...&gt;</div>
@@ -123,7 +123,8 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1HasVertices.html',''); i
 </div><!-- fragment --><p>To check if a type has (inherits from) VertexContainer: </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<a class="code hl_concept" href="conceptvcl_1_1HasVertices.html">vcl::HasVertices&lt;MyMeshType&gt;</a>) {</div>
 <div class="line">    <span class="comment">// ...</span></div>
 <div class="line">}</div>
-</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>This concept does not check if a Mesh is a valid Mesh. To do that, use the MeshConcept. </dd></dl>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

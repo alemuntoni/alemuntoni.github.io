@@ -110,12 +110,13 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1comp_1_1HasPrincipalCurv
 <div class="line">    <span class="keyword">const</span> T&amp; co)</div>
 <div class="line">{</div>
 <div class="line">    <span class="keyword">typename</span> T::PrincipalCurvatureType;</div>
-<div class="line">    <span class="keyword">typename</span> T::PrincipalCurvatureComponent;</div>
-<div class="line">    { o.principalCurvature() } -&gt; std::same_as&lt;typename T::PrincipalCurvatureType&amp;&gt;;</div>
-<div class="line">    { co.principalCurvature() } -&gt; std::same_as&lt;const typename T::PrincipalCurvatureType&amp;&gt;;</div>
+<div class="line">    { o.principalCurvature() } -&gt;</div>
+<div class="line">        std::same_as&lt;typename T::PrincipalCurvatureType&amp;&gt;;</div>
+<div class="line">    { co.principalCurvature() } -&gt;</div>
+<div class="line">        std::same_as&lt;const typename T::PrincipalCurvatureType&amp;&gt;;</div>
 <div class="line">    { co.isPrincipalCurvatureEnabled() } -&gt; std::same_as&lt;bool&gt;;</div>
 <div class="line">}</div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasPrincipalCurvature_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasPrincipalCurvature.html">vcl::comp::HasPrincipalCurvature</a></div><div class="ttdoc">HasPrincipalCurvature concept is satisfied only if a Element class provides the types and member func...</div><div class="ttdef"><b>Definition:</b> principal_curvature.h:47</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasPrincipalCurvature_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasPrincipalCurvature.html">vcl::comp::HasPrincipalCurvature</a></div><div class="ttdoc">HasPrincipalCurvature concept is satisfied only if a Element class provides the types and member func...</div><div class="ttdef"><b>Definition:</b> principal_curvature.h:50</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>HasPrincipalCurvature concept is satisfied only if a Element class provides the types and member functions specified in this concept. These types and member functions allow to access to a PrincipalCurvature component of a given element. </p>
 <p>Note that this concept does not discriminate between the Horizontal PrincipalCurvature component and the vertical OptionalPrincipalCurvature component, therefore it does not guarantee that a template Element type that satisfies this concept provides PrincipalCurvature component at runtime (it is guaranteed only that the proper member functions are available at compile time).</p>

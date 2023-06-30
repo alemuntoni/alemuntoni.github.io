@@ -1,9 +1,9 @@
 var classvcl_1_1AbstractGrid =
 [
-    [ "IsInCellFunction", "classvcl_1_1AbstractGrid.html#a5cd9d27db787880f2abc794e423e09a1", null ],
+    [ "IsInCellFunction", "classvcl_1_1AbstractGrid.html#a6bddf29ec17ccb4600d19548e0687ba0", null ],
     [ "KeyType", "classvcl_1_1AbstractGrid.html#a1a9140b7b7608308c699e7d7f617a03d", null ],
-    [ "QueryBoundedDistFunction", "classvcl_1_1AbstractGrid.html#ad4ec1efd64076a3d1760efde1a9ba341", null ],
-    [ "QueryDistFunction", "classvcl_1_1AbstractGrid.html#a15b597da5076a4e69287c96ff3e3956b", null ],
+    [ "QueryBoundedDistFunction", "classvcl_1_1AbstractGrid.html#af3105d63ad6aa895e62002eb4580aa4e", null ],
+    [ "QueryDistFunction", "classvcl_1_1AbstractGrid.html#ad9d5b06b7a4cc2491216c79485df4bfe", null ],
     [ "AbstractGrid", "classvcl_1_1AbstractGrid.html#a449b323be92655f25b8c01eaa2f74fc3", null ],
     [ "AbstractGrid", "classvcl_1_1AbstractGrid.html#a44543cf902fba3411608ef7901e80fea", null ],
     [ "AbstractGrid", "classvcl_1_1AbstractGrid.html#abc4316af60f98f45d90a1df88e6db386", null ],

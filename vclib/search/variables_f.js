@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['scalars_0',['scalars',['../namespacevcl_1_1views.html#a324013ccaa47bd22a97806d590458eda',1,'vcl::views']]],
-  ['second_1',['second',['../classvcl_1_1RefPair.html#a019772b234005207f60f6687049ce9ba',1,'vcl::RefPair::second()'],['../classvcl_1_1FirstRefPair.html#a7e2bf5473dbdc5d7a88f2d6ff76f3d6f',1,'vcl::FirstRefPair::second()'],['../classvcl_1_1SecondRefPair.html#a889485c1e54d502fd1a3b7ed5e849b7b',1,'vcl::SecondRefPair::second()']]],
-  ['selected_2',['selected',['../namespacevcl_1_1views.html#ae1a8a5b5cff2ac468a5a6620fd460bed',1,'vcl::views']]],
-  ['selection_3',['selection',['../namespacevcl_1_1views.html#a05ca39459ce3b28207ebca6127aa7f38',1,'vcl::views']]],
-  ['size_4',['SIZE',['../classvcl_1_1Vector.html#af303936623d10f51443b3b597d65d61b',1,'vcl::Vector']]],
-  ['sum_5',['sum',['../classvcl_1_1Histogram.html#acbe071457de7757759983dcb1d2e79c5',1,'vcl::Histogram']]]
+  ['r_0',['R',['../classvcl_1_1Histogram.html#a13a1144189c6b223813f07d2ce1ebc54',1,'vcl::Histogram']]],
+  ['rms_1',['rms',['../classvcl_1_1Histogram.html#adb67b71ae88f8d149851fb1da51009a0',1,'vcl::Histogram']]],
+  ['rmsdist_2',['RMSDist',['../structvcl_1_1HausdorffDistResult.html#ab93081b87e054b0d330aee1d271b8676',1,'vcl::HausdorffDistResult']]]
 ];

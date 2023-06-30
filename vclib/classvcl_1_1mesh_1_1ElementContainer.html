@@ -108,18 +108,17 @@ $(document).ready(function(){initNavTree('classvcl_1_1mesh_1_1ElementContainer.h
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="element__container_8h_source.html">vclib/mesh/containers/element_container.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="mesh_2containers_2element__container_8h_source.html">vclib/mesh/containers/element_container.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for vcl::mesh::ElementContainer&lt; T &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="classvcl_1_1mesh_1_1ElementContainer__inherit__graph.png" border="0" usemap="#avcl_1_1mesh_1_1ElementContainer_3_01T_01_4_inherit__map" alt="Inheritance graph"/></div>
 <map name="avcl_1_1mesh_1_1ElementContainer_3_01T_01_4_inherit__map" id="avcl_1_1mesh_1_1ElementContainer_3_01T_01_4_inherit__map">
-<area shape="rect" title=" " alt="" coords="264,80,512,105"/>
-<area shape="rect" href="classvcl_1_1mesh_1_1EdgeContainer.html" title="The EdgeContainer class." alt="" coords="573,5,800,31"/>
-<area shape="rect" href="classvcl_1_1mesh_1_1FaceContainer.html" title="The Face Container class, will be used when the template argument given to the Mesh is a Face." alt="" coords="575,55,798,80"/>
-<area shape="rect" href="classvcl_1_1mesh_1_1HalfEdgeContainer.html" title="The HalfEdgeContainer class." alt="" coords="560,104,813,129"/>
-<area shape="rect" href="classvcl_1_1mesh_1_1VertexContainer.html" title="The Vertex Container class, will be used when the template argument given to the Mesh is a Vertex." alt="" coords="569,153,805,179"/>
-<area shape="rect" href="classvcl_1_1mesh_1_1ElementContainerTriggerer.html" title=" " alt="" coords="5,73,216,113"/>
+<area shape="rect" title=" " alt="" coords="264,55,512,80"/>
+<area shape="rect" href="classvcl_1_1mesh_1_1EdgeContainer.html" title="The EdgeContainer class." alt="" coords="565,5,791,31"/>
+<area shape="rect" href="classvcl_1_1mesh_1_1FaceContainer.html" title="The FaceContainer class represents a container of Face elements that can be used in a Mesh class." alt="" coords="567,55,789,80"/>
+<area shape="rect" href="classvcl_1_1mesh_1_1VertexContainer.html" title="The Vertex Container class, will be used when the template argument given to the Mesh is a Vertex." alt="" coords="560,104,796,129"/>
+<area shape="rect" href="classvcl_1_1mesh_1_1ElementContainerTriggerer.html" title=" " alt="" coords="5,47,216,87"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -138,6 +137,8 @@ Collaboration diagram for vcl::mesh::ElementContainer&lt; T &gt;:</div>
 Public Types</h2></td></tr>
 <tr class="memitem:a439d35cf3111ed661407475950150717"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a439d35cf3111ed661407475950150717">ElementType</a> = T</td></tr>
 <tr class="separator:a439d35cf3111ed661407475950150717"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cca8d7baf5c7c9a4cfcdbed933b7e52"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a1cca8d7baf5c7c9a4cfcdbed933b7e52">ParentMeshType</a> = typename T::ParentMeshType</td></tr>
+<tr class="separator:a1cca8d7baf5c7c9a4cfcdbed933b7e52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -156,12 +157,8 @@ Protected Types</h2></td></tr>
 <tr class="separator:a1101a11fd791e18ebf8e5809e43a3f07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf7379ab5f861b85bc4db0bed9b3f8c4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#adf7379ab5f861b85bc4db0bed9b3f8c4">ConstElementIterator</a> = <a class="el" href="namespacevcl.html#aa909fb65065f7aa1f08e7ae17265653d">ConstElementContainerIterator</a>&lt; std::vector, T &gt;</td></tr>
 <tr class="separator:adf7379ab5f861b85bc4db0bed9b3f8c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add10b2f699e405cd97259221b2a83882"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#add10b2f699e405cd97259221b2a83882">ElementView</a> = <a class="el" href="classvcl_1_1View.html">vcl::View</a>&lt; <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a1101a11fd791e18ebf8e5809e43a3f07">ElementIterator</a> &gt;</td></tr>
-<tr class="separator:add10b2f699e405cd97259221b2a83882"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa74a63eb8aa38d31c36966b1dae34253"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#aa74a63eb8aa38d31c36966b1dae34253">ConstElementView</a> = <a class="el" href="classvcl_1_1View.html">vcl::View</a>&lt; <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#adf7379ab5f861b85bc4db0bed9b3f8c4">ConstElementIterator</a> &gt;</td></tr>
-<tr class="separator:aa74a63eb8aa38d31c36966b1dae34253"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ea97ffde51174e36c7713e3faccd6a0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a2ea97ffde51174e36c7713e3faccd6a0">vComps</a> = typename <a class="el" href="structvcl_1_1FilterTypesByCondition.html">vcl::FilterTypesByCondition</a>&lt; <a class="el" href="structvcl_1_1comp_1_1IsVerticalComponentPred.html">comp::IsVerticalComponentPred</a>, typename T::Components &gt;::type</td></tr>
-<tr class="separator:a2ea97ffde51174e36c7713e3faccd6a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3aaee87c7200cdf60f4292e510fa3c9e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a3aaee87c7200cdf60f4292e510fa3c9e">vComps</a> = typename <a class="el" href="structvcl_1_1FilterTypesByCondition.html">vcl::FilterTypesByCondition</a>&lt; <a class="el" href="structvcl_1_1comp_1_1IsVerticalComponentPred.html">comp::IsVerticalComponentPred</a>, typename T::Components &gt;::type</td></tr>
+<tr class="separator:a3aaee87c7200cdf60f4292e510fa3c9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -180,6 +177,16 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a52f64c7b9c9572ae485a3080e103081b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a52f64c7b9c9572ae485a3080e103081b">deletedElementNumber</a> () const</td></tr>
 <tr class="memdesc:a52f64c7b9c9572ae485a3080e103081b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of deleted elements in the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> container, that is <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#ae74468c859f53dec0fc644cf506f2df7" title="Returns the number of elements (also deleted) contained in the Element container of the Mesh.">elementContainerSize()</a> - <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a7bc0ff3cc6d18a8a6cfe465dc5746127" title="Returns the number of non-deleted elements contained in the Element container of the Mesh.">elementNumber()</a>.  <br /></td></tr>
 <tr class="separator:a52f64c7b9c9572ae485a3080e103081b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a294b1dedd735e089a3d72c480a650ae2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a294b1dedd735e089a3d72c480a650ae2">addElement</a> ()</td></tr>
+<tr class="separator:a294b1dedd735e089a3d72c480a650ae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f03a034a04804b976922a3a711c2fac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a0f03a034a04804b976922a3a711c2fac">addElements</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> size)</td></tr>
+<tr class="memdesc:a0f03a034a04804b976922a3a711c2fac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds size elements to the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> Container.  <br /></td></tr>
+<tr class="separator:a0f03a034a04804b976922a3a711c2fac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd2df4482e5badfcfa2ef5610cbe4e8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#abd2df4482e5badfcfa2ef5610cbe4e8a">reserveElements</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> size)</td></tr>
+<tr class="separator:abd2df4482e5badfcfa2ef5610cbe4e8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00bcc8d5e7408fc32741a154cbf10ddb"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a00bcc8d5e7408fc32741a154cbf10ddb">compactElements</a> ()</td></tr>
+<tr class="memdesc:a00bcc8d5e7408fc32741a154cbf10ddb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compacts the element container, keeping only the non-deleted elements.  <br /></td></tr>
+<tr class="separator:a00bcc8d5e7408fc32741a154cbf10ddb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51b6087d00e1fd2440621f612cc8fedb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a51b6087d00e1fd2440621f612cc8fedb">deleteElement</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i)</td></tr>
 <tr class="memdesc:a51b6087d00e1fd2440621f612cc8fedb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks as deleted the element with the given id.  <br /></td></tr>
 <tr class="separator:a51b6087d00e1fd2440621f612cc8fedb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -189,21 +196,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a8856ce22238aca28e1f62c137035b19a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a8856ce22238aca28e1f62c137035b19a">elementIndexIfCompact</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i) const</td></tr>
 <tr class="memdesc:a8856ce22238aca28e1f62c137035b19a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is an utility member function that returns the index of an element if the container would be compact, that is the number of non-deleted elements before the element with the given index.  <br /></td></tr>
 <tr class="separator:a8856ce22238aca28e1f62c137035b19a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfabadff6a06cc794b351f56cde50f55"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#adfabadff6a06cc794b351f56cde50f55">elementCompactIndices</a> () const</td></tr>
-<tr class="memdesc:adfabadff6a06cc794b351f56cde50f55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a vector that tells, for each actual element index, the new index that the element would have in a compacted container. For each deleted element index, the value of the vector will be -1.  <br /></td></tr>
-<tr class="separator:adfabadff6a06cc794b351f56cde50f55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab857aae0a9795797c08cd1e5326665b7"><td class="memTemplParams" colspan="2">template&lt;typename MeshType &gt; </td></tr>
-<tr class="memitem:ab857aae0a9795797c08cd1e5326665b7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#ab857aae0a9795797c08cd1e5326665b7">setParentMeshPointers</a> (MeshType *parentMesh)</td></tr>
-<tr class="separator:ab857aae0a9795797c08cd1e5326665b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ca53c284c1294ecce2d688476391200"><td class="memTemplParams" colspan="2">template&lt;typename C &gt; </td></tr>
-<tr class="memitem:a9ca53c284c1294ecce2d688476391200"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a9ca53c284c1294ecce2d688476391200">isOptionalComponentEnabled</a> () const</td></tr>
-<tr class="separator:a9ca53c284c1294ecce2d688476391200"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26ead4506ab757c32b3c0ab0eb3a3226"><td class="memTemplParams" colspan="2">template&lt;typename C &gt; </td></tr>
-<tr class="memitem:a26ead4506ab757c32b3c0ab0eb3a3226"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a26ead4506ab757c32b3c0ab0eb3a3226">enableOptionalComponent</a> ()</td></tr>
-<tr class="separator:a26ead4506ab757c32b3c0ab0eb3a3226"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abcf5e8c0e1e83fc9993c9e116bf51861"><td class="memTemplParams" colspan="2">template&lt;typename C &gt; </td></tr>
-<tr class="memitem:abcf5e8c0e1e83fc9993c9e116bf51861"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#abcf5e8c0e1e83fc9993c9e116bf51861">disableOptionalComponent</a> ()</td></tr>
-<tr class="separator:abcf5e8c0e1e83fc9993c9e116bf51861"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d62da412a979c0fe1c8c7373e5473e6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a3d62da412a979c0fe1c8c7373e5473e6">elementCompactIndices</a> () const</td></tr>
+<tr class="memdesc:a3d62da412a979c0fe1c8c7373e5473e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a vector that tells, for each actual element index, the new index that the element would have in a compacted container. For each deleted element index, the value of the vector will be UINT_NULL.  <br /></td></tr>
+<tr class="separator:a3d62da412a979c0fe1c8c7373e5473e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba92f2240439a6dfbcf313498114afc9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#aba92f2240439a6dfbcf313498114afc9">updateElementIndices</a> (const std::vector&lt; <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> &gt; &amp;newIndices)</td></tr>
+<tr class="memdesc:aba92f2240439a6dfbcf313498114afc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates all the indices and pointers of the elements of this container that are stored in any container of the mesh, according to the mapping stored in the newIndices vector, that tells for each old element index, the new element index.  <br /></td></tr>
+<tr class="separator:aba92f2240439a6dfbcf313498114afc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abed69ad5125e29bf8ae18a1e03ad56c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a1101a11fd791e18ebf8e5809e43a3f07">ElementIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#abed69ad5125e29bf8ae18a1e03ad56c4">elementBegin</a> (bool jumpDeleted=true)</td></tr>
 <tr class="memdesc:abed69ad5125e29bf8ae18a1e03ad56c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterator to the beginning of the container.  <br /></td></tr>
 <tr class="separator:abed69ad5125e29bf8ae18a1e03ad56c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -216,57 +214,97 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a89991fdaf6ccb4dccfab96a6c7cda6fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#adf7379ab5f861b85bc4db0bed9b3f8c4">ConstElementIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a89991fdaf6ccb4dccfab96a6c7cda6fd">elementEnd</a> () const</td></tr>
 <tr class="memdesc:a89991fdaf6ccb4dccfab96a6c7cda6fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const iterator to the end of the container.  <br /></td></tr>
 <tr class="separator:a89991fdaf6ccb4dccfab96a6c7cda6fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8d2a1902a10fbfbf4a4d036a505ca6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#add10b2f699e405cd97259221b2a83882">ElementView</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#ab8d2a1902a10fbfbf4a4d036a505ca6c">elements</a> (bool jumpDeleted=true)</td></tr>
-<tr class="memdesc:ab8d2a1902a10fbfbf4a4d036a505ca6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a small utility object that allows to iterate over the elements of the containers, providing two member functions begin() and end().  <br /></td></tr>
-<tr class="separator:ab8d2a1902a10fbfbf4a4d036a505ca6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d223a84acfb690c297dca63aeac40fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#aa74a63eb8aa38d31c36966b1dae34253">ConstElementView</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a0d223a84acfb690c297dca63aeac40fe">elements</a> (bool jumpDeleted=true) const</td></tr>
-<tr class="memdesc:a0d223a84acfb690c297dca63aeac40fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a small utility object that allows to iterate over the elements of the containers, providing two member functions begin() and end().  <br /></td></tr>
-<tr class="separator:a0d223a84acfb690c297dca63aeac40fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a876a7bd546742b8d3e1385a14e02da56"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a876a7bd546742b8d3e1385a14e02da56">elements</a> (bool jumpDeleted=true)</td></tr>
+<tr class="memdesc:a876a7bd546742b8d3e1385a14e02da56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a view object that allows to iterate over the elements of the containers, providing two member functions begin() and end().  <br /></td></tr>
+<tr class="separator:a876a7bd546742b8d3e1385a14e02da56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73d4ba4eec441f3a99c4d767d66b7694"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a73d4ba4eec441f3a99c4d767d66b7694">elements</a> (bool jumpDeleted=true) const</td></tr>
+<tr class="memdesc:a73d4ba4eec441f3a99c4d767d66b7694"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a view object that allows to iterate over the elements of the containers, providing two member functions begin() and end().  <br /></td></tr>
+<tr class="separator:a73d4ba4eec441f3a99c4d767d66b7694"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ae3378ddf71a5ebb10ddb44a8523cac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a9ae3378ddf71a5ebb10ddb44a8523cac">enableAllOptionalComponents</a> ()</td></tr>
+<tr class="separator:a9ae3378ddf71a5ebb10ddb44a8523cac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae476d4e4d77db94e4461b16276fe8de7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#ae476d4e4d77db94e4461b16276fe8de7">disableAllOptionalComponents</a> ()</td></tr>
+<tr class="separator:ae476d4e4d77db94e4461b16276fe8de7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ca53c284c1294ecce2d688476391200"><td class="memTemplParams" colspan="2">template&lt;typename C &gt; </td></tr>
+<tr class="memitem:a9ca53c284c1294ecce2d688476391200"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a9ca53c284c1294ecce2d688476391200">isOptionalComponentEnabled</a> () const</td></tr>
+<tr class="separator:a9ca53c284c1294ecce2d688476391200"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ca53c284c1294ecce2d688476391200"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> COMP_TYPE&gt; </td></tr>
+<tr class="memitem:a9ca53c284c1294ecce2d688476391200"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a9ca53c284c1294ecce2d688476391200">isOptionalComponentEnabled</a> () const</td></tr>
+<tr class="separator:a9ca53c284c1294ecce2d688476391200"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26ead4506ab757c32b3c0ab0eb3a3226"><td class="memTemplParams" colspan="2">template&lt;typename C &gt; </td></tr>
+<tr class="memitem:a26ead4506ab757c32b3c0ab0eb3a3226"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a26ead4506ab757c32b3c0ab0eb3a3226">enableOptionalComponent</a> ()</td></tr>
+<tr class="separator:a26ead4506ab757c32b3c0ab0eb3a3226"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26ead4506ab757c32b3c0ab0eb3a3226"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> COMP_TYPE&gt; </td></tr>
+<tr class="memitem:a26ead4506ab757c32b3c0ab0eb3a3226"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a26ead4506ab757c32b3c0ab0eb3a3226">enableOptionalComponent</a> ()</td></tr>
+<tr class="separator:a26ead4506ab757c32b3c0ab0eb3a3226"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcf5e8c0e1e83fc9993c9e116bf51861"><td class="memTemplParams" colspan="2">template&lt;typename C &gt; </td></tr>
+<tr class="memitem:abcf5e8c0e1e83fc9993c9e116bf51861"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#abcf5e8c0e1e83fc9993c9e116bf51861">disableOptionalComponent</a> ()</td></tr>
+<tr class="separator:abcf5e8c0e1e83fc9993c9e116bf51861"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcf5e8c0e1e83fc9993c9e116bf51861"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> COMP_TYPE&gt; </td></tr>
+<tr class="memitem:abcf5e8c0e1e83fc9993c9e116bf51861"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#abcf5e8c0e1e83fc9993c9e116bf51861">disableOptionalComponent</a> ()</td></tr>
+<tr class="separator:abcf5e8c0e1e83fc9993c9e116bf51861"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa47aa148fcba12f82aa354a4bb29c2a2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#aa47aa148fcba12f82aa354a4bb29c2a2">hasElemCustomComponent</a> (const std::string &amp;name) const</td></tr>
+<tr class="separator:aa47aa148fcba12f82aa354a4bb29c2a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34c6858dea60af1d351dca729f567073"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a34c6858dea60af1d351dca729f567073">elemCustomComponentNames</a> () const</td></tr>
+<tr class="separator:a34c6858dea60af1d351dca729f567073"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecb59466bc496d8ff768c6c7e1c01264"><td class="memTemplParams" colspan="2">template&lt;typename K &gt; <br />
+requires comp::HasCustomComponents&lt;T&gt;</td></tr>
+<tr class="memitem:aecb59466bc496d8ff768c6c7e1c01264"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#aecb59466bc496d8ff768c6c7e1c01264">isElemCustomComponentOfType</a> (const std::string &amp;name) const</td></tr>
+<tr class="separator:aecb59466bc496d8ff768c6c7e1c01264"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af61c581b040ffbe571b3398d22dff212"><td class="memItemLeft" align="right" valign="top">std::type_index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#af61c581b040ffbe571b3398d22dff212">elemComponentType</a> (const std::string &amp;name) const</td></tr>
+<tr class="separator:af61c581b040ffbe571b3398d22dff212"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3066bfb16da770b732805dd83cd2a6f9"><td class="memTemplParams" colspan="2">template&lt;typename K &gt; <br />
+requires comp::HasCustomComponents&lt;T&gt;</td></tr>
+<tr class="memitem:a3066bfb16da770b732805dd83cd2a6f9"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a3066bfb16da770b732805dd83cd2a6f9">elemCustomComponentNamesOfType</a> () const</td></tr>
+<tr class="separator:a3066bfb16da770b732805dd83cd2a6f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f87f3554eba97c947ce00edf57fa0b6"><td class="memTemplParams" colspan="2">template&lt;typename K &gt; <br />
+requires comp::HasCustomComponents&lt;T&gt;</td></tr>
+<tr class="memitem:a0f87f3554eba97c947ce00edf57fa0b6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a0f87f3554eba97c947ce00edf57fa0b6">addElemCustomComponent</a> (const std::string &amp;name)</td></tr>
+<tr class="separator:a0f87f3554eba97c947ce00edf57fa0b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0245a7527b3b581592b9a64299dfb0f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a0245a7527b3b581592b9a64299dfb0f6">deleteElemCustomComponent</a> (const std::string &amp;name)</td></tr>
+<tr class="separator:a0245a7527b3b581592b9a64299dfb0f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f2c207b13511825a433bcfc82b8ac00"><td class="memTemplParams" colspan="2">template&lt;typename K &gt; <br />
+requires comp::HasCustomComponents&lt;T&gt;</td></tr>
+<tr class="memitem:a3f2c207b13511825a433bcfc82b8ac00"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1CustomComponentVectorHandle.html">CustomComponentVectorHandle</a>&lt; K &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a3f2c207b13511825a433bcfc82b8ac00">customComponentVectorHandle</a> (const std::string &amp;name)</td></tr>
+<tr class="separator:a3f2c207b13511825a433bcfc82b8ac00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbc4fafd51cffd37bdf776bb3fb49be2"><td class="memTemplParams" colspan="2">template&lt;typename K &gt; <br />
+requires comp::HasCustomComponents&lt;T&gt;</td></tr>
+<tr class="memitem:adbc4fafd51cffd37bdf776bb3fb49be2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacevcl.html#ae166b0242a891e25bde6507bf6776730">ConstCustomComponentVectorHandle</a>&lt; K &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#adbc4fafd51cffd37bdf776bb3fb49be2">customComponentVectorHandle</a> (const std::string &amp;name) const</td></tr>
+<tr class="separator:adbc4fafd51cffd37bdf776bb3fb49be2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79770acc81530859f445e87bee4a6cde"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a79770acc81530859f445e87bee4a6cde">index</a> (const T *e) const</td></tr>
 <tr class="separator:a79770acc81530859f445e87bee4a6cde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9b0d6aca68d8e1bbb7b459f17f4b0db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#ac9b0d6aca68d8e1bbb7b459f17f4b0db">setParentMeshPointers</a> (void *pm)</td></tr>
+<tr class="separator:ac9b0d6aca68d8e1bbb7b459f17f4b0db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c335e98f4ef5301814df4c43fa3a18f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a9c335e98f4ef5301814df4c43fa3a18f">clearElements</a> ()</td></tr>
 <tr class="separator:a9c335e98f4ef5301814df4c43fa3a18f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5ebd3aa8edf104debcc5d3f728b86f2"><td class="memTemplParams" colspan="2">template&lt;typename MeshType &gt; </td></tr>
-<tr class="memitem:af5ebd3aa8edf104debcc5d3f728b86f2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#af5ebd3aa8edf104debcc5d3f728b86f2">addElement</a> (MeshType *parentMesh)</td></tr>
-<tr class="separator:af5ebd3aa8edf104debcc5d3f728b86f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f1ffc558428b401fe7199281eb9e322"><td class="memTemplParams" colspan="2">template&lt;typename MeshType &gt; </td></tr>
-<tr class="memitem:a5f1ffc558428b401fe7199281eb9e322"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a5f1ffc558428b401fe7199281eb9e322">addElements</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> size, MeshType *parentMesh)</td></tr>
-<tr class="memdesc:a5f1ffc558428b401fe7199281eb9e322"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds size elements to the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> Container.  <br /></td></tr>
-<tr class="separator:a5f1ffc558428b401fe7199281eb9e322"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61c0911b54c061a22b4f3de12a8883d6"><td class="memTemplParams" colspan="2">template&lt;typename MeshType &gt; </td></tr>
-<tr class="memitem:a61c0911b54c061a22b4f3de12a8883d6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a61c0911b54c061a22b4f3de12a8883d6">reserveElements</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> size, MeshType *parentMesh)</td></tr>
-<tr class="separator:a61c0911b54c061a22b4f3de12a8883d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c4a72827123604cb74f0ffe5cc425db"><td class="memTemplParams" colspan="2">template&lt;typename MeshType &gt; </td></tr>
-<tr class="memitem:a4c4a72827123604cb74f0ffe5cc425db"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a4c4a72827123604cb74f0ffe5cc425db">resizeElements</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> size, MeshType *parentMesh)</td></tr>
-<tr class="separator:a4c4a72827123604cb74f0ffe5cc425db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a691f7496cbf350d3183c039ff4f8c0d4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a691f7496cbf350d3183c039ff4f8c0d4">compactElements</a> ()</td></tr>
-<tr class="memdesc:a691f7496cbf350d3183c039ff4f8c0d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compacts the element container, keeping only the non-deleted elements.  <br /></td></tr>
-<tr class="separator:a691f7496cbf350d3183c039ff4f8c0d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57b96bd077a0fa254793dc737a7a5d5f"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="classvcl_1_1Element.html">Element</a> &gt; </td></tr>
-<tr class="memitem:a57b96bd077a0fa254793dc737a7a5d5f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a57b96bd077a0fa254793dc737a7a5d5f">updateReferences</a> (const <a class="el" href="classvcl_1_1Element.html">Element</a> *oldBase, const <a class="el" href="classvcl_1_1Element.html">Element</a> *newBase)</td></tr>
-<tr class="separator:a57b96bd077a0fa254793dc737a7a5d5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a196ec8cae631ccc7dd931d495cb33178"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="classvcl_1_1Element.html">Element</a> &gt; </td></tr>
-<tr class="memitem:a196ec8cae631ccc7dd931d495cb33178"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a196ec8cae631ccc7dd931d495cb33178">updateReferencesAfterCompact</a> (const <a class="el" href="classvcl_1_1Element.html">Element</a> *base, const std::vector&lt; int &gt; &amp;newIndices)</td></tr>
-<tr class="separator:a196ec8cae631ccc7dd931d495cb33178"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26eaba74690829f3c96ba8a54d83aa1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a26eaba74690829f3c96ba8a54d83aa1a">resizeElements</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> size)</td></tr>
+<tr class="separator:a26eaba74690829f3c96ba8a54d83aa1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a061338168b2e02f507073369ce5b5d6d"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="classvcl_1_1Element.html">Element</a> &gt; </td></tr>
+<tr class="memitem:a061338168b2e02f507073369ce5b5d6d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a061338168b2e02f507073369ce5b5d6d">updatePointers</a> (const <a class="el" href="classvcl_1_1Element.html">Element</a> *oldBase, const <a class="el" href="classvcl_1_1Element.html">Element</a> *newBase)</td></tr>
+<tr class="separator:a061338168b2e02f507073369ce5b5d6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5e3cb8a298da0a2918abe66481c8435"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="classvcl_1_1Element.html">Element</a> &gt; </td></tr>
+<tr class="memitem:ac5e3cb8a298da0a2918abe66481c8435"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#ac5e3cb8a298da0a2918abe66481c8435">updatePointers</a> (const <a class="el" href="classvcl_1_1Element.html">Element</a> *base, const std::vector&lt; <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> &gt; &amp;newIndices)</td></tr>
+<tr class="separator:ac5e3cb8a298da0a2918abe66481c8435"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab8bfb9044b727f8033320c0295554d2"><td class="memTemplParams" colspan="2">template&lt;typename OtherMesh &gt; </td></tr>
 <tr class="memitem:aab8bfb9044b727f8033320c0295554d2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#aab8bfb9044b727f8033320c0295554d2">enableOptionalComponentsOf</a> (const OtherMesh &amp;m)</td></tr>
 <tr class="separator:aab8bfb9044b727f8033320c0295554d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7ceb1c3c777c0619ff48934c74ae0b5"><td class="memTemplParams" colspan="2">template&lt;typename OtherMesh , typename ParentMeshType &gt; </td></tr>
-<tr class="memitem:ab7ceb1c3c777c0619ff48934c74ae0b5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#ab7ceb1c3c777c0619ff48934c74ae0b5">importFrom</a> (const OtherMesh &amp;m, ParentMeshType *parent)</td></tr>
-<tr class="separator:ab7ceb1c3c777c0619ff48934c74ae0b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a1de27019bca8211713015cdd2262cc"><td class="memTemplParams" colspan="2">template&lt;typename OtherMesh , typename ElRefBase &gt; </td></tr>
-<tr class="memitem:a5a1de27019bca8211713015cdd2262cc"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a5a1de27019bca8211713015cdd2262cc">importReferencesFrom</a> (const OtherMesh &amp;othMesh, ElRefBase *base)</td></tr>
-<tr class="separator:a5a1de27019bca8211713015cdd2262cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5acdbc26f5ed2e36bf74efbdc6bd7fa"><td class="memTemplParams" colspan="2">template&lt;typename OtherMesh &gt; </td></tr>
+<tr class="memitem:af5acdbc26f5ed2e36bf74efbdc6bd7fa"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#af5acdbc26f5ed2e36bf74efbdc6bd7fa">importFrom</a> (const OtherMesh &amp;m)</td></tr>
+<tr class="separator:af5acdbc26f5ed2e36bf74efbdc6bd7fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adebcde228347516e29bf9fc7ccd74618"><td class="memTemplParams" colspan="2">template&lt;typename OtherMesh , typename ElPtrBase &gt; </td></tr>
+<tr class="memitem:adebcde228347516e29bf9fc7ccd74618"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#adebcde228347516e29bf9fc7ccd74618">importPointersFrom</a> (const OtherMesh &amp;othMesh, ElPtrBase *base)</td></tr>
+<tr class="separator:adebcde228347516e29bf9fc7ccd74618"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
+<tr class="memitem:abd23d4829371e7669641d3ec3bbced06"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a1cca8d7baf5c7c9a4cfcdbed933b7e52">ParentMeshType</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#abd23d4829371e7669641d3ec3bbced06">parentMesh</a> = nullptr</td></tr>
+<tr class="separator:abd23d4829371e7669641d3ec3bbced06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0a3a56c1be830dc5fd940468088ca9a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#aa0a3a56c1be830dc5fd940468088ca9a">en</a> = 0</td></tr>
 <tr class="memdesc:aa0a3a56c1be830dc5fd940468088ca9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">en: the number of elements in the container. Could be different from elements.size() due to elements marked as deleted into the container.  <br /></td></tr>
 <tr class="separator:aa0a3a56c1be830dc5fd940468088ca9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae64a8b2b796eb1f8ad98a1385e5cf06c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#ae64a8b2b796eb1f8ad98a1385e5cf06c">vec</a></td></tr>
 <tr class="memdesc:ae64a8b2b796eb1f8ad98a1385e5cf06c"><td class="mdescLeft">&#160;</td><td class="mdescRight">vec: the vector of elements: will contain the set of elements, each one of these will contain the data of the horizontal components and a pointer to the parent mesh  <br /></td></tr>
 <tr class="separator:ae64a8b2b796eb1f8ad98a1385e5cf06c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bf8c16614ed9f138496a4480a7f10fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1mesh_1_1VerticalComponentsVectorTuple.html">VerticalComponentsVectorTuple</a>&lt; <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a2ea97ffde51174e36c7713e3faccd6a0">vComps</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a4bf8c16614ed9f138496a4480a7f10fe">vcVecTuple</a></td></tr>
+<tr class="memitem:a4bf8c16614ed9f138496a4480a7f10fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1mesh_1_1VerticalComponentsVectorTuple.html">VerticalComponentsVectorTuple</a>&lt; <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a3aaee87c7200cdf60f4292e510fa3c9e">vComps</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a4bf8c16614ed9f138496a4480a7f10fe">vcVecTuple</a></td></tr>
 <tr class="memdesc:a4bf8c16614ed9f138496a4480a7f10fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">vcVecTuple the tuple of vectors of all the vertical components of the element. Contains both the optional and the persistent vertical components  <br /></td></tr>
 <tr class="separator:a4bf8c16614ed9f138496a4480a7f10fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e3d08b2615ed2e340e6b2e524f18ae3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap.html">CustomComponentsVectorMap</a>&lt; T, comp::HasCustomComponents&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a8e3d08b2615ed2e340e6b2e524f18ae3">ccVecMap</a></td></tr>
@@ -293,30 +331,6 @@ template&lt;ElementConcept T&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">using <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::ConstElementIterator =  <a class="el" href="namespacevcl.html#aa909fb65065f7aa1f08e7ae17265653d">ConstElementContainerIterator</a>&lt;std::vector, T&gt;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa74a63eb8aa38d31c36966b1dae34253" name="aa74a63eb8aa38d31c36966b1dae34253"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa74a63eb8aa38d31c36966b1dae34253">&#9670;&#160;</a></span>ConstElementView</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;ElementConcept T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::ConstElementView =  <a class="el" href="classvcl_1_1View.html">vcl::View</a>&lt;<a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#adf7379ab5f861b85bc4db0bed9b3f8c4">ConstElementIterator</a>&gt;</td>
         </tr>
       </table>
   </td>
@@ -368,32 +382,24 @@ template&lt;ElementConcept T&gt; </div>
 
 </div>
 </div>
-<a id="add10b2f699e405cd97259221b2a83882" name="add10b2f699e405cd97259221b2a83882"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#add10b2f699e405cd97259221b2a83882">&#9670;&#160;</a></span>ElementView</h2>
+<a id="a1cca8d7baf5c7c9a4cfcdbed933b7e52" name="a1cca8d7baf5c7c9a4cfcdbed933b7e52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cca8d7baf5c7c9a4cfcdbed933b7e52">&#9670;&#160;</a></span>ParentMeshType</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;ElementConcept T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::ElementView =  <a class="el" href="classvcl_1_1View.html">vcl::View</a>&lt;<a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a1101a11fd791e18ebf8e5809e43a3f07">ElementIterator</a>&gt;</td>
+          <td class="memname">using <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::ParentMeshType =  typename T::ParentMeshType</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a2ea97ffde51174e36c7713e3faccd6a0" name="a2ea97ffde51174e36c7713e3faccd6a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2ea97ffde51174e36c7713e3faccd6a0">&#9670;&#160;</a></span>vComps</h2>
+<a id="a3aaee87c7200cdf60f4292e510fa3c9e" name="a3aaee87c7200cdf60f4292e510fa3c9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3aaee87c7200cdf60f4292e510fa3c9e">&#9670;&#160;</a></span>vComps</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -404,7 +410,7 @@ template&lt;ElementConcept T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::vComps =  typename <a class="el" href="structvcl_1_1FilterTypesByCondition.html">vcl::FilterTypesByCondition</a>&lt;<a class="el" href="structvcl_1_1comp_1_1IsVerticalComponentPred.html">comp::IsVerticalComponentPred</a>, typename T::Components&gt;::type</td>
+          <td class="memname">using <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::vComps =  typename <a class="el" href="structvcl_1_1FilterTypesByCondition.html">vcl::FilterTypesByCondition</a>&lt; <a class="el" href="structvcl_1_1comp_1_1IsVerticalComponentPred.html">comp::IsVerticalComponentPred</a>, typename T::Components&gt;::type</td>
         </tr>
       </table>
   </td>
@@ -424,19 +430,11 @@ template&lt;ElementConcept T&gt; </div>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;ElementConcept T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::ElementContainer</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Empty constructor that creates an empty container of Elements. </p>
@@ -444,24 +442,26 @@ template&lt;ElementConcept T&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="af5ebd3aa8edf104debcc5d3f728b86f2" name="af5ebd3aa8edf104debcc5d3f728b86f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5ebd3aa8edf104debcc5d3f728b86f2">&#9670;&#160;</a></span>addElement()</h2>
+<a id="a0f87f3554eba97c947ce00edf57fa0b6" name="a0f87f3554eba97c947ce00edf57fa0b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f87f3554eba97c947ce00edf57fa0b6">&#9670;&#160;</a></span>addElemCustomComponent()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;ElementConcept T&gt; </div>
+template&lt;ElementConcept T&gt; <br />
+requires comp::HasCustomComponents&lt;T&gt;</div>
 <div class="memtemplate">
-template&lt;typename MeshType &gt; </div>
+template&lt;typename K &gt; <br />
+requires comp::HasCustomComponents&lt;T&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::addElement </td>
+          <td class="memname">void <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::addElemCustomComponent </td>
           <td>(</td>
-          <td class="paramtype">MeshType *&#160;</td>
-          <td class="paramname"><em>parentMesh</em></td><td>)</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -474,15 +474,37 @@ template&lt;typename MeshType &gt; </div>
 
 </div>
 </div>
-<a id="a5f1ffc558428b401fe7199281eb9e322" name="a5f1ffc558428b401fe7199281eb9e322"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f1ffc558428b401fe7199281eb9e322">&#9670;&#160;</a></span>addElements()</h2>
+<a id="a294b1dedd735e089a3d72c480a650ae2" name="a294b1dedd735e089a3d72c480a650ae2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a294b1dedd735e089a3d72c480a650ae2">&#9670;&#160;</a></span>addElement()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;ElementConcept T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::addElement</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0f03a034a04804b976922a3a711c2fac" name="a0f03a034a04804b976922a3a711c2fac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f03a034a04804b976922a3a711c2fac">&#9670;&#160;</a></span>addElements()</h2>
+
+<div class="memitem">
+<div class="memproto">
 <div class="memtemplate">
-template&lt;typename MeshType &gt; </div>
+template&lt;ElementConcept T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -491,18 +513,8 @@ template&lt;typename MeshType &gt; </div>
           <td class="memname"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::addElements </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td>
-          <td class="paramname"><em>size</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>size</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">MeshType *&#160;</td>
-          <td class="paramname"><em>parentMesh</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -548,8 +560,8 @@ template&lt;ElementConcept T&gt; </div>
 
 </div>
 </div>
-<a id="a691f7496cbf350d3183c039ff4f8c0d4" name="a691f7496cbf350d3183c039ff4f8c0d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a691f7496cbf350d3183c039ff4f8c0d4">&#9670;&#160;</a></span>compactElements()</h2>
+<a id="a00bcc8d5e7408fc32741a154cbf10ddb" name="a00bcc8d5e7408fc32741a154cbf10ddb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00bcc8d5e7408fc32741a154cbf10ddb">&#9670;&#160;</a></span>compactElements()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -560,7 +572,7 @@ template&lt;ElementConcept T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; int &gt; <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::compactElements</td>
+          <td class="memname">std::vector&lt; <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> &gt; <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::compactElements</td>
         </tr>
       </table>
   </td>
@@ -571,7 +583,71 @@ template&lt;ElementConcept T&gt; </div>
 </div><div class="memdoc">
 
 <p>Compacts the element container, keeping only the non-deleted elements. </p>
-<dl class="section return"><dt>Returns</dt><dd>a vector that tells, for each old element index, the new index of the element. Will contain -1 if the element has been deleted. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a vector that tells, for each old element index, the new index of the element. Will contain UINT_NULL if the element has been deleted. </dd></dl>
+
+</div>
+</div>
+<a id="a3f2c207b13511825a433bcfc82b8ac00" name="a3f2c207b13511825a433bcfc82b8ac00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f2c207b13511825a433bcfc82b8ac00">&#9670;&#160;</a></span>customComponentVectorHandle() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;ElementConcept T&gt; <br />
+requires comp::HasCustomComponents&lt;T&gt;</div>
+<div class="memtemplate">
+template&lt;typename K &gt; <br />
+requires comp::HasCustomComponents&lt;T&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1CustomComponentVectorHandle.html">CustomComponentVectorHandle</a>&lt; K &gt; <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::customComponentVectorHandle </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adbc4fafd51cffd37bdf776bb3fb49be2" name="adbc4fafd51cffd37bdf776bb3fb49be2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbc4fafd51cffd37bdf776bb3fb49be2">&#9670;&#160;</a></span>customComponentVectorHandle() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;ElementConcept T&gt; <br />
+requires comp::HasCustomComponents&lt;T&gt;</div>
+<div class="memtemplate">
+template&lt;typename K &gt; <br />
+requires comp::HasCustomComponents&lt;T&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacevcl.html#ae166b0242a891e25bde6507bf6776730">ConstCustomComponentVectorHandle</a>&lt; K &gt; <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::customComponentVectorHandle </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -592,13 +668,42 @@ template&lt;ElementConcept T&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Returns the number of deleted elements in the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> container, that is <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#ae74468c859f53dec0fc644cf506f2df7" title="Returns the number of elements (also deleted) contained in the Element container of the Mesh.">elementContainerSize()</a> - <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a7bc0ff3cc6d18a8a6cfe465dc5746127" title="Returns the number of non-deleted elements contained in the Element container of the Mesh.">elementNumber()</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>The number of deleted elements in the container. </dd></dl>
+
+</div>
+</div>
+<a id="a0245a7527b3b581592b9a64299dfb0f6" name="a0245a7527b3b581592b9a64299dfb0f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0245a7527b3b581592b9a64299dfb0f6">&#9670;&#160;</a></span>deleteElemCustomComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;ElementConcept T&gt; <br />
+requires comp::HasCustomComponents&lt;T&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::deleteElemCustomComponent </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -678,21 +783,155 @@ template&lt;ElementConcept T&gt; </div>
 
 </div>
 </div>
+<a id="ae476d4e4d77db94e4461b16276fe8de7" name="ae476d4e4d77db94e4461b16276fe8de7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae476d4e4d77db94e4461b16276fe8de7">&#9670;&#160;</a></span>disableAllOptionalComponents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;ElementConcept T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::disableAllOptionalComponents</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="abcf5e8c0e1e83fc9993c9e116bf51861" name="abcf5e8c0e1e83fc9993c9e116bf51861"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abcf5e8c0e1e83fc9993c9e116bf51861">&#9670;&#160;</a></span>disableOptionalComponent()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abcf5e8c0e1e83fc9993c9e116bf51861">&#9670;&#160;</a></span>disableOptionalComponent() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;ElementConcept T&gt; </div>
 <div class="memtemplate">
-template&lt;typename C &gt; </div>
+template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> COMP_TYPE&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::disableOptionalComponent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abcf5e8c0e1e83fc9993c9e116bf51861" name="abcf5e8c0e1e83fc9993c9e116bf51861"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcf5e8c0e1e83fc9993c9e116bf51861">&#9670;&#160;</a></span>disableOptionalComponent() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;ElementConcept T&gt; </div>
+<div class="memtemplate">
+template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> COMP_TYPE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::disableOptionalComponent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af61c581b040ffbe571b3398d22dff212" name="af61c581b040ffbe571b3398d22dff212"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af61c581b040ffbe571b3398d22dff212">&#9670;&#160;</a></span>elemComponentType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;ElementConcept T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::type_index <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::elemComponentType </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a34c6858dea60af1d351dca729f567073" name="a34c6858dea60af1d351dca729f567073"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34c6858dea60af1d351dca729f567073">&#9670;&#160;</a></span>elemCustomComponentNames()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;ElementConcept T&gt; <br />
+requires comp::HasCustomComponents&lt;T&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::elemCustomComponentNames</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3066bfb16da770b732805dd83cd2a6f9" name="a3066bfb16da770b732805dd83cd2a6f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3066bfb16da770b732805dd83cd2a6f9">&#9670;&#160;</a></span>elemCustomComponentNamesOfType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;ElementConcept T&gt; <br />
+requires comp::HasCustomComponents&lt;T&gt;</div>
+<div class="memtemplate">
+template&lt;typename K &gt; <br />
+requires comp::HasCustomComponents&lt;T&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::elemCustomComponentNamesOfType</td>
         </tr>
       </table>
   </td>
@@ -725,7 +964,7 @@ template&lt;ElementConcept T&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -762,7 +1001,7 @@ template&lt;ElementConcept T&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -854,8 +1093,8 @@ template&lt;ElementConcept T&gt; </div>
 
 </div>
 </div>
-<a id="adfabadff6a06cc794b351f56cde50f55" name="adfabadff6a06cc794b351f56cde50f55"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adfabadff6a06cc794b351f56cde50f55">&#9670;&#160;</a></span>elementCompactIndices()</h2>
+<a id="a3d62da412a979c0fe1c8c7373e5473e6" name="a3d62da412a979c0fe1c8c7373e5473e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d62da412a979c0fe1c8c7373e5473e6">&#9670;&#160;</a></span>elementCompactIndices()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -866,7 +1105,7 @@ template&lt;ElementConcept T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; int &gt; <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::elementCompactIndices</td>
+          <td class="memname">std::vector&lt; <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> &gt; <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::elementCompactIndices</td>
         </tr>
       </table>
   </td>
@@ -876,7 +1115,7 @@ template&lt;ElementConcept T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a vector that tells, for each actual element index, the new index that the element would have in a compacted container. For each deleted element index, the value of the vector will be -1. </p>
+<p>Returns a vector that tells, for each actual element index, the new index that the element would have in a compacted container. For each deleted element index, the value of the vector will be UINT_NULL. </p>
 <p>This is useful if you need to know the indices of the elements that they would have in a compact container, without considering the deleted ones.</p>
 <dl class="section return"><dt>Returns</dt><dd>A vector containing, for each element index, its index if the container would be compact. </dd></dl>
 
@@ -899,7 +1138,7 @@ template&lt;ElementConcept T&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1020,7 +1259,7 @@ template&lt;ElementConcept T&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1031,8 +1270,8 @@ template&lt;ElementConcept T&gt; </div>
 
 </div>
 </div>
-<a id="ab8d2a1902a10fbfbf4a4d036a505ca6c" name="ab8d2a1902a10fbfbf4a4d036a505ca6c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab8d2a1902a10fbfbf4a4d036a505ca6c">&#9670;&#160;</a></span>elements() <span class="overload">[1/2]</span></h2>
+<a id="a876a7bd546742b8d3e1385a14e02da56" name="a876a7bd546742b8d3e1385a14e02da56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a876a7bd546742b8d3e1385a14e02da56">&#9670;&#160;</a></span>elements() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1043,7 +1282,7 @@ template&lt;ElementConcept T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">ElementContainer</a>&lt; T &gt;<a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#add10b2f699e405cd97259221b2a83882">::ElementView</a> <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::elements </td>
+          <td class="memname">auto <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::elements </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>jumpDeleted</em> = <code>true</code></td><td>)</td>
@@ -1057,7 +1296,7 @@ template&lt;ElementConcept T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a small utility object that allows to iterate over the elements of the containers, providing two member functions begin() and end(). </p>
+<p>Returns a view object that allows to iterate over the elements of the containers, providing two member functions begin() and end(). </p>
 <p>This member function is very useful when you want to iterate over the elements using the C++ foreach syntax:</p>
 <div class="fragment"><div class="line"><span class="keywordflow">for</span> (<a class="code hl_class" href="classvcl_1_1Element.html">Element</a>&amp; f : m.elements()){</div>
 <div class="line">    <span class="comment">// do something with this element</span></div>
@@ -1074,8 +1313,8 @@ template&lt;ElementConcept T&gt; </div>
 
 </div>
 </div>
-<a id="a0d223a84acfb690c297dca63aeac40fe" name="a0d223a84acfb690c297dca63aeac40fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d223a84acfb690c297dca63aeac40fe">&#9670;&#160;</a></span>elements() <span class="overload">[2/2]</span></h2>
+<a id="a73d4ba4eec441f3a99c4d767d66b7694" name="a73d4ba4eec441f3a99c4d767d66b7694"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73d4ba4eec441f3a99c4d767d66b7694">&#9670;&#160;</a></span>elements() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1086,7 +1325,7 @@ template&lt;ElementConcept T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">ElementContainer</a>&lt; T &gt;<a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#aa74a63eb8aa38d31c36966b1dae34253">::ConstElementView</a> <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::elements </td>
+          <td class="memname">auto <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::elements </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>jumpDeleted</em> = <code>true</code></td><td>)</td>
@@ -1100,7 +1339,7 @@ template&lt;ElementConcept T&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Returns a small utility object that allows to iterate over the elements of the containers, providing two member functions begin() and end(). </p>
+<p>Returns a view object that allows to iterate over the elements of the containers, providing two member functions begin() and end(). </p>
 <p>This member function is very useful when you want to iterate over the elements using the C++ foreach syntax:</p>
 <div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Element.html">Element</a>&amp; f : m.elements()){</div>
 <div class="line">    <span class="comment">// do something with this element</span></div>
@@ -1116,21 +1355,74 @@ template&lt;ElementConcept T&gt; </div>
 
 </div>
 </div>
+<a id="a9ae3378ddf71a5ebb10ddb44a8523cac" name="a9ae3378ddf71a5ebb10ddb44a8523cac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ae3378ddf71a5ebb10ddb44a8523cac">&#9670;&#160;</a></span>enableAllOptionalComponents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;ElementConcept T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::enableAllOptionalComponents</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a26ead4506ab757c32b3c0ab0eb3a3226" name="a26ead4506ab757c32b3c0ab0eb3a3226"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26ead4506ab757c32b3c0ab0eb3a3226">&#9670;&#160;</a></span>enableOptionalComponent()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a26ead4506ab757c32b3c0ab0eb3a3226">&#9670;&#160;</a></span>enableOptionalComponent() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;ElementConcept T&gt; </div>
 <div class="memtemplate">
-template&lt;typename C &gt; </div>
+template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> COMP_TYPE&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::enableOptionalComponent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a26ead4506ab757c32b3c0ab0eb3a3226" name="a26ead4506ab757c32b3c0ab0eb3a3226"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26ead4506ab757c32b3c0ab0eb3a3226">&#9670;&#160;</a></span>enableOptionalComponent() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;ElementConcept T&gt; </div>
+<div class="memtemplate">
+template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> COMP_TYPE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::enableOptionalComponent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -1172,35 +1464,24 @@ template&lt;typename OtherMesh &gt; </div>
 
 </div>
 </div>
-<a id="ab7ceb1c3c777c0619ff48934c74ae0b5" name="ab7ceb1c3c777c0619ff48934c74ae0b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7ceb1c3c777c0619ff48934c74ae0b5">&#9670;&#160;</a></span>importFrom()</h2>
+<a id="aa47aa148fcba12f82aa354a4bb29c2a2" name="aa47aa148fcba12f82aa354a4bb29c2a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa47aa148fcba12f82aa354a4bb29c2a2">&#9670;&#160;</a></span>hasElemCustomComponent()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;ElementConcept T&gt; </div>
-<div class="memtemplate">
-template&lt;typename OtherMesh , typename ParentMeshType &gt; </div>
+template&lt;ElementConcept T&gt; <br />
+requires comp::HasCustomComponents&lt;T&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::importFrom </td>
+          <td class="memname">bool <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::hasElemCustomComponent </td>
           <td>(</td>
-          <td class="paramtype">const OtherMesh &amp;&#160;</td>
-          <td class="paramname"><em>m</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ParentMeshType *&#160;</td>
-          <td class="paramname"><em>parent</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -1212,21 +1493,51 @@ template&lt;typename OtherMesh , typename ParentMeshType &gt; </div>
 
 </div>
 </div>
-<a id="a5a1de27019bca8211713015cdd2262cc" name="a5a1de27019bca8211713015cdd2262cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a1de27019bca8211713015cdd2262cc">&#9670;&#160;</a></span>importReferencesFrom()</h2>
+<a id="af5acdbc26f5ed2e36bf74efbdc6bd7fa" name="af5acdbc26f5ed2e36bf74efbdc6bd7fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5acdbc26f5ed2e36bf74efbdc6bd7fa">&#9670;&#160;</a></span>importFrom()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;ElementConcept T&gt; </div>
 <div class="memtemplate">
-template&lt;typename OtherMesh , typename ElRefBase &gt; </div>
+template&lt;typename OtherMesh &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::importReferencesFrom </td>
+          <td class="memname">void <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::importFrom </td>
+          <td>(</td>
+          <td class="paramtype">const OtherMesh &amp;&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adebcde228347516e29bf9fc7ccd74618" name="adebcde228347516e29bf9fc7ccd74618"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adebcde228347516e29bf9fc7ccd74618">&#9670;&#160;</a></span>importPointersFrom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;ElementConcept T&gt; </div>
+<div class="memtemplate">
+template&lt;typename OtherMesh , typename ElPtrBase &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::importPointersFrom </td>
           <td>(</td>
           <td class="paramtype">const OtherMesh &amp;&#160;</td>
           <td class="paramname"><em>othMesh</em>, </td>
@@ -1234,7 +1545,7 @@ template&lt;typename OtherMesh , typename ElRefBase &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ElRefBase *&#160;</td>
+          <td class="paramtype">ElPtrBase *&#160;</td>
           <td class="paramname"><em>base</em>&#160;</td>
         </tr>
         <tr>
@@ -1280,15 +1591,47 @@ template&lt;ElementConcept T&gt; </div>
 
 </div>
 </div>
+<a id="aecb59466bc496d8ff768c6c7e1c01264" name="aecb59466bc496d8ff768c6c7e1c01264"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecb59466bc496d8ff768c6c7e1c01264">&#9670;&#160;</a></span>isElemCustomComponentOfType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;ElementConcept T&gt; <br />
+requires comp::HasCustomComponents&lt;T&gt;</div>
+<div class="memtemplate">
+template&lt;typename K &gt; <br />
+requires comp::HasCustomComponents&lt;T&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::isElemCustomComponentOfType </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a9ca53c284c1294ecce2d688476391200" name="a9ca53c284c1294ecce2d688476391200"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ca53c284c1294ecce2d688476391200">&#9670;&#160;</a></span>isOptionalComponentEnabled()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ca53c284c1294ecce2d688476391200">&#9670;&#160;</a></span>isOptionalComponentEnabled() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;ElementConcept T&gt; </div>
 <div class="memtemplate">
-template&lt;typename C &gt; </div>
+template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> COMP_TYPE&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1306,15 +1649,42 @@ template&lt;typename C &gt; </div>
 
 </div>
 </div>
-<a id="a61c0911b54c061a22b4f3de12a8883d6" name="a61c0911b54c061a22b4f3de12a8883d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a61c0911b54c061a22b4f3de12a8883d6">&#9670;&#160;</a></span>reserveElements()</h2>
+<a id="a9ca53c284c1294ecce2d688476391200" name="a9ca53c284c1294ecce2d688476391200"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ca53c284c1294ecce2d688476391200">&#9670;&#160;</a></span>isOptionalComponentEnabled() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;ElementConcept T&gt; </div>
 <div class="memtemplate">
-template&lt;typename MeshType &gt; </div>
+template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> COMP_TYPE&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::isOptionalComponentEnabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abd2df4482e5badfcfa2ef5610cbe4e8a" name="abd2df4482e5badfcfa2ef5610cbe4e8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd2df4482e5badfcfa2ef5610cbe4e8a">&#9670;&#160;</a></span>reserveElements()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;ElementConcept T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1323,18 +1693,8 @@ template&lt;typename MeshType &gt; </div>
           <td class="memname">void <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::reserveElements </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td>
-          <td class="paramname"><em>size</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>size</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">MeshType *&#160;</td>
-          <td class="paramname"><em>parentMesh</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -1346,15 +1706,13 @@ template&lt;typename MeshType &gt; </div>
 
 </div>
 </div>
-<a id="a4c4a72827123604cb74f0ffe5cc425db" name="a4c4a72827123604cb74f0ffe5cc425db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c4a72827123604cb74f0ffe5cc425db">&#9670;&#160;</a></span>resizeElements()</h2>
+<a id="a26eaba74690829f3c96ba8a54d83aa1a" name="a26eaba74690829f3c96ba8a54d83aa1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26eaba74690829f3c96ba8a54d83aa1a">&#9670;&#160;</a></span>resizeElements()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;ElementConcept T&gt; </div>
-<div class="memtemplate">
-template&lt;typename MeshType &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1363,18 +1721,8 @@ template&lt;typename MeshType &gt; </div>
           <td class="memname">void <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::resizeElements </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td>
-          <td class="paramname"><em>size</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>size</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">MeshType *&#160;</td>
-          <td class="paramname"><em>parentMesh</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -1386,15 +1734,13 @@ template&lt;typename MeshType &gt; </div>
 
 </div>
 </div>
-<a id="ab857aae0a9795797c08cd1e5326665b7" name="ab857aae0a9795797c08cd1e5326665b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab857aae0a9795797c08cd1e5326665b7">&#9670;&#160;</a></span>setParentMeshPointers()</h2>
+<a id="ac9b0d6aca68d8e1bbb7b459f17f4b0db" name="ac9b0d6aca68d8e1bbb7b459f17f4b0db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9b0d6aca68d8e1bbb7b459f17f4b0db">&#9670;&#160;</a></span>setParentMeshPointers()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;ElementConcept T&gt; </div>
-<div class="memtemplate">
-template&lt;typename MeshType &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1402,8 +1748,8 @@ template&lt;typename MeshType &gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::setParentMeshPointers </td>
           <td>(</td>
-          <td class="paramtype">MeshType *&#160;</td>
-          <td class="paramname"><em>parentMesh</em></td><td>)</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>pm</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1416,8 +1762,48 @@ template&lt;typename MeshType &gt; </div>
 
 </div>
 </div>
-<a id="a57b96bd077a0fa254793dc737a7a5d5f" name="a57b96bd077a0fa254793dc737a7a5d5f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a57b96bd077a0fa254793dc737a7a5d5f">&#9670;&#160;</a></span>updateReferences()</h2>
+<a id="aba92f2240439a6dfbcf313498114afc9" name="aba92f2240439a6dfbcf313498114afc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba92f2240439a6dfbcf313498114afc9">&#9670;&#160;</a></span>updateElementIndices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;ElementConcept T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::updateElementIndices </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>newIndices</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Updates all the indices and pointers of the elements of this container that are stored in any container of the mesh, according to the mapping stored in the newIndices vector, that tells for each old element index, the new element index. </p>
+<p>This function is useful when some elements of this container have been deleted, and you want to update the indices/pointers stored in all the containers of the mesh accordingly.</p>
+<p>E.g.: if this is a vertex container, this function will update the indices and pointers of the vertices stored in all the continers of the mesh (e.g. the face container that stores vertex pointers, or the vertex container itself that stores adjacent vertices) according to the mapping stored in the newIndices vector.</p>
+<p>Supposing you deleted a set of vertices, you can give to this function the vector telling, for each of the old vertex indices, the new vertex index (or UINT_NULL if you want to leave unreferences that vertices). This function will update all the pointers stored in the mesh containers accordingly.</p>
+<dl class="section note"><dt>Note</dt><dd>This function <em>does not change the position of the elements in this container</em>. It just updates the indices/pointers of the elements stored in this or other containers.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">newIndices</td><td>a vector that tells, for each old element index, the new element index. If the old element must be left as unreferenced (setting <code>nullptr</code> to the pointers), the value of the vector must be UINT_NULL. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac5e3cb8a298da0a2918abe66481c8435" name="ac5e3cb8a298da0a2918abe66481c8435"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5e3cb8a298da0a2918abe66481c8435">&#9670;&#160;</a></span>updatePointers() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1430,7 +1816,47 @@ template&lt;typename <a class="el" href="classvcl_1_1Element.html">Element</a> &
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::updateReferences </td>
+          <td class="memname">void <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::updatePointers </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classvcl_1_1Element.html">Element</a> *&#160;</td>
+          <td class="paramname"><em>base</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>newIndices</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a061338168b2e02f507073369ce5b5d6d" name="a061338168b2e02f507073369ce5b5d6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a061338168b2e02f507073369ce5b5d6d">&#9670;&#160;</a></span>updatePointers() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;ElementConcept T&gt; </div>
+<div class="memtemplate">
+template&lt;typename <a class="el" href="classvcl_1_1Element.html">Element</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::updatePointers </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classvcl_1_1Element.html">Element</a> *&#160;</td>
           <td class="paramname"><em>oldBase</em>, </td>
@@ -1440,46 +1866,6 @@ template&lt;typename <a class="el" href="classvcl_1_1Element.html">Element</a> &
           <td></td>
           <td class="paramtype">const <a class="el" href="classvcl_1_1Element.html">Element</a> *&#160;</td>
           <td class="paramname"><em>newBase</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a196ec8cae631ccc7dd931d495cb33178" name="a196ec8cae631ccc7dd931d495cb33178"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a196ec8cae631ccc7dd931d495cb33178">&#9670;&#160;</a></span>updateReferencesAfterCompact()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;ElementConcept T&gt; </div>
-<div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Element.html">Element</a> &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::updateReferencesAfterCompact </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classvcl_1_1Element.html">Element</a> *&#160;</td>
-          <td class="paramname"><em>base</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; int &gt; &amp;&#160;</td>
-          <td class="paramname"><em>newIndices</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1600,6 +1986,30 @@ template&lt;ElementConcept T&gt; </div>
 
 </div>
 </div>
+<a id="abd23d4829371e7669641d3ec3bbced06" name="abd23d4829371e7669641d3ec3bbced06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd23d4829371e7669641d3ec3bbced06">&#9670;&#160;</a></span>parentMesh</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;ElementConcept T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a1cca8d7baf5c7c9a4cfcdbed933b7e52">ParentMeshType</a>* <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::parentMesh = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a4bf8c16614ed9f138496a4480a7f10fe" name="a4bf8c16614ed9f138496a4480a7f10fe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4bf8c16614ed9f138496a4480a7f10fe">&#9670;&#160;</a></span>vcVecTuple</h2>
 
@@ -1612,7 +2022,7 @@ template&lt;ElementConcept T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1mesh_1_1VerticalComponentsVectorTuple.html">VerticalComponentsVectorTuple</a>&lt;<a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a2ea97ffde51174e36c7713e3faccd6a0">vComps</a>&gt; <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::vcVecTuple</td>
+          <td class="memname"><a class="el" href="classvcl_1_1mesh_1_1VerticalComponentsVectorTuple.html">VerticalComponentsVectorTuple</a>&lt;<a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html#a3aaee87c7200cdf60f4292e510fa3c9e">vComps</a>&gt; <a class="el" href="classvcl_1_1mesh_1_1ElementContainer.html">vcl::mesh::ElementContainer</a>&lt; T &gt;::vcVecTuple</td>
         </tr>
       </table>
   </td>
@@ -1653,7 +2063,7 @@ template&lt;ElementConcept T&gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/runner/work/vclib/vclib/include/vclib/mesh/containers/<a class="el" href="element__container_8h_source.html">element_container.h</a></li>
+<li>/home/runner/work/vclib/vclib/include/vclib/mesh/containers/<a class="el" href="mesh_2containers_2element__container_8h_source.html">element_container.h</a></li>
 <li>/home/runner/work/vclib/vclib/include/vclib/mesh/containers/<a class="el" href="element__container_8cpp.html">element_container.cpp</a></li>
 </ul>
 </div><!-- contents -->

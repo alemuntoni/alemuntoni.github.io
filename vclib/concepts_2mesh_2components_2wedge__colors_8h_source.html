@@ -124,67 +124,62 @@ $(document).ready(function(){initNavTree('concepts_2mesh_2components_2wedge__col
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef VCL_CONCEPTS_MESH_COMPONENTS_WEDGE_COLORS_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define VCL_CONCEPTS_MESH_COMPONENTS_WEDGE_COLORS_H</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;<a class="code" href="component_8h.html">component.h</a>&quot;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;<a class="code" href="mesh_2components_2bases_2component_8h.html">component.h</a>&quot;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="space_2color_8h.html">vclib/space/color.h</a>&gt;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl_1_1comp.html">vcl::comp</a> {</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1HasWedgeColors.html">   49</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasWedgeColors.html">HasWedgeColors</a> = <span class="keyword">requires</span>(</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    T o,</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">const</span> T&amp; co,</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <a class="code hl_class" href="classvcl_1_1Color.html">vcl::Color</a> c,</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    std::vector&lt;vcl::Color&gt; v)</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>{</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    T::WEDGE_COLOR_NUMBER;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">typename</span> T::WedgeColorsIterator;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">typename</span> T::ConstWedgeColorsIterator;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    { o.wedgeColor(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;vcl::Color&amp;&gt;;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    { co.wedgeColor(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;const vcl::Color&amp;&gt;;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    { o.wedgeColorMod(<span class="keywordtype">int</span>()) } -&gt; std::same_as&lt;vcl::Color&amp;&gt;;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    { co.wedgeColorMod(<span class="keywordtype">int</span>()) } -&gt; std::same_as&lt;const vcl::Color&amp;&gt;;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    { o.setWedgeColor(c, <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    { o.setWedgeColors(v) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    { co.isWedgeColorsEnabled() } -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    { o.wedgeColorBegin() } -&gt; std::same_as&lt;typename T::WedgeColorsIterator&gt;;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    { o.wedgeColorEnd() } -&gt; std::same_as&lt;typename T::WedgeColorsIterator&gt;;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    { co.wedgeColorBegin() } -&gt; std::same_as&lt;typename T::ConstWedgeColorsIterator&gt;;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    { co.wedgeColorEnd() } -&gt; std::same_as&lt;typename T::ConstWedgeColorsIterator&gt;;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    o.wedgeColors();</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    co.wedgeColors();</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>};</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1HasWedgeColorsComponent.html">   83</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasWedgeColorsComponent.html">HasWedgeColorsComponent</a> = <span class="keyword">requires</span>(T o)</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>{</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keyword">requires</span> <a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasWedgeColors.html">HasWedgeColors&lt;T&gt;</a>;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keyword">typename</span> T::WedgeColorsComponent;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>};</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1HasOptionalWedgeColors.html">   96</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasOptionalWedgeColors.html">HasOptionalWedgeColors</a> =</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasWedgeColorsComponent.html">HasWedgeColorsComponent&lt;T&gt;</a> &amp;&amp; <a class="code hl_concept" href="conceptvcl_1_1comp_1_1IsOptionalComponent.html">IsOptionalComponent&lt;typename T::WedgeColorsComponent&gt;</a>;</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1HasRightNumberOfWedgeColors.html">  110</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasRightNumberOfWedgeColors.html">HasRightNumberOfWedgeColors</a> = T::VERTEX_NUMBER == T::WEDGE_COLOR_NUMBER;</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1SanityCheckWedgeColors.html">  124</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1SanityCheckWedgeColors.html">SanityCheckWedgeColors</a> = !<a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasWedgeColors.html">HasWedgeColors&lt;T&gt;</a> || <a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasRightNumberOfWedgeColors.html">HasRightNumberOfWedgeColors&lt;T&gt;</a>;</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>} <span class="comment">// namespace vcl::comp</span></div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="preprocessor">#endif </span><span class="comment">// VCL_CONCEPTS_MESH_COMPONENTS_WEDGE_COLORS_H</span></div>
-<div class="ttc" id="aclassvcl_1_1Color_html"><div class="ttname"><a href="classvcl_1_1Color.html">vcl::Color</a></div><div class="ttdoc">The Color class represents an RGBA color.</div><div class="ttdef"><b>Definition:</b> color.h:37</div></div>
-<div class="ttc" id="acomponent_8h_html"><div class="ttname"><a href="component_8h.html">component.h</a></div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasOptionalWedgeColors_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasOptionalWedgeColors.html">vcl::comp::HasOptionalWedgeColors</a></div><div class="ttdoc">HasOptionalWedgeColors concept is satisfied only if a class satisfies the HasWedgeColors concept and ...</div><div class="ttdef"><b>Definition:</b> wedge_colors.h:96</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasRightNumberOfWedgeColors_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasRightNumberOfWedgeColors.html">vcl::comp::HasRightNumberOfWedgeColors</a></div><div class="ttdoc">HasRightNumberOfWedgeColors concept.</div><div class="ttdef"><b>Definition:</b> wedge_colors.h:110</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasWedgeColorsComponent_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasWedgeColorsComponent.html">vcl::comp::HasWedgeColorsComponent</a></div><div class="ttdoc">HasWedgeColorsComponent concept is used to discriminate between the WedgeColors (or OptionalWedgeColo...</div><div class="ttdef"><b>Definition:</b> wedge_colors.h:83</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasWedgeColors_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasWedgeColors.html">vcl::comp::HasWedgeColors</a></div><div class="ttdoc">HasWedgeColors concept is satisfied only if a Element class provides the types and member functions s...</div><div class="ttdef"><b>Definition:</b> wedge_colors.h:49</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1IsOptionalComponent_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1IsOptionalComponent.html">vcl::comp::IsOptionalComponent</a></div><div class="ttdef"><b>Definition:</b> component.h:57</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1SanityCheckWedgeColors_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1SanityCheckWedgeColors.html">vcl::comp::SanityCheckWedgeColors</a></div><div class="ttdoc">SanityCheckWedgeColors concept.</div><div class="ttdef"><b>Definition:</b> wedge_colors.h:124</div></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1HasWedgeColors.html">   51</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasWedgeColors.html">HasWedgeColors</a> = <span class="keyword">requires</span>(</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    T o,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">const</span> T&amp; co,</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <a class="code hl_class" href="classvcl_1_1Color.html">vcl::Color</a> c,</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    std::vector&lt;vcl::Color&gt; v)</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>{</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    T::WEDGE_COLOR_NUMBER;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">typename</span> T::WedgeColorsIterator;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">typename</span> T::ConstWedgeColorsIterator;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    { o.wedgeColor(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;vcl::Color&amp;&gt;;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    { co.wedgeColor(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;const vcl::Color&amp;&gt;;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    { o.wedgeColorMod(<span class="keywordtype">int</span>()) } -&gt; std::same_as&lt;vcl::Color&amp;&gt;;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    { co.wedgeColorMod(<span class="keywordtype">int</span>()) } -&gt; std::same_as&lt;const vcl::Color&amp;&gt;;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    { o.setWedgeColor(c, <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    { o.setWedgeColors(v) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    { co.isWedgeColorsEnabled() } -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    { o.wedgeColorBegin() } -&gt; std::same_as&lt;typename T::WedgeColorsIterator&gt;;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    { o.wedgeColorEnd() } -&gt; std::same_as&lt;typename T::WedgeColorsIterator&gt;;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    { co.wedgeColorBegin() } -&gt;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        std::same_as&lt;typename T::ConstWedgeColorsIterator&gt;;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    { co.wedgeColorEnd() } -&gt;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        std::same_as&lt;typename T::ConstWedgeColorsIterator&gt;;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    o.wedgeColors();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    co.wedgeColors();</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>};</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1HasOptionalWedgeColors.html">   87</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasOptionalWedgeColors.html">HasOptionalWedgeColors</a> =</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasWedgeColors.html">HasWedgeColors&lt;T&gt;</a> &amp;&amp; <a class="code hl_concept" href="conceptvcl_1_1comp_1_1IsOptionalComponent.html">IsOptionalComponent&lt;typename T::WedgeColors&gt;</a>;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1HasRightNumberOfWedgeColors.html">  101</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasRightNumberOfWedgeColors.html">HasRightNumberOfWedgeColors</a> = T::VERTEX_NUMBER == T::WEDGE_COLOR_NUMBER;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1SanityCheckWedgeColors.html">  116</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1SanityCheckWedgeColors.html">SanityCheckWedgeColors</a> =</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    !<a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasWedgeColors.html">HasWedgeColors&lt;T&gt;</a> || <a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasRightNumberOfWedgeColors.html">HasRightNumberOfWedgeColors&lt;T&gt;</a>;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>} <span class="comment">// namespace vcl::comp</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="preprocessor">#endif </span><span class="comment">// VCL_CONCEPTS_MESH_COMPONENTS_WEDGE_COLORS_H</span></div>
+<div class="ttc" id="aclassvcl_1_1Color_html"><div class="ttname"><a href="classvcl_1_1Color.html">vcl::Color</a></div><div class="ttdoc">The Color class represents an RGBA color.</div><div class="ttdef"><b>Definition:</b> color.h:40</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasOptionalWedgeColors_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasOptionalWedgeColors.html">vcl::comp::HasOptionalWedgeColors</a></div><div class="ttdoc">HasOptionalWedgeColors concept is satisfied only if a class satisfies the HasWedgeColors concept and ...</div><div class="ttdef"><b>Definition:</b> wedge_colors.h:87</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasRightNumberOfWedgeColors_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasRightNumberOfWedgeColors.html">vcl::comp::HasRightNumberOfWedgeColors</a></div><div class="ttdoc">HasRightNumberOfWedgeColors concept.</div><div class="ttdef"><b>Definition:</b> wedge_colors.h:101</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasWedgeColors_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasWedgeColors.html">vcl::comp::HasWedgeColors</a></div><div class="ttdoc">HasWedgeColors concept is satisfied only if a Element class provides the types and member functions s...</div><div class="ttdef"><b>Definition:</b> wedge_colors.h:51</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1IsOptionalComponent_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1IsOptionalComponent.html">vcl::comp::IsOptionalComponent</a></div><div class="ttdef"><b>Definition:</b> component.h:125</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1SanityCheckWedgeColors_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1SanityCheckWedgeColors.html">vcl::comp::SanityCheckWedgeColors</a></div><div class="ttdoc">SanityCheckWedgeColors concept.</div><div class="ttdef"><b>Definition:</b> wedge_colors.h:116</div></div>
+<div class="ttc" id="amesh_2components_2bases_2component_8h_html"><div class="ttname"><a href="mesh_2components_2bases_2component_8h.html">component.h</a></div></div>
 <div class="ttc" id="anamespacevcl_1_1comp_html"><div class="ttname"><a href="namespacevcl_1_1comp.html">vcl::comp</a></div><div class="ttdef"><b>Definition:</b> adjacent_edges.h:31</div></div>
 <div class="ttc" id="aspace_2color_8h_html"><div class="ttname"><a href="space_2color_8h.html">color.h</a></div></div>
 <div class="ttc" id="atypes_2base_8h_html_a69aa29b598b851b0640aa225a9e5d61d"><div class="ttname"><a href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> base.h:31</div></div>

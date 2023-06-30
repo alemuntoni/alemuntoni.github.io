@@ -109,17 +109,15 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1comp_1_1HasBitFlags.html
 <div class="line">    T o,</div>
 <div class="line">    <span class="keyword">const</span> T&amp; co)</div>
 <div class="line">{</div>
-<div class="line">    { co.isDeleted() } -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line">    { co.isSelected() } -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line">    { co.isOnBorder() } -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line">    { co.userBitFlag(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line">    { co.deleted() } -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line">    { co.selected() } -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line">    { co.onBorder() } -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line">    { co.selected() } -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line">    { co.userBit(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;bool&gt;;</div>
 <div class="line"> </div>
-<div class="line">    { o.setSelected() } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">    { o.setUserBit(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line"> </div>
-<div class="line">    { o.unsetAllFlags() } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">    { o.unsetSelected() } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">    { o.unsetUserBit(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">    { o.resetBitFlags() } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">    { o.importFromVCGFlags(<span class="keywordtype">int</span>())} -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">    { co.exportToVCGFlags() } -&gt; std::same_as&lt;int&gt;;</div>
 <div class="line">}</div>
 <div class="ttc" id="aconceptvcl_1_1comp_1_1HasBitFlags_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasBitFlags.html">vcl::comp::HasBitFlags</a></div><div class="ttdoc">HasBitFlags concept is satisfied only if a Element class provides the member functions specified in t...</div><div class="ttdef"><b>Definition:</b> bit_flags.h:39</div></div>
 <div class="ttc" id="atypes_2base_8h_html_a69aa29b598b851b0640aa225a9e5d61d"><div class="ttname"><a href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> base.h:31</div></div>

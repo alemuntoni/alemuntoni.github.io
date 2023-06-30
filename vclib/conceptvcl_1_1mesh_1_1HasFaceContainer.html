@@ -99,34 +99,45 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1mesh_1_1HasFaceContainer
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="concepts_2mesh_2containers_8h_source.html">vclib/concepts/mesh/containers.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="concepts_2mesh_2containers_2face__container_8h_source.html">vclib/concepts/mesh/containers/face_container.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1mesh_1_1HasFaceContainer.html">vcl::mesh::HasFaceContainer</a> =  <span class="keyword">requires</span>(T o, <span class="keyword">const</span> T&amp; co, <span class="keyword">typename</span> T::FaceType* f)</div>
+<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1mesh_1_1HasFaceContainer.html">vcl::mesh::HasFaceContainer</a> =  <span class="keyword">requires</span>(</div>
+<div class="line">    T o,</div>
+<div class="line">    <span class="keyword">const</span> T&amp; co,</div>
+<div class="line">    <span class="keyword">typename</span> T::FaceType* f)</div>
 <div class="line">{</div>
 <div class="line">    <span class="keyword">typename</span> T::FaceType;</div>
 <div class="line">    <span class="keyword">typename</span> T::FaceIterator;</div>
 <div class="line">    <span class="keyword">typename</span> T::ConstFaceIterator;</div>
-<div class="line">    <span class="keyword">typename</span> T::FaceView;</div>
-<div class="line">    <span class="keyword">typename</span> T::ConstFaceView;</div>
+<div class="line"> </div>
 <div class="line">    { o.face(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;typename T::FaceType&amp;&gt;;</div>
 <div class="line">    { co.face(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;const typename T::FaceType&amp;&gt;;</div>
+<div class="line"> </div>
 <div class="line">    { co.faceNumber() } -&gt; std::same_as&lt;uint&gt;;</div>
 <div class="line">    { co.faceContainerSize() } -&gt; std::same_as&lt;uint&gt;;</div>
 <div class="line">    { co.deletedFaceNumber() } -&gt; std::same_as&lt;uint&gt;;</div>
 <div class="line">    o.deleteFace(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>());</div>
 <div class="line">    o.deleteFace(f);</div>
 <div class="line">    { o.faceIndexIfCompact(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;uint&gt;;</div>
-<div class="line">    { o.faceCompactIndices() } -&gt; std::same_as&lt;std::vector&lt;int&gt;&gt;;</div>
+<div class="line">    { o.faceCompactIndices() } -&gt; std::same_as&lt;std::vector&lt;uint&gt;&gt;;</div>
+<div class="line"> </div>
+<div class="line">    { o.addFace() } -&gt; std::same_as&lt;uint&gt;;</div>
+<div class="line">    { o.addFaces(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;uint&gt;;</div>
+<div class="line">    { o.reserveFaces(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">    { o.compactFaces() } -&gt; std::same_as&lt;void&gt;;</div>
 <div class="line"> </div>
 <div class="line">    { o.faceBegin() } -&gt; std::same_as&lt;typename T::FaceIterator&gt;;</div>
 <div class="line">    { co.faceBegin() } -&gt; std::same_as&lt;typename T::ConstFaceIterator&gt;;</div>
 <div class="line">    { o.faceEnd() } -&gt; std::same_as&lt;typename T::FaceIterator&gt;;</div>
 <div class="line">    { co.faceEnd() } -&gt; std::same_as&lt;typename T::ConstFaceIterator&gt;;</div>
-<div class="line">    { o.faces() } -&gt; std::same_as&lt;typename T::FaceView&gt;;</div>
-<div class="line">    { co.faces() } -&gt; std::same_as&lt;typename T::ConstFaceView&gt;;</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"> </div>
 <div class="line">}</div>
-<div class="ttc" id="aconceptvcl_1_1mesh_1_1HasFaceContainer_html"><div class="ttname"><a href="conceptvcl_1_1mesh_1_1HasFaceContainer.html">vcl::mesh::HasFaceContainer</a></div><div class="ttdef"><b>Definition:</b> containers.h:70</div></div>
+<div class="ttc" id="aconceptvcl_1_1mesh_1_1HasFaceContainer_html"><div class="ttname"><a href="conceptvcl_1_1mesh_1_1HasFaceContainer.html">vcl::mesh::HasFaceContainer</a></div><div class="ttdef"><b>Definition:</b> face_container.h:36</div></div>
 <div class="ttc" id="atypes_2base_8h_html_a69aa29b598b851b0640aa225a9e5d61d"><div class="ttname"><a href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> base.h:31</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

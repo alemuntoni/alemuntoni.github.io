@@ -3,7 +3,6 @@ var dir_1d5d86545c5ee72848d4833136f0caa9 =
     [ "internal", "dir_35f5e215d5d28025e43ffcae2a1fa64a.html", "dir_35f5e215d5d28025e43ffcae2a1fa64a" ],
     [ "logger", "dir_9e0e4c62a1fe2ec4573b28f7b7e72013.html", "dir_9e0e4c62a1fe2ec4573b28f7b7e72013" ],
     [ "mark", "dir_ca5454e6c8b3f126fb725e49f11e0548.html", "dir_ca5454e6c8b3f126fb725e49f11e0548" ],
-    [ "bit_proxy.h", "bit__proxy_8h.html", "bit__proxy_8h" ],
     [ "compactness.cpp", "compactness_8cpp.html", "compactness_8cpp" ],
     [ "compactness.h", "compactness_8h.html", "compactness_8h" ],
     [ "comparators.h", "comparators_8h.html", "comparators_8h" ],

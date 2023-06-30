@@ -130,36 +130,25 @@ $(document).ready(function(){initNavTree('mesh_2elements_2vertex_8h_source.html'
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType, <span class="keyword">typename</span>... Args&gt;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classvcl_1_1Vertex.html">   39</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1Vertex.html">Vertex</a> : <span class="keyword">public</span> <a class="code hl_class" href="classvcl_1_1Element.html">Element</a>&lt;MeshType, Args...&gt;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>{</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classvcl_1_1Vertex.html#aadfc45048dad5c11c6ceba69815c1828">   42</a></span>    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> <a class="code hl_variable" href="classvcl_1_1Vertex.html#aadfc45048dad5c11c6ceba69815c1828">ELEMENT_TYPE</a> = <a class="code hl_enumvalue" href="namespacevcl.html#a64e691de6b710b9fd1dc3d5db66a6f7aa2b976bb23bc172fe0c729ce8f367b76e">VERTEX</a>;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> <a class="code hl_function" href="classvcl_1_1Vertex.html#aa92eb0bcbbabdc4ec3143aab8c5b1fba">index</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>};</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType, <span class="keyword">typename</span>... Args&gt;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classvcl_1_1Vertex_3_01MeshType_00_01TypeWrapper_3_01Args_8_8_8_01_4_01_4.html">   48</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1Vertex.html">Vertex</a>&lt;MeshType, <a class="code hl_struct" href="structvcl_1_1TypeWrapper.html">TypeWrapper</a>&lt;Args...&gt;&gt; : <span class="keyword">public</span> <a class="code hl_class" href="classvcl_1_1Vertex.html">Vertex</a>&lt;MeshType, Args...&gt;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>{</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>};</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#include &quot;<a class="code" href="vertex_8cpp.html">vertex.cpp</a>&quot;</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#endif </span><span class="comment">// VCL_MESH_ELEMENTS_VERTEX_H</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType, <span class="keyword">typename</span>... Comps&gt;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classvcl_1_1Vertex.html">   46</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1Vertex.html">Vertex</a> : <span class="keyword">public</span> <a class="code hl_class" href="classvcl_1_1Element.html">Element</a>&lt;VERTEX, MeshType, Comps...&gt;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>{</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>};</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType, <span class="keyword">typename</span>... Comps&gt;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classvcl_1_1Vertex_3_01MeshType_00_01TypeWrapper_3_01Comps_8_8_8_01_4_01_4.html">   51</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1Vertex.html">Vertex</a>&lt;MeshType, <a class="code hl_struct" href="structvcl_1_1TypeWrapper.html">TypeWrapper</a>&lt;Comps...&gt;&gt; : <span class="keyword">public</span> <a class="code hl_class" href="classvcl_1_1Vertex.html">Vertex</a>&lt;MeshType, Comps...&gt;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>{</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>};</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#endif </span><span class="comment">// VCL_MESH_ELEMENTS_VERTEX_H</span></div>
 <div class="ttc" id="aclassvcl_1_1Element_html"><div class="ttname"><a href="classvcl_1_1Element.html">vcl::Element</a></div><div class="ttdoc">The Element class.</div><div class="ttdef"><b>Definition:</b> element.h:56</div></div>
-<div class="ttc" id="aclassvcl_1_1Vertex_html"><div class="ttname"><a href="classvcl_1_1Vertex.html">vcl::Vertex</a></div><div class="ttdoc">The Vertex class.</div><div class="ttdef"><b>Definition:</b> vertex.h:40</div></div>
-<div class="ttc" id="aclassvcl_1_1Vertex_html_aa92eb0bcbbabdc4ec3143aab8c5b1fba"><div class="ttname"><a href="classvcl_1_1Vertex.html#aa92eb0bcbbabdc4ec3143aab8c5b1fba">vcl::Vertex::index</a></div><div class="ttdeci">uint index() const</div><div class="ttdef"><b>Definition:</b> vertex.cpp:29</div></div>
-<div class="ttc" id="aclassvcl_1_1Vertex_html_aadfc45048dad5c11c6ceba69815c1828"><div class="ttname"><a href="classvcl_1_1Vertex.html#aadfc45048dad5c11c6ceba69815c1828">vcl::Vertex::ELEMENT_TYPE</a></div><div class="ttdeci">static const uint ELEMENT_TYPE</div><div class="ttdef"><b>Definition:</b> vertex.h:42</div></div>
+<div class="ttc" id="aclassvcl_1_1Vertex_html"><div class="ttname"><a href="classvcl_1_1Vertex.html">vcl::Vertex</a></div><div class="ttdoc">The Vertex class represents an Vertex element of the vcl::Mesh class.</div><div class="ttdef"><b>Definition:</b> vertex.h:47</div></div>
 <div class="ttc" id="aconcepts_2mesh_2elements_2vertex_8h_html"><div class="ttname"><a href="concepts_2mesh_2elements_2vertex_8h.html">vertex.h</a></div></div>
 <div class="ttc" id="amesh_2elements_2element_8h_html"><div class="ttname"><a href="mesh_2elements_2element_8h.html">element.h</a></div></div>
 <div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition:</b> bounding_box.cpp:29</div></div>
-<div class="ttc" id="anamespacevcl_html_a64e691de6b710b9fd1dc3d5db66a6f7aa2b976bb23bc172fe0c729ce8f367b76e"><div class="ttname"><a href="namespacevcl.html#a64e691de6b710b9fd1dc3d5db66a6f7aa2b976bb23bc172fe0c729ce8f367b76e">vcl::VERTEX</a></div><div class="ttdeci">@ VERTEX</div><div class="ttdef"><b>Definition:</b> element.h:32</div></div>
-<div class="ttc" id="astructvcl_1_1TypeWrapper_html"><div class="ttname"><a href="structvcl_1_1TypeWrapper.html">vcl::TypeWrapper</a></div><div class="ttdef"><b>Definition:</b> variadic_templates.h:39</div></div>
-<div class="ttc" id="atypes_2base_8h_html_a69aa29b598b851b0640aa225a9e5d61d"><div class="ttname"><a href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> base.h:31</div></div>
-<div class="ttc" id="avertex_8cpp_html"><div class="ttname"><a href="vertex_8cpp.html">vertex.cpp</a></div></div>
+<div class="ttc" id="astructvcl_1_1TypeWrapper_html"><div class="ttname"><a href="structvcl_1_1TypeWrapper.html">vcl::TypeWrapper</a></div><div class="ttdoc">A simple structure that wraps a list of variadic templates, without instantiating anything....</div><div class="ttdef"><b>Definition:</b> variadic_templates.h:40</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -1,39 +1,10 @@
 var hierarchy =
 [
     [ "Args", null, [
-      [ "vcl::Element< MeshType, Args... >", "classvcl_1_1Element.html", [
-        [ "vcl::Edge< MeshType, Args... >", "classvcl_1_1Edge.html", [
-          [ "vcl::Edge< MeshType, TypeWrapper< Args... > >", "classvcl_1_1Edge_3_01MeshType_00_01TypeWrapper_3_01Args_8_8_8_01_4_01_4.html", null ]
-        ] ],
-        [ "vcl::Face< MeshType, Args... >", "classvcl_1_1Face.html", [
-          [ "vcl::Face< MeshType, TypeWrapper< Args... > >", "classvcl_1_1Face_3_01MeshType_00_01TypeWrapper_3_01Args_8_8_8_01_4_01_4.html", null ]
-        ] ],
-        [ "vcl::HalfEdge< MeshType, Args... >", "classvcl_1_1HalfEdge.html", [
-          [ "vcl::HalfEdge< MeshType, TypeWrapper< Args... > >", "classvcl_1_1HalfEdge_3_01MeshType_00_01TypeWrapper_3_01Args_8_8_8_01_4_01_4.html", null ]
-        ] ],
-        [ "vcl::Vertex< MeshType, Args... >", "classvcl_1_1Vertex.html", [
-          [ "vcl::Vertex< MeshType, TypeWrapper< Args... > >", "classvcl_1_1Vertex_3_01MeshType_00_01TypeWrapper_3_01Args_8_8_8_01_4_01_4.html", null ]
-        ] ],
-        [ "vcl::Edge< MeshType, Args >", "classvcl_1_1Edge.html", null ],
-        [ "vcl::Face< MeshType, Args >", "classvcl_1_1Face.html", null ],
-        [ "vcl::HalfEdge< MeshType, Args >", "classvcl_1_1HalfEdge.html", null ],
-        [ "vcl::Vertex< MeshType, Args >", "classvcl_1_1Vertex.html", null ]
-      ] ],
-      [ "vcl::Element< DcelMeshT< Scalar >, Args... >", "classvcl_1_1Element.html", null ],
-      [ "vcl::Element< EdgeMeshT< Scalar >, Args... >", "classvcl_1_1Element.html", null ],
-      [ "vcl::Element< TMPSimplePolyMesh, Args... >", "classvcl_1_1Element.html", null ],
-      [ "vcl::Element< TMPSimpleTriMesh, Args... >", "classvcl_1_1Element.html", null ],
-      [ "vcl::Element< PointCloudT< Scalar >, Args... >", "classvcl_1_1Element.html", null ],
-      [ "vcl::Element< PolyMeshT< Scalar >, Args... >", "classvcl_1_1Element.html", null ],
-      [ "vcl::Element< TriMeshT< Scalar >, Args... >", "classvcl_1_1Element.html", null ],
-      [ "vcl::Mesh< mesh::VertexContainer< dcel::Vertex< double > >, mesh::FaceContainer< dcel::Face< double > >, mesh::HalfEdgeContainer< dcel::HalfEdge< double > >, mesh::BoundingBox3< double >, mesh::Mark, mesh::Name, mesh::TexturePaths, mesh::TransformMatrix< double >, mesh::CustomComponents >", "classvcl_1_1Mesh.html", null ],
       [ "vcl::Mesh< mesh::VertexContainer< edgemesh::Vertex< double > >, mesh::EdgeContainer< edgemesh::Edge< double > >, mesh::BoundingBox3< double >, mesh::Mark, mesh::Name, mesh::TexturePaths, mesh::TransformMatrix< double >, mesh::CustomComponents >", "classvcl_1_1Mesh.html", null ],
       [ "vcl::Mesh< mesh::VertexContainer< pointcloud::Vertex< double > >, mesh::BoundingBox3< double >, mesh::Mark, mesh::Name, mesh::TexturePaths, mesh::TransformMatrix< double >, mesh::CustomComponents >", "classvcl_1_1Mesh.html", null ],
       [ "vcl::Mesh< mesh::VertexContainer< polymesh::Vertex< double > >, mesh::FaceContainer< polymesh::Face< double > >, mesh::BoundingBox3< double >, mesh::Color, mesh::Mark, mesh::Name, mesh::TexturePaths, mesh::TransformMatrix< double >, mesh::CustomComponents >", "classvcl_1_1Mesh.html", null ],
       [ "vcl::Mesh< mesh::VertexContainer< trimesh::Vertex< double > >, mesh::FaceContainer< trimesh::Face< double > >, mesh::BoundingBox3< double >, mesh::Color, mesh::Mark, mesh::Name, mesh::TexturePaths, mesh::TransformMatrix< double >, mesh::CustomComponents >", "classvcl_1_1Mesh.html", null ],
-      [ "vcl::Mesh< mesh::VertexContainer< dcel::Vertex< Scalar > >, mesh::FaceContainer< dcel::Face< Scalar > >, mesh::HalfEdgeContainer< dcel::HalfEdge< Scalar > >, mesh::BoundingBox3< Scalar >, mesh::Mark, mesh::Name, mesh::TexturePaths, mesh::TransformMatrix< Scalar >, mesh::CustomComponents >", "classvcl_1_1Mesh.html", [
-        [ "vcl::DcelMeshT< Scalar >", "classvcl_1_1DcelMeshT.html", null ]
-      ] ],
       [ "vcl::Mesh< mesh::VertexContainer< edgemesh::Vertex< Scalar > >, mesh::EdgeContainer< edgemesh::Edge< Scalar > >, mesh::BoundingBox3< Scalar >, mesh::Mark, mesh::Name, mesh::TexturePaths, mesh::TransformMatrix< Scalar >, mesh::CustomComponents >", "classvcl_1_1Mesh.html", [
         [ "vcl::EdgeMeshT< Scalar >", "classvcl_1_1EdgeMeshT.html", null ]
       ] ],
@@ -48,44 +19,7 @@ var hierarchy =
       [ "vcl::Mesh< mesh::VertexContainer< trimesh::Vertex< Scalar > >, mesh::FaceContainer< trimesh::Face< Scalar > >, mesh::BoundingBox3< Scalar >, mesh::Color, mesh::Mark, mesh::Name, mesh::TexturePaths, mesh::TransformMatrix< Scalar >, mesh::CustomComponents >", "classvcl_1_1Mesh.html", [
         [ "vcl::TriMeshT< Scalar >", "classvcl_1_1TriMeshT.html", null ]
       ] ],
-      [ "vcl::Element< MeshType, Args >", "classvcl_1_1Element.html", [
-        [ "vcl::Edge< EdgeMeshT< Scalar >, vcl::edge::BitFlags, vcl::edge::VertexReferences< Vertex< Scalar > >, vcl::edge::OptionalScalar< Scalar, Edge< Scalar > >, vcl::edge::OptionalColor< Edge< Scalar > >, vcl::edge::OptionalAdjacentEdges< Edge< Scalar > >, vcl::edge::OptionalMark< Edge< Scalar > >, vcl::edge::CustomComponents< Edge< Scalar > > >", "classvcl_1_1Edge.html", [
-          [ "vcl::edgemesh::Edge< Scalar >", "classvcl_1_1edgemesh_1_1Edge.html", null ]
-        ] ],
-        [ "vcl::Face< DcelMeshT< Scalar >, vcl::face::BitFlags, vcl::face::HalfEdgeReference< HalfEdge< Scalar > >, vcl::face::Normal3< Scalar >, vcl::face::OptionalScalar< Scalar, Face< Scalar > >, vcl::face::OptionalColor< Face< Scalar > >, vcl::face::OptionalMark< Face< Scalar > >, vcl::face::CustomComponents< Face< Scalar > > >", "classvcl_1_1Face.html", [
-          [ "vcl::dcel::Face< Scalar >", "classvcl_1_1dcel_1_1Face.html", null ]
-        ] ],
-        [ "vcl::Face< TMPSimplePolyMesh, vcl::face::PolygonBitFlags, vcl::face::PolygonVertexRefs< PolyVertex > >", "classvcl_1_1Face.html", null ],
-        [ "vcl::Face< TMPSimpleTriMesh, vcl::face::TriangleBitFlags, vcl::face::TriangleVertexRefs< TriVertex > >", "classvcl_1_1Face.html", null ],
-        [ "vcl::Face< PolyMeshT< Scalar >, vcl::face::PolygonBitFlags, vcl::face::PolygonVertexRefs< Vertex< Scalar > >, vcl::face::Normal3< Scalar >, vcl::face::OptionalColor< Face< Scalar > >, vcl::face::OptionalScalar< Scalar, Face< Scalar > >, vcl::face::OptionalAdjacentPolygons< Face< Scalar > >, vcl::face::OptionalPolygonWedgeTexCoords< Scalar, Face< Scalar > >, vcl::face::CustomComponents< Face< Scalar > > >", "classvcl_1_1Face.html", [
-          [ "vcl::polymesh::Face< Scalar >", "classvcl_1_1polymesh_1_1Face.html", null ]
-        ] ],
-        [ "vcl::Face< TriMeshT< Scalar >, vcl::face::TriangleBitFlags, vcl::face::TriangleVertexRefs< Vertex< Scalar > >, vcl::face::Normal3< Scalar >, vcl::face::OptionalScalar< Scalar, Face< Scalar > >, vcl::face::OptionalColor< Face< Scalar > >, vcl::face::OptionalAdjacentTriangles< Face< Scalar > >, vcl::face::OptionalTriangleWedgeTexCoords< Scalar, Face< Scalar > >, vcl::face::OptionalMark< Face< Scalar > >, vcl::face::CustomComponents< Face< Scalar > > >", "classvcl_1_1Face.html", [
-          [ "vcl::trimesh::Face< Scalar >", "classvcl_1_1trimesh_1_1Face.html", null ]
-        ] ],
-        [ "vcl::HalfEdge< DcelMeshT< Scalar >, vcl::hedge::BitFlags, vcl::hedge::HalfEdgeReferences< HalfEdge< Scalar >, Vertex< Scalar >, Face< Scalar > >, vcl::hedge::OptionalScalar< Scalar, HalfEdge< Scalar > >, vcl::hedge::OptionalColor< HalfEdge< Scalar > >, vcl::hedge::OptionalMark< HalfEdge< Scalar > >, vcl::hedge::OptionalTexCoord< Scalar, HalfEdge< Scalar > >, vcl::hedge::CustomComponents< HalfEdge< Scalar > > >", "classvcl_1_1HalfEdge.html", [
-          [ "vcl::dcel::HalfEdge< Scalar >", "classvcl_1_1dcel_1_1HalfEdge.html", null ]
-        ] ],
-        [ "vcl::Vertex< DcelMeshT< Scalar >, vcl::vert::BitFlags, vcl::vert::Coordinate3< Scalar >, vcl::vert::Normal3< Scalar >, vcl::vert::Color, vcl::vert::Scalar< Scalar >, vcl::vert::HalfEdgeReference< HalfEdge< Scalar > >, vcl::vert::OptionalTexCoord< Scalar, Vertex< Scalar > >, vcl::vert::OptionalMark< Vertex< Scalar > >, vcl::vert::CustomComponents< Vertex< Scalar > > >", "classvcl_1_1Vertex.html", [
-          [ "vcl::dcel::Vertex< Scalar >", "classvcl_1_1dcel_1_1Vertex.html", null ]
-        ] ],
-        [ "vcl::Vertex< EdgeMeshT< Scalar >, vcl::vert::BitFlags, vcl::vert::Coordinate3< Scalar >, vcl::vert::Normal3< Scalar >, vcl::vert::Color, vcl::vert::Scalar< Scalar >, vcl::vert::OptionalAdjacentEdges< Edge< Scalar >, Vertex< Scalar > >, vcl::vert::OptionalAdjacentVertices< Vertex< Scalar > >, vcl::vert::OptionalTexCoord< Scalar, Vertex< Scalar > >, vcl::vert::OptionalMark< Vertex< Scalar > >, vcl::vert::CustomComponents< Vertex< Scalar > > >", "classvcl_1_1Vertex.html", [
-          [ "vcl::edgemesh::Vertex< Scalar >", "classvcl_1_1edgemesh_1_1Vertex.html", null ]
-        ] ],
-        [ "vcl::Vertex< TMPSimplePolyMesh, vcl::vert::BitFlags, vcl::vert::Coordinate3d >", "classvcl_1_1Vertex.html", null ],
-        [ "vcl::Vertex< TMPSimpleTriMesh, vcl::vert::BitFlags, vcl::vert::Coordinate3d >", "classvcl_1_1Vertex.html", null ],
-        [ "vcl::Vertex< PointCloudT< Scalar >, vcl::vert::BitFlags, vcl::vert::Coordinate3< Scalar >, vcl::vert::Normal3< Scalar >, vcl::vert::Color, vcl::vert::Scalar< Scalar >, vcl::vert::OptionalTexCoord< Scalar, Vertex< Scalar > >, vcl::vert::OptionalMark< Vertex< Scalar > >, vcl::vert::CustomComponents< Vertex< Scalar > > >", "classvcl_1_1Vertex.html", [
-          [ "vcl::pointcloud::Vertex< Scalar >", "classvcl_1_1pointcloud_1_1Vertex.html", null ]
-        ] ],
-        [ "vcl::Vertex< PolyMeshT< Scalar >, vcl::vert::BitFlags, vcl::vert::Coordinate3< Scalar >, vcl::vert::Normal3< Scalar >, vcl::vert::Color, vcl::vert::Scalar< Scalar >, vcl::vert::OptionalTexCoord< Scalar, Vertex< Scalar > >, vcl::vert::OptionalAdjacentFaces< Face< Scalar >, Vertex< Scalar > >, vcl::vert::OptionalAdjacentVertices< Vertex< Scalar > >, vcl::vert::OptionalPrincipalCurvature< Scalar, Vertex< Scalar > >, vcl::vert::CustomComponents< Vertex< Scalar > > >", "classvcl_1_1Vertex.html", [
-          [ "vcl::polymesh::Vertex< Scalar >", "classvcl_1_1polymesh_1_1Vertex.html", null ]
-        ] ],
-        [ "vcl::Vertex< TriMeshT< Scalar >, vcl::vert::BitFlags, vcl::vert::Coordinate3< Scalar >, vcl::vert::Normal3< Scalar >, vcl::vert::Color, vcl::vert::Scalar< Scalar >, vcl::vert::OptionalAdjacentFaces< Face< Scalar >, Vertex< Scalar > >, vcl::vert::OptionalAdjacentVertices< Vertex< Scalar > >, vcl::vert::OptionalPrincipalCurvature< Scalar, Vertex< Scalar > >, vcl::vert::OptionalTexCoord< Scalar, Vertex< Scalar > >, vcl::vert::OptionalMark< Vertex< Scalar > >, vcl::vert::CustomComponents< Vertex< Scalar > > >", "classvcl_1_1Vertex.html", [
-          [ "vcl::trimesh::Vertex< Scalar >", "classvcl_1_1trimesh_1_1Vertex.html", null ]
-        ] ]
-      ] ],
       [ "vcl::Mesh< Args >", "classvcl_1_1Mesh.html", [
-        [ "vcl::DcelMeshT< Scalar >", "classvcl_1_1DcelMeshT.html", null ],
         [ "vcl::EdgeMeshT< Scalar >", "classvcl_1_1EdgeMeshT.html", null ],
         [ "vcl::PointCloudT< Scalar >", "classvcl_1_1PointCloudT.html", null ],
         [ "vcl::PolyMeshT< Scalar >", "classvcl_1_1PolyMeshT.html", null ],
@@ -97,33 +31,107 @@ var hierarchy =
     [ "vcl::ConstStaticGridIterator< KeyType, ValueType, GridType >::ArrowHelper", "classvcl_1_1ConstStaticGridIterator_1_1ArrowHelper.html", null ],
     [ "vcl::StaticGridIterator< KeyType, ValueType, GridType >::ArrowHelper", "classvcl_1_1StaticGridIterator_1_1ArrowHelper.html", null ],
     [ "vcl::BipartiteGraph< T1, T2 >", "classvcl_1_1BipartiteGraph.html", null ],
-    [ "vcl::comp::BitFlagsT< Component, ElementType, optional >", "classvcl_1_1comp_1_1BitFlagsT.html", [
-      [ "vcl::comp::BitFlags< ElementType, optional >", "classvcl_1_1comp_1_1BitFlags.html", null ],
-      [ "vcl::comp::PolygonBitFlags< ElementType, optional >", "classvcl_1_1comp_1_1PolygonBitFlags.html", null ],
-      [ "vcl::comp::TriangleBitFlags< ElementType, optional >", "classvcl_1_1comp_1_1TriangleBitFlags.html", null ]
-    ] ],
-    [ "vcl::comp::BitFlagsT< BitFlags< void, false >, void, false >", "classvcl_1_1comp_1_1BitFlagsT.html", null ],
-    [ "vcl::comp::BitFlagsT< PolygonBitFlags< void, false >, void, false >", "classvcl_1_1comp_1_1BitFlagsT.html", null ],
-    [ "vcl::comp::BitFlagsT< TriangleBitFlags< void, false >, void, false >", "classvcl_1_1comp_1_1BitFlagsT.html", null ],
-    [ "vcl::BitProxy", "classvcl_1_1BitProxy.html", null ],
-    [ "vcl::comp::BoundingBox< PointType, ElementType, optional >", "classvcl_1_1comp_1_1BoundingBox.html", null ],
+    [ "vcl::BitProxy< T >", "classvcl_1_1BitProxy.html", null ],
+    [ "vcl::BitSet< T >", "classvcl_1_1BitSet.html", null ],
     [ "vcl::Box< PointT >", "classvcl_1_1Box.html", null ],
     [ "vcl::Box< PointType >", "classvcl_1_1Box.html", null ],
     [ "vcl::CellIterator< N >", "classvcl_1_1CellIterator.html", null ],
-    [ "vcl::comp::Color< ElementType, optional >", "classvcl_1_1comp_1_1Color.html", null ],
+    [ "vcl::ComponentString< COMP_TYPE >", "structvcl_1_1ComponentString.html", null ],
+    [ "Comps", null, [
+      [ "vcl::Element< EDGE, MeshType, Comps... >", "classvcl_1_1Element.html", [
+        [ "vcl::Edge< MeshType, Comps... >", "classvcl_1_1Edge.html", [
+          [ "vcl::Edge< MeshType, TypeWrapper< Comps... > >", "classvcl_1_1Edge_3_01MeshType_00_01TypeWrapper_3_01Comps_8_8_8_01_4_01_4.html", null ]
+        ] ],
+        [ "vcl::Edge< MeshType, Comps >", "classvcl_1_1Edge.html", null ]
+      ] ],
+      [ "vcl::Element< FACE, MeshType, Comps... >", "classvcl_1_1Element.html", [
+        [ "vcl::Face< MeshType, Comps... >", "classvcl_1_1Face.html", [
+          [ "vcl::Face< MeshType, TypeWrapper< Comps... > >", "classvcl_1_1Face_3_01MeshType_00_01TypeWrapper_3_01Comps_8_8_8_01_4_01_4.html", null ]
+        ] ],
+        [ "vcl::Face< MeshType, Comps >", "classvcl_1_1Face.html", null ]
+      ] ],
+      [ "vcl::Element< VERTEX, MeshType, Comps... >", "classvcl_1_1Element.html", [
+        [ "vcl::Vertex< MeshType, Comps... >", "classvcl_1_1Vertex.html", [
+          [ "vcl::Vertex< MeshType, TypeWrapper< Comps... > >", "classvcl_1_1Vertex_3_01MeshType_00_01TypeWrapper_3_01Comps_8_8_8_01_4_01_4.html", null ]
+        ] ],
+        [ "vcl::Vertex< MeshType, Comps >", "classvcl_1_1Vertex.html", null ]
+      ] ],
+      [ "vcl::Element< EDGE, EdgeMeshT< Scalar >, Comps... >", "classvcl_1_1Element.html", null ],
+      [ "vcl::Element< VERTEX, EdgeMeshT< Scalar >, Comps... >", "classvcl_1_1Element.html", null ],
+      [ "vcl::Element< FACE, TMPSimplePolyMesh, Comps... >", "classvcl_1_1Element.html", null ],
+      [ "vcl::Element< VERTEX, TMPSimplePolyMesh, Comps... >", "classvcl_1_1Element.html", null ],
+      [ "vcl::Element< FACE, TMPSimpleTriMesh, Comps... >", "classvcl_1_1Element.html", null ],
+      [ "vcl::Element< VERTEX, TMPSimpleTriMesh, Comps... >", "classvcl_1_1Element.html", null ],
+      [ "vcl::Element< VERTEX, PointCloudT< Scalar >, Comps... >", "classvcl_1_1Element.html", null ],
+      [ "vcl::Element< FACE, PolyMeshT< Scalar >, Comps... >", "classvcl_1_1Element.html", null ],
+      [ "vcl::Element< VERTEX, PolyMeshT< Scalar >, Comps... >", "classvcl_1_1Element.html", null ],
+      [ "vcl::Element< FACE, TriMeshT< Scalar >, Comps... >", "classvcl_1_1Element.html", null ],
+      [ "vcl::Element< VERTEX, TriMeshT< Scalar >, Comps... >", "classvcl_1_1Element.html", null ],
+      [ "vcl::Element< ELEM_TYPE, MeshType, Comps >", "classvcl_1_1Element.html", [
+        [ "vcl::Edge< EdgeMeshT< Scalar >, vcl::edge::BitFlags, vcl::edge::VertexPointers< Vertex< Scalar > >, vcl::edge::OptionalQuality< Scalar, Edge< Scalar > >, vcl::edge::OptionalColor< Edge< Scalar > >, vcl::edge::OptionalAdjacentEdges< Edge< Scalar > >, vcl::edge::OptionalMark< Edge< Scalar > >, vcl::edge::CustomComponents< Edge< Scalar > > >", "classvcl_1_1Edge.html", [
+          [ "vcl::edgemesh::Edge< Scalar >", "classvcl_1_1edgemesh_1_1Edge.html", null ]
+        ] ],
+        [ "vcl::Face< TMPSimplePolyMesh, vcl::face::PolygonBitFlags, vcl::face::PolygonVertexPtrs< PolyVertex > >", "classvcl_1_1Face.html", null ],
+        [ "vcl::Face< TMPSimpleTriMesh, vcl::face::TriangleBitFlags, vcl::face::TriangleVertexPtrs< TriVertex > >", "classvcl_1_1Face.html", null ],
+        [ "vcl::Face< PolyMeshT< Scalar >, vcl::face::PolygonBitFlags, vcl::face::PolygonVertexPtrs< Vertex< Scalar > >, vcl::face::Normal3< Scalar >, vcl::face::OptionalColor< Face< Scalar > >, vcl::face::OptionalQuality< Scalar, Face< Scalar > >, vcl::face::OptionalAdjacentPolygons< Face< Scalar > >, vcl::face::OptionalPolygonWedgeTexCoords< Scalar, Face< Scalar > >, vcl::face::CustomComponents< Face< Scalar > > >", "classvcl_1_1Face.html", [
+          [ "vcl::polymesh::Face< Scalar >", "classvcl_1_1polymesh_1_1Face.html", null ]
+        ] ],
+        [ "vcl::Face< TriMeshT< Scalar >, vcl::face::TriangleBitFlags, vcl::face::TriangleVertexPtrs< Vertex< Scalar > >, vcl::face::Normal3< Scalar >, vcl::face::OptionalQuality< Scalar, Face< Scalar > >, vcl::face::OptionalColor< Face< Scalar > >, vcl::face::OptionalAdjacentTriangles< Face< Scalar > >, vcl::face::OptionalTriangleWedgeTexCoords< Scalar, Face< Scalar > >, vcl::face::OptionalMark< Face< Scalar > >, vcl::face::CustomComponents< Face< Scalar > > >", "classvcl_1_1Face.html", [
+          [ "vcl::trimesh::Face< Scalar >", "classvcl_1_1trimesh_1_1Face.html", null ]
+        ] ],
+        [ "vcl::Vertex< EdgeMeshT< Scalar >, vcl::vert::BitFlags, vcl::vert::Coordinate3< Scalar >, vcl::vert::Normal3< Scalar >, vcl::vert::Color, vcl::vert::Quality< Scalar >, vcl::vert::OptionalAdjacentEdges< Edge< Scalar >, Vertex< Scalar > >, vcl::vert::OptionalAdjacentVertices< Vertex< Scalar > >, vcl::vert::OptionalTexCoord< Scalar, Vertex< Scalar > >, vcl::vert::OptionalMark< Vertex< Scalar > >, vcl::vert::CustomComponents< Vertex< Scalar > > >", "classvcl_1_1Vertex.html", [
+          [ "vcl::edgemesh::Vertex< Scalar >", "classvcl_1_1edgemesh_1_1Vertex.html", null ]
+        ] ],
+        [ "vcl::Vertex< TMPSimplePolyMesh, vcl::vert::BitFlags, vcl::vert::Coordinate3d >", "classvcl_1_1Vertex.html", null ],
+        [ "vcl::Vertex< TMPSimpleTriMesh, vcl::vert::BitFlags, vcl::vert::Coordinate3d >", "classvcl_1_1Vertex.html", null ],
+        [ "vcl::Vertex< PointCloudT< Scalar >, vcl::vert::BitFlags, vcl::vert::Coordinate3< Scalar >, vcl::vert::Normal3< Scalar >, vcl::vert::Color, vcl::vert::Quality< Scalar >, vcl::vert::OptionalTexCoord< Scalar, Vertex< Scalar > >, vcl::vert::OptionalMark< Vertex< Scalar > >, vcl::vert::CustomComponents< Vertex< Scalar > > >", "classvcl_1_1Vertex.html", [
+          [ "vcl::pointcloud::Vertex< Scalar >", "classvcl_1_1pointcloud_1_1Vertex.html", null ]
+        ] ],
+        [ "vcl::Vertex< PolyMeshT< Scalar >, vcl::vert::BitFlags, vcl::vert::Coordinate3< Scalar >, vcl::vert::Normal3< Scalar >, vcl::vert::Color, vcl::vert::Quality< Scalar >, vcl::vert::OptionalTexCoord< Scalar, Vertex< Scalar > >, vcl::vert::OptionalAdjacentFaces< Face< Scalar >, Vertex< Scalar > >, vcl::vert::OptionalAdjacentVertices< Vertex< Scalar > >, vcl::vert::OptionalPrincipalCurvature< Scalar, Vertex< Scalar > >, vcl::vert::CustomComponents< Vertex< Scalar > > >", "classvcl_1_1Vertex.html", [
+          [ "vcl::polymesh::Vertex< Scalar >", "classvcl_1_1polymesh_1_1Vertex.html", null ]
+        ] ],
+        [ "vcl::Vertex< TriMeshT< Scalar >, vcl::vert::BitFlags, vcl::vert::Coordinate3< Scalar >, vcl::vert::Normal3< Scalar >, vcl::vert::Color, vcl::vert::Quality< Scalar >, vcl::vert::OptionalAdjacentFaces< Face< Scalar >, Vertex< Scalar > >, vcl::vert::OptionalAdjacentVertices< Vertex< Scalar > >, vcl::vert::OptionalPrincipalCurvature< Scalar, Vertex< Scalar > >, vcl::vert::OptionalTexCoord< Scalar, Vertex< Scalar > >, vcl::vert::OptionalMark< Vertex< Scalar > >, vcl::vert::CustomComponents< Vertex< Scalar > > >", "classvcl_1_1Vertex.html", [
+          [ "vcl::trimesh::Vertex< Scalar >", "classvcl_1_1trimesh_1_1Vertex.html", null ]
+        ] ]
+      ] ]
+    ] ],
     [ "vcl::ConstMeshEdgeUtil< MeshType >", "classvcl_1_1ConstMeshEdgeUtil.html", null ],
     [ "vcl::ConstStaticGridIterator< KeyType, ValueType, GridType >", "classvcl_1_1ConstStaticGridIterator.html", null ],
-    [ "vcl::comp::CoordT< P, ElementType, optional >", "classvcl_1_1comp_1_1CoordT.html", null ],
+    [ "vcl::mesh::ContainerOfElement< EL_TYPE, MeshType >", "structvcl_1_1mesh_1_1ContainerOfElement.html", null ],
+    [ "vcl::mesh::ContainerOfElement< EL_TYPE, Mesh< Args... > >", "structvcl_1_1mesh_1_1ContainerOfElement.html", null ],
+    [ "internal::ContCompBase", null, [
+      [ "vcl::comp::ContainerComponent< COMP_TYPE, Edge *, N, void, void, OPT, TTVN, Edge >", "classvcl_1_1comp_1_1ContainerComponent.html", null ],
+      [ "vcl::comp::ContainerComponent< COMP_TYPE, Face *, N, void, void, OPT, TTVN, Face >", "classvcl_1_1comp_1_1ContainerComponent.html", null ],
+      [ "vcl::comp::ContainerComponent< COMP_TYPE, Vertex *, N, void, void, OPT, TTVN, Vertex >", "classvcl_1_1comp_1_1ContainerComponent.html", null ],
+      [ "vcl::comp::ContainerComponent< COMP_TYPE, Elem *, N, void, ElementType, OPT, TTVN, Elem >", "classvcl_1_1comp_1_1ContainerComponent.html", [
+        [ "vcl::comp::PointersContainerComponent< COMP_TYPE, Elem, N, ElementType, OPT, TTVN >", "classvcl_1_1comp_1_1PointersContainerComponent.html", [
+          [ "vcl::comp::AdjacentEdges< Edge, N, TTVN, ElementType, OPT >", "classvcl_1_1comp_1_1AdjacentEdges.html", null ],
+          [ "vcl::comp::AdjacentFaces< Face, N, TTVN, ElementType, OPT >", "classvcl_1_1comp_1_1AdjacentFaces.html", null ],
+          [ "vcl::comp::AdjacentVertices< Vertex, ElementType, OPT >", "classvcl_1_1comp_1_1AdjacentVertices.html", null ],
+          [ "vcl::comp::VertexPointers< Vertex, N, ElementType, OPT >", "classvcl_1_1comp_1_1VertexPointers.html", null ]
+        ] ]
+      ] ],
+      [ "vcl::comp::ContainerComponent< BIT_FLAGS, BitSet< int >, N, BitSet< int >, void, false, true >", "classvcl_1_1comp_1_1ContainerComponent.html", null ],
+      [ "vcl::comp::ContainerComponent< WEDGE_COLORS, vcl::Color, N, void, void, false, true >", "classvcl_1_1comp_1_1ContainerComponent.html", null ],
+      [ "vcl::comp::ContainerComponent< WEDGE_TEX_COORDS, vcl::TexCoord< Scalar >, N, short, void, false, true >", "classvcl_1_1comp_1_1ContainerComponent.html", null ],
+      [ "vcl::comp::ContainerComponent< COMP_TYPE, T, N, AdditionalData, ElementType, OPT, TTVN, PointedTypes >", "classvcl_1_1comp_1_1ContainerComponent.html", [
+        [ "vcl::comp::PointersContainerComponent< ADJACENT_EDGES, Edge, N, void, false, TTVN >", "classvcl_1_1comp_1_1PointersContainerComponent.html", null ],
+        [ "vcl::comp::PointersContainerComponent< ADJACENT_FACES, Face, N, void, false, TTVN >", "classvcl_1_1comp_1_1PointersContainerComponent.html", null ],
+        [ "vcl::comp::PointersContainerComponent< ADJACENT_VERTICES, Vertex, -1, void, false, false >", "classvcl_1_1comp_1_1PointersContainerComponent.html", null ],
+        [ "vcl::comp::PointersContainerComponent< VERTEX_PTRS, Vertex, N, void, false, false >", "classvcl_1_1comp_1_1PointersContainerComponent.html", null ],
+        [ "vcl::comp::PolygonBitFlags< N, ElementType, OPT >", "classvcl_1_1comp_1_1PolygonBitFlags.html", null ],
+        [ "vcl::comp::WedgeColors< N, ElementType, OPT >", "classvcl_1_1comp_1_1WedgeColors.html", null ],
+        [ "vcl::comp::WedgeTexCoords< Scalar, N, ElementType, OPT >", "classvcl_1_1comp_1_1WedgeTexCoords.html", null ]
+      ] ]
+    ] ],
     [ "vcl::CreateSphereArgs", "structvcl_1_1CreateSphereArgs.html", null ],
+    [ "vcl::FileMeshInfo::CustomComponent", "structvcl_1_1FileMeshInfo_1_1CustomComponent.html", null ],
     [ "vcl::comp::CustomComponents< ElementType >", "classvcl_1_1comp_1_1CustomComponents.html", null ],
     [ "vcl::mesh::CustomComponentsVectorMap< typename, HasCustomComponent >", "classvcl_1_1mesh_1_1CustomComponentsVectorMap.html", null ],
     [ "vcl::mesh::CustomComponentsVectorMap< T, comp::HasCustomComponents< T > >", "classvcl_1_1mesh_1_1CustomComponentsVectorMap.html", null ],
     [ "vcl::mesh::CustomComponentsVectorMap< T, true >", "classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01T_00_01true_01_4.html", null ],
     [ "vcl::CustomComponentVectorHandle< T >", "classvcl_1_1CustomComponentVectorHandle.html", null ],
     [ "vcl::DistFunctionStruct< Obj1, Obj2, ScalarType >", "structvcl_1_1DistFunctionStruct.html", null ],
-    [ "vcl::DistFunctionStruct< Obj1 *, Obj2 *, ScalarType >", "structvcl_1_1DistFunctionStruct_3_01Obj1_01_5_00_01Obj2_01_5_00_01ScalarType_01_4.html", null ],
-    [ "vcl::DistFunctionStruct< Obj1 *, Obj2, ScalarType >", "structvcl_1_1DistFunctionStruct_3_01Obj1_01_5_00_01Obj2_00_01ScalarType_01_4.html", null ],
-    [ "vcl::DistFunctionStruct< Obj1, Obj2 *, ScalarType >", "structvcl_1_1DistFunctionStruct_3_01Obj1_00_01Obj2_01_5_00_01ScalarType_01_4.html", null ],
     [ "vcl::DistFunctionStruct< Obj1, Obj2, ScalarType >", "structvcl_1_1DistFunctionStruct_3_01Obj1_00_01Obj2_00_01ScalarType_01_4.html", null ],
     [ "vcl::Distribution< Scalar >", "classvcl_1_1Distribution.html", null ],
     [ "vcl::DrawableObject", "classvcl_1_1DrawableObject.html", [
@@ -133,21 +141,15 @@ var hierarchy =
     ] ],
     [ "vcl::DrawableObjectVector", "classvcl_1_1DrawableObjectVector.html", null ],
     [ "vcl::EdgeAdjFaceIterator< FaceType, CNST >", "classvcl_1_1EdgeAdjFaceIterator.html", null ],
+    [ "vcl::ElemenetString< ELEM_TYPE >", "structvcl_1_1ElemenetString.html", null ],
     [ "vcl::io::ply::Element", "structvcl_1_1io_1_1ply_1_1Element.html", null ],
     [ "vcl::ElementContainerIterator< Container, T, CNST >", "classvcl_1_1ElementContainerIterator.html", null ],
     [ "vcl::mesh::ElementContainerTriggerer", "classvcl_1_1mesh_1_1ElementContainerTriggerer.html", [
       [ "vcl::mesh::ElementContainer< T >", "classvcl_1_1mesh_1_1ElementContainer.html", [
         [ "vcl::mesh::EdgeContainer< T >", "classvcl_1_1mesh_1_1EdgeContainer.html", null ],
         [ "vcl::mesh::FaceContainer< T >", "classvcl_1_1mesh_1_1FaceContainer.html", null ],
-        [ "vcl::mesh::HalfEdgeContainer< T >", "classvcl_1_1mesh_1_1HalfEdgeContainer.html", null ],
         [ "vcl::mesh::VertexContainer< T >", "classvcl_1_1mesh_1_1VertexContainer.html", null ]
       ] ]
-    ] ],
-    [ "vcl::comp::internal::ElementReferences< Elem, N, ElementType >", null, [
-      [ "vcl::comp::AdjacentEdges< Edge, N, ElementType, optional >", "classvcl_1_1comp_1_1AdjacentEdges.html", null ],
-      [ "vcl::comp::AdjacentFaces< Face, N, ElementType, optional >", "classvcl_1_1comp_1_1AdjacentFaces.html", null ],
-      [ "vcl::comp::AdjacentVertices< Vertex, ElementType, optional >", "classvcl_1_1comp_1_1AdjacentVertices.html", null ],
-      [ "vcl::comp::VertexReferences< Vertex, N, ElementType, optional >", "classvcl_1_1comp_1_1VertexReferences.html", null ]
     ] ],
     [ "std::exception", null, [
       [ "std::runtime_error", null, [
@@ -165,15 +167,9 @@ var hierarchy =
         [ "vcl::UnknownFileFormatException", "classvcl_1_1UnknownFileFormatException.html", null ]
       ] ]
     ] ],
-    [ "vcl::FaceAdjFaceIterator< HalfEdge, CNST >", "classvcl_1_1FaceAdjFaceIterator.html", null ],
-    [ "vcl::FaceHalfEdgeIterator< HalfEdge, CNST >", "classvcl_1_1FaceHalfEdgeIterator.html", null ],
-    [ "vcl::FaceVertexIterator< HalfEdge, CNST >", "classvcl_1_1FaceVertexIterator.html", null ],
-    [ "vcl::FaceWedgeColorIterator< HalfEdge, CNST >", "classvcl_1_1FaceWedgeColorIterator.html", null ],
-    [ "vcl::FaceWedgeTexCoordIterator< HalfEdge, CNST >", "classvcl_1_1FaceWedgeTexCoordIterator.html", null ],
     [ "std::false_type", null, [
       [ "vcl::edge::IsAnEdge< T >", "structvcl_1_1edge_1_1IsAnEdge.html", null ],
       [ "vcl::face::IsAFace< T >", "structvcl_1_1face_1_1IsAFace.html", null ],
-      [ "vcl::hedge::IsAHalfEdge< T >", "structvcl_1_1hedge_1_1IsAHalfEdge.html", null ],
       [ "vcl::mesh::IsAMesh< T >", "structvcl_1_1mesh_1_1IsAMesh.html", null ],
       [ "vcl::vert::IsAVertex< T >", "structvcl_1_1vert_1_1IsAVertex.html", null ]
     ] ],
@@ -198,6 +194,8 @@ var hierarchy =
         [ "vcl::HashTableGrid< GridType, ValueType, AllowDuplicates >", "classvcl_1_1HashTableGrid.html", null ]
       ] ]
     ] ],
+    [ "vcl::mesh::HasContainerOfElementPred< EL_TYPE, MeshType >", "structvcl_1_1mesh_1_1HasContainerOfElementPred.html", null ],
+    [ "vcl::mesh::HasContainerOfPred< El, MeshType >", "structvcl_1_1mesh_1_1HasContainerOfPred.html", null ],
     [ "vcl::HausdorffDistResult", "structvcl_1_1HausdorffDistResult.html", null ],
     [ "vcl::Histogram< ScalarType >", "classvcl_1_1Histogram.html", null ],
     [ "vcl::Histogram< double >", "classvcl_1_1Histogram.html", null ],
@@ -205,9 +203,8 @@ var hierarchy =
     [ "vcl::IndexInTypes< T, Us >", "structvcl_1_1IndexInTypes.html", null ],
     [ "vcl::IndexInTypes< T, TypeWrapper< Us... > >", "structvcl_1_1IndexInTypes_3_01T_00_01TypeWrapper_3_01Us_8_8_8_01_4_01_4.html", null ],
     [ "vcl::IntersFunctionStruct< Obj1, Obj2 >", "structvcl_1_1IntersFunctionStruct.html", null ],
-    [ "vcl::IntersFunctionStruct< Obj1 *, Obj2 >", "structvcl_1_1IntersFunctionStruct_3_01Obj1_01_5_00_01Obj2_01_4.html", null ],
-    [ "vcl::IntersFunctionStruct< Obj1, Obj2 * >", "structvcl_1_1IntersFunctionStruct_3_01Obj1_00_01Obj2_01_5_01_4.html", null ],
     [ "vcl::IntersFunctionStruct< Obj1, Obj2 >", "structvcl_1_1IntersFunctionStruct_3_01Obj1_00_01Obj2_01_4.html", null ],
+    [ "vcl::comp::IsComponentPred< T >", "structvcl_1_1comp_1_1IsComponentPred.html", null ],
     [ "vcl::mesh::IsElementContainerPred< T >", "structvcl_1_1mesh_1_1IsElementContainerPred.html", null ],
     [ "vcl::comp::IsVerticalComponentPred< T >", "structvcl_1_1comp_1_1IsVerticalComponentPred.html", null ],
     [ "It", null, [
@@ -221,7 +218,6 @@ var hierarchy =
     ] ],
     [ "vcl::MakeConstPointer< T >", "structvcl_1_1MakeConstPointer.html", null ],
     [ "vcl::MakeConstPointer< T * >", "structvcl_1_1MakeConstPointer_3_01T_01_5_01_4.html", null ],
-    [ "vcl::comp::Mark< ElementType, optional >", "classvcl_1_1comp_1_1Mark.html", null ],
     [ "vcl::Markable< Type >", "classvcl_1_1Markable.html", null ],
     [ "vcl::Markable< Type & >", "classvcl_1_1Markable_3_01Type_01_6_01_4.html", null ],
     [ "vcl::MarkableVector< ValueType >", "classvcl_1_1MarkableVector.html", null ],
@@ -232,11 +228,9 @@ var hierarchy =
     [ "vcl::MeshRenderBuffers< MeshType >", "classvcl_1_1MeshRenderBuffers.html", null ],
     [ "vcl::MeshRenderSettings", "classvcl_1_1MeshRenderSettings.html", null ],
     [ "vcl::MeshSampler< MeshType >", "classvcl_1_1MeshSampler.html", null ],
-    [ "vcl::comp::Name< ElementType, optional >", "classvcl_1_1comp_1_1Name.html", null ],
     [ "vcl::NestedInitializerListsProcessor< T, L >", "classvcl_1_1NestedInitializerListsProcessor.html", null ],
     [ "vcl::NestedInitializerListsProcessor< T, 1 >", "classvcl_1_1NestedInitializerListsProcessor_3_01T_00_011_01_4.html", null ],
     [ "vcl::NodeIterator< Iterator >", "classvcl_1_1NodeIterator.html", null ],
-    [ "vcl::comp::NormalT< P, ElementType, optional >", "classvcl_1_1comp_1_1NormalT.html", null ],
     [ "vcl::NullLogger", "classvcl_1_1NullLogger.html", null ],
     [ "vcl::NumberOfTypes< Args >", "structvcl_1_1NumberOfTypes.html", null ],
     [ "vcl::NumberOfTypes< Args... >", "structvcl_1_1NumberOfTypes.html", [
@@ -252,9 +246,37 @@ var hierarchy =
     [ "vcl::Point< float >", "classvcl_1_1Point.html", null ],
     [ "vcl::Point< Scalar >", "classvcl_1_1Point.html", null ],
     [ "vcl::Point< uint, N >", "classvcl_1_1Point.html", null ],
+    [ "vcl::comp::PointersComponentTriggerer< T >", "classvcl_1_1comp_1_1PointersComponentTriggerer.html", null ],
+    [ "vcl::comp::PointersComponentTriggerer< PointedTypes >", "classvcl_1_1comp_1_1PointersComponentTriggerer.html", [
+      [ "vcl::comp::Component< BIT_FLAGS, BitSet< char >, void, false >", "classvcl_1_1comp_1_1Component.html", null ],
+      [ "vcl::comp::Component< BOUNDING_BOX, Box< PointType >, void, false >", "classvcl_1_1comp_1_1Component.html", null ],
+      [ "vcl::comp::Component< COLOR, vcl::Color, void, false >", "classvcl_1_1comp_1_1Component.html", null ],
+      [ "vcl::comp::Component< COORDINATE, P, void, false >", "classvcl_1_1comp_1_1Component.html", null ],
+      [ "vcl::comp::Component< MARK, int, void, false >", "classvcl_1_1comp_1_1Component.html", null ],
+      [ "vcl::comp::Component< NORMAL, P, void, false >", "classvcl_1_1comp_1_1Component.html", null ],
+      [ "vcl::comp::Component< PRINCIPAL_CURVATURE, vcl::PrincipalCurvature< Scalar >, void, false >", "classvcl_1_1comp_1_1Component.html", null ],
+      [ "vcl::comp::Component< QUALITY, T, void, false >", "classvcl_1_1comp_1_1Component.html", null ],
+      [ "vcl::comp::Component< TEX_COORD, vcl::TexCoord< Scalar >, void, false >", "classvcl_1_1comp_1_1Component.html", null ],
+      [ "vcl::comp::Component< TRANSFORM_MATRIX, Matrix44< Scalar >, void, false >", "classvcl_1_1comp_1_1Component.html", null ],
+      [ "vcl::comp::Component< BIT_FLAGS, BitSet< short >, void, false >", "classvcl_1_1comp_1_1Component.html", null ],
+      [ "vcl::comp::Component< COMP_TYPE, DataType, ElementType, OPT, PointedTypes >", "classvcl_1_1comp_1_1Component.html", [
+        [ "vcl::comp::BitFlags< ElementType, OPT >", "classvcl_1_1comp_1_1BitFlags.html", null ],
+        [ "vcl::comp::BoundingBox< PointType, ElementType, OPT >", "classvcl_1_1comp_1_1BoundingBox.html", null ],
+        [ "vcl::comp::Color< ElementType, OPT >", "classvcl_1_1comp_1_1Color.html", null ],
+        [ "vcl::comp::Coordinate< P, ElementType, OPT >", "classvcl_1_1comp_1_1Coordinate.html", null ],
+        [ "vcl::comp::Mark< ElementType, OPT >", "classvcl_1_1comp_1_1Mark.html", null ],
+        [ "vcl::comp::Name< ElementType, OPT >", "classvcl_1_1comp_1_1Name.html", null ],
+        [ "vcl::comp::Normal< P, ElementType, OPT >", "classvcl_1_1comp_1_1Normal.html", null ],
+        [ "vcl::comp::PrincipalCurvature< Scalar, ElementType, OPT >", "classvcl_1_1comp_1_1PrincipalCurvature.html", null ],
+        [ "vcl::comp::Quality< T, ElementType, OPT >", "classvcl_1_1comp_1_1Quality.html", null ],
+        [ "vcl::comp::TexCoord< Scalar, ElementType, OPT >", "classvcl_1_1comp_1_1TexCoord.html", null ],
+        [ "vcl::comp::TexturePaths< ElementType, OPT >", "classvcl_1_1comp_1_1TexturePaths.html", null ],
+        [ "vcl::comp::TransformMatrix< Scalar, ElementType, OPT >", "classvcl_1_1comp_1_1TransformMatrix.html", null ],
+        [ "vcl::comp::TriangleBitFlags< ElementType, OPT >", "classvcl_1_1comp_1_1TriangleBitFlags.html", null ]
+      ] ]
+    ] ],
     [ "vcl::PointSampler< PointT >", "classvcl_1_1PointSampler.html", null ],
     [ "vcl::Polygon< PointT >", "classvcl_1_1Polygon.html", null ],
-    [ "vcl::comp::PrincipalCurvature< Scalar, ElementType, optional >", "classvcl_1_1comp_1_1PrincipalCurvature.html", null ],
     [ "vcl::PrincipalCurvature< Scalar >", "classvcl_1_1PrincipalCurvature.html", null ],
     [ "vcl::io::ply::Property", "structvcl_1_1io_1_1ply_1_1Property.html", null ],
     [ "QFrame", null, [
@@ -271,29 +293,10 @@ var hierarchy =
     [ "QMainWindow", null, [
       [ "vcl::ViewerMainWindow", "classvcl_1_1ViewerMainWindow.html", null ]
     ] ],
-    [ "vcl::comp::ReferencesComponentTriggerer< T >", "classvcl_1_1comp_1_1ReferencesComponentTriggerer.html", null ],
-    [ "vcl::comp::ReferencesComponentTriggerer< Edge >", "classvcl_1_1comp_1_1ReferencesComponentTriggerer.html", [
-      [ "vcl::comp::AdjacentEdges< Edge, N, ElementType, optional >", "classvcl_1_1comp_1_1AdjacentEdges.html", null ]
-    ] ],
-    [ "vcl::comp::ReferencesComponentTriggerer< Face >", "classvcl_1_1comp_1_1ReferencesComponentTriggerer.html", [
-      [ "vcl::comp::AdjacentFaces< Face, N, ElementType, optional >", "classvcl_1_1comp_1_1AdjacentFaces.html", null ],
-      [ "vcl::comp::HalfEdgeReferences< HalfEdge, Vertex, Face, ElementType, optional >", "classvcl_1_1comp_1_1HalfEdgeReferences.html", null ]
-    ] ],
-    [ "vcl::comp::ReferencesComponentTriggerer< HalfEdge >", "classvcl_1_1comp_1_1ReferencesComponentTriggerer.html", [
-      [ "vcl::comp::FaceHalfEdgeReference< HalfEdge, ElementType, optional >", "classvcl_1_1comp_1_1FaceHalfEdgeReference.html", null ],
-      [ "vcl::comp::HalfEdgeReferences< HalfEdge, Vertex, Face, ElementType, optional >", "classvcl_1_1comp_1_1HalfEdgeReferences.html", null ],
-      [ "vcl::comp::VertexHalfEdgeReference< HalfEdge, ElementType, optional >", "classvcl_1_1comp_1_1VertexHalfEdgeReference.html", null ]
-    ] ],
-    [ "vcl::comp::ReferencesComponentTriggerer< Vertex >", "classvcl_1_1comp_1_1ReferencesComponentTriggerer.html", [
-      [ "vcl::comp::AdjacentVertices< Vertex, ElementType, optional >", "classvcl_1_1comp_1_1AdjacentVertices.html", null ],
-      [ "vcl::comp::HalfEdgeReferences< HalfEdge, Vertex, Face, ElementType, optional >", "classvcl_1_1comp_1_1HalfEdgeReferences.html", null ],
-      [ "vcl::comp::VertexReferences< Vertex, N, ElementType, optional >", "classvcl_1_1comp_1_1VertexReferences.html", null ]
-    ] ],
     [ "vcl::RefPair< T1, T2 >", "classvcl_1_1RefPair.html", [
       [ "vcl::KeyRefValueRefPair< T1, T2 >", "classvcl_1_1KeyRefValueRefPair.html", null ]
     ] ],
     [ "vcl::RegularGrid< Scalar, N >", "classvcl_1_1RegularGrid.html", null ],
-    [ "vcl::comp::Scalar< T, ElementType, optional >", "classvcl_1_1comp_1_1Scalar.html", null ],
     [ "vcl::SecondRefPair< T1, T2 >", "classvcl_1_1SecondRefPair.html", [
       [ "vcl::KeyValueRefPair< T1, T2 >", "classvcl_1_1KeyValueRefPair.html", null ]
     ] ],
@@ -302,19 +305,15 @@ var hierarchy =
     [ "vcl::Segment< PointT >", "classvcl_1_1Segment.html", null ],
     [ "vcl::Sphere< Scalar >", "classvcl_1_1Sphere.html", null ],
     [ "vcl::StaticGridIterator< KeyType, ValueType, GridType >", "classvcl_1_1StaticGridIterator.html", null ],
-    [ "vcl::comp::TexCoord< Scalar, ElementType, optional >", "classvcl_1_1comp_1_1TexCoord.html", null ],
     [ "vcl::TexCoord< Scalar >", "classvcl_1_1TexCoord.html", null ],
-    [ "vcl::comp::TexturePaths< ElementType, optional >", "classvcl_1_1comp_1_1TexturePaths.html", null ],
     [ "vcl::Timer", "classvcl_1_1Timer.html", null ],
     [ "vcl::Tokenizer", "classvcl_1_1Tokenizer.html", null ],
-    [ "vcl::comp::TransformMatrix< Scalar, ElementType, optional >", "classvcl_1_1comp_1_1TransformMatrix.html", null ],
     [ "vcl::Triangle< PointT >", "classvcl_1_1Triangle.html", null ],
     [ "vcl::TriangleWrapper< PointT >", "classvcl_1_1TriangleWrapper.html", null ],
     [ "vcl::TriPolyIndexBiMap", "classvcl_1_1TriPolyIndexBiMap.html", null ],
     [ "std::true_type", null, [
       [ "vcl::edge::IsAnEdge< Edge< Args... > >", "structvcl_1_1edge_1_1IsAnEdge_3_01Edge_3_01Args_8_8_8_01_4_01_4.html", null ],
       [ "vcl::face::IsAFace< Face< Args... > >", "structvcl_1_1face_1_1IsAFace_3_01Face_3_01Args_8_8_8_01_4_01_4.html", null ],
-      [ "vcl::hedge::IsAHalfEdge< HalfEdge< Args... > >", "structvcl_1_1hedge_1_1IsAHalfEdge_3_01HalfEdge_3_01Args_8_8_8_01_4_01_4.html", null ],
       [ "vcl::mesh::IsAMesh< Mesh< Args... > >", "structvcl_1_1mesh_1_1IsAMesh_3_01Mesh_3_01Args_8_8_8_01_4_01_4.html", null ],
       [ "vcl::vert::IsAVertex< Vertex< Args... > >", "structvcl_1_1vert_1_1IsAVertex_3_01Vertex_3_01Args_8_8_8_01_4_01_4.html", null ]
     ] ],
@@ -324,15 +323,10 @@ var hierarchy =
     [ "vcl::UndirectedNode< T >", "classvcl_1_1UndirectedNode.html", null ],
     [ "vcl::UnorderedPairComparator< T >", "structvcl_1_1UnorderedPairComparator.html", null ],
     [ "vcl::Vector< T, N >", "classvcl_1_1Vector.html", null ],
-    [ "vcl::Vector< vcl::TexCoord< vcl::comp::Scalar >, N >", "classvcl_1_1Vector.html", null ],
-    [ "vcl::VertexAdjFaceIterator< HalfEdge, CNST >", "classvcl_1_1VertexAdjFaceIterator.html", null ],
-    [ "vcl::VertexAdjVertexIterator< HalfEdge, CNST >", "classvcl_1_1VertexAdjVertexIterator.html", null ],
     [ "vcl::mesh::VerticalComponentsVectorTuple< Comp >", "classvcl_1_1mesh_1_1VerticalComponentsVectorTuple.html", null ],
     [ "vcl::mesh::VerticalComponentsVectorTuple< Comp... >", "classvcl_1_1mesh_1_1VerticalComponentsVectorTuple.html", [
       [ "vcl::mesh::VerticalComponentsVectorTuple< TypeWrapper< Comp... > >", "classvcl_1_1mesh_1_1VerticalComponentsVectorTuple_3_01TypeWrapper_3_01Comp_8_8_8_01_4_01_4.html", null ]
     ] ],
     [ "vcl::mesh::VerticalComponentsVectorTuple< vComps >", "classvcl_1_1mesh_1_1VerticalComponentsVectorTuple.html", null ],
-    [ "vcl::View< It >", "classvcl_1_1View.html", null ],
-    [ "vcl::comp::WedgeColors< N, ElementType, optional >", "classvcl_1_1comp_1_1WedgeColors.html", null ],
-    [ "vcl::comp::WedgeTexCoords< Scalar, N, ElementType, optional >", "classvcl_1_1comp_1_1WedgeTexCoords.html", null ]
+    [ "vcl::View< It >", "classvcl_1_1View.html", null ]
 ];

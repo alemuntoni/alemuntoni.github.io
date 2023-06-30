@@ -99,16 +99,16 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1IsPointer.html',''); ini
 </div><!--header-->
 <div class="contents">
 
-<p>Utility concept that is evaluated true if T is a Pointer.  
+<p>Utility concept that is evaluated true if T is a Pointer, even if the type is a T is a reference to a pointer.  
 <a href="conceptvcl_1_1IsPointer.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="concepts_2pointers_8h_source.html">vclib/concepts/pointers.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1IsPointer.html">vcl::IsPointer</a> =  std::is_pointer_v&lt;std::remove_reference_t&lt;T&gt;&gt;</div>
-<div class="ttc" id="aconceptvcl_1_1IsPointer_html"><div class="ttname"><a href="conceptvcl_1_1IsPointer.html">vcl::IsPointer</a></div><div class="ttdoc">Utility concept that is evaluated true if T is a Pointer.</div><div class="ttdef"><b>Definition:</b> pointers.h:37</div></div>
+<div class="ttc" id="aconceptvcl_1_1IsPointer_html"><div class="ttname"><a href="conceptvcl_1_1IsPointer.html">vcl::IsPointer</a></div><div class="ttdoc">Utility concept that is evaluated true if T is a Pointer, even if the type is a T is a reference to a...</div><div class="ttdef"><b>Definition:</b> pointers.h:38</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Utility concept that is evaluated true if T is a Pointer. </p>
+<div class="textblock"><p>Utility concept that is evaluated true if T is a Pointer, even if the type is a T is a reference to a pointer. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

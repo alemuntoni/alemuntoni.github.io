@@ -112,8 +112,6 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1comp_1_1HasTexturePaths.
 <div class="line">{</div>
 <div class="line">    <span class="keyword">typename</span> T::TexFileNamesIterator;</div>
 <div class="line">    <span class="keyword">typename</span> T::ConstTexFileNamesIterator;</div>
-<div class="line">    <span class="keyword">typename</span> T::TexFileNamesView;</div>
-<div class="line">    <span class="keyword">typename</span> T::ConstTexFileNamesView;</div>
 <div class="line"> </div>
 <div class="line">    { co.textureNumber() } -&gt; std::same_as&lt;uint&gt;;</div>
 <div class="line">    { co.texturePath(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;const std::string&amp;&gt;;</div>
@@ -126,12 +124,14 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1comp_1_1HasTexturePaths.
 <div class="line"> </div>
 <div class="line">    { o.texturePathBegin() } -&gt; std::same_as&lt;typename T::TexFileNamesIterator&gt;;</div>
 <div class="line">    { o.texturePathEnd() } -&gt; std::same_as&lt;typename T::TexFileNamesIterator&gt;;</div>
-<div class="line">    { co.texturePathBegin() } -&gt; std::same_as&lt;typename T::ConstTexFileNamesIterator&gt;;</div>
-<div class="line">    { co.texturePathEnd() } -&gt; std::same_as&lt;typename T::ConstTexFileNamesIterator&gt;;</div>
-<div class="line">    { o.texturePaths() } -&gt; std::same_as&lt;typename T::TexFileNamesView&gt;;</div>
-<div class="line">    { co.texturePaths() } -&gt; std::same_as&lt;typename T::ConstTexFileNamesView&gt;;</div>
+<div class="line">    { co.texturePathBegin() } -&gt;</div>
+<div class="line">        std::same_as&lt;typename T::ConstTexFileNamesIterator&gt;;</div>
+<div class="line">    { co.texturePathEnd() } -&gt;</div>
+<div class="line">        std::same_as&lt;typename T::ConstTexFileNamesIterator&gt;;</div>
+<div class="line">    o.texturePaths();</div>
+<div class="line">    co.texturePaths();</div>
 <div class="line">}</div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasTexturePaths_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasTexturePaths.html">vcl::comp::HasTexturePaths</a></div><div class="ttdoc">HasTexturePaths concept is satisfied only if a Element or Mesh class provides the member functions sp...</div><div class="ttdef"><b>Definition:</b> texture_paths.h:41</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasTexturePaths_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasTexturePaths.html">vcl::comp::HasTexturePaths</a></div><div class="ttdoc">HasTexturePaths concept is satisfied only if a Element or Mesh class provides the member functions sp...</div><div class="ttdef"><b>Definition:</b> texture_paths.h:42</div></div>
 <div class="ttc" id="atypes_2base_8h_html_a69aa29b598b851b0640aa225a9e5d61d"><div class="ttname"><a href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> base.h:31</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>HasTexturePaths concept is satisfied only if a Element or Mesh class provides the member functions specified in this concept. These member functions allows to access to a TexturePaths component of a given element/mesh. </p>

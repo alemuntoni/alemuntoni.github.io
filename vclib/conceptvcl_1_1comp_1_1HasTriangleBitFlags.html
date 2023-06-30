@@ -105,13 +105,12 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1comp_1_1HasTriangleBitFl
 <p><code>#include &lt;<a class="el" href="concepts_2mesh_2components_2bit__flags_8h_source.html">vclib/concepts/mesh/components/bit_flags.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasTriangleBitFlags.html">vcl::comp::HasTriangleBitFlags</a> =  <a class="code hl_concept" href="conceptvcl_1_1comp_1_1FaceBitFlagsConcept.html">FaceBitFlagsConcept&lt;T&gt;</a> &amp;&amp;</div>
+<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasTriangleBitFlags.html">vcl::comp::HasTriangleBitFlags</a> =  internal::FaceBitFlagsConcept&lt;T&gt; &amp;&amp;</div>
 <div class="line">    <span class="keyword">requires</span>(T o)</div>
 <div class="line">{</div>
 <div class="line">    { o.__triangleBitFlags() } -&gt; std::same_as&lt;void&gt;;</div>
 <div class="line">}</div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1FaceBitFlagsConcept_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1FaceBitFlagsConcept.html">vcl::comp::FaceBitFlagsConcept</a></div><div class="ttdoc">Concept for internal use - contains all the flags member functions that are contained on both the Bit...</div><div class="ttdef"><b>Definition:</b> bit_flags.h:63</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasTriangleBitFlags_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasTriangleBitFlags.html">vcl::comp::HasTriangleBitFlags</a></div><div class="ttdoc">HasTriangleBitFlags concept is satisfied only if a Element class (that should be a Face) provides the...</div><div class="ttdef"><b>Definition:</b> bit_flags.h:114</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasTriangleBitFlags_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasTriangleBitFlags.html">vcl::comp::HasTriangleBitFlags</a></div><div class="ttdoc">HasTriangleBitFlags concept is satisfied only if a Element class (that should be a Face) provides the...</div><div class="ttdef"><b>Definition:</b> bit_flags.h:100</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>HasTriangleBitFlags concept is satisfied only if a Element class (that should be a Face) provides the member functions specified in this concept. These member functions allows to access to TriangleBitFlags component of a given element. </p>
 </div></div><!-- contents -->
