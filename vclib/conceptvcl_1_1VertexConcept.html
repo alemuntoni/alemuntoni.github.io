@@ -106,13 +106,15 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1VertexConcept.html','');
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1VertexConcept.html">vcl::VertexConcept</a> = </div>
+<div class="line">    <a class="code hl_concept" href="conceptvcl_1_1ElementConcept.html">ElementConcept&lt;T&gt;</a> &amp;&amp;</div>
 <div class="line">    T::ELEMENT_TYPE == <a class="code hl_enumvalue" href="namespacevcl.html#a64e691de6b710b9fd1dc3d5db66a6f7aa2b976bb23bc172fe0c729ce8f367b76e">VERTEX</a> &amp;&amp;</div>
 <div class="line">    (vert::IsDerivedFromVertex&lt;T&gt;::value || vert::IsAVertex&lt;T&gt;::value) &amp;&amp;</div>
 <div class="line">    <a class="code hl_concept" href="conceptvcl_1_1vert_1_1HasBitFlags.html">vert::HasBitFlags&lt;T&gt;</a> &amp;&amp;</div>
 <div class="line">    <a class="code hl_concept" href="conceptvcl_1_1vert_1_1HasCoordinate.html">vert::HasCoordinate&lt;T&gt;</a></div>
-<div class="ttc" id="aconceptvcl_1_1VertexConcept_html"><div class="ttname"><a href="conceptvcl_1_1VertexConcept.html">vcl::VertexConcept</a></div><div class="ttdoc">The VertexConcept describes how a Vertex element that can be used for a VertexContainer should be org...</div><div class="ttdef"><b>Definition:</b> vertex.h:127</div></div>
-<div class="ttc" id="aconceptvcl_1_1vert_1_1HasBitFlags_html"><div class="ttname"><a href="conceptvcl_1_1vert_1_1HasBitFlags.html">vcl::vert::HasBitFlags</a></div><div class="ttdef"><b>Definition:</b> vertex.h:81</div></div>
-<div class="ttc" id="aconceptvcl_1_1vert_1_1HasCoordinate_html"><div class="ttname"><a href="conceptvcl_1_1vert_1_1HasCoordinate.html">vcl::vert::HasCoordinate</a></div><div class="ttdef"><b>Definition:</b> vertex.h:89</div></div>
+<div class="ttc" id="aconceptvcl_1_1ElementConcept_html"><div class="ttname"><a href="conceptvcl_1_1ElementConcept.html">vcl::ElementConcept</a></div><div class="ttdef"><b>Definition:</b> element.h:34</div></div>
+<div class="ttc" id="aconceptvcl_1_1VertexConcept_html"><div class="ttname"><a href="conceptvcl_1_1VertexConcept.html">vcl::VertexConcept</a></div><div class="ttdoc">The VertexConcept describes how a Vertex element that can be used for a VertexContainer should be org...</div><div class="ttdef"><b>Definition:</b> vertex.h:130</div></div>
+<div class="ttc" id="aconceptvcl_1_1vert_1_1HasBitFlags_html"><div class="ttname"><a href="conceptvcl_1_1vert_1_1HasBitFlags.html">vcl::vert::HasBitFlags</a></div><div class="ttdef"><b>Definition:</b> vertex.h:83</div></div>
+<div class="ttc" id="aconceptvcl_1_1vert_1_1HasCoordinate_html"><div class="ttname"><a href="conceptvcl_1_1vert_1_1HasCoordinate.html">vcl::vert::HasCoordinate</a></div><div class="ttdef"><b>Definition:</b> vertex.h:91</div></div>
 <div class="ttc" id="anamespacevcl_html_a64e691de6b710b9fd1dc3d5db66a6f7aa2b976bb23bc172fe0c729ce8f367b76e"><div class="ttname"><a href="namespacevcl.html#a64e691de6b710b9fd1dc3d5db66a6f7aa2b976bb23bc172fe0c729ce8f367b76e">vcl::VERTEX</a></div><div class="ttdeci">@ VERTEX</div><div class="ttdef"><b>Definition:</b> mesh_elements.h:32</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The VertexConcept describes how a Vertex element that can be used for a VertexContainer should be organized. </p>

@@ -106,12 +106,14 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1EdgeConcept.html',''); i
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1EdgeConcept.html">vcl::EdgeConcept</a> = </div>
+<div class="line">    <a class="code hl_concept" href="conceptvcl_1_1ElementConcept.html">ElementConcept&lt;T&gt;</a> &amp;&amp;</div>
 <div class="line">    T::ELEMENT_TYPE == <a class="code hl_enumvalue" href="namespacevcl.html#a64e691de6b710b9fd1dc3d5db66a6f7aa277eb4b09247da79fe02b8a334452e67">EDGE</a> &amp;&amp;</div>
 <div class="line">    (edge::IsDerivedFromEdge&lt;T&gt;::value || edge::IsAnEdge&lt;T&gt;::value) &amp;&amp;</div>
 <div class="line">    <a class="code hl_concept" href="conceptvcl_1_1edge_1_1HasBitFlags.html">edge::HasBitFlags&lt;T&gt;</a> &amp;&amp;</div>
 <div class="line">    <a class="code hl_concept" href="conceptvcl_1_1edge_1_1HasVertexPointers.html">edge::HasVertexPointers&lt;T&gt;</a> &amp;&amp;</div>
 <div class="line">    T::VERTEX_NUMBER == 2</div>
-<div class="ttc" id="aconceptvcl_1_1EdgeConcept_html"><div class="ttname"><a href="conceptvcl_1_1EdgeConcept.html">vcl::EdgeConcept</a></div><div class="ttdoc">The EdgeConcept describes how a Edge element that can be used for a EdgeContainer should be organized...</div><div class="ttdef"><b>Definition:</b> edge.h:112</div></div>
+<div class="ttc" id="aconceptvcl_1_1EdgeConcept_html"><div class="ttname"><a href="conceptvcl_1_1EdgeConcept.html">vcl::EdgeConcept</a></div><div class="ttdoc">The EdgeConcept describes how a Edge element that can be used for a EdgeContainer should be organized...</div><div class="ttdef"><b>Definition:</b> edge.h:113</div></div>
+<div class="ttc" id="aconceptvcl_1_1ElementConcept_html"><div class="ttname"><a href="conceptvcl_1_1ElementConcept.html">vcl::ElementConcept</a></div><div class="ttdef"><b>Definition:</b> element.h:34</div></div>
 <div class="ttc" id="aconceptvcl_1_1edge_1_1HasBitFlags_html"><div class="ttname"><a href="conceptvcl_1_1edge_1_1HasBitFlags.html">vcl::edge::HasBitFlags</a></div><div class="ttdef"><b>Definition:</b> edge.h:77</div></div>
 <div class="ttc" id="aconceptvcl_1_1edge_1_1HasVertexPointers_html"><div class="ttname"><a href="conceptvcl_1_1edge_1_1HasVertexPointers.html">vcl::edge::HasVertexPointers</a></div><div class="ttdef"><b>Definition:</b> edge.h:93</div></div>
 <div class="ttc" id="anamespacevcl_html_a64e691de6b710b9fd1dc3d5db66a6f7aa277eb4b09247da79fe02b8a334452e67"><div class="ttname"><a href="namespacevcl.html#a64e691de6b710b9fd1dc3d5db66a6f7aa277eb4b09247da79fe02b8a334452e67">vcl::EDGE</a></div><div class="ttdeci">@ EDGE</div><div class="ttdef"><b>Definition:</b> mesh_elements.h:34</div></div>

@@ -1,24 +1,5 @@
 var NAVTREEINDEX27 =
 {
-"vertex__requirements_8cpp.html#af71077b0dd03e109c80a05dc1bcafdf5":[11,0,0,0,7,3,8,16],
-"vertex__requirements_8h.html":[11,0,0,0,7,3,9],
-"vertex__requirements_8h.html#a0120edd84580c8e6bd446c913937c937":[11,0,0,0,7,3,9,13],
-"vertex__requirements_8h.html#a1f6666a7b9cd7293ab07aaf6cbc1dc4c":[11,0,0,0,7,3,9,17],
-"vertex__requirements_8h.html#a224534742afebeedf036df597231c700":[11,0,0,0,7,3,9,18],
-"vertex__requirements_8h.html#a2b69a485cf086be8551cc40210172e6a":[11,0,0,0,7,3,9,9],
-"vertex__requirements_8h.html#a32903e0a292bcdaa77ab10536316c531":[11,0,0,0,7,3,9,8],
-"vertex__requirements_8h.html#a369d2067cce035b7b4a710c5b364a28c":[11,0,0,0,7,3,9,7],
-"vertex__requirements_8h.html#a36dc15b1bda94e69801c220035968716":[11,0,0,0,7,3,9,14],
-"vertex__requirements_8h.html#a3d1e8025d3ef60421266da65134a4311":[11,0,0,0,7,3,9,11],
-"vertex__requirements_8h.html#a3fc65a005474dd6f983d5f9b235b5387":[11,0,0,0,7,3,9,19],
-"vertex__requirements_8h.html#a49287ff6e3778f10a280b1166006dff9":[11,0,0,0,7,3,9,23],
-"vertex__requirements_8h.html#a579b161f8a4132e5106608bebc70e363":[11,0,0,0,7,3,9,5],
-"vertex__requirements_8h.html#a5f20fd534d1bb822fe5b13f2515025ee":[11,0,0,0,7,3,9,24],
-"vertex__requirements_8h.html#a617cf756eac51fcf6b566ce5d4c09393":[11,0,0,0,7,3,9,0],
-"vertex__requirements_8h.html#a64bde18cc07f8804c0c96e5def984f26":[11,0,0,0,7,3,9,3],
-"vertex__requirements_8h.html#a6e15c93274d1207f45bb0673fce3ba8a":[11,0,0,0,7,3,9,1],
-"vertex__requirements_8h.html#a7a42ac0f4ca25059bc805e9a5238a083":[11,0,0,0,7,3,9,12],
-"vertex__requirements_8h.html#a802d56a620a24d04972ba5d483a2730a":[11,0,0,0,7,3,9,2],
 "vertex__requirements_8h.html#aa9eb68875b4658e81e104725173df6fd":[11,0,0,0,7,3,9,6],
 "vertex__requirements_8h.html#ab43f884f6ca679c8f57255e11ddaa768":[11,0,0,0,7,3,9,21],
 "vertex__requirements_8h.html#accfcf562d26791650dbddf9910105e26":[11,0,0,0,7,3,9,10],
@@ -65,7 +46,7 @@ var NAVTREEINDEX27 =
 "views_8h.html":[11,0,0,0,24],
 "views_8h_source.html":[11,0,0,0,24],
 "wedge__colors_8cpp.html":[11,0,0,0,7,0,42],
-"wedge__colors_8cpp.html#a4786745adfa748cb425c5fbbf7540907":[11,0,0,0,7,0,42,0],
+"wedge__colors_8cpp.html#aa0309afc031bb4e31f24ca532fbf1e63":[11,0,0,0,7,0,42,0],
 "wedge__tex__coords_8cpp.html":[11,0,0,0,7,0,44],
-"wedge__tex__coords_8cpp.html#a1ed313858bb6c81ffaf351c6586bdb17":[11,0,0,0,7,0,44,0]
+"wedge__tex__coords_8cpp.html#ac7e8f6d227f9a97981f6ced79bd22c14":[11,0,0,0,7,0,44,0]
 };

@@ -171,10 +171,16 @@ $(document).ready(function(){initNavTree('mesh__concept_8h_source.html',''); ini
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    { o.swap(o) } -&gt; std::same_as&lt;void&gt;;</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>};</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">#endif </span><span class="comment">// VCL_CONCEPTS_MESH_MESH_CONCEPT_H</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="conceptvcl_1_1ElementOrMeshConcept.html">   90</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1ElementOrMeshConcept.html">ElementOrMeshConcept</a> =</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <a class="code hl_concept" href="conceptvcl_1_1MeshConcept.html">MeshConcept&lt;T&gt;</a> || <a class="code hl_concept" href="conceptvcl_1_1ElementConcept.html">ElementConcept&lt;T&gt;</a>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">#endif </span><span class="comment">// VCL_CONCEPTS_MESH_MESH_CONCEPT_H</span></div>
 <div class="ttc" id="aclassvcl_1_1Mesh_html"><div class="ttname"><a href="classvcl_1_1Mesh.html">vcl::Mesh</a></div><div class="ttdoc">The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...</div><div class="ttdef"><b>Definition:</b> mesh.h:69</div></div>
+<div class="ttc" id="aconceptvcl_1_1ElementConcept_html"><div class="ttname"><a href="conceptvcl_1_1ElementConcept.html">vcl::ElementConcept</a></div><div class="ttdef"><b>Definition:</b> element.h:34</div></div>
+<div class="ttc" id="aconceptvcl_1_1ElementOrMeshConcept_html"><div class="ttname"><a href="conceptvcl_1_1ElementOrMeshConcept.html">vcl::ElementOrMeshConcept</a></div><div class="ttdoc">the ElementOrMesh Concept is evaluated to true when the type is either a Mesh or an Element.</div><div class="ttdef"><b>Definition:</b> mesh_concept.h:90</div></div>
 <div class="ttc" id="aconceptvcl_1_1MeshConcept_html"><div class="ttname"><a href="conceptvcl_1_1MeshConcept.html">vcl::MeshConcept</a></div><div class="ttdoc">The Mesh Concept is evaluated to true when the type is a Mesh.</div><div class="ttdef"><b>Definition:</b> mesh_concept.h:66</div></div>
 <div class="ttc" id="aconceptvcl_1_1mesh_1_1HasVertexContainer_html"><div class="ttname"><a href="conceptvcl_1_1mesh_1_1HasVertexContainer.html">vcl::mesh::HasVertexContainer</a></div><div class="ttdef"><b>Definition:</b> vertex_container.h:36</div></div>
 <div class="ttc" id="acontainers_8h_html"><div class="ttname"><a href="containers_8h.html">containers.h</a></div></div>

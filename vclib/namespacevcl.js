@@ -184,6 +184,7 @@ var namespacevcl =
     [ "QuadMeshConcept", "conceptvcl_1_1QuadMeshConcept.html", null ],
     [ "PolygonMeshConcept", "conceptvcl_1_1PolygonMeshConcept.html", null ],
     [ "MeshConcept", "conceptvcl_1_1MeshConcept.html", null ],
+    [ "ElementOrMeshConcept", "conceptvcl_1_1ElementOrMeshConcept.html", null ],
     [ "HasPerEdgeAdjacentEdges", "conceptvcl_1_1HasPerEdgeAdjacentEdges.html", null ],
     [ "HasPerEdgeAdjacentFaces", "conceptvcl_1_1HasPerEdgeAdjacentFaces.html", null ],
     [ "HasPerEdgeColor", "conceptvcl_1_1HasPerEdgeColor.html", null ],

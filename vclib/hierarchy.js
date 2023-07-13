@@ -108,10 +108,10 @@ var hierarchy =
           [ "vcl::comp::AdjacentEdges< Edge, N, TTVN, ElementType, OPT >", "classvcl_1_1comp_1_1AdjacentEdges.html", null ],
           [ "vcl::comp::AdjacentFaces< Face, N, TTVN, ElementType, OPT >", "classvcl_1_1comp_1_1AdjacentFaces.html", null ],
           [ "vcl::comp::AdjacentVertices< Vertex, ElementType, OPT >", "classvcl_1_1comp_1_1AdjacentVertices.html", null ],
-          [ "vcl::comp::VertexPointers< Vertex, N, ElementType, OPT >", "classvcl_1_1comp_1_1VertexPointers.html", null ]
+          [ "vcl::comp::VertexPointers< Vertex, N, ElementType >", "classvcl_1_1comp_1_1VertexPointers.html", null ]
         ] ]
       ] ],
-      [ "vcl::comp::ContainerComponent< BIT_FLAGS, BitSet< int >, N, BitSet< int >, void, false, true >", "classvcl_1_1comp_1_1ContainerComponent.html", null ],
+      [ "vcl::comp::ContainerComponent< BIT_FLAGS, BitSet< char >, N, BitSet< char >, void, false, true >", "classvcl_1_1comp_1_1ContainerComponent.html", null ],
       [ "vcl::comp::ContainerComponent< WEDGE_COLORS, vcl::Color, N, void, void, false, true >", "classvcl_1_1comp_1_1ContainerComponent.html", null ],
       [ "vcl::comp::ContainerComponent< WEDGE_TEX_COORDS, vcl::TexCoord< Scalar >, N, short, void, false, true >", "classvcl_1_1comp_1_1ContainerComponent.html", null ],
       [ "vcl::comp::ContainerComponent< COMP_TYPE, T, N, AdditionalData, ElementType, OPT, TTVN, PointedTypes >", "classvcl_1_1comp_1_1ContainerComponent.html", [
@@ -127,9 +127,9 @@ var hierarchy =
     [ "vcl::CreateSphereArgs", "structvcl_1_1CreateSphereArgs.html", null ],
     [ "vcl::FileMeshInfo::CustomComponent", "structvcl_1_1FileMeshInfo_1_1CustomComponent.html", null ],
     [ "vcl::comp::CustomComponents< ElementType >", "classvcl_1_1comp_1_1CustomComponents.html", null ],
-    [ "vcl::mesh::CustomComponentsVectorMap< typename, HasCustomComponent >", "classvcl_1_1mesh_1_1CustomComponentsVectorMap.html", null ],
-    [ "vcl::mesh::CustomComponentsVectorMap< T, comp::HasCustomComponents< T > >", "classvcl_1_1mesh_1_1CustomComponentsVectorMap.html", null ],
-    [ "vcl::mesh::CustomComponentsVectorMap< T, true >", "classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01T_00_01true_01_4.html", null ],
+    [ "vcl::mesh::CustomComponentsVectorMap< HasCustomComponent >", "classvcl_1_1mesh_1_1CustomComponentsVectorMap.html", null ],
+    [ "vcl::mesh::CustomComponentsVectorMap< comp::HasCustomComponents< T > >", "classvcl_1_1mesh_1_1CustomComponentsVectorMap.html", null ],
+    [ "vcl::mesh::CustomComponentsVectorMap< true >", "classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html", null ],
     [ "vcl::CustomComponentVectorHandle< T >", "classvcl_1_1CustomComponentVectorHandle.html", null ],
     [ "vcl::DistFunctionStruct< Obj1, Obj2, ScalarType >", "structvcl_1_1DistFunctionStruct.html", null ],
     [ "vcl::DistFunctionStruct< Obj1, Obj2, ScalarType >", "structvcl_1_1DistFunctionStruct_3_01Obj1_00_01Obj2_00_01ScalarType_01_4.html", null ],
@@ -255,8 +255,11 @@ var hierarchy =
       [ "vcl::comp::Component< MARK, int, void, false >", "classvcl_1_1comp_1_1Component.html", null ],
       [ "vcl::comp::Component< NORMAL, P, void, false >", "classvcl_1_1comp_1_1Component.html", null ],
       [ "vcl::comp::Component< PRINCIPAL_CURVATURE, vcl::PrincipalCurvature< Scalar >, void, false >", "classvcl_1_1comp_1_1Component.html", null ],
-      [ "vcl::comp::Component< QUALITY, T, void, false >", "classvcl_1_1comp_1_1Component.html", null ],
+      [ "vcl::comp::Component< QUALITY, Scalar, void, false >", "classvcl_1_1comp_1_1Component.html", null ],
       [ "vcl::comp::Component< TEX_COORD, vcl::TexCoord< Scalar >, void, false >", "classvcl_1_1comp_1_1Component.html", null ],
+      [ "vcl::comp::Component< TEXTURE_PATHS, internal::TPData, void, false >", "classvcl_1_1comp_1_1Component.html", [
+        [ "vcl::comp::TexturePaths", "classvcl_1_1comp_1_1TexturePaths.html", null ]
+      ] ],
       [ "vcl::comp::Component< TRANSFORM_MATRIX, Matrix44< Scalar >, void, false >", "classvcl_1_1comp_1_1Component.html", null ],
       [ "vcl::comp::Component< BIT_FLAGS, BitSet< short >, void, false >", "classvcl_1_1comp_1_1Component.html", null ],
       [ "vcl::comp::Component< COMP_TYPE, DataType, ElementType, OPT, PointedTypes >", "classvcl_1_1comp_1_1Component.html", [
@@ -268,9 +271,8 @@ var hierarchy =
         [ "vcl::comp::Name< ElementType, OPT >", "classvcl_1_1comp_1_1Name.html", null ],
         [ "vcl::comp::Normal< P, ElementType, OPT >", "classvcl_1_1comp_1_1Normal.html", null ],
         [ "vcl::comp::PrincipalCurvature< Scalar, ElementType, OPT >", "classvcl_1_1comp_1_1PrincipalCurvature.html", null ],
-        [ "vcl::comp::Quality< T, ElementType, OPT >", "classvcl_1_1comp_1_1Quality.html", null ],
+        [ "vcl::comp::Quality< Scalar, ElementType, OPT >", "classvcl_1_1comp_1_1Quality.html", null ],
         [ "vcl::comp::TexCoord< Scalar, ElementType, OPT >", "classvcl_1_1comp_1_1TexCoord.html", null ],
-        [ "vcl::comp::TexturePaths< ElementType, OPT >", "classvcl_1_1comp_1_1TexturePaths.html", null ],
         [ "vcl::comp::TransformMatrix< Scalar, ElementType, OPT >", "classvcl_1_1comp_1_1TransformMatrix.html", null ],
         [ "vcl::comp::TriangleBitFlags< ElementType, OPT >", "classvcl_1_1comp_1_1TriangleBitFlags.html", null ]
       ] ]

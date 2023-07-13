@@ -102,13 +102,16 @@ $(document).ready(function(){initNavTree('classvcl_1_1DrawableObject.html',''); 
 </div><!--header-->
 <div class="contents">
 
+<p>The <a class="el" href="classvcl_1_1DrawableObject.html" title="The DrawableObject class is the base class for all the objects that can be rendered in a viewer.">DrawableObject</a> class is the base class for all the objects that can be rendered in a viewer.  
+ <a href="classvcl_1_1DrawableObject.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="drawable__object_8h_source.html">vclib/render/drawable_object.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for vcl::DrawableObject:</div>
 <div class="dyncontent">
 <div class="center"><img src="classvcl_1_1DrawableObject__inherit__graph.png" border="0" usemap="#avcl_1_1DrawableObject_inherit__map" alt="Inheritance graph"/></div>
 <map name="avcl_1_1DrawableObject_inherit__map" id="avcl_1_1DrawableObject_inherit__map">
-<area shape="rect" title=" " alt="" coords="27,5,180,31"/>
+<area shape="rect" title="The DrawableObject class is the base class for all the objects that can be rendered in a viewer." alt="" coords="27,5,180,31"/>
 <area shape="rect" href="classvcl_1_1GenericDrawableMesh.html" title=" " alt="" coords="5,79,201,104"/>
 <area shape="rect" href="classvcl_1_1DrawableMesh.html" title=" " alt="" coords="25,152,182,192"/>
 </map>
@@ -122,10 +125,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a05a74a1cbb1034d4ac8896712226d55a"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableObject.html#a05a74a1cbb1034d4ac8896712226d55a">~DrawableObject</a> ()</td></tr>
 <tr class="separator:a05a74a1cbb1034d4ac8896712226d55a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad849ff3a7fab04498e0c040f299294cd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableObject.html#ad849ff3a7fab04498e0c040f299294cd">init</a> ()</td></tr>
-<tr class="memdesc:ad849ff3a7fab04498e0c040f299294cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">This member function is called after the initialization of the GL Context. It must initialize and bind data to the GPU like buffers and textures.  <br /></td></tr>
+<tr class="memdesc:ad849ff3a7fab04498e0c040f299294cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">This member function is called after the initialization of the Context. It must initialize and bind data to the GPU like buffers and textures.  <br /></td></tr>
 <tr class="separator:ad849ff3a7fab04498e0c040f299294cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9360b021ff0931ef6ed78cea74e1a355"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableObject.html#a9360b021ff0931ef6ed78cea74e1a355">draw</a> () const =0</td></tr>
-<tr class="memdesc:a9360b021ff0931ef6ed78cea74e1a355"><td class="mdescLeft">&#160;</td><td class="mdescRight">This member function must draw the object through GL calls. It will be called at every frame.  <br /></td></tr>
+<tr class="memdesc:a9360b021ff0931ef6ed78cea74e1a355"><td class="mdescLeft">&#160;</td><td class="mdescRight">This member function must draw the object. It will be called at every frame.  <br /></td></tr>
 <tr class="separator:a9360b021ff0931ef6ed78cea74e1a355"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a308f4f723ec8d7428290519379c4678f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="group__space.html#gabb47c1364fb2fe1464a54417684f011e">vcl::Point3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableObject.html#a308f4f723ec8d7428290519379c4678f">center</a> () const =0</td></tr>
 <tr class="memdesc:a308f4f723ec8d7428290519379c4678f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This member function is used to find a good camera position to render object. It must return the position of the center of the object.  <br /></td></tr>
@@ -134,18 +137,37 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a768f7ca7642ec572c4414d5862778b49"><td class="mdescLeft">&#160;</td><td class="mdescRight">This member function is used to find a good camera position to render object. It should return the ray of the bounding sphere of the object, but also half diagonal of the bounding box of the object is a good approximation. Return -1 if the object shouldn't influence the position of the camera.  <br /></td></tr>
 <tr class="separator:a768f7ca7642ec572c4414d5862778b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23b14c1fe7b3985106163edf7948d368"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classvcl_1_1DrawableObject.html">DrawableObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableObject.html#a23b14c1fe7b3985106163edf7948d368">clone</a> () const =0</td></tr>
-<tr class="memdesc:a23b14c1fe7b3985106163edf7948d368"><td class="mdescLeft">&#160;</td><td class="mdescRight">This member function is used to create a new copy of the <a class="el" href="classvcl_1_1DrawableObject.html">DrawableObject</a>. Each derived class must implement this member function, that returns a new dynamically allocated <a class="el" href="classvcl_1_1DrawableObject.html">DrawableObject</a> that is a copy of the current one. for more details about this paradigm, check polimorphism clone in modern c++: <a href="https://www.fluentcpp.com/2017/09/08/make-polymorphic-copy-modern-cpp/">https://www.fluentcpp.com/2017/09/08/make-polymorphic-copy-modern-cpp/</a>.  <br /></td></tr>
+<tr class="memdesc:a23b14c1fe7b3985106163edf7948d368"><td class="mdescLeft">&#160;</td><td class="mdescRight">This member function is used to create a new copy of the <a class="el" href="classvcl_1_1DrawableObject.html" title="The DrawableObject class is the base class for all the objects that can be rendered in a viewer.">DrawableObject</a>. Each derived class must implement this member function, that returns a new dynamically allocated <a class="el" href="classvcl_1_1DrawableObject.html" title="The DrawableObject class is the base class for all the objects that can be rendered in a viewer.">DrawableObject</a> that is a copy of the current one. for more details about this paradigm, check polimorphism clone in modern c++: <a href="https://www.fluentcpp.com/2017/09/08/make-polymorphic-copy-modern-cpp/">https://www.fluentcpp.com/2017/09/08/make-polymorphic-copy-modern-cpp/</a>.  <br /></td></tr>
 <tr class="separator:a23b14c1fe7b3985106163edf7948d368"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a527f2bce3a4c64d7bbe2126bbe0c5da3"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableObject.html#a527f2bce3a4c64d7bbe2126bbe0c5da3">isVisible</a> () const =0</td></tr>
+<tr class="memdesc:a527f2bce3a4c64d7bbe2126bbe0c5da3"><td class="mdescLeft">&#160;</td><td class="mdescRight">This member function is used to check if the object is visible.  <br /></td></tr>
 <tr class="separator:a527f2bce3a4c64d7bbe2126bbe0c5da3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2837de277aad624274f0aaf7fe0b286e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableObject.html#a2837de277aad624274f0aaf7fe0b286e">setVisibility</a> (bool vis)=0</td></tr>
+<tr class="memdesc:a2837de277aad624274f0aaf7fe0b286e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This member function is used to set the visibility of the object.  <br /></td></tr>
 <tr class="separator:a2837de277aad624274f0aaf7fe0b286e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad14c91edd13858af4702024a15a7cb4a"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableObject.html#ad14c91edd13858af4702024a15a7cb4a">name</a> () const</td></tr>
+<tr class="memdesc:ad14c91edd13858af4702024a15a7cb4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of the object.  <br /></td></tr>
 <tr class="separator:ad14c91edd13858af4702024a15a7cb4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9debf6e9527ecd8e5bf084bdb6baf4aa"><td class="memItemLeft" align="right" valign="top">std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableObject.html#a9debf6e9527ecd8e5bf084bdb6baf4aa">name</a> ()</td></tr>
+<tr class="memdesc:a9debf6e9527ecd8e5bf084bdb6baf4aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference of the name of the object, that allows to modify it.  <br /></td></tr>
 <tr class="separator:a9debf6e9527ecd8e5bf084bdb6baf4aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="classvcl_1_1DrawableObject.html" title="The DrawableObject class is the base class for all the objects that can be rendered in a viewer.">DrawableObject</a> class is the base class for all the objects that can be rendered in a viewer. </p>
+<p>The <a class="el" href="classvcl_1_1DrawableObject.html" title="The DrawableObject class is the base class for all the objects that can be rendered in a viewer.">DrawableObject</a> class stores only an attribute that represents the name of the object, that will be used to identify it in the viewer.</p>
+<p>A class that inherits from <a class="el" href="classvcl_1_1DrawableObject.html" title="The DrawableObject class is the base class for all the objects that can be rendered in a viewer.">DrawableObject</a> must implement the following member functions:</p><ul>
+<li><a class="el" href="classvcl_1_1DrawableObject.html#a9360b021ff0931ef6ed78cea74e1a355" title="This member function must draw the object. It will be called at every frame.">draw()</a>;</li>
+<li><a class="el" href="classvcl_1_1DrawableObject.html#a308f4f723ec8d7428290519379c4678f" title="This member function is used to find a good camera position to render object. It must return the posi...">center()</a>;</li>
+<li><a class="el" href="classvcl_1_1DrawableObject.html#a768f7ca7642ec572c4414d5862778b49" title="This member function is used to find a good camera position to render object. It should return the ra...">radius()</a>;</li>
+<li><a class="el" href="classvcl_1_1DrawableObject.html#a23b14c1fe7b3985106163edf7948d368" title="This member function is used to create a new copy of the DrawableObject. Each derived class must impl...">clone()</a>;</li>
+<li>isVisibile();</li>
+<li><a class="el" href="classvcl_1_1DrawableObject.html#a2837de277aad624274f0aaf7fe0b286e" title="This member function is used to set the visibility of the object.">setVisibility(bool)</a>;</li>
+</ul>
+<p>There is also a member function that can be implemented, but it is not mandatory:</p><ul>
+<li><a class="el" href="classvcl_1_1DrawableObject.html#ad849ff3a7fab04498e0c040f299294cd" title="This member function is called after the initialization of the Context. It must initialize and bind d...">init()</a>;</li>
+</ul>
+<p>For more details about these member functions, check the documentation of each one. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2fd08a2164acd45dad8b89b1cb00da09" name="a2fd08a2164acd45dad8b89b1cb00da09"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2fd08a2164acd45dad8b89b1cb00da09">&#9670;&#160;</a></span>DrawableObject()</h2>
 
@@ -224,6 +246,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>This member function is used to find a good camera position to render object. It must return the position of the center of the object. </p>
+<dl class="section return"><dt>Returns</dt><dd>The position of the center of the object. </dd></dl>
 
 <p>Implemented in <a class="el" href="classvcl_1_1DrawableMesh.html#aa3a3d25bc9a5aabdb927865780771bf5">vcl::DrawableMesh&lt; MeshType &gt;</a>, and <a class="el" href="classvcl_1_1GenericDrawableMesh.html#a9a9528871f1d7a50e7e2abf967bc6e45">vcl::GenericDrawableMesh</a>.</p>
 
@@ -252,7 +275,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>This member function is used to create a new copy of the <a class="el" href="classvcl_1_1DrawableObject.html">DrawableObject</a>. Each derived class must implement this member function, that returns a new dynamically allocated <a class="el" href="classvcl_1_1DrawableObject.html">DrawableObject</a> that is a copy of the current one. for more details about this paradigm, check polimorphism clone in modern c++: <a href="https://www.fluentcpp.com/2017/09/08/make-polymorphic-copy-modern-cpp/">https://www.fluentcpp.com/2017/09/08/make-polymorphic-copy-modern-cpp/</a>. </p>
+<p>This member function is used to create a new copy of the <a class="el" href="classvcl_1_1DrawableObject.html" title="The DrawableObject class is the base class for all the objects that can be rendered in a viewer.">DrawableObject</a>. Each derived class must implement this member function, that returns a new dynamically allocated <a class="el" href="classvcl_1_1DrawableObject.html" title="The DrawableObject class is the base class for all the objects that can be rendered in a viewer.">DrawableObject</a> that is a copy of the current one. for more details about this paradigm, check polimorphism clone in modern c++: <a href="https://www.fluentcpp.com/2017/09/08/make-polymorphic-copy-modern-cpp/">https://www.fluentcpp.com/2017/09/08/make-polymorphic-copy-modern-cpp/</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>A new dynamically allocated <a class="el" href="classvcl_1_1DrawableObject.html" title="The DrawableObject class is the base class for all the objects that can be rendered in a viewer.">DrawableObject</a> that is a copy of the current one. </dd></dl>
 
 <p>Implemented in <a class="el" href="classvcl_1_1DrawableMesh.html#a1fe9133351d6b0de72bee7fb02309ea3">vcl::DrawableMesh&lt; MeshType &gt;</a>, and <a class="el" href="classvcl_1_1GenericDrawableMesh.html#a3adb476dc5754de24cbfd9eee9597e25">vcl::GenericDrawableMesh</a>.</p>
 
@@ -281,7 +305,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>This member function must draw the object through GL calls. It will be called at every frame. </p>
+<p>This member function must draw the object. It will be called at every frame. </p>
 
 <p>Implemented in <a class="el" href="classvcl_1_1DrawableMesh.html#a3654b7bfcea0d374b09d6fffa542cc02">vcl::DrawableMesh&lt; MeshType &gt;</a>, and <a class="el" href="classvcl_1_1GenericDrawableMesh.html#a23758a3db1e3d571493ada8d37b01da9">vcl::GenericDrawableMesh</a>.</p>
 
@@ -310,7 +334,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>This member function is called after the initialization of the GL Context. It must initialize and bind data to the GPU like buffers and textures. </p>
+<p>This member function is called after the initialization of the Context. It must initialize and bind data to the GPU like buffers and textures. </p>
 
 <p>Reimplemented in <a class="el" href="classvcl_1_1DrawableMesh.html#a1b0445c0bae000cd200516d894f30c94">vcl::DrawableMesh&lt; MeshType &gt;</a>.</p>
 
@@ -339,6 +363,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>This member function is used to check if the object is visible. </p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the object is visible; </dd></dl>
+
 <p>Implemented in <a class="el" href="classvcl_1_1GenericDrawableMesh.html#abeeb2c119b8b8621110fca67c94c53b1">vcl::GenericDrawableMesh</a>.</p>
 
 </div>
@@ -366,6 +393,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns a reference of the name of the object, that allows to modify it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>The name of the object. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ad14c91edd13858af4702024a15a7cb4a" name="ad14c91edd13858af4702024a15a7cb4a"></a>
@@ -390,6 +425,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the name of the object. </p>
+<dl class="section return"><dt>Returns</dt><dd>The name of the object. </dd></dl>
 
 </div>
 </div>
@@ -417,6 +455,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>This member function is used to find a good camera position to render object. It should return the ray of the bounding sphere of the object, but also half diagonal of the bounding box of the object is a good approximation. Return -1 if the object shouldn't influence the position of the camera. </p>
+<dl class="section return"><dt>Returns</dt><dd>The radius of the bounding sphere of the object. </dd></dl>
 
 <p>Implemented in <a class="el" href="classvcl_1_1DrawableMesh.html#a9b8378a6e2aee0c0be1e766fd7609440">vcl::DrawableMesh&lt; MeshType &gt;</a>, and <a class="el" href="classvcl_1_1GenericDrawableMesh.html#a877a8551ac865d04ae860f227684848f">vcl::GenericDrawableMesh</a>.</p>
 
@@ -445,6 +484,14 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>This member function is used to set the visibility of the object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">vis</td><td><code>true</code> if the object should be visible; </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implemented in <a class="el" href="classvcl_1_1GenericDrawableMesh.html#a0b6601552eab50b0f9f611a7162e2ed5">vcl::GenericDrawableMesh</a>.</p>
 

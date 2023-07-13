@@ -129,8 +129,7 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1comp_1_1HasAdjacentFaces
 <div class="line">    { o.findAdjFace(&amp;f) } -&gt; std::same_as&lt;typename T::AdjacentFaceIterator&gt;;</div>
 <div class="line">    { co.findAdjFace(&amp;f) } -&gt;</div>
 <div class="line">        std::same_as&lt;typename T::ConstAdjacentFaceIterator&gt;;</div>
-<div class="line">    { co.indexOfAdjFace(&amp;f) } -&gt; std::same_as&lt;int&gt;;</div>
-<div class="line">    { co.isAdjFacesEnabled() } -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line">    { co.indexOfAdjFace(&amp;f) } -&gt; std::same_as&lt;uint&gt;;</div>
 <div class="line"> </div>
 <div class="line">    { o.adjFaceBegin() } -&gt; std::same_as&lt;typename T::AdjacentFaceIterator&gt;;</div>
 <div class="line">    { o.adjFaceEnd() } -&gt; std::same_as&lt;typename T::AdjacentFaceIterator&gt;;</div>
@@ -140,12 +139,11 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1comp_1_1HasAdjacentFaces
 <div class="line">    o.adjFaces();</div>
 <div class="line">    co.adjFaces();</div>
 <div class="line">}</div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasAdjacentFaces_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasAdjacentFaces.html">vcl::comp::HasAdjacentFaces</a></div><div class="ttdoc">HasAdjacentFaces concept is satisfied only if a Element class provides the types and member functions...</div><div class="ttdef"><b>Definition:</b> adjacent_faces.h:51</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasAdjacentFaces_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasAdjacentFaces.html">vcl::comp::HasAdjacentFaces</a></div><div class="ttdoc">HasAdjacentFaces concept is satisfied only if a Element class provides the types and member functions...</div><div class="ttdef"><b>Definition:</b> adjacent_faces.h:48</div></div>
 <div class="ttc" id="atypes_2base_8h_html_a69aa29b598b851b0640aa225a9e5d61d"><div class="ttname"><a href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> base.h:31</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>HasAdjacentFaces concept is satisfied only if a Element class provides the types and member functions specified in this concept. These types and member functions allow to access to an AdjacentFaces component of a given element. </p>
-<p>Note that this concept does not discriminate between the Horizontal AdjacentFaces component and the vertical OptionalAdjacentFaces component, therefore it does not guarantee that a template Element type that satisfies this concept provides AdjacentFaces component at runtime (it is guaranteed only that the proper member functions are available at compile time).</p>
-<p>To be completely sure that AdjacentFaces is available at runtime, you need to call the member function <code>isAdjFacesEnabled()</code>. </p>
+<p>Note that this concept does not discriminate between the Horizontal AdjacentFaces component and the vertical OptionalAdjacentFaces component, therefore it does not guarantee that a template Element type that satisfies this concept provides AdjacentFaces component at runtime (it is guaranteed only that the proper member functions are available at compile time). </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

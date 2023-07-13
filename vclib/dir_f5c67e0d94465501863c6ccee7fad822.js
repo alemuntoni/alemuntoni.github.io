@@ -27,7 +27,7 @@ var dir_f5c67e0d94465501863c6ccee7fad822 =
     [ "polygon.cpp", "polygon_8cpp.html", null ],
     [ "polygon.h", "space_2polygon_8h.html", "space_2polygon_8h" ],
     [ "principal_curvature.cpp", "space_2principal__curvature_8cpp.html", null ],
-    [ "principal_curvature.h", "space_2principal__curvature_8h.html", "space_2principal__curvature_8h" ],
+    [ "principal_curvature.h", "space_2principal__curvature_8h.html", null ],
     [ "sampler.h", "space_2sampler_8h.html", null ],
     [ "segment.cpp", "segment_8cpp.html", null ],
     [ "segment.h", "space_2segment_8h.html", "space_2segment_8h" ],

@@ -13,7 +13,7 @@ var searchData=
   ['component_3c_20name_2c_20std_3a_3astring_2c_20void_2c_20false_20_3e_10',['Component&lt; NAME, std::string, void, false &gt;',['../classvcl_1_1comp_1_1Component.html',1,'vcl::comp']]],
   ['component_3c_20normal_2c_20p_2c_20void_2c_20false_20_3e_11',['Component&lt; NORMAL, P, void, false &gt;',['../classvcl_1_1comp_1_1Component.html',1,'vcl::comp']]],
   ['component_3c_20principal_5fcurvature_2c_20vcl_3a_3aprincipalcurvature_3c_20scalar_20_3e_2c_20void_2c_20false_20_3e_12',['Component&lt; PRINCIPAL_CURVATURE, vcl::PrincipalCurvature&lt; Scalar &gt;, void, false &gt;',['../classvcl_1_1comp_1_1Component.html',1,'vcl::comp']]],
-  ['component_3c_20quality_2c_20t_2c_20void_2c_20false_20_3e_13',['Component&lt; QUALITY, T, void, false &gt;',['../classvcl_1_1comp_1_1Component.html',1,'vcl::comp']]],
+  ['component_3c_20quality_2c_20scalar_2c_20void_2c_20false_20_3e_13',['Component&lt; QUALITY, Scalar, void, false &gt;',['../classvcl_1_1comp_1_1Component.html',1,'vcl::comp']]],
   ['component_3c_20tex_5fcoord_2c_20vcl_3a_3atexcoord_3c_20scalar_20_3e_2c_20void_2c_20false_20_3e_14',['Component&lt; TEX_COORD, vcl::TexCoord&lt; Scalar &gt;, void, false &gt;',['../classvcl_1_1comp_1_1Component.html',1,'vcl::comp']]],
   ['component_3c_20texture_5fpaths_2c_20internal_3a_3atpdata_2c_20void_2c_20false_20_3e_15',['Component&lt; TEXTURE_PATHS, internal::TPData, void, false &gt;',['../classvcl_1_1comp_1_1Component.html',1,'vcl::comp']]],
   ['component_3c_20transform_5fmatrix_2c_20matrix44_3c_20scalar_20_3e_2c_20void_2c_20false_20_3e_16',['Component&lt; TRANSFORM_MATRIX, Matrix44&lt; Scalar &gt;, void, false &gt;',['../classvcl_1_1comp_1_1Component.html',1,'vcl::comp']]],
@@ -22,7 +22,7 @@ var searchData=
   ['constmeshedgeutil_19',['ConstMeshEdgeUtil',['../classvcl_1_1ConstMeshEdgeUtil.html',1,'vcl']]],
   ['conststaticgriditerator_20',['ConstStaticGridIterator',['../classvcl_1_1ConstStaticGridIterator.html',1,'vcl']]],
   ['containercomponent_21',['ContainerComponent',['../classvcl_1_1comp_1_1ContainerComponent.html',1,'vcl::comp']]],
-  ['containercomponent_3c_20bit_5fflags_2c_20bitset_3c_20int_20_3e_2c_20n_2c_20bitset_3c_20int_20_3e_2c_20void_2c_20false_2c_20true_20_3e_22',['ContainerComponent&lt; BIT_FLAGS, BitSet&lt; int &gt;, N, BitSet&lt; int &gt;, void, false, true &gt;',['../classvcl_1_1comp_1_1ContainerComponent.html',1,'vcl::comp']]],
+  ['containercomponent_3c_20bit_5fflags_2c_20bitset_3c_20char_20_3e_2c_20n_2c_20bitset_3c_20char_20_3e_2c_20void_2c_20false_2c_20true_20_3e_22',['ContainerComponent&lt; BIT_FLAGS, BitSet&lt; char &gt;, N, BitSet&lt; char &gt;, void, false, true &gt;',['../classvcl_1_1comp_1_1ContainerComponent.html',1,'vcl::comp']]],
   ['containercomponent_3c_20comp_5ftype_2c_20edge_20_2a_2c_20n_2c_20void_2c_20void_2c_20opt_2c_20ttvn_2c_20edge_20_3e_23',['ContainerComponent&lt; COMP_TYPE, Edge *, N, void, void, OPT, TTVN, Edge &gt;',['../classvcl_1_1comp_1_1ContainerComponent.html',1,'vcl::comp']]],
   ['containercomponent_3c_20comp_5ftype_2c_20elem_20_2a_2c_20n_2c_20void_2c_20elementtype_2c_20opt_2c_20ttvn_2c_20elem_20_3e_24',['ContainerComponent&lt; COMP_TYPE, Elem *, N, void, ElementType, OPT, TTVN, Elem &gt;',['../classvcl_1_1comp_1_1ContainerComponent.html',1,'vcl::comp']]],
   ['containercomponent_3c_20comp_5ftype_2c_20face_20_2a_2c_20n_2c_20void_2c_20void_2c_20opt_2c_20ttvn_2c_20face_20_3e_25',['ContainerComponent&lt; COMP_TYPE, Face *, N, void, void, OPT, TTVN, Face &gt;',['../classvcl_1_1comp_1_1ContainerComponent.html',1,'vcl::comp']]],
@@ -36,7 +36,7 @@ var searchData=
   ['customcomponent_33',['CustomComponent',['../structvcl_1_1FileMeshInfo_1_1CustomComponent.html',1,'vcl::FileMeshInfo']]],
   ['customcomponents_34',['CustomComponents',['../classvcl_1_1comp_1_1CustomComponents.html',1,'vcl::comp']]],
   ['customcomponentsvectormap_35',['CustomComponentsVectorMap',['../classvcl_1_1mesh_1_1CustomComponentsVectorMap.html',1,'vcl::mesh']]],
-  ['customcomponentsvectormap_3c_20t_2c_20comp_3a_3ahascustomcomponents_3c_20t_20_3e_20_3e_36',['CustomComponentsVectorMap&lt; T, comp::HasCustomComponents&lt; T &gt; &gt;',['../classvcl_1_1mesh_1_1CustomComponentsVectorMap.html',1,'vcl::mesh']]],
-  ['customcomponentsvectormap_3c_20t_2c_20true_20_3e_37',['CustomComponentsVectorMap&lt; T, true &gt;',['../classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01T_00_01true_01_4.html',1,'vcl::mesh']]],
+  ['customcomponentsvectormap_3c_20comp_3a_3ahascustomcomponents_3c_20t_20_3e_20_3e_36',['CustomComponentsVectorMap&lt; comp::HasCustomComponents&lt; T &gt; &gt;',['../classvcl_1_1mesh_1_1CustomComponentsVectorMap.html',1,'vcl::mesh']]],
+  ['customcomponentsvectormap_3c_20true_20_3e_37',['CustomComponentsVectorMap&lt; true &gt;',['../classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html',1,'vcl::mesh']]],
   ['customcomponentvectorhandle_38',['CustomComponentVectorHandle',['../classvcl_1_1CustomComponentVectorHandle.html',1,'vcl']]]
 ];

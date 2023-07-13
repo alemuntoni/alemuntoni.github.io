@@ -97,6 +97,7 @@ $(document).ready(function(){initNavTree('classvcl_1_1comp_1_1BitFlags.html','')
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classvcl_1_1comp_1_1BitFlags-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">vcl::comp::BitFlags&lt; ElementType, OPT &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__components.html">Components</a></div></div></div>
@@ -131,10 +132,13 @@ Collaboration diagram for vcl::comp::BitFlags&lt; ElementType, OPT &gt;:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a28b7db12575f98a7b7a036958fbbc9c3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1BitFlags.html#a28b7db12575f98a7b7a036958fbbc9c3">BitFlags</a> ()</td></tr>
+<tr class="memdesc:a28b7db12575f98a7b7a036958fbbc9c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that initializes the bits to false.  <br /></td></tr>
 <tr class="separator:a28b7db12575f98a7b7a036958fbbc9c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9de2c4c62985d8cbad2a6e7a206456e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1BitFlags.html#aa9de2c4c62985d8cbad2a6e7a206456e">init</a> ()</td></tr>
+<tr class="memdesc:aa9de2c4c62985d8cbad2a6e7a206456e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the bits to false.  <br /></td></tr>
 <tr class="separator:aa9de2c4c62985d8cbad2a6e7a206456e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ee59b01829a0ed0a2c04efa53b5aa7d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1BitFlags.html#a1ee59b01829a0ed0a2c04efa53b5aa7d">isEnabled</a> () const</td></tr>
+<tr class="memdesc:a1ee59b01829a0ed0a2c04efa53b5aa7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if the component is enabled, <code>false</code> otherwise. This member function can return <code>false</code> only if the component is optional.  <br /></td></tr>
 <tr class="separator:a1ee59b01829a0ed0a2c04efa53b5aa7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29c2b17d68d41b194da4b10f807ddb73"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1BitFlags.html#a29c2b17d68d41b194da4b10f807ddb73">deleted</a> () const</td></tr>
 <tr class="memdesc:a29c2b17d68d41b194da4b10f807ddb73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the current <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> is deleted or not.  <br /></td></tr>
@@ -167,9 +171,27 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:abe2d8aaa1ddbb01c100fee00b8eb5964"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsets all the flags of this <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> and sets them to <code>false</code>, <b>except the deleted flag</b>, which needs to be manually reset.  <br /></td></tr>
 <tr class="separator:abe2d8aaa1ddbb01c100fee00b8eb5964"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0576661b0ae324cb5a7101d0f101bf2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1BitFlags.html#a0576661b0ae324cb5a7101d0f101bf2d">importFromVCGFlags</a> (int f)</td></tr>
+<tr class="memdesc:a0576661b0ae324cb5a7101d0f101bf2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all the flags of this element to the values contained in the integer input parameter, that represents the bit flags of the VCG library.  <br /></td></tr>
 <tr class="separator:a0576661b0ae324cb5a7101d0f101bf2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72456083e17aeba8db1837378a8ebf4c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1BitFlags.html#a72456083e17aeba8db1837378a8ebf4c">exportToVCGFlags</a> () const</td></tr>
+<tr class="memdesc:a72456083e17aeba8db1837378a8ebf4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the bit flags of this element in the format of the VCG library.  <br /></td></tr>
 <tr class="separator:a72456083e17aeba8db1837378a8ebf4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:ab7899a89ce2c16a4c924713a449aac2a"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1BitFlags.html#ab7899a89ce2c16a4c924713a449aac2a">USER_BITS_NUMBER</a> = sizeof(FT) * 8 - FIRST_USER_BIT</td></tr>
+<tr class="memdesc:ab7899a89ce2c16a4c924713a449aac2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static number of bits that can have custom meanings to the user.  <br /></td></tr>
+<tr class="separator:ab7899a89ce2c16a4c924713a449aac2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_attribs_classvcl_1_1comp_1_1Component"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classvcl_1_1comp_1_1Component')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classvcl_1_1comp_1_1Component.html">vcl::comp::Component&lt; COMP_TYPE, DataType, ElementType, OPT, PointedTypes &gt;</a></td></tr>
+<tr class="memitem:a4a14fda5fd0c41b3bfa58e65a7d99a4e inherit pub_static_attribs_classvcl_1_1comp_1_1Component"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1Component.html#a4a14fda5fd0c41b3bfa58e65a7d99a4e">COMPONENT_TYPE</a> = COMP_TYPE</td></tr>
+<tr class="memdesc:a4a14fda5fd0c41b3bfa58e65a7d99a4e inherit pub_static_attribs_classvcl_1_1comp_1_1Component"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ID of the type of component.  <br /></td></tr>
+<tr class="separator:a4a14fda5fd0c41b3bfa58e65a7d99a4e inherit pub_static_attribs_classvcl_1_1comp_1_1Component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace750df4b4497d7b2b8b7e92477e21a0 inherit pub_static_attribs_classvcl_1_1comp_1_1Component"><td class="memItemLeft" align="right" valign="top">static const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1Component.html#ace750df4b4497d7b2b8b7e92477e21a0">IS_VERTICAL</a> = !std::is_same_v&lt;ElementType, void&gt;</td></tr>
+<tr class="memdesc:ace750df4b4497d7b2b8b7e92477e21a0 inherit pub_static_attribs_classvcl_1_1comp_1_1Component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean that tells if this component type stores its data vertically (not in the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> frame memory, but in another vector).  <br /></td></tr>
+<tr class="separator:ace750df4b4497d7b2b8b7e92477e21a0 inherit pub_static_attribs_classvcl_1_1comp_1_1Component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af84553c039e634b6c9a66c5a80d09a04 inherit pub_static_attribs_classvcl_1_1comp_1_1Component"><td class="memItemLeft" align="right" valign="top">static const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1Component.html#af84553c039e634b6c9a66c5a80d09a04">IS_OPTIONAL</a> = OPT</td></tr>
+<tr class="memdesc:af84553c039e634b6c9a66c5a80d09a04 inherit pub_static_attribs_classvcl_1_1comp_1_1Component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean that tells if this component is optional. Makes sense only when the component is vertical.  <br /></td></tr>
+<tr class="separator:af84553c039e634b6c9a66c5a80d09a04 inherit pub_static_attribs_classvcl_1_1comp_1_1Component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -193,22 +215,13 @@ Protected Member Functions</h2></td></tr>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_types_classvcl_1_1comp_1_1Component"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classvcl_1_1comp_1_1Component')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classvcl_1_1comp_1_1Component.html">vcl::comp::Component&lt; COMP_TYPE, DataType, ElementType, OPT, PointedTypes &gt;</a></td></tr>
 <tr class="memitem:ad311a9dc6ff9ecaafe4720fd4a530bf2 inherit pub_types_classvcl_1_1comp_1_1Component"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1Component.html#ad311a9dc6ff9ecaafe4720fd4a530bf2">DataValueType</a> = DataType</td></tr>
-<tr class="memdesc:ad311a9dc6ff9ecaafe4720fd4a530bf2 inherit pub_types_classvcl_1_1comp_1_1Component"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Data that the component will store (e.g. a <a class="el" href="group__space.html#gabb47c1364fb2fe1464a54417684f011e" title="A convenience alias for a 3-dimensional Point with double-precision floating-point components.">vcl::Point3d</a> for a <a class="el" href="classvcl_1_1comp_1_1Normal.html" title="The NormalT class.">Normal</a> component).  <br /></td></tr>
+<tr class="memdesc:ad311a9dc6ff9ecaafe4720fd4a530bf2 inherit pub_types_classvcl_1_1comp_1_1Component"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Data that the component will store (e.g. a <a class="el" href="group__space.html#gabb47c1364fb2fe1464a54417684f011e" title="A convenience alias for a 3-dimensional Point with double-precision floating-point components.">vcl::Point3d</a> for a <a class="el" href="classvcl_1_1comp_1_1Normal.html" title="The Normal class represents a N-Dimensional normal vector that will be part of an Element (e....">Normal</a> component).  <br /></td></tr>
 <tr class="separator:ad311a9dc6ff9ecaafe4720fd4a530bf2 inherit pub_types_classvcl_1_1comp_1_1Component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_attribs_classvcl_1_1comp_1_1Component"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classvcl_1_1comp_1_1Component')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classvcl_1_1comp_1_1Component.html">vcl::comp::Component&lt; COMP_TYPE, DataType, ElementType, OPT, PointedTypes &gt;</a></td></tr>
-<tr class="memitem:a4a14fda5fd0c41b3bfa58e65a7d99a4e inherit pub_static_attribs_classvcl_1_1comp_1_1Component"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1Component.html#a4a14fda5fd0c41b3bfa58e65a7d99a4e">COMPONENT_TYPE</a> = COMP_TYPE</td></tr>
-<tr class="separator:a4a14fda5fd0c41b3bfa58e65a7d99a4e inherit pub_static_attribs_classvcl_1_1comp_1_1Component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace750df4b4497d7b2b8b7e92477e21a0 inherit pub_static_attribs_classvcl_1_1comp_1_1Component"><td class="memItemLeft" align="right" valign="top">static const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1Component.html#ace750df4b4497d7b2b8b7e92477e21a0">IS_VERTICAL</a> = !std::is_same_v&lt;ElementType, void&gt;</td></tr>
-<tr class="memdesc:ace750df4b4497d7b2b8b7e92477e21a0 inherit pub_static_attribs_classvcl_1_1comp_1_1Component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean that tells if this component type stores its data vertically (not in the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> frame memory, but in another vector).  <br /></td></tr>
-<tr class="separator:ace750df4b4497d7b2b8b7e92477e21a0 inherit pub_static_attribs_classvcl_1_1comp_1_1Component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af84553c039e634b6c9a66c5a80d09a04 inherit pub_static_attribs_classvcl_1_1comp_1_1Component"><td class="memItemLeft" align="right" valign="top">static const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1Component.html#af84553c039e634b6c9a66c5a80d09a04">IS_OPTIONAL</a> = OPT</td></tr>
-<tr class="memdesc:af84553c039e634b6c9a66c5a80d09a04 inherit pub_static_attribs_classvcl_1_1comp_1_1Component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean that tells if this component is optional. Makes sense only when the component is vertical.  <br /></td></tr>
-<tr class="separator:af84553c039e634b6c9a66c5a80d09a04 inherit pub_static_attribs_classvcl_1_1comp_1_1Component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename ElementType = void, bool OPT = false&gt;<br />
 class vcl::comp::BitFlags&lt; ElementType, OPT &gt;</div><p>The <a class="el" href="classvcl_1_1comp_1_1BitFlags.html" title="The BitFlags component class represents a collection of 8 bits that will be part of an Element (e....">BitFlags</a> component class represents a collection of 8 bits that will be part of an <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> (e.g. <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a>, <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a>, ...). </p>
-<p>This <a class="el" href="classvcl_1_1comp_1_1Component.html" title="The Component class is the base class for almost all the components of VCLib (with the exception of C...">Component</a> (or a specialization) is mandatory into every <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> of the mesh.</p>
+<p>This <a class="el" href="classvcl_1_1comp_1_1Component.html" title="The Component class is the base class for almost all the components of VCLib (with the exception of C...">Component</a> (or a specialization, that is any class that satisfies the HasBitFlags concept) is mandatory into every <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> of the mesh.</p>
 <p>The bits have the following meaning:</p><ul>
 <li>0: deleted: if the current <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has been deleted - read only</li>
 <li>1: selected: if the current <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has been selected</li>
@@ -220,7 +233,14 @@ class vcl::comp::BitFlags&lt; ElementType, OPT &gt;</div><p>The <a class="el" hr
 <p>The member functions of this class will be available in the instance of any <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> that will contain this component.</p>
 <p>For example, if you have a <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> <code>v</code> with the <a class="el" href="classvcl_1_1comp_1_1BitFlags.html" title="The BitFlags component class represents a collection of 8 bits that will be part of an Element (e....">BitFlags</a> component, you'll be able to access to this component member functions from <code>v</code>:</p>
 <div class="fragment"><div class="line"><span class="keywordtype">bool</span> isD = v.deleted();</div>
-</div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ElementType</td><td>This template argument must be <code>void</code> if the component needs to be stored horizontally, or the type of the element that will contain this component if the component needs to be stored vertically. </td></tr>
+    <tr><td class="paramname">OPT</td><td>If true, the component will be optional. This argument is considered only if the component is stored vertically. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a28b7db12575f98a7b7a036958fbbc9c3" name="a28b7db12575f98a7b7a036958fbbc9c3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a28b7db12575f98a7b7a036958fbbc9c3">&#9670;&#160;</a></span>BitFlags()</h2>
 
@@ -234,6 +254,8 @@ template&lt;typename El , bool O&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructor that initializes the bits to false. </p>
 
 </div>
 </div>
@@ -295,6 +317,9 @@ template&lt;typename El , bool O&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Returns the bit flags of this element in the format of the VCG library. </p>
+<dl class="section return"><dt>Returns</dt><dd>an integer representing the bit flags of this element in the format of the VCG library. </dd></dl>
+
 </div>
 </div>
 <a id="aa7901e30e15bf827f12b0b9982e993f1" name="aa7901e30e15bf827f12b0b9982e993f1"></a>
@@ -345,6 +370,14 @@ template&lt;typename El , bool O&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Sets all the flags of this element to the values contained in the integer input parameter, that represents the bit flags of the VCG library. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td>bit flags in the format of the VCG library. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="aa9de2c4c62985d8cbad2a6e7a206456e" name="aa9de2c4c62985d8cbad2a6e7a206456e"></a>
@@ -361,6 +394,10 @@ template&lt;typename El , bool O&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Initializes the bits to false. </p>
+<p>It is made in the init function since the component could be not available during construction (e.g. if the component is optional and not enabled).</p>
+<p>This member function is hidden by the element that inherits this class. </p>
+
 </div>
 </div>
 <a id="a1ee59b01829a0ed0a2c04efa53b5aa7d" name="a1ee59b01829a0ed0a2c04efa53b5aa7d"></a>
@@ -376,6 +413,10 @@ template&lt;typename El , bool O&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns <code>true</code> if the component is enabled, <code>false</code> otherwise. This member function can return <code>false</code> only if the component is optional. </p>
+<p>This member function is hidden by the element that inherits this class.</p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the component is enabled, <code>false</code> otherwise. </dd></dl>
 
 </div>
 </div>
@@ -566,6 +607,33 @@ template&lt;typename El , bool O&gt; </div>
 
 <p>Returns whether the current <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has been visited or not. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has been visited, false otherwise. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ab7899a89ce2c16a4c924713a449aac2a" name="ab7899a89ce2c16a4c924713a449aac2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7899a89ce2c16a4c924713a449aac2a">&#9670;&#160;</a></span>USER_BITS_NUMBER</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ElementType  = void, bool OPT = false&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> <a class="el" href="classvcl_1_1comp_1_1BitFlags.html">vcl::comp::BitFlags</a>&lt; ElementType, OPT &gt;::USER_BITS_NUMBER = sizeof(FT) * 8 - FIRST_USER_BIT</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Static number of bits that can have custom meanings to the user. </p>
 
 </div>
 </div>

@@ -25,7 +25,7 @@ var classvcl_1_1Vector =
     [ "fill", "classvcl_1_1Vector.html#a56e11f6b8f686d9d4059790eea081833", null ],
     [ "find", "classvcl_1_1Vector.html#a65044b5c32885c61279fa7b225d1d9c5", null ],
     [ "find", "classvcl_1_1Vector.html#a226d99f3b9fa594c0e54249dcfa25829", null ],
-    [ "indexOf", "classvcl_1_1Vector.html#af275948f8105d29129b1ab206b487687", null ],
+    [ "indexOf", "classvcl_1_1Vector.html#a21a241adaa8323b8bbd7845a1f24c8c6", null ],
     [ "insert", "classvcl_1_1Vector.html#ab098337a45f8e03de8db346b8b94fff5", null ],
     [ "operator[]", "classvcl_1_1Vector.html#a4dafd64bb48de202942a8498033c8811", null ],
     [ "operator[]", "classvcl_1_1Vector.html#a5d628ed0872fe06ebf1214a08cadb1b5", null ],
