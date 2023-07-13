@@ -306,6 +306,19 @@ var group__space =
       [ "DIM", "classvcl_1_1Point.html#ac5f107deb70e1fe2172acee10a2f445c", null ],
       [ "p", "classvcl_1_1Point.html#a697296af0bb453191747cb47b745b686", null ]
     ] ],
+    [ "vcl::PrincipalCurvature< Scalar >", "classvcl_1_1PrincipalCurvature.html", [
+      [ "ScalarType", "classvcl_1_1PrincipalCurvature.html#a57b73316469c67b4eb3713cd35c054ae", null ],
+      [ "PrincipalCurvature", "classvcl_1_1PrincipalCurvature.html#ac18e00ba774193a8917d60f97177624e", null ],
+      [ "cast", "classvcl_1_1PrincipalCurvature.html#a646ced6742b6700c41c885131e148c72", null ],
+      [ "maxDir", "classvcl_1_1PrincipalCurvature.html#ac14ac10630e9fefe942c4544fd781e5b", null ],
+      [ "maxDir", "classvcl_1_1PrincipalCurvature.html#a43751fda3d5c3c198e7602d1755f0f86", null ],
+      [ "maxValue", "classvcl_1_1PrincipalCurvature.html#a314192a8834f444b3f94486909480d7d", null ],
+      [ "maxValue", "classvcl_1_1PrincipalCurvature.html#abff47af1bb238811fe5dcbfc5b94a566", null ],
+      [ "minDir", "classvcl_1_1PrincipalCurvature.html#a6d7be6ce779090a64bcc3742dfabde5a", null ],
+      [ "minDir", "classvcl_1_1PrincipalCurvature.html#a02c8bad314a053f6718383361d5bfafb", null ],
+      [ "minValue", "classvcl_1_1PrincipalCurvature.html#ab186a1f7fa2731c1499fcd6b24960435", null ],
+      [ "minValue", "classvcl_1_1PrincipalCurvature.html#aac0372cab83c5cceaa004b1f75a668c1", null ]
+    ] ],
     [ "vcl::Segment< PointT >", "classvcl_1_1Segment.html", [
       [ "PointType", "classvcl_1_1Segment.html#af7c90b5d83194dd331a9b33cdeb314e5", null ],
       [ "ScalarType", "classvcl_1_1Segment.html#a995cc4be06858268a8396b6c6f191802", null ],
@@ -359,7 +372,7 @@ var group__space =
       [ "fill", "classvcl_1_1Vector.html#a56e11f6b8f686d9d4059790eea081833", null ],
       [ "find", "classvcl_1_1Vector.html#a65044b5c32885c61279fa7b225d1d9c5", null ],
       [ "find", "classvcl_1_1Vector.html#a226d99f3b9fa594c0e54249dcfa25829", null ],
-      [ "indexOf", "classvcl_1_1Vector.html#af275948f8105d29129b1ab206b487687", null ],
+      [ "indexOf", "classvcl_1_1Vector.html#a21a241adaa8323b8bbd7845a1f24c8c6", null ],
       [ "insert", "classvcl_1_1Vector.html#ab098337a45f8e03de8db346b8b94fff5", null ],
       [ "operator[]", "classvcl_1_1Vector.html#a4dafd64bb48de202942a8498033c8811", null ],
       [ "operator[]", "classvcl_1_1Vector.html#a5d628ed0872fe06ebf1214a08cadb1b5", null ],

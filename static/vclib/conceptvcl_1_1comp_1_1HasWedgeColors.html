@@ -121,7 +121,6 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1comp_1_1HasWedgeColors.h
 <div class="line">    { co.wedgeColorMod(<span class="keywordtype">int</span>()) } -&gt; std::same_as&lt;const vcl::Color&amp;&gt;;</div>
 <div class="line">    { o.setWedgeColor(c, <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;void&gt;;</div>
 <div class="line">    { o.setWedgeColors(v) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">    { co.isWedgeColorsEnabled() } -&gt; std::same_as&lt;bool&gt;;</div>
 <div class="line"> </div>
 <div class="line">    { o.wedgeColorBegin() } -&gt; std::same_as&lt;typename T::WedgeColorsIterator&gt;;</div>
 <div class="line">    { o.wedgeColorEnd() } -&gt; std::same_as&lt;typename T::WedgeColorsIterator&gt;;</div>
@@ -133,12 +132,11 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1comp_1_1HasWedgeColors.h
 <div class="line">    co.wedgeColors();</div>
 <div class="line">}</div>
 <div class="ttc" id="aclassvcl_1_1Color_html"><div class="ttname"><a href="classvcl_1_1Color.html">vcl::Color</a></div><div class="ttdoc">The Color class represents an RGBA color.</div><div class="ttdef"><b>Definition:</b> color.h:40</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasWedgeColors_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasWedgeColors.html">vcl::comp::HasWedgeColors</a></div><div class="ttdoc">HasWedgeColors concept is satisfied only if a Element class provides the types and member functions s...</div><div class="ttdef"><b>Definition:</b> wedge_colors.h:51</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasWedgeColors_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasWedgeColors.html">vcl::comp::HasWedgeColors</a></div><div class="ttdoc">HasWedgeColors concept is satisfied only if a Element class provides the types and member functions s...</div><div class="ttdef"><b>Definition:</b> wedge_colors.h:48</div></div>
 <div class="ttc" id="atypes_2base_8h_html_a69aa29b598b851b0640aa225a9e5d61d"><div class="ttname"><a href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> base.h:31</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>HasWedgeColors concept is satisfied only if a Element class provides the types and member functions specified in this concept. These types and member functions allow to access to an WedgeColors component of a given element. </p>
-<p>Note that this concept does not discriminate between the Horizontal WedgeColors component and the vertical OptionalWedgeColors component, therefore it does not guarantee that a template Element type that satisfies this concept provides WedgeColors component at runtime (it is guaranteed only that the proper member functions are available at compile time).</p>
-<p>To be completely sure that WedgeColors is available at runtime, you need to call the member function <code>isWedgeColorsEnabled()</code>. </p>
+<p>Note that this concept does not discriminate between the Horizontal WedgeColors component and the vertical OptionalWedgeColors component, therefore it does not guarantee that a template Element type that satisfies this concept provides WedgeColors component at runtime (it is guaranteed only that the proper member functions are available at compile time). </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

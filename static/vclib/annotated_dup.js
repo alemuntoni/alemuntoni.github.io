@@ -54,8 +54,8 @@ var annotated_dup =
       ] ],
       [ "mesh", "namespacevcl_1_1mesh.html", [
         [ "ContainerOfElement", "structvcl_1_1mesh_1_1ContainerOfElement.html", "structvcl_1_1mesh_1_1ContainerOfElement" ],
-        [ "CustomComponentsVectorMap", "classvcl_1_1mesh_1_1CustomComponentsVectorMap.html", "classvcl_1_1mesh_1_1CustomComponentsVectorMap" ],
-        [ "CustomComponentsVectorMap< T, true >", "classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01T_00_01true_01_4.html", "classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01T_00_01true_01_4" ],
+        [ "CustomComponentsVectorMap", "classvcl_1_1mesh_1_1CustomComponentsVectorMap.html", null ],
+        [ "CustomComponentsVectorMap< true >", "classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html", "classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4" ],
         [ "EdgeContainer", "classvcl_1_1mesh_1_1EdgeContainer.html", "classvcl_1_1mesh_1_1EdgeContainer" ],
         [ "ElementContainer", "classvcl_1_1mesh_1_1ElementContainer.html", "classvcl_1_1mesh_1_1ElementContainer" ],
         [ "ElementContainerTriggerer", "classvcl_1_1mesh_1_1ElementContainerTriggerer.html", null ],

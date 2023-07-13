@@ -135,6 +135,7 @@ Collaboration diagram for vcl::comp::AdjacentEdges&lt; Edge, N, TTVN, ElementTyp
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:affd6214865be7e7dc60ae3638f3dfdb8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#affd6214865be7e7dc60ae3638f3dfdb8">AdjacentEdgeType</a> = <a class="el" href="classvcl_1_1Edge.html">Edge</a></td></tr>
+<tr class="memdesc:affd6214865be7e7dc60ae3638f3dfdb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expose the type of the Adjacent <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a>.  <br /></td></tr>
 <tr class="separator:affd6214865be7e7dc60ae3638f3dfdb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e48b845144ff72543293d818d48a37b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a3e48b845144ff72543293d818d48a37b">AdjacentEdgeIterator</a> = typename <a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html#a2fc6d19893973b97cbb658027af61b34">Base::Iterator</a></td></tr>
 <tr class="separator:a3e48b845144ff72543293d818d48a37b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -144,67 +145,83 @@ Public Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a919b689a5a7caa8da5f23363fcf44eab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a919b689a5a7caa8da5f23363fcf44eab">init</a> ()</td></tr>
+<tr class="memdesc:a919b689a5a7caa8da5f23363fcf44eab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the container of adjacent edges to nullptr.  <br /></td></tr>
 <tr class="separator:a919b689a5a7caa8da5f23363fcf44eab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab88e0031e63acd0ea9a6067b223bc5eb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#ab88e0031e63acd0ea9a6067b223bc5eb">isEnabled</a> () const</td></tr>
+<tr class="memdesc:ab88e0031e63acd0ea9a6067b223bc5eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if the component is enabled, <code>false</code> otherwise. This member function can return <code>false</code> only if the component is optional.  <br /></td></tr>
 <tr class="separator:ab88e0031e63acd0ea9a6067b223bc5eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acddeb1f38011fed240c15cd9e6a7ac89"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#acddeb1f38011fed240c15cd9e6a7ac89">isAdjEdgesEnabled</a> () const</td></tr>
-<tr class="separator:acddeb1f38011fed240c15cd9e6a7ac89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab70ef81352cb7afca3b02eea1ce0095d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#ab70ef81352cb7afca3b02eea1ce0095d">adjEdgesNumber</a> () const</td></tr>
 <tr class="memdesc:ab70ef81352cb7afca3b02eea1ce0095d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of adjacent edges of this element.  <br /></td></tr>
 <tr class="separator:ab70ef81352cb7afca3b02eea1ce0095d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08872be2b004007b788749ac32b00cf2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Edge.html">Edge</a> *&amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a08872be2b004007b788749ac32b00cf2">adjEdge</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i)</td></tr>
-<tr class="memdesc:a08872be2b004007b788749ac32b00cf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference of the pointer to the i-th adjacent edge of this element.  <br /></td></tr>
+<tr class="memdesc:a08872be2b004007b788749ac32b00cf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference of the pointer to the i-th adjacent edge of the element.  <br /></td></tr>
 <tr class="separator:a08872be2b004007b788749ac32b00cf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98d324273b40f345a89bf037b1d6e0de"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classvcl_1_1Edge.html">Edge</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a98d324273b40f345a89bf037b1d6e0de">adjEdge</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i) const</td></tr>
-<tr class="memdesc:a98d324273b40f345a89bf037b1d6e0de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const pointer to the i-th adjacent edge of this element.  <br /></td></tr>
+<tr class="memdesc:a98d324273b40f345a89bf037b1d6e0de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const pointer to the i-th adjacent edge of the element.  <br /></td></tr>
 <tr class="separator:a98d324273b40f345a89bf037b1d6e0de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58ddbd5f73f8de92f884a717ead3672e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Edge.html">Edge</a> *&amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a58ddbd5f73f8de92f884a717ead3672e">adjEdgeMod</a> (int i)</td></tr>
-<tr class="memdesc:a58ddbd5f73f8de92f884a717ead3672e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference of the pointer to the i-th adjacent edge of this element but using as index the module between i and the number of adjacent edges. You can use this function if you need to get the "next adjacent edge after position k", without check if it is less than the number of adj edges. Works also for negative numbers:  <br /></td></tr>
+<tr class="memdesc:a58ddbd5f73f8de92f884a717ead3672e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference of the pointer to the i-th adjacent edge of the element but using as index the module between i and the number of adjacent edges. You can use this function if you need to get the "next adjacent edge
+after position k", without check if it is less than the number of adj edges. Works also for negative numbers:  <br /></td></tr>
 <tr class="separator:a58ddbd5f73f8de92f884a717ead3672e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b723c8e9965fe0b6f58c115f85de56d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classvcl_1_1Edge.html">Edge</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a8b723c8e9965fe0b6f58c115f85de56d">adjEdgeMod</a> (int i) const</td></tr>
 <tr class="memdesc:a8b723c8e9965fe0b6f58c115f85de56d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same of adjEdgeMod, but returns a const Pointer to the adjacent edge.  <br /></td></tr>
 <tr class="separator:a8b723c8e9965fe0b6f58c115f85de56d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48d18457e9a0745c1ca47e6e51ab846a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a48d18457e9a0745c1ca47e6e51ab846a">setAdjEdge</a> (<a class="el" href="classvcl_1_1Edge.html">Edge</a> *f, <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i)</td></tr>
-<tr class="memdesc:a48d18457e9a0745c1ca47e6e51ab846a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the i-th adjacent edge of this element.  <br /></td></tr>
+<tr class="memdesc:a48d18457e9a0745c1ca47e6e51ab846a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the i-th adjacent edge of the element.  <br /></td></tr>
 <tr class="separator:a48d18457e9a0745c1ca47e6e51ab846a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ca2d0e6f3f22dde1a7126233dd2b9b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a2ca2d0e6f3f22dde1a7126233dd2b9b6">setAdjEdges</a> (const std::vector&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a> * &gt; &amp;list)</td></tr>
-<tr class="memdesc:a2ca2d0e6f3f22dde1a7126233dd2b9b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all the adjacent edges of this element.  <br /></td></tr>
+<tr class="memdesc:a2ca2d0e6f3f22dde1a7126233dd2b9b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all the adjacent edges of the element.  <br /></td></tr>
 <tr class="separator:a2ca2d0e6f3f22dde1a7126233dd2b9b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afef4f1d72d4a2c5e75ff19c3f491be3d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#afef4f1d72d4a2c5e75ff19c3f491be3d">containsAdjEdge</a> (const <a class="el" href="classvcl_1_1Edge.html">Edge</a> *e) const</td></tr>
+<tr class="memdesc:afef4f1d72d4a2c5e75ff19c3f491be3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if the container of adjacent edges contains the given edge, <code>false</code> otherwise.  <br /></td></tr>
 <tr class="separator:afef4f1d72d4a2c5e75ff19c3f491be3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0d065d521b6127c896560f041d858a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a3e48b845144ff72543293d818d48a37b">AdjacentEdgeIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#aa0d065d521b6127c896560f041d858a5">findAdjEdge</a> (const <a class="el" href="classvcl_1_1Edge.html">Edge</a> *e)</td></tr>
+<tr class="memdesc:aa0d065d521b6127c896560f041d858a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterator to the first adjacent edge in the container of this component that is equal to the given edge. If no such adjacent edge is found, past-the-end iterator is returned.  <br /></td></tr>
 <tr class="separator:aa0d065d521b6127c896560f041d858a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf72bb7de740e87cf35991602eb12b95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a9f4b23ab91005fa3ffb23a1136036928">ConstAdjacentEdgeIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#acf72bb7de740e87cf35991602eb12b95">findAdjEdge</a> (const <a class="el" href="classvcl_1_1Edge.html">Edge</a> *e) const</td></tr>
+<tr class="memdesc:acf72bb7de740e87cf35991602eb12b95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const iterator to the first adjacent edge in the container of this component that is equal to the given edge. If no such adjacent edge is found, past-the-end iterator is returned.  <br /></td></tr>
 <tr class="separator:acf72bb7de740e87cf35991602eb12b95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a865a8cb027c98be6bdbc67ad5ea490d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a865a8cb027c98be6bdbc67ad5ea490d4">indexOfAdjEdge</a> (const <a class="el" href="classvcl_1_1Edge.html">Edge</a> *e) const</td></tr>
-<tr class="separator:a865a8cb027c98be6bdbc67ad5ea490d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53e285dd3c4f30f45b6b6ceb3515ec02"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a53e285dd3c4f30f45b6b6ceb3515ec02">indexOfAdjEdge</a> (const <a class="el" href="classvcl_1_1Edge.html">Edge</a> *e) const</td></tr>
+<tr class="memdesc:a53e285dd3c4f30f45b6b6ceb3515ec02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the index of the given adjacent edge in the container of the element. If the given adjacent edge is not in the container, returns UINT_NULL.  <br /></td></tr>
+<tr class="separator:a53e285dd3c4f30f45b6b6ceb3515ec02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9f5f3f2603e0cb7e6da9028c5d44688"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#ac9f5f3f2603e0cb7e6da9028c5d44688">resizeAdjEdges</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> n)</td></tr>
 <tr class="memdesc:ac9f5f3f2603e0cb7e6da9028c5d44688"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize the container of the adjacent edges to the given size.  <br /></td></tr>
 <tr class="separator:ac9f5f3f2603e0cb7e6da9028c5d44688"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b9697d8fc9d22bf7f2f15cca29a0939"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a4b9697d8fc9d22bf7f2f15cca29a0939">pushAdjEdge</a> (<a class="el" href="classvcl_1_1Edge.html">Edge</a> *e)</td></tr>
+<tr class="memdesc:a4b9697d8fc9d22bf7f2f15cca29a0939"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes in the back of the container the given adjacent edge.  <br /></td></tr>
 <tr class="separator:a4b9697d8fc9d22bf7f2f15cca29a0939"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add0ccafd62c6c018b8a62d88e6c06903"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#add0ccafd62c6c018b8a62d88e6c06903">insertAdjEdge</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i, <a class="el" href="classvcl_1_1Edge.html">Edge</a> *e)</td></tr>
+<tr class="memdesc:add0ccafd62c6c018b8a62d88e6c06903"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts the given adjacent edge in the container at the given position.  <br /></td></tr>
 <tr class="separator:add0ccafd62c6c018b8a62d88e6c06903"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d493dd6e802e55d555c905d9c2d07ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a4d493dd6e802e55d555c905d9c2d07ee">eraseAdjEdge</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i)</td></tr>
+<tr class="memdesc:a4d493dd6e802e55d555c905d9c2d07ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the adjacent edge at the given position from the container.  <br /></td></tr>
 <tr class="separator:a4d493dd6e802e55d555c905d9c2d07ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f378ad4fcbd1e98cf4240fc2d8bdcf8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a1f378ad4fcbd1e98cf4240fc2d8bdcf8">clearAdjEdges</a> ()</td></tr>
+<tr class="memdesc:a1f378ad4fcbd1e98cf4240fc2d8bdcf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the container of adjacent edges, making it empty.  <br /></td></tr>
 <tr class="separator:a1f378ad4fcbd1e98cf4240fc2d8bdcf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a750858ffc57c4e3165df28a2debcddae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a3e48b845144ff72543293d818d48a37b">AdjacentEdgeIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a750858ffc57c4e3165df28a2debcddae">adjEdgeBegin</a> ()</td></tr>
+<tr class="memdesc:a750858ffc57c4e3165df28a2debcddae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterator to the first adjacent edge in the container of this component.  <br /></td></tr>
 <tr class="separator:a750858ffc57c4e3165df28a2debcddae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a672a49883f27fa3d080233a0ee24be86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a3e48b845144ff72543293d818d48a37b">AdjacentEdgeIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a672a49883f27fa3d080233a0ee24be86">adjEdgeEnd</a> ()</td></tr>
+<tr class="memdesc:a672a49883f27fa3d080233a0ee24be86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterator to the end of the container of this component.  <br /></td></tr>
 <tr class="separator:a672a49883f27fa3d080233a0ee24be86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6dab8ef8f4ebef61df0280144834af6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a9f4b23ab91005fa3ffb23a1136036928">ConstAdjacentEdgeIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a6dab8ef8f4ebef61df0280144834af6c">adjEdgeBegin</a> () const</td></tr>
+<tr class="memdesc:a6dab8ef8f4ebef61df0280144834af6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const iterator to the first adjacent edge in the container of this component.  <br /></td></tr>
 <tr class="separator:a6dab8ef8f4ebef61df0280144834af6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ff6383d4816bddaa9b0fb802f0ff6e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a9f4b23ab91005fa3ffb23a1136036928">ConstAdjacentEdgeIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a8ff6383d4816bddaa9b0fb802f0ff6e3">adjEdgeEnd</a> () const</td></tr>
+<tr class="memdesc:a8ff6383d4816bddaa9b0fb802f0ff6e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const iterator to the end of the container of this component.  <br /></td></tr>
 <tr class="separator:a8ff6383d4816bddaa9b0fb802f0ff6e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a954bb6e2e7ea35bcdac291a757e2c89b"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a954bb6e2e7ea35bcdac291a757e2c89b">adjEdges</a> ()</td></tr>
+<tr class="memdesc:a954bb6e2e7ea35bcdac291a757e2c89b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a lightweight view object that stores the begin and end iterators of the container of adjacent edges of the element. The view object exposes the iterators trough the <code>begin()</code> and <code>end()</code> member functions, and therefore the returned object can be used in range-based for loops:  <br /></td></tr>
 <tr class="separator:a954bb6e2e7ea35bcdac291a757e2c89b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47b0f182844d136e0f10d658a4be6212"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a47b0f182844d136e0f10d658a4be6212">adjEdges</a> () const</td></tr>
+<tr class="memdesc:a47b0f182844d136e0f10d658a4be6212"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a lightweight const view object that stores the begin and end iterators of the container of adjacent edges of the element. The view object exposes the iterators trough the <code>begin()</code> and <code>end()</code> member functions, and therefore the returned object can be used in range-based for loops:  <br /></td></tr>
 <tr class="separator:a47b0f182844d136e0f10d658a4be6212"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a87d1f9b44b3a999fd242e042b9607fc4"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a87d1f9b44b3a999fd242e042b9607fc4">ADJ_EDGE_NUMBER</a> = <a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html#a884be8c64a380423ada7cef74a23c8e7">Base::SIZE</a></td></tr>
+<tr class="memdesc:a87d1f9b44b3a999fd242e042b9607fc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static size of the container. If the container is dynamic, this value will be negative and you should use the <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#ab70ef81352cb7afca3b02eea1ce0095d" title="Returns the number of adjacent edges of this element.">adjEdgesNumber()</a> member function.  <br /></td></tr>
 <tr class="separator:a87d1f9b44b3a999fd242e042b9607fc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_attribs_classvcl_1_1comp_1_1ContainerComponent"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classvcl_1_1comp_1_1ContainerComponent')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html">vcl::comp::ContainerComponent&lt; COMP_TYPE, Elem *, N, void, ElementType, OPT, TTVN, Elem &gt;</a></td></tr>
 <tr class="memitem:ac691dabcac26d322c5aed9704fe3bc65 inherit pub_static_attribs_classvcl_1_1comp_1_1ContainerComponent"><td class="memItemLeft" align="right" valign="top">static const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html#ac691dabcac26d322c5aed9704fe3bc65">TIED_TO_VERTEX_NUMBER</a></td></tr>
@@ -267,11 +284,21 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a>, int N, bool TTVN, typename ElementType = void, bool OPT = false&gt;<br />
 class vcl::comp::AdjacentEdges&lt; Edge, N, TTVN, ElementType, OPT &gt;</div><p>The <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html" title="The AdjacentEdges class is a container of Edge pointers. It could be used by any Element to save adja...">AdjacentEdges</a> class is a container of <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> pointers. It could be used by any <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> to save adjacencies information (also the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> element itself). </p>
-<p>It is a random access container having static or dynamic size, depending on the value of N (a negative number means dynamic).</p>
+<p>It is a random access container having static or dynamic size, depending on the value of the template argument N (a negative number means dynamic).</p>
 <p>The member functions of this class will be available in the instance of any <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> that will contain this component.</p>
 <p>For example, if you have a <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> <code>v</code> that has the <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html" title="The AdjacentEdges class is a container of Edge pointers. It could be used by any Element to save adja...">AdjacentEdges</a> component, you'll be able to access to this component member functions from <code>v</code>:</p>
 <div class="fragment"><div class="line">v.adjEdgesNumber();</div>
-</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>This component can be <em>Tied To <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Number</em>: it means that the size of the container, if dynamic, will change automatically along the <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Number of the <a class="el" href="classvcl_1_1comp_1_1Component.html" title="The Component class is the base class for almost all the components of VCLib (with the exception of C...">Component</a>. Check the <code>TTVN</code> template value on the specialization of your component to check if it is tied to the <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Number. For further details check the documentation of the <a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html">ContainerComponent</a> class. </dd></dl>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>This component could be <em>Tied To <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Number</em>: it means that the size of the container, if dynamic, will change automatically along the <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Number of the <a class="el" href="classvcl_1_1comp_1_1Component.html" title="The Component class is the base class for almost all the components of VCLib (with the exception of C...">Component</a>. Check the <code>TTVN</code> template value on the specialization of your component to check if it is tied to the <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Number. For further details check the documentation of the <a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html">ContainerComponent</a> class.</dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname"><a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a></td><td>The type of the adjacent <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> element. </td></tr>
+    <tr><td class="paramname">N</td><td>The size of the container, that will represent the number of storable adjacent edges. If negative, the container is dynamic. </td></tr>
+    <tr><td class="paramname">TTVN</td><td>If true, the size of the container will be tied to the <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Number of the component (this is used mostly on <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> elements). </td></tr>
+    <tr><td class="paramname">ElementType</td><td>This template argument must be <code>void</code> if the component needs to be stored horizontally, or the type of the element that will contain this component if the component needs to be stored vertically. </td></tr>
+    <tr><td class="paramname">OPT</td><td>If true, the component will be optional. This argument is considered only if the component is stored vertically. </td></tr>
+  </table>
+  </dd>
+</dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a3e48b845144ff72543293d818d48a37b" name="a3e48b845144ff72543293d818d48a37b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3e48b845144ff72543293d818d48a37b">&#9670;&#160;</a></span>AdjacentEdgeIterator</h2>
@@ -302,6 +329,8 @@ template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Expose the type of the Adjacent <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a>. </p>
 
 </div>
 </div>
@@ -340,16 +369,17 @@ template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N
       </table>
 </div><div class="memdoc">
 
-<p>Returns a reference of the pointer to the i-th adjacent edge of this element. </p>
+<p>Returns a reference of the pointer to the i-th adjacent edge of the element. </p>
 <p>You can use this function to set the i-th adjacent edge:</p>
-<div class="fragment"><div class="line">e.adjEdge(2) = &amp;m.edge(k); <span class="comment">// the second adj edge of e will point to the k-th edge of the mesh.</span></div>
+<div class="fragment"><div class="line">e.adjEdge(2) = &amp;m.edge(k); <span class="comment">// the second adj edge of e will point to the k-th</span></div>
+<div class="line">                           <span class="comment">// edge of the mesh.</span></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>the position of the required adjacent edge in the container; the value must be between 0 and the number of adj edges. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The pointer to the i-th adjacent edge of this element. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The pointer to the i-th adjacent edge of the element. </dd></dl>
 
 </div>
 </div>
@@ -371,14 +401,14 @@ template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N
       </table>
 </div><div class="memdoc">
 
-<p>Returns a const pointer to the i-th adjacent edge of this element. </p>
+<p>Returns a const pointer to the i-th adjacent edge of the element. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>the position of the required adjacent edge in the container; the value must be between 0 and the number of adj edges. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The pointer to the i-th adjacent edge of this element. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The pointer to the i-th adjacent edge of the element. </dd></dl>
 
 </div>
 </div>
@@ -396,6 +426,9 @@ template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N
       </table>
 </div><div class="memdoc">
 
+<p>Returns an iterator to the first adjacent edge in the container of this component. </p>
+<dl class="section return"><dt>Returns</dt><dd>an iterator pointing to the begin of this container. </dd></dl>
+
 </div>
 </div>
 <a id="a6dab8ef8f4ebef61df0280144834af6c" name="a6dab8ef8f4ebef61df0280144834af6c"></a>
@@ -411,6 +444,9 @@ template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns a const iterator to the first adjacent edge in the container of this component. </p>
+<dl class="section return"><dt>Returns</dt><dd>an iterator pointing to the begin of this container. </dd></dl>
 
 </div>
 </div>
@@ -428,6 +464,9 @@ template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N
       </table>
 </div><div class="memdoc">
 
+<p>Returns an iterator to the end of the container of this component. </p>
+<dl class="section return"><dt>Returns</dt><dd>an iterator pointing to the end of this container. </dd></dl>
+
 </div>
 </div>
 <a id="a8ff6383d4816bddaa9b0fb802f0ff6e3" name="a8ff6383d4816bddaa9b0fb802f0ff6e3"></a>
@@ -443,6 +482,9 @@ template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns a const iterator to the end of the container of this component. </p>
+<dl class="section return"><dt>Returns</dt><dd>an iterator pointing to the end of this container. </dd></dl>
 
 </div>
 </div>
@@ -464,17 +506,20 @@ template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N
       </table>
 </div><div class="memdoc">
 
-<p>Returns a reference of the pointer to the i-th adjacent edge of this element but using as index the module between i and the number of adjacent edges. You can use this function if you need to get the "next adjacent edge after position k", without check if it is less than the number of adj edges. Works also for negative numbers: </p>
+<p>Returns a reference of the pointer to the i-th adjacent edge of the element but using as index the module between i and the number of adjacent edges. You can use this function if you need to get the "next adjacent edge
+after position k", without check if it is less than the number of adj edges. Works also for negative numbers: </p>
 <div class="fragment"><div class="line">k = pos; <span class="comment">// some position of an adjacent edge</span></div>
-<div class="line"><span class="keyword">auto</span>* next = e.adjEdgeMod(k+1); <span class="comment">// the adj edge next to k, that may also be at pos 0</span></div>
-<div class="line"><span class="keyword">auto</span>* last = e.adjEdgeMod(-1); <span class="comment">// the adj edge in position adjEdgeNumber()-1</span></div>
+<div class="line"><span class="keyword">auto</span>* next = e.adjEdgeMod(k+1); <span class="comment">// the adj edge next to k, that may also be</span></div>
+<div class="line">                                <span class="comment">// at pos 0</span></div>
+<div class="line"><span class="keyword">auto</span>* last = e.adjEdgeMod(-1); <span class="comment">// the adj edge in position</span></div>
+<div class="line">                               <span class="comment">// adjEdgeNumber()-1</span></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>the position of the required adjacent edge in the container, w.r.t. the position 0; value is modularized on adjEdgeNumber(). </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The pointer to the required adjacent edge of this element. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The pointer to the required adjacent edge of the element. </dd></dl>
 
 </div>
 </div>
@@ -521,6 +566,13 @@ template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N
       </table>
 </div><div class="memdoc">
 
+<p>Returns a lightweight view object that stores the begin and end iterators of the container of adjacent edges of the element. The view object exposes the iterators trough the <code>begin()</code> and <code>end()</code> member functions, and therefore the returned object can be used in range-based for loops: </p>
+<div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keyword">auto</span>* <a class="code hl_function" href="classvcl_1_1comp_1_1AdjacentEdges.html#a08872be2b004007b788749ac32b00cf2">adjEdge</a> : el.adjEdges()) {</div>
+<div class="line">    <span class="comment">// Do something with adjEdge</span></div>
+<div class="line">}</div>
+<div class="ttc" id="aclassvcl_1_1comp_1_1AdjacentEdges_html_a08872be2b004007b788749ac32b00cf2"><div class="ttname"><a href="classvcl_1_1comp_1_1AdjacentEdges.html#a08872be2b004007b788749ac32b00cf2">vcl::comp::AdjacentEdges::adjEdge</a></div><div class="ttdeci">Edge *&amp; adjEdge(uint i)</div><div class="ttdoc">Returns a reference of the pointer to the i-th adjacent edge of the element.</div><div class="ttdef"><b>Definition:</b> adjacent_edges.cpp:84</div></div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>a lightweight view object that can be used in range-based for loops to iterate over adjacent edges. </dd></dl>
+
 </div>
 </div>
 <a id="a47b0f182844d136e0f10d658a4be6212" name="a47b0f182844d136e0f10d658a4be6212"></a>
@@ -536,6 +588,12 @@ template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns a lightweight const view object that stores the begin and end iterators of the container of adjacent edges of the element. The view object exposes the iterators trough the <code>begin()</code> and <code>end()</code> member functions, and therefore the returned object can be used in range-based for loops: </p>
+<div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>* <a class="code hl_function" href="classvcl_1_1comp_1_1AdjacentEdges.html#a08872be2b004007b788749ac32b00cf2">adjEdge</a> : el.adjEdges()) {</div>
+<div class="line">    <span class="comment">// Do something read-only with adjEdge</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>a lightweight view object that can be used in range-based for loops to iterate over adjacent edges. </dd></dl>
 
 </div>
 </div>
@@ -598,6 +656,9 @@ requires (N &lt; 0 &amp;&amp; !TTVN)</div>
       </table>
 </div><div class="memdoc">
 
+<p>Clears the container of adjacent edges, making it empty. </p>
+<dl class="section note"><dt>Note</dt><dd>This function is available only if the container of the Adjacent Edges component has dynamic size. </dd></dl>
+
 </div>
 </div>
 <a id="afef4f1d72d4a2c5e75ff19c3f491be3d" name="afef4f1d72d4a2c5e75ff19c3f491be3d"></a>
@@ -617,6 +678,15 @@ template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns <code>true</code> if the container of adjacent edges contains the given edge, <code>false</code> otherwise. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">e</td><td>the pointer to the edge to search. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the container of adjacent edges contains the given edge, <code>false</code> otherwise. </dd></dl>
 
 </div>
 </div>
@@ -668,6 +738,15 @@ requires (N &lt; 0 &amp;&amp; !TTVN)</div>
       </table>
 </div><div class="memdoc">
 
+<p>Removes the adjacent edge at the given position from the container. </p>
+<dl class="section note"><dt>Note</dt><dd>This function is available only if the container of the Adjacent Edges component has dynamic size. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>The position of the adjacent edge to remove from the container. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="aa0d065d521b6127c896560f041d858a5" name="aa0d065d521b6127c896560f041d858a5"></a>
@@ -688,6 +767,15 @@ template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N
       </table>
 </div><div class="memdoc">
 
+<p>Returns an iterator to the first adjacent edge in the container of this component that is equal to the given edge. If no such adjacent edge is found, past-the-end iterator is returned. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">e</td><td>the pointer to the edge to search. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>an iterator pointing to the first adjacent edge equal to the given edge, or end if no such adjacent edge is found. </dd></dl>
+
 </div>
 </div>
 <a id="acf72bb7de740e87cf35991602eb12b95" name="acf72bb7de740e87cf35991602eb12b95"></a>
@@ -707,6 +795,15 @@ template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns a const iterator to the first adjacent edge in the container of this component that is equal to the given edge. If no such adjacent edge is found, past-the-end iterator is returned. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">e</td><td>the pointer to the edge to search. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a const iterator pointing to the first adjacent edge equal to the given edge, or end if no such adjacent edge is found. </dd></dl>
 
 </div>
 </div>
@@ -786,8 +883,8 @@ template&lt;typename <a class="el" href="classvcl_1_1Element.html">Element</a> ,
 
 </div>
 </div>
-<a id="a865a8cb027c98be6bdbc67ad5ea490d4" name="a865a8cb027c98be6bdbc67ad5ea490d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a865a8cb027c98be6bdbc67ad5ea490d4">&#9670;&#160;</a></span>indexOfAdjEdge()</h2>
+<a id="a53e285dd3c4f30f45b6b6ceb3515ec02" name="a53e285dd3c4f30f45b6b6ceb3515ec02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53e285dd3c4f30f45b6b6ceb3515ec02">&#9670;&#160;</a></span>indexOfAdjEdge()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -795,7 +892,7 @@ template&lt;typename <a class="el" href="classvcl_1_1Element.html">Element</a> ,
 template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TT, typename El , bool O&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::indexOfAdjEdge </td>
+          <td class="memname"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::indexOfAdjEdge </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classvcl_1_1Edge.html">Edge</a> *&#160;</td>
           <td class="paramname"><em>e</em></td><td>)</td>
@@ -803,6 +900,15 @@ template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns the index of the given adjacent edge in the container of the element. If the given adjacent edge is not in the container, returns UINT_NULL. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">e</td><td>the pointer to the adjacent edge to search. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the index of the given adjacent edge, or UINT_NULL if it is not found. </dd></dl>
 
 </div>
 </div>
@@ -819,6 +925,10 @@ template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Initializes the container of adjacent edges to nullptr. </p>
+<p>It is made in the init function since the component could be not available during construction (e.g. if the component is optional and not enabled).</p>
+<p>This member function is hidden by the element that inherits this class. </p>
 
 </div>
 </div>
@@ -890,21 +1000,15 @@ requires (N &lt; 0 &amp;&amp; !TTVN)</div>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="acddeb1f38011fed240c15cd9e6a7ac89" name="acddeb1f38011fed240c15cd9e6a7ac89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acddeb1f38011fed240c15cd9e6a7ac89">&#9670;&#160;</a></span>isAdjEdgesEnabled()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N, bool TT, typename El , bool O&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a>&lt; <a class="el" href="classvcl_1_1Edge.html">Edge</a>, N, TT, El, O &gt;::isAdjEdgesEnabled</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Inserts the given adjacent edge in the container at the given position. </p>
+<dl class="section note"><dt>Note</dt><dd>This function is available only if the container of the Adjacent Edges component has dynamic size. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>The position in the container where to insert the adjacent edge. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">e</td><td>The pointer to the adjacent edge to insert in the container. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -921,6 +1025,10 @@ template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns <code>true</code> if the component is enabled, <code>false</code> otherwise. This member function can return <code>false</code> only if the component is optional. </p>
+<p>This member function is hidden by the element that inherits this class.</p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the component is enabled, <code>false</code> otherwise. </dd></dl>
 
 </div>
 </div>
@@ -942,6 +1050,15 @@ requires (N &lt; 0 &amp;&amp; !TTVN)</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Pushes in the back of the container the given adjacent edge. </p>
+<dl class="section note"><dt>Note</dt><dd>This function is available only if the container of the Adjacent Edges component has dynamic size. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">e</td><td>The pointer to the adjacent edge to push in the back of the container. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1023,10 +1140,10 @@ requires (N &lt; 0 &amp;&amp; !TTVN)</div>
 </div><div class="memdoc">
 
 <p>Resize the container of the adjacent edges to the given size. </p>
-<dl class="section note"><dt>Note</dt><dd>This function is available only if the container of the Adjacent Edges is has dynamic size. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function is available only if the container of the Adjacent Edges component has dynamic size. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">n</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>The new size of the adjacent edges container. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1061,10 +1178,10 @@ template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N
       </table>
 </div><div class="memdoc">
 
-<p>Sets the i-th adjacent edge of this element. </p>
+<p>Sets the i-th adjacent edge of the element. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">e</td><td>The pointer to the adjacent edge to set to this element. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">e</td><td>The pointer to the adjacent edge to set to the element. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>the position in the container on which set the adj edge; the value must be between 0 and the number of adj edges. </td></tr>
   </table>
   </dd>
@@ -1090,7 +1207,7 @@ template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N
       </table>
 </div><div class="memdoc">
 
-<p>Sets all the adjacent edges of this element. </p>
+<p>Sets all the adjacent edges of the element. </p>
 <p>If the size of the container is static, the size of the input vector must be the same one of the container.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1199,6 +1316,7 @@ template&lt;typename <a class="el" href="classvcl_1_1Edge.html">Edge</a> , int N
   </tr>
 </table>
 </div><div class="memdoc">
+
 <p>Static size of the container. If the container is dynamic, this value will be negative and you should use the <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#ab70ef81352cb7afca3b02eea1ce0095d" title="Returns the number of adjacent edges of this element.">adjEdgesNumber()</a> member function. </p>
 
 </div>

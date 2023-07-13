@@ -7,7 +7,6 @@ var classvcl_1_1comp_1_1Mark =
     [ "incrementMark", "classvcl_1_1comp_1_1Mark.html#af26d3bbe511e8780cd2f27b331b43dac", null ],
     [ "init", "classvcl_1_1comp_1_1Mark.html#aaf31c70f7b2d57459b80caf10bd655b5", null ],
     [ "isEnabled", "classvcl_1_1comp_1_1Mark.html#a0725a76f5fcd49280e6a435c2bed897d", null ],
-    [ "isMarkEnabled", "classvcl_1_1comp_1_1Mark.html#a38804c81d4308d2ee174b08b4cbb64de", null ],
     [ "mark", "classvcl_1_1comp_1_1Mark.html#aac728e0065db416e6ad8e76dc42f627e", null ],
     [ "resetMark", "classvcl_1_1comp_1_1Mark.html#a7238a2935eac79473945ea9242e83925", null ]
 ];

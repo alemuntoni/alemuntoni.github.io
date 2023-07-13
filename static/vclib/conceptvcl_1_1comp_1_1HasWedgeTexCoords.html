@@ -127,7 +127,6 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1comp_1_1HasWedgeTexCoord
 <div class="line">    { o.setWedgeTexCoords(v) } -&gt; std::same_as&lt;void&gt;;</div>
 <div class="line">    { o.textureIndex() } -&gt; std::same_as&lt;short&amp;&gt;;</div>
 <div class="line">    { co.textureIndex() } -&gt; std::same_as&lt;short&gt;;</div>
-<div class="line">    { co.isWedgeTexCoordsEnabled() } -&gt; std::same_as&lt;bool&gt;;</div>
 <div class="line"> </div>
 <div class="line">    { o.wedgeTexCoordBegin() } -&gt;</div>
 <div class="line">        std::same_as&lt;typename T::WedgeTexCoordsIterator&gt;;</div>
@@ -140,12 +139,11 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1comp_1_1HasWedgeTexCoord
 <div class="line">    o.wedgeTexCoords();</div>
 <div class="line">    co.wedgeTexCoords();</div>
 <div class="line">}</div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasWedgeTexCoords_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasWedgeTexCoords.html">vcl::comp::HasWedgeTexCoords</a></div><div class="ttdoc">HasWedgeTexCoords concept is satisfied only if a Element class provides the types and member function...</div><div class="ttdef"><b>Definition:</b> wedge_tex_coords.h:51</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasWedgeTexCoords_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasWedgeTexCoords.html">vcl::comp::HasWedgeTexCoords</a></div><div class="ttdoc">HasWedgeTexCoords concept is satisfied only if a Element class provides the types and member function...</div><div class="ttdef"><b>Definition:</b> wedge_tex_coords.h:48</div></div>
 <div class="ttc" id="atypes_2base_8h_html_a69aa29b598b851b0640aa225a9e5d61d"><div class="ttname"><a href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> base.h:31</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>HasWedgeTexCoords concept is satisfied only if a Element class provides the types and member functions specified in this concept. These types and member functions allow to access to an WedgeTexCoords component of a given element. </p>
-<p>Note that this concept does not discriminate between the Horizontal WedgeTexCoords component and the vertical OptionalWedgeTexCoords component, therefore it does not guarantee that a template Element type that satisfies this concept provides WedgeTexCoords component at runtime (it is guaranteed only that the proper member functions are available at compile time).</p>
-<p>To be completely sure that WedgeTexCoords is available at runtime, you need to call the member function <code>isWedgeTexCoordsEnabled()</code>. </p>
+<p>Note that this concept does not discriminate between the Horizontal WedgeTexCoords component and the vertical OptionalWedgeTexCoords component, therefore it does not guarantee that a template Element type that satisfies this concept provides WedgeTexCoords component at runtime (it is guaranteed only that the proper member functions are available at compile time). </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

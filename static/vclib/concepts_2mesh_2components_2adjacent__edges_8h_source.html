@@ -130,62 +130,61 @@ $(document).ready(function(){initNavTree('concepts_2mesh_2components_2adjacent__
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="namespacevcl_1_1comp.html">   31</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl_1_1comp.html">vcl::comp</a> {</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1HasAdjacentEdges.html">   51</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasAdjacentEdges.html">HasAdjacentEdges</a> = <span class="keyword">requires</span>(</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    T o,</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">const</span> T&amp; co,</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">typename</span> T::AdjacentEdgeType e,</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    std::vector&lt;typename T::AdjacentEdgeType*&gt; v)</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>{</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    T::ADJ_EDGE_NUMBER;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">typename</span> T::AdjacentEdgeType;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">typename</span> T::AdjacentEdgeIterator;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">typename</span> T::ConstAdjacentEdgeIterator;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    { o.adjEdgesNumber() } -&gt; std::same_as&lt;uint&gt;;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    { o.adjEdge(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;typename T::AdjacentEdgeType*&amp;&gt;;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    { co.adjEdge(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;const typename T::AdjacentEdgeType*&gt;;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    { o.adjEdgeMod(<span class="keywordtype">int</span>()) } -&gt; std::same_as&lt;typename T::AdjacentEdgeType*&amp;&gt;;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    { co.adjEdgeMod(<span class="keywordtype">int</span>()) } -&gt;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        std::same_as&lt;const typename T::AdjacentEdgeType*&gt;;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    { o.setAdjEdge(&amp;e, <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    { o.setAdjEdges(v) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    { co.containsAdjEdge(&amp;e) } -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    { o.findAdjEdge(&amp;e) } -&gt; std::same_as&lt;typename T::AdjacentEdgeIterator&gt;;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    { co.findAdjEdge(&amp;e) } -&gt;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        std::same_as&lt;typename T::ConstAdjacentEdgeIterator&gt;;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    { co.indexOfAdjEdge(&amp;e) } -&gt; std::same_as&lt;int&gt;;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    { co.isAdjEdgesEnabled() } -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    { o.adjEdgeBegin() } -&gt; std::same_as&lt;typename T::AdjacentEdgeIterator&gt;;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    { o.adjEdgeEnd() } -&gt; std::same_as&lt;typename T::AdjacentEdgeIterator&gt;;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    { co.adjEdgeBegin() } -&gt;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        std::same_as&lt;typename T::ConstAdjacentEdgeIterator&gt;;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    { co.adjEdgeEnd() } -&gt; std::same_as&lt;typename T::ConstAdjacentEdgeIterator&gt;;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    o.adjEdges();</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    co.adjEdges();</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>};</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1HasOptionalAdjacentEdges.html">   95</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasOptionalAdjacentEdges.html">HasOptionalAdjacentEdges</a> =</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasAdjacentEdges.html">HasAdjacentEdges&lt;T&gt;</a> &amp;&amp; <a class="code hl_concept" href="conceptvcl_1_1comp_1_1IsOptionalComponent.html">IsOptionalComponent&lt;typename T::AdjacentEdges&gt;</a>;</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1HasRightNumberOfAdjacentEdges.html">  109</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasRightNumberOfAdjacentEdges.html">HasRightNumberOfAdjacentEdges</a> = T::VERTEX_NUMBER == T::ADJ_EDGE_NUMBER;</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1SanityCheckAdjacentEdges.html">  124</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1SanityCheckAdjacentEdges.html">SanityCheckAdjacentEdges</a> =</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    !<a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasAdjacentEdges.html">HasAdjacentEdges&lt;T&gt;</a> || <a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasRightNumberOfAdjacentEdges.html">HasRightNumberOfAdjacentEdges&lt;T&gt;</a>;</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>} <span class="comment">// namespace vcl::comp</span></div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="preprocessor">#endif </span><span class="comment">// VCL_CONCEPTS_MESH_COMPONENTS_ADJACENT_EDGES_H</span></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasAdjacentEdges_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasAdjacentEdges.html">vcl::comp::HasAdjacentEdges</a></div><div class="ttdoc">HasAdjacentEdges concept is satisfied only if a Element class provides the types and member functions...</div><div class="ttdef"><b>Definition:</b> adjacent_edges.h:51</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasOptionalAdjacentEdges_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasOptionalAdjacentEdges.html">vcl::comp::HasOptionalAdjacentEdges</a></div><div class="ttdoc">HasOptionalAdjacentEdges concept is satisfied only if a class satisfies the HasAdjacentEdges concept ...</div><div class="ttdef"><b>Definition:</b> adjacent_edges.h:95</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasRightNumberOfAdjacentEdges_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasRightNumberOfAdjacentEdges.html">vcl::comp::HasRightNumberOfAdjacentEdges</a></div><div class="ttdoc">HasRightNumberOfAdjacentEdges concept.</div><div class="ttdef"><b>Definition:</b> adjacent_edges.h:109</div></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1HasAdjacentEdges.html">   48</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasAdjacentEdges.html">HasAdjacentEdges</a> = <span class="keyword">requires</span>(</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    T o,</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">const</span> T&amp; co,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">typename</span> T::AdjacentEdgeType e,</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    std::vector&lt;typename T::AdjacentEdgeType*&gt; v)</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>{</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    T::ADJ_EDGE_NUMBER;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">typename</span> T::AdjacentEdgeType;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">typename</span> T::AdjacentEdgeIterator;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">typename</span> T::ConstAdjacentEdgeIterator;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    { o.adjEdgesNumber() } -&gt; std::same_as&lt;uint&gt;;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    { o.adjEdge(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;typename T::AdjacentEdgeType*&amp;&gt;;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    { co.adjEdge(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;const typename T::AdjacentEdgeType*&gt;;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    { o.adjEdgeMod(<span class="keywordtype">int</span>()) } -&gt; std::same_as&lt;typename T::AdjacentEdgeType*&amp;&gt;;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    { co.adjEdgeMod(<span class="keywordtype">int</span>()) } -&gt;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        std::same_as&lt;const typename T::AdjacentEdgeType*&gt;;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    { o.setAdjEdge(&amp;e, <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    { o.setAdjEdges(v) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    { co.containsAdjEdge(&amp;e) } -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    { o.findAdjEdge(&amp;e) } -&gt; std::same_as&lt;typename T::AdjacentEdgeIterator&gt;;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    { co.findAdjEdge(&amp;e) } -&gt;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        std::same_as&lt;typename T::ConstAdjacentEdgeIterator&gt;;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    { co.indexOfAdjEdge(&amp;e) } -&gt; std::same_as&lt;uint&gt;;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    { o.adjEdgeBegin() } -&gt; std::same_as&lt;typename T::AdjacentEdgeIterator&gt;;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    { o.adjEdgeEnd() } -&gt; std::same_as&lt;typename T::AdjacentEdgeIterator&gt;;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    { co.adjEdgeBegin() } -&gt;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        std::same_as&lt;typename T::ConstAdjacentEdgeIterator&gt;;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    { co.adjEdgeEnd() } -&gt; std::same_as&lt;typename T::ConstAdjacentEdgeIterator&gt;;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    o.adjEdges();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    co.adjEdges();</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>};</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1HasOptionalAdjacentEdges.html">   91</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasOptionalAdjacentEdges.html">HasOptionalAdjacentEdges</a> =</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasAdjacentEdges.html">HasAdjacentEdges&lt;T&gt;</a> &amp;&amp; <a class="code hl_concept" href="conceptvcl_1_1comp_1_1IsOptionalComponent.html">IsOptionalComponent&lt;typename T::AdjacentEdges&gt;</a>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1HasRightNumberOfAdjacentEdges.html">  105</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasRightNumberOfAdjacentEdges.html">HasRightNumberOfAdjacentEdges</a> = T::VERTEX_NUMBER == T::ADJ_EDGE_NUMBER;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1SanityCheckAdjacentEdges.html">  120</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1SanityCheckAdjacentEdges.html">SanityCheckAdjacentEdges</a> =</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    !<a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasAdjacentEdges.html">HasAdjacentEdges&lt;T&gt;</a> || <a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasRightNumberOfAdjacentEdges.html">HasRightNumberOfAdjacentEdges&lt;T&gt;</a>;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>} <span class="comment">// namespace vcl::comp</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="preprocessor">#endif </span><span class="comment">// VCL_CONCEPTS_MESH_COMPONENTS_ADJACENT_EDGES_H</span></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasAdjacentEdges_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasAdjacentEdges.html">vcl::comp::HasAdjacentEdges</a></div><div class="ttdoc">HasAdjacentEdges concept is satisfied only if a Element class provides the types and member functions...</div><div class="ttdef"><b>Definition:</b> adjacent_edges.h:48</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasOptionalAdjacentEdges_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasOptionalAdjacentEdges.html">vcl::comp::HasOptionalAdjacentEdges</a></div><div class="ttdoc">HasOptionalAdjacentEdges concept is satisfied only if a class satisfies the HasAdjacentEdges concept ...</div><div class="ttdef"><b>Definition:</b> adjacent_edges.h:91</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasRightNumberOfAdjacentEdges_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasRightNumberOfAdjacentEdges.html">vcl::comp::HasRightNumberOfAdjacentEdges</a></div><div class="ttdoc">HasRightNumberOfAdjacentEdges concept.</div><div class="ttdef"><b>Definition:</b> adjacent_edges.h:105</div></div>
 <div class="ttc" id="aconceptvcl_1_1comp_1_1IsOptionalComponent_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1IsOptionalComponent.html">vcl::comp::IsOptionalComponent</a></div><div class="ttdef"><b>Definition:</b> component.h:125</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1SanityCheckAdjacentEdges_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1SanityCheckAdjacentEdges.html">vcl::comp::SanityCheckAdjacentEdges</a></div><div class="ttdoc">SanityCheckAdjacentEdges concept.</div><div class="ttdef"><b>Definition:</b> adjacent_edges.h:124</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1SanityCheckAdjacentEdges_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1SanityCheckAdjacentEdges.html">vcl::comp::SanityCheckAdjacentEdges</a></div><div class="ttdoc">SanityCheckAdjacentEdges concept.</div><div class="ttdef"><b>Definition:</b> adjacent_edges.h:120</div></div>
 <div class="ttc" id="amesh_2components_2bases_2component_8h_html"><div class="ttname"><a href="mesh_2components_2bases_2component_8h.html">component.h</a></div></div>
 <div class="ttc" id="anamespacevcl_1_1comp_html"><div class="ttname"><a href="namespacevcl_1_1comp.html">vcl::comp</a></div><div class="ttdef"><b>Definition:</b> adjacent_edges.h:31</div></div>
 <div class="ttc" id="atypes_2base_8h_html_a69aa29b598b851b0640aa225a9e5d61d"><div class="ttname"><a href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> base.h:31</div></div>

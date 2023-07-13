@@ -97,6 +97,7 @@ $(document).ready(function(){initNavTree('classvcl_1_1comp_1_1PolygonBitFlags.ht
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classvcl_1_1comp_1_1PolygonBitFlags-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">vcl::comp::PolygonBitFlags&lt; N, ElementType, OPT &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__components.html">Components</a></div></div></div>
@@ -131,10 +132,13 @@ Collaboration diagram for vcl::comp::PolygonBitFlags&lt; N, ElementType, OPT &gt
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad8de8d6ff09f3afa61f166adb2be6736"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#ad8de8d6ff09f3afa61f166adb2be6736">PolygonBitFlags</a> ()</td></tr>
+<tr class="memdesc:ad8de8d6ff09f3afa61f166adb2be6736"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that initializes the bits to false.  <br /></td></tr>
 <tr class="separator:ad8de8d6ff09f3afa61f166adb2be6736"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad43918b9f9c1443cc0dcd9f5ba921ed5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#ad43918b9f9c1443cc0dcd9f5ba921ed5">init</a> ()</td></tr>
+<tr class="memdesc:ad43918b9f9c1443cc0dcd9f5ba921ed5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the bits to false.  <br /></td></tr>
 <tr class="separator:ad43918b9f9c1443cc0dcd9f5ba921ed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5be23eedb57b369d407a5dc713efd08f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#a5be23eedb57b369d407a5dc713efd08f">isEnabled</a> () const</td></tr>
+<tr class="memdesc:a5be23eedb57b369d407a5dc713efd08f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if the component is enabled, <code>false</code> otherwise. This member function can return <code>false</code> only if the component is optional.  <br /></td></tr>
 <tr class="separator:a5be23eedb57b369d407a5dc713efd08f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ab52a644aa4433eaa70702876767ad2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#a2ab52a644aa4433eaa70702876767ad2">deleted</a> () const</td></tr>
 <tr class="memdesc:a2ab52a644aa4433eaa70702876767ad2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the current <a class="el" href="classvcl_1_1Polygon.html">Polygon</a> is deleted or not.  <br /></td></tr>
@@ -155,40 +159,67 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ad215912ead2274350431741ab929e71e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the current <a class="el" href="classvcl_1_1Polygon.html">Polygon</a> is on border or not, by checking whether at least one of its edges are on border or not.  <br /></td></tr>
 <tr class="separator:ad215912ead2274350431741ab929e71e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc16ab3d6e4b26fdb778b2049fe666e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; FT &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#afc16ab3d6e4b26fdb778b2049fe666e1">edgeOnBorder</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i)</td></tr>
+<tr class="memdesc:afc16ab3d6e4b26fdb778b2049fe666e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses the 'onBorder' bit of the i-th edge of the polygon, returning a reference to it.  <br /></td></tr>
 <tr class="separator:afc16ab3d6e4b26fdb778b2049fe666e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a377735bf50ae161db60a703390acbd9e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#a377735bf50ae161db60a703390acbd9e">edgeOnBorder</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i) const</td></tr>
+<tr class="memdesc:a377735bf50ae161db60a703390acbd9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the i-th edge of the current <a class="el" href="classvcl_1_1Polygon.html">Polygon</a> is on border or not.  <br /></td></tr>
 <tr class="separator:a377735bf50ae161db60a703390acbd9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45afe028655863b2d6cd678f7fac1b88"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; FT &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#a45afe028655863b2d6cd678f7fac1b88">edgeSelected</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i)</td></tr>
+<tr class="memdesc:a45afe028655863b2d6cd678f7fac1b88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses the 'selected' bit of the i-th edge of the polygon, returning a reference to it.  <br /></td></tr>
 <tr class="separator:a45afe028655863b2d6cd678f7fac1b88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeca70210379a7633beaecbb66e50cb39"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#aeca70210379a7633beaecbb66e50cb39">edgeSelected</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i) const</td></tr>
+<tr class="memdesc:aeca70210379a7633beaecbb66e50cb39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the i-th edge of the current <a class="el" href="classvcl_1_1Polygon.html">Polygon</a> is selected or not.  <br /></td></tr>
 <tr class="separator:aeca70210379a7633beaecbb66e50cb39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e2f54ee9b13060a2138023bc01a09e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; FT &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#a2e2f54ee9b13060a2138023bc01a09e4">edgeVisited</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i)</td></tr>
+<tr class="memdesc:a2e2f54ee9b13060a2138023bc01a09e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses the 'visited' bit of the i-th edge of the polygon, returning a reference to it.  <br /></td></tr>
 <tr class="separator:a2e2f54ee9b13060a2138023bc01a09e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade50bfaa05a7960f2dc5d30451153d1e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#ade50bfaa05a7960f2dc5d30451153d1e">edgeVisited</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i) const</td></tr>
+<tr class="memdesc:ade50bfaa05a7960f2dc5d30451153d1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the i-th edge of the current <a class="el" href="classvcl_1_1Polygon.html">Polygon</a> has been visited or not.  <br /></td></tr>
 <tr class="separator:ade50bfaa05a7960f2dc5d30451153d1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a280acac574ec4e7d88e37e35c9953da9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; FT &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#a280acac574ec4e7d88e37e35c9953da9">edgeFaux</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i)</td></tr>
+<tr class="memdesc:a280acac574ec4e7d88e37e35c9953da9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses the 'faux' bit of the i-th edge of the polygon, returning a reference to it.  <br /></td></tr>
 <tr class="separator:a280acac574ec4e7d88e37e35c9953da9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98b89541c4129a105ff2ad1aaabf8ca9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#a98b89541c4129a105ff2ad1aaabf8ca9">edgeFaux</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i) const</td></tr>
+<tr class="memdesc:a98b89541c4129a105ff2ad1aaabf8ca9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the i-th edge of the current <a class="el" href="classvcl_1_1Polygon.html">Polygon</a> is faux or not.  <br /></td></tr>
 <tr class="separator:a98b89541c4129a105ff2ad1aaabf8ca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a939dbb44eaeff3d55a82da49d0fa2c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#a1a939dbb44eaeff3d55a82da49d0fa2c">userBit</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> bit) const</td></tr>
-<tr class="memdesc:a1a939dbb44eaeff3d55a82da49d0fa2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the value of the user bit of this <a class="el" href="classvcl_1_1Polygon.html">Polygon</a> given in input. The bit is checked to be less than the total number of assigned user bits, which in this class is 2.  <br /></td></tr>
+<tr class="memdesc:a1a939dbb44eaeff3d55a82da49d0fa2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the boolean value of the user bit of this <a class="el" href="classvcl_1_1Polygon.html">Polygon</a> given in input. The bit is checked to be less than the total number of assigned user bits, which in this class is 2.  <br /></td></tr>
 <tr class="separator:a1a939dbb44eaeff3d55a82da49d0fa2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a257eb52f8ba35dc9955a55ff4e1a6bee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; FT &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#a257eb52f8ba35dc9955a55ff4e1a6bee">userBit</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> bit)</td></tr>
-<tr class="memdesc:a257eb52f8ba35dc9955a55ff4e1a6bee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the boolean value of the user bit of this <a class="el" href="classvcl_1_1Polygon.html">Polygon</a> given in input. The bit is checked to be less than the total number of assigned user bits, which in this class is 2.  <br /></td></tr>
+<tr class="memdesc:a257eb52f8ba35dc9955a55ff4e1a6bee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the value of the user bit of this <a class="el" href="classvcl_1_1Polygon.html">Polygon</a> given in input. The bit is checked to be less than the total number of assigned user bits, which in this class is 2.  <br /></td></tr>
 <tr class="separator:a257eb52f8ba35dc9955a55ff4e1a6bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61325da66059e65bcfa280dc8af68bf4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#a61325da66059e65bcfa280dc8af68bf4">edgeUserBit</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i, <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> bit) const</td></tr>
+<tr class="memdesc:a61325da66059e65bcfa280dc8af68bf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the boolean value of the user bit of the i-th edge of this <a class="el" href="classvcl_1_1Polygon.html">Polygon</a> given in input. The bit is checked to be less than the total number of assigned edge user bits, which in this class is 5.  <br /></td></tr>
 <tr class="separator:a61325da66059e65bcfa280dc8af68bf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a484017c0e209c5a8def747699ae153ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; FT &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#a484017c0e209c5a8def747699ae153ff">edgeUserBit</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i, <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> bit)</td></tr>
+<tr class="memdesc:a484017c0e209c5a8def747699ae153ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the value of the user bit of the i-th edge of this <a class="el" href="classvcl_1_1Polygon.html">Polygon</a> given in input. The bit is checked to be less than the total number of assigned edge user bits, which in this class is 5.  <br /></td></tr>
 <tr class="separator:a484017c0e209c5a8def747699ae153ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb87a705af8ca7ef2a24915fdb7d076e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#afb87a705af8ca7ef2a24915fdb7d076e">resetBitFlags</a> ()</td></tr>
 <tr class="memdesc:afb87a705af8ca7ef2a24915fdb7d076e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsets all the flags of this <a class="el" href="classvcl_1_1Polygon.html">Polygon</a> and sets them to <code>false</code>, <b>except the deleted flag</b>, which needs to be manually reset.  <br /></td></tr>
 <tr class="separator:afb87a705af8ca7ef2a24915fdb7d076e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85af667fa8d37e39df1487081d21ab09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#a85af667fa8d37e39df1487081d21ab09">importFromVCGFlags</a> (int f)</td></tr>
+<tr class="memdesc:a85af667fa8d37e39df1487081d21ab09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all the flags of this element to the values contained in the integer input parameter, that represents the bit flags of the VCG library.  <br /></td></tr>
 <tr class="separator:a85af667fa8d37e39df1487081d21ab09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afaa956832602cb546186a6bc4a8a0bfe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#afaa956832602cb546186a6bc4a8a0bfe">exportToVCGFlags</a> () const</td></tr>
+<tr class="memdesc:afaa956832602cb546186a6bc4a8a0bfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the bit flags of this element in the format of the VCG library.  <br /></td></tr>
 <tr class="separator:afaa956832602cb546186a6bc4a8a0bfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af54e0198d647c7954eb22c2383eff3d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#af54e0198d647c7954eb22c2383eff3d4">__polygonBitFlags</a> () const</td></tr>
 <tr class="separator:af54e0198d647c7954eb22c2383eff3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a43fad75bc64057f3b89f3c5338f149ab"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#a43fad75bc64057f3b89f3c5338f149ab">USER_BITS_NUMBER</a> = sizeof(FT) * 8 - FIRST_USER_BIT</td></tr>
+<tr class="memdesc:a43fad75bc64057f3b89f3c5338f149ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static number of bits that can have custom meanings to the user.  <br /></td></tr>
+<tr class="separator:a43fad75bc64057f3b89f3c5338f149ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecdea19e7eeb99d0418ed10d0a3a1dca"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#aecdea19e7eeb99d0418ed10d0a3a1dca">EDGE_USER_BITS_NUMBER</a></td></tr>
+<tr class="memdesc:aecdea19e7eeb99d0418ed10d0a3a1dca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static number of bits for each edge that can have custom meanings to the user.  <br /></td></tr>
+<tr class="separator:aecdea19e7eeb99d0418ed10d0a3a1dca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_attribs_classvcl_1_1comp_1_1ContainerComponent"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classvcl_1_1comp_1_1ContainerComponent')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html">vcl::comp::ContainerComponent&lt; COMP_TYPE, T, N, AdditionalData, ElementType, OPT, TTVN, PointedTypes &gt;</a></td></tr>
+<tr class="memitem:ac691dabcac26d322c5aed9704fe3bc65 inherit pub_static_attribs_classvcl_1_1comp_1_1ContainerComponent"><td class="memItemLeft" align="right" valign="top">static const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html#ac691dabcac26d322c5aed9704fe3bc65">TIED_TO_VERTEX_NUMBER</a> = TTVN</td></tr>
+<tr class="memdesc:ac691dabcac26d322c5aed9704fe3bc65 inherit pub_static_attribs_classvcl_1_1comp_1_1ContainerComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean that tells if this component stores a container having its size tied to the number of the vertices of the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a>.  <br /></td></tr>
+<tr class="separator:ac691dabcac26d322c5aed9704fe3bc65 inherit pub_static_attribs_classvcl_1_1comp_1_1ContainerComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a884be8c64a380423ada7cef74a23c8e7 inherit pub_static_attribs_classvcl_1_1comp_1_1ContainerComponent"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html#a884be8c64a380423ada7cef74a23c8e7">SIZE</a> = N</td></tr>
+<tr class="separator:a884be8c64a380423ada7cef74a23c8e7 inherit pub_static_attribs_classvcl_1_1comp_1_1ContainerComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -230,12 +261,6 @@ requires (HAS_ADDITIONAL_DATA)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_static_attribs_classvcl_1_1comp_1_1ContainerComponent"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classvcl_1_1comp_1_1ContainerComponent')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html">vcl::comp::ContainerComponent&lt; COMP_TYPE, T, N, AdditionalData, ElementType, OPT, TTVN, PointedTypes &gt;</a></td></tr>
-<tr class="memitem:ac691dabcac26d322c5aed9704fe3bc65 inherit pub_static_attribs_classvcl_1_1comp_1_1ContainerComponent"><td class="memItemLeft" align="right" valign="top">static const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html#ac691dabcac26d322c5aed9704fe3bc65">TIED_TO_VERTEX_NUMBER</a> = TTVN</td></tr>
-<tr class="memdesc:ac691dabcac26d322c5aed9704fe3bc65 inherit pub_static_attribs_classvcl_1_1comp_1_1ContainerComponent"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean that tells if this component stores a container having its size tied to the number of the vertices of the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a>.  <br /></td></tr>
-<tr class="separator:ac691dabcac26d322c5aed9704fe3bc65 inherit pub_static_attribs_classvcl_1_1comp_1_1ContainerComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a884be8c64a380423ada7cef74a23c8e7 inherit pub_static_attribs_classvcl_1_1comp_1_1ContainerComponent"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html#a884be8c64a380423ada7cef74a23c8e7">SIZE</a> = N</td></tr>
-<tr class="separator:a884be8c64a380423ada7cef74a23c8e7 inherit pub_static_attribs_classvcl_1_1comp_1_1ContainerComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_types_classvcl_1_1comp_1_1ContainerComponent"><td colspan="2" onclick="javascript:toggleInherit('pro_types_classvcl_1_1comp_1_1ContainerComponent')"><img src="closed.png" alt="-"/>&#160;Protected Types inherited from <a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html">vcl::comp::ContainerComponent&lt; COMP_TYPE, T, N, AdditionalData, ElementType, OPT, TTVN, PointedTypes &gt;</a></td></tr>
 <tr class="memitem:a2fc6d19893973b97cbb658027af61b34 inherit pro_types_classvcl_1_1comp_1_1ContainerComponent"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html#a2fc6d19893973b97cbb658027af61b34">Iterator</a> = typename <a class="el" href="classvcl_1_1Vector.html">Vector</a>&lt; T, N &gt;::Iterator</td></tr>
 <tr class="separator:a2fc6d19893973b97cbb658027af61b34 inherit pro_types_classvcl_1_1comp_1_1ContainerComponent"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -245,15 +270,16 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;int N, typename ElementType = void, bool OPT = false&gt;<br />
 class vcl::comp::PolygonBitFlags&lt; N, ElementType, OPT &gt;</div><p>The <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html" title="The PolygonBitFlags class represents a collection of 8 bits plus 8 bits for each edge that will be pa...">PolygonBitFlags</a> class represents a collection of 8 bits plus 8 bits for each edge that will be part of a generic Polygonal <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. </p>
+<p>This is a specialization class of the <a class="el" href="classvcl_1_1comp_1_1BitFlags.html" title="The BitFlags component class represents a collection of 8 bits that will be part of an Element (e....">BitFlags</a> component, meaning that it can be used in sostitution to that component. The difference is that this class is meant to be used on Polygonal Faces, and adds bits with particular meanings for polygons.</p>
 <p>This class also provides 3 flags for faux edges. These flags are added just to make portable all the algorithms that use faux flags also for PolygonMeshes. However, these flags should be used only when the mesh is a <a class="el" href="classvcl_1_1Triangle.html">Triangle</a> mesh, that is when each face has vertexNumber() == 3.</p>
 <p>The bits have the follwing meaning:</p><ul>
 <li>0: deleted: if the current <a class="el" href="classvcl_1_1Polygon.html">Polygon</a> has been deleted - read only</li>
 <li>1: selected: if the current <a class="el" href="classvcl_1_1Polygon.html">Polygon</a> has been selected</li>
-<li>2: visited:if the current <a class="el" href="classvcl_1_1Polygon.html">Polygon</a> has been visited (useful for some visit algorithms)</li>
+<li>2: visited: if the current <a class="el" href="classvcl_1_1Polygon.html">Polygon</a> has been visited (useful for some visit algorithms)</li>
 <li>from 3 to 5: edge faux: if the current <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> has is i-th edge (i in [0, 2]) marked as faux</li>
 <li>from 6 to 7: user bits that can have custom meanings to the user</li>
 </ul>
-<p>This class provides 2 user bits, that can be accessed using the member function <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#a257eb52f8ba35dc9955a55ff4e1a6bee" title="Returns the boolean value of the user bit of this Polygon given in input. The bit is checked to be le...">userBit(uint i)</a> with position in the interval [0, 1].</p>
+<p>This class provides 2 user bits, that can be accessed using the member function <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#a257eb52f8ba35dc9955a55ff4e1a6bee" title="Returns a reference to the value of the user bit of this Polygon given in input. The bit is checked t...">userBit(uint i)</a> with position in the interval [0, 1].</p>
 <p>Additionally, this class provides the following bits for each edge of the Polygonal <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a>:</p><ul>
 <li>0: edge border: if the current Polygonal face has the i-th edge on border</li>
 <li>1: edge selection: if the current Polygonal face has the i-th edge selected</li>
@@ -263,7 +289,15 @@ class vcl::comp::PolygonBitFlags&lt; N, ElementType, OPT &gt;</div><p>The <a cla
 <p>The member functions of this class will be available in the instance of any <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> that will contain this component.</p>
 <p>For example, if you have a <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> <code>f</code> that has the <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html" title="The PolygonBitFlags class represents a collection of 8 bits plus 8 bits for each edge that will be pa...">PolygonBitFlags</a> component, you'll be able to access to this component member functions from <code>f</code>:</p>
 <div class="fragment"><div class="line">v.isAnyEdgeOnBorder();</div>
-</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>This component is <em>Tied To <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Number</em>: it means that the size of the container, if dynamic, will change automatically along the <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Number of the <a class="el" href="classvcl_1_1comp_1_1Component.html" title="The Component class is the base class for almost all the components of VCLib (with the exception of C...">Component</a>. For further details check the documentation of the <a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html">ContainerComponent</a> class. </dd></dl>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>This component is <em>Tied To <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Number</em>: it means that the size of the container, if dynamic, will change automatically along the <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Number of the <a class="el" href="classvcl_1_1comp_1_1Component.html" title="The Component class is the base class for almost all the components of VCLib (with the exception of C...">Component</a>. For further details check the documentation of the <a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html">ContainerComponent</a> class.</dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">N</td><td>The size of the container, that will represent the number of storable bit flags for each edge of the <a class="el" href="classvcl_1_1Polygon.html">Polygon</a>. If negative, the container is dynamic and tied to the vertex number. </td></tr>
+    <tr><td class="paramname">ElementType</td><td>This template argument must be <code>void</code> if the component needs to be stored horizontally, or the type of the element that will contain this component if the component needs to be stored vertically. </td></tr>
+    <tr><td class="paramname">OPT</td><td>If true, the component will be optional. This argument is considered only if the component is stored vertically. </td></tr>
+  </table>
+  </dd>
+</dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad8de8d6ff09f3afa61f166adb2be6736" name="ad8de8d6ff09f3afa61f166adb2be6736"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad8de8d6ff09f3afa61f166adb2be6736">&#9670;&#160;</a></span>PolygonBitFlags()</h2>
@@ -278,6 +312,8 @@ template&lt;int N, typename El , bool O&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructor that initializes the bits to false. </p>
 
 </div>
 </div>
@@ -395,6 +431,16 @@ template&lt;int N, typename El , bool O&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Accesses the 'faux' bit of the i-th edge of the polygon, returning a reference to it. </p>
+<dl class="section note"><dt>Note</dt><dd>The 'faux' bit is used to just for portability with triangle meshes that are stored in polygonal meshes. However, these flags should be used only when the mesh is a <a class="el" href="classvcl_1_1Triangle.html">Triangle</a> mesh, that is when each face has vertexNumber()== 3.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>the index of the edge, it must be less than 3. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a reference to the 'faux' bit of the i-th edge of the polygon. </dd></dl>
+
 </div>
 </div>
 <a id="a98b89541c4129a105ff2ad1aaabf8ca9" name="a98b89541c4129a105ff2ad1aaabf8ca9"></a>
@@ -414,6 +460,16 @@ template&lt;int N, typename El , bool O&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns whether the i-th edge of the current <a class="el" href="classvcl_1_1Polygon.html">Polygon</a> is faux or not. </p>
+<dl class="section note"><dt>Note</dt><dd>The 'faux' bit is used to just for portability with triangle meshes that are stored in polygonal meshes. However, these flags should be used only when the mesh is a <a class="el" href="classvcl_1_1Triangle.html">Triangle</a> mesh, that is when each face has vertexNumber()== 3.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>the index of the edge, it must be less than 3. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the i-th edge of the <a class="el" href="classvcl_1_1Polygon.html">Polygon</a> is faux, false otherwise. </dd></dl>
 
 </div>
 </div>
@@ -435,6 +491,15 @@ template&lt;int N, typename El , bool O&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Accesses the 'onBorder' bit of the i-th edge of the polygon, returning a reference to it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>the index of the edge. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a reference to the 'onBorder' bit of the i-th edge of the polygon. </dd></dl>
+
 </div>
 </div>
 <a id="a377735bf50ae161db60a703390acbd9e" name="a377735bf50ae161db60a703390acbd9e"></a>
@@ -454,6 +519,15 @@ template&lt;int N, typename El , bool O&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns whether the i-th edge of the current <a class="el" href="classvcl_1_1Polygon.html">Polygon</a> is on border or not. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>the index of the edge. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the i-th edge of the <a class="el" href="classvcl_1_1Polygon.html">Polygon</a> is on border, false otherwise. </dd></dl>
 
 </div>
 </div>
@@ -475,6 +549,15 @@ template&lt;int N, typename El , bool O&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Accesses the 'selected' bit of the i-th edge of the polygon, returning a reference to it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>the index of the edge. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a reference to the 'selected' bit of the i-th edge of the polygon. </dd></dl>
+
 </div>
 </div>
 <a id="aeca70210379a7633beaecbb66e50cb39" name="aeca70210379a7633beaecbb66e50cb39"></a>
@@ -494,6 +577,15 @@ template&lt;int N, typename El , bool O&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns whether the i-th edge of the current <a class="el" href="classvcl_1_1Polygon.html">Polygon</a> is selected or not. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>the index of the edge. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the i-th edge of the <a class="el" href="classvcl_1_1Polygon.html">Polygon</a> is selected, false otherwise. </dd></dl>
 
 </div>
 </div>
@@ -525,6 +617,16 @@ template&lt;int N, typename El , bool O&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Returns a reference to the value of the user bit of the i-th edge of this <a class="el" href="classvcl_1_1Polygon.html">Polygon</a> given in input. The bit is checked to be less than the total number of assigned edge user bits, which in this class is 5. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>the index of the edge. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bit</td><td>the position of the bit, in the interval [0 - 4]. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a reference to the desired user bit. </dd></dl>
+
 </div>
 </div>
 <a id="a61325da66059e65bcfa280dc8af68bf4" name="a61325da66059e65bcfa280dc8af68bf4"></a>
@@ -555,6 +657,16 @@ template&lt;int N, typename El , bool O&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Returns the boolean value of the user bit of the i-th edge of this <a class="el" href="classvcl_1_1Polygon.html">Polygon</a> given in input. The bit is checked to be less than the total number of assigned edge user bits, which in this class is 5. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>the index of the edge. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bit</td><td>the position of the bit, in the interval [0 - 4]. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the required bit is enabled, <code>false</code> otherwise. </dd></dl>
+
 </div>
 </div>
 <a id="a2e2f54ee9b13060a2138023bc01a09e4" name="a2e2f54ee9b13060a2138023bc01a09e4"></a>
@@ -575,6 +687,15 @@ template&lt;int N, typename El , bool O&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Accesses the 'visited' bit of the i-th edge of the polygon, returning a reference to it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>the index of the edge. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a reference to the 'visited' bit of the i-th edge of the polygon. </dd></dl>
+
 </div>
 </div>
 <a id="ade50bfaa05a7960f2dc5d30451153d1e" name="ade50bfaa05a7960f2dc5d30451153d1e"></a>
@@ -594,6 +715,15 @@ template&lt;int N, typename El , bool O&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns whether the i-th edge of the current <a class="el" href="classvcl_1_1Polygon.html">Polygon</a> has been visited or not. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>the index of the edge. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the i-th edge of the <a class="el" href="classvcl_1_1Polygon.html">Polygon</a> has been visited, false otherwise. </dd></dl>
 
 </div>
 </div>
@@ -639,6 +769,9 @@ template&lt;int N, typename El , bool O&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns the bit flags of this element in the format of the VCG library. </p>
+<dl class="section return"><dt>Returns</dt><dd>an integer representing the bit flags of this element in the format of the VCG library. </dd></dl>
 
 </div>
 </div>
@@ -690,6 +823,14 @@ template&lt;int N, typename El , bool O&gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>Sets all the flags of this element to the values contained in the integer input parameter, that represents the bit flags of the VCG library. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td>bit flags in the format of the VCG library. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ad43918b9f9c1443cc0dcd9f5ba921ed5" name="ad43918b9f9c1443cc0dcd9f5ba921ed5"></a>
@@ -705,6 +846,10 @@ template&lt;int N, typename El , bool O&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Initializes the bits to false. </p>
+<p>It is made in the init function since the component could be not available during construction (e.g. if the component is optional and not enabled).</p>
+<p>This member function is hidden by the element that inherits this class. </p>
 
 </div>
 </div>
@@ -760,6 +905,10 @@ template&lt;int N, typename El , bool O&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns <code>true</code> if the component is enabled, <code>false</code> otherwise. This member function can return <code>false</code> only if the component is optional. </p>
+<p>This member function is hidden by the element that inherits this class.</p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the component is enabled, <code>false</code> otherwise. </dd></dl>
 
 </div>
 </div>
@@ -914,14 +1063,14 @@ template&lt;int N, typename El , bool O&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the boolean value of the user bit of this <a class="el" href="classvcl_1_1Polygon.html">Polygon</a> given in input. The bit is checked to be less than the total number of assigned user bits, which in this class is 2. </p>
+<p>Returns a reference to the value of the user bit of this <a class="el" href="classvcl_1_1Polygon.html">Polygon</a> given in input. The bit is checked to be less than the total number of assigned user bits, which in this class is 2. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">bit</td><td>the position of the bit, in the interval [0 - 1], that will be returned by reference. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bit</td><td>the position of the bit, in the interval [0 - 1]. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the required bit is enabled, <code>false</code> otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a reference to the desired user bit. </dd></dl>
 
 </div>
 </div>
@@ -943,14 +1092,14 @@ template&lt;int N, typename El , bool O&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Returns a reference to the value of the user bit of this <a class="el" href="classvcl_1_1Polygon.html">Polygon</a> given in input. The bit is checked to be less than the total number of assigned user bits, which in this class is 2. </p>
+<p>Returns the boolean value of the user bit of this <a class="el" href="classvcl_1_1Polygon.html">Polygon</a> given in input. The bit is checked to be less than the total number of assigned user bits, which in this class is 2. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">bit</td><td>the position of the bit, in the interval [0 - 1]. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bit</td><td>the position of the bit, in the interval [0 - 1], that will be returned by reference. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>a reference to the desired user bit. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the required bit is enabled, <code>false</code> otherwise. </dd></dl>
 
 </div>
 </div>
@@ -989,6 +1138,61 @@ template&lt;int N, typename El , bool O&gt; </div>
 
 <p>Returns whether the current <a class="el" href="classvcl_1_1Polygon.html">Polygon</a> has been visited or not. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if the <a class="el" href="classvcl_1_1Polygon.html">Polygon</a> has been visited, false otherwise. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aecdea19e7eeb99d0418ed10d0a3a1dca" name="aecdea19e7eeb99d0418ed10d0a3a1dca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecdea19e7eeb99d0418ed10d0a3a1dca">&#9670;&#160;</a></span>EDGE_USER_BITS_NUMBER</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int N, typename ElementType  = void, bool OPT = false&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html">vcl::comp::PolygonBitFlags</a>&lt; N, ElementType, OPT &gt;::EDGE_USER_BITS_NUMBER</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">        <span class="keyword">sizeof</span>(FT) * 8 - FIRST_EDGE_USER_BIT</div>
+</div><!-- fragment -->
+<p>Static number of bits for each edge that can have custom meanings to the user. </p>
+
+</div>
+</div>
+<a id="a43fad75bc64057f3b89f3c5338f149ab" name="a43fad75bc64057f3b89f3c5338f149ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43fad75bc64057f3b89f3c5338f149ab">&#9670;&#160;</a></span>USER_BITS_NUMBER</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int N, typename ElementType  = void, bool OPT = false&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html">vcl::comp::PolygonBitFlags</a>&lt; N, ElementType, OPT &gt;::USER_BITS_NUMBER = sizeof(FT) * 8 - FIRST_USER_BIT</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Static number of bits that can have custom meanings to the user. </p>
 
 </div>
 </div>

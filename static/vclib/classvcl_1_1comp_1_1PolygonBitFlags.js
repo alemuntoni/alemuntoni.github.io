@@ -31,5 +31,7 @@ var classvcl_1_1comp_1_1PolygonBitFlags =
     [ "userBit", "classvcl_1_1comp_1_1PolygonBitFlags.html#a257eb52f8ba35dc9955a55ff4e1a6bee", null ],
     [ "userBit", "classvcl_1_1comp_1_1PolygonBitFlags.html#a1a939dbb44eaeff3d55a82da49d0fa2c", null ],
     [ "visited", "classvcl_1_1comp_1_1PolygonBitFlags.html#aad960b889ea34e473380c4300ebf6fd3", null ],
-    [ "visited", "classvcl_1_1comp_1_1PolygonBitFlags.html#a15950ef84f51837e14b0a3e8ab38c15b", null ]
+    [ "visited", "classvcl_1_1comp_1_1PolygonBitFlags.html#a15950ef84f51837e14b0a3e8ab38c15b", null ],
+    [ "EDGE_USER_BITS_NUMBER", "classvcl_1_1comp_1_1PolygonBitFlags.html#aecdea19e7eeb99d0418ed10d0a3a1dca", null ],
+    [ "USER_BITS_NUMBER", "classvcl_1_1comp_1_1PolygonBitFlags.html#a43fad75bc64057f3b89f3c5338f149ab", null ]
 ];

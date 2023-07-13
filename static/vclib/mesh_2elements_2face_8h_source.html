@@ -134,118 +134,125 @@ $(document).ready(function(){initNavTree('mesh_2elements_2face_8h_source.html','
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType, <span class="keyword">typename</span>... Comps&gt;</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classvcl_1_1Face.html">   47</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1Face.html">Face</a> : <span class="keyword">public</span> <a class="code hl_class" href="classvcl_1_1Element.html">Element</a>&lt;FACE, MeshType, Comps...&gt;</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>{</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="comment">// VertexPointers component of the Face</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">using </span>VPtrs = <span class="keyword">typename</span> Face::VertexPointers;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> NV = VPtrs::VERTEX_NUMBER; <span class="comment">// If dynamic, NV will be -1</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">using </span><a class="code hl_class" href="classvcl_1_1Element.html">Base</a> = <a class="code hl_class" href="classvcl_1_1Element.html">Element</a>&lt;<a class="code hl_enumvalue" href="namespacevcl.html#a64e691de6b710b9fd1dc3d5db66a6f7aa0deacef785932de145d594f20e312b58">FACE</a>, MeshType, Comps...&gt;;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="comment">// VertexPointers component of the Face</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">using </span>VPtrs = <span class="keyword">typename</span> Face::VertexPointers;</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classvcl_1_1Face.html#a7c6019a84102b3988aa68dae7c2b16ba">   55</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="classvcl_1_1Face.html#a7c6019a84102b3988aa68dae7c2b16ba">VertexType</a> = <span class="keyword">typename</span> VPtrs::VertexType;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_function" href="classvcl_1_1Face.html#a42dd6cc8cba36fae6f4e2d0325de6da9">Face</a>();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> NV = VPtrs::VERTEX_NUMBER; <span class="comment">// If dynamic, NV will be -1</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classvcl_1_1Face.html#a7c6019a84102b3988aa68dae7c2b16ba">   57</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="classvcl_1_1Face.html#a7c6019a84102b3988aa68dae7c2b16ba">VertexType</a> = <span class="keyword">typename</span> VPtrs::VertexType;</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_function" href="classvcl_1_1Face.html#a42dd6cc8cba36fae6f4e2d0325de6da9">Face</a>(<span class="keyword">const</span> std::vector&lt;VertexType*&gt;&amp; list); <span class="comment">// todo add requires</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_function" href="classvcl_1_1Face.html#a42dd6cc8cba36fae6f4e2d0325de6da9">Face</a>();</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... V&gt;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <a class="code hl_function" href="classvcl_1_1Face.html#a42dd6cc8cba36fae6f4e2d0325de6da9">Face</a>(V... args); <span class="comment">// todo add requires</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Face.html#a380b89e1dc97e9aabda5ace2f60f4eb9">setVertices</a>(<span class="keyword">const</span> std::vector&lt;VertexType*&gt;&amp; list);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <a class="code hl_function" href="classvcl_1_1Face.html#a42dd6cc8cba36fae6f4e2d0325de6da9">Face</a>(<span class="keyword">const</span> std::vector&lt;VertexType*&gt;&amp; list); <span class="comment">// todo add requires</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... V&gt;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <a class="code hl_function" href="classvcl_1_1Face.html#a42dd6cc8cba36fae6f4e2d0325de6da9">Face</a>(V... args); <span class="comment">// todo add requires</span></div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... V&gt;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Face.html#a380b89e1dc97e9aabda5ace2f60f4eb9">setVertices</a>(V... args);</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="comment">// TODO: move definition in face.cpp when Clang bug will be solved</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="comment">// https://stackoverflow.com/questions/72897153/outside-class-definition-of-member-function-enabled-with-concept</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classvcl_1_1Face.html#afc1ed049550a79e7f9272aacb0f28103">   71</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Face.html#afc1ed049550a79e7f9272aacb0f28103">resizeVertices</a>(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> n) <span class="keyword">requires</span> <a class="code hl_concept" href="conceptvcl_1_1PolygonFaceConcept.html">PolygonFaceConcept&lt;Face&gt;</a></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    {</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        VPtrs::resizeVertices(n);</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="comment">// Now I need to resize all the TTVN components</span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        (resizeTTVNComponent&lt;Comps&gt;(n), ...);</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="comment">// TODO: move definition in face.cpp when Clang bug will be solved</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="comment">// https://stackoverflow.com/questions/72897153/outside-class-definition-of-member-function-enabled-with-concept</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classvcl_1_1Face.html#a03769bcfd8d06047269fc5821f33b5e7">   81</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Face.html#a03769bcfd8d06047269fc5821f33b5e7">pushVertex</a>(<a class="code hl_typedef" href="classvcl_1_1Face.html#a7c6019a84102b3988aa68dae7c2b16ba">VertexType</a>* v) <span class="keyword">requires</span> <a class="code hl_concept" href="conceptvcl_1_1PolygonFaceConcept.html">PolygonFaceConcept&lt;Face&gt;</a></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    {</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        VPtrs::pushVertex(v);</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="comment">// Now I need to pushBack in all the TTVN components</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        (pushBackTTVNComponent&lt;Comps&gt;(), ...);</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    }</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="comment">// TODO: move definition in face.cpp when Clang bug will be solved</span></div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="comment">// https://stackoverflow.com/questions/72897153/outside-class-definition-of-member-function-enabled-with-concept</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="classvcl_1_1Face.html#aa94144f0da3d1e6f870c4ed89f0ed0b2">   91</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Face.html#aa94144f0da3d1e6f870c4ed89f0ed0b2">insertVertex</a>(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i, <a class="code hl_typedef" href="classvcl_1_1Face.html#a7c6019a84102b3988aa68dae7c2b16ba">VertexType</a>* v) <span class="keyword">requires</span> <a class="code hl_concept" href="conceptvcl_1_1PolygonFaceConcept.html">PolygonFaceConcept&lt;Face&gt;</a></div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    {</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        VPtrs::insertVertex(i, v);</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="comment">// Now I need to insert in all the TTVN components</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        (insertTTVNComponent&lt;Comps&gt;(i), ...);</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    }</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="comment">// TODO: move definition in face.cpp when Clang bug will be solved</span></div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="comment">// https://stackoverflow.com/questions/72897153/outside-class-definition-of-member-function-enabled-with-concept</span></div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="classvcl_1_1Face.html#ae98788dadbabef768136411e652c5d78">  101</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Face.html#ae98788dadbabef768136411e652c5d78">eraseVertex</a>(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i) <span class="keyword">requires</span> <a class="code hl_concept" href="conceptvcl_1_1PolygonFaceConcept.html">PolygonFaceConcept&lt;Face&gt;</a></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    {</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        VPtrs::eraseVertex(i);</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="comment">// Now I need to erase in all the TTVN components</span></div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        (eraseTTVNComponent&lt;Comps&gt;(i), ...);</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    }</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="comment">// TODO: move definition in face.cpp when Clang bug will be solved</span></div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="comment">// https://stackoverflow.com/questions/72897153/outside-class-definition-of-member-function-enabled-with-concept</span></div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="classvcl_1_1Face.html#a23e4a3e0a4558019a327eb23e6207349">  111</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Face.html#a23e4a3e0a4558019a327eb23e6207349">clearVertices</a>() <span class="keyword">requires</span> <a class="code hl_concept" href="conceptvcl_1_1PolygonFaceConcept.html">PolygonFaceConcept</a>&lt;<a class="code hl_class" href="classvcl_1_1Face.html">Face</a>&gt;</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    {</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        VPtrs::clearVertices();</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="comment">// Now I need to clear all the TTVN components</span></div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        (clearTTVNComponent&lt;Comps&gt;(), ...);</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    }</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Comp&gt;</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keywordtype">void</span> resizeTTVNComponent(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> n);</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Comp&gt;</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordtype">void</span> pushBackTTVNComponent();</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Comp&gt;</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keywordtype">void</span> insertTTVNComponent(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i);</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Comp&gt;</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordtype">void</span> eraseTTVNComponent(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i);</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Comp&gt;</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keywordtype">void</span> clearTTVNComponent();</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>};</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType, <span class="keyword">typename</span>... Comps&gt;</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="classvcl_1_1Face_3_01MeshType_00_01TypeWrapper_3_01Comps_8_8_8_01_4_01_4.html">  137</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1Face.html">Face</a>&lt;MeshType, <a class="code hl_struct" href="structvcl_1_1TypeWrapper.html">TypeWrapper</a>&lt;Comps...&gt;&gt; : <span class="keyword">public</span> <a class="code hl_class" href="classvcl_1_1Face.html">Face</a>&lt;MeshType, Comps...&gt;</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>{</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Face.html#a380b89e1dc97e9aabda5ace2f60f4eb9">setVertices</a>(<span class="keyword">const</span> std::vector&lt;VertexType*&gt;&amp; list);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... V&gt;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Face.html#a380b89e1dc97e9aabda5ace2f60f4eb9">setVertices</a>(V... args);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="comment">// TODO: move definition in face.cpp when Clang bug will be solved</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="comment">// https://stackoverflow.com/questions/72897153/outside-class-definition-of-member-function-enabled-with-concept</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classvcl_1_1Face.html#afc1ed049550a79e7f9272aacb0f28103">   73</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Face.html#afc1ed049550a79e7f9272aacb0f28103">resizeVertices</a>(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> n) <span class="keyword">requires</span> <a class="code hl_concept" href="conceptvcl_1_1PolygonFaceConcept.html">PolygonFaceConcept&lt;Face&gt;</a></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        VPtrs::resizeVertices(n);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="comment">// Now I need to resize all the TTVN components</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        (resizeTTVNComponent&lt;Comps&gt;(n), ...);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="comment">// TODO: move definition in face.cpp when Clang bug will be solved</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="comment">// https://stackoverflow.com/questions/72897153/outside-class-definition-of-member-function-enabled-with-concept</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="classvcl_1_1Face.html#a03769bcfd8d06047269fc5821f33b5e7">   83</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Face.html#a03769bcfd8d06047269fc5821f33b5e7">pushVertex</a>(<a class="code hl_typedef" href="classvcl_1_1Face.html#a7c6019a84102b3988aa68dae7c2b16ba">VertexType</a>* v) <span class="keyword">requires</span> <a class="code hl_concept" href="conceptvcl_1_1PolygonFaceConcept.html">PolygonFaceConcept&lt;Face&gt;</a></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        VPtrs::pushVertex(v);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="comment">// Now I need to pushBack in all the TTVN components</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        (pushBackTTVNComponent&lt;Comps&gt;(), ...);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    }</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="comment">// TODO: move definition in face.cpp when Clang bug will be solved</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="comment">// https://stackoverflow.com/questions/72897153/outside-class-definition-of-member-function-enabled-with-concept</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="classvcl_1_1Face.html#aa94144f0da3d1e6f870c4ed89f0ed0b2">   93</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Face.html#aa94144f0da3d1e6f870c4ed89f0ed0b2">insertVertex</a>(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i, <a class="code hl_typedef" href="classvcl_1_1Face.html#a7c6019a84102b3988aa68dae7c2b16ba">VertexType</a>* v) <span class="keyword">requires</span> <a class="code hl_concept" href="conceptvcl_1_1PolygonFaceConcept.html">PolygonFaceConcept&lt;Face&gt;</a></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        VPtrs::insertVertex(i, v);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="comment">// Now I need to insert in all the TTVN components</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        (insertTTVNComponent&lt;Comps&gt;(i), ...);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    }</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="comment">// TODO: move definition in face.cpp when Clang bug will be solved</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="comment">// https://stackoverflow.com/questions/72897153/outside-class-definition-of-member-function-enabled-with-concept</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="classvcl_1_1Face.html#ae98788dadbabef768136411e652c5d78">  103</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Face.html#ae98788dadbabef768136411e652c5d78">eraseVertex</a>(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i) <span class="keyword">requires</span> <a class="code hl_concept" href="conceptvcl_1_1PolygonFaceConcept.html">PolygonFaceConcept&lt;Face&gt;</a></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        VPtrs::eraseVertex(i);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="comment">// Now I need to erase in all the TTVN components</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        (eraseTTVNComponent&lt;Comps&gt;(i), ...);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    }</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="comment">// TODO: move definition in face.cpp when Clang bug will be solved</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="comment">// https://stackoverflow.com/questions/72897153/outside-class-definition-of-member-function-enabled-with-concept</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="classvcl_1_1Face.html#a23e4a3e0a4558019a327eb23e6207349">  113</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Face.html#a23e4a3e0a4558019a327eb23e6207349">clearVertices</a>() <span class="keyword">requires</span> <a class="code hl_concept" href="conceptvcl_1_1PolygonFaceConcept.html">PolygonFaceConcept</a>&lt;<a class="code hl_class" href="classvcl_1_1Face.html">Face</a>&gt;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        VPtrs::clearVertices();</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="comment">// Now I need to clear all the TTVN components</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        (clearTTVNComponent&lt;Comps&gt;(), ...);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    }</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> ElType&gt;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Face.html#ad637e9503cbb91fbd8f11aabb88f7f8b">importFrom</a>(<span class="keyword">const</span> ElType&amp; v);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Comp&gt;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordtype">void</span> resizeTTVNComponent(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> n);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Comp&gt;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keywordtype">void</span> pushBackTTVNComponent();</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Comp&gt;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keywordtype">void</span> insertTTVNComponent(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Comp&gt;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="keywordtype">void</span> eraseTTVNComponent(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Comp&gt;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="keywordtype">void</span> clearTTVNComponent();</div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>};</div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="preprocessor">#include &quot;<a class="code" href="face_8cpp.html">face.cpp</a>&quot;</span></div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="preprocessor">#endif </span><span class="comment">// VCL_MESH_ELEMENTS_FACE_H</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType, <span class="keyword">typename</span>... Comps&gt;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="classvcl_1_1Face_3_01MeshType_00_01TypeWrapper_3_01Comps_8_8_8_01_4_01_4.html">  142</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1Face.html">Face</a>&lt;MeshType, <a class="code hl_struct" href="structvcl_1_1TypeWrapper.html">TypeWrapper</a>&lt;Comps...&gt;&gt; : <span class="keyword">public</span> <a class="code hl_class" href="classvcl_1_1Face.html">Face</a>&lt;MeshType, Comps...&gt;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>{</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>};</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="preprocessor">#include &quot;<a class="code" href="face_8cpp.html">face.cpp</a>&quot;</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="preprocessor">#endif </span><span class="comment">// VCL_MESH_ELEMENTS_FACE_H</span></div>
 <div class="ttc" id="aclassvcl_1_1Element_html"><div class="ttname"><a href="classvcl_1_1Element.html">vcl::Element</a></div><div class="ttdoc">The Element class.</div><div class="ttdef"><b>Definition:</b> element.h:56</div></div>
 <div class="ttc" id="aclassvcl_1_1Face_html"><div class="ttname"><a href="classvcl_1_1Face.html">vcl::Face</a></div><div class="ttdoc">The Face class represents an Face element of the vcl::Mesh class.</div><div class="ttdef"><b>Definition:</b> face.h:48</div></div>
-<div class="ttc" id="aclassvcl_1_1Face_html_a03769bcfd8d06047269fc5821f33b5e7"><div class="ttname"><a href="classvcl_1_1Face.html#a03769bcfd8d06047269fc5821f33b5e7">vcl::Face::pushVertex</a></div><div class="ttdeci">void pushVertex(VertexType *v)</div><div class="ttdef"><b>Definition:</b> face.h:81</div></div>
-<div class="ttc" id="aclassvcl_1_1Face_html_a23e4a3e0a4558019a327eb23e6207349"><div class="ttname"><a href="classvcl_1_1Face.html#a23e4a3e0a4558019a327eb23e6207349">vcl::Face::clearVertices</a></div><div class="ttdeci">void clearVertices()</div><div class="ttdef"><b>Definition:</b> face.h:111</div></div>
+<div class="ttc" id="aclassvcl_1_1Face_html_a03769bcfd8d06047269fc5821f33b5e7"><div class="ttname"><a href="classvcl_1_1Face.html#a03769bcfd8d06047269fc5821f33b5e7">vcl::Face::pushVertex</a></div><div class="ttdeci">void pushVertex(VertexType *v)</div><div class="ttdef"><b>Definition:</b> face.h:83</div></div>
+<div class="ttc" id="aclassvcl_1_1Face_html_a23e4a3e0a4558019a327eb23e6207349"><div class="ttname"><a href="classvcl_1_1Face.html#a23e4a3e0a4558019a327eb23e6207349">vcl::Face::clearVertices</a></div><div class="ttdeci">void clearVertices()</div><div class="ttdef"><b>Definition:</b> face.h:113</div></div>
 <div class="ttc" id="aclassvcl_1_1Face_html_a380b89e1dc97e9aabda5ace2f60f4eb9"><div class="ttname"><a href="classvcl_1_1Face.html#a380b89e1dc97e9aabda5ace2f60f4eb9">vcl::Face::setVertices</a></div><div class="ttdeci">void setVertices(const std::vector&lt; VertexType * &gt; &amp;list)</div><div class="ttdoc">Sets a list of Vertex pointers to the face.</div><div class="ttdef"><b>Definition:</b> face.cpp:80</div></div>
 <div class="ttc" id="aclassvcl_1_1Face_html_a42dd6cc8cba36fae6f4e2d0325de6da9"><div class="ttname"><a href="classvcl_1_1Face.html#a42dd6cc8cba36fae6f4e2d0325de6da9">vcl::Face::Face</a></div><div class="ttdeci">Face()</div><div class="ttdef"><b>Definition:</b> face.cpp:29</div></div>
-<div class="ttc" id="aclassvcl_1_1Face_html_a7c6019a84102b3988aa68dae7c2b16ba"><div class="ttname"><a href="classvcl_1_1Face.html#a7c6019a84102b3988aa68dae7c2b16ba">vcl::Face::VertexType</a></div><div class="ttdeci">typename VPtrs::VertexType VertexType</div><div class="ttdef"><b>Definition:</b> face.h:55</div></div>
-<div class="ttc" id="aclassvcl_1_1Face_html_aa94144f0da3d1e6f870c4ed89f0ed0b2"><div class="ttname"><a href="classvcl_1_1Face.html#aa94144f0da3d1e6f870c4ed89f0ed0b2">vcl::Face::insertVertex</a></div><div class="ttdeci">void insertVertex(uint i, VertexType *v)</div><div class="ttdef"><b>Definition:</b> face.h:91</div></div>
-<div class="ttc" id="aclassvcl_1_1Face_html_ae98788dadbabef768136411e652c5d78"><div class="ttname"><a href="classvcl_1_1Face.html#ae98788dadbabef768136411e652c5d78">vcl::Face::eraseVertex</a></div><div class="ttdeci">void eraseVertex(uint i)</div><div class="ttdef"><b>Definition:</b> face.h:101</div></div>
-<div class="ttc" id="aclassvcl_1_1Face_html_afc1ed049550a79e7f9272aacb0f28103"><div class="ttname"><a href="classvcl_1_1Face.html#afc1ed049550a79e7f9272aacb0f28103">vcl::Face::resizeVertices</a></div><div class="ttdeci">void resizeVertices(uint n)</div><div class="ttdef"><b>Definition:</b> face.h:71</div></div>
+<div class="ttc" id="aclassvcl_1_1Face_html_a7c6019a84102b3988aa68dae7c2b16ba"><div class="ttname"><a href="classvcl_1_1Face.html#a7c6019a84102b3988aa68dae7c2b16ba">vcl::Face::VertexType</a></div><div class="ttdeci">typename VPtrs::VertexType VertexType</div><div class="ttdef"><b>Definition:</b> face.h:57</div></div>
+<div class="ttc" id="aclassvcl_1_1Face_html_aa94144f0da3d1e6f870c4ed89f0ed0b2"><div class="ttname"><a href="classvcl_1_1Face.html#aa94144f0da3d1e6f870c4ed89f0ed0b2">vcl::Face::insertVertex</a></div><div class="ttdeci">void insertVertex(uint i, VertexType *v)</div><div class="ttdef"><b>Definition:</b> face.h:93</div></div>
+<div class="ttc" id="aclassvcl_1_1Face_html_ad637e9503cbb91fbd8f11aabb88f7f8b"><div class="ttname"><a href="classvcl_1_1Face.html#ad637e9503cbb91fbd8f11aabb88f7f8b">vcl::Face::importFrom</a></div><div class="ttdeci">void importFrom(const ElType &amp;v)</div><div class="ttdef"><b>Definition:</b> face.cpp:213</div></div>
+<div class="ttc" id="aclassvcl_1_1Face_html_ae98788dadbabef768136411e652c5d78"><div class="ttname"><a href="classvcl_1_1Face.html#ae98788dadbabef768136411e652c5d78">vcl::Face::eraseVertex</a></div><div class="ttdeci">void eraseVertex(uint i)</div><div class="ttdef"><b>Definition:</b> face.h:103</div></div>
+<div class="ttc" id="aclassvcl_1_1Face_html_afc1ed049550a79e7f9272aacb0f28103"><div class="ttname"><a href="classvcl_1_1Face.html#afc1ed049550a79e7f9272aacb0f28103">vcl::Face::resizeVertices</a></div><div class="ttdeci">void resizeVertices(uint n)</div><div class="ttdef"><b>Definition:</b> face.h:73</div></div>
 <div class="ttc" id="aconcepts_2mesh_2elements_2face_8h_html"><div class="ttname"><a href="concepts_2mesh_2elements_2face_8h.html">face.h</a></div></div>
-<div class="ttc" id="aconceptvcl_1_1PolygonFaceConcept_html"><div class="ttname"><a href="conceptvcl_1_1PolygonFaceConcept.html">vcl::PolygonFaceConcept</a></div><div class="ttdoc">The PolygonFaceConcept describes how a Face element class should be organized to be a polygonal face ...</div><div class="ttdef"><b>Definition:</b> face.h:171</div></div>
+<div class="ttc" id="aconceptvcl_1_1PolygonFaceConcept_html"><div class="ttname"><a href="conceptvcl_1_1PolygonFaceConcept.html">vcl::PolygonFaceConcept</a></div><div class="ttdoc">The PolygonFaceConcept describes how a Face element class should be organized to be a polygonal face ...</div><div class="ttdef"><b>Definition:</b> face.h:176</div></div>
 <div class="ttc" id="aface_8cpp_html"><div class="ttname"><a href="face_8cpp.html">face.cpp</a></div></div>
 <div class="ttc" id="amesh_2elements_2element_8h_html"><div class="ttname"><a href="mesh_2elements_2element_8h.html">element.h</a></div></div>
 <div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition:</b> bounding_box.cpp:29</div></div>
+<div class="ttc" id="anamespacevcl_html_a64e691de6b710b9fd1dc3d5db66a6f7aa0deacef785932de145d594f20e312b58"><div class="ttname"><a href="namespacevcl.html#a64e691de6b710b9fd1dc3d5db66a6f7aa0deacef785932de145d594f20e312b58">vcl::FACE</a></div><div class="ttdeci">@ FACE</div><div class="ttdef"><b>Definition:</b> mesh_elements.h:33</div></div>
 <div class="ttc" id="astructvcl_1_1TypeWrapper_html"><div class="ttname"><a href="structvcl_1_1TypeWrapper.html">vcl::TypeWrapper</a></div><div class="ttdoc">A simple structure that wraps a list of variadic templates, without instantiating anything....</div><div class="ttdef"><b>Definition:</b> variadic_templates.h:40</div></div>
 <div class="ttc" id="atypes_2base_8h_html_a69aa29b598b851b0640aa225a9e5d61d"><div class="ttname"><a href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> base.h:31</div></div>
 <div class="ttc" id="aview_8h_html"><div class="ttname"><a href="view_8h.html">view.h</a></div></div>

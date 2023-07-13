@@ -6,6 +6,7 @@ var group__mesh__concepts =
     [ "FaceMesh Concepts", "group__face__mesh__concepts.html", "group__face__mesh__concepts" ],
     [ "VertexMesh Concepts", "group__vertex__mesh__concepts.html", "group__vertex__mesh__concepts" ],
     [ "vcl::MeshConcept", "conceptvcl_1_1MeshConcept.html", null ],
+    [ "vcl::ElementOrMeshConcept", "conceptvcl_1_1ElementOrMeshConcept.html", null ],
     [ "vcl::HasBoundingBox", "conceptvcl_1_1HasBoundingBox.html", null ],
     [ "vcl::HasColor", "conceptvcl_1_1HasColor.html", null ],
     [ "vcl::HasMark", "conceptvcl_1_1HasMark.html", null ],

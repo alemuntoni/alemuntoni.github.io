@@ -16,5 +16,6 @@ var classvcl_1_1comp_1_1BitFlags =
     [ "userBit", "classvcl_1_1comp_1_1BitFlags.html#af05e7fb2252674c19dbbb244ab4f8355", null ],
     [ "userBit", "classvcl_1_1comp_1_1BitFlags.html#abc4220035b79b9d83e83cb260ed09117", null ],
     [ "visited", "classvcl_1_1comp_1_1BitFlags.html#aa214e0b5ed7c4a6a99d6cf42e6f011cd", null ],
-    [ "visited", "classvcl_1_1comp_1_1BitFlags.html#a3056eb88e2ec1ec994ba061865951a9f", null ]
+    [ "visited", "classvcl_1_1comp_1_1BitFlags.html#a3056eb88e2ec1ec994ba061865951a9f", null ],
+    [ "USER_BITS_NUMBER", "classvcl_1_1comp_1_1BitFlags.html#ab7899a89ce2c16a4c924713a449aac2a", null ]
 ];

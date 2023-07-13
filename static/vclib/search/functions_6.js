@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['face_0',['face',['../classvcl_1_1mesh_1_1FaceContainer.html#a5a26ce9b6e3939bac814adc304150618',1,'vcl::mesh::FaceContainer::face(uint i)'],['../classvcl_1_1mesh_1_1FaceContainer.html#a0960fe00b645e7e3e6eb89b596f316b8',1,'vcl::mesh::FaceContainer::face(uint i) const']]],
-  ['face_1',['Face',['../classvcl_1_1Face.html#ab1e4806ab9daf7146ae78a6610dbd65f',1,'vcl::Face::Face(V... args)'],['../classvcl_1_1Face.html#abe7adaaae36baacf68d709f04891fcb8',1,'vcl::Face::Face(const std::vector&lt; VertexType * &gt; &amp;list)']]],
-  ['face_2',['face',['../classvcl_1_1MeshPos.html#a5d13fe28270519fafb83daa77123857a',1,'vcl::MeshPos']]],
-  ['face_3',['Face',['../classvcl_1_1Face.html#a42dd6cc8cba36fae6f4e2d0325de6da9',1,'vcl::Face']]],
+  ['face_0',['Face',['../classvcl_1_1Face.html#abe7adaaae36baacf68d709f04891fcb8',1,'vcl::Face::Face(const std::vector&lt; VertexType * &gt; &amp;list)'],['../classvcl_1_1Face.html#a42dd6cc8cba36fae6f4e2d0325de6da9',1,'vcl::Face::Face()']]],
+  ['face_1',['face',['../classvcl_1_1MeshPos.html#a5d13fe28270519fafb83daa77123857a',1,'vcl::MeshPos::face()'],['../classvcl_1_1mesh_1_1FaceContainer.html#a5a26ce9b6e3939bac814adc304150618',1,'vcl::mesh::FaceContainer::face()']]],
+  ['face_2',['Face',['../classvcl_1_1Face.html#ab1e4806ab9daf7146ae78a6610dbd65f',1,'vcl::Face']]],
+  ['face_3',['face',['../classvcl_1_1mesh_1_1FaceContainer.html#a0960fe00b645e7e3e6eb89b596f316b8',1,'vcl::mesh::FaceContainer']]],
   ['faceangleonvertexrad_4',['faceAngleOnVertexRad',['../namespacevcl.html#a12529598a32a7b21eac27744b3578600',1,'vcl']]],
   ['facearea_5',['faceArea',['../namespacevcl.html#a9fc3b9cae851d7a729f40dc2f4ebe824',1,'vcl']]],
   ['faceareaweightedpointsampling_6',['faceAreaWeightedPointSampling',['../group__point__sampling.html#ga1f348e7bb2a39ccc0ea30296c619f275',1,'vcl']]],
@@ -53,7 +53,7 @@ var searchData=
   ['findadjface_50',['findAdjFace',['../classvcl_1_1comp_1_1AdjacentFaces.html#a29431c545ca21dff97ba6febd346b1b1',1,'vcl::comp::AdjacentFaces::findAdjFace(const Face *f)'],['../classvcl_1_1comp_1_1AdjacentFaces.html#a2edbfa604d60f9298c0408be8ea77127',1,'vcl::comp::AdjacentFaces::findAdjFace(const Face *f) const']]],
   ['findadjvertex_51',['findAdjVertex',['../classvcl_1_1comp_1_1AdjacentVertices.html#aa1cde53072019dea9015b7a66df8cc20',1,'vcl::comp::AdjacentVertices::findAdjVertex(const Vertex *v)'],['../classvcl_1_1comp_1_1AdjacentVertices.html#a8068f6280a2d796d54f67f1f5a7c7880',1,'vcl::comp::AdjacentVertices::findAdjVertex(const Vertex *v) const']]],
   ['findcaseinsensitive_52',['findCaseInsensitive',['../namespacevcl_1_1str.html#a019a5b9a4a02cb95811b2e16582d943c',1,'vcl::str']]],
-  ['findvertex_53',['findVertex',['../classvcl_1_1comp_1_1VertexPointers.html#a4ff3259482f24248bca742a5cbe1b8a3',1,'vcl::comp::VertexPointers::findVertex(const Vertex *v)'],['../classvcl_1_1comp_1_1VertexPointers.html#a12d3938a2d2a4a64f3e623418a7a577b',1,'vcl::comp::VertexPointers::findVertex(const Vertex *v) const']]],
+  ['findvertex_53',['findVertex',['../classvcl_1_1comp_1_1VertexPointers.html#a083d7d5dd9a9e6c20ee693cae1828f0b',1,'vcl::comp::VertexPointers::findVertex(const Vertex *v)'],['../classvcl_1_1comp_1_1VertexPointers.html#a818f98a2c8686192f81e2684d6d59664',1,'vcl::comp::VertexPointers::findVertex(const Vertex *v) const']]],
   ['firstrefpair_54',['FirstRefPair',['../classvcl_1_1FirstRefPair.html#abee98f5bfba8354ac983c7ab9c8e8948',1,'vcl::FirstRefPair']]],
   ['fitplanetopointcloud_55',['fitPlaneToPointCloud',['../namespacevcl.html#abbf2dd04b5f4477ba07ab217dd603d14',1,'vcl']]],
   ['fitplanetoweightedpointcloud_56',['fitPlaneToWeightedPointCloud',['../namespacevcl.html#af8d724d35f1e65a0966e980fc544364f',1,'vcl']]],

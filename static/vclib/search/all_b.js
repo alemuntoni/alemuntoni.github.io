@@ -1,10 +1,10 @@
 var searchData=
 [
   ['f_0',['f',['../classvcl_1_1MeshEdgeUtil.html#adf126c854fc4653cd8c220e08283b209',1,'vcl::MeshEdgeUtil::f()'],['../classvcl_1_1ConstMeshEdgeUtil.html#a9d41f10a9ff129715217e9f0177701e0',1,'vcl::ConstMeshEdgeUtil::f()']]],
-  ['face_1',['Face',['../classvcl_1_1Face.html#abe7adaaae36baacf68d709f04891fcb8',1,'vcl::Face']]],
-  ['face_2',['face',['../classvcl_1_1mesh_1_1FaceContainer.html#a0960fe00b645e7e3e6eb89b596f316b8',1,'vcl::mesh::FaceContainer::face(uint i) const'],['../classvcl_1_1mesh_1_1FaceContainer.html#a5a26ce9b6e3939bac814adc304150618',1,'vcl::mesh::FaceContainer::face(uint i)'],['../classvcl_1_1MeshPos.html#a5d13fe28270519fafb83daa77123857a',1,'vcl::MeshPos::face()']]],
+  ['face_1',['face',['../classvcl_1_1mesh_1_1FaceContainer.html#a5a26ce9b6e3939bac814adc304150618',1,'vcl::mesh::FaceContainer']]],
+  ['face_2',['Face',['../classvcl_1_1mesh_1_1FaceContainer.html#a29a1d4bc75492ec6933d8f5925d86512',1,'vcl::mesh::FaceContainer::Face()'],['../classvcl_1_1Face.html#a42dd6cc8cba36fae6f4e2d0325de6da9',1,'vcl::Face::Face()'],['../classvcl_1_1Face.html#abe7adaaae36baacf68d709f04891fcb8',1,'vcl::Face::Face(const std::vector&lt; VertexType * &gt; &amp;list)'],['../classvcl_1_1Face.html#ab1e4806ab9daf7146ae78a6610dbd65f',1,'vcl::Face::Face(V... args)']]],
   ['face_3',['FACE',['../classvcl_1_1FileMeshInfo.html#ae66b19c3da76ef7e459755cc05de3957a8b699664fb2e46e7abc250cf8f42e253',1,'vcl::FileMeshInfo']]],
-  ['face_4',['Face',['../classvcl_1_1mesh_1_1FaceContainer.html#a29a1d4bc75492ec6933d8f5925d86512',1,'vcl::mesh::FaceContainer::Face()'],['../classvcl_1_1Face.html#a42dd6cc8cba36fae6f4e2d0325de6da9',1,'vcl::Face::Face()'],['../classvcl_1_1Face.html#ab1e4806ab9daf7146ae78a6610dbd65f',1,'vcl::Face::Face(V... args)']]],
+  ['face_4',['face',['../classvcl_1_1mesh_1_1FaceContainer.html#a0960fe00b645e7e3e6eb89b596f316b8',1,'vcl::mesh::FaceContainer::face()'],['../classvcl_1_1MeshPos.html#a5d13fe28270519fafb83daa77123857a',1,'vcl::MeshPos::face()']]],
   ['face_5',['FACE',['../namespacevcl_1_1io_1_1ply.html#ab6978d1c3ac5e80bd46c2132b4567acbadc9fd8bcd2ebe9bc29169f770356efe0',1,'vcl::io::ply::FACE()'],['../namespacevcl.html#a64e691de6b710b9fd1dc3d5db66a6f7aa0deacef785932de145d594f20e312b58',1,'vcl::FACE()']]],
   ['face_6',['Face',['../classvcl_1_1Face.html',1,'vcl::Face&lt; MeshType, Comps &gt;'],['../classvcl_1_1polymesh_1_1Face.html',1,'vcl::polymesh::Face&lt; Scalar &gt;'],['../classvcl_1_1trimesh_1_1Face.html',1,'vcl::trimesh::Face&lt; Scalar &gt;']]],
   ['face_20components_7',['Face Components',['../group__face__components.html',1,'']]],
@@ -20,7 +20,7 @@ var searchData=
   ['face_3c_20trimesht_3c_20scalar_20_3e_2c_20vcl_3a_3aface_3a_3atrianglebitflags_2c_20vcl_3a_3aface_3a_3atrianglevertexptrs_3c_20vertex_3c_20scalar_20_3e_20_3e_2c_20vcl_3a_3aface_3a_3anormal3_3c_20scalar_20_3e_2c_20vcl_3a_3aface_3a_3aoptionalquality_3c_20scalar_2c_20face_3c_20scalar_20_3e_20_3e_2c_20vcl_3a_3aface_3a_3aoptionalcolor_3c_20face_3c_20scalar_20_3e_20_3e_2c_20vcl_3a_3aface_3a_3aoptionaladjacenttriangles_3c_20face_3c_20scalar_20_3e_20_3e_2c_20vcl_3a_3aface_3a_3aoptionaltrianglewedgetexcoords_3c_20scalar_2c_20face_3c_20scalar_20_3e_20_3e_2c_20vcl_3a_3aface_3a_3aoptionalmark_3c_20face_3c_20scalar_20_3e_20_3e_2c_20vcl_3a_3aface_3a_3acustomcomponents_3c_20face_3c_20scalar_20_3e_20_3e_20_3e_17',['Face&lt; TriMeshT&lt; Scalar &gt;, vcl::face::TriangleBitFlags, vcl::face::TriangleVertexPtrs&lt; Vertex&lt; Scalar &gt; &gt;, vcl::face::Normal3&lt; Scalar &gt;, vcl::face::OptionalQuality&lt; Scalar, Face&lt; Scalar &gt; &gt;, vcl::face::OptionalColor&lt; Face&lt; Scalar &gt; &gt;, vcl::face::OptionalAdjacentTriangles&lt; Face&lt; Scalar &gt; &gt;, vcl::face::OptionalTriangleWedgeTexCoords&lt; Scalar, Face&lt; Scalar &gt; &gt;, vcl::face::OptionalMark&lt; Face&lt; Scalar &gt; &gt;, vcl::face::CustomComponents&lt; Face&lt; Scalar &gt; &gt; &gt;',['../classvcl_1_1Face.html',1,'vcl']]],
   ['face_5fcomponents_2eh_18',['face_components.h',['../face__components_8h.html',1,'']]],
   ['face_5fcontainer_2ecpp_19',['face_container.cpp',['../face__container_8cpp.html',1,'']]],
-  ['face_5fcontainer_2eh_20',['face_container.h',['../mesh_2containers_2face__container_8h.html',1,'(Global Namespace)'],['../concepts_2mesh_2containers_2face__container_8h.html',1,'(Global Namespace)']]],
+  ['face_5fcontainer_2eh_20',['face_container.h',['../concepts_2mesh_2containers_2face__container_8h.html',1,'(Global Namespace)'],['../mesh_2containers_2face__container_8h.html',1,'(Global Namespace)']]],
   ['face_5fmesh_5fconcept_2eh_21',['face_mesh_concept.h',['../face__mesh__concept_8h.html',1,'']]],
   ['face_5frange_2eh_22',['face_range.h',['../face__range_8h.html',1,'']]],
   ['face_5frequirements_2ecpp_23',['face_requirements.cpp',['../face__requirements_8cpp.html',1,'']]],
@@ -29,7 +29,7 @@ var searchData=
   ['facearea_26',['faceArea',['../namespacevcl.html#a9fc3b9cae851d7a729f40dc2f4ebe824',1,'vcl']]],
   ['faceareaweightedpointsampling_27',['faceAreaWeightedPointSampling',['../group__point__sampling.html#ga1f348e7bb2a39ccc0ea30296c619f275',1,'vcl']]],
   ['facebarycenter_28',['faceBarycenter',['../namespacevcl.html#a53b4f63db0979e578ebfa4b9e8b41f8a',1,'vcl']]],
-  ['facebegin_29',['faceBegin',['../classvcl_1_1mesh_1_1FaceContainer.html#a7253b4127a51db3e66119569056d2a8b',1,'vcl::mesh::FaceContainer::faceBegin(bool jumpDeleted=true)'],['../classvcl_1_1mesh_1_1FaceContainer.html#a9169d354e5fd9d1ec11974e6cf2bc8b9',1,'vcl::mesh::FaceContainer::faceBegin(bool jumpDeleted=true) const']]],
+  ['facebegin_29',['faceBegin',['../classvcl_1_1mesh_1_1FaceContainer.html#a9169d354e5fd9d1ec11974e6cf2bc8b9',1,'vcl::mesh::FaceContainer::faceBegin(bool jumpDeleted=true) const'],['../classvcl_1_1mesh_1_1FaceContainer.html#a7253b4127a51db3e66119569056d2a8b',1,'vcl::mesh::FaceContainer::faceBegin(bool jumpDeleted=true)']]],
   ['faceboxintersect_30',['faceBoxIntersect',['../namespacevcl.html#abb99398069d243b6bb7b09e55a279792',1,'vcl']]],
   ['facecolorstype_31',['faceColorsType',['../classvcl_1_1FileMeshInfo.html#a43385c5dbea68e816f6b8a7c6bae65d4',1,'vcl::FileMeshInfo']]],
   ['facecompactindices_32',['faceCompactIndices',['../classvcl_1_1mesh_1_1FaceContainer.html#a59fcd2c60962facc5751c05d1bf60766',1,'vcl::mesh::FaceContainer']]],
@@ -86,7 +86,7 @@ var searchData=
   ['findadjface_83',['findAdjFace',['../classvcl_1_1comp_1_1AdjacentFaces.html#a2edbfa604d60f9298c0408be8ea77127',1,'vcl::comp::AdjacentFaces::findAdjFace(const Face *f) const'],['../classvcl_1_1comp_1_1AdjacentFaces.html#a29431c545ca21dff97ba6febd346b1b1',1,'vcl::comp::AdjacentFaces::findAdjFace(const Face *f)']]],
   ['findadjvertex_84',['findAdjVertex',['../classvcl_1_1comp_1_1AdjacentVertices.html#a8068f6280a2d796d54f67f1f5a7c7880',1,'vcl::comp::AdjacentVertices::findAdjVertex(const Vertex *v) const'],['../classvcl_1_1comp_1_1AdjacentVertices.html#aa1cde53072019dea9015b7a66df8cc20',1,'vcl::comp::AdjacentVertices::findAdjVertex(const Vertex *v)']]],
   ['findcaseinsensitive_85',['findCaseInsensitive',['../namespacevcl_1_1str.html#a019a5b9a4a02cb95811b2e16582d943c',1,'vcl::str']]],
-  ['findvertex_86',['findVertex',['../classvcl_1_1comp_1_1VertexPointers.html#a12d3938a2d2a4a64f3e623418a7a577b',1,'vcl::comp::VertexPointers::findVertex(const Vertex *v) const'],['../classvcl_1_1comp_1_1VertexPointers.html#a4ff3259482f24248bca742a5cbe1b8a3',1,'vcl::comp::VertexPointers::findVertex(const Vertex *v)']]],
+  ['findvertex_86',['findVertex',['../classvcl_1_1comp_1_1VertexPointers.html#a818f98a2c8686192f81e2684d6d59664',1,'vcl::comp::VertexPointers::findVertex(const Vertex *v) const'],['../classvcl_1_1comp_1_1VertexPointers.html#a083d7d5dd9a9e6c20ee693cae1828f0b',1,'vcl::comp::VertexPointers::findVertex(const Vertex *v)']]],
   ['first_87',['first',['../classvcl_1_1RefPair.html#a490dfc5bfe60457ea04ee224657a15e2',1,'vcl::RefPair::first()'],['../classvcl_1_1FirstRefPair.html#addc038b0dabeed01332d9a96b85d1b50',1,'vcl::FirstRefPair::first()'],['../classvcl_1_1SecondRefPair.html#a43b50ecb1e44cdd0a641b5399bb376a5',1,'vcl::SecondRefPair::first()']]],
   ['firstelementpaircomparator_88',['FirstElementPairComparator',['../structvcl_1_1FirstElementPairComparator.html',1,'vcl']]],
   ['firstelementpaircomparator_3c_20pairtype_20_3e_89',['FirstElementPairComparator&lt; PairType &gt;',['../structvcl_1_1FirstElementPairComparator.html',1,'vcl']]],
@@ -108,5 +108,5 @@ var searchData=
   ['format_105',['format',['../classvcl_1_1io_1_1ply_1_1PlyHeader.html#a6f1007ad66678c1aebc50eaec00e44f1',1,'vcl::io::ply::PlyHeader']]],
   ['format_106',['Format',['../namespacevcl_1_1io_1_1ply.html#a78b5af43f267ecc24ce3262f59f331a2',1,'vcl::io::ply']]],
   ['front_107',['front',['../classvcl_1_1MarkableVector.html#aa565de9f19940d0f3fca999271cbf7f7',1,'vcl::MarkableVector::front()'],['../classvcl_1_1CustomComponentVectorHandle.html#a1b8e32c6ecc2699695c27b24f8caade1',1,'vcl::CustomComponentVectorHandle::front()'],['../classvcl_1_1CustomComponentVectorHandle.html#a2fbb37bc12d50d1dbecb473429d81433',1,'vcl::CustomComponentVectorHandle::front() const'],['../classvcl_1_1MarkableVector.html#a0ac0c8a42828b4a67ee6bc15c3af0f36',1,'vcl::MarkableVector::front()']]],
-  ['functions_2eh_108',['functions.h',['../distance_2functions_8h.html',1,'(Global Namespace)'],['../intersection_2functions_8h.html',1,'(Global Namespace)']]]
+  ['functions_2eh_108',['functions.h',['../intersection_2functions_8h.html',1,'(Global Namespace)'],['../distance_2functions_8h.html',1,'(Global Namespace)']]]
 ];

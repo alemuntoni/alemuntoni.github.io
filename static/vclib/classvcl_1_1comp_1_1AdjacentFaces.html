@@ -145,11 +145,11 @@ Public Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad677179a7af7b2ad0ec85b7911449c87"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html#ad677179a7af7b2ad0ec85b7911449c87">init</a> ()</td></tr>
+<tr class="memdesc:ad677179a7af7b2ad0ec85b7911449c87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the container of adjacent faces to nullptr.  <br /></td></tr>
 <tr class="separator:ad677179a7af7b2ad0ec85b7911449c87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a208aa9590f51b6349389dae8385ee241"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html#a208aa9590f51b6349389dae8385ee241">isEnabled</a> () const</td></tr>
+<tr class="memdesc:a208aa9590f51b6349389dae8385ee241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if the component is enabled, <code>false</code> otherwise. This member function can return <code>false</code> only if the component is optional.  <br /></td></tr>
 <tr class="separator:a208aa9590f51b6349389dae8385ee241"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4810ea5059682362768ca1de4c24a709"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html#a4810ea5059682362768ca1de4c24a709">isAdjFacesEnabled</a> () const</td></tr>
-<tr class="separator:a4810ea5059682362768ca1de4c24a709"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2d93afdb6329fd1fc277bff509cd63a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html#ad2d93afdb6329fd1fc277bff509cd63a">adjFacesNumber</a> () const</td></tr>
 <tr class="memdesc:ad2d93afdb6329fd1fc277bff509cd63a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of adjacent faces of this element.  <br /></td></tr>
 <tr class="separator:ad2d93afdb6329fd1fc277bff509cd63a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -160,7 +160,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a4ff3f697c8ae920c9204e27dc69f3b1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const pointer to the i-th adjacent face of this element.  <br /></td></tr>
 <tr class="separator:a4ff3f697c8ae920c9204e27dc69f3b1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94b53cf058c2059f67999d285bc2a25e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Face.html">Face</a> *&amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html#a94b53cf058c2059f67999d285bc2a25e">adjFaceMod</a> (int i)</td></tr>
-<tr class="memdesc:a94b53cf058c2059f67999d285bc2a25e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference of the pointer to the i-th adjacent face of this element but using as index the module between i and the number of adjacent faces. You can use this function if you need to get the "next adjacent face after position k", without check if it is less than the number of adj faces. Works also for negative numbers:  <br /></td></tr>
+<tr class="memdesc:a94b53cf058c2059f67999d285bc2a25e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference of the pointer to the i-th adjacent face of this element but using as index the module between i and the number of adjacent faces. You can use this function if you need to get the "next adjacent face
+after position k", without check if it is less than the number of adj faces. Works also for negative numbers:  <br /></td></tr>
 <tr class="separator:a94b53cf058c2059f67999d285bc2a25e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa7b60e00e3de53968b43c75f1956c63"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classvcl_1_1Face.html">Face</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html#aaa7b60e00e3de53968b43c75f1956c63">adjFaceMod</a> (int i) const</td></tr>
 <tr class="memdesc:aaa7b60e00e3de53968b43c75f1956c63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same of adjFaceMod, but returns a const Pointer to the adjacent face.  <br /></td></tr>
@@ -172,35 +173,49 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:afc57fcda1bd2fd506c0021fc96f28984"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all the adjacent faces of this element.  <br /></td></tr>
 <tr class="separator:afc57fcda1bd2fd506c0021fc96f28984"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f4f50dfff19c71c96e18bada9653d4b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html#a7f4f50dfff19c71c96e18bada9653d4b">containsAdjFace</a> (const <a class="el" href="classvcl_1_1Face.html">Face</a> *f) const</td></tr>
+<tr class="memdesc:a7f4f50dfff19c71c96e18bada9653d4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if the container of adjacent faces contains the given face, <code>false</code> otherwise.  <br /></td></tr>
 <tr class="separator:a7f4f50dfff19c71c96e18bada9653d4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29431c545ca21dff97ba6febd346b1b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html#a29df72d13a2ef01e48495e72ce5485a5">AdjacentFaceIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html#a29431c545ca21dff97ba6febd346b1b1">findAdjFace</a> (const <a class="el" href="classvcl_1_1Face.html">Face</a> *f)</td></tr>
+<tr class="memdesc:a29431c545ca21dff97ba6febd346b1b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterator to the first adjacent face in the container of this component that is equal to the given face. If no such adjacent face is found, past-the-end iterator is returned.  <br /></td></tr>
 <tr class="separator:a29431c545ca21dff97ba6febd346b1b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2edbfa604d60f9298c0408be8ea77127"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html#a62ee61f63f91814ba56544d2952c2226">ConstAdjacentFaceIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html#a2edbfa604d60f9298c0408be8ea77127">findAdjFace</a> (const <a class="el" href="classvcl_1_1Face.html">Face</a> *f) const</td></tr>
+<tr class="memdesc:a2edbfa604d60f9298c0408be8ea77127"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const iterator to the first adjacent face in the container of this component that is equal to the given edge. If no such adjacent face is found, past-the-end iterator is returned.  <br /></td></tr>
 <tr class="separator:a2edbfa604d60f9298c0408be8ea77127"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab201b95594f7d10310b548490afda8ff"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html#ab201b95594f7d10310b548490afda8ff">indexOfAdjFace</a> (const <a class="el" href="classvcl_1_1Face.html">Face</a> *f) const</td></tr>
-<tr class="separator:ab201b95594f7d10310b548490afda8ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a470d65219fb6b364e0ef79d541408705"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html#a470d65219fb6b364e0ef79d541408705">indexOfAdjFace</a> (const <a class="el" href="classvcl_1_1Face.html">Face</a> *f) const</td></tr>
+<tr class="memdesc:a470d65219fb6b364e0ef79d541408705"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the index of the given adjacent face in the container of this element. If the given adjacent face is not in the container, returns UINT_NULL.  <br /></td></tr>
+<tr class="separator:a470d65219fb6b364e0ef79d541408705"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18350559f23966c166f4548dcaca1a53"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html#a18350559f23966c166f4548dcaca1a53">resizeAdjFaces</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> n)</td></tr>
 <tr class="memdesc:a18350559f23966c166f4548dcaca1a53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize the container of the adjacent faces to the given size.  <br /></td></tr>
 <tr class="separator:a18350559f23966c166f4548dcaca1a53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaeec5c697e47e40dc100ab8ab4e6a645"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html#aaeec5c697e47e40dc100ab8ab4e6a645">pushAdjFace</a> (<a class="el" href="classvcl_1_1Face.html">Face</a> *f)</td></tr>
+<tr class="memdesc:aaeec5c697e47e40dc100ab8ab4e6a645"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes in the back of the container the given adjacent face.  <br /></td></tr>
 <tr class="separator:aaeec5c697e47e40dc100ab8ab4e6a645"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd84910967c53b9a46ae290df6c10ce7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html#acd84910967c53b9a46ae290df6c10ce7">insertAdjFace</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i, <a class="el" href="classvcl_1_1Face.html">Face</a> *f)</td></tr>
+<tr class="memdesc:acd84910967c53b9a46ae290df6c10ce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts the given adjacent face in the container at the given position.  <br /></td></tr>
 <tr class="separator:acd84910967c53b9a46ae290df6c10ce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5cec3da69b6a3f72d4da1341713b0f48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html#a5cec3da69b6a3f72d4da1341713b0f48">eraseAdjFace</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i)</td></tr>
+<tr class="memdesc:a5cec3da69b6a3f72d4da1341713b0f48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the adjacent face at the given position from the container.  <br /></td></tr>
 <tr class="separator:a5cec3da69b6a3f72d4da1341713b0f48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10a5bad0d53e045620ca8c349aba83ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html#a10a5bad0d53e045620ca8c349aba83ab">clearAdjFaces</a> ()</td></tr>
+<tr class="memdesc:a10a5bad0d53e045620ca8c349aba83ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the container of adjacent faces, making it empty.  <br /></td></tr>
 <tr class="separator:a10a5bad0d53e045620ca8c349aba83ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1eafef721edddbef076cca404a1d1232"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html#a29df72d13a2ef01e48495e72ce5485a5">AdjacentFaceIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html#a1eafef721edddbef076cca404a1d1232">adjFaceBegin</a> ()</td></tr>
+<tr class="memdesc:a1eafef721edddbef076cca404a1d1232"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterator to the first adjacent face in the container of this component.  <br /></td></tr>
 <tr class="separator:a1eafef721edddbef076cca404a1d1232"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44c3ec01b354d5c392da401ad1f8e107"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html#a29df72d13a2ef01e48495e72ce5485a5">AdjacentFaceIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html#a44c3ec01b354d5c392da401ad1f8e107">adjFaceEnd</a> ()</td></tr>
+<tr class="memdesc:a44c3ec01b354d5c392da401ad1f8e107"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterator to the end of the container of this component.  <br /></td></tr>
 <tr class="separator:a44c3ec01b354d5c392da401ad1f8e107"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c9dfe39abe9b270ad3ccb8df7c14fd2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html#a62ee61f63f91814ba56544d2952c2226">ConstAdjacentFaceIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html#a1c9dfe39abe9b270ad3ccb8df7c14fd2">adjFaceBegin</a> () const</td></tr>
+<tr class="memdesc:a1c9dfe39abe9b270ad3ccb8df7c14fd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const iterator to the first adjacent face in the container of this component.  <br /></td></tr>
 <tr class="separator:a1c9dfe39abe9b270ad3ccb8df7c14fd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79d77e95f6401760fd15e18b8339c359"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html#a62ee61f63f91814ba56544d2952c2226">ConstAdjacentFaceIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html#a79d77e95f6401760fd15e18b8339c359">adjFaceEnd</a> () const</td></tr>
+<tr class="memdesc:a79d77e95f6401760fd15e18b8339c359"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const iterator to the end of the container of this component.  <br /></td></tr>
 <tr class="separator:a79d77e95f6401760fd15e18b8339c359"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab109165496e8092fe540528f99c5da7c"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html#ab109165496e8092fe540528f99c5da7c">adjFaces</a> ()</td></tr>
+<tr class="memdesc:ab109165496e8092fe540528f99c5da7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a lightweight view object that stores the begin and end iterators of the container of adjacent faces of the element. The view object exposes the iterators trough the <code>begin()</code> and <code>end()</code> member functions, and therefore the returned object can be used in range-based for loops:  <br /></td></tr>
 <tr class="separator:ab109165496e8092fe540528f99c5da7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac739f75037dedbbe7a93f893ddb1e25f"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html#ac739f75037dedbbe7a93f893ddb1e25f">adjFaces</a> () const</td></tr>
+<tr class="memdesc:ac739f75037dedbbe7a93f893ddb1e25f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a lightweight const view object that stores the begin and end iterators of the container of adjacent faces of the element. The view object exposes the iterators trough the <code>begin()</code> and <code>end()</code> member functions, and therefore the returned object can be used in range-based for loops:  <br /></td></tr>
 <tr class="separator:ac739f75037dedbbe7a93f893ddb1e25f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40d774db04090d549d032e8d1c5450c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html#a40d774db04090d549d032e8d1c5450c3">__adjacentFaces</a> () const</td></tr>
 <tr class="separator:a40d774db04090d549d032e8d1c5450c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -275,7 +290,17 @@ class vcl::comp::AdjacentFaces&lt; Face, N, TTVN, ElementType, OPT &gt;</div><p>
 <p>The member functions of this class will be available in the instance of any <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> that will contain this component.</p>
 <p>For example, if you have a <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> <code>v</code> that has the <a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html" title="The AdjacentFaces class is a container of Face pointers. It could be used by any Element to save adja...">AdjacentFaces</a> component, you'll be able to access to this component member functions from <code>v</code>:</p>
 <div class="fragment"><div class="line">v.adjFacesNumber();</div>
-</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>This component can be <em>Tied To <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Number</em>: it means that the size of the container, if dynamic, will change automatically along the <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Number of the <a class="el" href="classvcl_1_1comp_1_1Component.html" title="The Component class is the base class for almost all the components of VCLib (with the exception of C...">Component</a>. Check the <code>TTVN</code> template value on the specialization of your component to check if it is tied to the <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Number. For further details check the documentation of the <a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html">ContainerComponent</a> class. </dd></dl>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>This component could be <em>Tied To <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Number</em>: it means that the size of the container, if dynamic, will change automatically along the <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Number of the <a class="el" href="classvcl_1_1comp_1_1Component.html" title="The Component class is the base class for almost all the components of VCLib (with the exception of C...">Component</a>. Check the <code>TTVN</code> template value on the specialization of your component to check if it is tied to the <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Number. For further details check the documentation of the <a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html">ContainerComponent</a> class.</dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname"><a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a></td><td>The type of the adjacent <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> element. </td></tr>
+    <tr><td class="paramname">N</td><td>The size of the container, that will represent the number of storable adjacent faces. If negative, the container is dynamic. </td></tr>
+    <tr><td class="paramname">TTVN</td><td>If true, the size of the container will be tied to the <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Number of the component (this is used mostly on <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> elements). </td></tr>
+    <tr><td class="paramname">ElementType</td><td>This template argument must be <code>void</code> if the component needs to be stored horizontally, or the type of the element that will contain this component if the component needs to be stored vertically. </td></tr>
+    <tr><td class="paramname">OPT</td><td>If true, the component will be optional. This argument is considered only if the component is stored vertically. </td></tr>
+  </table>
+  </dd>
+</dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a29df72d13a2ef01e48495e72ce5485a5" name="a29df72d13a2ef01e48495e72ce5485a5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a29df72d13a2ef01e48495e72ce5485a5">&#9670;&#160;</a></span>AdjacentFaceIterator</h2>
@@ -375,7 +400,8 @@ template&lt;typename <a class="el" href="classvcl_1_1Face.html">Face</a> , int N
 
 <p>Returns a reference of the pointer to the i-th adjacent face of this element. </p>
 <p>You can use this function to set the i-th adjacent face:</p>
-<div class="fragment"><div class="line">e.adjFace(2) = &amp;m.face(k); <span class="comment">// the second adj face of e will point to the k-th face of the mesh.</span></div>
+<div class="fragment"><div class="line">e.adjFace(2) = &amp;m.face(k); <span class="comment">// the second adj face of e will point to the k-th</span></div>
+<div class="line">                           <span class="comment">// face of the mesh.</span></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>the position of the required adjacent face in the container; the value must be between 0 and the number of adj faces. </td></tr>
@@ -429,6 +455,9 @@ template&lt;typename <a class="el" href="classvcl_1_1Face.html">Face</a> , int N
       </table>
 </div><div class="memdoc">
 
+<p>Returns an iterator to the first adjacent face in the container of this component. </p>
+<dl class="section return"><dt>Returns</dt><dd>an iterator pointing to the begin of this container. </dd></dl>
+
 </div>
 </div>
 <a id="a1c9dfe39abe9b270ad3ccb8df7c14fd2" name="a1c9dfe39abe9b270ad3ccb8df7c14fd2"></a>
@@ -444,6 +473,9 @@ template&lt;typename <a class="el" href="classvcl_1_1Face.html">Face</a> , int N
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns a const iterator to the first adjacent face in the container of this component. </p>
+<dl class="section return"><dt>Returns</dt><dd>an iterator pointing to the begin of this container. </dd></dl>
 
 </div>
 </div>
@@ -461,6 +493,9 @@ template&lt;typename <a class="el" href="classvcl_1_1Face.html">Face</a> , int N
       </table>
 </div><div class="memdoc">
 
+<p>Returns an iterator to the end of the container of this component. </p>
+<dl class="section return"><dt>Returns</dt><dd>an iterator pointing to the end of this container. </dd></dl>
+
 </div>
 </div>
 <a id="a79d77e95f6401760fd15e18b8339c359" name="a79d77e95f6401760fd15e18b8339c359"></a>
@@ -476,6 +511,9 @@ template&lt;typename <a class="el" href="classvcl_1_1Face.html">Face</a> , int N
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns a const iterator to the end of the container of this component. </p>
+<dl class="section return"><dt>Returns</dt><dd>an iterator pointing to the end of this container. </dd></dl>
 
 </div>
 </div>
@@ -497,10 +535,13 @@ template&lt;typename <a class="el" href="classvcl_1_1Face.html">Face</a> , int N
       </table>
 </div><div class="memdoc">
 
-<p>Returns a reference of the pointer to the i-th adjacent face of this element but using as index the module between i and the number of adjacent faces. You can use this function if you need to get the "next adjacent face after position k", without check if it is less than the number of adj faces. Works also for negative numbers: </p>
+<p>Returns a reference of the pointer to the i-th adjacent face of this element but using as index the module between i and the number of adjacent faces. You can use this function if you need to get the "next adjacent face
+after position k", without check if it is less than the number of adj faces. Works also for negative numbers: </p>
 <div class="fragment"><div class="line">k = pos; <span class="comment">// some position of an adjacent face</span></div>
-<div class="line"><span class="keyword">auto</span>* next = e.adjFaceMod(k+1); <span class="comment">// the adj face next to k, that may also be at pos 0</span></div>
-<div class="line"><span class="keyword">auto</span>* last = e.adjFaceMod(-1); <span class="comment">// the adj face in position adjFaceNumber()-1</span></div>
+<div class="line"><span class="keyword">auto</span>* next = e.adjFaceMod(k+1); <span class="comment">// the adj face next to k, that may also be</span></div>
+<div class="line">                                <span class="comment">// at pos 0</span></div>
+<div class="line"><span class="keyword">auto</span>* last = e.adjFaceMod(-1); <span class="comment">// the adj face in position</span></div>
+<div class="line">                               <span class="comment">// adjFaceNumber()-1</span></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>the position of the required adjacent face in the container, w.r.t. the position 0; value is modularized on adjFaceNumber(). </td></tr>
@@ -554,6 +595,13 @@ template&lt;typename <a class="el" href="classvcl_1_1Face.html">Face</a> , int N
       </table>
 </div><div class="memdoc">
 
+<p>Returns a lightweight view object that stores the begin and end iterators of the container of adjacent faces of the element. The view object exposes the iterators trough the <code>begin()</code> and <code>end()</code> member functions, and therefore the returned object can be used in range-based for loops: </p>
+<div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keyword">auto</span>* <a class="code hl_function" href="classvcl_1_1comp_1_1AdjacentFaces.html#a683f71d468f9bd191e7a6f91b691a25a">adjFace</a> : el.adjFaces()) {</div>
+<div class="line">    <span class="comment">// Do something with adjFace</span></div>
+<div class="line">}</div>
+<div class="ttc" id="aclassvcl_1_1comp_1_1AdjacentFaces_html_a683f71d468f9bd191e7a6f91b691a25a"><div class="ttname"><a href="classvcl_1_1comp_1_1AdjacentFaces.html#a683f71d468f9bd191e7a6f91b691a25a">vcl::comp::AdjacentFaces::adjFace</a></div><div class="ttdeci">Face *&amp; adjFace(uint i)</div><div class="ttdoc">Returns a reference of the pointer to the i-th adjacent face of this element.</div><div class="ttdef"><b>Definition:</b> adjacent_faces.cpp:84</div></div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>a lightweight view object that can be used in range-based for loops to iterate over adjacent faces. </dd></dl>
+
 </div>
 </div>
 <a id="ac739f75037dedbbe7a93f893ddb1e25f" name="ac739f75037dedbbe7a93f893ddb1e25f"></a>
@@ -569,6 +617,12 @@ template&lt;typename <a class="el" href="classvcl_1_1Face.html">Face</a> , int N
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns a lightweight const view object that stores the begin and end iterators of the container of adjacent faces of the element. The view object exposes the iterators trough the <code>begin()</code> and <code>end()</code> member functions, and therefore the returned object can be used in range-based for loops: </p>
+<div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>* <a class="code hl_function" href="classvcl_1_1comp_1_1AdjacentFaces.html#a683f71d468f9bd191e7a6f91b691a25a">adjFace</a> : el.adjFaces()) {</div>
+<div class="line">    <span class="comment">// Do something read-only with adjFace</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>a lightweight view object that can be used in range-based for loops to iterate over adjacent faces. </dd></dl>
 
 </div>
 </div>
@@ -631,6 +685,9 @@ requires (N &lt; 0 &amp;&amp; !TTVN)</div>
       </table>
 </div><div class="memdoc">
 
+<p>Clears the container of adjacent faces, making it empty. </p>
+<dl class="section note"><dt>Note</dt><dd>This function is available only if the container of the Adjacent Faces component has dynamic size. </dd></dl>
+
 </div>
 </div>
 <a id="a7f4f50dfff19c71c96e18bada9653d4b" name="a7f4f50dfff19c71c96e18bada9653d4b"></a>
@@ -650,6 +707,15 @@ template&lt;typename <a class="el" href="classvcl_1_1Face.html">Face</a> , int N
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns <code>true</code> if the container of adjacent faces contains the given face, <code>false</code> otherwise. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">e</td><td>the pointer to the face to search. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the container of adjacent faces contains the given face, <code>false</code> otherwise. </dd></dl>
 
 </div>
 </div>
@@ -701,6 +767,15 @@ requires (N &lt; 0 &amp;&amp; !TTVN)</div>
       </table>
 </div><div class="memdoc">
 
+<p>Removes the adjacent face at the given position from the container. </p>
+<dl class="section note"><dt>Note</dt><dd>This function is available only if the container of the Adjacent Faces component has dynamic size. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>The position of the adjacent face to remove from the container. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a29431c545ca21dff97ba6febd346b1b1" name="a29431c545ca21dff97ba6febd346b1b1"></a>
@@ -721,6 +796,15 @@ template&lt;typename <a class="el" href="classvcl_1_1Face.html">Face</a> , int N
       </table>
 </div><div class="memdoc">
 
+<p>Returns an iterator to the first adjacent face in the container of this component that is equal to the given face. If no such adjacent face is found, past-the-end iterator is returned. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">e</td><td>the pointer to the face to search. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>an iterator pointing to the first adjacent face equal to the given face, or end if no such adjacent face is found. </dd></dl>
+
 </div>
 </div>
 <a id="a2edbfa604d60f9298c0408be8ea77127" name="a2edbfa604d60f9298c0408be8ea77127"></a>
@@ -740,6 +824,15 @@ template&lt;typename <a class="el" href="classvcl_1_1Face.html">Face</a> , int N
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns a const iterator to the first adjacent face in the container of this component that is equal to the given edge. If no such adjacent face is found, past-the-end iterator is returned. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">e</td><td>the pointer to the face to search. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a const iterator pointing to the first adjacent face equal to the given face, or end if no such adjacent face is found. </dd></dl>
 
 </div>
 </div>
@@ -819,8 +912,8 @@ template&lt;typename <a class="el" href="classvcl_1_1Element.html">Element</a> ,
 
 </div>
 </div>
-<a id="ab201b95594f7d10310b548490afda8ff" name="ab201b95594f7d10310b548490afda8ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab201b95594f7d10310b548490afda8ff">&#9670;&#160;</a></span>indexOfAdjFace()</h2>
+<a id="a470d65219fb6b364e0ef79d541408705" name="a470d65219fb6b364e0ef79d541408705"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a470d65219fb6b364e0ef79d541408705">&#9670;&#160;</a></span>indexOfAdjFace()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -828,7 +921,7 @@ template&lt;typename <a class="el" href="classvcl_1_1Element.html">Element</a> ,
 template&lt;typename <a class="el" href="classvcl_1_1Face.html">Face</a> , int N, bool TT, typename El , bool O&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html">vcl::comp::AdjacentFaces</a>&lt; <a class="el" href="classvcl_1_1Face.html">Face</a>, N, TT, El, O &gt;::indexOfAdjFace </td>
+          <td class="memname"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> <a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html">vcl::comp::AdjacentFaces</a>&lt; <a class="el" href="classvcl_1_1Face.html">Face</a>, N, TT, El, O &gt;::indexOfAdjFace </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classvcl_1_1Face.html">Face</a> *&#160;</td>
           <td class="paramname"><em>f</em></td><td>)</td>
@@ -836,6 +929,15 @@ template&lt;typename <a class="el" href="classvcl_1_1Face.html">Face</a> , int N
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns the index of the given adjacent face in the container of this element. If the given adjacent face is not in the container, returns UINT_NULL. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">e</td><td>the pointer to the adjacent face to search. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the index of the given adjacent face, or UINT_NULL if it is not found. </dd></dl>
 
 </div>
 </div>
@@ -852,6 +954,10 @@ template&lt;typename <a class="el" href="classvcl_1_1Face.html">Face</a> , int N
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Initializes the container of adjacent faces to nullptr. </p>
+<p>It is made in the init function since the component could be not available during construction (e.g. if the component is optional and not enabled).</p>
+<p>This member function is hidden by the element that inherits this class. </p>
 
 </div>
 </div>
@@ -923,21 +1029,15 @@ requires (N &lt; 0 &amp;&amp; !TTVN)</div>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a4810ea5059682362768ca1de4c24a709" name="a4810ea5059682362768ca1de4c24a709"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4810ea5059682362768ca1de4c24a709">&#9670;&#160;</a></span>isAdjFacesEnabled()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename <a class="el" href="classvcl_1_1Face.html">Face</a> , int N, bool TT, typename El , bool O&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html">vcl::comp::AdjacentFaces</a>&lt; <a class="el" href="classvcl_1_1Face.html">Face</a>, N, TT, El, O &gt;::isAdjFacesEnabled</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Inserts the given adjacent face in the container at the given position. </p>
+<dl class="section note"><dt>Note</dt><dd>This function is available only if the container of the Adjacent Faces component has dynamic size. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>The position in the container where to insert the adjacent face. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">e</td><td>The pointer to the adjacent face to insert in the container. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -954,6 +1054,10 @@ template&lt;typename <a class="el" href="classvcl_1_1Face.html">Face</a> , int N
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns <code>true</code> if the component is enabled, <code>false</code> otherwise. This member function can return <code>false</code> only if the component is optional. </p>
+<p>This member function is hidden by the element that inherits this class.</p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the component is enabled, <code>false</code> otherwise. </dd></dl>
 
 </div>
 </div>
@@ -975,6 +1079,15 @@ requires (N &lt; 0 &amp;&amp; !TTVN)</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Pushes in the back of the container the given adjacent face. </p>
+<dl class="section note"><dt>Note</dt><dd>This function is available only if the container of the Adjacent Faces component has dynamic size. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">e</td><td>The pointer to the adjacent face to push in the back of the container. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1059,7 +1172,7 @@ requires (N &lt; 0 &amp;&amp; !TTVN)</div>
 <dl class="section note"><dt>Note</dt><dd>This function is available only if the container of the Adjacent Faces is has dynamic size. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">n</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>The new size of the adjacent faces container. </td></tr>
   </table>
   </dd>
 </dl>
