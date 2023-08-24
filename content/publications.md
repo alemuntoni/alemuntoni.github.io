@@ -9,14 +9,21 @@ description: publications
 
 ![taglab_qlcb](/images/taglab_qlcb.png)
 
-Kai L. Kopecky, [Gaia Pavoni](http://vcg.isti.cnr.it/~pavoni/), Erica Nocerino, Andrew J. Brooks, [Massimiliano Corsini](http://vcg.isti.cnr.it/~corsini/),
-Fabio Menna, Jordan P. Gallagher, Alessandro Capra, Cristina Castagnetti, Paolo Rossi,
-Armin Gruen, Fabian Neyer, Alessandro Muntoni, [Federico Ponchio](http://vcg.isti.cnr.it/~ponchio/), [Paolo Cignoni](http://vcg.isti.cnr.it/~cignoni/), 
-Matthias Troyer, Sally J. Holbrook, Russell J. Schmitt
+Kai L. Kopecky, [Gaia Pavoni](http://vcg.isti.cnr.it/~pavoni/), Erica Nocerino, Andrew J. Brooks, [Massimiliano Corsini](http://vcg.isti.cnr.it/~corsini/), Fabio Menna, Jordan P. Gallagher, Alessandro Capra, Cristina Castagnetti, Paolo Rossi, Armin Gruen, Fabian Neyer, Alessandro Muntoni, [Federico Ponchio](http://vcg.isti.cnr.it/~ponchio/), [Paolo Cignoni](http://vcg.isti.cnr.it/~cignoni/), Matthias Troyer, Sally J. Holbrook, Russell J. Schmitt
 
 Remote Sensing, Vol 15(16), 2023.
 
 [Paper](https://www.mdpi.com/2072-4292/15/16/4077/pdf) | [BibTex](/bibtex/2023taglab_qlcb) | [Digital Library](https://www.mdpi.com/2072-4292/15/16/4077)
+
+#### Design And Construction Of a Bending-Active Plywood Structure: The Flexmaps Pavilion
+
+![flexmaps](/images/flexmaps.png)
+
+[Francesco Laccone](https://vcg.isti.cnr.it/~laccone/), [Luigi Malomo](http://vcg.isti.cnr.it/~malomo/), [Marco Callieri](https://vcg.isti.cnr.it/~callieri/CallieriHome/Index.html), Thomas Alderighi, Alessandro Muntoni, [Federico Ponchio](http://vcg.isti.cnr.it/~ponchio/), [Nico Pietroni](https://www.nicopietroni.com/), [Paolo Cignoni](http://vcg.isti.cnr.it/~cignoni/)
+
+Journal of the International Association for Shell and Spatial Structures, 63(2), 2022.
+
+[Paper](https://vcg.isti.cnr.it/Publications/2022/LMCAMPPC22/S4_3_Jiass_21_38_16_Laccone.pdf) | [BibTex](/bibtex/2022flexmaps) | [Digital Library](https://www.ingentaconnect.com/content/iass/jiass/2022/00000063/00000002/art00007;jsessionid=1cbmvrkri2dfh.x-ic-live-02)
 
 #### TagLab: AI-assisted annotation for the fast and accurate semantic segmentation of coral reef orthoimages
 
