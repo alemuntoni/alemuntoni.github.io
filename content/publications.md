@@ -5,6 +5,19 @@ description: publications
 
 ### Papers
 
+#### Quantifying the Loss of Coral from a Bleaching Event Using Underwater Photogrammetry and AI-Assisted Image Segmentation
+
+![taglab_qlcb](/images/taglab_qlcb.png)
+
+Kai L. Kopecky, [Gaia Pavoni](http://vcg.isti.cnr.it/~pavoni/), Erica Nocerino, Andrew J. Brooks, [Massimiliano Corsini](http://vcg.isti.cnr.it/~corsini/),
+Fabio Menna, Jordan P. Gallagher, Alessandro Capra, Cristina Castagnetti, Paolo Rossi,
+Armin Gruen, Fabian Neyer, Alessandro Muntoni, [Federico Ponchio](http://vcg.isti.cnr.it/~ponchio/), [Paolo Cignoni](http://vcg.isti.cnr.it/~cignoni/), 
+Matthias Troyer, Sally J. Holbrook, Russell J. Schmitt
+
+Remote Sensing, Vol 15(16), 2023.
+
+[Paper](https://www.mdpi.com/2072-4292/15/16/4077/pdf) | [BibTex](/bibtex/2023taglab_qlcb) | [Digital Library](https://www.mdpi.com/2072-4292/15/16/4077)
+
 #### TagLab: AI-assisted annotation for the fast and accurate semantic segmentation of coral reef orthoimages
 
 ![taglab_ai](/images/taglab_ai.png)
