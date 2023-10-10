@@ -130,30 +130,31 @@ $(document).ready(function(){initNavTree('mesh_2elements_2edge_8h_source.html','
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType, <span class="keyword">typename</span>... Comps&gt;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classvcl_1_1Edge.html">   46</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1Edge.html">Edge</a> : <span class="keyword">public</span> <a class="code hl_class" href="classvcl_1_1Element.html">Element</a>&lt;EDGE, MeshType, Comps...&gt;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>{</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="comment">// VertexPointers component of the Edge</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">using </span>VPtrs = <span class="keyword">typename</span> Edge::VertexPointers;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classvcl_1_1Edge.html#a8e32e967969659edabfda602a8f734a2">   52</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="classvcl_1_1Edge.html#a8e32e967969659edabfda602a8f734a2">VertexType</a> = <span class="keyword">typename</span> VPtrs::VertexType;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>};</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType, <span class="keyword">typename</span>... Comps&gt;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classvcl_1_1Edge_3_01MeshType_00_01TypeWrapper_3_01Comps_8_8_8_01_4_01_4.html">   56</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1Edge.html">Edge</a>&lt;MeshType, <a class="code hl_struct" href="structvcl_1_1TypeWrapper.html">TypeWrapper</a>&lt;Comps...&gt;&gt; : <span class="keyword">public</span> <a class="code hl_class" href="classvcl_1_1Edge.html">Edge</a>&lt;MeshType, Comps...&gt;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>{</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>};</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#endif </span><span class="comment">// VCL_MESH_ELEMENTS_EDGE_H</span></div>
-<div class="ttc" id="aclassvcl_1_1Edge_html"><div class="ttname"><a href="classvcl_1_1Edge.html">vcl::Edge</a></div><div class="ttdoc">The Edge class represents an Edge element of the vcl::Mesh class.</div><div class="ttdef"><b>Definition:</b> edge.h:47</div></div>
-<div class="ttc" id="aclassvcl_1_1Edge_html_a8e32e967969659edabfda602a8f734a2"><div class="ttname"><a href="classvcl_1_1Edge.html#a8e32e967969659edabfda602a8f734a2">vcl::Edge::VertexType</a></div><div class="ttdeci">typename VPtrs::VertexType VertexType</div><div class="ttdef"><b>Definition:</b> edge.h:52</div></div>
-<div class="ttc" id="aclassvcl_1_1Element_html"><div class="ttname"><a href="classvcl_1_1Element.html">vcl::Element</a></div><div class="ttdoc">The Element class.</div><div class="ttdef"><b>Definition:</b> element.h:56</div></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType, <span class="keyword">typename</span>... Comps&gt;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classvcl_1_1Edge.html">   48</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1Edge.html">Edge</a> : <span class="keyword">public</span> <a class="code hl_class" href="classvcl_1_1Element.html">Element</a>&lt;EDGE, MeshType, Comps...&gt;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>{</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="comment">// VertexPointers component of the Edge</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">using </span>VPtrs = <span class="keyword">typename</span> Edge::VertexPointers;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classvcl_1_1Edge.html#acd0e04abb6f5850644e62b554d85ba10">   54</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="classvcl_1_1Edge.html#acd0e04abb6f5850644e62b554d85ba10">VertexType</a> = VPtrs::VertexType;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>};</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType, <span class="keyword">typename</span>... Comps&gt;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classvcl_1_1Edge_3_01MeshType_00_01TypeWrapper_3_01Comps_8_8_8_01_4_01_4.html">   58</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1Edge.html">Edge</a>&lt;MeshType, <a class="code hl_struct" href="structvcl_1_1TypeWrapper.html">TypeWrapper</a>&lt;Comps...&gt;&gt; :</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keyword">public</span> <a class="code hl_class" href="classvcl_1_1Edge.html">Edge</a>&lt;MeshType, Comps...&gt;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>{</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>};</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#endif </span><span class="comment">// VCL_MESH_ELEMENTS_EDGE_H</span></div>
+<div class="ttc" id="aclassvcl_1_1Edge_html"><div class="ttname"><a href="classvcl_1_1Edge.html">vcl::Edge</a></div><div class="ttdoc">The Edge class represents an Edge element of the vcl::Mesh class.</div><div class="ttdef"><b>Definition:</b> edge.h:49</div></div>
+<div class="ttc" id="aclassvcl_1_1Edge_html_acd0e04abb6f5850644e62b554d85ba10"><div class="ttname"><a href="classvcl_1_1Edge.html#acd0e04abb6f5850644e62b554d85ba10">vcl::Edge::VertexType</a></div><div class="ttdeci">VPtrs::VertexType VertexType</div><div class="ttdef"><b>Definition:</b> edge.h:54</div></div>
+<div class="ttc" id="aclassvcl_1_1Element_html"><div class="ttname"><a href="classvcl_1_1Element.html">vcl::Element</a></div><div class="ttdoc">The Element class.</div><div class="ttdef"><b>Definition:</b> element.h:57</div></div>
 <div class="ttc" id="aconcepts_2mesh_2elements_2edge_8h_html"><div class="ttname"><a href="concepts_2mesh_2elements_2edge_8h.html">edge.h</a></div></div>
 <div class="ttc" id="amesh_2elements_2element_8h_html"><div class="ttname"><a href="mesh_2elements_2element_8h.html">element.h</a></div></div>
-<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition:</b> bounding_box.cpp:29</div></div>
+<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition:</b> bounding_box.h:47</div></div>
 <div class="ttc" id="astructvcl_1_1TypeWrapper_html"><div class="ttname"><a href="structvcl_1_1TypeWrapper.html">vcl::TypeWrapper</a></div><div class="ttdoc">A simple structure that wraps a list of variadic templates, without instantiating anything....</div><div class="ttdef"><b>Definition:</b> variadic_templates.h:40</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

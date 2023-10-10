@@ -124,20 +124,44 @@ $(document).ready(function(){initNavTree('concepts_2space_2matrix_8h_source.html
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef VCL_CONCEPTS_SPACE_MATRIX_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define VCL_CONCEPTS_SPACE_MATRIX_H</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;<a class="code" href="space_2array_8h.html">array.h</a>&quot;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="conceptvcl_1_1EigenMatrixConcept.html">   30</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1EigenMatrixConcept.html">EigenMatrixConcept</a> = <span class="keyword">requires</span>(T o, <span class="keyword">const</span> T&amp; co)</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>{</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    o.RowsAtCompileTime;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    o.ColsAtCompileTime;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>};</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#endif </span><span class="comment">// VCL_CONCEPTS_SPACE_MATRIX_H</span></div>
-<div class="ttc" id="aconceptvcl_1_1EigenMatrixConcept_html"><div class="ttname"><a href="conceptvcl_1_1EigenMatrixConcept.html">vcl::EigenMatrixConcept</a></div><div class="ttdef"><b>Definition:</b> matrix.h:30</div></div>
-<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition:</b> bounding_box.cpp:29</div></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="conceptvcl_1_1EigenMatrixConcept.html">   43</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1EigenMatrixConcept.html">EigenMatrixConcept</a> = <span class="keyword">requires</span> (T o, <span class="keyword">const</span> T&amp; co)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>{</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">typename</span> T::Scalar;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    co.RowsAtCompileTime;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    co.ColsAtCompileTime;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    co.rows();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    co.cols();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    o.operator()(std::size_t(), std::size_t());</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    co.operator()(std::size_t(), std::size_t());</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>};</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="conceptvcl_1_1ResizableEigenMatrixConceipt.html">   72</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1ResizableEigenMatrixConceipt.html">ResizableEigenMatrixConceipt</a> = <a class="code hl_concept" href="conceptvcl_1_1EigenMatrixConcept.html">EigenMatrixConcept&lt;T&gt;</a> &amp;&amp; <span class="keyword">requires</span> (T o)</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>{</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    o.resize(std::size_t(), std::size_t());</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    o.conservativeResize(std::size_t(), std::size_t());</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>};</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="conceptvcl_1_1MatrixConcept.html">   86</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1MatrixConcept.html">MatrixConcept</a> = <a class="code hl_concept" href="conceptvcl_1_1ResizableEigenMatrixConceipt.html">ResizableEigenMatrixConceipt&lt;T&gt;</a> || <a class="code hl_concept" href="conceptvcl_1_1Array2Concept.html">Array2Concept&lt;T&gt;</a>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">#endif </span><span class="comment">// VCL_CONCEPTS_SPACE_MATRIX_H</span></div>
+<div class="ttc" id="aconceptvcl_1_1Array2Concept_html"><div class="ttname"><a href="conceptvcl_1_1Array2Concept.html">vcl::Array2Concept</a></div><div class="ttdoc">A concept representing a 2-dimensional array.</div><div class="ttdef"><b>Definition:</b> array.h:85</div></div>
+<div class="ttc" id="aconceptvcl_1_1EigenMatrixConcept_html"><div class="ttname"><a href="conceptvcl_1_1EigenMatrixConcept.html">vcl::EigenMatrixConcept</a></div><div class="ttdoc">Concept for Eigen matrices. It is satisfied when T is an Eigen matrix.</div><div class="ttdef"><b>Definition:</b> matrix.h:43</div></div>
+<div class="ttc" id="aconceptvcl_1_1MatrixConcept_html"><div class="ttname"><a href="conceptvcl_1_1MatrixConcept.html">vcl::MatrixConcept</a></div><div class="ttdoc">Concept for 2D arrays (matrices). It is satisfied when T is a matrix, no matter its sizes.</div><div class="ttdef"><b>Definition:</b> matrix.h:86</div></div>
+<div class="ttc" id="aconceptvcl_1_1ResizableEigenMatrixConceipt_html"><div class="ttname"><a href="conceptvcl_1_1ResizableEigenMatrixConceipt.html">vcl::ResizableEigenMatrixConceipt</a></div><div class="ttdoc">Concept for Eigen matrices that can be resized. It is satisfied when T is an Eigen matrix.</div><div class="ttdef"><b>Definition:</b> matrix.h:72</div></div>
+<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition:</b> bounding_box.h:47</div></div>
+<div class="ttc" id="aspace_2array_8h_html"><div class="ttname"><a href="space_2array_8h.html">array.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -109,7 +109,7 @@ Collaboration diagram for Face Requirements:</div>
 <div class="center"><img src="group__face__requirements.png" border="0" usemap="#agroup____face____requirements" alt=""/></div>
 <map name="agroup____face____requirements" id="agroup____face____requirements">
 <area shape="rect" title="List functions that allows to check, enable and assert the availability of components in the Face Ele..." alt="" coords="205,5,352,31"/>
-<area shape="rect" href="group__mesh__requirements.html" title="List functions that allows to check, enable and assert the availability of components in the Elements..." alt="" coords="5,5,157,31"/>
+<area shape="rect" href="group__mesh__requirements.html" title="List functions that allows to check, enable and assert characteristics and the availability of compon..." alt="" coords="5,5,157,31"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -119,74 +119,74 @@ Functions</h2></td></tr>
 <tr class="memitem:gaca827384c3a3069cf55d77dc48e3f4fa"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__face__requirements.html#gaca827384c3a3069cf55d77dc48e3f4fa">vcl::isFaceContainerCompact</a> (const MeshType &amp;m)</td></tr>
 <tr class="memdesc:gaca827384c3a3069cf55d77dc48e3f4fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if the given mesh has its FaceContainer compact.  <br /></td></tr>
 <tr class="separator:gaca827384c3a3069cf55d77dc48e3f4fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gacd96213ccffe685c9188af9d023bbc0d"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
-<tr class="memitem:gacd96213ccffe685c9188af9d023bbc0d"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__face__requirements.html#gacd96213ccffe685c9188af9d023bbc0d">vcl::isPerFaceAdjacentEdgesEnabled</a> (const MeshType &amp;m)</td></tr>
-<tr class="memdesc:gacd96213ccffe685c9188af9d023bbc0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the AdjacentEdges component is available (enabled) in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> element of the input mesh m.  <br /></td></tr>
-<tr class="separator:gacd96213ccffe685c9188af9d023bbc0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga33f24a91d99671c5977a6cd3f90c2993"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga33f24a91d99671c5977a6cd3f90c2993"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__face__requirements.html#ga33f24a91d99671c5977a6cd3f90c2993">vcl::isPerFaceAdjacentEdgesAvailable</a> (const MeshType &amp;m)</td></tr>
+<tr class="memdesc:ga33f24a91d99671c5977a6cd3f90c2993"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the AdjacentEdges component is available (enabled) in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> element of the input mesh m.  <br /></td></tr>
+<tr class="separator:ga33f24a91d99671c5977a6cd3f90c2993"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab711bf0021a9256445957b3ccc2e0502"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
 <tr class="memitem:gab711bf0021a9256445957b3ccc2e0502"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__face__requirements.html#gab711bf0021a9256445957b3ccc2e0502">vcl::enableIfPerFaceAdjacentEdgesOptional</a> (MeshType &amp;m)</td></tr>
 <tr class="memdesc:gab711bf0021a9256445957b3ccc2e0502"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the input mesh has a FaceContainer, and the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has a AdjacentEdges Component, this function enables the Component in the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> if the component needs to be enabled (meaning that it is optional). Returns <code>true</code> if, after the call of this function, the AdjacentEdges component will be available in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> of the mesh.  <br /></td></tr>
 <tr class="separator:gab711bf0021a9256445957b3ccc2e0502"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0486aed98c9b93d69825d29579c8cefa"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
-<tr class="memitem:ga0486aed98c9b93d69825d29579c8cefa"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__face__requirements.html#ga0486aed98c9b93d69825d29579c8cefa">vcl::isPerFaceAdjacentFacesEnabled</a> (const MeshType &amp;m)</td></tr>
-<tr class="memdesc:ga0486aed98c9b93d69825d29579c8cefa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the AdjacentFaces component is available (enabled) in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> element of the input mesh m.  <br /></td></tr>
-<tr class="separator:ga0486aed98c9b93d69825d29579c8cefa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3a2e0c28c27a21d47d332154fbce554b"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga3a2e0c28c27a21d47d332154fbce554b"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__face__requirements.html#ga3a2e0c28c27a21d47d332154fbce554b">vcl::isPerFaceAdjacentFacesAvailable</a> (const MeshType &amp;m)</td></tr>
+<tr class="memdesc:ga3a2e0c28c27a21d47d332154fbce554b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the AdjacentFaces component is available (enabled) in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> element of the input mesh m.  <br /></td></tr>
+<tr class="separator:ga3a2e0c28c27a21d47d332154fbce554b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gacb30f645e6cc1b2c1d8655f445bf1843"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
 <tr class="memitem:gacb30f645e6cc1b2c1d8655f445bf1843"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__face__requirements.html#gacb30f645e6cc1b2c1d8655f445bf1843">vcl::enableIfPerFaceAdjacentFacesOptional</a> (MeshType &amp;m)</td></tr>
 <tr class="memdesc:gacb30f645e6cc1b2c1d8655f445bf1843"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the input mesh has a FaceContainer, and the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has a AdjacentFaces Component, this function enables the Component in the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> if the component needs to be enabled (meaning that it is optional). Returns <code>true</code> if, after the call of this function, the AdjacentFaces component will be available in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> of the mesh.  <br /></td></tr>
 <tr class="separator:gacb30f645e6cc1b2c1d8655f445bf1843"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf39819c217b9f787d0c228d1c570d327"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
-<tr class="memitem:gaf39819c217b9f787d0c228d1c570d327"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__face__requirements.html#gaf39819c217b9f787d0c228d1c570d327">vcl::isPerFaceColorEnabled</a> (const MeshType &amp;m)</td></tr>
-<tr class="memdesc:gaf39819c217b9f787d0c228d1c570d327"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> component is available (enabled) in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> element of the input mesh m.  <br /></td></tr>
-<tr class="separator:gaf39819c217b9f787d0c228d1c570d327"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac0944e94fb8c662edf2cca5f55b721c7"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:gac0944e94fb8c662edf2cca5f55b721c7"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__face__requirements.html#gac0944e94fb8c662edf2cca5f55b721c7">vcl::isPerFaceColorAvailable</a> (const MeshType &amp;m)</td></tr>
+<tr class="memdesc:gac0944e94fb8c662edf2cca5f55b721c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> component is available (enabled) in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> element of the input mesh m.  <br /></td></tr>
+<tr class="separator:gac0944e94fb8c662edf2cca5f55b721c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf3262073d55561ee24b5cfcc22250ee1"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
 <tr class="memitem:gaf3262073d55561ee24b5cfcc22250ee1"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__face__requirements.html#gaf3262073d55561ee24b5cfcc22250ee1">vcl::enableIfPerFaceColorOptional</a> (MeshType &amp;m)</td></tr>
-<tr class="memdesc:gaf3262073d55561ee24b5cfcc22250ee1"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the input mesh has a FaceContainer, and the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has a <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> Component, this function enables the Component in the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> if the component needs to be enabled (meaning that it is optional). Returns <code>true</code> if, after the call of this function, the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> component will be available in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> of the mesh.  <br /></td></tr>
+<tr class="memdesc:gaf3262073d55561ee24b5cfcc22250ee1"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the input mesh has a FaceContainer, and the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has a <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> Component, this function enables the Component in the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> if the component needs to be enabled (meaning that it is optional). Returns <code>true</code> if, after the call of this function, the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> component will be available in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> of the mesh.  <br /></td></tr>
 <tr class="separator:gaf3262073d55561ee24b5cfcc22250ee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga882e488c25ef1d9a8de741319f5ab35e"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
-<tr class="memitem:ga882e488c25ef1d9a8de741319f5ab35e"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__face__requirements.html#ga882e488c25ef1d9a8de741319f5ab35e">vcl::isPerFaceMarkEnabled</a> (const MeshType &amp;m)</td></tr>
-<tr class="memdesc:ga882e488c25ef1d9a8de741319f5ab35e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the Mark component is available (enabled) in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> element of the input mesh m.  <br /></td></tr>
-<tr class="separator:ga882e488c25ef1d9a8de741319f5ab35e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8a5688d9713cddb144509b29dfd9f8ab"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga8a5688d9713cddb144509b29dfd9f8ab"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__face__requirements.html#ga8a5688d9713cddb144509b29dfd9f8ab">vcl::isPerFaceMarkAvailable</a> (const MeshType &amp;m)</td></tr>
+<tr class="memdesc:ga8a5688d9713cddb144509b29dfd9f8ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the Mark component is available (enabled) in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> element of the input mesh m.  <br /></td></tr>
+<tr class="separator:ga8a5688d9713cddb144509b29dfd9f8ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0efcb1c23b82c5c20f26149672806012"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
 <tr class="memitem:ga0efcb1c23b82c5c20f26149672806012"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__face__requirements.html#ga0efcb1c23b82c5c20f26149672806012">vcl::enableIfPerFaceMarkOptional</a> (MeshType &amp;m)</td></tr>
 <tr class="memdesc:ga0efcb1c23b82c5c20f26149672806012"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the input mesh has a FaceContainer, and the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has a Mark Component, this function enables the Component in the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> if the component needs to be enabled (meaning that it is optional). Returns <code>true</code> if, after the call of this function, the Mark component will be available in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> of the mesh.  <br /></td></tr>
 <tr class="separator:ga0efcb1c23b82c5c20f26149672806012"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab2d03c59d458283eca7e0eb2fbaf7053"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
-<tr class="memitem:gab2d03c59d458283eca7e0eb2fbaf7053"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__face__requirements.html#gab2d03c59d458283eca7e0eb2fbaf7053">vcl::isPerFaceNormalEnabled</a> (const MeshType &amp;m)</td></tr>
-<tr class="memdesc:gab2d03c59d458283eca7e0eb2fbaf7053"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the Normal component is available (enabled) in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> element of the input mesh m.  <br /></td></tr>
-<tr class="separator:gab2d03c59d458283eca7e0eb2fbaf7053"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6ab2973732b455aedeb6f6dfe424346f"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga6ab2973732b455aedeb6f6dfe424346f"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__face__requirements.html#ga6ab2973732b455aedeb6f6dfe424346f">vcl::isPerFaceNormalAvailable</a> (const MeshType &amp;m)</td></tr>
+<tr class="memdesc:ga6ab2973732b455aedeb6f6dfe424346f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the Normal component is available (enabled) in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> element of the input mesh m.  <br /></td></tr>
+<tr class="separator:ga6ab2973732b455aedeb6f6dfe424346f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf07e8fad913b41d5db61c140e24d35c4"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
 <tr class="memitem:gaf07e8fad913b41d5db61c140e24d35c4"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__face__requirements.html#gaf07e8fad913b41d5db61c140e24d35c4">vcl::enableIfPerFaceNormalOptional</a> (MeshType &amp;m)</td></tr>
 <tr class="memdesc:gaf07e8fad913b41d5db61c140e24d35c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the input mesh has a FaceContainer, and the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has a Normal Component, this function enables the Component in the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> if the component needs to be enabled (meaning that it is optional). Returns <code>true</code> if, after the call of this function, the Normal component will be available in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> of the mesh.  <br /></td></tr>
 <tr class="separator:gaf07e8fad913b41d5db61c140e24d35c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga66bf0c5e88fa00f72ef1ed429d1bf9c8"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
-<tr class="memitem:ga66bf0c5e88fa00f72ef1ed429d1bf9c8"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__face__requirements.html#ga66bf0c5e88fa00f72ef1ed429d1bf9c8">vcl::isPerFacePrincipalCurvatureEnabled</a> (const MeshType &amp;m)</td></tr>
-<tr class="memdesc:ga66bf0c5e88fa00f72ef1ed429d1bf9c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the <a class="el" href="classvcl_1_1PrincipalCurvature.html" title="The PrincipalCurvature class stores the principal curvature directions and values at a point on a sur...">PrincipalCurvature</a> component is available (enabled) in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> element of the input mesh m.  <br /></td></tr>
-<tr class="separator:ga66bf0c5e88fa00f72ef1ed429d1bf9c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf6682edccdffa17b232dd83c08718cd5"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:gaf6682edccdffa17b232dd83c08718cd5"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__face__requirements.html#gaf6682edccdffa17b232dd83c08718cd5">vcl::isPerFacePrincipalCurvatureAvailable</a> (const MeshType &amp;m)</td></tr>
+<tr class="memdesc:gaf6682edccdffa17b232dd83c08718cd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the <a class="el" href="classvcl_1_1PrincipalCurvature.html" title="The PrincipalCurvature class stores the principal curvature directions and values at a point on a sur...">PrincipalCurvature</a> component is available (enabled) in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> element of the input mesh m.  <br /></td></tr>
+<tr class="separator:gaf6682edccdffa17b232dd83c08718cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7e4d93cc27448070bbb26df5cf3c200a"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
 <tr class="memitem:ga7e4d93cc27448070bbb26df5cf3c200a"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__face__requirements.html#ga7e4d93cc27448070bbb26df5cf3c200a">vcl::enableIfPerFacePrincipalCurvatureOptional</a> (MeshType &amp;m)</td></tr>
 <tr class="memdesc:ga7e4d93cc27448070bbb26df5cf3c200a"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the input mesh has a FaceContainer, and the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has a <a class="el" href="classvcl_1_1PrincipalCurvature.html" title="The PrincipalCurvature class stores the principal curvature directions and values at a point on a sur...">PrincipalCurvature</a> Component, this function enables the Component in the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> if the component needs to be enabled (meaning that it is optional). Returns <code>true</code> if, after the call of this function, the <a class="el" href="classvcl_1_1PrincipalCurvature.html" title="The PrincipalCurvature class stores the principal curvature directions and values at a point on a sur...">PrincipalCurvature</a> component will be available in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> of the mesh.  <br /></td></tr>
 <tr class="separator:ga7e4d93cc27448070bbb26df5cf3c200a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gacddc69f16018f75f6fdf1ce939f99132"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
-<tr class="memitem:gacddc69f16018f75f6fdf1ce939f99132"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__face__requirements.html#gacddc69f16018f75f6fdf1ce939f99132">vcl::isPerFaceQualityEnabled</a> (const MeshType &amp;m)</td></tr>
-<tr class="memdesc:gacddc69f16018f75f6fdf1ce939f99132"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the Quality component is available (enabled) in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> element of the input mesh m.  <br /></td></tr>
-<tr class="separator:gacddc69f16018f75f6fdf1ce939f99132"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga75a72c0a2cccc6981c1ac702ab4f5a5c"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga75a72c0a2cccc6981c1ac702ab4f5a5c"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__face__requirements.html#ga75a72c0a2cccc6981c1ac702ab4f5a5c">vcl::isPerFaceQualityAvailable</a> (const MeshType &amp;m)</td></tr>
+<tr class="memdesc:ga75a72c0a2cccc6981c1ac702ab4f5a5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the Quality component is available (enabled) in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> element of the input mesh m.  <br /></td></tr>
+<tr class="separator:ga75a72c0a2cccc6981c1ac702ab4f5a5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga074866b13c60aa020dd3285eb206ee7e"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
 <tr class="memitem:ga074866b13c60aa020dd3285eb206ee7e"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__face__requirements.html#ga074866b13c60aa020dd3285eb206ee7e">vcl::enableIfPerFaceQualityOptional</a> (MeshType &amp;m)</td></tr>
 <tr class="memdesc:ga074866b13c60aa020dd3285eb206ee7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the input mesh has a FaceContainer, and the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has a Quality Component, this function enables the Component in the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> if the component needs to be enabled (meaning that it is optional). Returns <code>true</code> if, after the call of this function, the Quality component will be available in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> of the mesh.  <br /></td></tr>
 <tr class="separator:ga074866b13c60aa020dd3285eb206ee7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga24cf22a3269f6c86954cd90f452f6a91"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
-<tr class="memitem:ga24cf22a3269f6c86954cd90f452f6a91"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__face__requirements.html#ga24cf22a3269f6c86954cd90f452f6a91">vcl::isPerFaceWedgeColorsEnabled</a> (const MeshType &amp;m)</td></tr>
-<tr class="memdesc:ga24cf22a3269f6c86954cd90f452f6a91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the WedgeColors component is available (enabled) in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> element of the input mesh m.  <br /></td></tr>
-<tr class="separator:ga24cf22a3269f6c86954cd90f452f6a91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga817a6cd5920e1bb0e8850c183367e112"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga817a6cd5920e1bb0e8850c183367e112"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__face__requirements.html#ga817a6cd5920e1bb0e8850c183367e112">vcl::isPerFaceWedgeColorsAvailable</a> (const MeshType &amp;m)</td></tr>
+<tr class="memdesc:ga817a6cd5920e1bb0e8850c183367e112"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the WedgeColors component is available (enabled) in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> element of the input mesh m.  <br /></td></tr>
+<tr class="separator:ga817a6cd5920e1bb0e8850c183367e112"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf2bc7d8c340f922fda76e1d01588433c"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
 <tr class="memitem:gaf2bc7d8c340f922fda76e1d01588433c"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__face__requirements.html#gaf2bc7d8c340f922fda76e1d01588433c">vcl::enableIfPerFaceWedgeColorsOptional</a> (MeshType &amp;m)</td></tr>
 <tr class="memdesc:gaf2bc7d8c340f922fda76e1d01588433c"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the input mesh has a FaceContainer, and the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has a WedgeColors Component, this function enables the Component in the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> if the component needs to be enabled (meaning that it is optional). Returns <code>true</code> if, after the call of this function, the WedgeColors component will be available in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> of the mesh.  <br /></td></tr>
 <tr class="separator:gaf2bc7d8c340f922fda76e1d01588433c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaea40a37467f4117bc1d84760bbc8e082"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
-<tr class="memitem:gaea40a37467f4117bc1d84760bbc8e082"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__face__requirements.html#gaea40a37467f4117bc1d84760bbc8e082">vcl::isPerFaceWedgeTexCoordsEnabled</a> (const MeshType &amp;m)</td></tr>
-<tr class="memdesc:gaea40a37467f4117bc1d84760bbc8e082"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the WedgeTexCoords component is available (enabled) in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> element of the input mesh m.  <br /></td></tr>
-<tr class="separator:gaea40a37467f4117bc1d84760bbc8e082"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5fbed843fdb42d0018a5f343523b0719"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga5fbed843fdb42d0018a5f343523b0719"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__face__requirements.html#ga5fbed843fdb42d0018a5f343523b0719">vcl::isPerFaceWedgeTexCoordsAvailable</a> (const MeshType &amp;m)</td></tr>
+<tr class="memdesc:ga5fbed843fdb42d0018a5f343523b0719"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the WedgeTexCoords component is available (enabled) in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> element of the input mesh m.  <br /></td></tr>
+<tr class="separator:ga5fbed843fdb42d0018a5f343523b0719"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5cfd1a61b06b32978aa70024f8b8e8f3"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
 <tr class="memitem:ga5cfd1a61b06b32978aa70024f8b8e8f3"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__face__requirements.html#ga5cfd1a61b06b32978aa70024f8b8e8f3">vcl::enableIfPerFaceWedgeTexCoordsOptional</a> (MeshType &amp;m)</td></tr>
 <tr class="memdesc:ga5cfd1a61b06b32978aa70024f8b8e8f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the input mesh has a FaceContainer, and the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has a WedgeTexCoords Component, this function enables the Component in the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> if the component needs to be enabled (meaning that it is optional). Returns <code>true</code> if, after the call of this function, the WedgeTexCoords component will be available in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> of the mesh.  <br /></td></tr>
@@ -208,7 +208,7 @@ requires HasPerFaceAdjacentFaces&lt;MeshType&gt;</td></tr>
 <tr class="memitem:gae6372afb65d4cb206aed162aff2d71c3"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; <br />
 requires HasPerFaceColor&lt;MeshType&gt;</td></tr>
 <tr class="memitem:gae6372afb65d4cb206aed162aff2d71c3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__face__requirements.html#gae6372afb65d4cb206aed162aff2d71c3">vcl::requirePerFaceColor</a> (const MeshType &amp;m)</td></tr>
-<tr class="memdesc:gae6372afb65d4cb206aed162aff2d71c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function asserts that a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> has a FaceContainer, the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> has a <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> Component, and that the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> Component is enabled and available at runtime.  <br /></td></tr>
+<tr class="memdesc:gae6372afb65d4cb206aed162aff2d71c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function asserts that a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> has a FaceContainer, the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> has a <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> Component, and that the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> Component is enabled and available at runtime.  <br /></td></tr>
 <tr class="separator:gae6372afb65d4cb206aed162aff2d71c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac96a0a92c22ced9c629b174dade3dd70"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; <br />
 requires HasPerFaceMark&lt;MeshType&gt;</td></tr>
@@ -332,7 +332,7 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>If the input mesh has a FaceContainer, and the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has a <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> Component, this function enables the Component in the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> if the component needs to be enabled (meaning that it is optional). Returns <code>true</code> if, after the call of this function, the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> component will be available in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> of the mesh. </p>
+<p>If the input mesh has a FaceContainer, and the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has a <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> Component, this function enables the Component in the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> if the component needs to be enabled (meaning that it is optional). Returns <code>true</code> if, after the call of this function, the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> component will be available in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> of the mesh. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">MeshType</td><td>the type of the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> to check, it must satisfy the FaceMeshConcept.</td></tr>
@@ -341,11 +341,11 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>the mesh on which enable the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> component in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>the mesh on which enable the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> component in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a>. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> Component is available in the FaceElement after the call of this funciton. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> Component is available in the FaceElement after the call of this funciton. </dd></dl>
 
 </div>
 </div>
@@ -594,8 +594,8 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
 
 </div>
 </div>
-<a id="gacd96213ccffe685c9188af9d023bbc0d" name="gacd96213ccffe685c9188af9d023bbc0d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gacd96213ccffe685c9188af9d023bbc0d">&#9670;&#160;</a></span>isPerFaceAdjacentEdgesEnabled()</h2>
+<a id="ga33f24a91d99671c5977a6cd3f90c2993" name="ga33f24a91d99671c5977a6cd3f90c2993"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga33f24a91d99671c5977a6cd3f90c2993">&#9670;&#160;</a></span>isPerFaceAdjacentEdgesAvailable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -603,7 +603,7 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
 template&lt;FaceMeshConcept MeshType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool vcl::isPerFaceAdjacentEdgesEnabled </td>
+          <td class="memname">bool vcl::isPerFaceAdjacentEdgesAvailable </td>
           <td>(</td>
           <td class="paramtype">const MeshType &amp;&#160;</td>
           <td class="paramname"><em>m</em></td><td>)</td>
@@ -635,8 +635,8 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
 
 </div>
 </div>
-<a id="ga0486aed98c9b93d69825d29579c8cefa" name="ga0486aed98c9b93d69825d29579c8cefa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0486aed98c9b93d69825d29579c8cefa">&#9670;&#160;</a></span>isPerFaceAdjacentFacesEnabled()</h2>
+<a id="ga3a2e0c28c27a21d47d332154fbce554b" name="ga3a2e0c28c27a21d47d332154fbce554b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3a2e0c28c27a21d47d332154fbce554b">&#9670;&#160;</a></span>isPerFaceAdjacentFacesAvailable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -644,7 +644,7 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
 template&lt;FaceMeshConcept MeshType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool vcl::isPerFaceAdjacentFacesEnabled </td>
+          <td class="memname">bool vcl::isPerFaceAdjacentFacesAvailable </td>
           <td>(</td>
           <td class="paramtype">const MeshType &amp;&#160;</td>
           <td class="paramname"><em>m</em></td><td>)</td>
@@ -676,8 +676,8 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
 
 </div>
 </div>
-<a id="gaf39819c217b9f787d0c228d1c570d327" name="gaf39819c217b9f787d0c228d1c570d327"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf39819c217b9f787d0c228d1c570d327">&#9670;&#160;</a></span>isPerFaceColorEnabled()</h2>
+<a id="gac0944e94fb8c662edf2cca5f55b721c7" name="gac0944e94fb8c662edf2cca5f55b721c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac0944e94fb8c662edf2cca5f55b721c7">&#9670;&#160;</a></span>isPerFaceColorAvailable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -685,7 +685,7 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
 template&lt;FaceMeshConcept MeshType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool vcl::isPerFaceColorEnabled </td>
+          <td class="memname">bool vcl::isPerFaceColorAvailable </td>
           <td>(</td>
           <td class="paramtype">const MeshType &amp;&#160;</td>
           <td class="paramname"><em>m</em></td><td>)</td>
@@ -694,12 +694,12 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Returns true if the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> component is available (enabled) in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> element of the input mesh m. </p>
-<p>This function returns <code>true</code> when the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> component can be used on the element, whether the component is horizontal, vertical or optional.</p>
+<p>Returns true if the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> component is available (enabled) in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> element of the input mesh m. </p>
+<p>This function returns <code>true</code> when the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> component can be used on the element, whether the component is horizontal, vertical or optional.</p>
 <p>These are the following cases:</p><ul>
-<li>if the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> does not have a <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> Component, the function returns <code>false</code>;</li>
-<li>if the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has a non-optional <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> Component, the function returns <code>true</code>;</li>
-<li>if the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has an optional <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> Component, the function returns <code>true</code> if the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> component is enabled, false otherwise (this check is the only one that is made at runtime);</li>
+<li>if the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> does not have a <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> Component, the function returns <code>false</code>;</li>
+<li>if the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has a non-optional <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> Component, the function returns <code>true</code>;</li>
+<li>if the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has an optional <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> Component, the function returns <code>true</code> if the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> component is enabled, false otherwise (this check is the only one that is made at runtime);</li>
 </ul>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -709,16 +709,16 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>the mesh on which check the availability of the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> Component in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>the mesh on which check the availability of the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> Component in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a>. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> Component is available in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> of the given <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> Component is available in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> of the given <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. </dd></dl>
 
 </div>
 </div>
-<a id="ga882e488c25ef1d9a8de741319f5ab35e" name="ga882e488c25ef1d9a8de741319f5ab35e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga882e488c25ef1d9a8de741319f5ab35e">&#9670;&#160;</a></span>isPerFaceMarkEnabled()</h2>
+<a id="ga8a5688d9713cddb144509b29dfd9f8ab" name="ga8a5688d9713cddb144509b29dfd9f8ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8a5688d9713cddb144509b29dfd9f8ab">&#9670;&#160;</a></span>isPerFaceMarkAvailable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -726,7 +726,7 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
 template&lt;FaceMeshConcept MeshType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool vcl::isPerFaceMarkEnabled </td>
+          <td class="memname">bool vcl::isPerFaceMarkAvailable </td>
           <td>(</td>
           <td class="paramtype">const MeshType &amp;&#160;</td>
           <td class="paramname"><em>m</em></td><td>)</td>
@@ -758,8 +758,8 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
 
 </div>
 </div>
-<a id="gab2d03c59d458283eca7e0eb2fbaf7053" name="gab2d03c59d458283eca7e0eb2fbaf7053"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab2d03c59d458283eca7e0eb2fbaf7053">&#9670;&#160;</a></span>isPerFaceNormalEnabled()</h2>
+<a id="ga6ab2973732b455aedeb6f6dfe424346f" name="ga6ab2973732b455aedeb6f6dfe424346f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6ab2973732b455aedeb6f6dfe424346f">&#9670;&#160;</a></span>isPerFaceNormalAvailable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -767,7 +767,7 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
 template&lt;FaceMeshConcept MeshType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool vcl::isPerFaceNormalEnabled </td>
+          <td class="memname">bool vcl::isPerFaceNormalAvailable </td>
           <td>(</td>
           <td class="paramtype">const MeshType &amp;&#160;</td>
           <td class="paramname"><em>m</em></td><td>)</td>
@@ -799,8 +799,8 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
 
 </div>
 </div>
-<a id="ga66bf0c5e88fa00f72ef1ed429d1bf9c8" name="ga66bf0c5e88fa00f72ef1ed429d1bf9c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga66bf0c5e88fa00f72ef1ed429d1bf9c8">&#9670;&#160;</a></span>isPerFacePrincipalCurvatureEnabled()</h2>
+<a id="gaf6682edccdffa17b232dd83c08718cd5" name="gaf6682edccdffa17b232dd83c08718cd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf6682edccdffa17b232dd83c08718cd5">&#9670;&#160;</a></span>isPerFacePrincipalCurvatureAvailable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -808,7 +808,7 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
 template&lt;FaceMeshConcept MeshType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool vcl::isPerFacePrincipalCurvatureEnabled </td>
+          <td class="memname">bool vcl::isPerFacePrincipalCurvatureAvailable </td>
           <td>(</td>
           <td class="paramtype">const MeshType &amp;&#160;</td>
           <td class="paramname"><em>m</em></td><td>)</td>
@@ -840,8 +840,8 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
 
 </div>
 </div>
-<a id="gacddc69f16018f75f6fdf1ce939f99132" name="gacddc69f16018f75f6fdf1ce939f99132"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gacddc69f16018f75f6fdf1ce939f99132">&#9670;&#160;</a></span>isPerFaceQualityEnabled()</h2>
+<a id="ga75a72c0a2cccc6981c1ac702ab4f5a5c" name="ga75a72c0a2cccc6981c1ac702ab4f5a5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga75a72c0a2cccc6981c1ac702ab4f5a5c">&#9670;&#160;</a></span>isPerFaceQualityAvailable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -849,7 +849,7 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
 template&lt;FaceMeshConcept MeshType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool vcl::isPerFaceQualityEnabled </td>
+          <td class="memname">bool vcl::isPerFaceQualityAvailable </td>
           <td>(</td>
           <td class="paramtype">const MeshType &amp;&#160;</td>
           <td class="paramname"><em>m</em></td><td>)</td>
@@ -881,8 +881,8 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
 
 </div>
 </div>
-<a id="ga24cf22a3269f6c86954cd90f452f6a91" name="ga24cf22a3269f6c86954cd90f452f6a91"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga24cf22a3269f6c86954cd90f452f6a91">&#9670;&#160;</a></span>isPerFaceWedgeColorsEnabled()</h2>
+<a id="ga817a6cd5920e1bb0e8850c183367e112" name="ga817a6cd5920e1bb0e8850c183367e112"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga817a6cd5920e1bb0e8850c183367e112">&#9670;&#160;</a></span>isPerFaceWedgeColorsAvailable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -890,7 +890,7 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
 template&lt;FaceMeshConcept MeshType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool vcl::isPerFaceWedgeColorsEnabled </td>
+          <td class="memname">bool vcl::isPerFaceWedgeColorsAvailable </td>
           <td>(</td>
           <td class="paramtype">const MeshType &amp;&#160;</td>
           <td class="paramname"><em>m</em></td><td>)</td>
@@ -922,8 +922,8 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
 
 </div>
 </div>
-<a id="gaea40a37467f4117bc1d84760bbc8e082" name="gaea40a37467f4117bc1d84760bbc8e082"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaea40a37467f4117bc1d84760bbc8e082">&#9670;&#160;</a></span>isPerFaceWedgeTexCoordsEnabled()</h2>
+<a id="ga5fbed843fdb42d0018a5f343523b0719" name="ga5fbed843fdb42d0018a5f343523b0719"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5fbed843fdb42d0018a5f343523b0719">&#9670;&#160;</a></span>isPerFaceWedgeTexCoordsAvailable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -931,7 +931,7 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
 template&lt;FaceMeshConcept MeshType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool vcl::isPerFaceWedgeTexCoordsEnabled </td>
+          <td class="memname">bool vcl::isPerFaceWedgeTexCoordsAvailable </td>
           <td>(</td>
           <td class="paramtype">const MeshType &amp;&#160;</td>
           <td class="paramname"><em>m</em></td><td>)</td>
@@ -1119,13 +1119,13 @@ requires HasPerFaceColor&lt;MeshType&gt;</div>
       </table>
 </div><div class="memdoc">
 
-<p>This function asserts that a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> has a FaceContainer, the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> has a <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> Component, and that the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> Component is enabled and available at runtime. </p>
+<p>This function asserts that a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> has a FaceContainer, the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> has a <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> Component, and that the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> Component is enabled and available at runtime. </p>
 <p>If the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>:</p><ul>
 <li>has not a Container of the given ElementEnumType;</li>
 <li>has the Container but the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has not a Component of the given ComponentEnumType; a build error will be generated.</li>
 </ul>
 <p>If the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>:</p><ul>
-<li>has the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> Container, the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> has the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> Component, but the Component is not enabled, a <a class="el" href="classvcl_1_1MissingComponentException.html">vcl::MissingComponentException</a> will be thrown.</li>
+<li>has the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> Container, the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> has the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> Component, but the Component is not enabled, a <a class="el" href="classvcl_1_1MissingComponentException.html">vcl::MissingComponentException</a> will be thrown.</li>
 </ul>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -1135,13 +1135,13 @@ requires HasPerFaceColor&lt;MeshType&gt;</div>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classvcl_1_1MissingComponentException.html">vcl::MissingComponentException</a></td><td>if the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> Component is not enabled in the FaceContainer of the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>.</td></tr>
+    <tr><td class="paramname"><a class="el" href="classvcl_1_1MissingComponentException.html">vcl::MissingComponentException</a></td><td>if the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> Component is not enabled in the FaceContainer of the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>the mesh on which check the availability of the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> Component in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>the mesh on which check the availability of the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> Component in the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a>. </td></tr>
   </table>
   </dd>
 </dl>

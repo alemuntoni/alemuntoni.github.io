@@ -128,70 +128,70 @@ $(document).ready(function(){initNavTree('concepts_2space_2box_8h_source.html','
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="conceptvcl_1_1BoxConcept.html">   41</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1BoxConcept.html">BoxConcept</a> = <span class="keyword">requires</span>(</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    T o,</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">const</span> T&amp; co,</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">const</span> <span class="keyword">typename</span> T::PointType&amp; p)</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>{</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">typename</span> T::PointType;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    o.DIM;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="comment">// Accessors for the minimum and maximum corners of the box.</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    { co.min() } -&gt; std::same_as&lt;const typename T::PointType&amp;&gt;;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    { o.min() } -&gt; std::same_as&lt;typename T::PointType&amp;&gt;;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    { co.max() } -&gt; std::same_as&lt;const typename T::PointType&amp;&gt;;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    { o.max() } -&gt; std::same_as&lt;typename T::PointType&amp;&gt;;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="comment">// Boolean tests for the nullity and emptiness of the box.</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    { co.isNull() } -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    { co.isEmpty() } -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="comment">// Boolean tests for whether a point lies inside or outside the box.</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    { co.isInside(p) }  -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    { co.isInsideOpenBox(p) }  -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="comment">// Boolean tests for whether two boxes overlap with each other.</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    { co.overlap(co) }  -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    { co.collide(co) }  -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    { co.intersects(co) }  -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="comment">// Accessors for various properties of the box.</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    { co.diagonal() } -&gt; std::same_as&lt;typename T::PointType::ScalarType&gt;;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    { co.squaredDiagonal() } -&gt; std::same_as&lt;typename T::PointType::ScalarType&gt;;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    { co.center() } -&gt; std::same_as&lt;typename T::PointType&gt;;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    { co.size() } -&gt; std::same_as&lt;typename T::PointType&gt;;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    { co.volume() } -&gt; std::same_as&lt;typename T::PointType::ScalarType&gt;;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    { co.dim(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;typename T::PointType::ScalarType&gt;;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    { co.minDim() } -&gt; std::same_as&lt;typename T::PointType::ScalarType&gt;;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    { co.maxDim() } -&gt; std::same_as&lt;typename T::PointType::ScalarType&gt;;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    { co.intersection(co) } -&gt; std::same_as&lt;T&gt;;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="comment">// Mutators for modifying the state of the box.</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    { o.setNull() } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    { o.add(<span class="keyword">typename</span> T::PointType()) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    { o.add(<span class="keyword">typename</span> T::PointType(), double()) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    { o.add(co) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    { o.translate(<span class="keyword">typename</span> T::PointType()) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="comment">// Comparison operators.</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    { co == co } -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    { co != co } -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>};</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="conceptvcl_1_1Box2Concept.html">  101</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1Box2Concept.html">Box2Concept</a> = <a class="code hl_concept" href="conceptvcl_1_1BoxConcept.html">BoxConcept&lt;T&gt;</a> &amp;&amp; T::DIM == 2;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="conceptvcl_1_1Box3Concept.html">  113</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1Box3Concept.html">Box3Concept</a> = <a class="code hl_concept" href="conceptvcl_1_1BoxConcept.html">BoxConcept&lt;T&gt;</a> &amp;&amp; T::DIM == 3;</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="preprocessor">#endif </span><span class="comment">// VCL_CONCEPTS_SPACE_BOX_H</span></div>
-<div class="ttc" id="aconceptvcl_1_1Box2Concept_html"><div class="ttname"><a href="conceptvcl_1_1Box2Concept.html">vcl::Box2Concept</a></div><div class="ttdoc">A concept that requires a type to satisfy the BoxConcept and have a dimension of 2.</div><div class="ttdef"><b>Definition:</b> box.h:101</div></div>
-<div class="ttc" id="aconceptvcl_1_1Box3Concept_html"><div class="ttname"><a href="conceptvcl_1_1Box3Concept.html">vcl::Box3Concept</a></div><div class="ttdoc">A concept that requires a type to satisfy the BoxConcept and have a dimension of 3.</div><div class="ttdef"><b>Definition:</b> box.h:113</div></div>
-<div class="ttc" id="aconceptvcl_1_1BoxConcept_html"><div class="ttname"><a href="conceptvcl_1_1BoxConcept.html">vcl::BoxConcept</a></div><div class="ttdoc">A concept representing a N-Dimensional Box.</div><div class="ttdef"><b>Definition:</b> box.h:41</div></div>
-<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition:</b> bounding_box.cpp:29</div></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="conceptvcl_1_1BoxConcept.html">   42</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1BoxConcept.html">BoxConcept</a> = <span class="keyword">requires</span>(</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    T o,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">const</span> T&amp; co,</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">const</span> <span class="keyword">typename</span> T::PointType&amp; p)</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>{</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">typename</span> T::PointType;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    o.DIM;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="comment">// Accessors for the minimum and maximum corners of the box.</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    { co.min() } -&gt; std::same_as&lt;const typename T::PointType&amp;&gt;;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    { o.min() } -&gt; std::same_as&lt;typename T::PointType&amp;&gt;;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    { co.max() } -&gt; std::same_as&lt;const typename T::PointType&amp;&gt;;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    { o.max() } -&gt; std::same_as&lt;typename T::PointType&amp;&gt;;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="comment">// Boolean tests for the nullity and emptiness of the box.</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    { co.isNull() } -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    { co.isEmpty() } -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="comment">// Boolean tests for whether a point lies inside or outside the box.</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    { co.isInside(p) }  -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    { co.isInsideOpenBox(p) }  -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="comment">// Boolean tests for whether two boxes overlap with each other.</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    { co.overlap(co) }  -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    { co.collide(co) }  -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    { co.intersects(co) }  -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="comment">// Accessors for various properties of the box.</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    { co.diagonal() } -&gt; std::same_as&lt;typename T::PointType::ScalarType&gt;;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    { co.squaredDiagonal() } -&gt; std::same_as&lt;typename T::PointType::ScalarType&gt;;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    { co.center() } -&gt; std::same_as&lt;typename T::PointType&gt;;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    { co.size() } -&gt; std::same_as&lt;typename T::PointType&gt;;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    { co.volume() } -&gt; std::same_as&lt;typename T::PointType::ScalarType&gt;;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    { co.dim(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>()) } -&gt; std::same_as&lt;typename T::PointType::ScalarType&gt;;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    { co.minDim() } -&gt; std::same_as&lt;typename T::PointType::ScalarType&gt;;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    { co.maxDim() } -&gt; std::same_as&lt;typename T::PointType::ScalarType&gt;;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    { co.intersection(co) } -&gt; std::same_as&lt;T&gt;;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="comment">// Mutators for modifying the state of the box.</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    { o.setNull() } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    { o.add(<span class="keyword">typename</span> T::PointType()) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    { o.add(<span class="keyword">typename</span> T::PointType(), double()) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    { o.add(co) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    { o.translate(<span class="keyword">typename</span> T::PointType()) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="comment">// Comparison operators.</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    { co == co } -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    { co != co } -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>};</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="conceptvcl_1_1Box2Concept.html">  103</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1Box2Concept.html">Box2Concept</a> = <a class="code hl_concept" href="conceptvcl_1_1BoxConcept.html">BoxConcept&lt;T&gt;</a> &amp;&amp; T::DIM == 2;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="conceptvcl_1_1Box3Concept.html">  116</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1Box3Concept.html">Box3Concept</a> = <a class="code hl_concept" href="conceptvcl_1_1BoxConcept.html">BoxConcept&lt;T&gt;</a> &amp;&amp; T::DIM == 3;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="preprocessor">#endif </span><span class="comment">// VCL_CONCEPTS_SPACE_BOX_H</span></div>
+<div class="ttc" id="aconceptvcl_1_1Box2Concept_html"><div class="ttname"><a href="conceptvcl_1_1Box2Concept.html">vcl::Box2Concept</a></div><div class="ttdoc">A concept that requires a type to satisfy the BoxConcept and have a dimension of 2.</div><div class="ttdef"><b>Definition:</b> box.h:103</div></div>
+<div class="ttc" id="aconceptvcl_1_1Box3Concept_html"><div class="ttname"><a href="conceptvcl_1_1Box3Concept.html">vcl::Box3Concept</a></div><div class="ttdoc">A concept that requires a type to satisfy the BoxConcept and have a dimension of 3.</div><div class="ttdef"><b>Definition:</b> box.h:116</div></div>
+<div class="ttc" id="aconceptvcl_1_1BoxConcept_html"><div class="ttname"><a href="conceptvcl_1_1BoxConcept.html">vcl::BoxConcept</a></div><div class="ttdoc">A concept representing a N-Dimensional Box.</div><div class="ttdef"><b>Definition:</b> box.h:42</div></div>
+<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition:</b> bounding_box.h:47</div></div>
 <div class="ttc" id="atypes_2base_8h_html_a69aa29b598b851b0640aa225a9e5d61d"><div class="ttname"><a href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> base.h:31</div></div>
 <div class="ttc" id="atypes_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

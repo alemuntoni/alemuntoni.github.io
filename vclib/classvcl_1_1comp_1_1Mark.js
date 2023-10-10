@@ -1,12 +1,10 @@
 var classvcl_1_1comp_1_1Mark =
 [
-    [ "Mark", "classvcl_1_1comp_1_1Mark.html#a55a267ad51617c61755d4795158f34a8", null ],
-    [ "decrementMark", "classvcl_1_1comp_1_1Mark.html#a0e4a1985316667d54f6c01ef477ac5ee", null ],
-    [ "hasSameMark", "classvcl_1_1comp_1_1Mark.html#ad7435d8feab0292881e8fd6f43eb1c32", null ],
-    [ "importFrom", "classvcl_1_1comp_1_1Mark.html#a99195f19912920627454b7251fcf62a3", null ],
-    [ "incrementMark", "classvcl_1_1comp_1_1Mark.html#af26d3bbe511e8780cd2f27b331b43dac", null ],
-    [ "init", "classvcl_1_1comp_1_1Mark.html#aaf31c70f7b2d57459b80caf10bd655b5", null ],
-    [ "isEnabled", "classvcl_1_1comp_1_1Mark.html#a0725a76f5fcd49280e6a435c2bed897d", null ],
-    [ "mark", "classvcl_1_1comp_1_1Mark.html#aac728e0065db416e6ad8e76dc42f627e", null ],
-    [ "resetMark", "classvcl_1_1comp_1_1Mark.html#a7238a2935eac79473945ea9242e83925", null ]
+    [ "Mark", "classvcl_1_1comp_1_1Mark.html#a0ff4c820565e715e9de801f623096ef1", null ],
+    [ "decrementMark", "classvcl_1_1comp_1_1Mark.html#a9c8eedbea7af1917245668ac628d8879", null ],
+    [ "hasSameMark", "classvcl_1_1comp_1_1Mark.html#a9d806fe87d84887d48f8b5de51f64fbc", null ],
+    [ "importFrom", "classvcl_1_1comp_1_1Mark.html#a039d8f7d6d2c6676ddca1e5d7778331e", null ],
+    [ "incrementMark", "classvcl_1_1comp_1_1Mark.html#a408af8915485ac15e4716b7b20f0c6ac", null ],
+    [ "mark", "classvcl_1_1comp_1_1Mark.html#a2eb2568408b3a1227a6d5a498f3584b2", null ],
+    [ "resetMark", "classvcl_1_1comp_1_1Mark.html#ac1124e32db545df61a3c2b9c097b8949", null ]
 ];

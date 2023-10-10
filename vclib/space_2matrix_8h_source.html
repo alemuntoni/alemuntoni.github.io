@@ -145,30 +145,37 @@ $(document).ready(function(){initNavTree('space_2matrix_8h_source.html',''); ini
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="namespacevcl.html#a6891233f7166ae9569a840d151cfe140">   45</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacevcl.html#a6891233f7166ae9569a840d151cfe140">Matrix44f</a> = <a class="code hl_typedef" href="namespacevcl.html#ad82a126b390f21b2e9658c73e7a795ee">Matrix44&lt;float&gt;</a>;</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="namespacevcl.html#a0c9537d456b6db5dc5f2216dfc8bccdc">   46</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacevcl.html#a0c9537d456b6db5dc5f2216dfc8bccdc">Matrix44d</a> = <a class="code hl_typedef" href="namespacevcl.html#ad82a126b390f21b2e9658c73e7a795ee">Matrix44&lt;double&gt;</a>;</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">template</span>&lt;EigenMatrixConcept MatrixType, Po<span class="keywordtype">int</span>Concept Po<span class="keywordtype">int</span>Type&gt;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>PointType <a class="code hl_function" href="namespacevcl.html#a25bd91133ba21843329a21218fa52069">operator*</a>(<span class="keyword">const</span> MatrixType&amp; m, <span class="keyword">const</span> PointType&amp; p)</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">requires</span>(</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        MatrixType::RowsAtCompileTime == PointType::DIM &amp;&amp;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        MatrixType::ColsAtCompileTime == PointType::DIM);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#include &quot;<a class="code" href="matrix_8cpp.html">matrix.cpp</a>&quot;</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#endif </span><span class="comment">// VCL_SPACE_MATRIX_H</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keyword">template</span>&lt;EigenMatrixConcept MatrixType, Po<span class="keywordtype">int</span>Concept Po<span class="keywordtype">int</span>Type&gt;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="namespacevcl.html#a25bd91133ba21843329a21218fa52069">   65</a></span>PointType <a class="code hl_function" href="namespacevcl.html#a25bd91133ba21843329a21218fa52069">operator*</a>(<span class="keyword">const</span> MatrixType&amp; m, <span class="keyword">const</span> PointType&amp; p)</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keyword">requires</span>(</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        MatrixType::RowsAtCompileTime == PointType::DIM &amp;&amp;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        MatrixType::ColsAtCompileTime == PointType::DIM)</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>{</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    PointType res;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i = 0; i &lt; PointType::DIM; i++) {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> j = 0; j &lt; PointType::DIM; j++) {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            res(i) += m(i,j)* p(i);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordflow">return</span> res;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>}</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#endif </span><span class="comment">// VCL_SPACE_MATRIX_H</span></div>
 <div class="ttc" id="aconcepts_2space_2matrix_8h_html"><div class="ttname"><a href="concepts_2space_2matrix_8h.html">matrix.h</a></div></div>
 <div class="ttc" id="aconcepts_2space_2point_8h_html"><div class="ttname"><a href="concepts_2space_2point_8h.html">point.h</a></div></div>
-<div class="ttc" id="amatrix_8cpp_html"><div class="ttname"><a href="matrix_8cpp.html">matrix.cpp</a></div></div>
-<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition:</b> bounding_box.cpp:29</div></div>
+<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition:</b> bounding_box.h:47</div></div>
 <div class="ttc" id="anamespacevcl_html_a0c9537d456b6db5dc5f2216dfc8bccdc"><div class="ttname"><a href="namespacevcl.html#a0c9537d456b6db5dc5f2216dfc8bccdc">vcl::Matrix44d</a></div><div class="ttdeci">Matrix44&lt; double &gt; Matrix44d</div><div class="ttdef"><b>Definition:</b> matrix.h:46</div></div>
 <div class="ttc" id="anamespacevcl_html_a21e274a73f9088730a856902ede6ee37"><div class="ttname"><a href="namespacevcl.html#a21e274a73f9088730a856902ede6ee37">vcl::Matrix33d</a></div><div class="ttdeci">Matrix33&lt; double &gt; Matrix33d</div><div class="ttdef"><b>Definition:</b> matrix.h:39</div></div>
-<div class="ttc" id="anamespacevcl_html_a25bd91133ba21843329a21218fa52069"><div class="ttname"><a href="namespacevcl.html#a25bd91133ba21843329a21218fa52069">vcl::operator*</a></div><div class="ttdeci">PointType operator*(const MatrixType &amp;m, const PointType &amp;p)</div><div class="ttdoc">Multiplies a matrix and a point.</div><div class="ttdef"><b>Definition:</b> matrix.cpp:44</div></div>
+<div class="ttc" id="anamespacevcl_html_a25bd91133ba21843329a21218fa52069"><div class="ttname"><a href="namespacevcl.html#a25bd91133ba21843329a21218fa52069">vcl::operator*</a></div><div class="ttdeci">PointType operator*(const MatrixType &amp;m, const PointType &amp;p)</div><div class="ttdoc">Multiplies a matrix and a point.</div><div class="ttdef"><b>Definition:</b> matrix.h:65</div></div>
 <div class="ttc" id="anamespacevcl_html_a6891233f7166ae9569a840d151cfe140"><div class="ttname"><a href="namespacevcl.html#a6891233f7166ae9569a840d151cfe140">vcl::Matrix44f</a></div><div class="ttdeci">Matrix44&lt; float &gt; Matrix44f</div><div class="ttdef"><b>Definition:</b> matrix.h:45</div></div>
 <div class="ttc" id="anamespacevcl_html_a707bb169c4d4cafd5d84170b495721dc"><div class="ttname"><a href="namespacevcl.html#a707bb169c4d4cafd5d84170b495721dc">vcl::Matrix33</a></div><div class="ttdeci">Eigen::Matrix&lt; Scalar, 3, 3 &gt; Matrix33</div><div class="ttdef"><b>Definition:</b> matrix.h:35</div></div>
 <div class="ttc" id="anamespacevcl_html_aa2e70d03403788ee68a3f150a70d8039"><div class="ttname"><a href="namespacevcl.html#aa2e70d03403788ee68a3f150a70d8039">vcl::Matrix33i</a></div><div class="ttdeci">Matrix33&lt; int &gt; Matrix33i</div><div class="ttdef"><b>Definition:</b> matrix.h:37</div></div>
 <div class="ttc" id="anamespacevcl_html_ac96c7ac5d789e9dbf055e35fa5a24835"><div class="ttname"><a href="namespacevcl.html#ac96c7ac5d789e9dbf055e35fa5a24835">vcl::Matrix33f</a></div><div class="ttdeci">Matrix33&lt; float &gt; Matrix33f</div><div class="ttdef"><b>Definition:</b> matrix.h:38</div></div>
 <div class="ttc" id="anamespacevcl_html_ad82a126b390f21b2e9658c73e7a795ee"><div class="ttname"><a href="namespacevcl.html#ad82a126b390f21b2e9658c73e7a795ee">vcl::Matrix44</a></div><div class="ttdeci">Eigen::Matrix&lt; Scalar, 4, 4 &gt; Matrix44</div><div class="ttdef"><b>Definition:</b> matrix.h:42</div></div>
 <div class="ttc" id="anamespacevcl_html_af09e528e12eb6fb1fc6e596b46da8beb"><div class="ttname"><a href="namespacevcl.html#af09e528e12eb6fb1fc6e596b46da8beb">vcl::Matrix44i</a></div><div class="ttdeci">Matrix44&lt; int &gt; Matrix44i</div><div class="ttdef"><b>Definition:</b> matrix.h:44</div></div>
+<div class="ttc" id="atypes_2base_8h_html_a69aa29b598b851b0640aa225a9e5d61d"><div class="ttname"><a href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> base.h:31</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

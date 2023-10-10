@@ -9,6 +9,6 @@ var space_2color_8h =
     [ "colorFromIntervalRedBlue", "space_2color_8h.html#afa361024b35e8aef9609826b177ac1cb", null ],
     [ "colorFromIntervalRedBlue", "space_2color_8h.html#a6c348d7127fb95f134332b8c275846f7", null ],
     [ "colorLerp", "space_2color_8h.html#a9dcc49648719fc830554b892110ff8f2", null ],
-    [ "colorScattering", "space_2color_8h.html#ab09621efab9b0f2003139f2aac2d339a", null ],
+    [ "colorScattering", "space_2color_8h.html#a7e24134fa80806f677e3d5d72cd9c9e9", null ],
     [ "operator<<", "space_2color_8h.html#a05dd102880d029a4ce6a952207559088", null ]
 ];

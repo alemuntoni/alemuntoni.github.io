@@ -6,5 +6,7 @@ var group__uconcepts =
     [ "vcl::IteratesOverPointer", "conceptvcl_1_1IteratesOverPointer.html", null ],
     [ "vcl::IsPointer", "conceptvcl_1_1IsPointer.html", null ],
     [ "vcl::IsPointerToConst", "conceptvcl_1_1IsPointerToConst.html", null ],
-    [ "vcl::Range", "conceptvcl_1_1Range.html", null ]
+    [ "vcl::Range", "conceptvcl_1_1Range.html", null ],
+    [ "vcl::RangeOf", "conceptvcl_1_1RangeOf.html", null ],
+    [ "vcl::RangeOfConvertibleTo", "conceptvcl_1_1RangeOfConvertibleTo.html", null ]
 ];

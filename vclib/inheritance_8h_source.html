@@ -160,15 +160,15 @@ $(document).ready(function(){initNavTree('inheritance_8h_source.html',''); initR
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment"> * http://coliru.stacked-crooked.com/a/9feadc62e7594eb2</span></div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment"> */</span></div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> derived, <span class="keyword">template</span>&lt;<span class="keyword">typename</span>...&gt; <span class="keyword">class </span>base&gt;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="namespacevcl.html#a05b7c68fb0aa1b6e92e4719859adc941">   63</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacevcl.html#a05b7c68fb0aa1b6e92e4719859adc941">IsDerivedFromTemplateSpecialization</a> = <span class="keyword">typename</span> std::invoke_result&lt;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="namespacevcl.html#aca4b0f0c23a3bd7ad471022123a5a0d8">   63</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacevcl.html#aca4b0f0c23a3bd7ad471022123a5a0d8">IsDerivedFromTemplateSpecialization</a> = std::invoke_result&lt;</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    internal::IsDerivedFromImplementation&lt;base&gt;,</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">typename</span> std::remove_cv&lt;derived&gt;::type*&gt;::type;</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>} <span class="comment">// namespace vcl</span></div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#endif </span><span class="comment">// VCL_TYPES_INHERITANCE_H</span></div>
-<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition:</b> bounding_box.cpp:29</div></div>
-<div class="ttc" id="anamespacevcl_html_a05b7c68fb0aa1b6e92e4719859adc941"><div class="ttname"><a href="namespacevcl.html#a05b7c68fb0aa1b6e92e4719859adc941">vcl::IsDerivedFromTemplateSpecialization</a></div><div class="ttdeci">typename std::invoke_result&lt; internal::IsDerivedFromImplementation&lt; base &gt;, typename std::remove_cv&lt; derived &gt;::type * &gt;::type IsDerivedFromTemplateSpecialization</div><div class="ttdef"><b>Definition:</b> inheritance.h:65</div></div>
+<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition:</b> bounding_box.h:47</div></div>
+<div class="ttc" id="anamespacevcl_html_aca4b0f0c23a3bd7ad471022123a5a0d8"><div class="ttname"><a href="namespacevcl.html#aca4b0f0c23a3bd7ad471022123a5a0d8">vcl::IsDerivedFromTemplateSpecialization</a></div><div class="ttdeci">std::invoke_result&lt; internal::IsDerivedFromImplementation&lt; base &gt;, typename std::remove_cv&lt; derived &gt;::type * &gt;::type IsDerivedFromTemplateSpecialization</div><div class="ttdef"><b>Definition:</b> inheritance.h:65</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

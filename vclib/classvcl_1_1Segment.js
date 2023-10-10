@@ -1,12 +1,12 @@
 var classvcl_1_1Segment =
 [
     [ "PointType", "classvcl_1_1Segment.html#af7c90b5d83194dd331a9b33cdeb314e5", null ],
-    [ "ScalarType", "classvcl_1_1Segment.html#a995cc4be06858268a8396b6c6f191802", null ],
+    [ "ScalarType", "classvcl_1_1Segment.html#a1c5e3e5a96b3c49090e9477d54b8d6ae", null ],
     [ "Segment", "classvcl_1_1Segment.html#a9dc942fc1dacb99622a6ffd18b2d8b0f", null ],
     [ "Segment", "classvcl_1_1Segment.html#aa3849c13a55d52dd7630c34c12bc9052", null ],
     [ "direction", "classvcl_1_1Segment.html#af0e044ffc0c850e373ed02f961270cff", null ],
     [ "flip", "classvcl_1_1Segment.html#a82dc3ab441c8800318518c380c2f0392", null ],
-    [ "length", "classvcl_1_1Segment.html#a2c25cb1916d92717c175d8076bb3ef9c", null ],
+    [ "length", "classvcl_1_1Segment.html#a113a083f26053ba5d411075bf4cc0f85", null ],
     [ "midPoint", "classvcl_1_1Segment.html#a6213a6686f1b3af8ba7ef98457e6ca2e", null ],
     [ "normalizedDirection", "classvcl_1_1Segment.html#acfc2271d0130369cb0d855d5ca74808b", null ],
     [ "operator!=", "classvcl_1_1Segment.html#aee32080515df88c70ffba31242b13532", null ],
@@ -23,6 +23,6 @@ var classvcl_1_1Segment =
     [ "p0", "classvcl_1_1Segment.html#aa8bde7c48f5b376cd3c2793ae6a1e925", null ],
     [ "p1", "classvcl_1_1Segment.html#a92614b7312e60c624ef7e108d4432ce0", null ],
     [ "p1", "classvcl_1_1Segment.html#a9e482cc17ee1f1e0a1aa25cbefdb5c2e", null ],
-    [ "squaredLength", "classvcl_1_1Segment.html#aa851f07a7798d2695314759527e4453a", null ],
+    [ "squaredLength", "classvcl_1_1Segment.html#a52bd9f65f6063f20de310128813afc2b", null ],
     [ "DIM", "classvcl_1_1Segment.html#a4c80fae0394ec95f6abb35b82f6bb93f", null ]
 ];

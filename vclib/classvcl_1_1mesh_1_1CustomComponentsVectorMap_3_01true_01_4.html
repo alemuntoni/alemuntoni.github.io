@@ -139,6 +139,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2ad7d538e6e86d4243319bf9965fbe8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the type associated to the compName custom component is the same of the given template argument CompType.  <br /></td></tr>
 <tr class="separator:a2ad7d538e6e86d4243319bf9965fbe8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2d7a4df1cceeaef6287ee6b0c298828"><td class="memItemLeft" align="right" valign="top">std::type_index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#ab2d7a4df1cceeaef6287ee6b0c298828">componentType</a> (const std::string &amp;compName) const</td></tr>
+<tr class="memdesc:ab2d7a4df1cceeaef6287ee6b0c298828"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the std::type_index of the type of the CustomComponent having the input name.  <br /></td></tr>
 <tr class="separator:ab2d7a4df1cceeaef6287ee6b0c298828"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a273ce59550b125bf31bad25131c246ba"><td class="memTemplParams" colspan="2">template&lt;typename CompType &gt; </td></tr>
 <tr class="memitem:a273ce59550b125bf31bad25131c246ba"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#a273ce59550b125bf31bad25131c246ba">allComponentNamesOfType</a> () const</td></tr>
@@ -161,6 +162,9 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename CompType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap.html">vcl::mesh::CustomComponentsVectorMap</a>&lt; true &gt;::addNewComponent </td>
@@ -180,6 +184,11 @@ template&lt;typename CompType &gt; </div>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Adds a new vector of custom components having the given size, the given name and with the template argumet CompType. </p>
@@ -236,11 +245,22 @@ template&lt;typename CompType &gt; </div>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename CompType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; std::string &gt; <a class="el" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap.html">vcl::mesh::CustomComponentsVectorMap</a>&lt; true &gt;::allComponentNamesOfType</td>
+          <td class="memname">std::vector&lt; std::string &gt; <a class="el" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap.html">vcl::mesh::CustomComponentsVectorMap</a>&lt; true &gt;::allComponentNamesOfType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns a vector of strings of all the custom components having as type the given template argument CompType. </p>
@@ -390,6 +410,9 @@ template&lt;typename CompType &gt; </div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">std::type_index <a class="el" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap.html">vcl::mesh::CustomComponentsVectorMap</a>&lt; true &gt;::componentType </td>
@@ -399,7 +422,27 @@ template&lt;typename CompType &gt; </div>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Returns the std::type_index of the type of the CustomComponent having the input name. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::out_of_range</td><td>if the compName does not exist. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">compName</td><td>the name of the custom component. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the std::type_index of the type of the CustomComponent having the input name. </dd></dl>
 
 </div>
 </div>
@@ -410,6 +453,9 @@ template&lt;typename CompType &gt; </div>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename CompType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">std::vector&lt; std::any &gt; &amp; <a class="el" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap.html">vcl::mesh::CustomComponentsVectorMap</a>&lt; true &gt;::componentVector </td>
@@ -419,6 +465,11 @@ template&lt;typename CompType &gt; </div>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns a reference of std::vector&lt;std::any&gt; of the custom component with the given name and the given template argument CompType. </p>
@@ -447,6 +498,9 @@ template&lt;typename CompType &gt; </div>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename CompType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">const std::vector&lt; std::any &gt; &amp; <a class="el" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap.html">vcl::mesh::CustomComponentsVectorMap</a>&lt; true &gt;::componentVector </td>
@@ -456,6 +510,11 @@ template&lt;typename CompType &gt; </div>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns a const reference of std::vector&lt;std::any&gt; of the custom component with the given name and the given template argument CompType. </p>
@@ -517,6 +576,9 @@ template&lt;typename CompType &gt; </div>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename CompType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool <a class="el" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap.html">vcl::mesh::CustomComponentsVectorMap</a>&lt; true &gt;::isComponentOfType </td>
@@ -526,6 +588,11 @@ template&lt;typename CompType &gt; </div>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns true if the type associated to the compName custom component is the same of the given template argument CompType. </p>
@@ -613,9 +680,8 @@ template&lt;typename CompType &gt; </div>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/runner/work/vclib/vclib/include/vclib/mesh/containers/<a class="el" href="custom__components__vector__map_8h_source.html">custom_components_vector_map.h</a></li>
-<li>/home/runner/work/vclib/vclib/include/vclib/mesh/containers/<a class="el" href="custom__components__vector__map_8cpp.html">custom_components_vector_map.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

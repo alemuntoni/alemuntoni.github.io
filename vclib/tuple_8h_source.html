@@ -130,15 +130,16 @@ $(document).ready(function(){initNavTree('tuple_8h_source.html',''); initResizab
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> U, <span class="keyword">typename</span>... Us&gt;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="namespacevcl.html#a08ddfb40632cb38ec4750610e0e2ebaa">   38</a></span><span class="keyword">constexpr</span> <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> <a class="code hl_function" href="namespacevcl.html#a08ddfb40632cb38ec4750610e0e2ebaa">tupleIndexByType</a>(<span class="keyword">const</span> std::tuple&lt;U, Us...&gt; &amp;) {</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structvcl_1_1IndexInTypes.html">IndexInTypes</a>&lt;T, U, Us...&gt;::value;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#endif </span><span class="comment">// VCL_MISC_TUPLE_H</span></div>
-<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition:</b> bounding_box.cpp:29</div></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> U, <span class="keyword">typename</span>... Us&gt;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="namespacevcl.html#a08ddfb40632cb38ec4750610e0e2ebaa">   38</a></span><span class="keyword">constexpr</span> <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> <a class="code hl_function" href="namespacevcl.html#a08ddfb40632cb38ec4750610e0e2ebaa">tupleIndexByType</a>(<span class="keyword">const</span> std::tuple&lt;U, Us...&gt;&amp;)</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>{</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordflow">return</span> <a class="code hl_struct" href="structvcl_1_1IndexInTypes.html">IndexInTypes</a>&lt;T, U, Us...&gt;::value;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#endif </span><span class="comment">// VCL_MISC_TUPLE_H</span></div>
+<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition:</b> bounding_box.h:47</div></div>
 <div class="ttc" id="anamespacevcl_html_a08ddfb40632cb38ec4750610e0e2ebaa"><div class="ttname"><a href="namespacevcl.html#a08ddfb40632cb38ec4750610e0e2ebaa">vcl::tupleIndexByType</a></div><div class="ttdeci">constexpr uint tupleIndexByType(const std::tuple&lt; U, Us... &gt; &amp;)</div><div class="ttdoc">Returns the index of a type T in a std::tuple&lt;U, Us...&gt; passed as parameter; Returns UINT_NULL if the...</div><div class="ttdef"><b>Definition:</b> tuple.h:38</div></div>
 <div class="ttc" id="astructvcl_1_1IndexInTypes_html"><div class="ttname"><a href="structvcl_1_1IndexInTypes.html">vcl::IndexInTypes</a></div><div class="ttdef"><b>Definition:</b> variadic_templates.h:106</div></div>
 <div class="ttc" id="atypes_2base_8h_html_a69aa29b598b851b0640aa225a9e5d61d"><div class="ttname"><a href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> base.h:31</div></div>

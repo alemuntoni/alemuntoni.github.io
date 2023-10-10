@@ -131,39 +131,102 @@ $(document).ready(function(){initNavTree('timer_8h_source.html',''); initResizab
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classvcl_1_1Timer.html">   41</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1Timer.html">Timer</a></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>{</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <a class="code hl_class" href="classvcl_1_1Timer.html">Timer</a>(<span class="keywordtype">bool</span> _start = <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_class" href="classvcl_1_1Timer.html">Timer</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* caption, <span class="keywordtype">bool</span> _start = <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_class" href="classvcl_1_1Timer.html">Timer</a>(<span class="keyword">const</span> std::string&amp; caption, <span class="keywordtype">bool</span> _start = <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classvcl_1_1Timer.html">   43</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1Timer.html">Timer</a></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>{</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    std::string caption;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">bool</span>        isStopped;</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Timer.html#a51abb44695a4c76e7bd4013be250f95f">start</a>();</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Timer.html#a5a543a8dbcbb39bdb0effc9b6999ecc9">stopAndPrint</a>();</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Timer.html#ad7d32efca98a1a036e8225bceb9c5afc">stop</a>();</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Timer.html#ad388343dfa3b81ae2cb8c8b928ffab85">print</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="classvcl_1_1Timer.html#a29fc711525e8b74d13528885386acbc5">delay</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    std::string caption;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">bool</span>        isStopped;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    std::chrono::high_resolution_clock::time_point begin, end;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>};</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#include &quot;<a class="code" href="timer_8cpp.html">timer.cpp</a>&quot;</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#endif </span><span class="comment">// VCL_MISC_TIMER_H</span></div>
-<div class="ttc" id="aclassvcl_1_1Timer_html"><div class="ttname"><a href="classvcl_1_1Timer.html">vcl::Timer</a></div><div class="ttdoc">The Timer class allows to instantiate simple Timer objects that can be used everywhere.</div><div class="ttdef"><b>Definition:</b> timer.h:42</div></div>
-<div class="ttc" id="aclassvcl_1_1Timer_html_a29fc711525e8b74d13528885386acbc5"><div class="ttname"><a href="classvcl_1_1Timer.html#a29fc711525e8b74d13528885386acbc5">vcl::Timer::delay</a></div><div class="ttdeci">double delay() const</div><div class="ttdoc">Returns the time passed between the call of start() and this member function. Works also if the timer...</div><div class="ttdef"><b>Definition:</b> timer.cpp:117</div></div>
-<div class="ttc" id="aclassvcl_1_1Timer_html_a51abb44695a4c76e7bd4013be250f95f"><div class="ttname"><a href="classvcl_1_1Timer.html#a51abb44695a4c76e7bd4013be250f95f">vcl::Timer::start</a></div><div class="ttdeci">void start()</div><div class="ttdoc">Starts the timer.</div><div class="ttdef"><b>Definition:</b> timer.cpp:66</div></div>
-<div class="ttc" id="aclassvcl_1_1Timer_html_a5a543a8dbcbb39bdb0effc9b6999ecc9"><div class="ttname"><a href="classvcl_1_1Timer.html#a5a543a8dbcbb39bdb0effc9b6999ecc9">vcl::Timer::stopAndPrint</a></div><div class="ttdeci">void stopAndPrint()</div><div class="ttdoc">Stops the timer and prints the time passed between the call of start() and this member function....</div><div class="ttdef"><b>Definition:</b> timer.cpp:75</div></div>
-<div class="ttc" id="aclassvcl_1_1Timer_html_ad388343dfa3b81ae2cb8c8b928ffab85"><div class="ttname"><a href="classvcl_1_1Timer.html#ad388343dfa3b81ae2cb8c8b928ffab85">vcl::Timer::print</a></div><div class="ttdeci">void print() const</div><div class="ttdoc">Prints the time passed between the call of start() and this member function. Works also if the timer ...</div><div class="ttdef"><b>Definition:</b> timer.cpp:94</div></div>
-<div class="ttc" id="aclassvcl_1_1Timer_html_ad7d32efca98a1a036e8225bceb9c5afc"><div class="ttname"><a href="classvcl_1_1Timer.html#ad7d32efca98a1a036e8225bceb9c5afc">vcl::Timer::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdoc">Stops the timer.</div><div class="ttdef"><b>Definition:</b> timer.cpp:84</div></div>
-<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition:</b> bounding_box.cpp:29</div></div>
-<div class="ttc" id="atimer_8cpp_html"><div class="ttname"><a href="timer_8cpp.html">timer.cpp</a></div></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    std::chrono::high_resolution_clock::time_point begin, end;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classvcl_1_1Timer.html#a7b89d54e65659f71625fc64acb2f8568">   58</a></span>    <a class="code hl_function" href="classvcl_1_1Timer.html#a7b89d54e65659f71625fc64acb2f8568">Timer</a>(<span class="keywordtype">bool</span> _start = <span class="keyword">true</span>) : caption(<span class="stringliteral">&quot;Timer&quot;</span>), isStopped(false)</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordflow">if</span> (_start)</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <a class="code hl_function" href="classvcl_1_1Timer.html#a51abb44695a4c76e7bd4013be250f95f">start</a>();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classvcl_1_1Timer.html#a66c2ab1b16836c04df87083a16c21efc">   72</a></span>    <a class="code hl_function" href="classvcl_1_1Timer.html#a66c2ab1b16836c04df87083a16c21efc">Timer</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* caption, <span class="keywordtype">bool</span> _start = <span class="keyword">true</span>)</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">if</span> (_start)</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <a class="code hl_function" href="classvcl_1_1Timer.html#a51abb44695a4c76e7bd4013be250f95f">start</a>();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    }</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="classvcl_1_1Timer.html#af230e559b485007ebfd0b630b9083e2e">   86</a></span>    <a class="code hl_function" href="classvcl_1_1Timer.html#af230e559b485007ebfd0b630b9083e2e">Timer</a>(<span class="keyword">const</span> std::string&amp; caption, <span class="keywordtype">bool</span> _start = <span class="keyword">true</span>)</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keywordflow">if</span> (_start)</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            <a class="code hl_function" href="classvcl_1_1Timer.html#a51abb44695a4c76e7bd4013be250f95f">start</a>();</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    }</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="classvcl_1_1Timer.html#a51abb44695a4c76e7bd4013be250f95f">   95</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Timer.html#a51abb44695a4c76e7bd4013be250f95f">start</a>() { begin = std::chrono::high_resolution_clock::now(); }</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="classvcl_1_1Timer.html#a5a543a8dbcbb39bdb0effc9b6999ecc9">  101</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Timer.html#a5a543a8dbcbb39bdb0effc9b6999ecc9">stopAndPrint</a>()</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <a class="code hl_function" href="classvcl_1_1Timer.html#ad7d32efca98a1a036e8225bceb9c5afc">stop</a>();</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <a class="code hl_function" href="classvcl_1_1Timer.html#ad388343dfa3b81ae2cb8c8b928ffab85">print</a>();</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    }</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="classvcl_1_1Timer.html#ad7d32efca98a1a036e8225bceb9c5afc">  110</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Timer.html#ad7d32efca98a1a036e8225bceb9c5afc">stop</a>()</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        end       = std::chrono::high_resolution_clock::now();</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        isStopped = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    }</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="classvcl_1_1Timer.html#ad388343dfa3b81ae2cb8c8b928ffab85">  121</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Timer.html#ad388343dfa3b81ae2cb8c8b928ffab85">print</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <span class="keywordtype">double</span> secs = <a class="code hl_function" href="classvcl_1_1Timer.html#a29fc711525e8b74d13528885386acbc5">delay</a>();</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <span class="keywordtype">int</span>    mins = (int) secs / 60;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <span class="keywordflow">if</span> (mins == 0)</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;[&quot;</span> &lt;&lt; secs &lt;&lt; <span class="stringliteral">&quot; secs]\t&quot;</span> &lt;&lt; caption &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            secs      = secs - mins * 60;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            <span class="keywordtype">int</span> hours = mins / 60;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            <span class="keywordflow">if</span> (hours == 0)</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;[&quot;</span> &lt;&lt; mins &lt;&lt; <span class="stringliteral">&quot; mins; &quot;</span> &lt;&lt; secs &lt;&lt; <span class="stringliteral">&quot; secs]\t&quot;</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                          &lt;&lt; caption &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                mins = mins - hours * 60;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;[&quot;</span> &lt;&lt; hours &lt;&lt; <span class="stringliteral">&quot; hours; &quot;</span> &lt;&lt; mins &lt;&lt; <span class="stringliteral">&quot; mins; &quot;</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                          &lt;&lt; secs &lt;&lt; <span class="stringliteral">&quot; secs]\t&quot;</span> &lt;&lt; caption &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            }</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        }</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    }</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="classvcl_1_1Timer.html#a29fc711525e8b74d13528885386acbc5">  146</a></span>    <span class="keywordtype">double</span> <a class="code hl_function" href="classvcl_1_1Timer.html#a29fc711525e8b74d13528885386acbc5">delay</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        <span class="keywordtype">double</span> secs;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        <span class="keywordflow">if</span> (isStopped) {</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>            secs =</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                (double) (std::chrono::duration_cast&lt;std::chrono::microseconds&gt;(</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                              end - begin)</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                              .count()) /</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                1000000;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        }</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>            std::chrono::high_resolution_clock::time_point s =</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                std::chrono::high_resolution_clock::now();</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            secs =</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                (double) (std::chrono::duration_cast&lt;std::chrono::microseconds&gt;(</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                              s - begin)</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                              .count()) /</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                1000000;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        }</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <span class="keywordflow">return</span> secs;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    }</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>};</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="preprocessor">#endif </span><span class="comment">// VCL_MISC_TIMER_H</span></div>
+<div class="ttc" id="aclassvcl_1_1Timer_html"><div class="ttname"><a href="classvcl_1_1Timer.html">vcl::Timer</a></div><div class="ttdoc">The Timer class allows to instantiate simple Timer objects that can be used everywhere.</div><div class="ttdef"><b>Definition:</b> timer.h:44</div></div>
+<div class="ttc" id="aclassvcl_1_1Timer_html_a29fc711525e8b74d13528885386acbc5"><div class="ttname"><a href="classvcl_1_1Timer.html#a29fc711525e8b74d13528885386acbc5">vcl::Timer::delay</a></div><div class="ttdeci">double delay() const</div><div class="ttdoc">Returns the time passed between the call of start() and this member function. Works also if the timer...</div><div class="ttdef"><b>Definition:</b> timer.h:146</div></div>
+<div class="ttc" id="aclassvcl_1_1Timer_html_a51abb44695a4c76e7bd4013be250f95f"><div class="ttname"><a href="classvcl_1_1Timer.html#a51abb44695a4c76e7bd4013be250f95f">vcl::Timer::start</a></div><div class="ttdeci">void start()</div><div class="ttdoc">Starts the timer.</div><div class="ttdef"><b>Definition:</b> timer.h:95</div></div>
+<div class="ttc" id="aclassvcl_1_1Timer_html_a5a543a8dbcbb39bdb0effc9b6999ecc9"><div class="ttname"><a href="classvcl_1_1Timer.html#a5a543a8dbcbb39bdb0effc9b6999ecc9">vcl::Timer::stopAndPrint</a></div><div class="ttdeci">void stopAndPrint()</div><div class="ttdoc">Stops the timer and prints the time passed between the call of start() and this member function....</div><div class="ttdef"><b>Definition:</b> timer.h:101</div></div>
+<div class="ttc" id="aclassvcl_1_1Timer_html_a66c2ab1b16836c04df87083a16c21efc"><div class="ttname"><a href="classvcl_1_1Timer.html#a66c2ab1b16836c04df87083a16c21efc">vcl::Timer::Timer</a></div><div class="ttdeci">Timer(const char *caption, bool _start=true)</div><div class="ttdoc">Creates a timer with the given caption. If the given boolean is true, the timer starts.</div><div class="ttdef"><b>Definition:</b> timer.h:72</div></div>
+<div class="ttc" id="aclassvcl_1_1Timer_html_a7b89d54e65659f71625fc64acb2f8568"><div class="ttname"><a href="classvcl_1_1Timer.html#a7b89d54e65659f71625fc64acb2f8568">vcl::Timer::Timer</a></div><div class="ttdeci">Timer(bool _start=true)</div><div class="ttdoc">Creates a timer with the caption &quot;Timer&quot;. If the given boolean is true, the timer starts.</div><div class="ttdef"><b>Definition:</b> timer.h:58</div></div>
+<div class="ttc" id="aclassvcl_1_1Timer_html_ad388343dfa3b81ae2cb8c8b928ffab85"><div class="ttname"><a href="classvcl_1_1Timer.html#ad388343dfa3b81ae2cb8c8b928ffab85">vcl::Timer::print</a></div><div class="ttdeci">void print() const</div><div class="ttdoc">Prints the time passed between the call of start() and this member function. Works also if the timer ...</div><div class="ttdef"><b>Definition:</b> timer.h:121</div></div>
+<div class="ttc" id="aclassvcl_1_1Timer_html_ad7d32efca98a1a036e8225bceb9c5afc"><div class="ttname"><a href="classvcl_1_1Timer.html#ad7d32efca98a1a036e8225bceb9c5afc">vcl::Timer::stop</a></div><div class="ttdeci">void stop()</div><div class="ttdoc">Stops the timer.</div><div class="ttdef"><b>Definition:</b> timer.h:110</div></div>
+<div class="ttc" id="aclassvcl_1_1Timer_html_af230e559b485007ebfd0b630b9083e2e"><div class="ttname"><a href="classvcl_1_1Timer.html#af230e559b485007ebfd0b630b9083e2e">vcl::Timer::Timer</a></div><div class="ttdeci">Timer(const std::string &amp;caption, bool _start=true)</div><div class="ttdoc">Creates a timer with the given caption. If the given boolean is true, the timer starts.</div><div class="ttdef"><b>Definition:</b> timer.h:86</div></div>
+<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition:</b> bounding_box.h:47</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

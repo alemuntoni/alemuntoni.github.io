@@ -1,10 +1,10 @@
 var structvcl_1_1io_1_1obj_1_1Material =
 [
-    [ "Material", "structvcl_1_1io_1_1obj_1_1Material.html#a38dbf78172828e88c946ec023cf207f6", null ],
+    [ "Material", "structvcl_1_1io_1_1obj_1_1Material.html#a8c97a147104af35d7ab5bc1a53b6c3d1", null ],
     [ "Material", "structvcl_1_1io_1_1obj_1_1Material.html#a730fb039abc188d92f503c500ed12bf9", null ],
     [ "Material", "structvcl_1_1io_1_1obj_1_1Material.html#a9001f0f2dc862369c99bd73b583fd5fb", null ],
     [ "Material", "structvcl_1_1io_1_1obj_1_1Material.html#a264652903005764469c9a2a3877d7f72", null ],
-    [ "color", "structvcl_1_1io_1_1obj_1_1Material.html#af7d539d169975cd6252cc0a166804d47", null ],
+    [ "color", "structvcl_1_1io_1_1obj_1_1Material.html#a383fd888b42cd8bd74f292c72e991ba4", null ],
     [ "isEmpty", "structvcl_1_1io_1_1obj_1_1Material.html#a9617419d8f4c1c1af10583488a1ff73c", null ],
     [ "operator!=", "structvcl_1_1io_1_1obj_1_1Material.html#a391e64db7fab23cf10a8613cc9ec7ef1", null ],
     [ "operator<", "structvcl_1_1io_1_1obj_1_1Material.html#aabb01abc9f7d81c83f5e7f56203be49c", null ],

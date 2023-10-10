@@ -5,6 +5,7 @@ var searchData=
   ['mesh_20concepts_2',['Mesh Concepts',['../group__mesh__concepts.html',1,'']]],
   ['mesh_20creation_20algorithms_3',['Mesh Creation Algorithms',['../group__create.html',1,'']]],
   ['mesh_20requirements_4',['Mesh Requirements',['../group__mesh__requirements.html',1,'']]],
-  ['meshes_5',['Meshes',['../group__meshes.html',1,'']]],
-  ['miscellaneous_6',['Miscellaneous',['../group__miscellaneous.html',1,'']]]
+  ['mesh_20update_20algorithms_5',['Mesh Update Algorithms',['../group__update.html',1,'']]],
+  ['meshes_6',['Meshes',['../group__meshes.html',1,'']]],
+  ['miscellaneous_7',['Miscellaneous',['../group__miscellaneous.html',1,'']]]
 ];

@@ -244,7 +244,7 @@ Concepts</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">concept &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conceptvcl_1_1comp_1_1HasInitMemberFunction.html">HasInitMemberFunction</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">concept &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conceptvcl_1_1comp_1_1HasIsEnabledMemberFunction.html">HasIsEnabledMemberFunction</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">concept &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conceptvcl_1_1comp_1_1HasIsAvailableMemberFunction.html">HasIsAvailableMemberFunction</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">concept &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conceptvcl_1_1comp_1_1IsTiedToVertexNumber.html">IsTiedToVertexNumber</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -338,9 +338,9 @@ Concepts</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a36ab10d1baf1cd193be4333cb5044ed6"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> COMP_TYPE, typename... Components&gt; </td></tr>
-<tr class="memitem:a36ab10d1baf1cd193be4333cb5044ed6"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevcl_1_1comp.html#a36ab10d1baf1cd193be4333cb5044ed6">ComponentOfType</a> = typename <a class="el" href="structvcl_1_1FirstType.html">FirstType</a>&lt; typename internal::ComponentOfTypePred&lt; COMP_TYPE, Components... &gt;::type &gt;::type</td></tr>
-<tr class="separator:a36ab10d1baf1cd193be4333cb5044ed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9edfb9635a25f0d8e2e6ea2d10d0745c"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> COMP_ID, typename... Components&gt; </td></tr>
+<tr class="memitem:a9edfb9635a25f0d8e2e6ea2d10d0745c"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevcl_1_1comp.html#a9edfb9635a25f0d8e2e6ea2d10d0745c">ComponentOfType</a> = typename <a class="el" href="structvcl_1_1FirstType.html">FirstType</a>&lt; typename internal::ComponentOfTypePred&lt; COMP_ID, Components... &gt;::type &gt;::type</td></tr>
+<tr class="separator:a9edfb9635a25f0d8e2e6ea2d10d0745c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaba5675d4f893151fd9cfd4ef6cf5b7ff"><td class="memTemplParams" colspan="2">template&lt;typename S , typename ElementType  = void, bool OPT = false&gt; </td></tr>
 <tr class="memitem:gaba5675d4f893151fd9cfd4ef6cf5b7ff"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__components.html#gaba5675d4f893151fd9cfd4ef6cf5b7ff">BoundingBox3</a> = <a class="el" href="classvcl_1_1comp_1_1BoundingBox.html">BoundingBox</a>&lt; <a class="el" href="group__space.html#ga13f2718b0763def563b8bd9f65982833">Point3</a>&lt; S &gt;, ElementType, OPT &gt;</td></tr>
 <tr class="memdesc:gaba5675d4f893151fd9cfd4ef6cf5b7ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">The BoundingBox3 component class is an alias of the <a class="el" href="classvcl_1_1comp_1_1BoundingBox.html" title="The BoundingBox component class represents an axis aligned bounding box. This class is usually used a...">BoundingBox</a> component that uses 3 dimensional Points.  <br /></td></tr>
@@ -404,67 +404,67 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aff5bc5401223f4fd2881a1a91c180fce"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevcl_1_1comp.html#aff5bc5401223f4fd2881a1a91c180fce">isAdjacentEdgesEnabledOn</a> (const ElementConcept auto &amp;element)</td></tr>
-<tr class="memdesc:aff5bc5401223f4fd2881a1a91c180fce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html" title="The AdjacentEdges class is a container of Edge pointers. It could be used by any Element to save adja...">AdjacentEdges</a> available.  <br /></td></tr>
-<tr class="separator:aff5bc5401223f4fd2881a1a91c180fce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afce569020eba6197ae24a74705f9c28c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevcl_1_1comp.html#afce569020eba6197ae24a74705f9c28c">isAdjacentFacesEnabledOn</a> (const ElementConcept auto &amp;element)</td></tr>
-<tr class="memdesc:afce569020eba6197ae24a74705f9c28c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has <a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html" title="The AdjacentFaces class is a container of Face pointers. It could be used by any Element to save adja...">AdjacentFaces</a> available.  <br /></td></tr>
-<tr class="separator:afce569020eba6197ae24a74705f9c28c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a677a0bcf8f15a8a544b9c39e76d5d6e3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevcl_1_1comp.html#a677a0bcf8f15a8a544b9c39e76d5d6e3">isAdjacentVerticesEnabledOn</a> (const ElementConcept auto &amp;element)</td></tr>
-<tr class="memdesc:a677a0bcf8f15a8a544b9c39e76d5d6e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has <a class="el" href="classvcl_1_1comp_1_1AdjacentVertices.html" title="The AdjacentVertices class is a container of Vertex pointers. It is a component that makes sense to u...">AdjacentVertices</a> component available.  <br /></td></tr>
-<tr class="separator:a677a0bcf8f15a8a544b9c39e76d5d6e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab556a3464e63ae09976f7b098f7497bd"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> COMPONENT_TYPE, ElementOrMeshConcept T&gt; </td></tr>
-<tr class="memitem:ab556a3464e63ae09976f7b098f7497bd"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevcl_1_1comp.html#ab556a3464e63ae09976f7b098f7497bd">isComponentEnabledOn</a> (const T &amp;obj)</td></tr>
-<tr class="memdesc:ab556a3464e63ae09976f7b098f7497bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> or <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> has the component having COMPONENT_TYPE ID available.  <br /></td></tr>
-<tr class="separator:ab556a3464e63ae09976f7b098f7497bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c35e658b847910987f5369711190be6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevcl_1_1comp.html#a1c35e658b847910987f5369711190be6">isBoundingBoxEnabledOn</a> (const ElementOrMeshConcept auto &amp;element)</td></tr>
-<tr class="memdesc:a1c35e658b847910987f5369711190be6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given Element/Mesh has <a class="el" href="classvcl_1_1comp_1_1BoundingBox.html" title="The BoundingBox component class represents an axis aligned bounding box. This class is usually used a...">BoundingBox</a> component available.  <br /></td></tr>
-<tr class="separator:a1c35e658b847910987f5369711190be6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff0a609f18f7d90fea5aa22acdc66087"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevcl_1_1comp.html#aff0a609f18f7d90fea5aa22acdc66087">isColorEnabledOn</a> (const ElementOrMeshConcept auto &amp;element)</td></tr>
-<tr class="memdesc:aff0a609f18f7d90fea5aa22acdc66087"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given Element/Mesh has <a class="el" href="classvcl_1_1comp_1_1Color.html" title="The Color class represents a RGBA color that will be part of an Element (e.g. Vertex,...">Color</a> component available.  <br /></td></tr>
-<tr class="separator:aff0a609f18f7d90fea5aa22acdc66087"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3ad3b3afb381fe5fca273017aca4c60"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevcl_1_1comp.html#aa3ad3b3afb381fe5fca273017aca4c60">isCoordinateEnabledOn</a> (const ElementConcept auto &amp;element)</td></tr>
-<tr class="memdesc:aa3ad3b3afb381fe5fca273017aca4c60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has <a class="el" href="classvcl_1_1comp_1_1Coordinate.html" title="The Coordinate class represents a N-Dimensional point that will be part of an Element (e....">Coordinate</a> component available.  <br /></td></tr>
-<tr class="separator:aa3ad3b3afb381fe5fca273017aca4c60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe41be80568804676d093138c7d7a57c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevcl_1_1comp.html#afe41be80568804676d093138c7d7a57c">isMarkEnabledOn</a> (const ElementOrMeshConcept auto &amp;element)</td></tr>
-<tr class="memdesc:afe41be80568804676d093138c7d7a57c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given Element/Mesh has the <a class="el" href="classvcl_1_1comp_1_1Mark.html" title="The Mark class is an utility class useful to un-mark components in constant time.">Mark</a> component available.  <br /></td></tr>
-<tr class="separator:afe41be80568804676d093138c7d7a57c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a0852fbd9736c012e59a9479083bfa5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevcl_1_1comp.html#a7a0852fbd9736c012e59a9479083bfa5">isNameEnabledOn</a> (const ElementOrMeshConcept auto &amp;element)</td></tr>
-<tr class="memdesc:a7a0852fbd9736c012e59a9479083bfa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given Element/Mesh has <a class="el" href="classvcl_1_1comp_1_1Name.html" title="The Name component class represents a simple name stored as string. This class is usually used as a c...">Name</a> component available.  <br /></td></tr>
-<tr class="separator:a7a0852fbd9736c012e59a9479083bfa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64ef438fc47d7eaed85a8124b3d1e2ea"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevcl_1_1comp.html#a64ef438fc47d7eaed85a8124b3d1e2ea">isNormalEnabledOn</a> (const ElementConcept auto &amp;element)</td></tr>
-<tr class="memdesc:a64ef438fc47d7eaed85a8124b3d1e2ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has <a class="el" href="classvcl_1_1comp_1_1Normal.html" title="The Normal class represents a N-Dimensional normal vector that will be part of an Element (e....">Normal</a> component available.  <br /></td></tr>
-<tr class="separator:a64ef438fc47d7eaed85a8124b3d1e2ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58928e7c11581668c7a2f02186cba320"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevcl_1_1comp.html#a58928e7c11581668c7a2f02186cba320">isPrincipalCurvatureEnabledOn</a> (const ElementConcept auto &amp;element)</td></tr>
-<tr class="memdesc:a58928e7c11581668c7a2f02186cba320"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has <a class="el" href="classvcl_1_1comp_1_1PrincipalCurvature.html" title="The PrincipalCurvature class represents a component that stores the principal curvature directions an...">PrincipalCurvature</a> component available.  <br /></td></tr>
-<tr class="separator:a58928e7c11581668c7a2f02186cba320"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7703833f582e9a032946ce1ceec3fe38"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevcl_1_1comp.html#a7703833f582e9a032946ce1ceec3fe38">isQualityEnabledOn</a> (const ElementOrMeshConcept auto &amp;element)</td></tr>
-<tr class="memdesc:a7703833f582e9a032946ce1ceec3fe38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has <a class="el" href="classvcl_1_1comp_1_1Quality.html" title="The Quality class represents a component that stores the quality of a mesh element,...">Quality</a> component available.  <br /></td></tr>
-<tr class="separator:a7703833f582e9a032946ce1ceec3fe38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af647682835fba437f3f08e6530209d0a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevcl_1_1comp.html#af647682835fba437f3f08e6530209d0a">isTexCoordEnabledOn</a> (const ElementConcept auto &amp;element)</td></tr>
-<tr class="memdesc:af647682835fba437f3f08e6530209d0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has <a class="el" href="classvcl_1_1comp_1_1TexCoord.html" title="The TexCoord class represents a component that stores a texture coordinate.">TexCoord</a> component available.  <br /></td></tr>
-<tr class="separator:af647682835fba437f3f08e6530209d0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a389855b39aea0a62acd199cded84dfa1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevcl_1_1comp.html#a389855b39aea0a62acd199cded84dfa1">isTransformMatrixEnabledOn</a> (const ElementOrMeshConcept auto &amp;element)</td></tr>
-<tr class="memdesc:a389855b39aea0a62acd199cded84dfa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given Element/Mesh has <a class="el" href="classvcl_1_1comp_1_1TransformMatrix.html" title="The TransformMatrix class represents a component that stores a 4x4 matrix that can be used for a tran...">TransformMatrix</a> component available.  <br /></td></tr>
-<tr class="separator:a389855b39aea0a62acd199cded84dfa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0309afc031bb4e31f24ca532fbf1e63"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevcl_1_1comp.html#aa0309afc031bb4e31f24ca532fbf1e63">isWedgeColorsEnabledOn</a> (const ElementConcept auto &amp;element)</td></tr>
-<tr class="memdesc:aa0309afc031bb4e31f24ca532fbf1e63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has <a class="el" href="classvcl_1_1comp_1_1WedgeColors.html" title="The WedgeColors class is a container of colors associated to the wedges of a Face element.">WedgeColors</a> available.  <br /></td></tr>
-<tr class="separator:aa0309afc031bb4e31f24ca532fbf1e63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7e8f6d227f9a97981f6ced79bd22c14"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevcl_1_1comp.html#ac7e8f6d227f9a97981f6ced79bd22c14">isWedgeTexCoordsEnabledOn</a> (const ElementConcept auto &amp;element)</td></tr>
-<tr class="memdesc:ac7e8f6d227f9a97981f6ced79bd22c14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has <a class="el" href="classvcl_1_1comp_1_1WedgeTexCoords.html" title="The WedgeTexCoords class is a container of texture coordinates associated to the wedges of a Face ele...">WedgeTexCoords</a> available.  <br /></td></tr>
-<tr class="separator:ac7e8f6d227f9a97981f6ced79bd22c14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab832b4cd81d9df17e261c029ef4875f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevcl_1_1comp.html#aab832b4cd81d9df17e261c029ef4875f">isAdjacentEdgesAvailableOn</a> (const ElementConcept auto &amp;element)</td></tr>
+<tr class="memdesc:aab832b4cd81d9df17e261c029ef4875f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html" title="The AdjacentEdges class is a container of Edge pointers. It could be used by any Element to save adja...">AdjacentEdges</a> available.  <br /></td></tr>
+<tr class="separator:aab832b4cd81d9df17e261c029ef4875f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee5a4aef15625749ca655836e2a1df43"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevcl_1_1comp.html#aee5a4aef15625749ca655836e2a1df43">isAdjacentFacesAvailableOn</a> (const ElementConcept auto &amp;element)</td></tr>
+<tr class="memdesc:aee5a4aef15625749ca655836e2a1df43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has <a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html" title="The AdjacentFaces class is a container of Face pointers. It could be used by any Element to save adja...">AdjacentFaces</a> available.  <br /></td></tr>
+<tr class="separator:aee5a4aef15625749ca655836e2a1df43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1a9a6804d1c2b0ec8a974021c04be99"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevcl_1_1comp.html#ab1a9a6804d1c2b0ec8a974021c04be99">isAdjacentVerticesAvailableOn</a> (const ElementConcept auto &amp;element)</td></tr>
+<tr class="memdesc:ab1a9a6804d1c2b0ec8a974021c04be99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has <a class="el" href="classvcl_1_1comp_1_1AdjacentVertices.html" title="The AdjacentVertices class is a container of Vertex pointers. It is a component that makes sense to u...">AdjacentVertices</a> component available.  <br /></td></tr>
+<tr class="separator:ab1a9a6804d1c2b0ec8a974021c04be99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9e1254c8626c6280e79ac12a3333b14"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> COMPONENT_ID, ElementOrMeshConcept T&gt; </td></tr>
+<tr class="memitem:ab9e1254c8626c6280e79ac12a3333b14"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacevcl_1_1comp.html#ab9e1254c8626c6280e79ac12a3333b14">isComponentAvailableOn</a> (const T &amp;obj)</td></tr>
+<tr class="memdesc:ab9e1254c8626c6280e79ac12a3333b14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> or <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> has the component having COMPONENT_ID available.  <br /></td></tr>
+<tr class="separator:ab9e1254c8626c6280e79ac12a3333b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fc33e336a91eb48b23f8ac50b3985e2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevcl_1_1comp.html#a2fc33e336a91eb48b23f8ac50b3985e2">isBoundingBoxAvailableOn</a> (const ElementOrMeshConcept auto &amp;element)</td></tr>
+<tr class="memdesc:a2fc33e336a91eb48b23f8ac50b3985e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given Element/Mesh has <a class="el" href="classvcl_1_1comp_1_1BoundingBox.html" title="The BoundingBox component class represents an axis aligned bounding box. This class is usually used a...">BoundingBox</a> component available.  <br /></td></tr>
+<tr class="separator:a2fc33e336a91eb48b23f8ac50b3985e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2025803e141774f13b6a855c42813e7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevcl_1_1comp.html#ab2025803e141774f13b6a855c42813e7">isColorAvailableOn</a> (const ElementOrMeshConcept auto &amp;element)</td></tr>
+<tr class="memdesc:ab2025803e141774f13b6a855c42813e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given Element/Mesh has <a class="el" href="classvcl_1_1comp_1_1Color.html" title="The Color class represents a RGBA color that will be part of an Element (e.g. Vertex,...">Color</a> component available.  <br /></td></tr>
+<tr class="separator:ab2025803e141774f13b6a855c42813e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adedd08dbc1ad984796e420966333f317"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevcl_1_1comp.html#adedd08dbc1ad984796e420966333f317">isCoordinateAvailableOn</a> (const ElementConcept auto &amp;element)</td></tr>
+<tr class="memdesc:adedd08dbc1ad984796e420966333f317"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has <a class="el" href="classvcl_1_1comp_1_1Coordinate.html" title="The Coordinate class represents a N-Dimensional point that will be part of an Element (e....">Coordinate</a> component available.  <br /></td></tr>
+<tr class="separator:adedd08dbc1ad984796e420966333f317"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56936f979f7950e10b7ad68fa458c9cd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevcl_1_1comp.html#a56936f979f7950e10b7ad68fa458c9cd">isMarkAvailableOn</a> (const ElementOrMeshConcept auto &amp;element)</td></tr>
+<tr class="memdesc:a56936f979f7950e10b7ad68fa458c9cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given Element/Mesh has the <a class="el" href="classvcl_1_1comp_1_1Mark.html" title="The Mark class is an utility class useful to un-mark components in constant time.">Mark</a> component available.  <br /></td></tr>
+<tr class="separator:a56936f979f7950e10b7ad68fa458c9cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5aae8d6b9d1fa7816e3b4112dd7527d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevcl_1_1comp.html#ad5aae8d6b9d1fa7816e3b4112dd7527d">isNameAvailableOn</a> (const ElementOrMeshConcept auto &amp;element)</td></tr>
+<tr class="memdesc:ad5aae8d6b9d1fa7816e3b4112dd7527d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given Element/Mesh has <a class="el" href="classvcl_1_1comp_1_1Name.html" title="The Name component class represents a simple name stored as string. This class is usually used as a c...">Name</a> component available.  <br /></td></tr>
+<tr class="separator:ad5aae8d6b9d1fa7816e3b4112dd7527d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95a9568d63b2c120ec19e81b3d613cc6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevcl_1_1comp.html#a95a9568d63b2c120ec19e81b3d613cc6">isNormalAvailableOn</a> (const ElementConcept auto &amp;element)</td></tr>
+<tr class="memdesc:a95a9568d63b2c120ec19e81b3d613cc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has <a class="el" href="classvcl_1_1comp_1_1Normal.html" title="The Normal class represents a N-Dimensional normal vector that will be part of an Element (e....">Normal</a> component available.  <br /></td></tr>
+<tr class="separator:a95a9568d63b2c120ec19e81b3d613cc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48fb7ec2004fe8f4a606eb4f0f6beb5d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevcl_1_1comp.html#a48fb7ec2004fe8f4a606eb4f0f6beb5d">isPrincipalCurvatureAvailableOn</a> (const ElementConcept auto &amp;element)</td></tr>
+<tr class="memdesc:a48fb7ec2004fe8f4a606eb4f0f6beb5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has <a class="el" href="classvcl_1_1comp_1_1PrincipalCurvature.html" title="The PrincipalCurvature class represents a component that stores the principal curvature directions an...">PrincipalCurvature</a> component available.  <br /></td></tr>
+<tr class="separator:a48fb7ec2004fe8f4a606eb4f0f6beb5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fe36a2602f0867027ca1d1d5f1cc542"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevcl_1_1comp.html#a7fe36a2602f0867027ca1d1d5f1cc542">isQualityAvailableOn</a> (const ElementOrMeshConcept auto &amp;element)</td></tr>
+<tr class="memdesc:a7fe36a2602f0867027ca1d1d5f1cc542"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has <a class="el" href="classvcl_1_1comp_1_1Quality.html" title="The Quality class represents a component that stores the quality of a mesh element,...">Quality</a> component available.  <br /></td></tr>
+<tr class="separator:a7fe36a2602f0867027ca1d1d5f1cc542"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab222e68d2303e1ef6472499430411e28"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevcl_1_1comp.html#ab222e68d2303e1ef6472499430411e28">isTexCoordAvailableOn</a> (const ElementConcept auto &amp;element)</td></tr>
+<tr class="memdesc:ab222e68d2303e1ef6472499430411e28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has <a class="el" href="classvcl_1_1comp_1_1TexCoord.html" title="The TexCoord class represents a component that stores a texture coordinate.">TexCoord</a> component available.  <br /></td></tr>
+<tr class="separator:ab222e68d2303e1ef6472499430411e28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5129ac61f0f4b91048242b7e5b53785"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevcl_1_1comp.html#af5129ac61f0f4b91048242b7e5b53785">isTransformMatrixAvailableOn</a> (const ElementOrMeshConcept auto &amp;element)</td></tr>
+<tr class="memdesc:af5129ac61f0f4b91048242b7e5b53785"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given Element/Mesh has <a class="el" href="classvcl_1_1comp_1_1TransformMatrix.html" title="The TransformMatrix class represents a component that stores a 4x4 matrix that can be used for a tran...">TransformMatrix</a> component available.  <br /></td></tr>
+<tr class="separator:af5129ac61f0f4b91048242b7e5b53785"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e186706a03573434e08221ad123f08e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevcl_1_1comp.html#a0e186706a03573434e08221ad123f08e">isWedgeColorsAvailableOn</a> (const ElementConcept auto &amp;element)</td></tr>
+<tr class="memdesc:a0e186706a03573434e08221ad123f08e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has <a class="el" href="classvcl_1_1comp_1_1WedgeColors.html" title="The WedgeColors class is a container of colors associated to the wedges of a Face element.">WedgeColors</a> available.  <br /></td></tr>
+<tr class="separator:a0e186706a03573434e08221ad123f08e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad551c02790329289a1c97a418d26dca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacevcl_1_1comp.html#aad551c02790329289a1c97a418d26dca">isWedgeTexCoordsAvailableOn</a> (const ElementConcept auto &amp;element)</td></tr>
+<tr class="memdesc:aad551c02790329289a1c97a418d26dca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has <a class="el" href="classvcl_1_1comp_1_1WedgeTexCoords.html" title="The WedgeTexCoords class is a container of texture coordinates associated to the wedges of a Face ele...">WedgeTexCoords</a> available.  <br /></td></tr>
+<tr class="separator:aad551c02790329289a1c97a418d26dca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
-<a id="a36ab10d1baf1cd193be4333cb5044ed6" name="a36ab10d1baf1cd193be4333cb5044ed6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36ab10d1baf1cd193be4333cb5044ed6">&#9670;&#160;</a></span>ComponentOfType</h2>
+<a id="a9edfb9635a25f0d8e2e6ea2d10d0745c" name="a9edfb9635a25f0d8e2e6ea2d10d0745c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9edfb9635a25f0d8e2e6ea2d10d0745c">&#9670;&#160;</a></span>ComponentOfType</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> COMP_TYPE, typename... Components&gt; </div>
+template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> COMP_ID, typename... Components&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespacevcl_1_1comp.html#a36ab10d1baf1cd193be4333cb5044ed6">vcl::comp::ComponentOfType</a> = typedef typename <a class="el" href="structvcl_1_1FirstType.html">FirstType</a>&lt; typename internal::ComponentOfTypePred&lt;COMP_TYPE, Components...&gt;::type&gt;:: type</td>
+          <td class="memname">using <a class="el" href="namespacevcl_1_1comp.html#a9edfb9635a25f0d8e2e6ea2d10d0745c">vcl::comp::ComponentOfType</a> = typedef typename <a class="el" href="structvcl_1_1FirstType.html">FirstType</a>&lt; typename internal::ComponentOfTypePred&lt;COMP_ID, Components...&gt;::type&gt;::type</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -472,14 +472,14 @@ template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="aff5bc5401223f4fd2881a1a91c180fce" name="aff5bc5401223f4fd2881a1a91c180fce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff5bc5401223f4fd2881a1a91c180fce">&#9670;&#160;</a></span>isAdjacentEdgesEnabledOn()</h2>
+<a id="aab832b4cd81d9df17e261c029ef4875f" name="aab832b4cd81d9df17e261c029ef4875f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab832b4cd81d9df17e261c029ef4875f">&#9670;&#160;</a></span>isAdjacentEdgesAvailableOn()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool vcl::comp::isAdjacentEdgesEnabledOn </td>
+          <td class="memname">bool vcl::comp::isAdjacentEdgesAvailableOn </td>
           <td>(</td>
           <td class="paramtype">const ElementConcept auto &amp;&#160;</td>
           <td class="paramname"><em>element</em></td><td>)</td>
@@ -500,14 +500,14 @@ template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e
 
 </div>
 </div>
-<a id="afce569020eba6197ae24a74705f9c28c" name="afce569020eba6197ae24a74705f9c28c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afce569020eba6197ae24a74705f9c28c">&#9670;&#160;</a></span>isAdjacentFacesEnabledOn()</h2>
+<a id="aee5a4aef15625749ca655836e2a1df43" name="aee5a4aef15625749ca655836e2a1df43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee5a4aef15625749ca655836e2a1df43">&#9670;&#160;</a></span>isAdjacentFacesAvailableOn()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool vcl::comp::isAdjacentFacesEnabledOn </td>
+          <td class="memname">bool vcl::comp::isAdjacentFacesAvailableOn </td>
           <td>(</td>
           <td class="paramtype">const ElementConcept auto &amp;&#160;</td>
           <td class="paramname"><em>element</em></td><td>)</td>
@@ -528,14 +528,14 @@ template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e
 
 </div>
 </div>
-<a id="a677a0bcf8f15a8a544b9c39e76d5d6e3" name="a677a0bcf8f15a8a544b9c39e76d5d6e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a677a0bcf8f15a8a544b9c39e76d5d6e3">&#9670;&#160;</a></span>isAdjacentVerticesEnabledOn()</h2>
+<a id="ab1a9a6804d1c2b0ec8a974021c04be99" name="ab1a9a6804d1c2b0ec8a974021c04be99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1a9a6804d1c2b0ec8a974021c04be99">&#9670;&#160;</a></span>isAdjacentVerticesAvailableOn()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool vcl::comp::isAdjacentVerticesEnabledOn </td>
+          <td class="memname">bool vcl::comp::isAdjacentVerticesAvailableOn </td>
           <td>(</td>
           <td class="paramtype">const ElementConcept auto &amp;&#160;</td>
           <td class="paramname"><em>element</em></td><td>)</td>
@@ -556,14 +556,14 @@ template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e
 
 </div>
 </div>
-<a id="a1c35e658b847910987f5369711190be6" name="a1c35e658b847910987f5369711190be6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c35e658b847910987f5369711190be6">&#9670;&#160;</a></span>isBoundingBoxEnabledOn()</h2>
+<a id="a2fc33e336a91eb48b23f8ac50b3985e2" name="a2fc33e336a91eb48b23f8ac50b3985e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fc33e336a91eb48b23f8ac50b3985e2">&#9670;&#160;</a></span>isBoundingBoxAvailableOn()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool vcl::comp::isBoundingBoxEnabledOn </td>
+          <td class="memname">bool vcl::comp::isBoundingBoxAvailableOn </td>
           <td>(</td>
           <td class="paramtype">const ElementOrMeshConcept auto &amp;&#160;</td>
           <td class="paramname"><em>element</em></td><td>)</td>
@@ -584,14 +584,14 @@ template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e
 
 </div>
 </div>
-<a id="aff0a609f18f7d90fea5aa22acdc66087" name="aff0a609f18f7d90fea5aa22acdc66087"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff0a609f18f7d90fea5aa22acdc66087">&#9670;&#160;</a></span>isColorEnabledOn()</h2>
+<a id="ab2025803e141774f13b6a855c42813e7" name="ab2025803e141774f13b6a855c42813e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2025803e141774f13b6a855c42813e7">&#9670;&#160;</a></span>isColorAvailableOn()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool vcl::comp::isColorEnabledOn </td>
+          <td class="memname">bool vcl::comp::isColorAvailableOn </td>
           <td>(</td>
           <td class="paramtype">const ElementOrMeshConcept auto &amp;&#160;</td>
           <td class="paramname"><em>element</em></td><td>)</td>
@@ -612,16 +612,16 @@ template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e
 
 </div>
 </div>
-<a id="ab556a3464e63ae09976f7b098f7497bd" name="ab556a3464e63ae09976f7b098f7497bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab556a3464e63ae09976f7b098f7497bd">&#9670;&#160;</a></span>isComponentEnabledOn()</h2>
+<a id="ab9e1254c8626c6280e79ac12a3333b14" name="ab9e1254c8626c6280e79ac12a3333b14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9e1254c8626c6280e79ac12a3333b14">&#9670;&#160;</a></span>isComponentAvailableOn()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> COMPONENT_TYPE, ElementOrMeshConcept T&gt; </div>
+template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> COMPONENT_ID, ElementOrMeshConcept T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool vcl::comp::isComponentEnabledOn </td>
+          <td class="memname">bool vcl::comp::isComponentAvailableOn </td>
           <td>(</td>
           <td class="paramtype">const T &amp;&#160;</td>
           <td class="paramname"><em>obj</em></td><td>)</td>
@@ -630,7 +630,7 @@ template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e
       </table>
 </div><div class="memdoc">
 
-<p>Checks if the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> or <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> has the component having COMPONENT_TYPE ID available. </p>
+<p>Checks if the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> or <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> has the component having COMPONENT_ID available. </p>
 <p>This function returns <code>true</code> also if the component is horizontal and always available in the element/mesh. The runtime check is performed only when the component is optional.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -642,14 +642,14 @@ template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e
 
 </div>
 </div>
-<a id="aa3ad3b3afb381fe5fca273017aca4c60" name="aa3ad3b3afb381fe5fca273017aca4c60"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3ad3b3afb381fe5fca273017aca4c60">&#9670;&#160;</a></span>isCoordinateEnabledOn()</h2>
+<a id="adedd08dbc1ad984796e420966333f317" name="adedd08dbc1ad984796e420966333f317"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adedd08dbc1ad984796e420966333f317">&#9670;&#160;</a></span>isCoordinateAvailableOn()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool vcl::comp::isCoordinateEnabledOn </td>
+          <td class="memname">bool vcl::comp::isCoordinateAvailableOn </td>
           <td>(</td>
           <td class="paramtype">const ElementConcept auto &amp;&#160;</td>
           <td class="paramname"><em>element</em></td><td>)</td>
@@ -670,14 +670,14 @@ template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e
 
 </div>
 </div>
-<a id="afe41be80568804676d093138c7d7a57c" name="afe41be80568804676d093138c7d7a57c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe41be80568804676d093138c7d7a57c">&#9670;&#160;</a></span>isMarkEnabledOn()</h2>
+<a id="a56936f979f7950e10b7ad68fa458c9cd" name="a56936f979f7950e10b7ad68fa458c9cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56936f979f7950e10b7ad68fa458c9cd">&#9670;&#160;</a></span>isMarkAvailableOn()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool vcl::comp::isMarkEnabledOn </td>
+          <td class="memname">bool vcl::comp::isMarkAvailableOn </td>
           <td>(</td>
           <td class="paramtype">const ElementOrMeshConcept auto &amp;&#160;</td>
           <td class="paramname"><em>element</em></td><td>)</td>
@@ -698,14 +698,14 @@ template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e
 
 </div>
 </div>
-<a id="a7a0852fbd9736c012e59a9479083bfa5" name="a7a0852fbd9736c012e59a9479083bfa5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a0852fbd9736c012e59a9479083bfa5">&#9670;&#160;</a></span>isNameEnabledOn()</h2>
+<a id="ad5aae8d6b9d1fa7816e3b4112dd7527d" name="ad5aae8d6b9d1fa7816e3b4112dd7527d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5aae8d6b9d1fa7816e3b4112dd7527d">&#9670;&#160;</a></span>isNameAvailableOn()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool vcl::comp::isNameEnabledOn </td>
+          <td class="memname">bool vcl::comp::isNameAvailableOn </td>
           <td>(</td>
           <td class="paramtype">const ElementOrMeshConcept auto &amp;&#160;</td>
           <td class="paramname"><em>element</em></td><td>)</td>
@@ -726,14 +726,14 @@ template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e
 
 </div>
 </div>
-<a id="a64ef438fc47d7eaed85a8124b3d1e2ea" name="a64ef438fc47d7eaed85a8124b3d1e2ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64ef438fc47d7eaed85a8124b3d1e2ea">&#9670;&#160;</a></span>isNormalEnabledOn()</h2>
+<a id="a95a9568d63b2c120ec19e81b3d613cc6" name="a95a9568d63b2c120ec19e81b3d613cc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95a9568d63b2c120ec19e81b3d613cc6">&#9670;&#160;</a></span>isNormalAvailableOn()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool vcl::comp::isNormalEnabledOn </td>
+          <td class="memname">bool vcl::comp::isNormalAvailableOn </td>
           <td>(</td>
           <td class="paramtype">const ElementConcept auto &amp;&#160;</td>
           <td class="paramname"><em>element</em></td><td>)</td>
@@ -754,14 +754,14 @@ template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e
 
 </div>
 </div>
-<a id="a58928e7c11581668c7a2f02186cba320" name="a58928e7c11581668c7a2f02186cba320"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58928e7c11581668c7a2f02186cba320">&#9670;&#160;</a></span>isPrincipalCurvatureEnabledOn()</h2>
+<a id="a48fb7ec2004fe8f4a606eb4f0f6beb5d" name="a48fb7ec2004fe8f4a606eb4f0f6beb5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48fb7ec2004fe8f4a606eb4f0f6beb5d">&#9670;&#160;</a></span>isPrincipalCurvatureAvailableOn()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool vcl::comp::isPrincipalCurvatureEnabledOn </td>
+          <td class="memname">bool vcl::comp::isPrincipalCurvatureAvailableOn </td>
           <td>(</td>
           <td class="paramtype">const ElementConcept auto &amp;&#160;</td>
           <td class="paramname"><em>element</em></td><td>)</td>
@@ -782,14 +782,14 @@ template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e
 
 </div>
 </div>
-<a id="a7703833f582e9a032946ce1ceec3fe38" name="a7703833f582e9a032946ce1ceec3fe38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7703833f582e9a032946ce1ceec3fe38">&#9670;&#160;</a></span>isQualityEnabledOn()</h2>
+<a id="a7fe36a2602f0867027ca1d1d5f1cc542" name="a7fe36a2602f0867027ca1d1d5f1cc542"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fe36a2602f0867027ca1d1d5f1cc542">&#9670;&#160;</a></span>isQualityAvailableOn()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool vcl::comp::isQualityEnabledOn </td>
+          <td class="memname">bool vcl::comp::isQualityAvailableOn </td>
           <td>(</td>
           <td class="paramtype">const ElementOrMeshConcept auto &amp;&#160;</td>
           <td class="paramname"><em>element</em></td><td>)</td>
@@ -810,14 +810,14 @@ template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e
 
 </div>
 </div>
-<a id="af647682835fba437f3f08e6530209d0a" name="af647682835fba437f3f08e6530209d0a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af647682835fba437f3f08e6530209d0a">&#9670;&#160;</a></span>isTexCoordEnabledOn()</h2>
+<a id="ab222e68d2303e1ef6472499430411e28" name="ab222e68d2303e1ef6472499430411e28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab222e68d2303e1ef6472499430411e28">&#9670;&#160;</a></span>isTexCoordAvailableOn()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool vcl::comp::isTexCoordEnabledOn </td>
+          <td class="memname">bool vcl::comp::isTexCoordAvailableOn </td>
           <td>(</td>
           <td class="paramtype">const ElementConcept auto &amp;&#160;</td>
           <td class="paramname"><em>element</em></td><td>)</td>
@@ -838,14 +838,14 @@ template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e
 
 </div>
 </div>
-<a id="a389855b39aea0a62acd199cded84dfa1" name="a389855b39aea0a62acd199cded84dfa1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a389855b39aea0a62acd199cded84dfa1">&#9670;&#160;</a></span>isTransformMatrixEnabledOn()</h2>
+<a id="af5129ac61f0f4b91048242b7e5b53785" name="af5129ac61f0f4b91048242b7e5b53785"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5129ac61f0f4b91048242b7e5b53785">&#9670;&#160;</a></span>isTransformMatrixAvailableOn()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool vcl::comp::isTransformMatrixEnabledOn </td>
+          <td class="memname">bool vcl::comp::isTransformMatrixAvailableOn </td>
           <td>(</td>
           <td class="paramtype">const ElementOrMeshConcept auto &amp;&#160;</td>
           <td class="paramname"><em>element</em></td><td>)</td>
@@ -866,14 +866,14 @@ template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e
 
 </div>
 </div>
-<a id="aa0309afc031bb4e31f24ca532fbf1e63" name="aa0309afc031bb4e31f24ca532fbf1e63"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa0309afc031bb4e31f24ca532fbf1e63">&#9670;&#160;</a></span>isWedgeColorsEnabledOn()</h2>
+<a id="a0e186706a03573434e08221ad123f08e" name="a0e186706a03573434e08221ad123f08e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e186706a03573434e08221ad123f08e">&#9670;&#160;</a></span>isWedgeColorsAvailableOn()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool vcl::comp::isWedgeColorsEnabledOn </td>
+          <td class="memname">bool vcl::comp::isWedgeColorsAvailableOn </td>
           <td>(</td>
           <td class="paramtype">const ElementConcept auto &amp;&#160;</td>
           <td class="paramname"><em>element</em></td><td>)</td>
@@ -894,14 +894,14 @@ template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e
 
 </div>
 </div>
-<a id="ac7e8f6d227f9a97981f6ced79bd22c14" name="ac7e8f6d227f9a97981f6ced79bd22c14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac7e8f6d227f9a97981f6ced79bd22c14">&#9670;&#160;</a></span>isWedgeTexCoordsEnabledOn()</h2>
+<a id="aad551c02790329289a1c97a418d26dca" name="aad551c02790329289a1c97a418d26dca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad551c02790329289a1c97a418d26dca">&#9670;&#160;</a></span>isWedgeTexCoordsAvailableOn()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool vcl::comp::isWedgeTexCoordsEnabledOn </td>
+          <td class="memname">bool vcl::comp::isWedgeTexCoordsAvailableOn </td>
           <td>(</td>
           <td class="paramtype">const ElementConcept auto &amp;&#160;</td>
           <td class="paramname"><em>element</em></td><td>)</td>

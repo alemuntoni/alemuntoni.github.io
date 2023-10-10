@@ -1,5 +1,5 @@
 var classvcl_1_1comp_1_1PointersContainerComponent =
 [
-    [ "updateElementPointers", "classvcl_1_1comp_1_1PointersContainerComponent.html#ab90e0d3b681a666250e849242db95824", null ],
-    [ "updateElementPointers", "classvcl_1_1comp_1_1PointersContainerComponent.html#ac92ee764afbe33f873b50bcde04e6450", null ]
+    [ "updatePointers", "classvcl_1_1comp_1_1PointersContainerComponent.html#afa9cdf2268d72e4e1178ee47857e1ab5", null ],
+    [ "updatePointers", "classvcl_1_1comp_1_1PointersContainerComponent.html#a026d4ef4834affee614ab4f480ea7b61", null ]
 ];

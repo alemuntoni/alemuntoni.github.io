@@ -99,16 +99,36 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1EigenMatrixConcept.html'
 </div><!--header-->
 <div class="contents">
 
+<p>Concept for Eigen matrices. It is satisfied when <code>T</code> is an Eigen matrix.  
+<a href="conceptvcl_1_1EigenMatrixConcept.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="concepts_2space_2matrix_8h_source.html">vclib/concepts/space/matrix.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1EigenMatrixConcept.html">vcl::EigenMatrixConcept</a> =  <span class="keyword">requires</span>(T o, <span class="keyword">const</span> T&amp; co)</div>
+<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1EigenMatrixConcept.html">vcl::EigenMatrixConcept</a> =  <span class="keyword">requires</span> (T o, <span class="keyword">const</span> T&amp; co)</div>
 <div class="line">{</div>
-<div class="line">    o.RowsAtCompileTime;</div>
-<div class="line">    o.ColsAtCompileTime;</div>
+<div class="line">    <span class="keyword">typename</span> T::Scalar;</div>
+<div class="line"> </div>
+<div class="line">    co.RowsAtCompileTime;</div>
+<div class="line">    co.ColsAtCompileTime;</div>
+<div class="line"> </div>
+<div class="line">    co.rows();</div>
+<div class="line">    co.cols();</div>
+<div class="line"> </div>
+<div class="line">    o.operator()(std::size_t(), std::size_t());</div>
+<div class="line">    co.operator()(std::size_t(), std::size_t());</div>
 <div class="line">}</div>
-<div class="ttc" id="aconceptvcl_1_1EigenMatrixConcept_html"><div class="ttname"><a href="conceptvcl_1_1EigenMatrixConcept.html">vcl::EigenMatrixConcept</a></div><div class="ttdef"><b>Definition:</b> matrix.h:30</div></div>
-</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aconceptvcl_1_1EigenMatrixConcept_html"><div class="ttname"><a href="conceptvcl_1_1EigenMatrixConcept.html">vcl::EigenMatrixConcept</a></div><div class="ttdoc">Concept for Eigen matrices. It is satisfied when T is an Eigen matrix.</div><div class="ttdef"><b>Definition:</b> matrix.h:43</div></div>
+</div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Concept for Eigen matrices. It is satisfied when <code>T</code> is an Eigen matrix. </p>
+<p>The concept just checks that <code>T</code> has the following members:</p><ul>
+<li><code>T::RowsAtCompileTime</code></li>
+<li><code>T::ColsAtCompileTime</code></li>
+<li><code>T::rows()</code></li>
+<li><code>T::cols()</code></li>
+<li><code>T::operator()(std::size_t, std::size_t)</code> </li>
+</ul>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

@@ -163,24 +163,22 @@ $(document).ready(function(){initNavTree('concepts_2mesh_2containers_2edge__cont
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    { o.edgeEnd() } -&gt; std::same_as&lt;typename T::EdgeIterator&gt;;</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    { co.edgeEnd() } -&gt; std::same_as&lt;typename T::ConstEdgeIterator&gt;;</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#ifdef VCLIB_USES_RANGES</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keyword">requires</span> std::ranges::range&lt;<span class="keyword">decltype</span>(o.edges())&gt;;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keyword">requires</span> std::ranges::range&lt;<span class="keyword">decltype</span>(co.edges())&gt;;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>};</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keyword">requires</span> std::ranges::range&lt;<span class="keyword">decltype</span>(o.edges())&gt;;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keyword">requires</span> std::ranges::range&lt;<span class="keyword">decltype</span>(co.edges())&gt;;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>};</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>} <span class="comment">// namespace vcl::mesh</span></div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>} <span class="comment">// namespace vcl::mesh</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="conceptvcl_1_1HasEdges.html">  105</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1HasEdges.html">HasEdges</a> = (<a class="code hl_concept" href="conceptvcl_1_1mesh_1_1HasEdgeContainer.html">vcl::mesh::HasEdgeContainer&lt;Args&gt;</a> || ...);</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="preprocessor">#endif </span><span class="comment">// VCL_CONCEPTS_MESH_CONTAINERS_EDGE_CONTAINER_H</span></div>
-<div class="ttc" id="aconceptvcl_1_1HasEdges_html"><div class="ttname"><a href="conceptvcl_1_1HasEdges.html">vcl::HasEdges</a></div><div class="ttdoc">HasEdges concepts is satisfied when at least one of its template types is (or inherits from) a EdgeCo...</div><div class="ttdef"><b>Definition:</b> edge_container.h:105</div></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="conceptvcl_1_1HasEdges.html">  104</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1HasEdges.html">HasEdges</a> = (<a class="code hl_concept" href="conceptvcl_1_1mesh_1_1HasEdgeContainer.html">vcl::mesh::HasEdgeContainer&lt;Args&gt;</a> || ...);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="preprocessor">#endif </span><span class="comment">// VCL_CONCEPTS_MESH_CONTAINERS_EDGE_CONTAINER_H</span></div>
+<div class="ttc" id="aconceptvcl_1_1HasEdges_html"><div class="ttname"><a href="conceptvcl_1_1HasEdges.html">vcl::HasEdges</a></div><div class="ttdoc">HasEdges concepts is satisfied when at least one of its template types is (or inherits from) a EdgeCo...</div><div class="ttdef"><b>Definition:</b> edge_container.h:104</div></div>
 <div class="ttc" id="aconceptvcl_1_1mesh_1_1HasEdgeContainer_html"><div class="ttname"><a href="conceptvcl_1_1mesh_1_1HasEdgeContainer.html">vcl::mesh::HasEdgeContainer</a></div><div class="ttdef"><b>Definition:</b> edge_container.h:36</div></div>
 <div class="ttc" id="amesh_2containers_2element__container_8h_html"><div class="ttname"><a href="mesh_2containers_2element__container_8h.html">element_container.h</a></div></div>
-<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition:</b> bounding_box.cpp:29</div></div>
+<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition:</b> bounding_box.h:47</div></div>
 <div class="ttc" id="atypes_2base_8h_html_a69aa29b598b851b0640aa225a9e5d61d"><div class="ttname"><a href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> base.h:31</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

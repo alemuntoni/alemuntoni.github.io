@@ -1,7 +1,7 @@
 var namespacevcl_1_1edge =
 [
-    [ "IsAnEdge", "structvcl_1_1edge_1_1IsAnEdge.html", null ],
-    [ "IsAnEdge< Edge< Args... > >", "structvcl_1_1edge_1_1IsAnEdge_3_01Edge_3_01Args_8_8_8_01_4_01_4.html", null ],
+    [ "IsAEdge", "structvcl_1_1edge_1_1IsAEdge.html", null ],
+    [ "IsAEdge< Edge< Args... > >", "structvcl_1_1edge_1_1IsAEdge_3_01Edge_3_01Args_8_8_8_01_4_01_4.html", null ],
     [ "HasAdjacentEdges", "conceptvcl_1_1edge_1_1HasAdjacentEdges.html", null ],
     [ "HasOptionalAdjacentEdges", "conceptvcl_1_1edge_1_1HasOptionalAdjacentEdges.html", null ],
     [ "HasAdjacentFaces", "conceptvcl_1_1edge_1_1HasAdjacentFaces.html", null ],

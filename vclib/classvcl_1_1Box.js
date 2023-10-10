@@ -12,7 +12,7 @@ var classvcl_1_1Box =
     [ "collide", "classvcl_1_1Box.html#a902e1511ffed22f20d86f28e9c52c1c2", null ],
     [ "diagonal", "classvcl_1_1Box.html#a09c83043394aa6b144b6a76fdc6b9c93", null ],
     [ "dim", "classvcl_1_1Box.html#ac1760f8808b47f9cb42cab5058434661", null ],
-    [ "intersection", "classvcl_1_1Box.html#aa81970bb033da5f284b316daef44c051", null ],
+    [ "intersection", "classvcl_1_1Box.html#aaa9ad7e6c6fb6c7b2ba67d2b86dfbc47", null ],
     [ "intersects", "classvcl_1_1Box.html#a2112e4f51d2f88354009defe73e180bd", null ],
     [ "isEmpty", "classvcl_1_1Box.html#ab62da3246fc9973f28d3b1417e420eb8", null ],
     [ "isInside", "classvcl_1_1Box.html#a85c9bf310983d70e5beda4e90beecc16", null ],

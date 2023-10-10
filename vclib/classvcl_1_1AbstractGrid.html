@@ -132,22 +132,25 @@ Collaboration diagram for vcl::AbstractGrid&lt; GridType, ValueType, DerivedGrid
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a1a9140b7b7608308c699e7d7f617a03d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#a1a9140b7b7608308c699e7d7f617a03d">KeyType</a> = typename GridType::CellCoord</td></tr>
-<tr class="separator:a1a9140b7b7608308c699e7d7f617a03d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6bddf29ec17ccb4600d19548e0687ba0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#a6bddf29ec17ccb4600d19548e0687ba0">IsInCellFunction</a> = std::function&lt; bool(const typename GridType::BBoxType &amp;, const <a class="el" href="namespacevcl.html#a2ec2f45ee6feff2a4aff0f15d6b0b0b0">RemoveCVRefAndPointer</a>&lt; ValueType &gt; &amp;)&gt;</td></tr>
-<tr class="separator:a6bddf29ec17ccb4600d19548e0687ba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9d5b06b7a4cc2491216c79485df4bfe"><td class="memTemplParams" colspan="2">template&lt;typename QueryValueType &gt; </td></tr>
-<tr class="memitem:ad9d5b06b7a4cc2491216c79485df4bfe"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#ad9d5b06b7a4cc2491216c79485df4bfe">QueryDistFunction</a> = std::function&lt; typename GridType::ScalarType(const QueryValueType &amp;, const <a class="el" href="namespacevcl.html#a2ec2f45ee6feff2a4aff0f15d6b0b0b0">RemoveCVRefAndPointer</a>&lt; ValueType &gt; &amp;)&gt;</td></tr>
-<tr class="separator:ad9d5b06b7a4cc2491216c79485df4bfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a3366f3d869c04a5421d439a2fa1c70"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#a6a3366f3d869c04a5421d439a2fa1c70">IsInCellFunction</a> = std::function&lt; bool(const typename GridType::BBoxType &amp;, const <a class="el" href="namespacevcl.html#a2ec2f45ee6feff2a4aff0f15d6b0b0b0">RemoveCVRefAndPointer</a>&lt; ValueType &gt; &amp;)&gt;</td></tr>
+<tr class="memdesc:a6a3366f3d869c04a5421d439a2fa1c70"><td class="mdescLeft">&#160;</td><td class="mdescRight">The IsInCellFunction type is a std::function that takes as input a bounding box and a value, and returns true if the value intersects the bounding box.  <br /></td></tr>
+<tr class="separator:a6a3366f3d869c04a5421d439a2fa1c70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ba12dd8a5cd0c295b52c11cbd50b466"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#a4ba12dd8a5cd0c295b52c11cbd50b466">KeyType</a> = GridType::CellCoord</td></tr>
+<tr class="separator:a4ba12dd8a5cd0c295b52c11cbd50b466"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab35a3aa3ed5c4caf6c7fd39d2ef3eec7"><td class="memTemplParams" colspan="2">template&lt;typename QueryValueType &gt; </td></tr>
+<tr class="memitem:ab35a3aa3ed5c4caf6c7fd39d2ef3eec7"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#ab35a3aa3ed5c4caf6c7fd39d2ef3eec7">QueryDistFunction</a> = std::function&lt; typename GridType::ScalarType(const QueryValueType &amp;, const <a class="el" href="namespacevcl.html#a2ec2f45ee6feff2a4aff0f15d6b0b0b0">RemoveCVRefAndPointer</a>&lt; ValueType &gt; &amp;)&gt;</td></tr>
+<tr class="memdesc:ab35a3aa3ed5c4caf6c7fd39d2ef3eec7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The QueryDistFunction type is a std::function that takes as input a query value and a value stored in the grid, and returns the distance between the two values.  <br /></td></tr>
+<tr class="separator:ab35a3aa3ed5c4caf6c7fd39d2ef3eec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3105d63ad6aa895e62002eb4580aa4e"><td class="memTemplParams" colspan="2">template&lt;typename QueryValueType &gt; </td></tr>
 <tr class="memitem:af3105d63ad6aa895e62002eb4580aa4e"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#af3105d63ad6aa895e62002eb4580aa4e">QueryBoundedDistFunction</a> = std::function&lt; typename GridType::ScalarType(const QueryValueType &amp;, const <a class="el" href="namespacevcl.html#a2ec2f45ee6feff2a4aff0f15d6b0b0b0">RemoveCVRefAndPointer</a>&lt; ValueType &gt; &amp;, typename GridType::ScalarType)&gt;</td></tr>
+<tr class="memdesc:af3105d63ad6aa895e62002eb4580aa4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The QueryBoundedDistFunction type is a std::function that takes as input a query value, a value stored in the grid, and a maximum distance between the two values, and returns the distance between the two values. If the distance is greater than the maximum distance, the function must return a value greater than the maximum distance.  <br /></td></tr>
 <tr class="separator:af3105d63ad6aa895e62002eb4580aa4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a215c93540477f194f46c6ed19963aaf6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#a215c93540477f194f46c6ed19963aaf6">cellEmpty</a> (const <a class="el" href="classvcl_1_1AbstractGrid.html#a1a9140b7b7608308c699e7d7f617a03d">KeyType</a> &amp;k) const</td></tr>
+<tr class="memitem:a215c93540477f194f46c6ed19963aaf6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#a215c93540477f194f46c6ed19963aaf6">cellEmpty</a> (const <a class="el" href="classvcl_1_1AbstractGrid.html#a4ba12dd8a5cd0c295b52c11cbd50b466">KeyType</a> &amp;k) const</td></tr>
 <tr class="separator:a215c93540477f194f46c6ed19963aaf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e466ae60dc9aed5834c8197738cdbbf"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#a5e466ae60dc9aed5834c8197738cdbbf">countInCell</a> (const <a class="el" href="classvcl_1_1AbstractGrid.html#a1a9140b7b7608308c699e7d7f617a03d">KeyType</a> &amp;k) const</td></tr>
+<tr class="memitem:a5e466ae60dc9aed5834c8197738cdbbf"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#a5e466ae60dc9aed5834c8197738cdbbf">countInCell</a> (const <a class="el" href="classvcl_1_1AbstractGrid.html#a4ba12dd8a5cd0c295b52c11cbd50b466">KeyType</a> &amp;k) const</td></tr>
 <tr class="separator:a5e466ae60dc9aed5834c8197738cdbbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a871be07005f55ec5e6864118bb830356"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#a871be07005f55ec5e6864118bb830356">insert</a> (const ValueType &amp;v)</td></tr>
 <tr class="memdesc:a871be07005f55ec5e6864118bb830356"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts the given element in the <a class="el" href="classvcl_1_1AbstractGrid.html" title="The AbstractGrid class describes a generic Spatial Data Structure organized on a regular grid,...">AbstractGrid</a>.  <br /></td></tr>
@@ -162,7 +165,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0aab9e753d743d75194be33a2014518a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade018b7aa4485231699ebf3e7f24499a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#ade018b7aa4485231699ebf3e7f24499a">erase</a> (const ValueType &amp;v)</td></tr>
 <tr class="separator:ade018b7aa4485231699ebf3e7f24499a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59585f0fc5853e5e02bd2360260dda22"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#a59585f0fc5853e5e02bd2360260dda22">eraseAllInCell</a> (const <a class="el" href="classvcl_1_1AbstractGrid.html#a1a9140b7b7608308c699e7d7f617a03d">KeyType</a> &amp;k)</td></tr>
+<tr class="memitem:a59585f0fc5853e5e02bd2360260dda22"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#a59585f0fc5853e5e02bd2360260dda22">eraseAllInCell</a> (const <a class="el" href="classvcl_1_1AbstractGrid.html#a4ba12dd8a5cd0c295b52c11cbd50b466">KeyType</a> &amp;k)</td></tr>
 <tr class="separator:a59585f0fc5853e5e02bd2360260dda22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab30905437cdd08c17126f46bfbf01b3b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#ab30905437cdd08c17126f46bfbf01b3b">countInSphere</a> (const <a class="el" href="classvcl_1_1Sphere.html">Sphere</a>&lt; typename GridType::ScalarType &gt; &amp;s) const</td></tr>
 <tr class="separator:ab30905437cdd08c17126f46bfbf01b3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -174,10 +177,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6165a5213891dbbe35a79f9b1d024ff3"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#a6165a5213891dbbe35a79f9b1d024ff3">closestValue</a> (const QueryValueType &amp;qv, <a class="el" href="classvcl_1_1AbstractGrid.html#af3105d63ad6aa895e62002eb4580aa4e">QueryBoundedDistFunction</a>&lt; QueryValueType &gt; <a class="el" href="group__distance.html#ga63f7958bed5f73548d28f436c7eb7b35">distFunction</a>, typename GridType::ScalarType &amp;dist) const</td></tr>
 <tr class="separator:a6165a5213891dbbe35a79f9b1d024ff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06f7b9bf85facba69ad08bffe517e50b"><td class="memTemplParams" colspan="2">template&lt;typename QueryValueType &gt; </td></tr>
-<tr class="memitem:a06f7b9bf85facba69ad08bffe517e50b"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#a06f7b9bf85facba69ad08bffe517e50b">closestValue</a> (const QueryValueType &amp;qv, <a class="el" href="classvcl_1_1AbstractGrid.html#ad9d5b06b7a4cc2491216c79485df4bfe">QueryDistFunction</a>&lt; QueryValueType &gt; <a class="el" href="group__distance.html#ga63f7958bed5f73548d28f436c7eb7b35">distFunction</a>, typename GridType::ScalarType &amp;dist) const</td></tr>
+<tr class="memitem:a06f7b9bf85facba69ad08bffe517e50b"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#a06f7b9bf85facba69ad08bffe517e50b">closestValue</a> (const QueryValueType &amp;qv, <a class="el" href="classvcl_1_1AbstractGrid.html#ab35a3aa3ed5c4caf6c7fd39d2ef3eec7">QueryDistFunction</a>&lt; QueryValueType &gt; <a class="el" href="group__distance.html#ga63f7958bed5f73548d28f436c7eb7b35">distFunction</a>, typename GridType::ScalarType &amp;dist) const</td></tr>
 <tr class="separator:a06f7b9bf85facba69ad08bffe517e50b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47b403d60619a1dce49bc404dbe9c06b"><td class="memTemplParams" colspan="2">template&lt;typename QueryValueType &gt; </td></tr>
-<tr class="memitem:a47b403d60619a1dce49bc404dbe9c06b"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#a47b403d60619a1dce49bc404dbe9c06b">closestValue</a> (const QueryValueType &amp;qv, <a class="el" href="classvcl_1_1AbstractGrid.html#ad9d5b06b7a4cc2491216c79485df4bfe">QueryDistFunction</a>&lt; QueryValueType &gt; <a class="el" href="group__distance.html#ga63f7958bed5f73548d28f436c7eb7b35">distFunction</a>) const</td></tr>
+<tr class="memitem:a47b403d60619a1dce49bc404dbe9c06b"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#a47b403d60619a1dce49bc404dbe9c06b">closestValue</a> (const QueryValueType &amp;qv, <a class="el" href="classvcl_1_1AbstractGrid.html#ab35a3aa3ed5c4caf6c7fd39d2ef3eec7">QueryDistFunction</a>&lt; QueryValueType &gt; <a class="el" href="group__distance.html#ga63f7958bed5f73548d28f436c7eb7b35">distFunction</a>) const</td></tr>
 <tr class="separator:a47b403d60619a1dce49bc404dbe9c06b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab922686d630b964e77961cbae39d88ba"><td class="memTemplParams" colspan="2">template&lt;typename QueryValueType &gt; </td></tr>
 <tr class="memitem:ab922686d630b964e77961cbae39d88ba"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#ab922686d630b964e77961cbae39d88ba">closestValue</a> (const QueryValueType &amp;qv, typename GridType::ScalarType &amp;dist) const</td></tr>
@@ -186,7 +189,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2f99daab1e9a40c6de2f83646dd745b9"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#a2f99daab1e9a40c6de2f83646dd745b9">closestValue</a> (const QueryValueType &amp;qv) const</td></tr>
 <tr class="separator:a2f99daab1e9a40c6de2f83646dd745b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9144f270d38cf9bae5b353b9a56a7da7"><td class="memTemplParams" colspan="2">template&lt;typename QueryValueType &gt; </td></tr>
-<tr class="memitem:a9144f270d38cf9bae5b353b9a56a7da7"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#a9144f270d38cf9bae5b353b9a56a7da7">kClosestValues</a> (const QueryValueType &amp;qv, <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> n, <a class="el" href="classvcl_1_1AbstractGrid.html#ad9d5b06b7a4cc2491216c79485df4bfe">QueryDistFunction</a>&lt; QueryValueType &gt; <a class="el" href="group__distance.html#ga63f7958bed5f73548d28f436c7eb7b35">distFunction</a>) const</td></tr>
+<tr class="memitem:a9144f270d38cf9bae5b353b9a56a7da7"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#a9144f270d38cf9bae5b353b9a56a7da7">kClosestValues</a> (const QueryValueType &amp;qv, <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> n, <a class="el" href="classvcl_1_1AbstractGrid.html#ab35a3aa3ed5c4caf6c7fd39d2ef3eec7">QueryDistFunction</a>&lt; QueryValueType &gt; <a class="el" href="group__distance.html#ga63f7958bed5f73548d28f436c7eb7b35">distFunction</a>) const</td></tr>
 <tr class="separator:a9144f270d38cf9bae5b353b9a56a7da7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e696f03d8515bee338aa756e979ee82"><td class="memTemplParams" colspan="2">template&lt;typename QueryValueType &gt; </td></tr>
 <tr class="memitem:a0e696f03d8515bee338aa756e979ee82"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#a0e696f03d8515bee338aa756e979ee82">kClosestValues</a> (const QueryValueType &amp;qv, <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> n) const</td></tr>
@@ -197,29 +200,29 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a449b323be92655f25b8c01eaa2f74fc3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#a449b323be92655f25b8c01eaa2f74fc3">AbstractGrid</a> ()</td></tr>
 <tr class="memdesc:a449b323be92655f25b8c01eaa2f74fc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empty constructor, creates an usable <a class="el" href="classvcl_1_1AbstractGrid.html" title="The AbstractGrid class describes a generic Spatial Data Structure organized on a regular grid,...">AbstractGrid</a>, since the Grid is not initialized.  <br /></td></tr>
 <tr class="separator:a449b323be92655f25b8c01eaa2f74fc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44543cf902fba3411608ef7901e80fea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#a44543cf902fba3411608ef7901e80fea">AbstractGrid</a> (const GridType &amp;grid, <a class="el" href="classvcl_1_1AbstractGrid.html#a6bddf29ec17ccb4600d19548e0687ba0">IsInCellFunction</a> <a class="el" href="classvcl_1_1AbstractGrid.html#a7ba78832434300f9f9e09943efcb6eaa">intersects</a>=nullptr)</td></tr>
+<tr class="memitem:a44543cf902fba3411608ef7901e80fea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#a44543cf902fba3411608ef7901e80fea">AbstractGrid</a> (const GridType &amp;grid, <a class="el" href="classvcl_1_1AbstractGrid.html#a6a3366f3d869c04a5421d439a2fa1c70">IsInCellFunction</a> <a class="el" href="classvcl_1_1AbstractGrid.html#a7ba78832434300f9f9e09943efcb6eaa">intersects</a>=nullptr)</td></tr>
 <tr class="memdesc:a44543cf902fba3411608ef7901e80fea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classvcl_1_1AbstractGrid.html" title="The AbstractGrid class describes a generic Spatial Data Structure organized on a regular grid,...">AbstractGrid</a> that allows to store ValueType values on the given grid.  <br /></td></tr>
 <tr class="separator:a44543cf902fba3411608ef7901e80fea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc4316af60f98f45d90a1df88e6db386"><td class="memTemplParams" colspan="2">template&lt;PointConcept PointType&gt; </td></tr>
-<tr class="memitem:abc4316af60f98f45d90a1df88e6db386"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#abc4316af60f98f45d90a1df88e6db386">AbstractGrid</a> (const PointType &amp;<a class="el" href="namespacevcl.html#a3edcb561672a6be17e9453bd1ea446d5">min</a>, const PointType &amp;<a class="el" href="namespacevcl.html#a69cc63a5ad2974d082145ed1dee7846b">max</a>, const <a class="el" href="classvcl_1_1AbstractGrid.html#a1a9140b7b7608308c699e7d7f617a03d">KeyType</a> &amp;sizes, <a class="el" href="classvcl_1_1AbstractGrid.html#a6bddf29ec17ccb4600d19548e0687ba0">IsInCellFunction</a> <a class="el" href="classvcl_1_1AbstractGrid.html#a7ba78832434300f9f9e09943efcb6eaa">intersects</a>=nullptr)</td></tr>
+<tr class="memitem:abc4316af60f98f45d90a1df88e6db386"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#abc4316af60f98f45d90a1df88e6db386">AbstractGrid</a> (const PointType &amp;<a class="el" href="namespacevcl.html#a3edcb561672a6be17e9453bd1ea446d5">min</a>, const PointType &amp;<a class="el" href="namespacevcl.html#a69cc63a5ad2974d082145ed1dee7846b">max</a>, const <a class="el" href="classvcl_1_1AbstractGrid.html#a4ba12dd8a5cd0c295b52c11cbd50b466">KeyType</a> &amp;sizes, <a class="el" href="classvcl_1_1AbstractGrid.html#a6a3366f3d869c04a5421d439a2fa1c70">IsInCellFunction</a> <a class="el" href="classvcl_1_1AbstractGrid.html#a7ba78832434300f9f9e09943efcb6eaa">intersects</a>=nullptr)</td></tr>
 <tr class="memdesc:abc4316af60f98f45d90a1df88e6db386"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classvcl_1_1AbstractGrid.html" title="The AbstractGrid class describes a generic Spatial Data Structure organized on a regular grid,...">AbstractGrid</a> that allows to store ValueType values on a Grid having <code>min</code> as minimum coordinte of the Grid, <code>max</code> as maximum coordinate of the grid, and the number of cells per dimension given by <code>sizes</code>.  <br /></td></tr>
 <tr class="separator:abc4316af60f98f45d90a1df88e6db386"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9093c6a8b0e01ebc831c45ba828eb9a"><td class="memTemplParams" colspan="2">template&lt;typename BoxType &gt; </td></tr>
-<tr class="memitem:af9093c6a8b0e01ebc831c45ba828eb9a"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#af9093c6a8b0e01ebc831c45ba828eb9a">AbstractGrid</a> (const BoxType &amp;bbox, const <a class="el" href="classvcl_1_1AbstractGrid.html#a1a9140b7b7608308c699e7d7f617a03d">KeyType</a> &amp;sizes, <a class="el" href="classvcl_1_1AbstractGrid.html#a6bddf29ec17ccb4600d19548e0687ba0">IsInCellFunction</a> <a class="el" href="classvcl_1_1AbstractGrid.html#a7ba78832434300f9f9e09943efcb6eaa">intersects</a>=nullptr)</td></tr>
+<tr class="memitem:af9093c6a8b0e01ebc831c45ba828eb9a"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#af9093c6a8b0e01ebc831c45ba828eb9a">AbstractGrid</a> (const BoxType &amp;bbox, const <a class="el" href="classvcl_1_1AbstractGrid.html#a4ba12dd8a5cd0c295b52c11cbd50b466">KeyType</a> &amp;sizes, <a class="el" href="classvcl_1_1AbstractGrid.html#a6a3366f3d869c04a5421d439a2fa1c70">IsInCellFunction</a> <a class="el" href="classvcl_1_1AbstractGrid.html#a7ba78832434300f9f9e09943efcb6eaa">intersects</a>=nullptr)</td></tr>
 <tr class="memdesc:af9093c6a8b0e01ebc831c45ba828eb9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classvcl_1_1AbstractGrid.html" title="The AbstractGrid class describes a generic Spatial Data Structure organized on a regular grid,...">AbstractGrid</a> that allows to store ValueType values on a Grid bounded by <code>bbox</code>, and having the number of cells per dimension given by <code>sizes</code>.  <br /></td></tr>
 <tr class="separator:af9093c6a8b0e01ebc831c45ba828eb9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae40a06c1b0724b3844d2d9114eb9f119"><td class="memTemplParams" colspan="2">template&lt;typename ObjIterator &gt; </td></tr>
-<tr class="memitem:ae40a06c1b0724b3844d2d9114eb9f119"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#ae40a06c1b0724b3844d2d9114eb9f119">AbstractGrid</a> (ObjIterator begin, ObjIterator end, <a class="el" href="classvcl_1_1AbstractGrid.html#a6bddf29ec17ccb4600d19548e0687ba0">IsInCellFunction</a> <a class="el" href="classvcl_1_1AbstractGrid.html#a7ba78832434300f9f9e09943efcb6eaa">intersects</a>=nullptr)</td></tr>
+<tr class="memitem:ae40a06c1b0724b3844d2d9114eb9f119"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#ae40a06c1b0724b3844d2d9114eb9f119">AbstractGrid</a> (ObjIterator begin, ObjIterator end, <a class="el" href="classvcl_1_1AbstractGrid.html#a6a3366f3d869c04a5421d439a2fa1c70">IsInCellFunction</a> <a class="el" href="classvcl_1_1AbstractGrid.html#a7ba78832434300f9f9e09943efcb6eaa">intersects</a>=nullptr)</td></tr>
 <tr class="memdesc:ae40a06c1b0724b3844d2d9114eb9f119"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an <a class="el" href="classvcl_1_1AbstractGrid.html" title="The AbstractGrid class describes a generic Spatial Data Structure organized on a regular grid,...">AbstractGrid</a> having a proper Grid to store the elements.  <br /></td></tr>
 <tr class="separator:ae40a06c1b0724b3844d2d9114eb9f119"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17dbc4651d95457278b63239681319bc"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="conceptvcl_1_1Range.html">vcl::Range</a> Rng&gt; </td></tr>
-<tr class="memitem:a17dbc4651d95457278b63239681319bc"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#a17dbc4651d95457278b63239681319bc">AbstractGrid</a> (Rng &amp;&amp;r, <a class="el" href="classvcl_1_1AbstractGrid.html#a6bddf29ec17ccb4600d19548e0687ba0">IsInCellFunction</a> <a class="el" href="classvcl_1_1AbstractGrid.html#a7ba78832434300f9f9e09943efcb6eaa">intersects</a>=nullptr)</td></tr>
+<tr class="memitem:a17dbc4651d95457278b63239681319bc"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#a17dbc4651d95457278b63239681319bc">AbstractGrid</a> (Rng &amp;&amp;r, <a class="el" href="classvcl_1_1AbstractGrid.html#a6a3366f3d869c04a5421d439a2fa1c70">IsInCellFunction</a> <a class="el" href="classvcl_1_1AbstractGrid.html#a7ba78832434300f9f9e09943efcb6eaa">intersects</a>=nullptr)</td></tr>
 <tr class="memdesc:a17dbc4651d95457278b63239681319bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an <a class="el" href="classvcl_1_1AbstractGrid.html" title="The AbstractGrid class describes a generic Spatial Data Structure organized on a regular grid,...">AbstractGrid</a> having a proper Grid to store the elements.  <br /></td></tr>
 <tr class="separator:a17dbc4651d95457278b63239681319bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a7ba78832434300f9f9e09943efcb6eaa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1AbstractGrid.html#a6bddf29ec17ccb4600d19548e0687ba0">IsInCellFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#a7ba78832434300f9f9e09943efcb6eaa">intersects</a></td></tr>
+<tr class="memitem:a7ba78832434300f9f9e09943efcb6eaa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1AbstractGrid.html#a6a3366f3d869c04a5421d439a2fa1c70">IsInCellFunction</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractGrid.html#a7ba78832434300f9f9e09943efcb6eaa">intersects</a></td></tr>
 <tr class="separator:a7ba78832434300f9f9e09943efcb6eaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -228,8 +231,8 @@ class vcl::AbstractGrid&lt; GridType, ValueType, DerivedGrid &gt;</div><p>The <a
 <p>This class cannot be instantiated. You can only instantiate a derived class.</p>
 <p>This class provides only constructor and member functions that are common with all the derived classes. Note that derived class can hide some of the member exposed in this class (e.g. they could disallow the possibility to remove elements from a grid). </p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a6bddf29ec17ccb4600d19548e0687ba0" name="a6bddf29ec17ccb4600d19548e0687ba0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6bddf29ec17ccb4600d19548e0687ba0">&#9670;&#160;</a></span>IsInCellFunction</h2>
+<a id="a6a3366f3d869c04a5421d439a2fa1c70" name="a6a3366f3d869c04a5421d439a2fa1c70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a3366f3d869c04a5421d439a2fa1c70">&#9670;&#160;</a></span>IsInCellFunction</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -237,15 +240,18 @@ class vcl::AbstractGrid&lt; GridType, ValueType, DerivedGrid &gt;</div><p>The <a
 template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classvcl_1_1AbstractGrid.html">vcl::AbstractGrid</a>&lt; GridType, ValueType, DerivedGrid &gt;::IsInCellFunction =  std::function&lt;bool(const typename GridType::BBoxType&amp;, const <a class="el" href="namespacevcl.html#a2ec2f45ee6feff2a4aff0f15d6b0b0b0">RemoveCVRefAndPointer</a>&lt;ValueType&gt;&amp;)&gt;</td>
+          <td class="memname">using <a class="el" href="classvcl_1_1AbstractGrid.html">vcl::AbstractGrid</a>&lt; GridType, ValueType, DerivedGrid &gt;::IsInCellFunction =  std::function&lt;bool( const typename GridType::BBoxType&amp;, const <a class="el" href="namespacevcl.html#a2ec2f45ee6feff2a4aff0f15d6b0b0b0">RemoveCVRefAndPointer</a>&lt;ValueType&gt;&amp;)&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>The IsInCellFunction type is a std::function that takes as input a bounding box and a value, and returns true if the value intersects the bounding box. </p>
+<p>It is used to customize the behavior of the grid when inserting values. </p>
+
 </div>
 </div>
-<a id="a1a9140b7b7608308c699e7d7f617a03d" name="a1a9140b7b7608308c699e7d7f617a03d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a9140b7b7608308c699e7d7f617a03d">&#9670;&#160;</a></span>KeyType</h2>
+<a id="a4ba12dd8a5cd0c295b52c11cbd50b466" name="a4ba12dd8a5cd0c295b52c11cbd50b466"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ba12dd8a5cd0c295b52c11cbd50b466">&#9670;&#160;</a></span>KeyType</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -253,7 +259,7 @@ template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; <
 template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classvcl_1_1AbstractGrid.html">vcl::AbstractGrid</a>&lt; GridType, ValueType, DerivedGrid &gt;::KeyType =  typename GridType::CellCoord</td>
+          <td class="memname">using <a class="el" href="classvcl_1_1AbstractGrid.html">vcl::AbstractGrid</a>&lt; GridType, ValueType, DerivedGrid &gt;::KeyType =  GridType::CellCoord</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -276,10 +282,13 @@ template&lt;typename QueryValueType &gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>The QueryBoundedDistFunction type is a std::function that takes as input a query value, a value stored in the grid, and a maximum distance between the two values, and returns the distance between the two values. If the distance is greater than the maximum distance, the function must return a value greater than the maximum distance. </p>
+<p>It is used to customize the behavior of the grid when querying values, and it allows to speedup the query by avoiding to compute some distances that are greater than the maximum distance. </p>
+
 </div>
 </div>
-<a id="ad9d5b06b7a4cc2491216c79485df4bfe" name="ad9d5b06b7a4cc2491216c79485df4bfe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9d5b06b7a4cc2491216c79485df4bfe">&#9670;&#160;</a></span>QueryDistFunction</h2>
+<a id="ab35a3aa3ed5c4caf6c7fd39d2ef3eec7" name="ab35a3aa3ed5c4caf6c7fd39d2ef3eec7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab35a3aa3ed5c4caf6c7fd39d2ef3eec7">&#9670;&#160;</a></span>QueryDistFunction</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -289,10 +298,13 @@ template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; <
 template&lt;typename QueryValueType &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classvcl_1_1AbstractGrid.html">vcl::AbstractGrid</a>&lt; GridType, ValueType, DerivedGrid &gt;::QueryDistFunction =  std::function&lt;typename GridType::ScalarType(const QueryValueType&amp;, const <a class="el" href="namespacevcl.html#a2ec2f45ee6feff2a4aff0f15d6b0b0b0">RemoveCVRefAndPointer</a>&lt;ValueType&gt;&amp;)&gt;</td>
+          <td class="memname">using <a class="el" href="classvcl_1_1AbstractGrid.html">vcl::AbstractGrid</a>&lt; GridType, ValueType, DerivedGrid &gt;::QueryDistFunction =  std::function&lt;typename GridType::ScalarType( const QueryValueType&amp;, const <a class="el" href="namespacevcl.html#a2ec2f45ee6feff2a4aff0f15d6b0b0b0">RemoveCVRefAndPointer</a>&lt;ValueType&gt;&amp;)&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The QueryDistFunction type is a std::function that takes as input a query value and a value stored in the grid, and returns the distance between the two values. </p>
+<p>It is used to customize the behavior of the grid when querying values. </p>
 
 </div>
 </div>
@@ -309,12 +321,15 @@ template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; <
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1AbstractGrid.html">vcl::AbstractGrid</a>&lt; GridType, ValueType, DerivedGrid &gt;::AbstractGrid</td>
+          <td class="memname"><a class="el" href="classvcl_1_1AbstractGrid.html">vcl::AbstractGrid</a>&lt; GridType, ValueType, DerivedGrid &gt;::AbstractGrid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -343,7 +358,7 @@ template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; <
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1AbstractGrid.html#a6bddf29ec17ccb4600d19548e0687ba0">IsInCellFunction</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1AbstractGrid.html#a6a3366f3d869c04a5421d439a2fa1c70">IsInCellFunction</a>&#160;</td>
           <td class="paramname"><em>intersects</em> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>
@@ -354,7 +369,7 @@ template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; <
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -362,7 +377,8 @@ template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; <
 <p>Creates a <a class="el" href="classvcl_1_1AbstractGrid.html" title="The AbstractGrid class describes a generic Spatial Data Structure organized on a regular grid,...">AbstractGrid</a> that allows to store ValueType values on the given grid. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">grid</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">grid</td><td>the grid on which the values will be stored. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">intersects</td><td>the function that will be used to check if a inserted value intersects (lies in) a cell. If nullptr, the default intersects function will be used. </td></tr>
   </table>
   </dd>
 </dl>
@@ -397,13 +413,13 @@ template&lt;PointConcept PointType&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classvcl_1_1AbstractGrid.html#a1a9140b7b7608308c699e7d7f617a03d">KeyType</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classvcl_1_1AbstractGrid.html#a4ba12dd8a5cd0c295b52c11cbd50b466">KeyType</a> &amp;&#160;</td>
           <td class="paramname"><em>sizes</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1AbstractGrid.html#a6bddf29ec17ccb4600d19548e0687ba0">IsInCellFunction</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1AbstractGrid.html#a6a3366f3d869c04a5421d439a2fa1c70">IsInCellFunction</a>&#160;</td>
           <td class="paramname"><em>intersects</em> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>
@@ -414,7 +430,7 @@ template&lt;PointConcept PointType&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -422,9 +438,10 @@ template&lt;PointConcept PointType&gt; </div>
 <p>Creates a <a class="el" href="classvcl_1_1AbstractGrid.html" title="The AbstractGrid class describes a generic Spatial Data Structure organized on a regular grid,...">AbstractGrid</a> that allows to store ValueType values on a Grid having <code>min</code> as minimum coordinte of the Grid, <code>max</code> as maximum coordinate of the grid, and the number of cells per dimension given by <code>sizes</code>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">min</td><td></td></tr>
-    <tr><td class="paramname">max</td><td></td></tr>
-    <tr><td class="paramname">sizes</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">min</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">max</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sizes</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">intersects</td><td>the function that will be used to check if a inserted value intersects (lies in) a cell. If nullptr, the default intersects function will be used. </td></tr>
   </table>
   </dd>
 </dl>
@@ -453,13 +470,13 @@ template&lt;typename BoxType &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classvcl_1_1AbstractGrid.html#a1a9140b7b7608308c699e7d7f617a03d">KeyType</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classvcl_1_1AbstractGrid.html#a4ba12dd8a5cd0c295b52c11cbd50b466">KeyType</a> &amp;&#160;</td>
           <td class="paramname"><em>sizes</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1AbstractGrid.html#a6bddf29ec17ccb4600d19548e0687ba0">IsInCellFunction</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1AbstractGrid.html#a6a3366f3d869c04a5421d439a2fa1c70">IsInCellFunction</a>&#160;</td>
           <td class="paramname"><em>intersects</em> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>
@@ -470,7 +487,7 @@ template&lt;typename BoxType &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -478,8 +495,9 @@ template&lt;typename BoxType &gt; </div>
 <p>Creates a <a class="el" href="classvcl_1_1AbstractGrid.html" title="The AbstractGrid class describes a generic Spatial Data Structure organized on a regular grid,...">AbstractGrid</a> that allows to store ValueType values on a Grid bounded by <code>bbox</code>, and having the number of cells per dimension given by <code>sizes</code>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">bbox</td><td></td></tr>
-    <tr><td class="paramname">sizes</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bbox</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sizes</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">intersects</td><td>the function that will be used to check if a inserted value intersects (lies in) a cell. If nullptr, the default intersects function will be used. </td></tr>
   </table>
   </dd>
 </dl>
@@ -514,7 +532,7 @@ template&lt;typename ObjIterator &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1AbstractGrid.html#a6bddf29ec17ccb4600d19548e0687ba0">IsInCellFunction</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1AbstractGrid.html#a6a3366f3d869c04a5421d439a2fa1c70">IsInCellFunction</a>&#160;</td>
           <td class="paramname"><em>intersects</em> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>
@@ -525,7 +543,7 @@ template&lt;typename ObjIterator &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -535,8 +553,9 @@ template&lt;typename ObjIterator &gt; </div>
 <dl class="section note"><dt>Note</dt><dd>This constructor <b>does not insert the elements</b> in the Grid Data Structure. Pure virtual classes cannot call pure virtual member functions from constuctors. It is duty of each derived class to insert the elements after calling this constructor.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">begin</td><td></td></tr>
-    <tr><td class="paramname">end</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">begin</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">end</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">intersects</td><td>the function that will be used to check if a inserted value intersects (lies in) a cell. If nullptr, the default intersects function will be used. </td></tr>
   </table>
   </dd>
 </dl>
@@ -565,7 +584,7 @@ template&lt;<a class="el" href="conceptvcl_1_1Range.html">vcl::Range</a> Rng&gt;
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1AbstractGrid.html#a6bddf29ec17ccb4600d19548e0687ba0">IsInCellFunction</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1AbstractGrid.html#a6a3366f3d869c04a5421d439a2fa1c70">IsInCellFunction</a>&#160;</td>
           <td class="paramname"><em>intersects</em> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>
@@ -576,7 +595,7 @@ template&lt;<a class="el" href="conceptvcl_1_1Range.html">vcl::Range</a> Rng&gt;
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -586,7 +605,8 @@ template&lt;<a class="el" href="conceptvcl_1_1Range.html">vcl::Range</a> Rng&gt;
 <dl class="section note"><dt>Note</dt><dd>This constructor <b>does not insert the elements</b> in the Grid Data Structure. Pure virtual classes cannot call pure virtual member functions from constuctors. It is duty of each derived class to insert the elements after calling this constructor.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">r</td><td>a range that satisfies the concept std::ranges::range </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>a range that satisfies the concept std::ranges::range </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">intersects</td><td>the function that will be used to check if a inserted value intersects (lies in) a cell. If nullptr, the default intersects function will be used. </td></tr>
   </table>
   </dd>
 </dl>
@@ -601,15 +621,23 @@ template&lt;<a class="el" href="conceptvcl_1_1Range.html">vcl::Range</a> Rng&gt;
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool <a class="el" href="classvcl_1_1AbstractGrid.html">vcl::AbstractGrid</a>&lt; GridType, ValueType, DerivedGrid &gt;::cellEmpty </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classvcl_1_1AbstractGrid.html#a1a9140b7b7608308c699e7d7f617a03d">KeyType</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classvcl_1_1AbstractGrid.html#a4ba12dd8a5cd0c295b52c11cbd50b466">KeyType</a> &amp;&#160;</td>
           <td class="paramname"><em>k</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -623,6 +651,9 @@ template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; <
 template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; </div>
 <div class="memtemplate">
 template&lt;typename QueryValueType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">auto <a class="el" href="classvcl_1_1AbstractGrid.html">vcl::AbstractGrid</a>&lt; GridType, ValueType, DerivedGrid &gt;::closestValue </td>
@@ -632,6 +663,11 @@ template&lt;typename QueryValueType &gt; </div>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -645,6 +681,9 @@ template&lt;typename QueryValueType &gt; </div>
 template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; </div>
 <div class="memtemplate">
 template&lt;typename QueryValueType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">auto <a class="el" href="classvcl_1_1AbstractGrid.html">vcl::AbstractGrid</a>&lt; GridType, ValueType, DerivedGrid &gt;::closestValue </td>
@@ -670,6 +709,11 @@ template&lt;typename QueryValueType &gt; </div>
           <td></td><td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -683,6 +727,9 @@ template&lt;typename QueryValueType &gt; </div>
 template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; </div>
 <div class="memtemplate">
 template&lt;typename QueryValueType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">auto <a class="el" href="classvcl_1_1AbstractGrid.html">vcl::AbstractGrid</a>&lt; GridType, ValueType, DerivedGrid &gt;::closestValue </td>
@@ -693,7 +740,7 @@ template&lt;typename QueryValueType &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1AbstractGrid.html#ad9d5b06b7a4cc2491216c79485df4bfe">QueryDistFunction</a>&lt; QueryValueType &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1AbstractGrid.html#ab35a3aa3ed5c4caf6c7fd39d2ef3eec7">QueryDistFunction</a>&lt; QueryValueType &gt;&#160;</td>
           <td class="paramname"><em>distFunction</em>&#160;</td>
         </tr>
         <tr>
@@ -702,6 +749,11 @@ template&lt;typename QueryValueType &gt; </div>
           <td></td><td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -715,6 +767,9 @@ template&lt;typename QueryValueType &gt; </div>
 template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; </div>
 <div class="memtemplate">
 template&lt;typename QueryValueType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">auto <a class="el" href="classvcl_1_1AbstractGrid.html">vcl::AbstractGrid</a>&lt; GridType, ValueType, DerivedGrid &gt;::closestValue </td>
@@ -725,7 +780,7 @@ template&lt;typename QueryValueType &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1AbstractGrid.html#ad9d5b06b7a4cc2491216c79485df4bfe">QueryDistFunction</a>&lt; QueryValueType &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1AbstractGrid.html#ab35a3aa3ed5c4caf6c7fd39d2ef3eec7">QueryDistFunction</a>&lt; QueryValueType &gt;&#160;</td>
           <td class="paramname"><em>distFunction</em>, </td>
         </tr>
         <tr>
@@ -740,6 +795,11 @@ template&lt;typename QueryValueType &gt; </div>
           <td></td><td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -753,6 +813,9 @@ template&lt;typename QueryValueType &gt; </div>
 template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; </div>
 <div class="memtemplate">
 template&lt;typename QueryValueType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">auto <a class="el" href="classvcl_1_1AbstractGrid.html">vcl::AbstractGrid</a>&lt; GridType, ValueType, DerivedGrid &gt;::closestValue </td>
@@ -772,6 +835,11 @@ template&lt;typename QueryValueType &gt; </div>
           <td></td><td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -783,15 +851,23 @@ template&lt;typename QueryValueType &gt; </div>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">std::size_t <a class="el" href="classvcl_1_1AbstractGrid.html">vcl::AbstractGrid</a>&lt; GridType, ValueType, DerivedGrid &gt;::countInCell </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classvcl_1_1AbstractGrid.html#a1a9140b7b7608308c699e7d7f617a03d">KeyType</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classvcl_1_1AbstractGrid.html#a4ba12dd8a5cd0c295b52c11cbd50b466">KeyType</a> &amp;&#160;</td>
           <td class="paramname"><em>k</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -803,6 +879,9 @@ template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; <
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> <a class="el" href="classvcl_1_1AbstractGrid.html">vcl::AbstractGrid</a>&lt; GridType, ValueType, DerivedGrid &gt;::countInSphere </td>
@@ -812,6 +891,11 @@ template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; <
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -823,6 +907,9 @@ template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; <
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool <a class="el" href="classvcl_1_1AbstractGrid.html">vcl::AbstractGrid</a>&lt; GridType, ValueType, DerivedGrid &gt;::erase </td>
@@ -832,6 +919,11 @@ template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; <
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -843,15 +935,23 @@ template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; <
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool <a class="el" href="classvcl_1_1AbstractGrid.html">vcl::AbstractGrid</a>&lt; GridType, ValueType, DerivedGrid &gt;::eraseAllInCell </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classvcl_1_1AbstractGrid.html#a1a9140b7b7608308c699e7d7f617a03d">KeyType</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classvcl_1_1AbstractGrid.html#a4ba12dd8a5cd0c295b52c11cbd50b466">KeyType</a> &amp;&#160;</td>
           <td class="paramname"><em>k</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -863,6 +963,9 @@ template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; <
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classvcl_1_1AbstractGrid.html">vcl::AbstractGrid</a>&lt; GridType, ValueType, DerivedGrid &gt;::eraseInSphere </td>
@@ -872,6 +975,11 @@ template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; <
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -883,6 +991,9 @@ template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; <
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool <a class="el" href="classvcl_1_1AbstractGrid.html">vcl::AbstractGrid</a>&lt; GridType, ValueType, DerivedGrid &gt;::insert </td>
@@ -892,6 +1003,11 @@ template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; <
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Inserts the given element in the <a class="el" href="classvcl_1_1AbstractGrid.html" title="The AbstractGrid class describes a generic Spatial Data Structure organized on a regular grid,...">AbstractGrid</a>. </p>
@@ -915,6 +1031,9 @@ template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; <
 template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; </div>
 <div class="memtemplate">
 template&lt;typename ObjIterator &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> <a class="el" href="classvcl_1_1AbstractGrid.html">vcl::AbstractGrid</a>&lt; GridType, ValueType, DerivedGrid &gt;::insert </td>
@@ -934,6 +1053,11 @@ template&lt;typename ObjIterator &gt; </div>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Inserts all the elements from <code>begin</code> to <code>end</code>. The type referenced by the iterator must be the ValueType of the <a class="el" href="classvcl_1_1AbstractGrid.html" title="The AbstractGrid class describes a generic Spatial Data Structure organized on a regular grid,...">AbstractGrid</a>. </p>
@@ -957,6 +1081,9 @@ template&lt;typename ObjIterator &gt; </div>
 template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; </div>
 <div class="memtemplate">
 template&lt;<a class="el" href="conceptvcl_1_1Range.html">vcl::Range</a> Rng&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> <a class="el" href="classvcl_1_1AbstractGrid.html">vcl::AbstractGrid</a>&lt; GridType, ValueType, DerivedGrid &gt;::insert </td>
@@ -966,6 +1093,11 @@ template&lt;<a class="el" href="conceptvcl_1_1Range.html">vcl::Range</a> Rng&gt;
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Inserts all the elements contained in the input range r, from <code>begin</code> to <code>end</code>. The type referenced by the iterator must be the ValueType of the <a class="el" href="classvcl_1_1AbstractGrid.html" title="The AbstractGrid class describes a generic Spatial Data Structure organized on a regular grid,...">AbstractGrid</a>. </p>
@@ -988,6 +1120,9 @@ template&lt;<a class="el" href="conceptvcl_1_1Range.html">vcl::Range</a> Rng&gt;
 template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; </div>
 <div class="memtemplate">
 template&lt;typename QueryValueType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">auto <a class="el" href="classvcl_1_1AbstractGrid.html">vcl::AbstractGrid</a>&lt; GridType, ValueType, DerivedGrid &gt;::kClosestValues </td>
@@ -1007,6 +1142,11 @@ template&lt;typename QueryValueType &gt; </div>
           <td></td><td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -1020,6 +1160,9 @@ template&lt;typename QueryValueType &gt; </div>
 template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; </div>
 <div class="memtemplate">
 template&lt;typename QueryValueType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">auto <a class="el" href="classvcl_1_1AbstractGrid.html">vcl::AbstractGrid</a>&lt; GridType, ValueType, DerivedGrid &gt;::kClosestValues </td>
@@ -1036,7 +1179,7 @@ template&lt;typename QueryValueType &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1AbstractGrid.html#ad9d5b06b7a4cc2491216c79485df4bfe">QueryDistFunction</a>&lt; QueryValueType &gt;&#160;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1AbstractGrid.html#ab35a3aa3ed5c4caf6c7fd39d2ef3eec7">QueryDistFunction</a>&lt; QueryValueType &gt;&#160;</td>
           <td class="paramname"><em>distFunction</em>&#160;</td>
         </tr>
         <tr>
@@ -1045,6 +1188,11 @@ template&lt;typename QueryValueType &gt; </div>
           <td></td><td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -1056,6 +1204,9 @@ template&lt;typename QueryValueType &gt; </div>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">auto <a class="el" href="classvcl_1_1AbstractGrid.html">vcl::AbstractGrid</a>&lt; GridType, ValueType, DerivedGrid &gt;::valuesInSphere </td>
@@ -1065,6 +1216,11 @@ template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; <
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -1082,7 +1238,7 @@ template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; <
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1AbstractGrid.html#a6bddf29ec17ccb4600d19548e0687ba0">IsInCellFunction</a> <a class="el" href="classvcl_1_1AbstractGrid.html">vcl::AbstractGrid</a>&lt; GridType, ValueType, DerivedGrid &gt;::intersects</td>
+          <td class="memname"><a class="el" href="classvcl_1_1AbstractGrid.html#a6a3366f3d869c04a5421d439a2fa1c70">IsInCellFunction</a> <a class="el" href="classvcl_1_1AbstractGrid.html">vcl::AbstractGrid</a>&lt; GridType, ValueType, DerivedGrid &gt;::intersects</td>
         </tr>
       </table>
   </td>
@@ -1094,9 +1250,8 @@ template&lt;typename GridType , typename ValueType , typename DerivedGrid &gt; <
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/runner/work/vclib/vclib/include/vclib/space/grid/<a class="el" href="abstract__grid_8h_source.html">abstract_grid.h</a></li>
-<li>/home/runner/work/vclib/vclib/include/vclib/space/grid/<a class="el" href="abstract__grid_8cpp.html">abstract_grid.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

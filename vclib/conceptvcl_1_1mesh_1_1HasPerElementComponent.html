@@ -101,13 +101,13 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1mesh_1_1HasPerElementCom
 
 <p><code>#include &lt;<a class="el" href="concepts_2mesh_2containers_2element__container_8h_source.html">vclib/concepts/mesh/containers/element_container.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
-<div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType, u<span class="keywordtype">int</span> EL_TYPE, u<span class="keywordtype">int</span> COMP_TYPE&gt;</div>
+<div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType, u<span class="keywordtype">int</span> ELEM_ID, u<span class="keywordtype">int</span> COMP_ID&gt;</div>
 <div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1mesh_1_1HasPerElementComponent.html">vcl::mesh::HasPerElementComponent</a> = </div>
-<div class="line">    <a class="code hl_concept" href="conceptvcl_1_1mesh_1_1HasElementContainer.html">HasElementContainer&lt;MeshType, EL_TYPE&gt;</a> &amp;&amp;</div>
+<div class="line">    <a class="code hl_concept" href="conceptvcl_1_1mesh_1_1HasElementContainer.html">HasElementContainer&lt;MeshType, ELEM_ID&gt;</a> &amp;&amp;</div>
 <div class="line">    <a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasComponentOfType.html">comp::HasComponentOfType</a>&lt;</div>
-<div class="line">            <span class="keyword">typename</span> ContainerOfElementType&lt;EL_TYPE, MeshType&gt;::ElementType,</div>
-<div class="line">            COMP_TYPE&gt;</div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasComponentOfType_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasComponentOfType.html">vcl::comp::HasComponentOfType</a></div><div class="ttdef"><b>Definition:</b> component.h:178</div></div>
+<div class="line">        <span class="keyword">typename</span> ContainerOfElementType&lt;ELEM_ID, MeshType&gt;::ElementType,</div>
+<div class="line">        COMP_ID&gt;</div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasComponentOfType_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasComponentOfType.html">vcl::comp::HasComponentOfType</a></div><div class="ttdef"><b>Definition:</b> component.h:177</div></div>
 <div class="ttc" id="aconceptvcl_1_1mesh_1_1HasElementContainer_html"><div class="ttname"><a href="conceptvcl_1_1mesh_1_1HasElementContainer.html">vcl::mesh::HasElementContainer</a></div><div class="ttdef"><b>Definition:</b> element_container.h:158</div></div>
 <div class="ttc" id="aconceptvcl_1_1mesh_1_1HasPerElementComponent_html"><div class="ttname"><a href="conceptvcl_1_1mesh_1_1HasPerElementComponent.html">vcl::mesh::HasPerElementComponent</a></div><div class="ttdef"><b>Definition:</b> element_container.h:162</div></div>
 </div><!-- fragment --></div><!-- contents -->

@@ -1,10 +1,10 @@
 var algorithms_2stat_2quality_8h =
 [
-    [ "faceQualityAverage", "algorithms_2stat_2quality_8h.html#abc5408ecde20468d586c4fd1ade88b8c", null ],
-    [ "faceQualityHistogram", "algorithms_2stat_2quality_8h.html#aea323ba2f9caf6ab69eae78bde5fd1fb", null ],
-    [ "faceQualityMinMax", "algorithms_2stat_2quality_8h.html#a681f23d7f898d89ea129c4f44af21ab5", null ],
-    [ "vertexQualityAverage", "algorithms_2stat_2quality_8h.html#a0e3e4c6cf753b972f6aa88e995cae37f", null ],
-    [ "vertexQualityHistogram", "algorithms_2stat_2quality_8h.html#a036f8b799ba41de77107abe7d46d7872", null ],
-    [ "vertexQualityMinMax", "algorithms_2stat_2quality_8h.html#a3a5eacbb9ebfbd1ba9498335553f1d75", null ],
-    [ "vertexRadiusFromQuality", "algorithms_2stat_2quality_8h.html#ab1cb8400bb1454c8b7b585825837975c", null ]
+    [ "faceQualityAverage", "algorithms_2stat_2quality_8h.html#a4cdee5764b3aa8dbc91ff6a114e9bfc1", null ],
+    [ "faceQualityHistogram", "algorithms_2stat_2quality_8h.html#af44349f8534585f6e0cef128edb98ca0", null ],
+    [ "faceQualityMinMax", "algorithms_2stat_2quality_8h.html#a42145b026908d9eafadd429eba4fa0be", null ],
+    [ "vertexQualityAverage", "algorithms_2stat_2quality_8h.html#a9ed4ecc783b58f5327f0a6b68c071727", null ],
+    [ "vertexQualityHistogram", "algorithms_2stat_2quality_8h.html#a7cbfad9340b842c1bf68c7faf4ff9dc7", null ],
+    [ "vertexQualityMinMax", "algorithms_2stat_2quality_8h.html#ae2972300f527bd1cce6182dde8b76c41", null ],
+    [ "vertexRadiusFromQuality", "algorithms_2stat_2quality_8h.html#aa8a8d81401816c73db39eeae352e95bc", null ]
 ];

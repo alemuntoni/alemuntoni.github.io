@@ -1,7 +1,7 @@
 var classvcl_1_1ConstMeshEdgeUtil =
 [
-    [ "FaceType", "classvcl_1_1ConstMeshEdgeUtil.html#acab79d6b601c59d079e04001af00e8a5", null ],
-    [ "VertexType", "classvcl_1_1ConstMeshEdgeUtil.html#a110ecf967bb439f8f47ec9c5043e4069", null ],
+    [ "FaceType", "classvcl_1_1ConstMeshEdgeUtil.html#a1c6dabbc8a6c110c00fe9d2ffde3492c", null ],
+    [ "VertexType", "classvcl_1_1ConstMeshEdgeUtil.html#ab23dd10d9d2ef6eef63f270cd61f9a98", null ],
     [ "ConstMeshEdgeUtil", "classvcl_1_1ConstMeshEdgeUtil.html#ac2c86617390e27a177e7f4122b3df91e", null ],
     [ "ConstMeshEdgeUtil", "classvcl_1_1ConstMeshEdgeUtil.html#afb100f92707e151b996028b9c7f24d42", null ],
     [ "operator!=", "classvcl_1_1ConstMeshEdgeUtil.html#afe174df324e40b9a0564a70947a834f1", null ],

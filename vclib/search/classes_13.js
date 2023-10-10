@@ -15,7 +15,7 @@ var searchData=
   ['verticalcomponentsvectortuple_12',['VerticalComponentsVectorTuple',['../classvcl_1_1mesh_1_1VerticalComponentsVectorTuple.html',1,'vcl::mesh']]],
   ['verticalcomponentsvectortuple_3c_20comp_2e_2e_2e_20_3e_13',['VerticalComponentsVectorTuple&lt; Comp... &gt;',['../classvcl_1_1mesh_1_1VerticalComponentsVectorTuple.html',1,'vcl::mesh']]],
   ['verticalcomponentsvectortuple_3c_20typewrapper_3c_20comp_2e_2e_2e_20_3e_20_3e_14',['VerticalComponentsVectorTuple&lt; TypeWrapper&lt; Comp... &gt; &gt;',['../classvcl_1_1mesh_1_1VerticalComponentsVectorTuple_3_01TypeWrapper_3_01Comp_8_8_8_01_4_01_4.html',1,'vcl::mesh']]],
-  ['verticalcomponentsvectortuple_3c_20vcomps_20_3e_15',['VerticalComponentsVectorTuple&lt; vComps &gt;',['../classvcl_1_1mesh_1_1VerticalComponentsVectorTuple.html',1,'vcl::mesh']]],
+  ['verticalcomponentsvectortuple_3c_20vcl_3a_3atypewrapper_20_3e_15',['VerticalComponentsVectorTuple&lt; vcl::TypeWrapper &gt;',['../classvcl_1_1mesh_1_1VerticalComponentsVectorTuple.html',1,'vcl::mesh']]],
   ['view_16',['View',['../classvcl_1_1View.html',1,'vcl']]],
   ['viewermainwindow_17',['ViewerMainWindow',['../classvcl_1_1ViewerMainWindow.html',1,'vcl']]]
 ];

@@ -1,11 +1,10 @@
 var classvcl_1_1Histogram =
 [
-    [ "Histogram", "classvcl_1_1Histogram.html#a00ff22ceafc0a856103fb73d801e8910", null ],
+    [ "Histogram", "classvcl_1_1Histogram.html#a51b0a585165fc881570958d2d1e7a81c", null ],
     [ "Histogram", "classvcl_1_1Histogram.html#ac454f39e64714c1070009716387377cc", null ],
     [ "addValue", "classvcl_1_1Histogram.html#ab9b372c1e43a8d02f30ad15bfc35e489", null ],
     [ "average", "classvcl_1_1Histogram.html#adb0d96b179e6d7371fcc02e63b2032b1", null ],
     [ "binCount", "classvcl_1_1Histogram.html#a73227f94351ba015687b86afbe3cfd92", null ],
-    [ "binIndex", "classvcl_1_1Histogram.html#a0cde514b52abe94b7fb7ecab0092408a", null ],
     [ "binLowerBound", "classvcl_1_1Histogram.html#a74a3f6f3d7362a647cf78a2090f7c561", null ],
     [ "binOfValueCount", "classvcl_1_1Histogram.html#a86ebef43c8ec4f12c2e78683d73773de", null ],
     [ "binOfValueCount", "classvcl_1_1Histogram.html#a7ecd25c776749d09154500ca91374eb2", null ],
@@ -25,15 +24,5 @@ var classvcl_1_1Histogram =
     [ "rootMeanSquare", "classvcl_1_1Histogram.html#a521e2f6333c4f5612753be6ea41d1113", null ],
     [ "standardDeviation", "classvcl_1_1Histogram.html#ad0c8b335f1f0964123f94364fa5ffa59", null ],
     [ "sumValues", "classvcl_1_1Histogram.html#a2a1be82defe67055c7b47956d292ad5e", null ],
-    [ "variance", "classvcl_1_1Histogram.html#a8e24ef4b580832f725aff9be1f0f6a31", null ],
-    [ "cnt", "classvcl_1_1Histogram.html#ab43557764f865793ae49245387fd708d", null ],
-    [ "H", "classvcl_1_1Histogram.html#a9a21acb482c251a461474f6044563579", null ],
-    [ "maxRangeVal", "classvcl_1_1Histogram.html#aeba7d15b3a936a9cf19379c13bb9940a", null ],
-    [ "maxVal", "classvcl_1_1Histogram.html#a2c6e7b12dd45e6b5e2d05a2851cb1db2", null ],
-    [ "minRangeVal", "classvcl_1_1Histogram.html#aa827b4e6e7a55c8b204e4239c76945ea", null ],
-    [ "minVal", "classvcl_1_1Histogram.html#a69d3ec54064ca9ccbbbf390a385abe26", null ],
-    [ "nBins", "classvcl_1_1Histogram.html#a98b6fb7ec1be6da2bb521d8fb3fb68eb", null ],
-    [ "R", "classvcl_1_1Histogram.html#a13a1144189c6b223813f07d2ce1ebc54", null ],
-    [ "rms", "classvcl_1_1Histogram.html#adb67b71ae88f8d149851fb1da51009a0", null ],
-    [ "sum", "classvcl_1_1Histogram.html#acbe071457de7757759983dcb1d2e79c5", null ]
+    [ "variance", "classvcl_1_1Histogram.html#a8e24ef4b580832f725aff9be1f0f6a31", null ]
 ];

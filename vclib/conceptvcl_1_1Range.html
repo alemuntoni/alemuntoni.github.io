@@ -105,12 +105,8 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1Range.html',''); initRes
 <p><code>#include &lt;<a class="el" href="ranges_2range_8h_source.html">vclib/concepts/ranges/range.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1Range.html">vcl::Range</a> =  <span class="keyword">requires</span>(T o)</div>
-<div class="line">{</div>
-<div class="line">    std::ranges::begin(o);</div>
-<div class="line">    std::ranges::end(o);</div>
-<div class="line">}</div>
-<div class="ttc" id="aconceptvcl_1_1Range_html"><div class="ttname"><a href="conceptvcl_1_1Range.html">vcl::Range</a></div><div class="ttdoc">Utility concept that is evaluated true if T is a range, e.g. if has a begin and an end.</div><div class="ttdef"><b>Definition:</b> range.h:53</div></div>
+<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1Range.html">vcl::Range</a> =  std::ranges::range&lt;T&gt;</div>
+<div class="ttc" id="aconceptvcl_1_1Range_html"><div class="ttname"><a href="conceptvcl_1_1Range.html">vcl::Range</a></div><div class="ttdoc">Utility concept that is evaluated true if T is a range, e.g. if has a begin and an end.</div><div class="ttdef"><b>Definition:</b> range.h:40</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Utility concept that is evaluated true if T is a range, e.g. if has a begin and an end. </p>
 <p>It is equivalent to std::ranges::range. </p>

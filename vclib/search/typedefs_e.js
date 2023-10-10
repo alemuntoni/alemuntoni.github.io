@@ -5,5 +5,5 @@ var searchData=
   ['qualityf_2',['Qualityf',['../group__components.html#gad14bbf090e3c6268f9b6d297f142b5b3',1,'vcl::comp::Qualityf()'],['../group__edge__components.html#ga100855a87bd0c2f0e27c578aa6407acf',1,'vcl::edge::Qualityf()'],['../group__face__components.html#ga31bee7c9eab8c40fea88ef0e1a91195e',1,'vcl::face::Qualityf()'],['../group__vert__components.html#ga269655f9d6880ff9e0d95a725382388a',1,'vcl::vert::Qualityf()']]],
   ['qualitytype_3',['QualityType',['../classvcl_1_1comp_1_1Quality.html#ace09b735ce4047544277303273d55533',1,'vcl::comp::Quality']]],
   ['queryboundeddistfunction_4',['QueryBoundedDistFunction',['../classvcl_1_1AbstractGrid.html#af3105d63ad6aa895e62002eb4580aa4e',1,'vcl::AbstractGrid']]],
-  ['querydistfunction_5',['QueryDistFunction',['../classvcl_1_1AbstractGrid.html#ad9d5b06b7a4cc2491216c79485df4bfe',1,'vcl::AbstractGrid']]]
+  ['querydistfunction_5',['QueryDistFunction',['../classvcl_1_1AbstractGrid.html#ab35a3aa3ed5c4caf6c7fd39d2ef3eec7',1,'vcl::AbstractGrid']]]
 ];

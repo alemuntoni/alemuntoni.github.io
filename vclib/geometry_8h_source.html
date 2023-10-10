@@ -125,48 +125,166 @@ $(document).ready(function(){initNavTree('geometry_8h_source.html',''); initResi
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define VCL_ALGORITHMS_POLYGON_GEOMETRY_H</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="requirements_8h.html">vclib/mesh/requirements.h</a>&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="space_2polygon_8h.html">vclib/space/polygon.h</a>&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="views_2mesh_8h.html">vclib/views/mesh.h</a>&gt;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#ifndef VCLIB_USES_RANGES</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">template</span>&lt;FaceConcept FaceType&gt;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">auto</span> <a class="code hl_function" href="namespacevcl.html#aa89dee93752905adc3252463a187c046">faceCoords</a>(<span class="keyword">const</span> FaceType&amp; f);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">template</span>&lt;FaceConcept FaceType&gt;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">typename</span> FaceType::VertexType::CoordType <a class="code hl_function" href="namespacevcl.html#a350d3edc324e0bef955a2c2ef8e20859">faceNormal</a>(<span class="keyword">const</span> FaceType&amp; f);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">template</span>&lt;FaceConcept FaceType&gt;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">typename</span> FaceType::VertexType::CoordType <a class="code hl_function" href="namespacevcl.html#a53b4f63db0979e578ebfa4b9e8b41f8a">faceBarycenter</a>(<span class="keyword">const</span> FaceType&amp; f);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">template</span>&lt;FaceConcept FaceType&gt;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">auto</span> <a class="code hl_function" href="namespacevcl.html#a9fc3b9cae851d7a729f40dc2f4ebe824">faceArea</a>(<span class="keyword">const</span> FaceType&amp; f);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">template</span>&lt;FaceConcept FaceType&gt;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">auto</span> <a class="code hl_function" href="namespacevcl.html#a1dccfede16e36e5ded5213fb13643943">facePerimeter</a>(<span class="keyword">const</span> FaceType&amp; f);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">template</span>&lt;FaceConcept FaceType&gt;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keyword">auto</span> <a class="code hl_function" href="namespacevcl.html#a12529598a32a7b21eac27744b3578600">faceAngleOnVertexRad</a>(<span class="keyword">const</span> FaceType&amp; f, <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> v);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keyword">template</span>&lt;FaceConcept FaceType&gt;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">auto</span> <a class="code hl_function" href="namespacevcl.html#a2177afd92cfc4dbe6468aa05892b016f">faceDihedralAngleOnEdge</a>(<span class="keyword">const</span> FaceType&amp; f, <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> e) <span class="keyword">requires</span> comp::HasAdjacentFaces&lt;FaceType&gt;;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#include &quot;<a class="code" href="geometry_8cpp.html">geometry.cpp</a>&quot;</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#endif </span><span class="comment">// VCL_ALGORITHMS_POLYGON_GEOMETRY_H</span></div>
-<div class="ttc" id="ageometry_8cpp_html"><div class="ttname"><a href="geometry_8cpp.html">geometry.cpp</a></div></div>
-<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition:</b> bounding_box.cpp:29</div></div>
-<div class="ttc" id="anamespacevcl_html_a12529598a32a7b21eac27744b3578600"><div class="ttname"><a href="namespacevcl.html#a12529598a32a7b21eac27744b3578600">vcl::faceAngleOnVertexRad</a></div><div class="ttdeci">auto faceAngleOnVertexRad(const FaceType &amp;f, uint vi)</div><div class="ttdoc">Returns the internal angle (in radians) of the vi-th vertex of the face.</div><div class="ttdef"><b>Definition:</b> geometry.cpp:178</div></div>
-<div class="ttc" id="anamespacevcl_html_a1dccfede16e36e5ded5213fb13643943"><div class="ttname"><a href="namespacevcl.html#a1dccfede16e36e5ded5213fb13643943">vcl::facePerimeter</a></div><div class="ttdeci">auto facePerimeter(const FaceType &amp;f)</div><div class="ttdoc">Computes the perimeter of a face. Works both for triangle and polygonal faces, and it is optimized in...</div><div class="ttdef"><b>Definition:</b> geometry.cpp:146</div></div>
-<div class="ttc" id="anamespacevcl_html_a2177afd92cfc4dbe6468aa05892b016f"><div class="ttname"><a href="namespacevcl.html#a2177afd92cfc4dbe6468aa05892b016f">vcl::faceDihedralAngleOnEdge</a></div><div class="ttdeci">auto faceDihedralAngleOnEdge(const FaceType &amp;f, uint e)</div><div class="ttdoc">Compute the signed dihedral angle between the normals of the given face and its adjacent face on the ...</div><div class="ttdef"><b>Definition:</b> geometry.cpp:205</div></div>
-<div class="ttc" id="anamespacevcl_html_a350d3edc324e0bef955a2c2ef8e20859"><div class="ttname"><a href="namespacevcl.html#a350d3edc324e0bef955a2c2ef8e20859">vcl::faceNormal</a></div><div class="ttdeci">FaceType::VertexType::CoordType faceNormal(const FaceType &amp;f)</div><div class="ttdoc">Computes the normal of a face, without modifying the face. Works both for triangle and polygonal face...</div><div class="ttdef"><b>Definition:</b> geometry.cpp:56</div></div>
-<div class="ttc" id="anamespacevcl_html_a53b4f63db0979e578ebfa4b9e8b41f8a"><div class="ttname"><a href="namespacevcl.html#a53b4f63db0979e578ebfa4b9e8b41f8a">vcl::faceBarycenter</a></div><div class="ttdeci">FaceType::VertexType::CoordType faceBarycenter(const FaceType &amp;f)</div><div class="ttdoc">Computes the barycenter of a face. Works both for triangle and polygonal faces, and it is optimized i...</div><div class="ttdef"><b>Definition:</b> geometry.cpp:88</div></div>
-<div class="ttc" id="anamespacevcl_html_a9fc3b9cae851d7a729f40dc2f4ebe824"><div class="ttname"><a href="namespacevcl.html#a9fc3b9cae851d7a729f40dc2f4ebe824">vcl::faceArea</a></div><div class="ttdeci">auto faceArea(const FaceType &amp;f)</div><div class="ttdoc">Computes the area of a face. Works both for triangle and polygonal faces, and it is optimized in case...</div><div class="ttdef"><b>Definition:</b> geometry.cpp:114</div></div>
-<div class="ttc" id="anamespacevcl_html_aa89dee93752905adc3252463a187c046"><div class="ttname"><a href="namespacevcl.html#aa89dee93752905adc3252463a187c046">vcl::faceCoords</a></div><div class="ttdeci">auto faceCoords(const FaceType &amp;f)</div><div class="ttdef"><b>Definition:</b> geometry.cpp:33</div></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">template</span>&lt;FaceConcept FaceType&gt;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="namespacevcl.html#a350d3edc324e0bef955a2c2ef8e20859">   44</a></span><span class="keyword">typename</span> FaceType::VertexType::CoordType <a class="code hl_function" href="namespacevcl.html#a350d3edc324e0bef955a2c2ef8e20859">faceNormal</a>(<span class="keyword">const</span> FaceType&amp; f)</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>{</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">using </span>CoordType = FaceType::VertexType::CoordType;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<a class="code hl_concept" href="conceptvcl_1_1TriangleFaceConcept.html">TriangleFaceConcept&lt;FaceType&gt;</a>) {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classvcl_1_1Triangle.html#a613d9fd7c03e0dc155ef0e6b4a51daae">Triangle&lt;CoordType&gt;::normal</a>(</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            f.vertex(0)-&gt;coord(), f.vertex(1)-&gt;coord(), f.vertex(2)-&gt;coord());</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">if</span> (f.vertexNumber() == 3) {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="classvcl_1_1Triangle.html#a613d9fd7c03e0dc155ef0e6b4a51daae">Triangle&lt;CoordType&gt;::normal</a>(</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                f.vertex(0)-&gt;coord(),</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                f.vertex(1)-&gt;coord(),</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                f.vertex(2)-&gt;coord());</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="classvcl_1_1Polygon.html#a1682137a9e9d27da0544591a46e50fd8">Polygon&lt;CoordType&gt;::normal</a>(f.vertices() | <a class="code hl_variable" href="namespacevcl_1_1views.html#a3c22902e10cd5bcafd3d5facbc74f91b">views::coords</a>);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    }</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="keyword">template</span>&lt;FaceConcept FaceType&gt;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="namespacevcl.html#a53b4f63db0979e578ebfa4b9e8b41f8a">   74</a></span><span class="keyword">typename</span> FaceType::VertexType::CoordType <a class="code hl_function" href="namespacevcl.html#a53b4f63db0979e578ebfa4b9e8b41f8a">faceBarycenter</a>(<span class="keyword">const</span> FaceType&amp; f)</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>{</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">using </span>CoordType = FaceType::VertexType::CoordType;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<a class="code hl_concept" href="conceptvcl_1_1TriangleFaceConcept.html">TriangleFaceConcept&lt;FaceType&gt;</a>) {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classvcl_1_1Triangle.html#a4953e20454da2c9b1a8ae81a8b9e7e58">Triangle&lt;CoordType&gt;::barycenter</a>(</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            f.vertex(0)-&gt;coord(), f.vertex(1)-&gt;coord(), f.vertex(2)-&gt;coord());</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classvcl_1_1Polygon.html#a78df2129a24b0d596ba49d4ec6b1d307">Polygon&lt;CoordType&gt;::barycenter</a>(f.vertices() | <a class="code hl_variable" href="namespacevcl_1_1views.html#a3c22902e10cd5bcafd3d5facbc74f91b">views::coords</a>);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>}</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="keyword">template</span>&lt;FaceConcept FaceType&gt;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="namespacevcl.html#a9fc3b9cae851d7a729f40dc2f4ebe824">   96</a></span><span class="keyword">auto</span> <a class="code hl_function" href="namespacevcl.html#a9fc3b9cae851d7a729f40dc2f4ebe824">faceArea</a>(<span class="keyword">const</span> FaceType&amp; f)</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>{</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keyword">using </span>CoordType = FaceType::VertexType::CoordType;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<a class="code hl_concept" href="conceptvcl_1_1TriangleFaceConcept.html">TriangleFaceConcept&lt;FaceType&gt;</a>) {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classvcl_1_1Triangle.html#a0170ec5bd9c19bca717743e7617f05e4">Triangle&lt;CoordType&gt;::area</a>(</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            f.vertex(0)-&gt;coord(), f.vertex(1)-&gt;coord(), f.vertex(2)-&gt;coord());</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    }</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="keywordflow">if</span> (f.vertexNumber() == 3) {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="classvcl_1_1Triangle.html#a0170ec5bd9c19bca717743e7617f05e4">Triangle&lt;CoordType&gt;::area</a>(</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                f.vertex(0)-&gt;coord(), f.vertex(1)-&gt;coord(), f.vertex(2)-&gt;coord());</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        }</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="classvcl_1_1Polygon.html#a8ccca4d884d5b4e4d70a7cf2debc87e8">Polygon&lt;CoordType&gt;::area</a>(f.vertices() | <a class="code hl_variable" href="namespacevcl_1_1views.html#a3c22902e10cd5bcafd3d5facbc74f91b">views::coords</a>);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        }</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    }</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>}</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="keyword">template</span>&lt;FaceConcept FaceType&gt;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="namespacevcl.html#a1dccfede16e36e5ded5213fb13643943">  124</a></span><span class="keyword">auto</span> <a class="code hl_function" href="namespacevcl.html#a1dccfede16e36e5ded5213fb13643943">facePerimeter</a>(<span class="keyword">const</span> FaceType&amp; f)</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>{</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keyword">using </span>CoordType = FaceType::VertexType::CoordType;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<a class="code hl_concept" href="conceptvcl_1_1TriangleFaceConcept.html">TriangleFaceConcept&lt;FaceType&gt;</a>) {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classvcl_1_1Triangle.html#a37c71b10eff8e6f4c84c6db87167ceea">Triangle&lt;CoordType&gt;::perimeter</a>(</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            f.vertex(0)-&gt;coord(), f.vertex(1)-&gt;coord(), f.vertex(2)-&gt;coord());</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    }</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <span class="keywordflow">if</span> (f.vertexNumber() == 3) {</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="classvcl_1_1Triangle.html#a37c71b10eff8e6f4c84c6db87167ceea">Triangle&lt;CoordType&gt;::perimeter</a>(</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                f.vertex(0)-&gt;coord(),</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                f.vertex(1)-&gt;coord(),</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                f.vertex(2)-&gt;coord());</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        }</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="classvcl_1_1Polygon.html#aad184b1c19a28174f0aa002c52f191c3">Polygon&lt;CoordType&gt;::perimeter</a>(f.vertices() | <a class="code hl_variable" href="namespacevcl_1_1views.html#a3c22902e10cd5bcafd3d5facbc74f91b">views::coords</a>);</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        }</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    }</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>}</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="keyword">template</span>&lt;FaceConcept FaceType&gt;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="namespacevcl.html#a12529598a32a7b21eac27744b3578600">  156</a></span><span class="keyword">auto</span> <a class="code hl_function" href="namespacevcl.html#a12529598a32a7b21eac27744b3578600">faceAngleOnVertexRad</a>(<span class="keyword">const</span> FaceType&amp; f, <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> vi)</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>{</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; p0 = f.vertex(vi)-&gt;coord();</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; p1 = f.vertexMod((<span class="keywordtype">int</span>)vi+1)-&gt;coord();</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; p2 = f.vertexMod((<span class="keywordtype">int</span>)vi-1)-&gt;coord();</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <span class="keywordflow">return</span> (p2 - p0).angle(p1 - p0);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>}</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span><span class="keyword">template</span>&lt;FaceConcept FaceType&gt;</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="namespacevcl.html#a2177afd92cfc4dbe6468aa05892b016f">  184</a></span><span class="keyword">auto</span> <a class="code hl_function" href="namespacevcl.html#a2177afd92cfc4dbe6468aa05892b016f">faceDihedralAngleOnEdge</a>(<span class="keyword">const</span> FaceType&amp; f, <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> e)</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <span class="keyword">requires</span> <a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasAdjacentFaces.html">comp::HasAdjacentFaces&lt;FaceType&gt;</a></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>{</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    <span class="keywordflow">if</span> (! <a class="code hl_function" href="namespacevcl_1_1comp.html#aee5a4aef15625749ca655836e2a1df43">comp::isAdjacentFacesAvailableOn</a>(f)) {</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="classvcl_1_1MissingComponentException.html">vcl::MissingComponentException</a>(</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>            <span class="stringliteral">&quot;Face has no Adjacent Faces component.&quot;</span>);</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    }</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="comment">     *     v0 ___________ vf1</span></div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span><span class="comment">     *       |\          |</span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span><span class="comment">     *       | e\     f1 |</span></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="comment">     *       |    \e1    |</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="comment">     *       |f     \    |</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="comment">     *       |        \  |</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="comment">     *       |__________\|</span></div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="comment">     *    vf0             v1</span></div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    assert(f.adjFace(e) != <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    <span class="keyword">const</span> FaceType&amp; f1 = *(f.adjFace(e));</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> e1 = f1.indexOfAdjFace(&amp;f);</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    assert(e1 != <a class="code hl_variable" href="namespacevcl.html#a519b68bed74d2385e33a29e725601002">UINT_NULL</a>);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; vf0 = *(f.vertexMod((<span class="keywordtype">int</span>) e - 1));</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; vf1 = *(f1.vertexMod(e1 - 1));</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <span class="keyword">auto</span> n0 = <a class="code hl_function" href="namespacevcl.html#a350d3edc324e0bef955a2c2ef8e20859">faceNormal</a>(f);</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <span class="keyword">auto</span> n1 = <a class="code hl_function" href="namespacevcl.html#a350d3edc324e0bef955a2c2ef8e20859">faceNormal</a>(f1);</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    <span class="keyword">auto</span> off0 = n0 * vf0.coord();</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    <span class="keyword">auto</span> off1 = n1 * vf1.coord();</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    <span class="keyword">auto</span> dist01 = off0 - n0 * vf1.coord();</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    <span class="keyword">auto</span> dist10 = off1 - n1 * vf0.coord();</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span> </div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    <span class="keyword">auto</span> sign = std::abs(dist01) &gt; std::abs(dist10) ? dist01 : dist10;</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    <span class="keyword">auto</span> angleRad = n0.angle(n1);</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    <span class="keywordflow">return</span> sign &gt; 0 ? angleRad : -angleRad;</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>}</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="preprocessor">#endif </span><span class="comment">// VCL_ALGORITHMS_POLYGON_GEOMETRY_H</span></div>
+<div class="ttc" id="aclassvcl_1_1MissingComponentException_html"><div class="ttname"><a href="classvcl_1_1MissingComponentException.html">vcl::MissingComponentException</a></div><div class="ttdef"><b>Definition:</b> mesh_exceptions.h:58</div></div>
+<div class="ttc" id="aclassvcl_1_1Polygon_html_a1682137a9e9d27da0544591a46e50fd8"><div class="ttname"><a href="classvcl_1_1Polygon.html#a1682137a9e9d27da0544591a46e50fd8">vcl::Polygon::normal</a></div><div class="ttdeci">PointT normal() const</div><div class="ttdef"><b>Definition:</b> polygon.h:77</div></div>
+<div class="ttc" id="aclassvcl_1_1Polygon_html_a78df2129a24b0d596ba49d4ec6b1d307"><div class="ttname"><a href="classvcl_1_1Polygon.html#a78df2129a24b0d596ba49d4ec6b1d307">vcl::Polygon::barycenter</a></div><div class="ttdeci">PointT barycenter() const</div><div class="ttdef"><b>Definition:</b> polygon.h:79</div></div>
+<div class="ttc" id="aclassvcl_1_1Polygon_html_a8ccca4d884d5b4e4d70a7cf2debc87e8"><div class="ttname"><a href="classvcl_1_1Polygon.html#a8ccca4d884d5b4e4d70a7cf2debc87e8">vcl::Polygon::area</a></div><div class="ttdeci">ScalarType area() const</div><div class="ttdef"><b>Definition:</b> polygon.h:89</div></div>
+<div class="ttc" id="aclassvcl_1_1Polygon_html_aad184b1c19a28174f0aa002c52f191c3"><div class="ttname"><a href="classvcl_1_1Polygon.html#aad184b1c19a28174f0aa002c52f191c3">vcl::Polygon::perimeter</a></div><div class="ttdeci">ScalarType perimeter() const</div><div class="ttdef"><b>Definition:</b> polygon.h:87</div></div>
+<div class="ttc" id="aclassvcl_1_1Triangle_html_a0170ec5bd9c19bca717743e7617f05e4"><div class="ttname"><a href="classvcl_1_1Triangle.html#a0170ec5bd9c19bca717743e7617f05e4">vcl::Triangle::area</a></div><div class="ttdeci">ScalarType area() const</div><div class="ttdoc">Computes the area of the triangle.</div><div class="ttdef"><b>Definition:</b> triangle.h:162</div></div>
+<div class="ttc" id="aclassvcl_1_1Triangle_html_a37c71b10eff8e6f4c84c6db87167ceea"><div class="ttname"><a href="classvcl_1_1Triangle.html#a37c71b10eff8e6f4c84c6db87167ceea">vcl::Triangle::perimeter</a></div><div class="ttdeci">ScalarType perimeter() const</div><div class="ttdoc">Computes the perimeter of the triangle.</div><div class="ttdef"><b>Definition:</b> triangle.h:155</div></div>
+<div class="ttc" id="aclassvcl_1_1Triangle_html_a4953e20454da2c9b1a8ae81a8b9e7e58"><div class="ttname"><a href="classvcl_1_1Triangle.html#a4953e20454da2c9b1a8ae81a8b9e7e58">vcl::Triangle::barycenter</a></div><div class="ttdeci">PointT barycenter() const</div><div class="ttdoc">Computes the barycenter of the triangle.</div><div class="ttdef"><b>Definition:</b> triangle.h:86</div></div>
+<div class="ttc" id="aclassvcl_1_1Triangle_html_a613d9fd7c03e0dc155ef0e6b4a51daae"><div class="ttname"><a href="classvcl_1_1Triangle.html#a613d9fd7c03e0dc155ef0e6b4a51daae">vcl::Triangle::normal</a></div><div class="ttdeci">PointT normal() const</div><div class="ttdef"><b>Definition:</b> triangle.h:76</div></div>
+<div class="ttc" id="aconceptvcl_1_1TriangleFaceConcept_html"><div class="ttname"><a href="conceptvcl_1_1TriangleFaceConcept.html">vcl::TriangleFaceConcept</a></div><div class="ttdef"><b>Definition:</b> face.h:161</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasAdjacentFaces_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasAdjacentFaces.html">vcl::comp::HasAdjacentFaces</a></div><div class="ttdoc">HasAdjacentFaces concept is satisfied only if a Element class provides the types and member functions...</div><div class="ttdef"><b>Definition:</b> adjacent_faces.h:48</div></div>
+<div class="ttc" id="anamespacevcl_1_1comp_html_aee5a4aef15625749ca655836e2a1df43"><div class="ttname"><a href="namespacevcl_1_1comp.html#aee5a4aef15625749ca655836e2a1df43">vcl::comp::isAdjacentFacesAvailableOn</a></div><div class="ttdeci">bool isAdjacentFacesAvailableOn(const ElementConcept auto &amp;element)</div><div class="ttdoc">Checks if the given Element has AdjacentFaces available.</div><div class="ttdef"><b>Definition:</b> adjacent_faces.h:494</div></div>
+<div class="ttc" id="anamespacevcl_1_1views_html_a3c22902e10cd5bcafd3d5facbc74f91b"><div class="ttname"><a href="namespacevcl_1_1views.html#a3c22902e10cd5bcafd3d5facbc74f91b">vcl::views::coords</a></div><div class="ttdeci">constexpr internal::CoordsView coords</div><div class="ttdef"><b>Definition:</b> coords.h:70</div></div>
+<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition:</b> bounding_box.h:47</div></div>
+<div class="ttc" id="anamespacevcl_html_a12529598a32a7b21eac27744b3578600"><div class="ttname"><a href="namespacevcl.html#a12529598a32a7b21eac27744b3578600">vcl::faceAngleOnVertexRad</a></div><div class="ttdeci">auto faceAngleOnVertexRad(const FaceType &amp;f, uint vi)</div><div class="ttdoc">Returns the internal angle (in radians) of the vi-th vertex of the face.</div><div class="ttdef"><b>Definition:</b> geometry.h:156</div></div>
+<div class="ttc" id="anamespacevcl_html_a1dccfede16e36e5ded5213fb13643943"><div class="ttname"><a href="namespacevcl.html#a1dccfede16e36e5ded5213fb13643943">vcl::facePerimeter</a></div><div class="ttdeci">auto facePerimeter(const FaceType &amp;f)</div><div class="ttdoc">Computes the perimeter of a face. Works both for triangle and polygonal faces, and it is optimized in...</div><div class="ttdef"><b>Definition:</b> geometry.h:124</div></div>
+<div class="ttc" id="anamespacevcl_html_a2177afd92cfc4dbe6468aa05892b016f"><div class="ttname"><a href="namespacevcl.html#a2177afd92cfc4dbe6468aa05892b016f">vcl::faceDihedralAngleOnEdge</a></div><div class="ttdeci">auto faceDihedralAngleOnEdge(const FaceType &amp;f, uint e)</div><div class="ttdoc">Compute the signed dihedral angle between the normals of the given face and its adjacent face on the ...</div><div class="ttdef"><b>Definition:</b> geometry.h:184</div></div>
+<div class="ttc" id="anamespacevcl_html_a350d3edc324e0bef955a2c2ef8e20859"><div class="ttname"><a href="namespacevcl.html#a350d3edc324e0bef955a2c2ef8e20859">vcl::faceNormal</a></div><div class="ttdeci">FaceType::VertexType::CoordType faceNormal(const FaceType &amp;f)</div><div class="ttdoc">Computes the normal of a face, without modifying the face. Works both for triangle and polygonal face...</div><div class="ttdef"><b>Definition:</b> geometry.h:44</div></div>
+<div class="ttc" id="anamespacevcl_html_a519b68bed74d2385e33a29e725601002"><div class="ttname"><a href="namespacevcl.html#a519b68bed74d2385e33a29e725601002">vcl::UINT_NULL</a></div><div class="ttdeci">const uint UINT_NULL</div><div class="ttdef"><b>Definition:</b> base.h:41</div></div>
+<div class="ttc" id="anamespacevcl_html_a53b4f63db0979e578ebfa4b9e8b41f8a"><div class="ttname"><a href="namespacevcl.html#a53b4f63db0979e578ebfa4b9e8b41f8a">vcl::faceBarycenter</a></div><div class="ttdeci">FaceType::VertexType::CoordType faceBarycenter(const FaceType &amp;f)</div><div class="ttdoc">Computes the barycenter of a face. Works both for triangle and polygonal faces, and it is optimized i...</div><div class="ttdef"><b>Definition:</b> geometry.h:74</div></div>
+<div class="ttc" id="anamespacevcl_html_a9fc3b9cae851d7a729f40dc2f4ebe824"><div class="ttname"><a href="namespacevcl.html#a9fc3b9cae851d7a729f40dc2f4ebe824">vcl::faceArea</a></div><div class="ttdeci">auto faceArea(const FaceType &amp;f)</div><div class="ttdoc">Computes the area of a face. Works both for triangle and polygonal faces, and it is optimized in case...</div><div class="ttdef"><b>Definition:</b> geometry.h:96</div></div>
 <div class="ttc" id="arequirements_8h_html"><div class="ttname"><a href="requirements_8h.html">requirements.h</a></div></div>
+<div class="ttc" id="aspace_2polygon_8h_html"><div class="ttname"><a href="space_2polygon_8h.html">polygon.h</a></div></div>
 <div class="ttc" id="atypes_2base_8h_html_a69aa29b598b851b0640aa225a9e5d61d"><div class="ttname"><a href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> base.h:31</div></div>
+<div class="ttc" id="aviews_2mesh_8h_html"><div class="ttname"><a href="views_2mesh_8h.html">mesh.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

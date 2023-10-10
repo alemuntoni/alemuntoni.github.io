@@ -4,7 +4,7 @@ var searchData=
   ['edge_5fuser_5fbits_5fnumber_1',['EDGE_USER_BITS_NUMBER',['../classvcl_1_1comp_1_1PolygonBitFlags.html#aecdea19e7eeb99d0418ed10d0a3a1dca',1,'vcl::comp::PolygonBitFlags']]],
   ['edges_2',['edges',['../group__views.html#ga66dde780da54f3f9030566f1b4b6f4db',1,'vcl::views']]],
   ['element_5fenum_5fstrings_3',['ELEMENT_ENUM_STRINGS',['../namespacevcl.html#a53b0be19fd1313a6d531a0fd1ce629f0',1,'vcl']]],
-  ['element_5ftype_4',['ELEMENT_TYPE',['../classvcl_1_1mesh_1_1ElementContainer.html#a88f9d019cd3ee52cf632b34f5ff1c647',1,'vcl::mesh::ElementContainer::ELEMENT_TYPE()'],['../classvcl_1_1Element.html#a6a0aa55f5fb4936d1a8055c07147e02b',1,'vcl::Element::ELEMENT_TYPE()']]],
+  ['element_5fid_4',['ELEMENT_ID',['../classvcl_1_1mesh_1_1ElementContainer.html#a0802402ad70241ae93f59840e1113472',1,'vcl::mesh::ElementContainer::ELEMENT_ID()'],['../classvcl_1_1Element.html#a62841d99c2f72cb7e253f5379300deaa',1,'vcl::Element::ELEMENT_ID()']]],
   ['elements_5fnumber_5',['ELEMENTS_NUMBER',['../namespacevcl.html#aa3223af8226ed14333c89406bcc16693',1,'vcl']]],
   ['en_6',['en',['../classvcl_1_1mesh_1_1ElementContainer.html#aa0a3a56c1be830dc5fd940468088ca9a',1,'vcl::mesh::ElementContainer']]]
 ];

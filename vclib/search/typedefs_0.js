@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['adjacentedgeiterator_0',['AdjacentEdgeIterator',['../classvcl_1_1comp_1_1AdjacentEdges.html#a3e48b845144ff72543293d818d48a37b',1,'vcl::comp::AdjacentEdges']]],
+  ['adjacentedgeiterator_0',['AdjacentEdgeIterator',['../classvcl_1_1comp_1_1AdjacentEdges.html#a4dbd4e3a92bd670bd7a73cccf767be06',1,'vcl::comp::AdjacentEdges']]],
   ['adjacentedges_1',['AdjacentEdges',['../group__vert__components.html#ga7bf12f955424653609391523f42d4b3a',1,'vcl::vert::AdjacentEdges()'],['../group__edge__components.html#ga80faac5e5814871fad6cb6a6c5bf8364',1,'vcl::edge::AdjacentEdges()']]],
   ['adjacentedgetype_2',['AdjacentEdgeType',['../classvcl_1_1comp_1_1AdjacentEdges.html#affd6214865be7e7dc60ae3638f3dfdb8',1,'vcl::comp::AdjacentEdges']]],
-  ['adjacentfaceiterator_3',['AdjacentFaceIterator',['../classvcl_1_1comp_1_1AdjacentFaces.html#a29df72d13a2ef01e48495e72ce5485a5',1,'vcl::comp::AdjacentFaces']]],
+  ['adjacentfaceiterator_3',['AdjacentFaceIterator',['../classvcl_1_1comp_1_1AdjacentFaces.html#a3394a3fbc90c8ddb7bb48324666cc148',1,'vcl::comp::AdjacentFaces']]],
   ['adjacentfaces_4',['AdjacentFaces',['../group__vert__components.html#ga6996d70b66b1387633859c912bd295b2',1,'vcl::vert::AdjacentFaces()'],['../group__edge__components.html#ga7322566c9e8b50084488fe755f5c5f1f',1,'vcl::edge::AdjacentFaces()']]],
   ['adjacentfacetype_5',['AdjacentFaceType',['../classvcl_1_1comp_1_1AdjacentFaces.html#ac95cc77b53e562619fd6c2a764abdc88',1,'vcl::comp::AdjacentFaces']]],
   ['adjacentleftnodeiterator_6',['AdjacentLeftNodeIterator',['../classvcl_1_1BipartiteGraph.html#adffe289f29364242b2c7c2a862e97c92',1,'vcl::BipartiteGraph']]],
@@ -14,7 +14,7 @@ var searchData=
   ['adjacentrightnodeview_11',['AdjacentRightNodeView',['../classvcl_1_1BipartiteGraph.html#a497ef3b56d025fe056aca25bd97c3136',1,'vcl::BipartiteGraph']]],
   ['adjacenttriangleedges_12',['AdjacentTriangleEdges',['../group__face__components.html#ga027d0730e7a938d53e7bfbff1bfe682d',1,'vcl::face']]],
   ['adjacenttriangles_13',['AdjacentTriangles',['../group__face__components.html#ga0617c4e22d8920e3ed7fea33d7e39f52',1,'vcl::face']]],
-  ['adjacentvertexiterator_14',['AdjacentVertexIterator',['../classvcl_1_1comp_1_1AdjacentVertices.html#a12dfe1a86b47c7c65ed6bb9b7e184661',1,'vcl::comp::AdjacentVertices']]],
+  ['adjacentvertexiterator_14',['AdjacentVertexIterator',['../classvcl_1_1comp_1_1AdjacentVertices.html#abb99075b1fc6c8700eddc3aa2c22fe59',1,'vcl::comp::AdjacentVertices']]],
   ['adjacentvertextype_15',['AdjacentVertexType',['../classvcl_1_1comp_1_1AdjacentVertices.html#a0ecc6abcd32048a95ee3dc4e88bf339a',1,'vcl::comp::AdjacentVertices']]],
   ['adjacentvertices_16',['AdjacentVertices',['../group__vert__components.html#gae3978b234880949d1acd64fbcfad789b',1,'vcl::vert']]],
   ['array2_17',['Array2',['../group__space.html#gaba483b2c91a7c9b1505b87003bdf14d9',1,'vcl']]],
