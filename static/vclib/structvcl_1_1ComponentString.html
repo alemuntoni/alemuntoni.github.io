@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visual Computing Library: vcl::ComponentString&lt; COMP_TYPE &gt; Struct Template Reference</title>
+<title>Visual Computing Library: vcl::ComponentString&lt; COMP_ID &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -98,31 +98,51 @@ $(document).ready(function(){initNavTree('structvcl_1_1ComponentString.html','')
   <div class="summary">
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="structvcl_1_1ComponentString-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">vcl::ComponentString&lt; COMP_TYPE &gt; Struct Template Reference</div></div>
+  <div class="headertitle"><div class="title">vcl::ComponentString&lt; COMP_ID &gt; Struct Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>The <a class="el" href="structvcl_1_1ComponentString.html" title="The ComponentString class is used to retrieve the string associated to a COMP_ID value,...">ComponentString</a> class is used to retrieve the string associated to a COMP_ID value, trough its member 'str'.  
+ <a href="structvcl_1_1ComponentString.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="types_2mesh__components_8h_source.html">vclib/types/mesh_components.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a15cacb6c1f905a2c6115b7f40d8071a3"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvcl_1_1ComponentString.html#a15cacb6c1f905a2c6115b7f40d8071a3">str</a> = <a class="el" href="namespacevcl.html#ade68ad454a7ebe0c36e50f8db6191baa">COMPONENT_ENUM_STRINGS</a>[COMP_TYPE]</td></tr>
-<tr class="separator:a15cacb6c1f905a2c6115b7f40d8071a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1b5fcc41d40f8cafdc4ab36e47b2982"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvcl_1_1ComponentString.html#ab1b5fcc41d40f8cafdc4ab36e47b2982">str</a></td></tr>
+<tr class="memdesc:ab1b5fcc41d40f8cafdc4ab36e47b2982"><td class="mdescLeft">&#160;</td><td class="mdescRight">The string associated to the COMPONENT_ID.  <br /></td></tr>
+<tr class="separator:ab1b5fcc41d40f8cafdc4ab36e47b2982"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a15cacb6c1f905a2c6115b7f40d8071a3" name="a15cacb6c1f905a2c6115b7f40d8071a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15cacb6c1f905a2c6115b7f40d8071a3">&#9670;&#160;</a></span>str</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> COMP_ID&gt;<br />
+struct vcl::ComponentString&lt; COMP_ID &gt;</div><p>The <a class="el" href="structvcl_1_1ComponentString.html" title="The ComponentString class is used to retrieve the string associated to a COMP_ID value,...">ComponentString</a> class is used to retrieve the string associated to a COMP_ID value, trough its member 'str'. </p>
+<p>If you use a custom component class, you should specialize this struct with your COMP_ID value (that is &gt;= COMPONENTS_NUMBER).</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">COMP_ID</td><td>The COMP_ID value associated to the string. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="ab1b5fcc41d40f8cafdc4ab36e47b2982" name="ab1b5fcc41d40f8cafdc4ab36e47b2982"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1b5fcc41d40f8cafdc4ab36e47b2982">&#9670;&#160;</a></span>str</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> COMP_TYPE&gt; </div>
+template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> COMP_ID&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">const char* <a class="el" href="structvcl_1_1ComponentString.html">vcl::ComponentString</a>&lt; COMP_TYPE &gt;::str = <a class="el" href="namespacevcl.html#ade68ad454a7ebe0c36e50f8db6191baa">COMPONENT_ENUM_STRINGS</a>[COMP_TYPE]</td>
+          <td class="memname">const char* <a class="el" href="structvcl_1_1ComponentString.html">vcl::ComponentString</a>&lt; COMP_ID &gt;::str</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">        COMP_ID &lt; <a class="code hl_variable" href="namespacevcl.html#aeb0898aa5c2f881895bf9bb13782ca7a">COMPONENTS_NUMBER</a> ? <a class="code hl_variable" href="namespacevcl.html#ade68ad454a7ebe0c36e50f8db6191baa">COMPONENT_ENUM_STRINGS</a>[COMP_ID] : <span class="keyword">nullptr</span></div>
+<div class="ttc" id="anamespacevcl_html_ade68ad454a7ebe0c36e50f8db6191baa"><div class="ttname"><a href="namespacevcl.html#ade68ad454a7ebe0c36e50f8db6191baa">vcl::COMPONENT_ENUM_STRINGS</a></div><div class="ttdeci">static constexpr const char * COMPONENT_ENUM_STRINGS[COMPONENTS_NUMBER]</div><div class="ttdef"><b>Definition:</b> mesh_components.h:55</div></div>
+<div class="ttc" id="anamespacevcl_html_aeb0898aa5c2f881895bf9bb13782ca7a"><div class="ttname"><a href="namespacevcl.html#aeb0898aa5c2f881895bf9bb13782ca7a">vcl::COMPONENTS_NUMBER</a></div><div class="ttdeci">static constexpr uint COMPONENTS_NUMBER</div><div class="ttdef"><b>Definition:</b> mesh_components.h:53</div></div>
+</div><!-- fragment -->
+<p>The string associated to the COMPONENT_ID. </p>
 
 </div>
 </div>

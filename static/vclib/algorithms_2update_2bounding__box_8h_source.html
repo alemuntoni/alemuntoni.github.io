@@ -124,22 +124,23 @@ $(document).ready(function(){initNavTree('algorithms_2update_2bounding__box_8h_s
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifndef VCL_ALGORITHMS_UPDATE_BOUNDING_BOX_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define VCL_ALGORITHMS_UPDATE_BOUNDING_BOX_H</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="requirements_8h.html">vclib/mesh/requirements.h</a>&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="algorithms_2bounding__box_8h.html">vclib/algorithms/bounding_box.h</a>&gt;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">template</span>&lt;HasBoundingBox MeshType&gt;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacevcl.html#a8ecd18a495232ac86d4c81913a1ad3f7">updateBoundingBox</a>(MeshType&amp; m);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &quot;<a class="code" href="mesh_2components_2bounding__box_8cpp.html">bounding_box.cpp</a>&quot;</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#endif </span><span class="comment">// VCL_ALGORITHMS_UPDATE_BOUNDING_BOX_H</span></div>
-<div class="ttc" id="amesh_2components_2bounding__box_8cpp_html"><div class="ttname"><a href="mesh_2components_2bounding__box_8cpp.html">bounding_box.cpp</a></div></div>
-<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition:</b> bounding_box.cpp:29</div></div>
-<div class="ttc" id="anamespacevcl_html_a8ecd18a495232ac86d4c81913a1ad3f7"><div class="ttname"><a href="namespacevcl.html#a8ecd18a495232ac86d4c81913a1ad3f7">vcl::updateBoundingBox</a></div><div class="ttdeci">void updateBoundingBox(MeshType &amp;m)</div><div class="ttdoc">Updates the bounding box of the mesh.</div><div class="ttdef"><b>Definition:</b> bounding_box.cpp:41</div></div>
-<div class="ttc" id="arequirements_8h_html"><div class="ttname"><a href="requirements_8h.html">requirements.h</a></div></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">template</span>&lt;HasBoundingBox MeshType&gt;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="group__update.html#ga8ecd18a495232ac86d4c81913a1ad3f7">   42</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__update.html#ga8ecd18a495232ac86d4c81913a1ad3f7">updateBoundingBox</a>(MeshType&amp; m)</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>{</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    m.boundingBox() = <a class="code hl_function" href="group__bounding__box.html#ga1ad883eeb58e2a302d15ce6ba179752f">vcl::boundingBox</a>(m);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>}</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#endif </span><span class="comment">// VCL_ALGORITHMS_UPDATE_BOUNDING_BOX_H</span></div>
+<div class="ttc" id="aalgorithms_2bounding__box_8h_html"><div class="ttname"><a href="algorithms_2bounding__box_8h.html">bounding_box.h</a></div></div>
+<div class="ttc" id="agroup__bounding__box_html_ga1ad883eeb58e2a302d15ce6ba179752f"><div class="ttname"><a href="group__bounding__box.html#ga1ad883eeb58e2a302d15ce6ba179752f">vcl::boundingBox</a></div><div class="ttdeci">auto boundingBox(const PointType &amp;p)</div><div class="ttdoc">Compute the bounding box of a single point.</div><div class="ttdef"><b>Definition:</b> bounding_box.h:63</div></div>
+<div class="ttc" id="agroup__update_html_ga8ecd18a495232ac86d4c81913a1ad3f7"><div class="ttname"><a href="group__update.html#ga8ecd18a495232ac86d4c81913a1ad3f7">vcl::updateBoundingBox</a></div><div class="ttdeci">void updateBoundingBox(MeshType &amp;m)</div><div class="ttdoc">Updates the bounding box of the mesh.</div><div class="ttdef"><b>Definition:</b> bounding_box.h:42</div></div>
+<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition:</b> bounding_box.h:47</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

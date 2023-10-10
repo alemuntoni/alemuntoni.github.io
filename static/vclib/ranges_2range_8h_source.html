@@ -128,27 +128,23 @@ $(document).ready(function(){initNavTree('ranges_2range_8h_source.html',''); ini
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#ifdef VCLIB_USES_RANGES</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">concept </span>Range = std::ranges::range&lt;T&gt;;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="conceptvcl_1_1Range.html">   53</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1Range.html">Range</a> = <span class="keyword">requires</span>(T o)</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>{</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    std::ranges::begin(o);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    std::ranges::end(o);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>};</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="conceptvcl_1_1Range.html">   40</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1Range.html">Range</a> = std::ranges::range&lt;T&gt;;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="conceptvcl_1_1RangeOf.html">   49</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1RangeOf.html">RangeOf</a> = <a class="code hl_concept" href="conceptvcl_1_1Range.html">Range&lt;R&gt;</a> &amp;&amp; std::is_same_v&lt;std::ranges::range_value_t&lt;R&gt;, T&gt;;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="conceptvcl_1_1RangeOfConvertibleTo.html">   58</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1RangeOfConvertibleTo.html">RangeOfConvertibleTo</a> =</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_concept" href="conceptvcl_1_1Range.html">Range&lt;R&gt;</a> &amp;&amp; std::convertible_to&lt;std::ranges::range_value_t&lt;R&gt;, T&gt;;</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>} <span class="comment">// namespace vcl</span></div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#endif </span><span class="comment">// VCLIB_CONCEPTS_RANGES_RANGE_H</span></div>
-<div class="ttc" id="aconceptvcl_1_1Range_html"><div class="ttname"><a href="conceptvcl_1_1Range.html">vcl::Range</a></div><div class="ttdoc">Utility concept that is evaluated true if T is a range, e.g. if has a begin and an end.</div><div class="ttdef"><b>Definition:</b> range.h:53</div></div>
-<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition:</b> bounding_box.cpp:29</div></div>
+<div class="ttc" id="aconceptvcl_1_1RangeOfConvertibleTo_html"><div class="ttname"><a href="conceptvcl_1_1RangeOfConvertibleTo.html">vcl::RangeOfConvertibleTo</a></div><div class="ttdoc">Utility concept that is evaluated true the Range R has a value_type that is convertible to T.</div><div class="ttdef"><b>Definition:</b> range.h:58</div></div>
+<div class="ttc" id="aconceptvcl_1_1RangeOf_html"><div class="ttname"><a href="conceptvcl_1_1RangeOf.html">vcl::RangeOf</a></div><div class="ttdoc">Utility concept that is evaluated true the Range R has a value_type that is T.</div><div class="ttdef"><b>Definition:</b> range.h:49</div></div>
+<div class="ttc" id="aconceptvcl_1_1Range_html"><div class="ttname"><a href="conceptvcl_1_1Range.html">vcl::Range</a></div><div class="ttdoc">Utility concept that is evaluated true if T is a range, e.g. if has a begin and an end.</div><div class="ttdef"><b>Definition:</b> range.h:40</div></div>
+<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition:</b> bounding_box.h:47</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

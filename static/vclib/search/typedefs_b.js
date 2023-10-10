@@ -1,7 +1,7 @@
 var searchData=
 [
   ['name_0',['Name',['../group__mesh__components.html#gab1fb84f4d989fea2d34ed61fe1c8322a',1,'vcl::mesh']]],
-  ['nestedinitializerlists_1',['NestedInitializerLists',['../namespacevcl.html#ad7449b441f4e1a24adf73b0964fb0953',1,'vcl']]],
+  ['nestedinitializerlists_1',['NestedInitializerLists',['../namespacevcl.html#a5b13dcb16a658633be61033f53c3590e',1,'vcl']]],
   ['normal_2',['Normal',['../group__face__components.html#ga575b3bea9be05ff9358dd22f599379e5',1,'vcl::face::Normal()'],['../group__vert__components.html#gab232b2d72f3864f62b5b438fd009313a',1,'vcl::vert::Normal()']]],
   ['normal3_3',['Normal3',['../group__components.html#ga0927405640721111bf8e066561cfc8ac',1,'vcl::comp::Normal3()'],['../group__face__components.html#ga7553f8013e718ed87d12ebeaecf2929d',1,'vcl::face::Normal3()'],['../group__vert__components.html#gab78b8d4a93387a85b043f53e74918da4',1,'vcl::vert::Normal3()']]],
   ['normal3d_4',['Normal3d',['../group__components.html#gad0410921981067528faddbc55847c103',1,'vcl::comp::Normal3d()'],['../group__face__components.html#gafb7e5799f5f7d03fde82e557e0bd1104',1,'vcl::face::Normal3d()'],['../group__vert__components.html#ga76a967f13e1382272f242becc7344d59',1,'vcl::vert::Normal3d()']]],

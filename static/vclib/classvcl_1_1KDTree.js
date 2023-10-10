@@ -2,7 +2,7 @@ var classvcl_1_1KDTree =
 [
     [ "KDTree", "classvcl_1_1KDTree.html#a03fda5905ba33c6970267580ddf9585d", null ],
     [ "KDTree", "classvcl_1_1KDTree.html#af1377b6f12978e350a42158b96bd1f6b", null ],
-    [ "KDTree", "classvcl_1_1KDTree.html#a660ba3c1582c3e4ff4684291ec4fc20b", null ],
+    [ "KDTree", "classvcl_1_1KDTree.html#ace912438dc2ca2639fd6775c04765533", null ],
     [ "kNearestNeighbors", "classvcl_1_1KDTree.html#a4d90dc8400baf45fbb520a6a4b30fced", null ],
     [ "kNearestNeighborsIndices", "classvcl_1_1KDTree.html#ae88c09501360c34c3031ab934297d841", null ],
     [ "nearestNeighbor", "classvcl_1_1KDTree.html#afc73d12e9eca2d599bc47b252fb342dc", null ],

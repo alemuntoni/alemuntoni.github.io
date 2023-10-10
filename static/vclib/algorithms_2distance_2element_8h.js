@@ -1,7 +1,7 @@
 var algorithms_2distance_2element_8h =
 [
-    [ "pointFaceDistance", "algorithms_2distance_2element_8h.html#afdfe6ef5ae382e3727241bb20d8f1e3c", null ],
-    [ "pointFaceDistance", "algorithms_2distance_2element_8h.html#a6d852efcb4d8028aa9c9e70af2c92cff", null ],
-    [ "pointFaceDistance", "algorithms_2distance_2element_8h.html#a8004a267a203fab97954933935d7fe8a", null ],
-    [ "pointFaceDistance", "algorithms_2distance_2element_8h.html#ad3b70ae405303e6bc3c6b36ccd2f2cd9", null ]
+    [ "pointFaceDistance", "algorithms_2distance_2element_8h.html#a8efd5f55775e66de7f1f69b35bd1561a", null ],
+    [ "pointFaceDistance", "algorithms_2distance_2element_8h.html#a02f5dd6bd231e193440d954eee9d3aef", null ],
+    [ "pointFaceDistance", "algorithms_2distance_2element_8h.html#a3a294ad7cda738cd64d09b432874830c", null ],
+    [ "pointFaceDistance", "algorithms_2distance_2element_8h.html#a9abd2d46a87cb3d18987a37e11ed6ccc", null ]
 ];

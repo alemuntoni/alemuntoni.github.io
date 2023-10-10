@@ -125,26 +125,32 @@ $(document).ready(function(){initNavTree('algorithms_2stat_2selection_8h_source.
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define VCL_ALGORITHMS_STAT_SELECTION_H</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="requirements_8h.html">vclib/mesh/requirements.h</a>&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">template</span>&lt;MeshConcept MeshType&gt;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> <a class="code hl_function" href="namespacevcl.html#a7ebad55b87f91b27b05663d9ce7ad406">vertexSelectionNumber</a>(<span class="keyword">const</span> MeshType&amp; m);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">template</span>&lt;FaceMeshConcept MeshType&gt;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> <a class="code hl_function" href="namespacevcl.html#a5585995167e0f9338ebb153314c0067b">faceSelectionNumber</a>(<span class="keyword">const</span> MeshType&amp; m);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">#include &quot;<a class="code" href="update_2selection_8cpp.html">selection.cpp</a>&quot;</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#endif </span><span class="comment">// VCL_ALGORITHMS_STAT_SELECTION_H</span></div>
-<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition:</b> bounding_box.cpp:29</div></div>
-<div class="ttc" id="anamespacevcl_html_a5585995167e0f9338ebb153314c0067b"><div class="ttname"><a href="namespacevcl.html#a5585995167e0f9338ebb153314c0067b">vcl::faceSelectionNumber</a></div><div class="ttdeci">uint faceSelectionNumber(const MeshType &amp;m)</div><div class="ttdef"><b>Definition:</b> selection.cpp:48</div></div>
-<div class="ttc" id="anamespacevcl_html_a7ebad55b87f91b27b05663d9ce7ad406"><div class="ttname"><a href="namespacevcl.html#a7ebad55b87f91b27b05663d9ce7ad406">vcl::vertexSelectionNumber</a></div><div class="ttdeci">uint vertexSelectionNumber(const MeshType &amp;m)</div><div class="ttdef"><b>Definition:</b> selection.cpp:31</div></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="views_2mesh_8h.html">vclib/views/mesh.h</a>&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">template</span>&lt;MeshConcept MeshType&gt;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="namespacevcl.html#a7ebad55b87f91b27b05663d9ce7ad406">   33</a></span><a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> <a class="code hl_function" href="namespacevcl.html#a7ebad55b87f91b27b05663d9ce7ad406">vertexSelectionNumber</a>(<span class="keyword">const</span> MeshType&amp; m)</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>{</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordflow">return</span> std::ranges::distance(m.vertices() | <a class="code hl_variable" href="namespacevcl_1_1views.html#ae1a8a5b5cff2ac468a5a6620fd460bed">views::selected</a>);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>}</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">template</span>&lt;FaceMeshConcept MeshType&gt;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="namespacevcl.html#a5585995167e0f9338ebb153314c0067b">   39</a></span><a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> <a class="code hl_function" href="namespacevcl.html#a5585995167e0f9338ebb153314c0067b">faceSelectionNumber</a>(<span class="keyword">const</span> MeshType&amp; m)</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>{</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordflow">return</span> std::ranges::distance(m.faces() | <a class="code hl_variable" href="namespacevcl_1_1views.html#ae1a8a5b5cff2ac468a5a6620fd460bed">views::selected</a>);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>}</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#endif </span><span class="comment">// VCL_ALGORITHMS_STAT_SELECTION_H</span></div>
+<div class="ttc" id="anamespacevcl_1_1views_html_ae1a8a5b5cff2ac468a5a6620fd460bed"><div class="ttname"><a href="namespacevcl_1_1views.html#ae1a8a5b5cff2ac468a5a6620fd460bed">vcl::views::selected</a></div><div class="ttdeci">constexpr internal::SelectedView selected</div><div class="ttdef"><b>Definition:</b> selection.h:92</div></div>
+<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition:</b> bounding_box.h:47</div></div>
+<div class="ttc" id="anamespacevcl_html_a5585995167e0f9338ebb153314c0067b"><div class="ttname"><a href="namespacevcl.html#a5585995167e0f9338ebb153314c0067b">vcl::faceSelectionNumber</a></div><div class="ttdeci">uint faceSelectionNumber(const MeshType &amp;m)</div><div class="ttdef"><b>Definition:</b> selection.h:39</div></div>
+<div class="ttc" id="anamespacevcl_html_a7ebad55b87f91b27b05663d9ce7ad406"><div class="ttname"><a href="namespacevcl.html#a7ebad55b87f91b27b05663d9ce7ad406">vcl::vertexSelectionNumber</a></div><div class="ttdeci">uint vertexSelectionNumber(const MeshType &amp;m)</div><div class="ttdef"><b>Definition:</b> selection.h:33</div></div>
 <div class="ttc" id="arequirements_8h_html"><div class="ttname"><a href="requirements_8h.html">requirements.h</a></div></div>
 <div class="ttc" id="atypes_2base_8h_html_a69aa29b598b851b0640aa225a9e5d61d"><div class="ttname"><a href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> base.h:31</div></div>
-<div class="ttc" id="aupdate_2selection_8cpp_html"><div class="ttname"><a href="update_2selection_8cpp.html">selection.cpp</a></div></div>
+<div class="ttc" id="aviews_2mesh_8h_html"><div class="ttname"><a href="views_2mesh_8h.html">mesh.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

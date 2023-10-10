@@ -8,7 +8,7 @@ var stat_8h =
     [ "scalarWeightedBarycenter", "stat_8h.html#a63bff22265d64d974b4fe4267b6dbac0", null ],
     [ "shellBarycenter", "stat_8h.html#aecc52dfd02e09e49a5dd1612183a2cb8", null ],
     [ "surfaceArea", "stat_8h.html#a5dfa8d4e30b457c12c3e5e21b4fc123a", null ],
-    [ "vertexRadiusFromWeights", "stat_8h.html#aca01bc85ddb1d1380f67edccbc1de874", null ],
+    [ "vertexRadiusFromWeights", "stat_8h.html#a598979803f34d74d1c4c9d4599d01eb8", null ],
     [ "volume", "stat_8h.html#a9a3eb7aeb0da02be51ca136620616b43", null ],
     [ "weightedCovarianceMatrixOfPointCloud", "stat_8h.html#abe0d3154bb94af5fb7d34bd186eba0b3", null ]
 ];

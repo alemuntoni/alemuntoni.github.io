@@ -195,7 +195,7 @@ Variables</h2></td></tr>
 <p>The adjEdges view allows to obtain a view that access to the adjacent edges of the object that has been piped. Every object having type that satisfies the HasAdjacentEdges concept can be applied to this view. </p>
 <p>Resulting adjacent edges will be pointers to Edges, that may be <code>nullptr</code>. If you are interested only on the not-null pointers, you can use the <code>notNull</code> view:</p>
 <div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keyword">auto</span>* ae: f | <a class="code hl_variable" href="group__views.html#gaf0a655daca62b0693bc2520565c1d431">views::adjEdges</a> | <a class="code hl_variable" href="group__views.html#gaeb8235ba7d93b8622ef4eed832382f2d">views::notNull</a>) { ... }</div>
-<div class="ttc" id="agroup__views_html_gaeb8235ba7d93b8622ef4eed832382f2d"><div class="ttname"><a href="group__views.html#gaeb8235ba7d93b8622ef4eed832382f2d">vcl::views::notNull</a></div><div class="ttdeci">constexpr internal::NotNullView notNull</div><div class="ttdoc">The notNull view allows to filter the pointers of a range. The resulting view will iterate only on th...</div><div class="ttdef"><b>Definition:</b> views.h:93</div></div>
+<div class="ttc" id="agroup__views_html_gaeb8235ba7d93b8622ef4eed832382f2d"><div class="ttname"><a href="group__views.html#gaeb8235ba7d93b8622ef4eed832382f2d">vcl::views::notNull</a></div><div class="ttdeci">constexpr internal::NotNullView notNull</div><div class="ttdoc">The notNull view allows to filter the pointers of a range. The resulting view will iterate only on th...</div><div class="ttdef"><b>Definition:</b> views.h:85</div></div>
 <div class="ttc" id="agroup__views_html_gaf0a655daca62b0693bc2520565c1d431"><div class="ttname"><a href="group__views.html#gaf0a655daca62b0693bc2520565c1d431">vcl::views::adjEdges</a></div><div class="ttdeci">constexpr internal::AdjEdgesView adjEdges</div><div class="ttdoc">The adjEdges view allows to obtain a view that access to the adjacent edges of the object that has be...</div><div class="ttdef"><b>Definition:</b> adj_edges.h:67</div></div>
 </div><!-- fragment --> 
 </div>
@@ -327,7 +327,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>A view that allows to iterate overt the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> elements of an object. </p>
-<p>This view can be applied to objects having type that satisfies the EdgeMeshConcept </p>
+<p>This view can be applied to objects having type that satisfies the EdgeMeshConcept. </p>
 
 </div>
 </div>
@@ -352,7 +352,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>A view that allows to iterate overt the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> elements of an object. </p>
-<p>This view can be applied to objects having type that satisfies the FaceMeshConcept </p>
+<p>This view can be applied to objects having type that satisfies the FaceMeshConcept. </p>
 
 </div>
 </div>

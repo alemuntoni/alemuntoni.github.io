@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['z_0',['z',['../classvcl_1_1Point.html#a2fe8f237a0a972df3a9bc8109cb5f4bf',1,'vcl::Point::z()'],['../classvcl_1_1Point.html#ab60dd2ad9b4eba95d1af96ce36f1dee4',1,'vcl::Point::z() const']]]
+  ['z_0',['z',['../classvcl_1_1Point.html#a4944e81562f28479f0a12ce10d1d8fda',1,'vcl::Point::z()'],['../classvcl_1_1Point.html#aac34b96496fe385d679d8db24d2c9ca5',1,'vcl::Point::z() const']]]
 ];

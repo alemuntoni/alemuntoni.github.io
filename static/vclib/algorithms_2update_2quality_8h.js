@@ -2,8 +2,8 @@ var algorithms_2update_2quality_8h =
 [
     [ "clampPerFaceQuality", "algorithms_2update_2quality_8h.html#a748cd8beb49f3c7a18dbd1efdcd8bf21", null ],
     [ "clampPerVertexQuality", "algorithms_2update_2quality_8h.html#a696dc0c7e7d1e45751850aaa7a51f247", null ],
-    [ "normalizePerFaceQuality", "algorithms_2update_2quality_8h.html#ab340867e5933fcfaabc03f6786edfd6f", null ],
-    [ "normalizePerVertexQuality", "algorithms_2update_2quality_8h.html#a387e766e72e9fdf9b4bd877ecbbd2fb9", null ],
+    [ "normalizePerFaceQuality", "algorithms_2update_2quality_8h.html#a607cbcdaf24e6dd7cec3e23a28fb450f", null ],
+    [ "normalizePerVertexQuality", "algorithms_2update_2quality_8h.html#ad1a6ca42d06d208218a4aa820f220696", null ],
     [ "setPerFaceQuality", "algorithms_2update_2quality_8h.html#aa949e95f7bfb9d8dedc0f7e15e5d3ab9", null ],
     [ "setPerFaceQualityFromFaceArea", "algorithms_2update_2quality_8h.html#ab9e9aa9515cb4086de430109e361cfde", null ],
     [ "setPerVertexQuality", "algorithms_2update_2quality_8h.html#a745a7eed34f93850095b2c81f127d9f6", null ],

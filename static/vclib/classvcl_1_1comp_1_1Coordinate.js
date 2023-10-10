@@ -1,8 +1,7 @@
 var classvcl_1_1comp_1_1Coordinate =
 [
     [ "CoordType", "classvcl_1_1comp_1_1Coordinate.html#a40b1a1cc7c51d71faa04cbb14e8a46a0", null ],
-    [ "coord", "classvcl_1_1comp_1_1Coordinate.html#a3b8051a12f1eca010472968e16a2f8d8", null ],
-    [ "coord", "classvcl_1_1comp_1_1Coordinate.html#a1316bf98972a812f8179651380967bd6", null ],
-    [ "importFrom", "classvcl_1_1comp_1_1Coordinate.html#aa194a7af7cd7876595450178c6ad4c05", null ],
-    [ "isEnabled", "classvcl_1_1comp_1_1Coordinate.html#a92268a789e27c896d55aa2b3b46c32db", null ]
+    [ "coord", "classvcl_1_1comp_1_1Coordinate.html#a6f4fe506ec463f2e510d6943d7f55d7f", null ],
+    [ "coord", "classvcl_1_1comp_1_1Coordinate.html#af64fdd44aba2cbc9b123876b92aecedc", null ],
+    [ "importFrom", "classvcl_1_1comp_1_1Coordinate.html#a76905c07ed34134ad81ad19b820ccbb3", null ]
 ];

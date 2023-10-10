@@ -1,4 +1,4 @@
 var mesh_2components_2adjacent__faces_8h =
 [
-    [ "isAdjacentFacesEnabledOn", "mesh_2components_2adjacent__faces_8h.html#afce569020eba6197ae24a74705f9c28c", null ]
+    [ "isAdjacentFacesAvailableOn", "mesh_2components_2adjacent__faces_8h.html#aee5a4aef15625749ca655836e2a1df43", null ]
 ];

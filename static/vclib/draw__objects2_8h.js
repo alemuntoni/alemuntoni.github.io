@@ -1,9 +1,9 @@
 var draw__objects2_8h =
 [
-    [ "drawLine2", "draw__objects2_8h.html#a692ed5f64fdbbc22a85818682bd6ec79", null ],
+    [ "drawLine2", "draw__objects2_8h.html#a11cf68ac82c35fc923d8406b4a8aad9e", null ],
     [ "drawPoint2", "draw__objects2_8h.html#a516ae081ca79f1afbf5a77883613be72", null ],
-    [ "drawQuad2", "draw__objects2_8h.html#a3e4e098e07b2cacca973fd8683f48c72", null ],
-    [ "drawQuad2", "draw__objects2_8h.html#a1a355ec6a3dc7d99e96765a4e30f6610", null ],
-    [ "drawTriangle2", "draw__objects2_8h.html#ad939bbe736d6a065e65c0b84b88b04d4", null ],
-    [ "drawTriangle2", "draw__objects2_8h.html#af62e633fc49d9f0d17b0c72b10ca6e8d", null ]
+    [ "drawQuad2", "draw__objects2_8h.html#aaf0a4439a6ce94a7bd97459505578043", null ],
+    [ "drawQuad2", "draw__objects2_8h.html#abb8951e6b832297167e55b3bbfe366a1", null ],
+    [ "drawTriangle2", "draw__objects2_8h.html#af9376bbd1e5522814ec359777aabdcf3", null ],
+    [ "drawTriangle2", "draw__objects2_8h.html#a2f8b82d8c87385e00570c863a8976fe1", null ]
 ];

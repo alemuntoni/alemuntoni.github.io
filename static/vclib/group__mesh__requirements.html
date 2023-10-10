@@ -102,17 +102,18 @@ $(document).ready(function(){initNavTree('group__mesh__requirements.html',''); i
 </div><!--header-->
 <div class="contents">
 
-<p>List functions that allows to check, enable and assert the availability of components in the Elements of a Mesh.  
+<p>List functions that allows to check, enable and assert characteristics and the availability of components in the Elements of a Mesh.  
 <a href="#details">More...</a></p>
 <div class="dynheader">
 Collaboration diagram for Mesh Requirements:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__mesh__requirements.png" border="0" usemap="#agroup____mesh____requirements" alt=""/></div>
 <map name="agroup____mesh____requirements" id="agroup____mesh____requirements">
-<area shape="rect" href="group__edge__requirements.html" title="List functions that allows to check, enable and assert the availability of components in the Edge Ele..." alt="" coords="311,5,460,31"/>
-<area shape="rect" href="group__face__requirements.html" title="List functions that allows to check, enable and assert the availability of components in the Face Ele..." alt="" coords="312,55,459,80"/>
-<area shape="rect" href="group__mesh.html" title="List of classes, aliases, concepts and functions used for the creation, customization,..." alt="" coords="5,31,63,56"/>
-<area shape="rect" title="List functions that allows to check, enable and assert the availability of components in the Elements..." alt="" coords="111,31,263,56"/>
+<area shape="rect" href="group__edge__requirements.html" title="List functions that allows to check, enable and assert the availability of components in the Edge Ele..." alt="" coords="315,5,465,31"/>
+<area shape="rect" href="group__face__requirements.html" title="List functions that allows to check, enable and assert the availability of components in the Face Ele..." alt="" coords="317,55,463,80"/>
+<area shape="rect" href="group__mesh.html" title="List of classes, aliases, concepts and functions used for the creation, customization,..." alt="" coords="5,55,63,80"/>
+<area shape="rect" title="List functions that allows to check, enable and assert characteristics and the availability of compon..." alt="" coords="111,55,263,80"/>
+<area shape="rect" href="group__vertex__requirements.html" title="List functions that allows to check, enable and assert the availability of components in the Vertex E..." alt="" coords="311,104,469,129"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -124,32 +125,59 @@ Modules</h2></td></tr>
 <tr class="memitem:group__face__requirements"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__face__requirements.html">Face Requirements</a></td></tr>
 <tr class="memdesc:group__face__requirements"><td class="mdescLeft">&#160;</td><td class="mdescRight">List functions that allows to check, enable and assert the availability of components in the Face Elements of a Mesh. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__vertex__requirements"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__vertex__requirements.html">Vertex Requirements</a></td></tr>
+<tr class="memdesc:group__vertex__requirements"><td class="mdescLeft">&#160;</td><td class="mdescRight">List functions that allows to check, enable and assert the availability of components in the Vertex Elements of a Mesh. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga3f4ab723ca992b97ebeba82f85fac787"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> ELEMENT_TYPE, MeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga3f4ab723ca992b97ebeba82f85fac787"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> ELEM_ID, MeshConcept MeshType&gt; </td></tr>
 <tr class="memitem:ga3f4ab723ca992b97ebeba82f85fac787"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__mesh__requirements.html#ga3f4ab723ca992b97ebeba82f85fac787">vcl::isElementContainerCompact</a> (const MeshType &amp;m)</td></tr>
 <tr class="memdesc:ga3f4ab723ca992b97ebeba82f85fac787"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if the given mesh has its Container of the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> compact.  <br /></td></tr>
 <tr class="separator:ga3f4ab723ca992b97ebeba82f85fac787"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9c8151a5696752123584a2e07a2f275e"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> ELEMENT_TYPE, <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> COMPONENT_TYPE, MeshConcept MeshType&gt; </td></tr>
-<tr class="memitem:ga9c8151a5696752123584a2e07a2f275e"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__mesh__requirements.html#ga9c8151a5696752123584a2e07a2f275e">vcl::isPerElementComponentEnabled</a> (const MeshType &amp;m)</td></tr>
-<tr class="memdesc:ga9c8151a5696752123584a2e07a2f275e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the given component is available (enabled) in the given element of the input mesh m.  <br /></td></tr>
-<tr class="separator:ga9c8151a5696752123584a2e07a2f275e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac6ccafe282dfd418a16426fb85c5c416"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> ELEMENT_TYPE, <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> COMPONENT_TYPE, MeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga0cb1dd17c45e56caf4a313f557e677c3"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> ELEM_ID, <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> COMP_ID, MeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga0cb1dd17c45e56caf4a313f557e677c3"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__mesh__requirements.html#ga0cb1dd17c45e56caf4a313f557e677c3">vcl::isPerElementComponentAvailable</a> (const MeshType &amp;m)</td></tr>
+<tr class="memdesc:ga0cb1dd17c45e56caf4a313f557e677c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the given component is available in the given element of the input mesh m.  <br /></td></tr>
+<tr class="separator:ga0cb1dd17c45e56caf4a313f557e677c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac6ccafe282dfd418a16426fb85c5c416"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> ELEM_ID, <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> COMP_ID, MeshConcept MeshType&gt; </td></tr>
 <tr class="memitem:gac6ccafe282dfd418a16426fb85c5c416"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__mesh__requirements.html#gac6ccafe282dfd418a16426fb85c5c416">vcl::enableIfPerElementComponentOptional</a> (MeshType &amp;m)</td></tr>
-<tr class="memdesc:gac6ccafe282dfd418a16426fb85c5c416"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the input mesh has a Container of the given ElementEnumType, and the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has a Component of the given ComponentEnumType, this function enables the Component in the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> if the component needs to be enabled. Returns <code>true</code> if, after the call of this function, the component will be available in the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> of the mesh.  <br /></td></tr>
+<tr class="memdesc:gac6ccafe282dfd418a16426fb85c5c416"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes available the given Component in the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> of the input mesh m, and returns <code>true</code> if it succeeds.  <br /></td></tr>
 <tr class="separator:gac6ccafe282dfd418a16426fb85c5c416"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6b9a2c1e26cd387e348ef4e137ec912c"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> ELEMENT_TYPE, MeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga6b9a2c1e26cd387e348ef4e137ec912c"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> ELEM_ID, MeshConcept MeshType&gt; </td></tr>
 <tr class="memitem:ga6b9a2c1e26cd387e348ef4e137ec912c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__mesh__requirements.html#ga6b9a2c1e26cd387e348ef4e137ec912c">vcl::requireElementContainerCompactness</a> (const MeshType &amp;m)</td></tr>
-<tr class="memdesc:ga6b9a2c1e26cd387e348ef4e137ec912c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function asserts that a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> has the Container of the given ElementEnumType compact (no elements flagged as deleted).  <br /></td></tr>
+<tr class="memdesc:ga6b9a2c1e26cd387e348ef4e137ec912c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function asserts that a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> has the Container of the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> ID compact (no elements flagged as deleted).  <br /></td></tr>
 <tr class="separator:ga6b9a2c1e26cd387e348ef4e137ec912c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga64d5aafc5d7a737a9654c763ee5a8132"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> ELEMENT_TYPE, <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> COMPONENT_TYPE, MeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga64d5aafc5d7a737a9654c763ee5a8132"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> ELEM_ID, <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> COMP_ID, MeshConcept MeshType&gt; </td></tr>
 <tr class="memitem:ga64d5aafc5d7a737a9654c763ee5a8132"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__mesh__requirements.html#ga64d5aafc5d7a737a9654c763ee5a8132">vcl::requirePerElementComponent</a> (const MeshType &amp;m)</td></tr>
-<tr class="memdesc:ga64d5aafc5d7a737a9654c763ee5a8132"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function asserts that a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> has the Container of the given ElementEnumType, the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has a Component of the given ComponentEnumType, and that Component is enabled and available at runtime.  <br /></td></tr>
+<tr class="memdesc:ga64d5aafc5d7a737a9654c763ee5a8132"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function asserts that a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> has the Container of the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> ID, the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has a Component of the given Component ID, and that Component is available at runtime.  <br /></td></tr>
 <tr class="separator:ga64d5aafc5d7a737a9654c763ee5a8132"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2f44643cdd6a934b9ab5f60315e6f01a"><td class="memTemplParams" colspan="2">template&lt;MeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga2f44643cdd6a934b9ab5f60315e6f01a"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__mesh__requirements.html#ga2f44643cdd6a934b9ab5f60315e6f01a">vcl::isTriangleMesh</a> (const MeshType &amp;m)</td></tr>
+<tr class="memdesc:ga2f44643cdd6a934b9ab5f60315e6f01a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks <em>at run time</em> if the mesh m is composed of triangles.  <br /></td></tr>
+<tr class="separator:ga2f44643cdd6a934b9ab5f60315e6f01a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1878ac13ce283e3535efd93d254d1843"><td class="memTemplParams" colspan="2">template&lt;MeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga1878ac13ce283e3535efd93d254d1843"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__mesh__requirements.html#ga1878ac13ce283e3535efd93d254d1843">vcl::isQuadMesh</a> (const MeshType &amp;m)</td></tr>
+<tr class="memdesc:ga1878ac13ce283e3535efd93d254d1843"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks <em>at run time</em> if the mesh is composed of quads.  <br /></td></tr>
+<tr class="separator:ga1878ac13ce283e3535efd93d254d1843"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacb9fbe7647f2b656ab871e2bb20b8c33"><td class="memTemplParams" colspan="2">template&lt;MeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:gacb9fbe7647f2b656ab871e2bb20b8c33"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__mesh__requirements.html#gacb9fbe7647f2b656ab871e2bb20b8c33">vcl::isCompact</a> (const MeshType &amp;m)</td></tr>
+<tr class="memdesc:gacb9fbe7647f2b656ab871e2bb20b8c33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> is compact, that is if it does not contains deleted elements.  <br /></td></tr>
+<tr class="separator:gacb9fbe7647f2b656ab871e2bb20b8c33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3f347e31d2e1fd9471cc98f46668c64c"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga3f347e31d2e1fd9471cc98f46668c64c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__mesh__requirements.html#ga3f347e31d2e1fd9471cc98f46668c64c">vcl::requireTriangleMesh</a> (const MeshType &amp;m)</td></tr>
+<tr class="memdesc:ga3f347e31d2e1fd9471cc98f46668c64c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the mesh is composed of triangles, and if not, throws an exception.  <br /></td></tr>
+<tr class="separator:ga3f347e31d2e1fd9471cc98f46668c64c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa713300521a68b8fe8bf5154fdae27b8"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:gaa713300521a68b8fe8bf5154fdae27b8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__mesh__requirements.html#gaa713300521a68b8fe8bf5154fdae27b8">vcl::requireQuadMesh</a> (const MeshType &amp;m)</td></tr>
+<tr class="memdesc:gaa713300521a68b8fe8bf5154fdae27b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the mesh is composed of quads, and if not, throws an exception.  <br /></td></tr>
+<tr class="separator:gaa713300521a68b8fe8bf5154fdae27b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga84e84c881525f5d76599d6ef8d4a0933"><td class="memTemplParams" colspan="2">template&lt;MeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga84e84c881525f5d76599d6ef8d4a0933"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__mesh__requirements.html#ga84e84c881525f5d76599d6ef8d4a0933">vcl::requireCompactness</a> (const MeshType &amp;m)</td></tr>
+<tr class="memdesc:ga84e84c881525f5d76599d6ef8d4a0933"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> is compact, that is if it does not contains deleted elements, and if not, throws an exception.  <br /></td></tr>
+<tr class="separator:ga84e84c881525f5d76599d6ef8d4a0933"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>List functions that allows to check, enable and assert the availability of components in the Elements of a Mesh. </p>
+<p>List functions that allows to check, enable and assert characteristics and the availability of components in the Elements of a Mesh. </p>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="gac6ccafe282dfd418a16426fb85c5c416" name="gac6ccafe282dfd418a16426fb85c5c416"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gac6ccafe282dfd418a16426fb85c5c416">&#9670;&#160;</a></span>enableIfPerElementComponentOptional()</h2>
@@ -157,7 +185,7 @@ Functions</h2></td></tr>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> ELEMENT_TYPE, <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> COMPONENT_TYPE, MeshConcept MeshType&gt; </div>
+template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> ELEM_ID, <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> COMP_ID, MeshConcept MeshType&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">bool vcl::enableIfPerElementComponentOptional </td>
@@ -169,11 +197,12 @@ template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e
       </table>
 </div><div class="memdoc">
 
-<p>If the input mesh has a Container of the given ElementEnumType, and the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has a Component of the given ComponentEnumType, this function enables the Component in the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> if the component needs to be enabled. Returns <code>true</code> if, after the call of this function, the component will be available in the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> of the mesh. </p>
+<p>Makes available the given Component in the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> of the input mesh m, and returns <code>true</code> if it succeeds. </p>
+<p>If the input mesh has a Container of the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> ID, and the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has a Component of the given Component ID, this function enables the Component in the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> if the component needs to be enabled. Returns <code>true</code> if, after the call of this function, the component will be available in the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> of the mesh.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">ELEMENT_TYPE</td><td>the ElementEnumType of the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> on which enable the component. </td></tr>
-    <tr><td class="paramname">COMPONENT_TYPE</td><td>the ComponentEnumType of the Component to enable. </td></tr>
+    <tr><td class="paramname">ELEM_ID</td><td>the ID of the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> on which enable the component. </td></tr>
+    <tr><td class="paramname">COMP_ID</td><td>the ID of the Component to enable. </td></tr>
     <tr><td class="paramname">MeshType</td><td>the type of the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> to check.</td></tr>
   </table>
   </dd>
@@ -188,13 +217,37 @@ template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e
 
 </div>
 </div>
+<a id="gacb9fbe7647f2b656ab871e2bb20b8c33" name="gacb9fbe7647f2b656ab871e2bb20b8c33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacb9fbe7647f2b656ab871e2bb20b8c33">&#9670;&#160;</a></span>isCompact()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;MeshConcept MeshType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool vcl::isCompact </td>
+          <td>(</td>
+          <td class="paramtype">const MeshType &amp;&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> is compact, that is if it does not contains deleted elements. </p>
+<p>It is equivalent to call <code>m.isCompact()</code>.</p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if <code>m</code> is compact, <code>false</code> otherwise. </dd></dl>
+
+</div>
+</div>
 <a id="ga3f4ab723ca992b97ebeba82f85fac787" name="ga3f4ab723ca992b97ebeba82f85fac787"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga3f4ab723ca992b97ebeba82f85fac787">&#9670;&#160;</a></span>isElementContainerCompact()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> ELEMENT_TYPE, MeshConcept MeshType&gt; </div>
+template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> ELEM_ID, MeshConcept MeshType&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">bool vcl::isElementContainerCompact </td>
@@ -209,14 +262,14 @@ template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e
 <p>Returns <code>true</code> if the given mesh has its Container of the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> compact. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">ELEMENT_TYPE</td><td>the ElementEnumType of the ElementContainer to check. </td></tr>
-    <tr><td class="paramname">MeshType</td><td>the type of the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> to check.</td></tr>
+    <tr><td class="paramname">ELEM_ID</td><td>the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> ID of the ElementContainer to check. </td></tr>
+    <tr><td class="paramname">MeshType</td><td>the type of the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> to check. It must satisfy the MeshConcept.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">m</td><td>the mesh on which check the compactness of the Container of the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>the mesh on which check the compactness of the Container of the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -224,16 +277,16 @@ template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e
 
 </div>
 </div>
-<a id="ga9c8151a5696752123584a2e07a2f275e" name="ga9c8151a5696752123584a2e07a2f275e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9c8151a5696752123584a2e07a2f275e">&#9670;&#160;</a></span>isPerElementComponentEnabled()</h2>
+<a id="ga0cb1dd17c45e56caf4a313f557e677c3" name="ga0cb1dd17c45e56caf4a313f557e677c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0cb1dd17c45e56caf4a313f557e677c3">&#9670;&#160;</a></span>isPerElementComponentAvailable()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> ELEMENT_TYPE, <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> COMPONENT_TYPE, MeshConcept MeshType&gt; </div>
+template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> ELEM_ID, <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> COMP_ID, MeshConcept MeshType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool vcl::isPerElementComponentEnabled </td>
+          <td class="memname">bool vcl::isPerElementComponentAvailable </td>
           <td>(</td>
           <td class="paramtype">const MeshType &amp;&#160;</td>
           <td class="paramname"><em>m</em></td><td>)</td>
@@ -242,18 +295,18 @@ template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e
       </table>
 </div><div class="memdoc">
 
-<p>Returns true if the given component is available (enabled) in the given element of the input mesh m. </p>
+<p>Returns true if the given component is available in the given element of the input mesh m. </p>
 <p>This function returns <code>true</code> when the component can be used on the element, whether the component is horizontal, vertical or optional.</p>
 <p>These are the following cases:</p><ul>
-<li>if the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> does not have an ElementContainer of the given ElementEnumType, the function returns <code>false</code>;</li>
-<li>if the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> does not have a Component of the given ComponentEnumType, the function returns <code>false</code>;</li>
-<li>if the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has a non-optional Component of the given ComponentEnumType, the function returns <code>true</code>;</li>
-<li>if the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has an optional Component of the given ComponentEnumType, the function returns <code>true</code> if the component is enabled, false otherwise (this check is the only one that is made at runtime);</li>
+<li>if the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> does not have an ElementContainer of the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> ID, the function returns <code>false</code>;</li>
+<li>if the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> does not have a Component of the given Component ID, the function returns <code>false</code>;</li>
+<li>if the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has a non-optional Component of the given Component ID, the function returns <code>true</code>;</li>
+<li>if the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has an optional Component of the given Component ID, the function returns <code>true</code> if the component is enabled, false otherwise (this check is the only one that is made at runtime);</li>
 </ul>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">ELEMENT_TYPE</td><td>the ElementEnumType of the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> to check. </td></tr>
-    <tr><td class="paramname">COMPONENT_TYPE</td><td>the ComponentEnumType of the Component to check. </td></tr>
+    <tr><td class="paramname">ELEM_ID</td><td>the ID of the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> to check. </td></tr>
+    <tr><td class="paramname">COMP_ID</td><td>the ID of the Component to check. </td></tr>
     <tr><td class="paramname">MeshType</td><td>the type of the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> to check.</td></tr>
   </table>
   </dd>
@@ -268,13 +321,127 @@ template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e
 
 </div>
 </div>
+<a id="ga1878ac13ce283e3535efd93d254d1843" name="ga1878ac13ce283e3535efd93d254d1843"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1878ac13ce283e3535efd93d254d1843">&#9670;&#160;</a></span>isQuadMesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;MeshConcept MeshType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool vcl::isQuadMesh </td>
+          <td>(</td>
+          <td class="paramtype">const MeshType &amp;&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks <em>at run time</em> if the mesh is composed of quads. </p>
+<p>This function works both for quad and polygonal meshes composed of faces having 4 vertices. If the size of the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> Vertices is 4, this check is immediate. If it is not 4, the functions checks for each face if it has 4 vertices.</p>
+<p>Complexity: <em>O(n)</em></p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>the type of the mesh. It must satisfy the MeshConcept.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>the mesh on which check if each face has 4 vertices. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if every face of the mesh is composed of 4 vertices. </dd></dl>
+
+</div>
+</div>
+<a id="ga2f44643cdd6a934b9ab5f60315e6f01a" name="ga2f44643cdd6a934b9ab5f60315e6f01a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2f44643cdd6a934b9ab5f60315e6f01a">&#9670;&#160;</a></span>isTriangleMesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;MeshConcept MeshType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool vcl::isTriangleMesh </td>
+          <td>(</td>
+          <td class="paramtype">const MeshType &amp;&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks <em>at run time</em> if the mesh m is composed of triangles. </p>
+<p>This function works both for triangle and polygonal meshes composed of faces having 3 vertices. If the size of the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> Vertices is static and 3, this check is immediate. If it is not 3, the functions checks for each face if it has 3 vertices.</p>
+<p>Complexity: <em>O(n)</em></p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>the type of the mesh. It must satisfy the MeshConcept.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>the mesh on which check if each face has 3 vertices. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if every face of the mesh is composed of 3 vertices. </dd></dl>
+
+</div>
+</div>
+<a id="ga84e84c881525f5d76599d6ef8d4a0933" name="ga84e84c881525f5d76599d6ef8d4a0933"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga84e84c881525f5d76599d6ef8d4a0933">&#9670;&#160;</a></span>requireCompactness()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;MeshConcept MeshType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void vcl::requireCompactness </td>
+          <td>(</td>
+          <td class="paramtype">const MeshType &amp;&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> is compact, that is if it does not contains deleted elements, and if not, throws an exception. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classvcl_1_1MissingCompactnessException.html">vcl::MissingCompactnessException</a></td><td>if the mesh is not compact.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>the type of the mesh. It must satisfy the MeshConcept.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>the mesh on which check if is compact. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ga6b9a2c1e26cd387e348ef4e137ec912c" name="ga6b9a2c1e26cd387e348ef4e137ec912c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga6b9a2c1e26cd387e348ef4e137ec912c">&#9670;&#160;</a></span>requireElementContainerCompactness()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> ELEMENT_TYPE, MeshConcept MeshType&gt; </div>
+template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> ELEM_ID, MeshConcept MeshType&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void vcl::requireElementContainerCompactness </td>
@@ -286,11 +453,11 @@ template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e
       </table>
 </div><div class="memdoc">
 
-<p>This function asserts that a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> has the Container of the given ElementEnumType compact (no elements flagged as deleted). </p>
-<p>If the Container of the given ElementEnumType is not compact, a <a class="el" href="classvcl_1_1MissingCompactnessException.html">vcl::MissingCompactnessException</a> will be thrown. If the mesh has not a Container of the given ElementEnumType, a build error will be raised.</p>
+<p>This function asserts that a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> has the Container of the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> ID compact (no elements flagged as deleted). </p>
+<p>If the Container of the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> ID is not compact, a <a class="el" href="classvcl_1_1MissingCompactnessException.html">vcl::MissingCompactnessException</a> will be thrown. If the mesh has not a Container of the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> ID, a build error will be raised.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">ELEMENT_TYPE</td><td>the ElementEnumType of the ElementContainer to check. </td></tr>
+    <tr><td class="paramname">ELEM_ID</td><td>the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> ID of the ElementContainer to check. </td></tr>
     <tr><td class="paramname">MeshType</td><td>the type of the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> to check.</td></tr>
   </table>
   </dd>
@@ -316,7 +483,7 @@ template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> ELEMENT_TYPE, <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> COMPONENT_TYPE, MeshConcept MeshType&gt; </div>
+template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> ELEM_ID, <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> COMP_ID, MeshConcept MeshType&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void vcl::requirePerElementComponent </td>
@@ -328,16 +495,16 @@ template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e
       </table>
 </div><div class="memdoc">
 
-<p>This function asserts that a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> has the Container of the given ElementEnumType, the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has a Component of the given ComponentEnumType, and that Component is enabled and available at runtime. </p>
-<p>If the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>:</p><ul>
+<p>This function asserts that a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> has the Container of the given <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> ID, the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has a Component of the given Component ID, and that Component is available at runtime. </p>
+<p>If the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> does not satisfy one of these conditions, a <a class="el" href="classvcl_1_1MissingComponentException.html">vcl::MissingComponentException</a> will be thrown:</p><ul>
 <li>has not a Container of the given ElementEnumType;</li>
 <li>has the Container but the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has not a Component of the given ComponentEnumType;</li>
-<li>has the Container, the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has the Component, but the Component is not enabled a <a class="el" href="classvcl_1_1MissingComponentException.html">vcl::MissingComponentException</a> will be thrown.</li>
+<li>has the Container, the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has the Component, but the Component is not enabled.</li>
 </ul>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">ELEMENT_TYPE</td><td>the ElementEnumType of the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> to check. </td></tr>
-    <tr><td class="paramname">COMPONENT_TYPE</td><td>the ComponentEnumType of the Component to check. </td></tr>
+    <tr><td class="paramname">ELEM_ID</td><td>the ID of the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> to check. </td></tr>
+    <tr><td class="paramname">COMP_ID</td><td>the ID of the Component to check. </td></tr>
     <tr><td class="paramname">MeshType</td><td>the type of the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> to check.</td></tr>
   </table>
   </dd>
@@ -350,7 +517,92 @@ template&lt;<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>the mesh on which check the availability of the Component in the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>the mesh on which check the availability of the Component in the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>fix this - add compile time requirements</dd></dl>
+
+</div>
+</div>
+<a id="gaa713300521a68b8fe8bf5154fdae27b8" name="gaa713300521a68b8fe8bf5154fdae27b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa713300521a68b8fe8bf5154fdae27b8">&#9670;&#160;</a></span>requireQuadMesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;FaceMeshConcept MeshType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void vcl::requireQuadMesh </td>
+          <td>(</td>
+          <td class="paramtype">const MeshType &amp;&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if the mesh is composed of quads, and if not, throws an exception. </p>
+<p>This function works both for quad and polygonal meshes composed of faces having 4 vertices. If the size of the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> Vertices is static and 3, this check is immediate. If it is not 4, the functions checks for each face if it has 4 vertices.</p>
+<p>Complexity: <em>O(n)</em></p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classvcl_1_1MissingQuadRequirementException.html">vcl::MissingQuadRequirementException</a></td><td>if the mesh is not composed of quads.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>the type of the mesh. It must satisfy the FaceMeshConcept.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>the mesh on which check if each face has 4 vertices. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga3f347e31d2e1fd9471cc98f46668c64c" name="ga3f347e31d2e1fd9471cc98f46668c64c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3f347e31d2e1fd9471cc98f46668c64c">&#9670;&#160;</a></span>requireTriangleMesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;FaceMeshConcept MeshType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void vcl::requireTriangleMesh </td>
+          <td>(</td>
+          <td class="paramtype">const MeshType &amp;&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if the mesh is composed of triangles, and if not, throws an exception. </p>
+<p>This function works both for triangle and polygonal meshes composed of faces having 3 vertices. If the size of the <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> Vertices is static and 3, this check is immediate. If it is not 3, the functions checks for each face if it has 3 vertices.</p>
+<p>Complexity: <em>O(n)</em></p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classvcl_1_1MissingTriangularRequirementException.html">vcl::MissingTriangularRequirementException</a></td><td>if the mesh is not composed of triangles.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>the type of the mesh. It must satisfy the FaceMeshConcept.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>the mesh on which check if each face has 3 vertices. </td></tr>
   </table>
   </dd>
 </dl>

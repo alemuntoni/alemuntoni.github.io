@@ -9,7 +9,7 @@ var searchData=
   ['edgemesht_6',['EdgeMeshT',['../classvcl_1_1EdgeMeshT.html',1,'vcl']]],
   ['edgemesht_3c_20scalar_20_3e_7',['EdgeMeshT&lt; Scalar &gt;',['../classvcl_1_1EdgeMeshT.html',1,'vcl']]],
   ['elemenetstring_8',['ElemenetString',['../structvcl_1_1ElemenetString.html',1,'vcl']]],
-  ['element_9',['Element',['../classvcl_1_1Element.html',1,'vcl::Element&lt; ELEM_TYPE, MeshType, Comps &gt;'],['../structvcl_1_1io_1_1ply_1_1Element.html',1,'vcl::io::ply::Element']]],
+  ['element_9',['Element',['../classvcl_1_1Element.html',1,'vcl::Element&lt; ELEM_ID, MeshType, Comps &gt;'],['../structvcl_1_1io_1_1ply_1_1Element.html',1,'vcl::io::ply::Element']]],
   ['element_3c_20edge_2c_20edgemesht_3c_20scalar_20_3e_2c_20comps_2e_2e_2e_20_3e_10',['Element&lt; EDGE, EdgeMeshT&lt; Scalar &gt;, Comps... &gt;',['../classvcl_1_1Element.html',1,'vcl']]],
   ['element_3c_20edge_2c_20meshtype_2c_20comps_2e_2e_2e_20_3e_11',['Element&lt; EDGE, MeshType, Comps... &gt;',['../classvcl_1_1Element.html',1,'vcl']]],
   ['element_3c_20face_2c_20meshtype_2c_20comps_2e_2e_2e_20_3e_12',['Element&lt; FACE, MeshType, Comps... &gt;',['../classvcl_1_1Element.html',1,'vcl']]],

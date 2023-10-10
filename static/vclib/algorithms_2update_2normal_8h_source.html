@@ -127,68 +127,255 @@ $(document).ready(function(){initNavTree('algorithms_2update_2normal_8h_source.h
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="requirements_8h.html">vclib/mesh/requirements.h</a>&gt;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="space_2matrix_8h.html">vclib/space/matrix.h</a>&gt;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &quot;../polygon.h&quot;</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">template</span>&lt;FaceMeshConcept MeshType&gt;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacevcl.html#ae3ccefcbb94fc15319e388a1183f3925">normalizePerFaceNormals</a>(MeshType&amp; m);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">template</span>&lt;FaceMeshConcept MeshType&gt;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacevcl.html#a9a15ac19d4224a7a140430d7c209203c">updatePerFaceNormals</a>(MeshType&amp; m, <span class="keywordtype">bool</span> normalize = <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">template</span>&lt;MeshConcept MeshType&gt;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacevcl.html#ad6a0e2bc172c69d34a84631e824c75a4">clearPerVertexNormals</a>(MeshType&amp; m);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">template</span>&lt;FaceMeshConcept MeshType&gt;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacevcl.html#aa5ad240da55effe35e495f1aad2e3507">clearPerReferencedVertexNormals</a>(MeshType&amp; m);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">template</span>&lt;MeshConcept MeshType&gt;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacevcl.html#a0c7590577a9732afcd1dc3639b3965b6">normalizePerVertexNormals</a>(MeshType&amp; m);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">template</span>&lt;FaceMeshConcept MeshType&gt;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacevcl.html#a5ffafa25128bbb020b17d135d5f1ac30">updatePerVertexNormals</a>(MeshType&amp; m, <span class="keywordtype">bool</span> normalize = <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keyword">template</span>&lt;FaceMeshConcept MeshType&gt;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacevcl.html#a174b88dbc14a78799d856505b061a2cb">updatePerVertexNormalsFromFaceNormals</a>(MeshType&amp; m, <span class="keywordtype">bool</span> normalize = <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keyword">template</span>&lt;FaceMeshConcept MeshType&gt;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacevcl.html#abed9b2152933865a0d095b9ff2e28087">updatePerVertexNormalsAngleWeighted</a>(MeshType&amp; m, <span class="keywordtype">bool</span> normalize = <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">template</span>&lt;FaceMeshConcept MeshType&gt;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacevcl.html#ac81b97996fdfb6ff64cf8f42688b9ebc">updatePerVertexNormalsNelsonMaxWeighted</a>(MeshType&amp; m, <span class="keywordtype">bool</span> normalize = <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keyword">template</span>&lt;FaceMeshConcept MeshType, <span class="keyword">typename</span> MScalar&gt;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacevcl.html#ae925bc10e1eec9a48761c6b852756e42">multiplyPerFaceNormalsByMatrix</a>(</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    MeshType&amp;                     mesh,</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="namespacevcl.html#ad82a126b390f21b2e9658c73e7a795ee">vcl::Matrix44&lt;MScalar&gt;</a>&amp; mat,</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">bool</span>                          removeScalingFromMatrix = <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">template</span>&lt;FaceMeshConcept MeshType&gt;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="namespacevcl.html#ae3ccefcbb94fc15319e388a1183f3925">   45</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacevcl.html#ae3ccefcbb94fc15319e388a1183f3925">normalizePerFaceNormals</a>(MeshType&amp; m)</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>{</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <a class="code hl_function" href="group__face__requirements.html#gac641c6af53b47b21fe2b1b85f1b1c8c4">vcl::requirePerFaceNormal</a>(m);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; n : m.faces() | <a class="code hl_variable" href="namespacevcl_1_1views.html#a12e5d44450a8da79095d415ea7d63041">views::normals</a>) {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        n.normalize();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword">template</span>&lt;FaceMeshConcept MeshType&gt;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="namespacevcl.html#a8dd9800cb5538e0eb47613be82daaf44">   61</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacevcl.html#a8dd9800cb5538e0eb47613be82daaf44">updatePerFaceNormals</a>(MeshType&amp; m, <span class="keywordtype">bool</span> normalize = <span class="keyword">true</span>)</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>{</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_function" href="group__face__requirements.html#gac641c6af53b47b21fe2b1b85f1b1c8c4">vcl::requirePerFaceNormal</a>(m);</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keyword">template</span>&lt;MeshConcept MeshType, <span class="keyword">typename</span> MScalar&gt;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacevcl.html#a7c520689bfd82598aafdae321530c762">multiplyPerVertexNormalsByMatrix</a>(</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    MeshType&amp;                     mesh,</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="namespacevcl.html#ad82a126b390f21b2e9658c73e7a795ee">vcl::Matrix44&lt;MScalar&gt;</a>&amp; mat,</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">bool</span>                          removeScalingFromMatrix = <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">using </span>FaceType = MeshType::FaceType;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">for</span> (FaceType&amp; f : m.faces()) {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        f.normal() = <a class="code hl_function" href="namespacevcl.html#a350d3edc324e0bef955a2c2ef8e20859">faceNormal</a>(f).</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                     <span class="keyword">template</span> cast&lt;typename FaceType::NormalType::ScalarType&gt;();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">#include &quot;<a class="code" href="mesh_2components_2normal_8cpp.html">normal.cpp</a>&quot;</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordflow">if</span> (normalize)</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <a class="code hl_function" href="namespacevcl.html#ae3ccefcbb94fc15319e388a1183f3925">normalizePerFaceNormals</a>(m);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>}</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">#endif </span><span class="comment">// VCL_ALGORITHMS_UPDATE_NORMAL_H</span></div>
-<div class="ttc" id="amesh_2components_2normal_8cpp_html"><div class="ttname"><a href="mesh_2components_2normal_8cpp.html">normal.cpp</a></div></div>
-<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition:</b> bounding_box.cpp:29</div></div>
-<div class="ttc" id="anamespacevcl_html_a0c7590577a9732afcd1dc3639b3965b6"><div class="ttname"><a href="namespacevcl.html#a0c7590577a9732afcd1dc3639b3965b6">vcl::normalizePerVertexNormals</a></div><div class="ttdeci">void normalizePerVertexNormals(MeshType &amp;m)</div><div class="ttdoc">Normalizes the length of the vertex normals.</div><div class="ttdef"><b>Definition:</b> normal.cpp:150</div></div>
-<div class="ttc" id="anamespacevcl_html_a174b88dbc14a78799d856505b061a2cb"><div class="ttname"><a href="namespacevcl.html#a174b88dbc14a78799d856505b061a2cb">vcl::updatePerVertexNormalsFromFaceNormals</a></div><div class="ttdeci">void updatePerVertexNormalsFromFaceNormals(MeshType &amp;m, bool normalize)</div><div class="ttdoc">Computes the vertex normal as the sum of the adjacent faces normals.</div><div class="ttdef"><b>Definition:</b> normal.cpp:217</div></div>
-<div class="ttc" id="anamespacevcl_html_a5ffafa25128bbb020b17d135d5f1ac30"><div class="ttname"><a href="namespacevcl.html#a5ffafa25128bbb020b17d135d5f1ac30">vcl::updatePerVertexNormals</a></div><div class="ttdeci">void updatePerVertexNormals(MeshType &amp;m, bool normalize)</div><div class="ttdoc">Computes the vertex normal as the classic area weighted average.</div><div class="ttdef"><b>Definition:</b> normal.cpp:183</div></div>
-<div class="ttc" id="anamespacevcl_html_a7c520689bfd82598aafdae321530c762"><div class="ttname"><a href="namespacevcl.html#a7c520689bfd82598aafdae321530c762">vcl::multiplyPerVertexNormalsByMatrix</a></div><div class="ttdeci">void multiplyPerVertexNormalsByMatrix(MeshType &amp;mesh, const vcl::Matrix44&lt; MScalar &gt; &amp;mat, bool removeScalingFromMatrix)</div><div class="ttdoc">Multiplies the Vertex Normals by the given TRS 4x4 Matrix. By default, the scale component is removed...</div><div class="ttdef"><b>Definition:</b> normal.cpp:396</div></div>
-<div class="ttc" id="anamespacevcl_html_a9a15ac19d4224a7a140430d7c209203c"><div class="ttname"><a href="namespacevcl.html#a9a15ac19d4224a7a140430d7c209203c">vcl::updatePerFaceNormals</a></div><div class="ttdeci">void updatePerFaceNormals(MeshType &amp;m, bool normalize)</div><div class="ttdoc">updatePerFaceNormals</div><div class="ttdef"><b>Definition:</b> normal.cpp:64</div></div>
-<div class="ttc" id="anamespacevcl_html_aa5ad240da55effe35e495f1aad2e3507"><div class="ttname"><a href="namespacevcl.html#aa5ad240da55effe35e495f1aad2e3507">vcl::clearPerReferencedVertexNormals</a></div><div class="ttdeci">void clearPerReferencedVertexNormals(MeshType &amp;m)</div><div class="ttdoc">Sets to zero all the normals of vertices that are referenced by at least one face,...</div><div class="ttdef"><b>Definition:</b> normal.cpp:119</div></div>
-<div class="ttc" id="anamespacevcl_html_abed9b2152933865a0d095b9ff2e28087"><div class="ttname"><a href="namespacevcl.html#abed9b2152933865a0d095b9ff2e28087">vcl::updatePerVertexNormalsAngleWeighted</a></div><div class="ttdeci">void updatePerVertexNormalsAngleWeighted(MeshType &amp;m, bool normalize)</div><div class="ttdoc">Computes the vertex normal as an angle weighted average.</div><div class="ttdef"><b>Definition:</b> normal.cpp:260</div></div>
-<div class="ttc" id="anamespacevcl_html_ac81b97996fdfb6ff64cf8f42688b9ebc"><div class="ttname"><a href="namespacevcl.html#ac81b97996fdfb6ff64cf8f42688b9ebc">vcl::updatePerVertexNormalsNelsonMaxWeighted</a></div><div class="ttdeci">void updatePerVertexNormalsNelsonMaxWeighted(MeshType &amp;m, bool normalize)</div><div class="ttdoc">Computes the vertex normal using the Max et al. weighting scheme.</div><div class="ttdef"><b>Definition:</b> normal.cpp:315</div></div>
-<div class="ttc" id="anamespacevcl_html_ad6a0e2bc172c69d34a84631e824c75a4"><div class="ttname"><a href="namespacevcl.html#ad6a0e2bc172c69d34a84631e824c75a4">vcl::clearPerVertexNormals</a></div><div class="ttdeci">void clearPerVertexNormals(MeshType &amp;m)</div><div class="ttdoc">Sets to zero the normals of all the vertices of the mesh, including the unreferenced ones.</div><div class="ttdef"><b>Definition:</b> normal.cpp:89</div></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="keyword">template</span>&lt;MeshConcept MeshType&gt;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="namespacevcl.html#ad6a0e2bc172c69d34a84631e824c75a4">   87</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacevcl.html#ad6a0e2bc172c69d34a84631e824c75a4">clearPerVertexNormals</a>(MeshType&amp; m)</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>{</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <a class="code hl_function" href="namespacevcl.html#ab43f884f6ca679c8f57255e11ddaa768">vcl::requirePerVertexNormal</a>(m);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; n : m.vertices() | <a class="code hl_variable" href="namespacevcl_1_1views.html#a12e5d44450a8da79095d415ea7d63041">views::normals</a>) {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        n.setZero();</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    }</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>}</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="keyword">template</span>&lt;FaceMeshConcept MeshType&gt;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="namespacevcl.html#aa5ad240da55effe35e495f1aad2e3507">  110</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacevcl.html#aa5ad240da55effe35e495f1aad2e3507">clearPerReferencedVertexNormals</a>(MeshType&amp; m)</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>{</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <a class="code hl_function" href="namespacevcl.html#ab43f884f6ca679c8f57255e11ddaa768">vcl::requirePerVertexNormal</a>(m);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keyword">using </span>VertexType = MeshType::VertexType;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keyword">using </span>FaceType   = MeshType::FaceType;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordflow">for</span> (FaceType&amp; f : m.faces()) {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; n : f.vertices() | <a class="code hl_variable" href="namespacevcl_1_1views.html#a12e5d44450a8da79095d415ea7d63041">views::normals</a>) {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            n.setZero();</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        }</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    }</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>}</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="keyword">template</span>&lt;MeshConcept MeshType&gt;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="namespacevcl.html#a0c7590577a9732afcd1dc3639b3965b6">  135</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacevcl.html#a0c7590577a9732afcd1dc3639b3965b6">normalizePerVertexNormals</a>(MeshType&amp; m)</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>{</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <a class="code hl_function" href="namespacevcl.html#ab43f884f6ca679c8f57255e11ddaa768">vcl::requirePerVertexNormal</a>(m);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; n : m.vertices() | <a class="code hl_variable" href="namespacevcl_1_1views.html#a12e5d44450a8da79095d415ea7d63041">views::normals</a>) {</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        n.normalize();</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    }</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>}</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="keyword">template</span>&lt;FaceMeshConcept MeshType&gt;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="namespacevcl.html#aea3bc3d2b03bb9e985c9977023b0fb9f">  161</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacevcl.html#aea3bc3d2b03bb9e985c9977023b0fb9f">updatePerVertexNormals</a>(MeshType&amp; m, <span class="keywordtype">bool</span> normalize = <span class="keyword">true</span>)</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>{</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <a class="code hl_function" href="namespacevcl.html#aa5ad240da55effe35e495f1aad2e3507">clearPerReferencedVertexNormals</a>(m);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <span class="keyword">using </span>VertexType = MeshType::VertexType;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keyword">using </span>FaceType   = MeshType::FaceType;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="keyword">using </span>NormalType = VertexType::NormalType;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="keywordflow">for</span> (FaceType&amp; f : m.faces()) {</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        NormalType n =</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>            <a class="code hl_function" href="namespacevcl.html#a350d3edc324e0bef955a2c2ef8e20859">faceNormal</a>(f).template cast&lt;typename NormalType::ScalarType&gt;();</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        <span class="keywordflow">for</span> (VertexType* v : f.vertices()) {</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>            v-&gt;normal() += n;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        }</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    }</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <span class="keywordflow">if</span> (normalize)</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        <a class="code hl_function" href="namespacevcl.html#a0c7590577a9732afcd1dc3639b3965b6">normalizePerVertexNormals</a>(m);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>}</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="keyword">template</span>&lt;FaceMeshConcept MeshType&gt;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno"><a class="line" href="namespacevcl.html#afafcf64d1f3086a907da247132369ca2">  197</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacevcl.html#afafcf64d1f3086a907da247132369ca2">updatePerVertexNormalsFromFaceNormals</a>(MeshType&amp; m, <span class="keywordtype">bool</span> normalize = <span class="keyword">true</span>)</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>{</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    <a class="code hl_function" href="group__face__requirements.html#gac641c6af53b47b21fe2b1b85f1b1c8c4">vcl::requirePerFaceNormal</a>(m);</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    <a class="code hl_function" href="namespacevcl.html#aa5ad240da55effe35e495f1aad2e3507">clearPerReferencedVertexNormals</a>(m);</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <span class="keyword">using </span>VertexType = MeshType::VertexType;</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    <span class="keyword">using </span>FaceType   = MeshType::FaceType;</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    <span class="keywordflow">for</span> (FaceType&amp; f : m.faces()) {</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        <span class="keywordflow">for</span> (VertexType* v : f.vertices()) {</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>            v-&gt;normal() += f.normal();</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        }</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    }</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <span class="keywordflow">if</span> (normalize)</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        <a class="code hl_function" href="namespacevcl.html#a0c7590577a9732afcd1dc3639b3965b6">normalizePerVertexNormals</a>(m);</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>}</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span><span class="keyword">template</span>&lt;FaceMeshConcept MeshType&gt;</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno"><a class="line" href="namespacevcl.html#a1b7d63fc38670dac30d1dd1dadf4ef8c">  242</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacevcl.html#a1b7d63fc38670dac30d1dd1dadf4ef8c">updatePerVertexNormalsAngleWeighted</a>(MeshType&amp; m, <span class="keywordtype">bool</span> normalize = <span class="keyword">true</span>)</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>{</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    <a class="code hl_function" href="namespacevcl.html#aa5ad240da55effe35e495f1aad2e3507">clearPerReferencedVertexNormals</a>(m);</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    <span class="keyword">using </span>VertexType = MeshType::VertexType;</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    <span class="keyword">using </span>FaceType   = MeshType::FaceType;</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    <span class="keyword">using </span>NormalType = VertexType::NormalType;</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    <span class="keyword">using </span>NScalarType = NormalType::ScalarType;</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    <span class="keywordflow">for</span> (FaceType&amp; f : m.faces()) {</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        NormalType n = <a class="code hl_function" href="namespacevcl.html#a350d3edc324e0bef955a2c2ef8e20859">faceNormal</a>(f).template cast&lt;NScalarType&gt;();</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span> </div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i = 0; i &lt; f.vertexNumber(); ++i) {</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>            NormalType vec1 =</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>                (f.vertexMod(i - 1)-&gt;coord() - f.vertexMod(i)-&gt;coord())</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>                    .normalized()</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>                    .template cast&lt;NScalarType&gt;();</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>            NormalType vec2 =</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>                (f.vertexMod(i + 1)-&gt;coord() - f.vertexMod(i)-&gt;coord())</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>                    .normalized()</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>                    .template cast&lt;NScalarType&gt;();</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span> </div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>            f.vertex(i)-&gt;normal() += n * vec1.angle(vec2);</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>        }</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    }</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    <span class="keywordflow">if</span> (normalize)</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        <a class="code hl_function" href="namespacevcl.html#a0c7590577a9732afcd1dc3639b3965b6">normalizePerVertexNormals</a>(m);</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>}</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span> </div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span><span class="keyword">template</span>&lt;FaceMeshConcept MeshType&gt;</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno"><a class="line" href="namespacevcl.html#a5fdde9d989eeac7117c4f2fd26f3456b">  301</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacevcl.html#a5fdde9d989eeac7117c4f2fd26f3456b">updatePerVertexNormalsNelsonMaxWeighted</a>(MeshType&amp; m, <span class="keywordtype">bool</span> normalize = <span class="keyword">true</span>)</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>{</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    <a class="code hl_function" href="namespacevcl.html#aa5ad240da55effe35e495f1aad2e3507">clearPerReferencedVertexNormals</a>(m);</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span> </div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>    <span class="keyword">using </span>VertexType = MeshType::VertexType;</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    <span class="keyword">using </span>FaceType   = MeshType::FaceType;</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    <span class="keyword">using </span>NormalType = VertexType::NormalType;</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>    <span class="keyword">using </span>NScalarType = NormalType::ScalarType;</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span> </div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    <span class="keywordflow">for</span> (FaceType&amp; f : m.faces()) {</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>        NormalType n = <a class="code hl_function" href="namespacevcl.html#a350d3edc324e0bef955a2c2ef8e20859">faceNormal</a>(f).template cast&lt;NScalarType&gt;();</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span> </div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i = 0; i &lt; f.vertexNumber(); ++i) {</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>            NScalarType e1 =</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>                (f.vertexMod(i - 1)-&gt;coord() - f.vertexMod(i)-&gt;coord())</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>                    .squaredNorm();</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>            NScalarType e2 =</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>                (f.vertexMod(i + 1)-&gt;coord() - f.vertexMod(i)-&gt;coord())</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>                    .squaredNorm();</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span> </div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>            f.vertex(i)-&gt;normal() += n / (e1 * e2);</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>        }</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>    }</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>    <span class="keywordflow">if</span> (normalize)</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>        <a class="code hl_function" href="namespacevcl.html#a0c7590577a9732afcd1dc3639b3965b6">normalizePerVertexNormals</a>(m);</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>}</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span> </div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span><span class="keyword">template</span>&lt;FaceMeshConcept MeshType, <span class="keyword">typename</span> MScalar&gt;</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno"><a class="line" href="namespacevcl.html#a520f83d5e0afa947767dffe36fb77661">  343</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacevcl.html#a520f83d5e0afa947767dffe36fb77661">multiplyPerFaceNormalsByMatrix</a>(</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>    MeshType&amp;                     mesh,</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="namespacevcl.html#ad82a126b390f21b2e9658c73e7a795ee">vcl::Matrix44&lt;MScalar&gt;</a>&amp; mat,</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>    <span class="keywordtype">bool</span>                          removeScalingFromMatrix = <span class="keyword">true</span>)</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>{</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>    <a class="code hl_function" href="group__face__requirements.html#gac641c6af53b47b21fe2b1b85f1b1c8c4">requirePerFaceNormal</a>(mesh);</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span> </div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>    <span class="keyword">using </span>FaceType = MeshType::FaceType;</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span> </div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>    <a class="code hl_typedef" href="namespacevcl.html#a707bb169c4d4cafd5d84170b495721dc">Matrix33&lt;MScalar&gt;</a> m33 = mat.block(0, 0, 3, 3);</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>    <span class="keywordflow">if</span> (removeScalingFromMatrix) {</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>        MScalar scaleX = std::sqrt(</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>            m33(0, 0) * m33(0, 0) + m33(0, 1) * m33(0, 1) +</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>            m33(0, 2) * m33(0, 2));</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>        MScalar scaleY = std::sqrt(</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>            m33(1, 0) * m33(1, 0) + m33(1, 1) * m33(1, 1) +</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>            m33(1, 2) * m33(1, 2));</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>        MScalar scaleZ = std::sqrt(</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>            m33(2, 0) * m33(2, 0) + m33(2, 1) * m33(2, 1) +</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>            m33(2, 2) * m33(2, 2));</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; ++i) {</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>            m33(0, i) /= scaleX;</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>            m33(1, i) /= scaleY;</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>            m33(2, i) /= scaleZ;</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>        }</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>    }</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>    <span class="keywordflow">for</span> (FaceType&amp; f : mesh.faces()) {</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>        f.normal() *= m33;</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>    }</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>}</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span> </div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span><span class="keyword">template</span>&lt;MeshConcept MeshType, <span class="keyword">typename</span> MScalar&gt;</div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno"><a class="line" href="namespacevcl.html#abce848dfdb8667d516f4738b3b8925a7">  389</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacevcl.html#abce848dfdb8667d516f4738b3b8925a7">multiplyPerVertexNormalsByMatrix</a>(</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>    MeshType&amp;                     mesh,</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="namespacevcl.html#ad82a126b390f21b2e9658c73e7a795ee">vcl::Matrix44&lt;MScalar&gt;</a>&amp; mat,</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>    <span class="keywordtype">bool</span>                          removeScalingFromMatrix = <span class="keyword">true</span>)</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>{</div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>    <a class="code hl_function" href="namespacevcl.html#ab43f884f6ca679c8f57255e11ddaa768">requirePerVertexNormal</a>(mesh);</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span> </div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>    <span class="keyword">using </span>VertexType = MeshType::VertexType;</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span> </div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>    <a class="code hl_typedef" href="namespacevcl.html#a707bb169c4d4cafd5d84170b495721dc">Matrix33&lt;MScalar&gt;</a> m33 = mat.block(0, 0, 3, 3);</div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>    <span class="keywordflow">if</span> (removeScalingFromMatrix) {</div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>        MScalar scaleX = std::sqrt(</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>            m33(0, 0) * m33(0, 0) + m33(0, 1) * m33(0, 1) +</div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>            m33(0, 2) * m33(0, 2));</div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>        MScalar scaleY = std::sqrt(</div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>            m33(1, 0) * m33(1, 0) + m33(1, 1) * m33(1, 1) +</div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>            m33(1, 2) * m33(1, 2));</div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>        MScalar scaleZ = std::sqrt(</div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>            m33(2, 0) * m33(2, 0) + m33(2, 1) * m33(2, 1) +</div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>            m33(2, 2) * m33(2, 2));</div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 3; ++i) {</div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>            m33(0, i) /= scaleX;</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>            m33(1, i) /= scaleY;</div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>            m33(2, i) /= scaleZ;</div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>        }</div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>    }</div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>    <span class="keywordflow">for</span> (VertexType&amp; v : mesh.vertices()) {</div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>        v.normal() *= m33;</div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>    }</div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>}</div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span> </div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span> </div>
+<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span><span class="preprocessor">#endif </span><span class="comment">// VCL_ALGORITHMS_UPDATE_NORMAL_H</span></div>
+<div class="ttc" id="agroup__face__requirements_html_gac641c6af53b47b21fe2b1b85f1b1c8c4"><div class="ttname"><a href="group__face__requirements.html#gac641c6af53b47b21fe2b1b85f1b1c8c4">vcl::requirePerFaceNormal</a></div><div class="ttdeci">void requirePerFaceNormal(const MeshType &amp;m)</div><div class="ttdoc">This function asserts that a Mesh has a FaceContainer, the Face has a Normal Component,...</div><div class="ttdef"><b>Definition:</b> face_requirements.h:790</div></div>
+<div class="ttc" id="anamespacevcl_1_1views_html_a12e5d44450a8da79095d415ea7d63041"><div class="ttname"><a href="namespacevcl_1_1views.html#a12e5d44450a8da79095d415ea7d63041">vcl::views::normals</a></div><div class="ttdeci">constexpr internal::NormalsView normals</div><div class="ttdef"><b>Definition:</b> normals.h:69</div></div>
+<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition:</b> bounding_box.h:47</div></div>
+<div class="ttc" id="anamespacevcl_html_a0c7590577a9732afcd1dc3639b3965b6"><div class="ttname"><a href="namespacevcl.html#a0c7590577a9732afcd1dc3639b3965b6">vcl::normalizePerVertexNormals</a></div><div class="ttdeci">void normalizePerVertexNormals(MeshType &amp;m)</div><div class="ttdoc">Normalizes the length of the vertex normals.</div><div class="ttdef"><b>Definition:</b> normal.h:135</div></div>
+<div class="ttc" id="anamespacevcl_html_a1b7d63fc38670dac30d1dd1dadf4ef8c"><div class="ttname"><a href="namespacevcl.html#a1b7d63fc38670dac30d1dd1dadf4ef8c">vcl::updatePerVertexNormalsAngleWeighted</a></div><div class="ttdeci">void updatePerVertexNormalsAngleWeighted(MeshType &amp;m, bool normalize=true)</div><div class="ttdoc">Computes the vertex normal as an angle weighted average.</div><div class="ttdef"><b>Definition:</b> normal.h:242</div></div>
+<div class="ttc" id="anamespacevcl_html_a350d3edc324e0bef955a2c2ef8e20859"><div class="ttname"><a href="namespacevcl.html#a350d3edc324e0bef955a2c2ef8e20859">vcl::faceNormal</a></div><div class="ttdeci">FaceType::VertexType::CoordType faceNormal(const FaceType &amp;f)</div><div class="ttdoc">Computes the normal of a face, without modifying the face. Works both for triangle and polygonal face...</div><div class="ttdef"><b>Definition:</b> geometry.h:44</div></div>
+<div class="ttc" id="anamespacevcl_html_a520f83d5e0afa947767dffe36fb77661"><div class="ttname"><a href="namespacevcl.html#a520f83d5e0afa947767dffe36fb77661">vcl::multiplyPerFaceNormalsByMatrix</a></div><div class="ttdeci">void multiplyPerFaceNormalsByMatrix(MeshType &amp;mesh, const vcl::Matrix44&lt; MScalar &gt; &amp;mat, bool removeScalingFromMatrix=true)</div><div class="ttdoc">Multiplies the Face Normals by the given TRS 4x4 Matrix. By default, the scale component is removed f...</div><div class="ttdef"><b>Definition:</b> normal.h:343</div></div>
+<div class="ttc" id="anamespacevcl_html_a5fdde9d989eeac7117c4f2fd26f3456b"><div class="ttname"><a href="namespacevcl.html#a5fdde9d989eeac7117c4f2fd26f3456b">vcl::updatePerVertexNormalsNelsonMaxWeighted</a></div><div class="ttdeci">void updatePerVertexNormalsNelsonMaxWeighted(MeshType &amp;m, bool normalize=true)</div><div class="ttdoc">Computes the vertex normal using the Max et al. weighting scheme.</div><div class="ttdef"><b>Definition:</b> normal.h:301</div></div>
+<div class="ttc" id="anamespacevcl_html_a707bb169c4d4cafd5d84170b495721dc"><div class="ttname"><a href="namespacevcl.html#a707bb169c4d4cafd5d84170b495721dc">vcl::Matrix33</a></div><div class="ttdeci">Eigen::Matrix&lt; Scalar, 3, 3 &gt; Matrix33</div><div class="ttdef"><b>Definition:</b> matrix.h:35</div></div>
+<div class="ttc" id="anamespacevcl_html_a8dd9800cb5538e0eb47613be82daaf44"><div class="ttname"><a href="namespacevcl.html#a8dd9800cb5538e0eb47613be82daaf44">vcl::updatePerFaceNormals</a></div><div class="ttdeci">void updatePerFaceNormals(MeshType &amp;m, bool normalize=true)</div><div class="ttdoc">updatePerFaceNormals</div><div class="ttdef"><b>Definition:</b> normal.h:61</div></div>
+<div class="ttc" id="anamespacevcl_html_aa5ad240da55effe35e495f1aad2e3507"><div class="ttname"><a href="namespacevcl.html#aa5ad240da55effe35e495f1aad2e3507">vcl::clearPerReferencedVertexNormals</a></div><div class="ttdeci">void clearPerReferencedVertexNormals(MeshType &amp;m)</div><div class="ttdoc">Sets to zero all the normals of vertices that are referenced by at least one face,...</div><div class="ttdef"><b>Definition:</b> normal.h:110</div></div>
+<div class="ttc" id="anamespacevcl_html_ab43f884f6ca679c8f57255e11ddaa768"><div class="ttname"><a href="namespacevcl.html#ab43f884f6ca679c8f57255e11ddaa768">vcl::requirePerVertexNormal</a></div><div class="ttdeci">void requirePerVertexNormal(const MeshType &amp;m)</div><div class="ttdef"><b>Definition:</b> vertex_requirements.h:198</div></div>
+<div class="ttc" id="anamespacevcl_html_abce848dfdb8667d516f4738b3b8925a7"><div class="ttname"><a href="namespacevcl.html#abce848dfdb8667d516f4738b3b8925a7">vcl::multiplyPerVertexNormalsByMatrix</a></div><div class="ttdeci">void multiplyPerVertexNormalsByMatrix(MeshType &amp;mesh, const vcl::Matrix44&lt; MScalar &gt; &amp;mat, bool removeScalingFromMatrix=true)</div><div class="ttdoc">Multiplies the Vertex Normals by the given TRS 4x4 Matrix. By default, the scale component is removed...</div><div class="ttdef"><b>Definition:</b> normal.h:389</div></div>
+<div class="ttc" id="anamespacevcl_html_ad6a0e2bc172c69d34a84631e824c75a4"><div class="ttname"><a href="namespacevcl.html#ad6a0e2bc172c69d34a84631e824c75a4">vcl::clearPerVertexNormals</a></div><div class="ttdeci">void clearPerVertexNormals(MeshType &amp;m)</div><div class="ttdoc">Sets to zero the normals of all the vertices of the mesh, including the unreferenced ones.</div><div class="ttdef"><b>Definition:</b> normal.h:87</div></div>
 <div class="ttc" id="anamespacevcl_html_ad82a126b390f21b2e9658c73e7a795ee"><div class="ttname"><a href="namespacevcl.html#ad82a126b390f21b2e9658c73e7a795ee">vcl::Matrix44</a></div><div class="ttdeci">Eigen::Matrix&lt; Scalar, 4, 4 &gt; Matrix44</div><div class="ttdef"><b>Definition:</b> matrix.h:42</div></div>
-<div class="ttc" id="anamespacevcl_html_ae3ccefcbb94fc15319e388a1183f3925"><div class="ttname"><a href="namespacevcl.html#ae3ccefcbb94fc15319e388a1183f3925">vcl::normalizePerFaceNormals</a></div><div class="ttdeci">void normalizePerFaceNormals(MeshType &amp;m)</div><div class="ttdoc">Normalizes the length of the face normals.</div><div class="ttdef"><b>Definition:</b> normal.cpp:41</div></div>
-<div class="ttc" id="anamespacevcl_html_ae925bc10e1eec9a48761c6b852756e42"><div class="ttname"><a href="namespacevcl.html#ae925bc10e1eec9a48761c6b852756e42">vcl::multiplyPerFaceNormalsByMatrix</a></div><div class="ttdeci">void multiplyPerFaceNormalsByMatrix(MeshType &amp;mesh, const vcl::Matrix44&lt; MScalar &gt; &amp;mat, bool removeScalingFromMatrix)</div><div class="ttdoc">Multiplies the Face Normals by the given TRS 4x4 Matrix. By default, the scale component is removed f...</div><div class="ttdef"><b>Definition:</b> normal.cpp:353</div></div>
+<div class="ttc" id="anamespacevcl_html_ae3ccefcbb94fc15319e388a1183f3925"><div class="ttname"><a href="namespacevcl.html#ae3ccefcbb94fc15319e388a1183f3925">vcl::normalizePerFaceNormals</a></div><div class="ttdeci">void normalizePerFaceNormals(MeshType &amp;m)</div><div class="ttdoc">Normalizes the length of the face normals.</div><div class="ttdef"><b>Definition:</b> normal.h:45</div></div>
+<div class="ttc" id="anamespacevcl_html_aea3bc3d2b03bb9e985c9977023b0fb9f"><div class="ttname"><a href="namespacevcl.html#aea3bc3d2b03bb9e985c9977023b0fb9f">vcl::updatePerVertexNormals</a></div><div class="ttdeci">void updatePerVertexNormals(MeshType &amp;m, bool normalize=true)</div><div class="ttdoc">Computes the vertex normal as the classic area weighted average.</div><div class="ttdef"><b>Definition:</b> normal.h:161</div></div>
+<div class="ttc" id="anamespacevcl_html_afafcf64d1f3086a907da247132369ca2"><div class="ttname"><a href="namespacevcl.html#afafcf64d1f3086a907da247132369ca2">vcl::updatePerVertexNormalsFromFaceNormals</a></div><div class="ttdeci">void updatePerVertexNormalsFromFaceNormals(MeshType &amp;m, bool normalize=true)</div><div class="ttdoc">Computes the vertex normal as the sum of the adjacent faces normals.</div><div class="ttdef"><b>Definition:</b> normal.h:197</div></div>
 <div class="ttc" id="arequirements_8h_html"><div class="ttname"><a href="requirements_8h.html">requirements.h</a></div></div>
 <div class="ttc" id="aspace_2matrix_8h_html"><div class="ttname"><a href="space_2matrix_8h.html">matrix.h</a></div></div>
+<div class="ttc" id="atypes_2base_8h_html_a69aa29b598b851b0640aa225a9e5d61d"><div class="ttname"><a href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> base.h:31</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

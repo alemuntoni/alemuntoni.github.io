@@ -1,6 +1,6 @@
 var classvcl_1_1Distribution =
 [
-    [ "Distribution", "classvcl_1_1Distribution.html#af12adb0e07de9033ffe99350630df0ea", null ],
+    [ "Distribution", "classvcl_1_1Distribution.html#a660e2386ee5e16e7224c22dd381e634d", null ],
     [ "add", "classvcl_1_1Distribution.html#ab4660ec1d2bed6a3bc09caca89e05a62", null ],
     [ "average", "classvcl_1_1Distribution.html#a9c32bd5887f425fd9a3f1a20269d3653", null ],
     [ "clear", "classvcl_1_1Distribution.html#a31da6435819b6ed0f61204dc5c8d71e5", null ],

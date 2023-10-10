@@ -135,10 +135,8 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1mesh_1_1HasVertexContain
 <div class="line">    { o.vertexEnd() } -&gt; std::same_as&lt;typename T::VertexIterator&gt;;</div>
 <div class="line">    { co.vertexEnd() } -&gt; std::same_as&lt;typename T::ConstVertexIterator&gt;;</div>
 <div class="line"> </div>
-<div class="line"> </div>
-<div class="line"> </div>
-<div class="line"> </div>
-<div class="line"> </div>
+<div class="line">    <span class="keyword">requires</span> std::ranges::range&lt;<span class="keyword">decltype</span>(o.vertices())&gt;;</div>
+<div class="line">    <span class="keyword">requires</span> std::ranges::range&lt;<span class="keyword">decltype</span>(co.vertices())&gt;;</div>
 <div class="line">}</div>
 <div class="ttc" id="aconceptvcl_1_1mesh_1_1HasVertexContainer_html"><div class="ttname"><a href="conceptvcl_1_1mesh_1_1HasVertexContainer.html">vcl::mesh::HasVertexContainer</a></div><div class="ttdef"><b>Definition:</b> vertex_container.h:36</div></div>
 <div class="ttc" id="atypes_2base_8h_html_a69aa29b598b851b0640aa225a9e5d61d"><div class="ttname"><a href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> base.h:31</div></div>

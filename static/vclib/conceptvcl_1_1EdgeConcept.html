@@ -107,21 +107,21 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1EdgeConcept.html',''); i
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1EdgeConcept.html">vcl::EdgeConcept</a> = </div>
 <div class="line">    <a class="code hl_concept" href="conceptvcl_1_1ElementConcept.html">ElementConcept&lt;T&gt;</a> &amp;&amp;</div>
-<div class="line">    T::ELEMENT_TYPE == <a class="code hl_enumvalue" href="namespacevcl.html#a64e691de6b710b9fd1dc3d5db66a6f7aa277eb4b09247da79fe02b8a334452e67">EDGE</a> &amp;&amp;</div>
-<div class="line">    (edge::IsDerivedFromEdge&lt;T&gt;::value || edge::IsAnEdge&lt;T&gt;::value) &amp;&amp;</div>
+<div class="line">    T::ELEMENT_ID == <a class="code hl_enumvalue" href="namespacevcl.html#ae046f7dd555ae870338041167e1fcb72a277eb4b09247da79fe02b8a334452e67">EDGE</a> &amp;&amp;</div>
+<div class="line">    (edge::IsDerivedFromEdge&lt;T&gt;::value || edge::IsAEdge&lt;T&gt;::value) &amp;&amp;</div>
 <div class="line">    <a class="code hl_concept" href="conceptvcl_1_1edge_1_1HasBitFlags.html">edge::HasBitFlags&lt;T&gt;</a> &amp;&amp;</div>
 <div class="line">    <a class="code hl_concept" href="conceptvcl_1_1edge_1_1HasVertexPointers.html">edge::HasVertexPointers&lt;T&gt;</a> &amp;&amp;</div>
 <div class="line">    T::VERTEX_NUMBER == 2</div>
-<div class="ttc" id="aconceptvcl_1_1EdgeConcept_html"><div class="ttname"><a href="conceptvcl_1_1EdgeConcept.html">vcl::EdgeConcept</a></div><div class="ttdoc">The EdgeConcept describes how a Edge element that can be used for a EdgeContainer should be organized...</div><div class="ttdef"><b>Definition:</b> edge.h:113</div></div>
+<div class="ttc" id="aconceptvcl_1_1EdgeConcept_html"><div class="ttname"><a href="conceptvcl_1_1EdgeConcept.html">vcl::EdgeConcept</a></div><div class="ttdoc">The EdgeConcept describes how a Edge element that can be used for a EdgeContainer should be organized...</div><div class="ttdef"><b>Definition:</b> edge.h:114</div></div>
 <div class="ttc" id="aconceptvcl_1_1ElementConcept_html"><div class="ttname"><a href="conceptvcl_1_1ElementConcept.html">vcl::ElementConcept</a></div><div class="ttdef"><b>Definition:</b> element.h:34</div></div>
-<div class="ttc" id="aconceptvcl_1_1edge_1_1HasBitFlags_html"><div class="ttname"><a href="conceptvcl_1_1edge_1_1HasBitFlags.html">vcl::edge::HasBitFlags</a></div><div class="ttdef"><b>Definition:</b> edge.h:77</div></div>
-<div class="ttc" id="aconceptvcl_1_1edge_1_1HasVertexPointers_html"><div class="ttname"><a href="conceptvcl_1_1edge_1_1HasVertexPointers.html">vcl::edge::HasVertexPointers</a></div><div class="ttdef"><b>Definition:</b> edge.h:93</div></div>
-<div class="ttc" id="anamespacevcl_html_a64e691de6b710b9fd1dc3d5db66a6f7aa277eb4b09247da79fe02b8a334452e67"><div class="ttname"><a href="namespacevcl.html#a64e691de6b710b9fd1dc3d5db66a6f7aa277eb4b09247da79fe02b8a334452e67">vcl::EDGE</a></div><div class="ttdeci">@ EDGE</div><div class="ttdef"><b>Definition:</b> mesh_elements.h:34</div></div>
+<div class="ttc" id="aconceptvcl_1_1edge_1_1HasBitFlags_html"><div class="ttname"><a href="conceptvcl_1_1edge_1_1HasBitFlags.html">vcl::edge::HasBitFlags</a></div><div class="ttdef"><b>Definition:</b> edge.h:78</div></div>
+<div class="ttc" id="aconceptvcl_1_1edge_1_1HasVertexPointers_html"><div class="ttname"><a href="conceptvcl_1_1edge_1_1HasVertexPointers.html">vcl::edge::HasVertexPointers</a></div><div class="ttdef"><b>Definition:</b> edge.h:94</div></div>
+<div class="ttc" id="anamespacevcl_html_ae046f7dd555ae870338041167e1fcb72a277eb4b09247da79fe02b8a334452e67"><div class="ttname"><a href="namespacevcl.html#ae046f7dd555ae870338041167e1fcb72a277eb4b09247da79fe02b8a334452e67">vcl::EDGE</a></div><div class="ttdeci">@ EDGE</div><div class="ttdef"><b>Definition:</b> mesh_elements.h:34</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The EdgeConcept describes how a Edge element that can be used for a EdgeContainer should be organized. </p>
 <p>The Edge concept is satisfied for a class E if ALL the following sentences are true:</p><ul>
 <li>The class E is <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">vcl::Edge</a>, or derives from it;</li>
-<li>The class E has the BitFlags component (or a derivate);</li>
+<li>The class E has the BitFlags component (or an equivalent one);</li>
 <li>The class E has the VertexPointers component (or a derivate);</li>
 <li>The number of vertices of the VertexPointers is 2. </li>
 </ul>

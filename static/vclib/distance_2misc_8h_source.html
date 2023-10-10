@@ -130,25 +130,58 @@ $(document).ready(function(){initNavTree('distance_2misc_8h_source.html',''); in
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">template</span>&lt;Po<span class="keywordtype">int</span>3Concept Po<span class="keywordtype">int</span>Type, PlaneConcept PlaneType&gt;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">auto</span> <a class="code hl_function" href="namespacevcl.html#a142e6d7ccfbbece897edecff226ced45">pointPlaneDistance</a>(<span class="keyword">const</span> PointType&amp; p, <span class="keyword">const</span> PlaneType&amp; plane, <span class="keywordtype">bool</span> signedDist = <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">template</span>&lt;Po<span class="keywordtype">int</span>Concept Po<span class="keywordtype">int</span>Type, SegmentConcept SegmentType&gt;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">auto</span> <a class="code hl_function" href="namespacevcl.html#a1d8430571d9a6027e6d7e3bac4816b95">pointSegmentDistance</a>(<span class="keyword">const</span> PointType&amp; p, <span class="keyword">const</span> SegmentType&amp; s, PointType&amp; closest)</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">requires</span> (PointType::DIM == SegmentType::DIM);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">template</span>&lt;Po<span class="keywordtype">int</span>Concept Po<span class="keywordtype">int</span>Type, SegmentConcept SegmentType&gt;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">auto</span> <a class="code hl_function" href="namespacevcl.html#a1d8430571d9a6027e6d7e3bac4816b95">pointSegmentDistance</a>(<span class="keyword">const</span> PointType&amp; p, <span class="keyword">const</span> SegmentType&amp; s)</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">requires</span> (PointType::DIM == SegmentType::DIM);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#include &quot;<a class="code" href="intersection_2misc_8cpp.html">misc.cpp</a>&quot;</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#endif </span><span class="comment">// VCL_ALGORITHMS_DISTANCE_MISC_H</span></div>
-<div class="ttc" id="aintersection_2misc_8cpp_html"><div class="ttname"><a href="intersection_2misc_8cpp.html">misc.cpp</a></div></div>
-<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition:</b> bounding_box.cpp:29</div></div>
-<div class="ttc" id="anamespacevcl_html_a142e6d7ccfbbece897edecff226ced45"><div class="ttname"><a href="namespacevcl.html#a142e6d7ccfbbece897edecff226ced45">vcl::pointPlaneDistance</a></div><div class="ttdeci">auto pointPlaneDistance(const PointType &amp;p, const PlaneType &amp;plane, bool signedDist)</div><div class="ttdef"><b>Definition:</b> misc.cpp:29</div></div>
-<div class="ttc" id="anamespacevcl_html_a1d8430571d9a6027e6d7e3bac4816b95"><div class="ttname"><a href="namespacevcl.html#a1d8430571d9a6027e6d7e3bac4816b95">vcl::pointSegmentDistance</a></div><div class="ttdeci">auto pointSegmentDistance(const PointType &amp;p, const SegmentType &amp;s, PointType &amp;closest)</div><div class="ttdef"><b>Definition:</b> misc.cpp:38</div></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="namespacevcl.html#a1826187003e1e307765b32879a69b748">   33</a></span><span class="keyword">auto</span> <a class="code hl_function" href="namespacevcl.html#a1826187003e1e307765b32879a69b748">pointPlaneDistance</a>(</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">const</span> PointType&amp; p,</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">const</span> PlaneType&amp; plane,</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">bool</span>             signedDist = <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>{</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">auto</span> dist = plane.direction().dot(p) - plane.offset();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordflow">if</span> (!signedDist)</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        dist = std::abs(dist);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordflow">return</span> dist;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>}</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">template</span>&lt;Po<span class="keywordtype">int</span>Concept Po<span class="keywordtype">int</span>Type, SegmentConcept SegmentType&gt;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="namespacevcl.html#a1d8430571d9a6027e6d7e3bac4816b95">   45</a></span><span class="keyword">auto</span> <a class="code hl_function" href="namespacevcl.html#a1d8430571d9a6027e6d7e3bac4816b95">pointSegmentDistance</a>(</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">const</span> PointType&amp;   p,</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">const</span> SegmentType&amp; s,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    PointType&amp;         closest) <span class="keyword">requires</span> (PointType::DIM == SegmentType::DIM)</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>{</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">using </span>ScalarType = PointType::ScalarType;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    ScalarType dist;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    PointType dir = s.direction();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    ScalarType esn = dir.squaredNorm();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordflow">if</span> (esn &lt; std::numeric_limits&lt;ScalarType&gt;::min()) {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        closest = s.midPoint();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        ScalarType t = ((p-s.p0())*dir)/esn;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordflow">if</span> (t &lt; 0) t = 0;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (t &gt; 1) t = 1;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        closest = s.p0() * (1-t) + s.p1() * t;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    dist = p.dist(closest);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordflow">return</span> dist;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>}</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keyword">template</span>&lt;Po<span class="keywordtype">int</span>Concept Po<span class="keywordtype">int</span>Type, SegmentConcept SegmentType&gt;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="namespacevcl.html#a7e95f3d99f53e335c7e17af14b42f991">   72</a></span><span class="keyword">auto</span> <a class="code hl_function" href="namespacevcl.html#a1d8430571d9a6027e6d7e3bac4816b95">pointSegmentDistance</a>(<span class="keyword">const</span> PointType&amp; p, <span class="keyword">const</span> SegmentType&amp; s)</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keyword">requires</span> (PointType::DIM == SegmentType::DIM)</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>{</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    PointType closest;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacevcl.html#a1d8430571d9a6027e6d7e3bac4816b95">pointSegmentDistance</a>(p, s, closest);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>}</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#endif </span><span class="comment">// VCL_ALGORITHMS_DISTANCE_MISC_H</span></div>
+<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition:</b> bounding_box.h:47</div></div>
+<div class="ttc" id="anamespacevcl_html_a1826187003e1e307765b32879a69b748"><div class="ttname"><a href="namespacevcl.html#a1826187003e1e307765b32879a69b748">vcl::pointPlaneDistance</a></div><div class="ttdeci">auto pointPlaneDistance(const PointType &amp;p, const PlaneType &amp;plane, bool signedDist=false)</div><div class="ttdef"><b>Definition:</b> misc.h:33</div></div>
+<div class="ttc" id="anamespacevcl_html_a1d8430571d9a6027e6d7e3bac4816b95"><div class="ttname"><a href="namespacevcl.html#a1d8430571d9a6027e6d7e3bac4816b95">vcl::pointSegmentDistance</a></div><div class="ttdeci">auto pointSegmentDistance(const PointType &amp;p, const SegmentType &amp;s, PointType &amp;closest)</div><div class="ttdef"><b>Definition:</b> misc.h:45</div></div>
 <div class="ttc" id="aspace_2plane_8h_html"><div class="ttname"><a href="space_2plane_8h.html">plane.h</a></div></div>
 <div class="ttc" id="aspace_2segment_8h_html"><div class="ttname"><a href="space_2segment_8h.html">segment.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

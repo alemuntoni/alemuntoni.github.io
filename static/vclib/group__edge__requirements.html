@@ -109,7 +109,7 @@ Collaboration diagram for Edge Requirements:</div>
 <div class="center"><img src="group__edge__requirements.png" border="0" usemap="#agroup____edge____requirements" alt=""/></div>
 <map name="agroup____edge____requirements" id="agroup____edge____requirements">
 <area shape="rect" title="List functions that allows to check, enable and assert the availability of components in the Edge Ele..." alt="" coords="205,5,355,31"/>
-<area shape="rect" href="group__mesh__requirements.html" title="List functions that allows to check, enable and assert the availability of components in the Elements..." alt="" coords="5,5,157,31"/>
+<area shape="rect" href="group__mesh__requirements.html" title="List functions that allows to check, enable and assert characteristics and the availability of compon..." alt="" coords="5,5,157,31"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -119,42 +119,42 @@ Functions</h2></td></tr>
 <tr class="memitem:ga83e4e98dc107ee9f2b22550bcbb25ea7"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__edge__requirements.html#ga83e4e98dc107ee9f2b22550bcbb25ea7">vcl::isEdgeContainerCompact</a> (const MeshType &amp;m)</td></tr>
 <tr class="memdesc:ga83e4e98dc107ee9f2b22550bcbb25ea7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if the given mesh has its EdgeContainer compact.  <br /></td></tr>
 <tr class="separator:ga83e4e98dc107ee9f2b22550bcbb25ea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga60f92fae2924273742e655b20b4dae83"><td class="memTemplParams" colspan="2">template&lt;EdgeMeshConcept MeshType&gt; </td></tr>
-<tr class="memitem:ga60f92fae2924273742e655b20b4dae83"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__edge__requirements.html#ga60f92fae2924273742e655b20b4dae83">vcl::isPerEdgeAdjacentEdgesEnabled</a> (const MeshType &amp;m)</td></tr>
-<tr class="memdesc:ga60f92fae2924273742e655b20b4dae83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the AdjacentEdges component is available (enabled) in the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> element of the input mesh m.  <br /></td></tr>
-<tr class="separator:ga60f92fae2924273742e655b20b4dae83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5c3b76563f3710059dd10a87a98967cb"><td class="memTemplParams" colspan="2">template&lt;EdgeMeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga5c3b76563f3710059dd10a87a98967cb"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__edge__requirements.html#ga5c3b76563f3710059dd10a87a98967cb">vcl::isPerEdgeAdjacentEdgesAvailable</a> (const MeshType &amp;m)</td></tr>
+<tr class="memdesc:ga5c3b76563f3710059dd10a87a98967cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the AdjacentEdges component is available (enabled) in the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> element of the input mesh m.  <br /></td></tr>
+<tr class="separator:ga5c3b76563f3710059dd10a87a98967cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga55a6207dd62fdf1e146a42119f65ee7d"><td class="memTemplParams" colspan="2">template&lt;EdgeMeshConcept MeshType&gt; </td></tr>
 <tr class="memitem:ga55a6207dd62fdf1e146a42119f65ee7d"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__edge__requirements.html#ga55a6207dd62fdf1e146a42119f65ee7d">vcl::enableIfPerEdgeAdjacentEdgesOptional</a> (MeshType &amp;m)</td></tr>
 <tr class="memdesc:ga55a6207dd62fdf1e146a42119f65ee7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the input mesh has a EdgeContainer, and the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has a AdjacentEdges Component, this function enables the Component in the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> if the component needs to be enabled (meaning that it is optional). Returns <code>true</code> if, after the call of this function, the AdjacentEdges component will be available in the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> of the mesh.  <br /></td></tr>
 <tr class="separator:ga55a6207dd62fdf1e146a42119f65ee7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga210cccc972ea32e537e0ac49a9046b26"><td class="memTemplParams" colspan="2">template&lt;EdgeMeshConcept MeshType&gt; </td></tr>
-<tr class="memitem:ga210cccc972ea32e537e0ac49a9046b26"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__edge__requirements.html#ga210cccc972ea32e537e0ac49a9046b26">vcl::isPerEdgeAdjacentFacesEnabled</a> (const MeshType &amp;m)</td></tr>
-<tr class="memdesc:ga210cccc972ea32e537e0ac49a9046b26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the AdjacentFaces component is available (enabled) in the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> element of the input mesh m.  <br /></td></tr>
-<tr class="separator:ga210cccc972ea32e537e0ac49a9046b26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6cde5476921f6aa1530542e40c3626d6"><td class="memTemplParams" colspan="2">template&lt;EdgeMeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga6cde5476921f6aa1530542e40c3626d6"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__edge__requirements.html#ga6cde5476921f6aa1530542e40c3626d6">vcl::isPerEdgeAdjacentFacesAvailable</a> (const MeshType &amp;m)</td></tr>
+<tr class="memdesc:ga6cde5476921f6aa1530542e40c3626d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the AdjacentFaces component is available (enabled) in the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> element of the input mesh m.  <br /></td></tr>
+<tr class="separator:ga6cde5476921f6aa1530542e40c3626d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab587d17dd049174b67e95fd1bdce9fc5"><td class="memTemplParams" colspan="2">template&lt;EdgeMeshConcept MeshType&gt; </td></tr>
 <tr class="memitem:gab587d17dd049174b67e95fd1bdce9fc5"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__edge__requirements.html#gab587d17dd049174b67e95fd1bdce9fc5">vcl::enableIfPerEdgeAdjacentFacesOptional</a> (MeshType &amp;m)</td></tr>
 <tr class="memdesc:gab587d17dd049174b67e95fd1bdce9fc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the input mesh has a EdgeContainer, and the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has a AdjacentFaces Component, this function enables the Component in the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> if the component needs to be enabled (meaning that it is optional). Returns <code>true</code> if, after the call of this function, the AdjacentFaces component will be available in the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> of the mesh.  <br /></td></tr>
 <tr class="separator:gab587d17dd049174b67e95fd1bdce9fc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga02e282bb15646ffc65aaebc7c56b0621"><td class="memTemplParams" colspan="2">template&lt;EdgeMeshConcept MeshType&gt; </td></tr>
-<tr class="memitem:ga02e282bb15646ffc65aaebc7c56b0621"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__edge__requirements.html#ga02e282bb15646ffc65aaebc7c56b0621">vcl::isPerEdgeColorEnabled</a> (const MeshType &amp;m)</td></tr>
-<tr class="memdesc:ga02e282bb15646ffc65aaebc7c56b0621"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> component is available (enabled) in the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> element of the input mesh m.  <br /></td></tr>
-<tr class="separator:ga02e282bb15646ffc65aaebc7c56b0621"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga24af8033d5db434a5935b5646ee829be"><td class="memTemplParams" colspan="2">template&lt;EdgeMeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga24af8033d5db434a5935b5646ee829be"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__edge__requirements.html#ga24af8033d5db434a5935b5646ee829be">vcl::isPerEdgeColorAvailable</a> (const MeshType &amp;m)</td></tr>
+<tr class="memdesc:ga24af8033d5db434a5935b5646ee829be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> component is available (enabled) in the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> element of the input mesh m.  <br /></td></tr>
+<tr class="separator:ga24af8033d5db434a5935b5646ee829be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7b5846c10685de9e77115bcc0695dee4"><td class="memTemplParams" colspan="2">template&lt;EdgeMeshConcept MeshType&gt; </td></tr>
 <tr class="memitem:ga7b5846c10685de9e77115bcc0695dee4"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__edge__requirements.html#ga7b5846c10685de9e77115bcc0695dee4">vcl::enableIfPerEdgeColorOptional</a> (MeshType &amp;m)</td></tr>
-<tr class="memdesc:ga7b5846c10685de9e77115bcc0695dee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the input mesh has a EdgeContainer, and the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has a <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> Component, this function enables the Component in the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> if the component needs to be enabled (meaning that it is optional). Returns <code>true</code> if, after the call of this function, the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> component will be available in the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> of the mesh.  <br /></td></tr>
+<tr class="memdesc:ga7b5846c10685de9e77115bcc0695dee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the input mesh has a EdgeContainer, and the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has a <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> Component, this function enables the Component in the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> if the component needs to be enabled (meaning that it is optional). Returns <code>true</code> if, after the call of this function, the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> component will be available in the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> of the mesh.  <br /></td></tr>
 <tr class="separator:ga7b5846c10685de9e77115bcc0695dee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2831033b5c575250210ded12b5647b12"><td class="memTemplParams" colspan="2">template&lt;EdgeMeshConcept MeshType&gt; </td></tr>
-<tr class="memitem:ga2831033b5c575250210ded12b5647b12"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__edge__requirements.html#ga2831033b5c575250210ded12b5647b12">vcl::isPerEdgeMarkEnabled</a> (const MeshType &amp;m)</td></tr>
-<tr class="memdesc:ga2831033b5c575250210ded12b5647b12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the Mark component is available (enabled) in the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> element of the input mesh m.  <br /></td></tr>
-<tr class="separator:ga2831033b5c575250210ded12b5647b12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6844bace61ed05e1603075ca9b98b3ae"><td class="memTemplParams" colspan="2">template&lt;EdgeMeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga6844bace61ed05e1603075ca9b98b3ae"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__edge__requirements.html#ga6844bace61ed05e1603075ca9b98b3ae">vcl::isPerEdgeMarkAvailable</a> (const MeshType &amp;m)</td></tr>
+<tr class="memdesc:ga6844bace61ed05e1603075ca9b98b3ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the Mark component is available (enabled) in the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> element of the input mesh m.  <br /></td></tr>
+<tr class="separator:ga6844bace61ed05e1603075ca9b98b3ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga06074783595077e51f9d4baf34b96e58"><td class="memTemplParams" colspan="2">template&lt;EdgeMeshConcept MeshType&gt; </td></tr>
 <tr class="memitem:ga06074783595077e51f9d4baf34b96e58"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__edge__requirements.html#ga06074783595077e51f9d4baf34b96e58">vcl::enableIfPerEdgeMarkOptional</a> (MeshType &amp;m)</td></tr>
 <tr class="memdesc:ga06074783595077e51f9d4baf34b96e58"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the input mesh has a EdgeContainer, and the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has a Mark Component, this function enables the Component in the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> if the component needs to be enabled (meaning that it is optional). Returns <code>true</code> if, after the call of this function, the Mark component will be available in the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> of the mesh.  <br /></td></tr>
 <tr class="separator:ga06074783595077e51f9d4baf34b96e58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaaed93f8446598eadc1b8071dd3d46720"><td class="memTemplParams" colspan="2">template&lt;EdgeMeshConcept MeshType&gt; </td></tr>
-<tr class="memitem:gaaed93f8446598eadc1b8071dd3d46720"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__edge__requirements.html#gaaed93f8446598eadc1b8071dd3d46720">vcl::isPerEdgeQualityEnabled</a> (const MeshType &amp;m)</td></tr>
-<tr class="memdesc:gaaed93f8446598eadc1b8071dd3d46720"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the Quality component is available (enabled) in the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> element of the input mesh m.  <br /></td></tr>
-<tr class="separator:gaaed93f8446598eadc1b8071dd3d46720"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa6c60f70395d97b9c9b4ecae76f5c947"><td class="memTemplParams" colspan="2">template&lt;EdgeMeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:gaa6c60f70395d97b9c9b4ecae76f5c947"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__edge__requirements.html#gaa6c60f70395d97b9c9b4ecae76f5c947">vcl::isPerEdgeQualityAvailable</a> (const MeshType &amp;m)</td></tr>
+<tr class="memdesc:gaa6c60f70395d97b9c9b4ecae76f5c947"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the Quality component is available (enabled) in the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> element of the input mesh m.  <br /></td></tr>
+<tr class="separator:gaa6c60f70395d97b9c9b4ecae76f5c947"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae7a4783178e3aa1db82a5965e9186581"><td class="memTemplParams" colspan="2">template&lt;EdgeMeshConcept MeshType&gt; </td></tr>
 <tr class="memitem:gae7a4783178e3aa1db82a5965e9186581"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__edge__requirements.html#gae7a4783178e3aa1db82a5965e9186581">vcl::enableIfPerEdgeQualityOptional</a> (MeshType &amp;m)</td></tr>
 <tr class="memdesc:gae7a4783178e3aa1db82a5965e9186581"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the input mesh has a EdgeContainer, and the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has a Quality Component, this function enables the Component in the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> if the component needs to be enabled (meaning that it is optional). Returns <code>true</code> if, after the call of this function, the Quality component will be available in the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> of the mesh.  <br /></td></tr>
@@ -176,7 +176,7 @@ requires HasPerEdgeAdjacentFaces&lt;MeshType&gt;</td></tr>
 <tr class="memitem:gad1cac17f541eeabac2a6d8396a818f53"><td class="memTemplParams" colspan="2">template&lt;EdgeMeshConcept MeshType&gt; <br />
 requires HasPerEdgeColor&lt;MeshType&gt;</td></tr>
 <tr class="memitem:gad1cac17f541eeabac2a6d8396a818f53"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__edge__requirements.html#gad1cac17f541eeabac2a6d8396a818f53">vcl::requirePerEdgeColor</a> (const MeshType &amp;m)</td></tr>
-<tr class="memdesc:gad1cac17f541eeabac2a6d8396a818f53"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function asserts that a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> has a EdgeContainer, the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> has a <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> Component, and that the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> Component is enabled and available at runtime.  <br /></td></tr>
+<tr class="memdesc:gad1cac17f541eeabac2a6d8396a818f53"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function asserts that a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> has a EdgeContainer, the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> has a <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> Component, and that the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> Component is enabled and available at runtime.  <br /></td></tr>
 <tr class="separator:gad1cac17f541eeabac2a6d8396a818f53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4033fc59330b356991232c063afb6bc1"><td class="memTemplParams" colspan="2">template&lt;EdgeMeshConcept MeshType&gt; <br />
 requires HasPerEdgeMark&lt;MeshType&gt;</td></tr>
@@ -280,7 +280,7 @@ template&lt;EdgeMeshConcept MeshType&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>If the input mesh has a EdgeContainer, and the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has a <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> Component, this function enables the Component in the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> if the component needs to be enabled (meaning that it is optional). Returns <code>true</code> if, after the call of this function, the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> component will be available in the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> of the mesh. </p>
+<p>If the input mesh has a EdgeContainer, and the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has a <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> Component, this function enables the Component in the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> if the component needs to be enabled (meaning that it is optional). Returns <code>true</code> if, after the call of this function, the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> component will be available in the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> of the mesh. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">MeshType</td><td>the type of the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> to check, it must satisfy the EdgeMeshConcept.</td></tr>
@@ -289,11 +289,11 @@ template&lt;EdgeMeshConcept MeshType&gt; </div>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>the mesh on which enable the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> component in the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>the mesh on which enable the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> component in the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a>. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> Component is available in the EdgeElement after the call of this funciton. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> Component is available in the EdgeElement after the call of this funciton. </dd></dl>
 
 </div>
 </div>
@@ -402,8 +402,8 @@ template&lt;EdgeMeshConcept MeshType&gt; </div>
 
 </div>
 </div>
-<a id="ga60f92fae2924273742e655b20b4dae83" name="ga60f92fae2924273742e655b20b4dae83"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga60f92fae2924273742e655b20b4dae83">&#9670;&#160;</a></span>isPerEdgeAdjacentEdgesEnabled()</h2>
+<a id="ga5c3b76563f3710059dd10a87a98967cb" name="ga5c3b76563f3710059dd10a87a98967cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5c3b76563f3710059dd10a87a98967cb">&#9670;&#160;</a></span>isPerEdgeAdjacentEdgesAvailable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -411,7 +411,7 @@ template&lt;EdgeMeshConcept MeshType&gt; </div>
 template&lt;EdgeMeshConcept MeshType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool vcl::isPerEdgeAdjacentEdgesEnabled </td>
+          <td class="memname">bool vcl::isPerEdgeAdjacentEdgesAvailable </td>
           <td>(</td>
           <td class="paramtype">const MeshType &amp;&#160;</td>
           <td class="paramname"><em>m</em></td><td>)</td>
@@ -443,8 +443,8 @@ template&lt;EdgeMeshConcept MeshType&gt; </div>
 
 </div>
 </div>
-<a id="ga210cccc972ea32e537e0ac49a9046b26" name="ga210cccc972ea32e537e0ac49a9046b26"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga210cccc972ea32e537e0ac49a9046b26">&#9670;&#160;</a></span>isPerEdgeAdjacentFacesEnabled()</h2>
+<a id="ga6cde5476921f6aa1530542e40c3626d6" name="ga6cde5476921f6aa1530542e40c3626d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6cde5476921f6aa1530542e40c3626d6">&#9670;&#160;</a></span>isPerEdgeAdjacentFacesAvailable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -452,7 +452,7 @@ template&lt;EdgeMeshConcept MeshType&gt; </div>
 template&lt;EdgeMeshConcept MeshType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool vcl::isPerEdgeAdjacentFacesEnabled </td>
+          <td class="memname">bool vcl::isPerEdgeAdjacentFacesAvailable </td>
           <td>(</td>
           <td class="paramtype">const MeshType &amp;&#160;</td>
           <td class="paramname"><em>m</em></td><td>)</td>
@@ -484,8 +484,8 @@ template&lt;EdgeMeshConcept MeshType&gt; </div>
 
 </div>
 </div>
-<a id="ga02e282bb15646ffc65aaebc7c56b0621" name="ga02e282bb15646ffc65aaebc7c56b0621"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga02e282bb15646ffc65aaebc7c56b0621">&#9670;&#160;</a></span>isPerEdgeColorEnabled()</h2>
+<a id="ga24af8033d5db434a5935b5646ee829be" name="ga24af8033d5db434a5935b5646ee829be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga24af8033d5db434a5935b5646ee829be">&#9670;&#160;</a></span>isPerEdgeColorAvailable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -493,7 +493,7 @@ template&lt;EdgeMeshConcept MeshType&gt; </div>
 template&lt;EdgeMeshConcept MeshType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool vcl::isPerEdgeColorEnabled </td>
+          <td class="memname">bool vcl::isPerEdgeColorAvailable </td>
           <td>(</td>
           <td class="paramtype">const MeshType &amp;&#160;</td>
           <td class="paramname"><em>m</em></td><td>)</td>
@@ -502,12 +502,12 @@ template&lt;EdgeMeshConcept MeshType&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Returns true if the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> component is available (enabled) in the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> element of the input mesh m. </p>
-<p>This function returns <code>true</code> when the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> component can be used on the element, whether the component is horizontal, vertical or optional.</p>
+<p>Returns true if the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> component is available (enabled) in the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> element of the input mesh m. </p>
+<p>This function returns <code>true</code> when the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> component can be used on the element, whether the component is horizontal, vertical or optional.</p>
 <p>These are the following cases:</p><ul>
-<li>if the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> does not have a <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> Component, the function returns <code>false</code>;</li>
-<li>if the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has a non-optional <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> Component, the function returns <code>true</code>;</li>
-<li>if the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has an optional <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> Component, the function returns <code>true</code> if the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> component is enabled, false otherwise (this check is the only one that is made at runtime);</li>
+<li>if the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> does not have a <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> Component, the function returns <code>false</code>;</li>
+<li>if the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has a non-optional <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> Component, the function returns <code>true</code>;</li>
+<li>if the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has an optional <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> Component, the function returns <code>true</code> if the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> component is enabled, false otherwise (this check is the only one that is made at runtime);</li>
 </ul>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -517,16 +517,16 @@ template&lt;EdgeMeshConcept MeshType&gt; </div>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>the mesh on which check the availability of the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> Component in the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>the mesh on which check the availability of the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> Component in the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a>. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> Component is available in the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> of the given <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> Component is available in the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> of the given <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. </dd></dl>
 
 </div>
 </div>
-<a id="ga2831033b5c575250210ded12b5647b12" name="ga2831033b5c575250210ded12b5647b12"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2831033b5c575250210ded12b5647b12">&#9670;&#160;</a></span>isPerEdgeMarkEnabled()</h2>
+<a id="ga6844bace61ed05e1603075ca9b98b3ae" name="ga6844bace61ed05e1603075ca9b98b3ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6844bace61ed05e1603075ca9b98b3ae">&#9670;&#160;</a></span>isPerEdgeMarkAvailable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -534,7 +534,7 @@ template&lt;EdgeMeshConcept MeshType&gt; </div>
 template&lt;EdgeMeshConcept MeshType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool vcl::isPerEdgeMarkEnabled </td>
+          <td class="memname">bool vcl::isPerEdgeMarkAvailable </td>
           <td>(</td>
           <td class="paramtype">const MeshType &amp;&#160;</td>
           <td class="paramname"><em>m</em></td><td>)</td>
@@ -566,8 +566,8 @@ template&lt;EdgeMeshConcept MeshType&gt; </div>
 
 </div>
 </div>
-<a id="gaaed93f8446598eadc1b8071dd3d46720" name="gaaed93f8446598eadc1b8071dd3d46720"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaaed93f8446598eadc1b8071dd3d46720">&#9670;&#160;</a></span>isPerEdgeQualityEnabled()</h2>
+<a id="gaa6c60f70395d97b9c9b4ecae76f5c947" name="gaa6c60f70395d97b9c9b4ecae76f5c947"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa6c60f70395d97b9c9b4ecae76f5c947">&#9670;&#160;</a></span>isPerEdgeQualityAvailable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -575,7 +575,7 @@ template&lt;EdgeMeshConcept MeshType&gt; </div>
 template&lt;EdgeMeshConcept MeshType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">bool vcl::isPerEdgeQualityEnabled </td>
+          <td class="memname">bool vcl::isPerEdgeQualityAvailable </td>
           <td>(</td>
           <td class="paramtype">const MeshType &amp;&#160;</td>
           <td class="paramname"><em>m</em></td><td>)</td>
@@ -763,13 +763,13 @@ requires HasPerEdgeColor&lt;MeshType&gt;</div>
       </table>
 </div><div class="memdoc">
 
-<p>This function asserts that a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> has a EdgeContainer, the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> has a <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> Component, and that the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> Component is enabled and available at runtime. </p>
+<p>This function asserts that a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> has a EdgeContainer, the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> has a <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> Component, and that the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> Component is enabled and available at runtime. </p>
 <p>If the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>:</p><ul>
 <li>has not a Container of the given ElementEnumType;</li>
 <li>has the Container but the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> has not a Component of the given ComponentEnumType; a build error will be generated.</li>
 </ul>
 <p>If the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>:</p><ul>
-<li>has the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> Container, the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> has the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> Component, but the Component is not enabled, a <a class="el" href="classvcl_1_1MissingComponentException.html">vcl::MissingComponentException</a> will be thrown.</li>
+<li>has the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> Container, the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> has the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> Component, but the Component is not enabled, a <a class="el" href="classvcl_1_1MissingComponentException.html">vcl::MissingComponentException</a> will be thrown.</li>
 </ul>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -779,13 +779,13 @@ requires HasPerEdgeColor&lt;MeshType&gt;</div>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname"><a class="el" href="classvcl_1_1MissingComponentException.html">vcl::MissingComponentException</a></td><td>if the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> Component is not enabled in the EdgeContainer of the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>.</td></tr>
+    <tr><td class="paramname"><a class="el" href="classvcl_1_1MissingComponentException.html">vcl::MissingComponentException</a></td><td>if the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> Component is not enabled in the EdgeContainer of the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>the mesh on which check the availability of the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents an RGBA color.">Color</a> Component in the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>the mesh on which check the availability of the <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a RGBA color.">Color</a> Component in the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a>. </td></tr>
   </table>
   </dd>
 </dl>

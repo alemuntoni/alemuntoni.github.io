@@ -31,8 +31,8 @@ var annotated_dup =
         [ "WedgeTexCoords", "classvcl_1_1comp_1_1WedgeTexCoords.html", "classvcl_1_1comp_1_1WedgeTexCoords" ]
       ] ],
       [ "edge", "namespacevcl_1_1edge.html", [
-        [ "IsAnEdge", "structvcl_1_1edge_1_1IsAnEdge.html", null ],
-        [ "IsAnEdge< Edge< Args... > >", "structvcl_1_1edge_1_1IsAnEdge_3_01Edge_3_01Args_8_8_8_01_4_01_4.html", null ]
+        [ "IsAEdge", "structvcl_1_1edge_1_1IsAEdge.html", null ],
+        [ "IsAEdge< Edge< Args... > >", "structvcl_1_1edge_1_1IsAEdge_3_01Edge_3_01Args_8_8_8_01_4_01_4.html", null ]
       ] ],
       [ "edgemesh", "namespacevcl_1_1edgemesh.html", [
         [ "Edge", "classvcl_1_1edgemesh_1_1Edge.html", null ],
@@ -119,7 +119,6 @@ var annotated_dup =
       [ "Face", "classvcl_1_1Face.html", "classvcl_1_1Face" ],
       [ "Face< MeshType, TypeWrapper< Comps... > >", "classvcl_1_1Face_3_01MeshType_00_01TypeWrapper_3_01Comps_8_8_8_01_4_01_4.html", null ],
       [ "FileInfo", "classvcl_1_1FileInfo.html", "classvcl_1_1FileInfo" ],
-      [ "FileMeshInfo", "classvcl_1_1FileMeshInfo.html", "classvcl_1_1FileMeshInfo" ],
       [ "FilterTypesByCondition", "structvcl_1_1FilterTypesByCondition.html", "structvcl_1_1FilterTypesByCondition" ],
       [ "FilterTypesByCondition< Pred, Head, Tail... >", "structvcl_1_1FilterTypesByCondition_3_01Pred_00_01Head_00_01Tail_8_8_8_01_4.html", "structvcl_1_1FilterTypesByCondition_3_01Pred_00_01Head_00_01Tail_8_8_8_01_4" ],
       [ "FilterTypesByCondition< Pred, TypeWrapper< Tail... > >", "structvcl_1_1FilterTypesByCondition_3_01Pred_00_01TypeWrapper_3_01Tail_8_8_8_01_4_01_4.html", "structvcl_1_1FilterTypesByCondition_3_01Pred_00_01TypeWrapper_3_01Tail_8_8_8_01_4_01_4" ],
@@ -139,7 +138,6 @@ var annotated_dup =
       [ "IndexInTypes< T, TypeWrapper< Us... > >", "structvcl_1_1IndexInTypes_3_01T_00_01TypeWrapper_3_01Us_8_8_8_01_4_01_4.html", "structvcl_1_1IndexInTypes_3_01T_00_01TypeWrapper_3_01Us_8_8_8_01_4_01_4" ],
       [ "IntersFunctionStruct", "structvcl_1_1IntersFunctionStruct.html", null ],
       [ "IntersFunctionStruct< Obj1, Obj2 >", "structvcl_1_1IntersFunctionStruct_3_01Obj1_00_01Obj2_01_4.html", "structvcl_1_1IntersFunctionStruct_3_01Obj1_00_01Obj2_01_4" ],
-      [ "IteratorWrapper", "classvcl_1_1IteratorWrapper.html", "classvcl_1_1IteratorWrapper" ],
       [ "KDTree", "classvcl_1_1KDTree.html", "classvcl_1_1KDTree" ],
       [ "KeyRefValueRefPair", "classvcl_1_1KeyRefValueRefPair.html", "classvcl_1_1KeyRefValueRefPair" ],
       [ "KeyValueRefPair", "classvcl_1_1KeyValueRefPair.html", "classvcl_1_1KeyValueRefPair" ],
@@ -147,12 +145,10 @@ var annotated_dup =
       [ "MakeConstPointer", "structvcl_1_1MakeConstPointer.html", "structvcl_1_1MakeConstPointer" ],
       [ "MakeConstPointer< T * >", "structvcl_1_1MakeConstPointer_3_01T_01_5_01_4.html", "structvcl_1_1MakeConstPointer_3_01T_01_5_01_4" ],
       [ "MalformedFileException", "classvcl_1_1MalformedFileException.html", "classvcl_1_1MalformedFileException" ],
-      [ "Markable", "classvcl_1_1Markable.html", "classvcl_1_1Markable" ],
-      [ "Markable< Type & >", "classvcl_1_1Markable_3_01Type_01_6_01_4.html", "classvcl_1_1Markable_3_01Type_01_6_01_4" ],
-      [ "MarkableVector", "classvcl_1_1MarkableVector.html", "classvcl_1_1MarkableVector" ],
       [ "Mesh", "classvcl_1_1Mesh.html", "classvcl_1_1Mesh" ],
       [ "MeshEdgeUtil", "classvcl_1_1MeshEdgeUtil.html", "classvcl_1_1MeshEdgeUtil" ],
       [ "MeshInertia", "classvcl_1_1MeshInertia.html", "classvcl_1_1MeshInertia" ],
+      [ "MeshInfo", "classvcl_1_1MeshInfo.html", "classvcl_1_1MeshInfo" ],
       [ "MeshPos", "classvcl_1_1MeshPos.html", "classvcl_1_1MeshPos" ],
       [ "MeshRenderBuffers", "classvcl_1_1MeshRenderBuffers.html", "classvcl_1_1MeshRenderBuffers" ],
       [ "MeshRenderSettings", "classvcl_1_1MeshRenderSettings.html", "classvcl_1_1MeshRenderSettings" ],
@@ -175,7 +171,6 @@ var annotated_dup =
       [ "Plane", "classvcl_1_1Plane.html", "classvcl_1_1Plane" ],
       [ "Point", "classvcl_1_1Point.html", "classvcl_1_1Point" ],
       [ "PointCloudT", "classvcl_1_1PointCloudT.html", "classvcl_1_1PointCloudT" ],
-      [ "PointerIterator", "classvcl_1_1PointerIterator.html", "classvcl_1_1PointerIterator" ],
       [ "PointSampler", "classvcl_1_1PointSampler.html", "classvcl_1_1PointSampler" ],
       [ "Polygon", "classvcl_1_1Polygon.html", "classvcl_1_1Polygon" ],
       [ "PolyMeshT", "classvcl_1_1PolyMeshT.html", "classvcl_1_1PolyMeshT" ],
@@ -205,6 +200,7 @@ var annotated_dup =
       [ "Vertex", "classvcl_1_1Vertex.html", null ],
       [ "Vertex< MeshType, TypeWrapper< Comps... > >", "classvcl_1_1Vertex_3_01MeshType_00_01TypeWrapper_3_01Comps_8_8_8_01_4_01_4.html", null ],
       [ "View", "classvcl_1_1View.html", "classvcl_1_1View" ],
-      [ "ViewerMainWindow", "classvcl_1_1ViewerMainWindow.html", "classvcl_1_1ViewerMainWindow" ]
+      [ "ViewerMainWindow", "classvcl_1_1ViewerMainWindow.html", "classvcl_1_1ViewerMainWindow" ],
+      [ "WrongSizeException", "classvcl_1_1WrongSizeException.html", "classvcl_1_1WrongSizeException" ]
     ] ]
 ];

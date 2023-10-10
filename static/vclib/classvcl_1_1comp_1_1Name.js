@@ -1,7 +1,6 @@
 var classvcl_1_1comp_1_1Name =
 [
-    [ "importFrom", "classvcl_1_1comp_1_1Name.html#a0dfb8b7a1c05e2ea99cbb5f99f09188b", null ],
-    [ "isEnabled", "classvcl_1_1comp_1_1Name.html#a9d13c155d64e39e8fe16d44121768cf7", null ],
-    [ "name", "classvcl_1_1comp_1_1Name.html#aaa8f8368236b30022faf5dd8d53d247b", null ],
-    [ "name", "classvcl_1_1comp_1_1Name.html#afc1227f7c1fe53d0033786087ba407e7", null ]
+    [ "importFrom", "classvcl_1_1comp_1_1Name.html#a570091b4334752b9ba2e419033ac2f8d", null ],
+    [ "name", "classvcl_1_1comp_1_1Name.html#a32026a825c11867049e2c7d1cc0e1610", null ],
+    [ "name", "classvcl_1_1comp_1_1Name.html#a3dc355db99fb3c1c8d09aeb0e30aeaa5", null ]
 ];

@@ -152,30 +152,28 @@ $(document).ready(function(){initNavTree('normals_8h_source.html',''); initResiz
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keywordflow">return</span> p. normal();</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    };</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#ifdef VCLIB_USES_RANGES</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">template</span> &lt;std::ranges::range R&gt;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">friend</span> <span class="keyword">constexpr</span> <span class="keyword">auto</span> operator|(R&amp;&amp; r, NormalsView)</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    {</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keyword">using </span>ElemType = std::ranges::range_value_t&lt;R&gt;;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordflow">if</span> <span class="keyword">constexpr</span>(IsConst&lt;ElemType&gt;)</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="keywordflow">return</span> std::forward&lt;R&gt;(r) | std::views::transform(constNormal);</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <span class="keywordflow">return</span> std::forward&lt;R&gt;(r) | std::views::transform(normal);</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>};</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">template</span> &lt;std::ranges::range R&gt;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">friend</span> <span class="keyword">constexpr</span> <span class="keyword">auto</span> operator|(R&amp;&amp; r, NormalsView)</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keyword">using </span>ElemType = std::ranges::range_value_t&lt;R&gt;;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordflow">if</span> <span class="keyword">constexpr</span>(IsConst&lt;ElemType&gt;)</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="keywordflow">return</span> std::forward&lt;R&gt;(r) | std::views::transform(constNormal);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            <span class="keywordflow">return</span> std::forward&lt;R&gt;(r) | std::views::transform(normal);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>};</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>} <span class="comment">// namespace vcl::views::internal</span></div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>} <span class="comment">// namespace vcl::views::internal</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="namespacevcl_1_1views.html#a12e5d44450a8da79095d415ea7d63041">   69</a></span><span class="keyword">inline</span> <span class="keyword">constexpr</span> internal::NormalsView <a class="code hl_variable" href="namespacevcl_1_1views.html#a12e5d44450a8da79095d415ea7d63041">normals</a>;</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="namespacevcl_1_1views.html#a12e5d44450a8da79095d415ea7d63041">   71</a></span><span class="keyword">inline</span> <span class="keyword">constexpr</span> internal::NormalsView <a class="code hl_variable" href="namespacevcl_1_1views.html#a12e5d44450a8da79095d415ea7d63041">normals</a>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>} <span class="comment">// namespace vcl::views</span></div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>} <span class="comment">// namespace vcl::views</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">#endif </span><span class="comment">// VCL_VIEWS_MESH_COMPONENTS_NORMALS_H</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">#endif </span><span class="comment">// VCL_VIEWS_MESH_COMPONENTS_NORMALS_H</span></div>
 <div class="ttc" id="aconcepts_2pointers_8h_html"><div class="ttname"><a href="concepts_2pointers_8h.html">pointers.h</a></div></div>
 <div class="ttc" id="anamespacevcl_1_1views_html"><div class="ttname"><a href="namespacevcl_1_1views.html">vcl::views</a></div><div class="ttdef"><b>Definition:</b> adj_edges.h:30</div></div>
-<div class="ttc" id="anamespacevcl_1_1views_html_a12e5d44450a8da79095d415ea7d63041"><div class="ttname"><a href="namespacevcl_1_1views.html#a12e5d44450a8da79095d415ea7d63041">vcl::views::normals</a></div><div class="ttdeci">constexpr internal::NormalsView normals</div><div class="ttdef"><b>Definition:</b> normals.h:71</div></div>
+<div class="ttc" id="anamespacevcl_1_1views_html_a12e5d44450a8da79095d415ea7d63041"><div class="ttname"><a href="namespacevcl_1_1views.html#a12e5d44450a8da79095d415ea7d63041">vcl::views::normals</a></div><div class="ttdeci">constexpr internal::NormalsView normals</div><div class="ttdef"><b>Definition:</b> normals.h:69</div></div>
 <div class="ttc" id="atypes_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

@@ -125,130 +125,309 @@ $(document).ready(function(){initNavTree('misc_2logger_2logger_8h_source.html','
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define VCL_MISC_LOGGER_LOGGER_H</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;cmath&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;stack&gt;</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;<a class="code" href="timer_8h.html">vclib/misc/timer.h</a>&gt;</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;<a class="code" href="types_8h.html">vclib/types.h</a>&gt;</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> Stream&gt;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classvcl_1_1Logger.html">   39</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1Logger.html">Logger</a></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>{</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61a3233df4f7a5edcb731c31790011b150f">   42</a></span>    <span class="keyword">enum</span> <a class="code hl_enumeration" href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61">LogLevel</a> { <a class="code hl_enumvalue" href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61a98f7adc0feda996c00a894fba3e3a85b">ERROR</a> = 0, <a class="code hl_enumvalue" href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61a99f9bc3e0fbc01c071eab44dce0a237b">WARNING</a>, <a class="code hl_enumvalue" href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61a7274ed040e7232495765ce18bea5d24b">PROGRESS</a>, <a class="code hl_enumvalue" href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61a3233df4f7a5edcb731c31790011b150f">DEBUG</a> };</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <a class="code hl_function" href="classvcl_1_1Logger.html#a10b052765435aa8b542402a89a611d2d">Logger</a>();</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Logger.html#a6e348f2d44d03c7140381486e606c9c5">enableIndentation</a>();</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Logger.html#a296538b2268a33b6091a4ae1b8d14889">disableIndentation</a>();</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Logger.html#a6d317b57158707fb38912f3392428eef">reset</a>();</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Logger.html#a40957ec5eea5fe3dde05ec415e8fc4ad">setMaxLineWidth</a>(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> w);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Logger.html#a65d82f8c21f07959876a193c23f201aa">setPrintTimer</a>(<span class="keywordtype">bool</span> b);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Logger.html#a88c6515b2d758ab5afcf8056b430f96a">startTimer</a>();</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Logger.html#a22518d92ad8c279d7b4db4c2e6dea6e4">startNewTask</a>(<span class="keywordtype">double</span> fromPerc, <span class="keywordtype">double</span> toPerc, <span class="keyword">const</span> std::string&amp; action);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Logger.html#a494d8b2a0dc563755a2db290ce820553">endTask</a>(<span class="keyword">const</span> std::string&amp; action);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="classvcl_1_1Logger.html#a21dccd5daaecc58b806d6b5a385a541f">percentage</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Logger.html#aa341d7d450b4f10d8ffc99065e6b83ed">setPercentage</a>(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> newPerc);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Logger.html#a4728ec26bf10e50950ebc7e603f7d9b3">log</a>(<span class="keyword">const</span> std::string&amp; msg);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Logger.html#a4728ec26bf10e50950ebc7e603f7d9b3">log</a>(<a class="code hl_enumeration" href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61">LogLevel</a> lvl, <span class="keyword">const</span> std::string&amp; msg);</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Logger.html#a4728ec26bf10e50950ebc7e603f7d9b3">log</a>(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> perc, <span class="keyword">const</span> std::string&amp; msg);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Logger.html#a4728ec26bf10e50950ebc7e603f7d9b3">log</a>(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> perc, <a class="code hl_enumeration" href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61">LogLevel</a> lvl, <span class="keyword">const</span> std::string&amp; msg);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;iomanip&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;stack&gt;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;<a class="code" href="timer_8h.html">vclib/misc/timer.h</a>&gt;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &lt;<a class="code" href="types_8h.html">vclib/types.h</a>&gt;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> Stream&gt;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classvcl_1_1Logger.html">   40</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1Logger.html">Logger</a></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>{</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61a3233df4f7a5edcb731c31790011b150f">   43</a></span>    <span class="keyword">enum</span> <a class="code hl_enumeration" href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61">LogLevel</a> { <a class="code hl_enumvalue" href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61a98f7adc0feda996c00a894fba3e3a85b">ERROR</a> = 0, <a class="code hl_enumvalue" href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61a99f9bc3e0fbc01c071eab44dce0a237b">WARNING</a>, <a class="code hl_enumvalue" href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61a7274ed040e7232495765ce18bea5d24b">PROGRESS</a>, <a class="code hl_enumvalue" href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61a3233df4f7a5edcb731c31790011b150f">DEBUG</a> };</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">enum</span> InternalLogLevel { START = <a class="code hl_enumvalue" href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61a3233df4f7a5edcb731c31790011b150f">DEBUG</a> + 1, END };</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> percPrecision = 0;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="comment">// on top of the stack, we save the interval percentages of the current task</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="comment">// values are between 0 and 100</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    std::stack&lt;std::pair&lt;double, double&gt;&gt; stack;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="comment">// actual percentage (0 - 100), that is in the interval in top of the stack</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">double</span> globalPercProgress;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">double</span> step; <span class="comment">// the value that corresponds to 1% on the current task</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">bool</span> indent = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> lineW = 80;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> TIMER_SIZE = 12;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_class" href="classvcl_1_1Timer.html">vcl::Timer</a> timer;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">bool</span> printTimer = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Logger.html#af6ec7fdb7d1c30abc711b91e96529de7">startProgress</a>(</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keyword">const</span> std::string&amp; msg,</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>               progressSize,</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>               percPrintProgress = 10,</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>               startPerc = 0,</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>               endPerc = 100);</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Logger.html#ada343b4c8c7ec2b0c29ef18eb1f25216">endProgress</a>();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="comment">// progress status members</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">bool</span> isProgressActive = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    std::string progressMessage;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> progressStep;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> progressPerc;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> progressPercStep;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> lastProgress;</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Logger.html#adc3b00bbbf6cbcab30ec9da6e364fecd">progress</a>(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> n);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="comment">// you should override this member function if you want to use a different stream that are not</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="comment">// std::cout and std::cerr</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="classvcl_1_1Logger.html#a0814bce3cad1b94b29486edeaabcf34b">   79</a></span>    <span class="keyword">virtual</span> Stream* <a class="code hl_function" href="classvcl_1_1Logger.html#a0814bce3cad1b94b29486edeaabcf34b">levelStream</a>(<a class="code hl_enumeration" href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61">LogLevel</a> lvl) = 0;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keyword">enum</span> InternalLogLevel { START = <a class="code hl_enumvalue" href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61a3233df4f7a5edcb731c31790011b150f">DEBUG</a> + 1, END };</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> percPrecision = 0;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="comment">// on top of the stack, we save the interval percentages of the current task</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="comment">// values are between 0 and 100</span></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    std::stack&lt;std::pair&lt;double, double&gt;&gt; stack;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="comment">// actual percentage (0 - 100), that is in the interval in top of the stack</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordtype">double</span> globalPercProgress;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    std::mutex mutex;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="classvcl_1_1Logger.html#a10b052765435aa8b542402a89a611d2d">   77</a></span>    <a class="code hl_function" href="classvcl_1_1Logger.html#a10b052765435aa8b542402a89a611d2d">Logger</a>()</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        stack.push({0, 100});</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        updateStep();</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="classvcl_1_1Logger.html#a6e348f2d44d03c7140381486e606c9c5">   83</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Logger.html#a6e348f2d44d03c7140381486e606c9c5">enableIndentation</a>()</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        indent = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="classvcl_1_1Logger.html#a296538b2268a33b6091a4ae1b8d14889">   88</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Logger.html#a296538b2268a33b6091a4ae1b8d14889">disableIndentation</a>()</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        indent = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    }</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordtype">double</span> step; <span class="comment">// the value that corresponds to 1% on the current task</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordtype">bool</span> indent = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> lineW = 80;</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> TIMER_SIZE = 12;</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <a class="code hl_class" href="classvcl_1_1Timer.html">vcl::Timer</a> timer;</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordtype">bool</span> printTimer = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="comment">// progress status members</span></div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keywordtype">bool</span> isProgressActive = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    std::string progressMessage;</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> progressStep;</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> progressPerc;</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> progressPercStep;</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> lastProgress;</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    std::mutex mutex;</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordtype">void</span> updateStep();</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordtype">void</span> printLine(<span class="keyword">const</span> std::string&amp; msg, <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> lvl);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="classvcl_1_1Logger.html#a6d317b57158707fb38912f3392428eef">   93</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Logger.html#a6d317b57158707fb38912f3392428eef">reset</a>()</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keywordflow">while</span> (!stack.empty())</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            stack.pop();</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        stack.push({0, 100});</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        updateStep();</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    }</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="classvcl_1_1Logger.html#a40957ec5eea5fe3dde05ec415e8fc4ad">  101</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Logger.html#a40957ec5eea5fe3dde05ec415e8fc4ad">setMaxLineWidth</a>(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> w)</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        lineW = w;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="classvcl_1_1Logger.html#a65d82f8c21f07959876a193c23f201aa">  106</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Logger.html#a65d82f8c21f07959876a193c23f201aa">setPrintTimer</a>(<span class="keywordtype">bool</span> b)</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        printTimer = b;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    }</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="classvcl_1_1Logger.html#a88c6515b2d758ab5afcf8056b430f96a">  111</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Logger.html#a88c6515b2d758ab5afcf8056b430f96a">startTimer</a>()</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        timer.<a class="code hl_function" href="classvcl_1_1Timer.html#a51abb44695a4c76e7bd4013be250f95f">start</a>();</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    }</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> printPercentage(std::ostream&amp; o) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> printIndentation(std::ostream&amp; o) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keywordtype">void</span> printMessage(std::ostream&amp; o, <span class="keyword">const</span> std::string&amp; msg, <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> lvl, <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> n);</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordtype">void</span> printElapsedTime(std::ostream&amp; o) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>};</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="preprocessor">#include &quot;<a class="code" href="logger_8cpp.html">logger.cpp</a>&quot;</span></div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="preprocessor">#endif </span><span class="comment">// VCL_MISC_LOGGER_LOGGER_H</span></div>
-<div class="ttc" id="aclassvcl_1_1Logger_html"><div class="ttname"><a href="classvcl_1_1Logger.html">vcl::Logger</a></div><div class="ttdef"><b>Definition:</b> logger.h:40</div></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="classvcl_1_1Logger.html#a22518d92ad8c279d7b4db4c2e6dea6e4">  116</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Logger.html#a22518d92ad8c279d7b4db4c2e6dea6e4">startNewTask</a>(<span class="keywordtype">double</span> fromPerc, <span class="keywordtype">double</span> toPerc, <span class="keyword">const</span> std::string&amp; action)</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        printLine(action, START);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        assert(fromPerc &gt;= 0);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        assert(toPerc &lt;= 100);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        std::pair&lt;double, double&gt; newP;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        newP.first =</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            stack.top().first +</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            (stack.top().second - stack.top().first) * (fromPerc / 100);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        newP.second = (stack.top().second - stack.top().first) * (toPerc / 100);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        globalPercProgress = newP.first;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        stack.push(newP);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        updateStep();</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    }</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="classvcl_1_1Logger.html#a494d8b2a0dc563755a2db290ce820553">  132</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Logger.html#a494d8b2a0dc563755a2db290ce820553">endTask</a>(<span class="keyword">const</span> std::string&amp; action)</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        globalPercProgress = stack.top().second;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <span class="keywordflow">if</span> (stack.size() &gt; 1) {</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            stack.pop();</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            updateStep();</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>            printLine(action, END);</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        }</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    }</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="classvcl_1_1Logger.html#a21dccd5daaecc58b806d6b5a385a541f">  143</a></span>    <span class="keywordtype">double</span> <a class="code hl_function" href="classvcl_1_1Logger.html#a21dccd5daaecc58b806d6b5a385a541f">percentage</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        <span class="keywordtype">double</span> k = std::pow(10, percPrecision);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> c = globalPercProgress * k;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        <span class="keywordflow">return</span> c / k;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    }</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="classvcl_1_1Logger.html#ac6320c788171eac85e611e605f2bbbc2">  150</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Logger.html#ac6320c788171eac85e611e605f2bbbc2">setPercentage</a>(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> newPerc)</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    {</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        <span class="keywordflow">if</span>(newPerc &gt;= 0 &amp;&amp; newPerc &lt;= 100) {</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            globalPercProgress = (stack.top().first) + step * newPerc;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        }</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    }</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="classvcl_1_1Logger.html#a4728ec26bf10e50950ebc7e603f7d9b3">  157</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Logger.html#a4728ec26bf10e50950ebc7e603f7d9b3">log</a>(<span class="keyword">const</span> std::string&amp; msg) { <a class="code hl_function" href="classvcl_1_1Logger.html#a4728ec26bf10e50950ebc7e603f7d9b3">log</a>(101, <a class="code hl_enumvalue" href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61a7274ed040e7232495765ce18bea5d24b">PROGRESS</a>, msg); }</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="classvcl_1_1Logger.html#a25d9e3cb98b20ced18a2115a8a9d879b">  159</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Logger.html#a25d9e3cb98b20ced18a2115a8a9d879b">log</a>(<a class="code hl_enumeration" href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61">LogLevel</a> lvl, <span class="keyword">const</span> std::string&amp; msg) { <a class="code hl_function" href="classvcl_1_1Logger.html#a25d9e3cb98b20ced18a2115a8a9d879b">log</a>(101, lvl, msg); }</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="classvcl_1_1Logger.html#aafe6f14a5fa699f667eb9f348f3d8ab5">  161</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Logger.html#aafe6f14a5fa699f667eb9f348f3d8ab5">log</a>(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> perc, <span class="keyword">const</span> std::string&amp; msg) { <a class="code hl_function" href="classvcl_1_1Logger.html#aafe6f14a5fa699f667eb9f348f3d8ab5">log</a>(perc, <a class="code hl_enumvalue" href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61a7274ed040e7232495765ce18bea5d24b">PROGRESS</a>, msg); }</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="classvcl_1_1Logger.html#a0c049689776c3aeeb98157ed235acefb">  163</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Logger.html#a0c049689776c3aeeb98157ed235acefb">log</a>(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> perc, <a class="code hl_enumeration" href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61">LogLevel</a> lvl, <span class="keyword">const</span> std::string&amp; msg)</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    {</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <span class="keywordflow">if</span> (perc &gt;= 0 &amp;&amp; perc &lt;= 100)</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            <a class="code hl_function" href="classvcl_1_1Logger.html#ac6320c788171eac85e611e605f2bbbc2">setPercentage</a>(perc);</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        printLine(msg, lvl);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    }</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno"><a class="line" href="classvcl_1_1Logger.html#af6ec7fdb7d1c30abc711b91e96529de7">  203</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Logger.html#af6ec7fdb7d1c30abc711b91e96529de7">startProgress</a>(</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        <span class="keyword">const</span> std::string&amp; msg,</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>               progressSize,</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>               percPrintProgress = 10,</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>               startPerc = 0,</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>               endPerc = 100)</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    {</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        assert(percPrintProgress &gt; 0);</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        assert((endPerc - startPerc) &gt; 0);</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        isProgressActive = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        progressMessage = msg;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        progressPerc = startPerc;</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        progressPercStep = percPrintProgress;</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        progressStep =</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>            progressSize / ((endPerc - startPerc) / percPrintProgress - 1);</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        <span class="keywordflow">if</span> (progressStep == 0)</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            progressStep = progressSize;</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        lastProgress = 0;</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    }</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno"><a class="line" href="classvcl_1_1Logger.html#ada343b4c8c7ec2b0c29ef18eb1f25216">  246</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Logger.html#ada343b4c8c7ec2b0c29ef18eb1f25216">endProgress</a>() { isProgressActive = <span class="keyword">false</span>; }</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span> </div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno"><a class="line" href="classvcl_1_1Logger.html#adc3b00bbbf6cbcab30ec9da6e364fecd">  277</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Logger.html#adc3b00bbbf6cbcab30ec9da6e364fecd">progress</a>(<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> n)</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    {</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>        mutex.lock();</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>        assert(isProgressActive);</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>        <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> <a class="code hl_function" href="classvcl_1_1Logger.html#adc3b00bbbf6cbcab30ec9da6e364fecd">progress</a> = n / progressStep;</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>        <span class="keywordflow">if</span> (lastProgress &lt; <a class="code hl_function" href="classvcl_1_1Logger.html#adc3b00bbbf6cbcab30ec9da6e364fecd">progress</a>) {</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>            progressPerc = <a class="code hl_function" href="classvcl_1_1Logger.html#adc3b00bbbf6cbcab30ec9da6e364fecd">progress</a> * progressPercStep;</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>            <a class="code hl_function" href="classvcl_1_1Logger.html#a4728ec26bf10e50950ebc7e603f7d9b3">log</a>(progressPerc, progressMessage);</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>            lastProgress = <a class="code hl_function" href="classvcl_1_1Logger.html#adc3b00bbbf6cbcab30ec9da6e364fecd">progress</a>;</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        }</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        mutex.unlock();</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    }</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    <span class="comment">// you should override this member function if you want to use a different</span></div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    <span class="comment">// stream that are not std::cout and std::cerr</span></div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno"><a class="line" href="classvcl_1_1Logger.html#a0814bce3cad1b94b29486edeaabcf34b">  293</a></span>    <span class="keyword">virtual</span> Stream* <a class="code hl_function" href="classvcl_1_1Logger.html#a0814bce3cad1b94b29486edeaabcf34b">levelStream</a>(<a class="code hl_enumeration" href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61">LogLevel</a> lvl) = 0;</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span> </div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    <span class="keywordtype">void</span> updateStep() { step = (stack.top().second - stack.top().first) / 100; }</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span> </div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    <span class="keywordtype">void</span> printLine(<span class="keyword">const</span> std::string&amp; msg, <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> lvl)</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>    {</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>        <a class="code hl_enumeration" href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61">LogLevel</a> l = <a class="code hl_enumvalue" href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61a7274ed040e7232495765ce18bea5d24b">PROGRESS</a>;</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>        <span class="keywordflow">if</span> (lvl &lt; <a class="code hl_enumvalue" href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61a3233df4f7a5edcb731c31790011b150f">DEBUG</a>){</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>            l = (<a class="code hl_enumeration" href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61">LogLevel</a>) lvl;</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>        }</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>        std::ostream* stream = <a class="code hl_function" href="classvcl_1_1Logger.html#a0814bce3cad1b94b29486edeaabcf34b">levelStream</a>(l);</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span> </div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>        <span class="keywordflow">if</span> (stream) {</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>            <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> s = 0;</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>            s = printPercentage(*stream);</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>            s += printIndentation(*stream);</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>            printMessage(*stream, msg, lvl, s);</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>            printElapsedTime(*stream);</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>            *stream &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>        }</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    }</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span> </div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> printPercentage(std::ostream&amp; o)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>        <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> size = 3;</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>        <span class="keywordflow">if</span> (percPrecision &gt; 0 )</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>            size += 1 + percPrecision;</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span> </div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>        o &lt;&lt; <span class="stringliteral">&quot;[&quot;</span>;</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>        o &lt;&lt; std::right &lt;&lt; std::setw(size) &lt;&lt; <a class="code hl_function" href="classvcl_1_1Logger.html#a21dccd5daaecc58b806d6b5a385a541f">percentage</a>() &lt;&lt; <span class="stringliteral">&quot;%]&quot;</span>;</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>        <span class="keywordflow">return</span> size + 3;</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    }</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span> </div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>    <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> printIndentation(std::ostream&amp; o)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>        <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> s = 0;</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>        <span class="keywordflow">if</span> (indent) {</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>            <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> n = stack.size() - 1;</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>            <span class="keywordflow">for</span> (<a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i = 0; i &lt; n; i++) {</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>                o &lt;&lt; <span class="stringliteral">&quot;  &quot;</span>;</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>                s += 2;</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>            }</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>        }</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>        <span class="keywordflow">return</span> s;</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    }</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span> </div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    <span class="keywordtype">void</span> printMessage(std::ostream&amp; o, <span class="keyword">const</span> std::string&amp; msg, <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> lvl, <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> n)</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>    {</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>        <a class="code hl_typedef" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> maxMsgSize = lineW - n;</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>        <span class="keywordflow">if</span> (printTimer)</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>            maxMsgSize -= TIMER_SIZE;</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>        <span class="keywordflow">switch</span> (lvl) {</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61a98f7adc0feda996c00a894fba3e3a85b">ERROR</a>:</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>            maxMsgSize -= 8;</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>            o &lt;&lt; <span class="stringliteral">&quot; ERROR: &quot;</span>;</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61a99f9bc3e0fbc01c071eab44dce0a237b">WARNING</a>:</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>            maxMsgSize -= 10;</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>            o &lt;&lt; <span class="stringliteral">&quot; WARNING: &quot;</span>;</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61a7274ed040e7232495765ce18bea5d24b">PROGRESS</a>:</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>            maxMsgSize -= 1;</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>            o &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61a3233df4f7a5edcb731c31790011b150f">DEBUG</a>:</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>            maxMsgSize -= 9;</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>            o &lt;&lt; <span class="stringliteral">&quot; (debug) &quot;</span>;</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>        <span class="keywordflow">case</span> START:</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>            maxMsgSize -= 7;</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>            o &lt;&lt; <span class="stringliteral">&quot; Start &quot;</span>;</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>        <span class="keywordflow">case</span> END:</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>            maxMsgSize -= 5;</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>            o &lt;&lt; <span class="stringliteral">&quot; End &quot;</span>;</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>        }</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>        o &lt;&lt; std::setw(maxMsgSize) &lt;&lt; std::left &lt;&lt; msg;</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>    }</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span> </div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>    <span class="keywordtype">void</span> printElapsedTime(std::ostream&amp; o)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>        <span class="keywordflow">if</span> (printTimer) {</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>            o &lt;&lt; <span class="stringliteral">&quot;[&quot;</span> &lt;&lt; std::setw(TIMER_SIZE - 3) &lt;&lt; std::right &lt;&lt; timer.<a class="code hl_function" href="classvcl_1_1Timer.html#a29fc711525e8b74d13528885386acbc5">delay</a>()</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>              &lt;&lt; <span class="stringliteral">&quot;s]&quot;</span>;</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>        }</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>    }</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>};</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span> </div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span> </div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span><span class="preprocessor">#endif </span><span class="comment">// VCL_MISC_LOGGER_LOGGER_H</span></div>
+<div class="ttc" id="aclassvcl_1_1Logger_html"><div class="ttname"><a href="classvcl_1_1Logger.html">vcl::Logger</a></div><div class="ttdef"><b>Definition:</b> logger.h:41</div></div>
 <div class="ttc" id="aclassvcl_1_1Logger_html_a0814bce3cad1b94b29486edeaabcf34b"><div class="ttname"><a href="classvcl_1_1Logger.html#a0814bce3cad1b94b29486edeaabcf34b">vcl::Logger::levelStream</a></div><div class="ttdeci">virtual Stream * levelStream(LogLevel lvl)=0</div></div>
-<div class="ttc" id="aclassvcl_1_1Logger_html_a10b052765435aa8b542402a89a611d2d"><div class="ttname"><a href="classvcl_1_1Logger.html#a10b052765435aa8b542402a89a611d2d">vcl::Logger::Logger</a></div><div class="ttdeci">Logger()</div><div class="ttdef"><b>Definition:</b> logger.cpp:30</div></div>
-<div class="ttc" id="aclassvcl_1_1Logger_html_a21dccd5daaecc58b806d6b5a385a541f"><div class="ttname"><a href="classvcl_1_1Logger.html#a21dccd5daaecc58b806d6b5a385a541f">vcl::Logger::percentage</a></div><div class="ttdeci">double percentage() const</div><div class="ttdef"><b>Definition:</b> logger.cpp:103</div></div>
-<div class="ttc" id="aclassvcl_1_1Logger_html_a22518d92ad8c279d7b4db4c2e6dea6e4"><div class="ttname"><a href="classvcl_1_1Logger.html#a22518d92ad8c279d7b4db4c2e6dea6e4">vcl::Logger::startNewTask</a></div><div class="ttdeci">void startNewTask(double fromPerc, double toPerc, const std::string &amp;action)</div><div class="ttdef"><b>Definition:</b> logger.cpp:76</div></div>
-<div class="ttc" id="aclassvcl_1_1Logger_html_a296538b2268a33b6091a4ae1b8d14889"><div class="ttname"><a href="classvcl_1_1Logger.html#a296538b2268a33b6091a4ae1b8d14889">vcl::Logger::disableIndentation</a></div><div class="ttdeci">void disableIndentation()</div><div class="ttdef"><b>Definition:</b> logger.cpp:43</div></div>
-<div class="ttc" id="aclassvcl_1_1Logger_html_a3437f70505396f678b94e1f790a58a61"><div class="ttname"><a href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61">vcl::Logger::LogLevel</a></div><div class="ttdeci">LogLevel</div><div class="ttdef"><b>Definition:</b> logger.h:42</div></div>
-<div class="ttc" id="aclassvcl_1_1Logger_html_a3437f70505396f678b94e1f790a58a61a3233df4f7a5edcb731c31790011b150f"><div class="ttname"><a href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61a3233df4f7a5edcb731c31790011b150f">vcl::Logger::DEBUG</a></div><div class="ttdeci">@ DEBUG</div><div class="ttdef"><b>Definition:</b> logger.h:42</div></div>
-<div class="ttc" id="aclassvcl_1_1Logger_html_a3437f70505396f678b94e1f790a58a61a7274ed040e7232495765ce18bea5d24b"><div class="ttname"><a href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61a7274ed040e7232495765ce18bea5d24b">vcl::Logger::PROGRESS</a></div><div class="ttdeci">@ PROGRESS</div><div class="ttdef"><b>Definition:</b> logger.h:42</div></div>
-<div class="ttc" id="aclassvcl_1_1Logger_html_a3437f70505396f678b94e1f790a58a61a98f7adc0feda996c00a894fba3e3a85b"><div class="ttname"><a href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61a98f7adc0feda996c00a894fba3e3a85b">vcl::Logger::ERROR</a></div><div class="ttdeci">@ ERROR</div><div class="ttdef"><b>Definition:</b> logger.h:42</div></div>
-<div class="ttc" id="aclassvcl_1_1Logger_html_a3437f70505396f678b94e1f790a58a61a99f9bc3e0fbc01c071eab44dce0a237b"><div class="ttname"><a href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61a99f9bc3e0fbc01c071eab44dce0a237b">vcl::Logger::WARNING</a></div><div class="ttdeci">@ WARNING</div><div class="ttdef"><b>Definition:</b> logger.h:42</div></div>
-<div class="ttc" id="aclassvcl_1_1Logger_html_a40957ec5eea5fe3dde05ec415e8fc4ad"><div class="ttname"><a href="classvcl_1_1Logger.html#a40957ec5eea5fe3dde05ec415e8fc4ad">vcl::Logger::setMaxLineWidth</a></div><div class="ttdeci">void setMaxLineWidth(uint w)</div><div class="ttdef"><b>Definition:</b> logger.cpp:58</div></div>
-<div class="ttc" id="aclassvcl_1_1Logger_html_a4728ec26bf10e50950ebc7e603f7d9b3"><div class="ttname"><a href="classvcl_1_1Logger.html#a4728ec26bf10e50950ebc7e603f7d9b3">vcl::Logger::log</a></div><div class="ttdeci">void log(const std::string &amp;msg)</div><div class="ttdef"><b>Definition:</b> logger.cpp:119</div></div>
-<div class="ttc" id="aclassvcl_1_1Logger_html_a494d8b2a0dc563755a2db290ce820553"><div class="ttname"><a href="classvcl_1_1Logger.html#a494d8b2a0dc563755a2db290ce820553">vcl::Logger::endTask</a></div><div class="ttdeci">void endTask(const std::string &amp;action)</div><div class="ttdef"><b>Definition:</b> logger.cpp:91</div></div>
-<div class="ttc" id="aclassvcl_1_1Logger_html_a65d82f8c21f07959876a193c23f201aa"><div class="ttname"><a href="classvcl_1_1Logger.html#a65d82f8c21f07959876a193c23f201aa">vcl::Logger::setPrintTimer</a></div><div class="ttdeci">void setPrintTimer(bool b)</div><div class="ttdef"><b>Definition:</b> logger.cpp:64</div></div>
-<div class="ttc" id="aclassvcl_1_1Logger_html_a6d317b57158707fb38912f3392428eef"><div class="ttname"><a href="classvcl_1_1Logger.html#a6d317b57158707fb38912f3392428eef">vcl::Logger::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdef"><b>Definition:</b> logger.cpp:49</div></div>
-<div class="ttc" id="aclassvcl_1_1Logger_html_a6e348f2d44d03c7140381486e606c9c5"><div class="ttname"><a href="classvcl_1_1Logger.html#a6e348f2d44d03c7140381486e606c9c5">vcl::Logger::enableIndentation</a></div><div class="ttdeci">void enableIndentation()</div><div class="ttdef"><b>Definition:</b> logger.cpp:37</div></div>
-<div class="ttc" id="aclassvcl_1_1Logger_html_a88c6515b2d758ab5afcf8056b430f96a"><div class="ttname"><a href="classvcl_1_1Logger.html#a88c6515b2d758ab5afcf8056b430f96a">vcl::Logger::startTimer</a></div><div class="ttdeci">void startTimer()</div><div class="ttdef"><b>Definition:</b> logger.cpp:70</div></div>
-<div class="ttc" id="aclassvcl_1_1Logger_html_aa341d7d450b4f10d8ffc99065e6b83ed"><div class="ttname"><a href="classvcl_1_1Logger.html#aa341d7d450b4f10d8ffc99065e6b83ed">vcl::Logger::setPercentage</a></div><div class="ttdeci">virtual void setPercentage(uint newPerc)</div><div class="ttdef"><b>Definition:</b> logger.cpp:111</div></div>
-<div class="ttc" id="aclassvcl_1_1Logger_html_ada343b4c8c7ec2b0c29ef18eb1f25216"><div class="ttname"><a href="classvcl_1_1Logger.html#ada343b4c8c7ec2b0c29ef18eb1f25216">vcl::Logger::endProgress</a></div><div class="ttdeci">void endProgress()</div><div class="ttdoc">Allows to easily manage progresses with the logger, along with the startProgress and progress member ...</div><div class="ttdef"><b>Definition:</b> logger.cpp:220</div></div>
-<div class="ttc" id="aclassvcl_1_1Logger_html_adc3b00bbbf6cbcab30ec9da6e364fecd"><div class="ttname"><a href="classvcl_1_1Logger.html#adc3b00bbbf6cbcab30ec9da6e364fecd">vcl::Logger::progress</a></div><div class="ttdeci">void progress(uint n)</div><div class="ttdoc">Allows to easily manage progresses with the logger, along with the startProgress and endProgress memb...</div><div class="ttdef"><b>Definition:</b> logger.cpp:254</div></div>
-<div class="ttc" id="aclassvcl_1_1Logger_html_af6ec7fdb7d1c30abc711b91e96529de7"><div class="ttname"><a href="classvcl_1_1Logger.html#af6ec7fdb7d1c30abc711b91e96529de7">vcl::Logger::startProgress</a></div><div class="ttdeci">void startProgress(const std::string &amp;msg, uint progressSize, uint percPrintProgress=10, uint startPerc=0, uint endPerc=100)</div><div class="ttdoc">Allows to easily manage progresses with the logger, along with the progress and endProgress member fu...</div><div class="ttdef"><b>Definition:</b> logger.cpp:177</div></div>
-<div class="ttc" id="aclassvcl_1_1Timer_html"><div class="ttname"><a href="classvcl_1_1Timer.html">vcl::Timer</a></div><div class="ttdoc">The Timer class allows to instantiate simple Timer objects that can be used everywhere.</div><div class="ttdef"><b>Definition:</b> timer.h:42</div></div>
-<div class="ttc" id="alogger_8cpp_html"><div class="ttname"><a href="logger_8cpp.html">logger.cpp</a></div></div>
-<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition:</b> bounding_box.cpp:29</div></div>
+<div class="ttc" id="aclassvcl_1_1Logger_html_a0c049689776c3aeeb98157ed235acefb"><div class="ttname"><a href="classvcl_1_1Logger.html#a0c049689776c3aeeb98157ed235acefb">vcl::Logger::log</a></div><div class="ttdeci">void log(uint perc, LogLevel lvl, const std::string &amp;msg)</div><div class="ttdef"><b>Definition:</b> logger.h:163</div></div>
+<div class="ttc" id="aclassvcl_1_1Logger_html_a10b052765435aa8b542402a89a611d2d"><div class="ttname"><a href="classvcl_1_1Logger.html#a10b052765435aa8b542402a89a611d2d">vcl::Logger::Logger</a></div><div class="ttdeci">Logger()</div><div class="ttdef"><b>Definition:</b> logger.h:77</div></div>
+<div class="ttc" id="aclassvcl_1_1Logger_html_a21dccd5daaecc58b806d6b5a385a541f"><div class="ttname"><a href="classvcl_1_1Logger.html#a21dccd5daaecc58b806d6b5a385a541f">vcl::Logger::percentage</a></div><div class="ttdeci">double percentage() const</div><div class="ttdef"><b>Definition:</b> logger.h:143</div></div>
+<div class="ttc" id="aclassvcl_1_1Logger_html_a22518d92ad8c279d7b4db4c2e6dea6e4"><div class="ttname"><a href="classvcl_1_1Logger.html#a22518d92ad8c279d7b4db4c2e6dea6e4">vcl::Logger::startNewTask</a></div><div class="ttdeci">void startNewTask(double fromPerc, double toPerc, const std::string &amp;action)</div><div class="ttdef"><b>Definition:</b> logger.h:116</div></div>
+<div class="ttc" id="aclassvcl_1_1Logger_html_a25d9e3cb98b20ced18a2115a8a9d879b"><div class="ttname"><a href="classvcl_1_1Logger.html#a25d9e3cb98b20ced18a2115a8a9d879b">vcl::Logger::log</a></div><div class="ttdeci">void log(LogLevel lvl, const std::string &amp;msg)</div><div class="ttdef"><b>Definition:</b> logger.h:159</div></div>
+<div class="ttc" id="aclassvcl_1_1Logger_html_a296538b2268a33b6091a4ae1b8d14889"><div class="ttname"><a href="classvcl_1_1Logger.html#a296538b2268a33b6091a4ae1b8d14889">vcl::Logger::disableIndentation</a></div><div class="ttdeci">void disableIndentation()</div><div class="ttdef"><b>Definition:</b> logger.h:88</div></div>
+<div class="ttc" id="aclassvcl_1_1Logger_html_a3437f70505396f678b94e1f790a58a61"><div class="ttname"><a href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61">vcl::Logger::LogLevel</a></div><div class="ttdeci">LogLevel</div><div class="ttdef"><b>Definition:</b> logger.h:43</div></div>
+<div class="ttc" id="aclassvcl_1_1Logger_html_a3437f70505396f678b94e1f790a58a61a3233df4f7a5edcb731c31790011b150f"><div class="ttname"><a href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61a3233df4f7a5edcb731c31790011b150f">vcl::Logger::DEBUG</a></div><div class="ttdeci">@ DEBUG</div><div class="ttdef"><b>Definition:</b> logger.h:43</div></div>
+<div class="ttc" id="aclassvcl_1_1Logger_html_a3437f70505396f678b94e1f790a58a61a7274ed040e7232495765ce18bea5d24b"><div class="ttname"><a href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61a7274ed040e7232495765ce18bea5d24b">vcl::Logger::PROGRESS</a></div><div class="ttdeci">@ PROGRESS</div><div class="ttdef"><b>Definition:</b> logger.h:43</div></div>
+<div class="ttc" id="aclassvcl_1_1Logger_html_a3437f70505396f678b94e1f790a58a61a98f7adc0feda996c00a894fba3e3a85b"><div class="ttname"><a href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61a98f7adc0feda996c00a894fba3e3a85b">vcl::Logger::ERROR</a></div><div class="ttdeci">@ ERROR</div><div class="ttdef"><b>Definition:</b> logger.h:43</div></div>
+<div class="ttc" id="aclassvcl_1_1Logger_html_a3437f70505396f678b94e1f790a58a61a99f9bc3e0fbc01c071eab44dce0a237b"><div class="ttname"><a href="classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61a99f9bc3e0fbc01c071eab44dce0a237b">vcl::Logger::WARNING</a></div><div class="ttdeci">@ WARNING</div><div class="ttdef"><b>Definition:</b> logger.h:43</div></div>
+<div class="ttc" id="aclassvcl_1_1Logger_html_a40957ec5eea5fe3dde05ec415e8fc4ad"><div class="ttname"><a href="classvcl_1_1Logger.html#a40957ec5eea5fe3dde05ec415e8fc4ad">vcl::Logger::setMaxLineWidth</a></div><div class="ttdeci">void setMaxLineWidth(uint w)</div><div class="ttdef"><b>Definition:</b> logger.h:101</div></div>
+<div class="ttc" id="aclassvcl_1_1Logger_html_a4728ec26bf10e50950ebc7e603f7d9b3"><div class="ttname"><a href="classvcl_1_1Logger.html#a4728ec26bf10e50950ebc7e603f7d9b3">vcl::Logger::log</a></div><div class="ttdeci">void log(const std::string &amp;msg)</div><div class="ttdef"><b>Definition:</b> logger.h:157</div></div>
+<div class="ttc" id="aclassvcl_1_1Logger_html_a494d8b2a0dc563755a2db290ce820553"><div class="ttname"><a href="classvcl_1_1Logger.html#a494d8b2a0dc563755a2db290ce820553">vcl::Logger::endTask</a></div><div class="ttdeci">void endTask(const std::string &amp;action)</div><div class="ttdef"><b>Definition:</b> logger.h:132</div></div>
+<div class="ttc" id="aclassvcl_1_1Logger_html_a65d82f8c21f07959876a193c23f201aa"><div class="ttname"><a href="classvcl_1_1Logger.html#a65d82f8c21f07959876a193c23f201aa">vcl::Logger::setPrintTimer</a></div><div class="ttdeci">void setPrintTimer(bool b)</div><div class="ttdef"><b>Definition:</b> logger.h:106</div></div>
+<div class="ttc" id="aclassvcl_1_1Logger_html_a6d317b57158707fb38912f3392428eef"><div class="ttname"><a href="classvcl_1_1Logger.html#a6d317b57158707fb38912f3392428eef">vcl::Logger::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdef"><b>Definition:</b> logger.h:93</div></div>
+<div class="ttc" id="aclassvcl_1_1Logger_html_a6e348f2d44d03c7140381486e606c9c5"><div class="ttname"><a href="classvcl_1_1Logger.html#a6e348f2d44d03c7140381486e606c9c5">vcl::Logger::enableIndentation</a></div><div class="ttdeci">void enableIndentation()</div><div class="ttdef"><b>Definition:</b> logger.h:83</div></div>
+<div class="ttc" id="aclassvcl_1_1Logger_html_a88c6515b2d758ab5afcf8056b430f96a"><div class="ttname"><a href="classvcl_1_1Logger.html#a88c6515b2d758ab5afcf8056b430f96a">vcl::Logger::startTimer</a></div><div class="ttdeci">void startTimer()</div><div class="ttdef"><b>Definition:</b> logger.h:111</div></div>
+<div class="ttc" id="aclassvcl_1_1Logger_html_aafe6f14a5fa699f667eb9f348f3d8ab5"><div class="ttname"><a href="classvcl_1_1Logger.html#aafe6f14a5fa699f667eb9f348f3d8ab5">vcl::Logger::log</a></div><div class="ttdeci">void log(uint perc, const std::string &amp;msg)</div><div class="ttdef"><b>Definition:</b> logger.h:161</div></div>
+<div class="ttc" id="aclassvcl_1_1Logger_html_ac6320c788171eac85e611e605f2bbbc2"><div class="ttname"><a href="classvcl_1_1Logger.html#ac6320c788171eac85e611e605f2bbbc2">vcl::Logger::setPercentage</a></div><div class="ttdeci">virtual void setPercentage(uint newPerc)</div><div class="ttdef"><b>Definition:</b> logger.h:150</div></div>
+<div class="ttc" id="aclassvcl_1_1Logger_html_ada343b4c8c7ec2b0c29ef18eb1f25216"><div class="ttname"><a href="classvcl_1_1Logger.html#ada343b4c8c7ec2b0c29ef18eb1f25216">vcl::Logger::endProgress</a></div><div class="ttdeci">void endProgress()</div><div class="ttdoc">Allows to easily manage progresses with the logger, along with the startProgress and progress member ...</div><div class="ttdef"><b>Definition:</b> logger.h:246</div></div>
+<div class="ttc" id="aclassvcl_1_1Logger_html_adc3b00bbbf6cbcab30ec9da6e364fecd"><div class="ttname"><a href="classvcl_1_1Logger.html#adc3b00bbbf6cbcab30ec9da6e364fecd">vcl::Logger::progress</a></div><div class="ttdeci">void progress(uint n)</div><div class="ttdoc">Allows to easily manage progresses with the logger, along with the startProgress and endProgress memb...</div><div class="ttdef"><b>Definition:</b> logger.h:277</div></div>
+<div class="ttc" id="aclassvcl_1_1Logger_html_af6ec7fdb7d1c30abc711b91e96529de7"><div class="ttname"><a href="classvcl_1_1Logger.html#af6ec7fdb7d1c30abc711b91e96529de7">vcl::Logger::startProgress</a></div><div class="ttdeci">void startProgress(const std::string &amp;msg, uint progressSize, uint percPrintProgress=10, uint startPerc=0, uint endPerc=100)</div><div class="ttdoc">Allows to easily manage progresses with the logger, along with the progress and endProgress member fu...</div><div class="ttdef"><b>Definition:</b> logger.h:203</div></div>
+<div class="ttc" id="aclassvcl_1_1Timer_html"><div class="ttname"><a href="classvcl_1_1Timer.html">vcl::Timer</a></div><div class="ttdoc">The Timer class allows to instantiate simple Timer objects that can be used everywhere.</div><div class="ttdef"><b>Definition:</b> timer.h:44</div></div>
+<div class="ttc" id="aclassvcl_1_1Timer_html_a29fc711525e8b74d13528885386acbc5"><div class="ttname"><a href="classvcl_1_1Timer.html#a29fc711525e8b74d13528885386acbc5">vcl::Timer::delay</a></div><div class="ttdeci">double delay() const</div><div class="ttdoc">Returns the time passed between the call of start() and this member function. Works also if the timer...</div><div class="ttdef"><b>Definition:</b> timer.h:146</div></div>
+<div class="ttc" id="aclassvcl_1_1Timer_html_a51abb44695a4c76e7bd4013be250f95f"><div class="ttname"><a href="classvcl_1_1Timer.html#a51abb44695a4c76e7bd4013be250f95f">vcl::Timer::start</a></div><div class="ttdeci">void start()</div><div class="ttdoc">Starts the timer.</div><div class="ttdef"><b>Definition:</b> timer.h:95</div></div>
+<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition:</b> bounding_box.h:47</div></div>
 <div class="ttc" id="atimer_8h_html"><div class="ttname"><a href="timer_8h.html">timer.h</a></div></div>
 <div class="ttc" id="atypes_2base_8h_html_a69aa29b598b851b0640aa225a9e5d61d"><div class="ttname"><a href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition:</b> base.h:31</div></div>
 <div class="ttc" id="atypes_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div></div>

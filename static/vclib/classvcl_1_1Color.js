@@ -69,5 +69,5 @@ var classvcl_1_1Color =
     [ "setRgbF", "classvcl_1_1Color.html#a5073ea810a3d16ac301846cf690e3aad", null ],
     [ "toUnsignedB5G5R5", "classvcl_1_1Color.html#a724566f24ab3b8ddcf19870d3faaddb5", null ],
     [ "toUnsignedR5G5B5", "classvcl_1_1Color.html#a008a1ea96e3a5964119b311ecd5f9ff0", null ],
-    [ "operator<<", "classvcl_1_1Color.html#aee3c1e2213a03388029179296f7908e4", null ]
+    [ "operator<<", "classvcl_1_1Color.html#aecec73b123325e5bb890b013616e88aa", null ]
 ];

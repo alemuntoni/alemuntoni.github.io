@@ -20,7 +20,7 @@ var classvcl_1_1Logger =
     [ "progress", "classvcl_1_1Logger.html#adc3b00bbbf6cbcab30ec9da6e364fecd", null ],
     [ "reset", "classvcl_1_1Logger.html#a6d317b57158707fb38912f3392428eef", null ],
     [ "setMaxLineWidth", "classvcl_1_1Logger.html#a40957ec5eea5fe3dde05ec415e8fc4ad", null ],
-    [ "setPercentage", "classvcl_1_1Logger.html#aa341d7d450b4f10d8ffc99065e6b83ed", null ],
+    [ "setPercentage", "classvcl_1_1Logger.html#ac6320c788171eac85e611e605f2bbbc2", null ],
     [ "setPrintTimer", "classvcl_1_1Logger.html#a65d82f8c21f07959876a193c23f201aa", null ],
     [ "startNewTask", "classvcl_1_1Logger.html#a22518d92ad8c279d7b4db4c2e6dea6e4", null ],
     [ "startProgress", "classvcl_1_1Logger.html#af6ec7fdb7d1c30abc711b91e96529de7", null ],

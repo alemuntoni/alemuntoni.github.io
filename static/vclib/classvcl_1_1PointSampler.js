@@ -1,8 +1,8 @@
 var classvcl_1_1PointSampler =
 [
-    [ "ConstIterator", "classvcl_1_1PointSampler.html#a73aff62563f6dbf5b647c2149576a9ec", null ],
+    [ "ConstIterator", "classvcl_1_1PointSampler.html#a44af1b0043c8aae5fdd58eeac0fdbeed", null ],
     [ "PointType", "classvcl_1_1PointSampler.html#ab0638869d8b87fcb8f5346cde7c2e7ac", null ],
-    [ "ScalarType", "classvcl_1_1PointSampler.html#af17aee0ad83cd3b37bbddc4d41ad05f9", null ],
+    [ "ScalarType", "classvcl_1_1PointSampler.html#af45166b3bcee08bf89e61949d6d96a6b", null ],
     [ "PointSampler", "classvcl_1_1PointSampler.html#a1c34a296377e665aba9c01517127a86d", null ],
     [ "add", "classvcl_1_1PointSampler.html#a67fc44cbd71373c8ad50ad87b73e871d", null ],
     [ "add", "classvcl_1_1PointSampler.html#a6e1608831007dccb8a31dd075bafe56d", null ],
@@ -10,10 +10,9 @@ var classvcl_1_1PointSampler =
     [ "add", "classvcl_1_1PointSampler.html#a80c815f8f964e02dd479973eb59b8945", null ],
     [ "add", "classvcl_1_1PointSampler.html#a0b6d3f0df94a92521609afba500e3e1f", null ],
     [ "add", "classvcl_1_1PointSampler.html#a1fc2e453ebd94d23cfe34aab7511fe2e", null ],
-    [ "begin", "classvcl_1_1PointSampler.html#a4ba88c9ef83571b7ea86efd2e2d9584b", null ],
+    [ "begin", "classvcl_1_1PointSampler.html#a867ac2696a5528fe421045ce2ae605c2", null ],
     [ "clear", "classvcl_1_1PointSampler.html#a20ed372b1c0ddc97592cbb21a2917f22", null ],
-    [ "end", "classvcl_1_1PointSampler.html#ab1000b2620f72fdcdab49fcec87d0b67", null ],
-    [ "points", "classvcl_1_1PointSampler.html#adfe059f9e46fb4d5ad9289c871ac6ecd", null ],
+    [ "end", "classvcl_1_1PointSampler.html#a3aff49b3ddcd7a4bbdae5f549ba0885f", null ],
     [ "reserve", "classvcl_1_1PointSampler.html#a8818bd97c085abcd3941f27b5de433e2", null ],
     [ "resize", "classvcl_1_1PointSampler.html#af98d103e9317cb66a6f2d35684603123", null ],
     [ "sample", "classvcl_1_1PointSampler.html#a67fc1244ae653d13a908cc789bf5b3ae", null ],

@@ -105,7 +105,7 @@ $(document).ready(function(){initNavTree('classvcl_1_1Vector.html',''); initResi
 </div><!--header-->
 <div class="contents">
 
-<p>The <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a> class is a generic container of objects of type T, that could have fixed or dynamic size, depending on the templated size N.  
+<p>The <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a> class is a generic container of objects of type <code>T</code>, that could have fixed or dynamic size, depending on the templated size <code>N</code>.  
  <a href="classvcl_1_1Vector.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="vector_8h_source.html">vclib/space/vector.h</a>&gt;</code></p>
@@ -121,26 +121,36 @@ Collaboration diagram for vcl::Vector&lt; T, N &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a69e7ed531497ce558816799b86da6d3a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a69e7ed531497ce558816799b86da6d3a">ValueType</a> = typename Container::value_type</td></tr>
-<tr class="separator:a69e7ed531497ce558816799b86da6d3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5120d0d70fe81c0d52230eecd2a38c3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#ad5120d0d70fe81c0d52230eecd2a38c3">ConstReference</a> = typename Container::const_reference</td></tr>
-<tr class="separator:ad5120d0d70fe81c0d52230eecd2a38c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80cb5bfeca8bd4ebdb25847d2e115997"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a80cb5bfeca8bd4ebdb25847d2e115997">Reference</a> = typename Container::reference</td></tr>
-<tr class="separator:a80cb5bfeca8bd4ebdb25847d2e115997"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c43f173e0bdb4243bc0a22d00692ee1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a0c43f173e0bdb4243bc0a22d00692ee1">ConstPointer</a> = typename Container::const_pointer</td></tr>
-<tr class="separator:a0c43f173e0bdb4243bc0a22d00692ee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9871ecd1bd7f6d62637206f7fb073ac1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a9871ecd1bd7f6d62637206f7fb073ac1">Pointer</a> = typename Container::pointer</td></tr>
-<tr class="separator:a9871ecd1bd7f6d62637206f7fb073ac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3ce2354e76f640763a20133cff5209c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#ad3ce2354e76f640763a20133cff5209c">Iterator</a> = typename Container::iterator</td></tr>
-<tr class="separator:ad3ce2354e76f640763a20133cff5209c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0331869b7760a17e13ebef44785f0ce7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a0331869b7760a17e13ebef44785f0ce7">ConstIterator</a> = typename Container::const_iterator</td></tr>
-<tr class="separator:a0331869b7760a17e13ebef44785f0ce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a370f8115d4ec9476dc8fd018232c6b0e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a370f8115d4ec9476dc8fd018232c6b0e">ValueType</a> = Container::value_type</td></tr>
+<tr class="memdesc:a370f8115d4ec9476dc8fd018232c6b0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of the elements stored in the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>.  <br /></td></tr>
+<tr class="separator:a370f8115d4ec9476dc8fd018232c6b0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4837c93263bad7d4780aca82865caf2f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a4837c93263bad7d4780aca82865caf2f">ConstReference</a> = Container::const_reference</td></tr>
+<tr class="memdesc:a4837c93263bad7d4780aca82865caf2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">A const reference to the type of the elements stored in the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>.  <br /></td></tr>
+<tr class="separator:a4837c93263bad7d4780aca82865caf2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06a998f447e9998a98bf8bb6bf74a780"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a06a998f447e9998a98bf8bb6bf74a780">Reference</a> = Container::reference</td></tr>
+<tr class="memdesc:a06a998f447e9998a98bf8bb6bf74a780"><td class="mdescLeft">&#160;</td><td class="mdescRight">A reference to the type of the elements stored in the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>.  <br /></td></tr>
+<tr class="separator:a06a998f447e9998a98bf8bb6bf74a780"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af58a36b8c58869667f140f68b91c96ed"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#af58a36b8c58869667f140f68b91c96ed">ConstPointer</a> = Container::const_pointer</td></tr>
+<tr class="memdesc:af58a36b8c58869667f140f68b91c96ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">A const pointer to the type of the elements stored in the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>.  <br /></td></tr>
+<tr class="separator:af58a36b8c58869667f140f68b91c96ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a458e2517acfb493003f6fcfd151ac7a2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a458e2517acfb493003f6fcfd151ac7a2">Pointer</a> = Container::pointer</td></tr>
+<tr class="memdesc:a458e2517acfb493003f6fcfd151ac7a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">A pointer to the type of the elements stored in the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>.  <br /></td></tr>
+<tr class="separator:a458e2517acfb493003f6fcfd151ac7a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16535a30d87e60fe42d98e6cc1c5451d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a16535a30d87e60fe42d98e6cc1c5451d">Iterator</a> = Container::iterator</td></tr>
+<tr class="memdesc:a16535a30d87e60fe42d98e6cc1c5451d"><td class="mdescLeft">&#160;</td><td class="mdescRight">An iterator to the elements of the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>.  <br /></td></tr>
+<tr class="separator:a16535a30d87e60fe42d98e6cc1c5451d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26cf42252eea33aa7dd1552438189c3c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a26cf42252eea33aa7dd1552438189c3c">ConstIterator</a> = Container::const_iterator</td></tr>
+<tr class="memdesc:a26cf42252eea33aa7dd1552438189c3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">A const iterator to the elements of the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>.  <br /></td></tr>
+<tr class="separator:a26cf42252eea33aa7dd1552438189c3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a61d9e3cdff04dfab7622cb75f23bb5bb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a61d9e3cdff04dfab7622cb75f23bb5bb">Vector</a> ()</td></tr>
-<tr class="memdesc:a61d9e3cdff04dfab7622cb75f23bb5bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an empty <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a> object.  <br /></td></tr>
-<tr class="separator:a61d9e3cdff04dfab7622cb75f23bb5bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a581025dea7b47f73de493722c17ef62c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a581025dea7b47f73de493722c17ef62c">Vector</a> ()=default</td></tr>
+<tr class="memdesc:a581025dea7b47f73de493722c17ef62c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an empty <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a> object.  <br /></td></tr>
+<tr class="separator:a581025dea7b47f73de493722c17ef62c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa40075c827bf65c7a80365eae04c4c57"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#aa40075c827bf65c7a80365eae04c4c57">Vector</a> (std::size_t <a class="el" href="classvcl_1_1Vector.html#a348103c35a6941e5b1de3fd6277cf348">size</a>, const T &amp;value=T())</td></tr>
+<tr class="memdesc:aa40075c827bf65c7a80365eae04c4c57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a> object with the specified size.  <br /></td></tr>
+<tr class="separator:aa40075c827bf65c7a80365eae04c4c57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26470f95d28ee160318691fd29c1e064"><td class="memTemplParams" colspan="2">template&lt;typename ItType &gt; </td></tr>
 <tr class="memitem:a26470f95d28ee160318691fd29c1e064"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a26470f95d28ee160318691fd29c1e064">Vector</a> (ItType first, ItType last)</td></tr>
 <tr class="memdesc:a26470f95d28ee160318691fd29c1e064"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the container with the contents of the range [first, last).  <br /></td></tr>
@@ -152,37 +162,38 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a348103c35a6941e5b1de3fd6277cf348"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a348103c35a6941e5b1de3fd6277cf348">size</a> () const</td></tr>
 <tr class="memdesc:a348103c35a6941e5b1de3fd6277cf348"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the container.  <br /></td></tr>
 <tr class="separator:a348103c35a6941e5b1de3fd6277cf348"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0cbae53b188322bfcca37ce8c15c95b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Vector.html#a80cb5bfeca8bd4ebdb25847d2e115997">Reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#af0cbae53b188322bfcca37ce8c15c95b">at</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i)</td></tr>
-<tr class="memdesc:af0cbae53b188322bfcca37ce8c15c95b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the specified element with bounds checking.  <br /></td></tr>
-<tr class="separator:af0cbae53b188322bfcca37ce8c15c95b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4181c79380fe277aad3929d2aaee2b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Vector.html#ad5120d0d70fe81c0d52230eecd2a38c3">ConstReference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#ab4181c79380fe277aad3929d2aaee2b1">at</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i) const</td></tr>
-<tr class="memdesc:ab4181c79380fe277aad3929d2aaee2b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the specified element with bounds checking.  <br /></td></tr>
-<tr class="separator:ab4181c79380fe277aad3929d2aaee2b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57494902a009d081d04384121e7e25a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Vector.html#a80cb5bfeca8bd4ebdb25847d2e115997">Reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a57494902a009d081d04384121e7e25a9">atMod</a> (int i)</td></tr>
-<tr class="memdesc:a57494902a009d081d04384121e7e25a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the specified element, computing first the module of the position w.r.t. the size of the container.  <br /></td></tr>
-<tr class="separator:a57494902a009d081d04384121e7e25a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8522de2c49a21e7b59fbca8645f32a4b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Vector.html#ad5120d0d70fe81c0d52230eecd2a38c3">ConstReference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a8522de2c49a21e7b59fbca8645f32a4b">atMod</a> (int i) const</td></tr>
-<tr class="memdesc:a8522de2c49a21e7b59fbca8645f32a4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the specified element, computing first the module of the position w.r.t. the size of the container.  <br /></td></tr>
-<tr class="separator:a8522de2c49a21e7b59fbca8645f32a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5725eea666c7cb220321078f905389b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Vector.html#a06a998f447e9998a98bf8bb6bf74a780">Reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a5725eea666c7cb220321078f905389b9">at</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i)</td></tr>
+<tr class="memdesc:a5725eea666c7cb220321078f905389b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the specified element with bounds checking.  <br /></td></tr>
+<tr class="separator:a5725eea666c7cb220321078f905389b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35fd2279a7ab3371de0a9bddf4c04e80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Vector.html#a4837c93263bad7d4780aca82865caf2f">ConstReference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a35fd2279a7ab3371de0a9bddf4c04e80">at</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i) const</td></tr>
+<tr class="memdesc:a35fd2279a7ab3371de0a9bddf4c04e80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the specified element with bounds checking.  <br /></td></tr>
+<tr class="separator:a35fd2279a7ab3371de0a9bddf4c04e80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05ba5a7c86fe0a01e86fe464d549e1d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Vector.html#a06a998f447e9998a98bf8bb6bf74a780">Reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a05ba5a7c86fe0a01e86fe464d549e1d5">atMod</a> (int i)</td></tr>
+<tr class="memdesc:a05ba5a7c86fe0a01e86fe464d549e1d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the specified element, computing first the module of the position w.r.t. the size of the container.  <br /></td></tr>
+<tr class="separator:a05ba5a7c86fe0a01e86fe464d549e1d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01ef87d793c722ea59f3b8f809bcab68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Vector.html#a4837c93263bad7d4780aca82865caf2f">ConstReference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a01ef87d793c722ea59f3b8f809bcab68">atMod</a> (int i) const</td></tr>
+<tr class="memdesc:a01ef87d793c722ea59f3b8f809bcab68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the specified element, computing first the module of the position w.r.t. the size of the container.  <br /></td></tr>
+<tr class="separator:a01ef87d793c722ea59f3b8f809bcab68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8df945453c1cb5c5ca788d13d56a5a7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a8df945453c1cb5c5ca788d13d56a5a7b">set</a> (const T &amp;e, <a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i)</td></tr>
 <tr class="memdesc:a8df945453c1cb5c5ca788d13d56a5a7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the value of the element at the specified position.  <br /></td></tr>
 <tr class="separator:a8df945453c1cb5c5ca788d13d56a5a7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0dca6411192013c1f8d6936d408b8253"><td class="memTemplParams" colspan="2">template&lt;Range Rng&gt; </td></tr>
-<tr class="memitem:a0dca6411192013c1f8d6936d408b8253"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a0dca6411192013c1f8d6936d408b8253">set</a> (Rng &amp;&amp;r)</td></tr>
-<tr class="memdesc:a0dca6411192013c1f8d6936d408b8253"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the elements of the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a> using the values from a range.  <br /></td></tr>
-<tr class="separator:a0dca6411192013c1f8d6936d408b8253"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac736c526aaaaadb851d5cb0fe766bf7d"><td class="memTemplParams" colspan="2">template&lt;Range Rng&gt; <br />
+requires RangeOfConvertibleTo&lt;Rng, T&gt;</td></tr>
+<tr class="memitem:ac736c526aaaaadb851d5cb0fe766bf7d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#ac736c526aaaaadb851d5cb0fe766bf7d">set</a> (Rng &amp;&amp;r)</td></tr>
+<tr class="memdesc:ac736c526aaaaadb851d5cb0fe766bf7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the elements of the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a> using the values from a range.  <br /></td></tr>
+<tr class="separator:ac736c526aaaaadb851d5cb0fe766bf7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56e11f6b8f686d9d4059790eea081833"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a56e11f6b8f686d9d4059790eea081833">fill</a> (const T &amp;e)</td></tr>
 <tr class="memdesc:a56e11f6b8f686d9d4059790eea081833"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill all elements of the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a> with the specified value.  <br /></td></tr>
 <tr class="separator:a56e11f6b8f686d9d4059790eea081833"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50ad84d83a0ebab5434fd6d464de4fdb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a50ad84d83a0ebab5434fd6d464de4fdb">contains</a> (const typename <a class="el" href="structvcl_1_1MakeConstPointer.html">MakeConstPointer</a>&lt; T &gt;::type &amp;e) const</td></tr>
 <tr class="memdesc:a50ad84d83a0ebab5434fd6d464de4fdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a> contains the specified element.  <br /></td></tr>
 <tr class="separator:a50ad84d83a0ebab5434fd6d464de4fdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65044b5c32885c61279fa7b225d1d9c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Vector.html#ad3ce2354e76f640763a20133cff5209c">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a65044b5c32885c61279fa7b225d1d9c5">find</a> (const typename <a class="el" href="structvcl_1_1MakeConstPointer.html">MakeConstPointer</a>&lt; T &gt;::type &amp;e)</td></tr>
-<tr class="memdesc:a65044b5c32885c61279fa7b225d1d9c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the first occurrence of the specified element in the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>.  <br /></td></tr>
-<tr class="separator:a65044b5c32885c61279fa7b225d1d9c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a226d99f3b9fa594c0e54249dcfa25829"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Vector.html#a0331869b7760a17e13ebef44785f0ce7">ConstIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a226d99f3b9fa594c0e54249dcfa25829">find</a> (const typename <a class="el" href="structvcl_1_1MakeConstPointer.html">MakeConstPointer</a>&lt; T &gt;::type &amp;e) const</td></tr>
-<tr class="memdesc:a226d99f3b9fa594c0e54249dcfa25829"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the first occurrence of the specified element in the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>.  <br /></td></tr>
-<tr class="separator:a226d99f3b9fa594c0e54249dcfa25829"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab61551d0a46cd479f928a42bd90d4cdd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Vector.html#a16535a30d87e60fe42d98e6cc1c5451d">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#ab61551d0a46cd479f928a42bd90d4cdd">find</a> (const typename <a class="el" href="structvcl_1_1MakeConstPointer.html">MakeConstPointer</a>&lt; T &gt;::type &amp;e)</td></tr>
+<tr class="memdesc:ab61551d0a46cd479f928a42bd90d4cdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the first occurrence of the specified element in the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>.  <br /></td></tr>
+<tr class="separator:ab61551d0a46cd479f928a42bd90d4cdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac42f37dd8e4e93fc420777ecfd70f49f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Vector.html#a26cf42252eea33aa7dd1552438189c3c">ConstIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#ac42f37dd8e4e93fc420777ecfd70f49f">find</a> (const typename <a class="el" href="structvcl_1_1MakeConstPointer.html">MakeConstPointer</a>&lt; T &gt;::type &amp;e) const</td></tr>
+<tr class="memdesc:ac42f37dd8e4e93fc420777ecfd70f49f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the first occurrence of the specified element in the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>.  <br /></td></tr>
+<tr class="separator:ac42f37dd8e4e93fc420777ecfd70f49f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21a241adaa8323b8bbd7845a1f24c8c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a21a241adaa8323b8bbd7845a1f24c8c6">indexOf</a> (const typename <a class="el" href="structvcl_1_1MakeConstPointer.html">MakeConstPointer</a>&lt; T &gt;::type &amp;e) const</td></tr>
 <tr class="memdesc:a21a241adaa8323b8bbd7845a1f24c8c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the index of the first occurrence of the specified element in the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>.  <br /></td></tr>
 <tr class="separator:a21a241adaa8323b8bbd7845a1f24c8c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -206,28 +217,35 @@ requires (N &lt; 0)</td></tr>
 <tr class="memitem:ad3672c31c16b388923cfe99aa4c82a67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#ad3672c31c16b388923cfe99aa4c82a67">clear</a> ()</td></tr>
 <tr class="memdesc:ad3672c31c16b388923cfe99aa4c82a67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all elements from the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>.  <br /></td></tr>
 <tr class="separator:ad3672c31c16b388923cfe99aa4c82a67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4dafd64bb48de202942a8498033c8811"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Vector.html#a80cb5bfeca8bd4ebdb25847d2e115997">Reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a4dafd64bb48de202942a8498033c8811">operator[]</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i)</td></tr>
-<tr class="memdesc:a4dafd64bb48de202942a8498033c8811"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the element at specified location i. No bounds checking is performed.  <br /></td></tr>
-<tr class="separator:a4dafd64bb48de202942a8498033c8811"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d628ed0872fe06ebf1214a08cadb1b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Vector.html#ad5120d0d70fe81c0d52230eecd2a38c3">ConstReference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a5d628ed0872fe06ebf1214a08cadb1b5">operator[]</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i) const</td></tr>
-<tr class="memdesc:a5d628ed0872fe06ebf1214a08cadb1b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the element at specified location i. No bounds checking is performed.  <br /></td></tr>
-<tr class="separator:a5d628ed0872fe06ebf1214a08cadb1b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8de3fe392f0b5553d73488c40a060cf1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Vector.html#ad3ce2354e76f640763a20133cff5209c">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a8de3fe392f0b5553d73488c40a060cf1">begin</a> ()</td></tr>
-<tr class="memdesc:a8de3fe392f0b5553d73488c40a060cf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an iterator pointing to the beginning of the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>.  <br /></td></tr>
-<tr class="separator:a8de3fe392f0b5553d73488c40a060cf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90d850e856c90cf313e988a888c8daf3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Vector.html#ad3ce2354e76f640763a20133cff5209c">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a90d850e856c90cf313e988a888c8daf3">end</a> ()</td></tr>
-<tr class="memdesc:a90d850e856c90cf313e988a888c8daf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an iterator pointing to the end of the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>.  <br /></td></tr>
-<tr class="separator:a90d850e856c90cf313e988a888c8daf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae52f338b9d5847e74c569a62e5d564d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Vector.html#a0331869b7760a17e13ebef44785f0ce7">ConstIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#ae52f338b9d5847e74c569a62e5d564d5">begin</a> () const</td></tr>
-<tr class="memdesc:ae52f338b9d5847e74c569a62e5d564d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a const iterator pointing to the beginning of the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>.  <br /></td></tr>
-<tr class="separator:ae52f338b9d5847e74c569a62e5d564d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50a8c3f75a505919eca2ed930436c6de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Vector.html#a0331869b7760a17e13ebef44785f0ce7">ConstIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a50a8c3f75a505919eca2ed930436c6de">end</a> () const</td></tr>
-<tr class="memdesc:a50a8c3f75a505919eca2ed930436c6de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a const iterator pointing to the end of the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>.  <br /></td></tr>
-<tr class="separator:a50a8c3f75a505919eca2ed930436c6de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77cce9662c0225eff0f7e9538c662978"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Vector.html#a06a998f447e9998a98bf8bb6bf74a780">Reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a77cce9662c0225eff0f7e9538c662978">operator[]</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i)</td></tr>
+<tr class="memdesc:a77cce9662c0225eff0f7e9538c662978"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the element at specified location i. No bounds checking is performed.  <br /></td></tr>
+<tr class="separator:a77cce9662c0225eff0f7e9538c662978"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a022080c62191a860dea42df2722d928a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Vector.html#a4837c93263bad7d4780aca82865caf2f">ConstReference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a022080c62191a860dea42df2722d928a">operator[]</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i) const</td></tr>
+<tr class="memdesc:a022080c62191a860dea42df2722d928a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the element at specified location i. No bounds checking is performed.  <br /></td></tr>
+<tr class="separator:a022080c62191a860dea42df2722d928a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0497c004ef280224299352704544c2e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Vector.html#a06a998f447e9998a98bf8bb6bf74a780">Reference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a0497c004ef280224299352704544c2e7">operator()</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i)</td></tr>
+<tr class="memdesc:a0497c004ef280224299352704544c2e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the element at specified location i. No bounds checking is performed.  <br /></td></tr>
+<tr class="separator:a0497c004ef280224299352704544c2e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fbb65d406f2ab51a29a4834764f2726"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Vector.html#a4837c93263bad7d4780aca82865caf2f">ConstReference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#a1fbb65d406f2ab51a29a4834764f2726">operator()</a> (<a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> i) const</td></tr>
+<tr class="memdesc:a1fbb65d406f2ab51a29a4834764f2726"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the element at specified location i. No bounds checking is performed.  <br /></td></tr>
+<tr class="separator:a1fbb65d406f2ab51a29a4834764f2726"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1b10df732f7b9006b2bb0143df2b97d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Vector.html#a16535a30d87e60fe42d98e6cc1c5451d">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#af1b10df732f7b9006b2bb0143df2b97d">begin</a> ()</td></tr>
+<tr class="memdesc:af1b10df732f7b9006b2bb0143df2b97d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an iterator pointing to the beginning of the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>.  <br /></td></tr>
+<tr class="separator:af1b10df732f7b9006b2bb0143df2b97d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5d19bd3ad49da79da6437797518055b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Vector.html#a16535a30d87e60fe42d98e6cc1c5451d">Iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#ad5d19bd3ad49da79da6437797518055b">end</a> ()</td></tr>
+<tr class="memdesc:ad5d19bd3ad49da79da6437797518055b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an iterator pointing to the end of the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>.  <br /></td></tr>
+<tr class="separator:ad5d19bd3ad49da79da6437797518055b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2dae711a8152ff35e72af89f30ab523"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Vector.html#a26cf42252eea33aa7dd1552438189c3c">ConstIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#ad2dae711a8152ff35e72af89f30ab523">begin</a> () const</td></tr>
+<tr class="memdesc:ad2dae711a8152ff35e72af89f30ab523"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a const iterator pointing to the beginning of the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>.  <br /></td></tr>
+<tr class="separator:ad2dae711a8152ff35e72af89f30ab523"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adeb6d2fa582cb8f25512e28acc559947"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Vector.html#a26cf42252eea33aa7dd1552438189c3c">ConstIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#adeb6d2fa582cb8f25512e28acc559947">end</a> () const</td></tr>
+<tr class="memdesc:adeb6d2fa582cb8f25512e28acc559947"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a const iterator pointing to the end of the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>.  <br /></td></tr>
+<tr class="separator:adeb6d2fa582cb8f25512e28acc559947"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:af303936623d10f51443b3b597d65d61b"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Vector.html#af303936623d10f51443b3b597d65d61b">SIZE</a> = N</td></tr>
+<tr class="memdesc:af303936623d10f51443b3b597d65d61b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of the vector at compile time. It will be -1 if the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a> has dynamic size.  <br /></td></tr>
 <tr class="separator:af303936623d10f51443b3b597d65d61b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
@@ -237,18 +255,18 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename T, int N&gt;<br />
-class vcl::Vector&lt; T, N &gt;</div><p>The <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a> class is a generic container of objects of type T, that could have fixed or dynamic size, depending on the templated size N. </p>
-<p>The <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a> class is a container that can hold objects of type T. The size of the container can be either fixed or dynamic, depending on the value of the template parameter N. If N is greater than or equal to zero, the container will have a fixed size of N elements, and it will use an array to store the elements. If N is less than zero, the container will have a dynamic size, and it will use a vector to store the elements. The <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a> class provides several member functions to manipulate the elements of the container, such as getting and setting individual elements, filling the container with a value, checking if the container contains a certain element, and finding the index of a certain element.</p>
+class vcl::Vector&lt; T, N &gt;</div><p>The <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a> class is a generic container of objects of type <code>T</code>, that could have fixed or dynamic size, depending on the templated size <code>N</code>. </p>
+<p>The <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a> class is a container that can hold objects of type <code>T</code>. The size of the container can be either fixed or dynamic, depending on the value of the template parameter <code>N</code>. If <code>N</code> is greater than or equal to zero, the container will have a fixed size of N elements, and it will use an array to store the elements. If <code>N</code> is less than zero, the container will have a dynamic size, and it will use a vector to store the elements. The <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a> class provides several member functions to manipulate the elements of the container, such as getting and setting individual elements, filling the container with a value, checking if the container contains a certain element, and finding the index of a certain element.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>the type of the objects stored in the container. </td></tr>
-    <tr><td class="paramname">N</td><td>the size of the container. If N is greater than or equal to zero, the container will have a fixed size of N elements, and it will use an array to store the elements. If N is less than zero, the container will have a dynamic size, and it will use a vector to store the elements. </td></tr>
+    <tr><td class="paramname">N</td><td>the size of the container. If <code>N</code> is greater than or equal to zero, the container will have a fixed size of <code>N</code> elements, and it will use an array to store the elements. If <code>N</code> is less than zero, the container will have a dynamic size, and it will use a vector to store the elements. </td></tr>
   </table>
   </dd>
 </dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a0331869b7760a17e13ebef44785f0ce7" name="a0331869b7760a17e13ebef44785f0ce7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0331869b7760a17e13ebef44785f0ce7">&#9670;&#160;</a></span>ConstIterator</h2>
+<a id="a26cf42252eea33aa7dd1552438189c3c" name="a26cf42252eea33aa7dd1552438189c3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26cf42252eea33aa7dd1552438189c3c">&#9670;&#160;</a></span>ConstIterator</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -256,16 +274,17 @@ class vcl::Vector&lt; T, N &gt;</div><p>The <a class="el" href="classvcl_1_1Vect
 template&lt;typename T , int N&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::ConstIterator =  typename Container::const_iterator</td>
+          <td class="memname">using <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::ConstIterator =  Container::const_iterator</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>A const iterator to the elements of the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>. </p>
 
 </div>
 </div>
-<a id="a0c43f173e0bdb4243bc0a22d00692ee1" name="a0c43f173e0bdb4243bc0a22d00692ee1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c43f173e0bdb4243bc0a22d00692ee1">&#9670;&#160;</a></span>ConstPointer</h2>
+<a id="af58a36b8c58869667f140f68b91c96ed" name="af58a36b8c58869667f140f68b91c96ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af58a36b8c58869667f140f68b91c96ed">&#9670;&#160;</a></span>ConstPointer</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -273,16 +292,17 @@ template&lt;typename T , int N&gt; </div>
 template&lt;typename T , int N&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::ConstPointer =  typename Container::const_pointer</td>
+          <td class="memname">using <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::ConstPointer =  Container::const_pointer</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>A const pointer to the type of the elements stored in the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>. </p>
 
 </div>
 </div>
-<a id="ad5120d0d70fe81c0d52230eecd2a38c3" name="ad5120d0d70fe81c0d52230eecd2a38c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5120d0d70fe81c0d52230eecd2a38c3">&#9670;&#160;</a></span>ConstReference</h2>
+<a id="a4837c93263bad7d4780aca82865caf2f" name="a4837c93263bad7d4780aca82865caf2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4837c93263bad7d4780aca82865caf2f">&#9670;&#160;</a></span>ConstReference</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -290,16 +310,17 @@ template&lt;typename T , int N&gt; </div>
 template&lt;typename T , int N&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::ConstReference =  typename Container::const_reference</td>
+          <td class="memname">using <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::ConstReference =  Container::const_reference</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>A const reference to the type of the elements stored in the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>. </p>
 
 </div>
 </div>
-<a id="ad3ce2354e76f640763a20133cff5209c" name="ad3ce2354e76f640763a20133cff5209c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3ce2354e76f640763a20133cff5209c">&#9670;&#160;</a></span>Iterator</h2>
+<a id="a16535a30d87e60fe42d98e6cc1c5451d" name="a16535a30d87e60fe42d98e6cc1c5451d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16535a30d87e60fe42d98e6cc1c5451d">&#9670;&#160;</a></span>Iterator</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -307,16 +328,17 @@ template&lt;typename T , int N&gt; </div>
 template&lt;typename T , int N&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::Iterator =  typename Container::iterator</td>
+          <td class="memname">using <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::Iterator =  Container::iterator</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>An iterator to the elements of the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>. </p>
 
 </div>
 </div>
-<a id="a9871ecd1bd7f6d62637206f7fb073ac1" name="a9871ecd1bd7f6d62637206f7fb073ac1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9871ecd1bd7f6d62637206f7fb073ac1">&#9670;&#160;</a></span>Pointer</h2>
+<a id="a458e2517acfb493003f6fcfd151ac7a2" name="a458e2517acfb493003f6fcfd151ac7a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a458e2517acfb493003f6fcfd151ac7a2">&#9670;&#160;</a></span>Pointer</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -324,16 +346,17 @@ template&lt;typename T , int N&gt; </div>
 template&lt;typename T , int N&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::Pointer =  typename Container::pointer</td>
+          <td class="memname">using <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::Pointer =  Container::pointer</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>A pointer to the type of the elements stored in the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>. </p>
 
 </div>
 </div>
-<a id="a80cb5bfeca8bd4ebdb25847d2e115997" name="a80cb5bfeca8bd4ebdb25847d2e115997"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80cb5bfeca8bd4ebdb25847d2e115997">&#9670;&#160;</a></span>Reference</h2>
+<a id="a06a998f447e9998a98bf8bb6bf74a780" name="a06a998f447e9998a98bf8bb6bf74a780"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06a998f447e9998a98bf8bb6bf74a780">&#9670;&#160;</a></span>Reference</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -341,16 +364,17 @@ template&lt;typename T , int N&gt; </div>
 template&lt;typename T , int N&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::Reference =  typename Container::reference</td>
+          <td class="memname">using <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::Reference =  Container::reference</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>A reference to the type of the elements stored in the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>. </p>
 
 </div>
 </div>
-<a id="a69e7ed531497ce558816799b86da6d3a" name="a69e7ed531497ce558816799b86da6d3a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69e7ed531497ce558816799b86da6d3a">&#9670;&#160;</a></span>ValueType</h2>
+<a id="a370f8115d4ec9476dc8fd018232c6b0e" name="a370f8115d4ec9476dc8fd018232c6b0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a370f8115d4ec9476dc8fd018232c6b0e">&#9670;&#160;</a></span>ValueType</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -358,27 +382,39 @@ template&lt;typename T , int N&gt; </div>
 template&lt;typename T , int N&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::ValueType =  typename Container::value_type</td>
+          <td class="memname">using <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::ValueType =  Container::value_type</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
 <p>The type of the elements stored in the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a61d9e3cdff04dfab7622cb75f23bb5bb" name="a61d9e3cdff04dfab7622cb75f23bb5bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a61d9e3cdff04dfab7622cb75f23bb5bb">&#9670;&#160;</a></span>Vector() <span class="overload">[1/3]</span></h2>
+<a id="a581025dea7b47f73de493722c17ef62c" name="a581025dea7b47f73de493722c17ef62c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a581025dea7b47f73de493722c17ef62c">&#9670;&#160;</a></span>Vector() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T , int N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::Vector</td>
+          <td class="memname"><a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::Vector </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Creates an empty <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a> object. </p>
@@ -386,8 +422,62 @@ template&lt;typename T , int N&gt; </div>
 
 </div>
 </div>
+<a id="aa40075c827bf65c7a80365eae04c4c57" name="aa40075c827bf65c7a80365eae04c4c57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa40075c827bf65c7a80365eae04c4c57">&#9670;&#160;</a></span>Vector() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , int N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::Vector </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>value</em> = <code>T()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a> object with the specified size. </p>
+<p>If the container is dynamic, its size is set to <code>size</code>. When the container is static, the given size must be equal to N. The elements are initialized with their empty constructor if the argument <code>value</code> is not specified. Otherwise, the elements are initialized with the given value.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classvcl_1_1WrongSizeException.html">WrongSizeException</a></td><td>if the given size is not equal to N and the container is static.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>the size of the container. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>the value to initialize the elements with. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a26470f95d28ee160318691fd29c1e064" name="a26470f95d28ee160318691fd29c1e064"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26470f95d28ee160318691fd29c1e064">&#9670;&#160;</a></span>Vector() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a26470f95d28ee160318691fd29c1e064">&#9670;&#160;</a></span>Vector() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -395,6 +485,9 @@ template&lt;typename T , int N&gt; </div>
 template&lt;typename T , int N&gt; </div>
 <div class="memtemplate">
 template&lt;typename ItType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::Vector </td>
@@ -414,6 +507,11 @@ template&lt;typename ItType &gt; </div>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Constructs the container with the contents of the range [first, last). </p>
@@ -435,7 +533,7 @@ template&lt;typename ItType &gt; </div>
 </div>
 </div>
 <a id="ad5c71025e7ca134a52d49861228a5b88" name="ad5c71025e7ca134a52d49861228a5b88"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5c71025e7ca134a52d49861228a5b88">&#9670;&#160;</a></span>Vector() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5c71025e7ca134a52d49861228a5b88">&#9670;&#160;</a></span>Vector() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -443,6 +541,9 @@ template&lt;typename ItType &gt; </div>
 template&lt;typename T , int N&gt; </div>
 <div class="memtemplate">
 template&lt;Range RangeType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::Vector </td>
@@ -452,6 +553,11 @@ template&lt;Range RangeType&gt; </div>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Constructs the container with the contents of the range rng. </p>
@@ -472,22 +578,30 @@ template&lt;Range RangeType&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="af0cbae53b188322bfcca37ce8c15c95b" name="af0cbae53b188322bfcca37ce8c15c95b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0cbae53b188322bfcca37ce8c15c95b">&#9670;&#160;</a></span>at() <span class="overload">[1/2]</span></h2>
+<a id="a5725eea666c7cb220321078f905389b9" name="a5725eea666c7cb220321078f905389b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5725eea666c7cb220321078f905389b9">&#9670;&#160;</a></span>at() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T , int N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Vector.html">Vector</a>&lt; T, N &gt;<a class="el" href="classvcl_1_1Vector.html#a80cb5bfeca8bd4ebdb25847d2e115997">::Reference</a> <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::at </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Vector.html#a06a998f447e9998a98bf8bb6bf74a780">Reference</a> <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::at </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Access the specified element with bounds checking. </p>
@@ -508,22 +622,30 @@ template&lt;typename T , int N&gt; </div>
 
 </div>
 </div>
-<a id="ab4181c79380fe277aad3929d2aaee2b1" name="ab4181c79380fe277aad3929d2aaee2b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4181c79380fe277aad3929d2aaee2b1">&#9670;&#160;</a></span>at() <span class="overload">[2/2]</span></h2>
+<a id="a35fd2279a7ab3371de0a9bddf4c04e80" name="a35fd2279a7ab3371de0a9bddf4c04e80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35fd2279a7ab3371de0a9bddf4c04e80">&#9670;&#160;</a></span>at() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T , int N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Vector.html">Vector</a>&lt; T, N &gt;<a class="el" href="classvcl_1_1Vector.html#ad5120d0d70fe81c0d52230eecd2a38c3">::ConstReference</a> <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::at </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Vector.html#a4837c93263bad7d4780aca82865caf2f">ConstReference</a> <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::at </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Access the specified element with bounds checking. </p>
@@ -544,22 +666,30 @@ template&lt;typename T , int N&gt; </div>
 
 </div>
 </div>
-<a id="a57494902a009d081d04384121e7e25a9" name="a57494902a009d081d04384121e7e25a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a57494902a009d081d04384121e7e25a9">&#9670;&#160;</a></span>atMod() <span class="overload">[1/2]</span></h2>
+<a id="a05ba5a7c86fe0a01e86fe464d549e1d5" name="a05ba5a7c86fe0a01e86fe464d549e1d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05ba5a7c86fe0a01e86fe464d549e1d5">&#9670;&#160;</a></span>atMod() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T , int N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Vector.html">Vector</a>&lt; T, N &gt;<a class="el" href="classvcl_1_1Vector.html#a80cb5bfeca8bd4ebdb25847d2e115997">::Reference</a> <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::atMod </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Vector.html#a06a998f447e9998a98bf8bb6bf74a780">Reference</a> <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::atMod </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Access the specified element, computing first the module of the position w.r.t. the size of the container. </p>
@@ -574,22 +704,30 @@ template&lt;typename T , int N&gt; </div>
 
 </div>
 </div>
-<a id="a8522de2c49a21e7b59fbca8645f32a4b" name="a8522de2c49a21e7b59fbca8645f32a4b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8522de2c49a21e7b59fbca8645f32a4b">&#9670;&#160;</a></span>atMod() <span class="overload">[2/2]</span></h2>
+<a id="a01ef87d793c722ea59f3b8f809bcab68" name="a01ef87d793c722ea59f3b8f809bcab68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01ef87d793c722ea59f3b8f809bcab68">&#9670;&#160;</a></span>atMod() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T , int N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Vector.html">Vector</a>&lt; T, N &gt;<a class="el" href="classvcl_1_1Vector.html#ad5120d0d70fe81c0d52230eecd2a38c3">::ConstReference</a> <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::atMod </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Vector.html#a4837c93263bad7d4780aca82865caf2f">ConstReference</a> <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::atMod </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Access the specified element, computing first the module of the position w.r.t. the size of the container. </p>
@@ -604,38 +742,59 @@ template&lt;typename T , int N&gt; </div>
 
 </div>
 </div>
-<a id="a8de3fe392f0b5553d73488c40a060cf1" name="a8de3fe392f0b5553d73488c40a060cf1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8de3fe392f0b5553d73488c40a060cf1">&#9670;&#160;</a></span>begin() <span class="overload">[1/2]</span></h2>
+<a id="af1b10df732f7b9006b2bb0143df2b97d" name="af1b10df732f7b9006b2bb0143df2b97d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1b10df732f7b9006b2bb0143df2b97d">&#9670;&#160;</a></span>begin() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T , int N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Vector.html">Vector</a>&lt; T, N &gt;<a class="el" href="classvcl_1_1Vector.html#ad3ce2354e76f640763a20133cff5209c">::Iterator</a> <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::begin</td>
+          <td class="memname"><a class="el" href="classvcl_1_1Vector.html#a16535a30d87e60fe42d98e6cc1c5451d">Iterator</a> <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Return an iterator pointing to the beginning of the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>. </p>
-<p>Iterator Member functions</p>
 <dl class="section return"><dt>Returns</dt><dd>An iterator pointing to the beginning of the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>. </dd></dl>
 
 </div>
 </div>
-<a id="ae52f338b9d5847e74c569a62e5d564d5" name="ae52f338b9d5847e74c569a62e5d564d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae52f338b9d5847e74c569a62e5d564d5">&#9670;&#160;</a></span>begin() <span class="overload">[2/2]</span></h2>
+<a id="ad2dae711a8152ff35e72af89f30ab523" name="ad2dae711a8152ff35e72af89f30ab523"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2dae711a8152ff35e72af89f30ab523">&#9670;&#160;</a></span>begin() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T , int N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Vector.html">Vector</a>&lt; T, N &gt;<a class="el" href="classvcl_1_1Vector.html#a0331869b7760a17e13ebef44785f0ce7">::ConstIterator</a> <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::begin</td>
+          <td class="memname"><a class="el" href="classvcl_1_1Vector.html#a26cf42252eea33aa7dd1552438189c3c">ConstIterator</a> <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Return a const iterator pointing to the beginning of the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>. </p>
@@ -649,13 +808,23 @@ template&lt;typename T , int N&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , int N&gt; <br />
-requires (N &lt; 0)</div>
+template&lt;typename T , int N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::clear</td>
+          <td class="memname">void <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Remove all elements from the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>. </p>
@@ -670,6 +839,9 @@ requires (N &lt; 0)</div>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T , int N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::contains </td>
@@ -679,6 +851,11 @@ template&lt;typename T , int N&gt; </div>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Check if the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a> contains the specified element. </p>
@@ -699,11 +876,13 @@ template&lt;typename T , int N&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , int N&gt; <br />
-requires (N &lt; 0)</div>
+template&lt;typename T , int N&gt; </div>
 <div class="memtemplate">
 template&lt;typename... Args&gt; <br />
 requires (N &lt; 0)</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::emplace </td>
@@ -723,6 +902,11 @@ requires (N &lt; 0)</div>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Insert an element at the specified position in the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>. </p>
@@ -737,18 +921,29 @@ requires (N &lt; 0)</div>
 
 </div>
 </div>
-<a id="a90d850e856c90cf313e988a888c8daf3" name="a90d850e856c90cf313e988a888c8daf3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a90d850e856c90cf313e988a888c8daf3">&#9670;&#160;</a></span>end() <span class="overload">[1/2]</span></h2>
+<a id="ad5d19bd3ad49da79da6437797518055b" name="ad5d19bd3ad49da79da6437797518055b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5d19bd3ad49da79da6437797518055b">&#9670;&#160;</a></span>end() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T , int N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Vector.html">Vector</a>&lt; T, N &gt;<a class="el" href="classvcl_1_1Vector.html#ad3ce2354e76f640763a20133cff5209c">::Iterator</a> <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::end</td>
+          <td class="memname"><a class="el" href="classvcl_1_1Vector.html#a16535a30d87e60fe42d98e6cc1c5451d">Iterator</a> <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Return an iterator pointing to the end of the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>. </p>
@@ -756,18 +951,29 @@ template&lt;typename T , int N&gt; </div>
 
 </div>
 </div>
-<a id="a50a8c3f75a505919eca2ed930436c6de" name="a50a8c3f75a505919eca2ed930436c6de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50a8c3f75a505919eca2ed930436c6de">&#9670;&#160;</a></span>end() <span class="overload">[2/2]</span></h2>
+<a id="adeb6d2fa582cb8f25512e28acc559947" name="adeb6d2fa582cb8f25512e28acc559947"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adeb6d2fa582cb8f25512e28acc559947">&#9670;&#160;</a></span>end() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T , int N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Vector.html">Vector</a>&lt; T, N &gt;<a class="el" href="classvcl_1_1Vector.html#a0331869b7760a17e13ebef44785f0ce7">::ConstIterator</a> <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::end</td>
+          <td class="memname"><a class="el" href="classvcl_1_1Vector.html#a26cf42252eea33aa7dd1552438189c3c">ConstIterator</a> <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Return a const iterator pointing to the end of the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>. </p>
@@ -781,8 +987,10 @@ template&lt;typename T , int N&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , int N&gt; <br />
-requires (N &lt; 0)</div>
+template&lt;typename T , int N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::erase </td>
@@ -792,6 +1000,11 @@ requires (N &lt; 0)</div>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Remove the element at the specified index from the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>. </p>
@@ -812,6 +1025,9 @@ requires (N &lt; 0)</div>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T , int N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::fill </td>
@@ -821,6 +1037,11 @@ template&lt;typename T , int N&gt; </div>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Fill all elements of the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a> with the specified value. </p>
@@ -834,22 +1055,30 @@ template&lt;typename T , int N&gt; </div>
 
 </div>
 </div>
-<a id="a65044b5c32885c61279fa7b225d1d9c5" name="a65044b5c32885c61279fa7b225d1d9c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65044b5c32885c61279fa7b225d1d9c5">&#9670;&#160;</a></span>find() <span class="overload">[1/2]</span></h2>
+<a id="ab61551d0a46cd479f928a42bd90d4cdd" name="ab61551d0a46cd479f928a42bd90d4cdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab61551d0a46cd479f928a42bd90d4cdd">&#9670;&#160;</a></span>find() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T , int N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Vector.html">Vector</a>&lt; T, N &gt;<a class="el" href="classvcl_1_1Vector.html#ad3ce2354e76f640763a20133cff5209c">::Iterator</a> <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::find </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Vector.html#a16535a30d87e60fe42d98e6cc1c5451d">Iterator</a> <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::find </td>
           <td>(</td>
           <td class="paramtype">const typename <a class="el" href="structvcl_1_1MakeConstPointer.html">MakeConstPointer</a>&lt; T &gt;::type &amp;&#160;</td>
           <td class="paramname"><em>e</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Find the first occurrence of the specified element in the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>. </p>
@@ -860,26 +1089,34 @@ template&lt;typename T , int N&gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>An iterator to the first occurrence of the element in the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>, or <code><a class="el" href="classvcl_1_1Vector.html#a90d850e856c90cf313e988a888c8daf3" title="Return an iterator pointing to the end of the Vector.">end()</a></code> if the element is not found. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>An iterator to the first occurrence of the element in the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>, or <code><a class="el" href="classvcl_1_1Vector.html#ad5d19bd3ad49da79da6437797518055b" title="Return an iterator pointing to the end of the Vector.">end()</a></code> if the element is not found. </dd></dl>
 
 </div>
 </div>
-<a id="a226d99f3b9fa594c0e54249dcfa25829" name="a226d99f3b9fa594c0e54249dcfa25829"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a226d99f3b9fa594c0e54249dcfa25829">&#9670;&#160;</a></span>find() <span class="overload">[2/2]</span></h2>
+<a id="ac42f37dd8e4e93fc420777ecfd70f49f" name="ac42f37dd8e4e93fc420777ecfd70f49f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac42f37dd8e4e93fc420777ecfd70f49f">&#9670;&#160;</a></span>find() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T , int N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Vector.html">Vector</a>&lt; T, N &gt;<a class="el" href="classvcl_1_1Vector.html#a0331869b7760a17e13ebef44785f0ce7">::ConstIterator</a> <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::find </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Vector.html#a26cf42252eea33aa7dd1552438189c3c">ConstIterator</a> <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::find </td>
           <td>(</td>
           <td class="paramtype">const typename <a class="el" href="structvcl_1_1MakeConstPointer.html">MakeConstPointer</a>&lt; T &gt;::type &amp;&#160;</td>
           <td class="paramname"><em>e</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Find the first occurrence of the specified element in the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>. </p>
@@ -890,7 +1127,7 @@ template&lt;typename T , int N&gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A const iterator to the first occurrence of the element in the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>, or <code><a class="el" href="classvcl_1_1Vector.html#a90d850e856c90cf313e988a888c8daf3" title="Return an iterator pointing to the end of the Vector.">end()</a></code> if the element is not found. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A const iterator to the first occurrence of the element in the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>, or <code><a class="el" href="classvcl_1_1Vector.html#ad5d19bd3ad49da79da6437797518055b" title="Return an iterator pointing to the end of the Vector.">end()</a></code> if the element is not found. </dd></dl>
 
 </div>
 </div>
@@ -901,6 +1138,9 @@ template&lt;typename T , int N&gt; </div>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T , int N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::indexOf </td>
@@ -910,6 +1150,11 @@ template&lt;typename T , int N&gt; </div>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Get the index of the first occurrence of the specified element in the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>. </p>
@@ -930,8 +1175,10 @@ template&lt;typename T , int N&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , int N&gt; <br />
-requires (N &lt; 0)</div>
+template&lt;typename T , int N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::insert </td>
@@ -951,6 +1198,11 @@ requires (N &lt; 0)</div>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Insert an element at the specified position in the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>. </p>
@@ -965,26 +1217,33 @@ requires (N &lt; 0)</div>
 
 </div>
 </div>
-<a id="a4dafd64bb48de202942a8498033c8811" name="a4dafd64bb48de202942a8498033c8811"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4dafd64bb48de202942a8498033c8811">&#9670;&#160;</a></span>operator[]() <span class="overload">[1/2]</span></h2>
+<a id="a0497c004ef280224299352704544c2e7" name="a0497c004ef280224299352704544c2e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0497c004ef280224299352704544c2e7">&#9670;&#160;</a></span>operator()() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T , int N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Vector.html">Vector</a>&lt; T, N &gt;<a class="el" href="classvcl_1_1Vector.html#a80cb5bfeca8bd4ebdb25847d2e115997">::Reference</a> <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::operator[] </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Vector.html#a06a998f447e9998a98bf8bb6bf74a780">Reference</a> <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::operator() </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns a reference to the element at specified location i. No bounds checking is performed. </p>
-<p>Operators</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>Position of the element to return </td></tr>
@@ -995,22 +1254,104 @@ template&lt;typename T , int N&gt; </div>
 
 </div>
 </div>
-<a id="a5d628ed0872fe06ebf1214a08cadb1b5" name="a5d628ed0872fe06ebf1214a08cadb1b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d628ed0872fe06ebf1214a08cadb1b5">&#9670;&#160;</a></span>operator[]() <span class="overload">[2/2]</span></h2>
+<a id="a1fbb65d406f2ab51a29a4834764f2726" name="a1fbb65d406f2ab51a29a4834764f2726"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fbb65d406f2ab51a29a4834764f2726">&#9670;&#160;</a></span>operator()() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T , int N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Vector.html">Vector</a>&lt; T, N &gt;<a class="el" href="classvcl_1_1Vector.html#ad5120d0d70fe81c0d52230eecd2a38c3">::ConstReference</a> <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::operator[] </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Vector.html#a4837c93263bad7d4780aca82865caf2f">ConstReference</a> <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::operator() </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a const reference to the element at specified location i. No bounds checking is performed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>Position of the element to return </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A const reference to the requested element. </dd></dl>
+
+</div>
+</div>
+<a id="a77cce9662c0225eff0f7e9538c662978" name="a77cce9662c0225eff0f7e9538c662978"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77cce9662c0225eff0f7e9538c662978">&#9670;&#160;</a></span>operator[]() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , int N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Vector.html#a06a998f447e9998a98bf8bb6bf74a780">Reference</a> <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::operator[] </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a reference to the element at specified location i. No bounds checking is performed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>Position of the element to return </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the requested element. </dd></dl>
+
+</div>
+</div>
+<a id="a022080c62191a860dea42df2722d928a" name="a022080c62191a860dea42df2722d928a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a022080c62191a860dea42df2722d928a">&#9670;&#160;</a></span>operator[]() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , int N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Vector.html#a4837c93263bad7d4780aca82865caf2f">ConstReference</a> <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::operator[] </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a>&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns a const reference to the element at specified location i. No bounds checking is performed. </p>
@@ -1030,8 +1371,10 @@ template&lt;typename T , int N&gt; </div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , int N&gt; <br />
-requires (N &lt; 0)</div>
+template&lt;typename T , int N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::pushBack </td>
@@ -1041,6 +1384,11 @@ requires (N &lt; 0)</div>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Add an element to the end of the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a>. </p>
@@ -1060,8 +1408,10 @@ requires (N &lt; 0)</div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T , int N&gt; <br />
-requires (N &lt; 0)</div>
+template&lt;typename T , int N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::resize </td>
@@ -1071,10 +1421,14 @@ requires (N &lt; 0)</div>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Resize the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a> to the specified size. </p>
-<p>Member functions specific for vector</p>
 <p>Resizes the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a> to the specified size <code>n</code> by resizing the underlying <code>std::vector</code>. This member function is only available if the size of the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a> is not known at compile-time, as specified by the concept requirement <code>requires (N &lt; 0)</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1092,6 +1446,9 @@ requires (N &lt; 0)</div>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T , int N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::set </td>
@@ -1111,6 +1468,11 @@ template&lt;typename T , int N&gt; </div>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Set the value of the element at the specified position. </p>
@@ -1125,15 +1487,19 @@ template&lt;typename T , int N&gt; </div>
 
 </div>
 </div>
-<a id="a0dca6411192013c1f8d6936d408b8253" name="a0dca6411192013c1f8d6936d408b8253"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0dca6411192013c1f8d6936d408b8253">&#9670;&#160;</a></span>set() <span class="overload">[2/2]</span></h2>
+<a id="ac736c526aaaaadb851d5cb0fe766bf7d" name="ac736c526aaaaadb851d5cb0fe766bf7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac736c526aaaaadb851d5cb0fe766bf7d">&#9670;&#160;</a></span>set() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T , int N&gt; </div>
 <div class="memtemplate">
-template&lt;Range Rng&gt; </div>
+template&lt;Range Rng&gt; <br />
+requires RangeOfConvertibleTo&lt;Rng, T&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::set </td>
@@ -1143,13 +1509,18 @@ template&lt;Range Rng&gt; </div>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Set the elements of the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a> using the values from a range. </p>
 <p>Sets the elements of the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a> to the values from the range <code>r</code>. If the size of the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a> is known at compile-time and is not negative, the first N elements from the range <code>r</code> (or all of them, if they are less than N) are copied into the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a> using <code>std::copy_n()</code>. If the size of the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a> is negative or not known at compile-time, the elements of the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a> are set to the values from the range <code>r</code> by constructing a new std::vector from the range <code>r</code>.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">Rng</td><td>The type of the range.</td></tr>
+    <tr><td class="paramname">Rng</td><td>The type of the range, it must satisfy the Range concept and the value type of the range must be convertible to T.</td></tr>
   </table>
   </dd>
 </dl>
@@ -1169,11 +1540,22 @@ template&lt;Range Rng&gt; </div>
 <div class="memproto">
 <div class="memtemplate">
 template&lt;typename T , int N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::size</td>
+          <td class="memname"><a class="el" href="types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d">uint</a> <a class="el" href="classvcl_1_1Vector.html">vcl::Vector</a>&lt; T, N &gt;::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Returns the size of the container. </p>
@@ -1228,13 +1610,13 @@ template&lt;typename T , int N&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
 <p>Size of the vector at compile time. It will be -1 if the <a class="el" href="classvcl_1_1Vector.html" title="The Vector class is a generic container of objects of type T, that could have fixed or dynamic size,...">Vector</a> has dynamic size. </p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/runner/work/vclib/vclib/include/vclib/space/<a class="el" href="vector_8h_source.html">vector.h</a></li>
-<li>/home/runner/work/vclib/vclib/include/vclib/space/<a class="el" href="vector_8cpp.html">vector.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
