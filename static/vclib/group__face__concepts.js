@@ -23,7 +23,7 @@ var group__face__concepts =
     [ "vcl::face::HasQuality", "conceptvcl_1_1face_1_1HasQuality.html", null ],
     [ "vcl::face::HasOptionalQuality", "conceptvcl_1_1face_1_1HasOptionalQuality.html", null ],
     [ "vcl::face::HasTriangleBitFlags", "conceptvcl_1_1face_1_1HasTriangleBitFlags.html", null ],
-    [ "vcl::face::HasVertexPointers", "conceptvcl_1_1face_1_1HasVertexPointers.html", null ],
+    [ "vcl::face::HasVertexReferences", "conceptvcl_1_1face_1_1HasVertexReferences.html", null ],
     [ "vcl::face::HasWedgeColors", "conceptvcl_1_1face_1_1HasWedgeColors.html", null ],
     [ "vcl::face::HasOptionalWedgeColors", "conceptvcl_1_1face_1_1HasOptionalWedgeColors.html", null ],
     [ "vcl::face::HasWedgeTexCoords", "conceptvcl_1_1face_1_1HasWedgeTexCoords.html", null ],

@@ -7,17 +7,17 @@ var group__views =
       [ "View", "classvcl_1_1View.html#afd97d6337f48fedb2ab9f2653f6ac713", null ],
       [ "begin", "classvcl_1_1View.html#a24aa39a1b12dc7c30ad0123a5ce4bc43", null ],
       [ "end", "classvcl_1_1View.html#a170c25f1336857a2b8ba5aa884662395", null ],
-      [ "b", "classvcl_1_1View.html#a23fa62be76965bb423f98e38d6f6846f", null ],
-      [ "e", "classvcl_1_1View.html#a800adfadd5dbbc53e889a313ad0c3a70", null ]
+      [ "mBegin", "classvcl_1_1View.html#a309db2d303e0e47ebc8970f67562de99", null ],
+      [ "mEnd", "classvcl_1_1View.html#a5f87d7f3cd6061d22c6e593d37903f38", null ]
     ] ],
-    [ "vcl::views::addrOf", "group__views.html#ga6eba1fc60fc9b51b420b70d8fae4c484", null ],
-    [ "vcl::views::adjEdges", "group__views.html#gaf0a655daca62b0693bc2520565c1d431", null ],
-    [ "vcl::views::adjFaces", "group__views.html#ga3d22e89a9d11c99713e7864c8c05ee7e", null ],
-    [ "vcl::views::adjVertices", "group__views.html#gac2274eda58966c4e7cdfd4ae319e6a4d", null ],
-    [ "vcl::views::constAddrOf", "group__views.html#gaa4f7979c8d3cc44ff4875043f0158c85", null ],
-    [ "vcl::views::deref", "group__views.html#ga6b533431ae6b2c752fcaae3bf833f682", null ],
-    [ "vcl::views::edges", "group__views.html#ga66dde780da54f3f9030566f1b4b6f4db", null ],
-    [ "vcl::views::faces", "group__views.html#gaf6b0cdca0f9bbf7e89ed1e1ab502e7db", null ],
-    [ "vcl::views::notNull", "group__views.html#gaeb8235ba7d93b8622ef4eed832382f2d", null ],
-    [ "vcl::views::vertices", "group__views.html#ga91e809d1498e1f69f213dafeb88e7cc1", null ]
+    [ "vcl::views::addrOf", "group__views.html#gaf6d9fd53c02314894e8f6618025ba272", null ],
+    [ "vcl::views::adjEdges", "group__views.html#ga10dbeabf3d9487ba15363421eac31040", null ],
+    [ "vcl::views::adjFaces", "group__views.html#gabee6d3172e8469247fafcc882e3eb3d5", null ],
+    [ "vcl::views::adjVertices", "group__views.html#gac6c6f11bfb2c7e15a79e93285d83a608", null ],
+    [ "vcl::views::constAddrOf", "group__views.html#ga1f47c772a36bc33fb985deffbfd33653", null ],
+    [ "vcl::views::deref", "group__views.html#gad4ebfce87b55f302c0475129d0b825e1", null ],
+    [ "vcl::views::edges", "group__views.html#ga852cfc37ce46ac50c568fa887771a696", null ],
+    [ "vcl::views::faces", "group__views.html#ga33947d4d6db5271a84ac1ae5555d50d7", null ],
+    [ "vcl::views::notNull", "group__views.html#ga9259be1defbf4731d9e7e76bdf3e269b", null ],
+    [ "vcl::views::vertices", "group__views.html#gae55a7544cb59464c26959bcc4cec23ea", null ]
 ];

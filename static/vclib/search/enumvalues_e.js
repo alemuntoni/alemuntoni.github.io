@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['quad_5fmesh_0',['QUAD_MESH',['../classvcl_1_1MeshInfo.html#afa7c37698fe8e745372cf25f24a322cca2f175a5173ee7c50934fb79b37ee05ab',1,'vcl::MeshInfo']]],
-  ['quality_1',['QUALITY',['../classvcl_1_1MeshInfo.html#a3816cab30d019e0d9b862af5580ca0cea6f845e10e620b6ad966eb10cc0ea6430',1,'vcl::MeshInfo::QUALITY()'],['../namespacevcl.html#a3f1474ce703c6b063677f747fccaffd6a3ae1b3b0757067aabc1c3c8464e6c3fa',1,'vcl::QUALITY()']]],
-  ['quality_2',['quality',['../namespacevcl_1_1io_1_1ply.html#ae59b1615f98338e68cfa5b0612c249c4a3cb839f640d30bbce06fe78d93d634df',1,'vcl::io::ply']]]
+  ['red_0',['Red',['../classvcl_1_1Color.html#a002e401382a7608e0c68f42c089057bca9acef5e91bae5a2cc4e481578e3ece42',1,'vcl::Color']]],
+  ['redblue_1',['RedBlue',['../classvcl_1_1Color.html#a32ace7bd7fccf742b39f6cd83042a10fab41395ae78ccecdb7c2a311a4bb25130',1,'vcl::Color']]],
+  ['rgba_2',['RGBA',['../structvcl_1_1Color_1_1Format.html#acc7e0234e3c9cc969329d86a9af083efae2d46809f60ce2a9be4b1d657df7dcc4',1,'vcl::Color::Format']]]
 ];

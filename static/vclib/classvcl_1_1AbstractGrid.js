@@ -1,15 +1,15 @@
 var classvcl_1_1AbstractGrid =
 [
-    [ "IsInCellFunction", "classvcl_1_1AbstractGrid.html#a6a3366f3d869c04a5421d439a2fa1c70", null ],
+    [ "IntersectsCellFunction", "classvcl_1_1AbstractGrid.html#aea0f9fee03978168acab9321fbf7956e", null ],
     [ "KeyType", "classvcl_1_1AbstractGrid.html#a4ba12dd8a5cd0c295b52c11cbd50b466", null ],
     [ "QueryBoundedDistFunction", "classvcl_1_1AbstractGrid.html#af3105d63ad6aa895e62002eb4580aa4e", null ],
     [ "QueryDistFunction", "classvcl_1_1AbstractGrid.html#ab35a3aa3ed5c4caf6c7fd39d2ef3eec7", null ],
     [ "AbstractGrid", "classvcl_1_1AbstractGrid.html#a449b323be92655f25b8c01eaa2f74fc3", null ],
-    [ "AbstractGrid", "classvcl_1_1AbstractGrid.html#a44543cf902fba3411608ef7901e80fea", null ],
-    [ "AbstractGrid", "classvcl_1_1AbstractGrid.html#abc4316af60f98f45d90a1df88e6db386", null ],
-    [ "AbstractGrid", "classvcl_1_1AbstractGrid.html#af9093c6a8b0e01ebc831c45ba828eb9a", null ],
-    [ "AbstractGrid", "classvcl_1_1AbstractGrid.html#ae40a06c1b0724b3844d2d9114eb9f119", null ],
-    [ "AbstractGrid", "classvcl_1_1AbstractGrid.html#a17dbc4651d95457278b63239681319bc", null ],
+    [ "AbstractGrid", "classvcl_1_1AbstractGrid.html#a26c59caebff37eeadc57c55c7fe78d6f", null ],
+    [ "AbstractGrid", "classvcl_1_1AbstractGrid.html#ac6800a052655336ec10c7d604608779e", null ],
+    [ "AbstractGrid", "classvcl_1_1AbstractGrid.html#aa2a504047d4c34458e4ff137c904623e", null ],
+    [ "AbstractGrid", "classvcl_1_1AbstractGrid.html#a6dab107e6c175b6bcdc9539bc1949837", null ],
+    [ "AbstractGrid", "classvcl_1_1AbstractGrid.html#ab16f558fed456f1cd64102875fd5a8cc", null ],
     [ "cellEmpty", "classvcl_1_1AbstractGrid.html#a215c93540477f194f46c6ed19963aaf6", null ],
     [ "closestValue", "classvcl_1_1AbstractGrid.html#a2f99daab1e9a40c6de2f83646dd745b9", null ],
     [ "closestValue", "classvcl_1_1AbstractGrid.html#a6165a5213891dbbe35a79f9b1d024ff3", null ],
@@ -27,5 +27,5 @@ var classvcl_1_1AbstractGrid =
     [ "kClosestValues", "classvcl_1_1AbstractGrid.html#a0e696f03d8515bee338aa756e979ee82", null ],
     [ "kClosestValues", "classvcl_1_1AbstractGrid.html#a9144f270d38cf9bae5b353b9a56a7da7", null ],
     [ "valuesInSphere", "classvcl_1_1AbstractGrid.html#a476884b2e2a8d566ad83f7878f330b39", null ],
-    [ "intersects", "classvcl_1_1AbstractGrid.html#a7ba78832434300f9f9e09943efcb6eaa", null ]
+    [ "mIntersectsFun", "classvcl_1_1AbstractGrid.html#a3b243af4bca65e3474607ef5fbbd8c2a", null ]
 ];

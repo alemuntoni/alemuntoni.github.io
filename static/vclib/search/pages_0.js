@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['basic_20concepts_0',['Basic Concepts',['../basic_concepts_page.html',1,'']]]
+  ['and_20other_20data_20structures_0',['Spatial and other Data Structures',['../space_page.html',1,'']]]
 ];

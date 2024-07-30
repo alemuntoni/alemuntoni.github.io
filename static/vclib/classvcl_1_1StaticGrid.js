@@ -1,13 +1,13 @@
 var classvcl_1_1StaticGrid =
 [
     [ "ConstIterator", "classvcl_1_1StaticGrid.html#a9d3aea140727c7fd72689e8afda14e0b", null ],
-    [ "IsInCellFunction", "classvcl_1_1StaticGrid.html#a1014450f071728be0fd3416e71acaf9b", null ],
+    [ "IntersectsCellFunction", "classvcl_1_1StaticGrid.html#a7a49c9dfa6ff4bc135dec57aa006eb6f", null ],
     [ "Iterator", "classvcl_1_1StaticGrid.html#a852c1515df36f95019aa8d26c365c417", null ],
     [ "KeyType", "classvcl_1_1StaticGrid.html#af3007e80d16a1adfc99ae5772caca640", null ],
     [ "StaticGrid", "classvcl_1_1StaticGrid.html#a6408a89d223b63a345f8bb92ebe4d882", null ],
     [ "StaticGrid", "classvcl_1_1StaticGrid.html#a922657c91a6ccaee3f7d782afd366606", null ],
-    [ "StaticGrid", "classvcl_1_1StaticGrid.html#adddf365e7295b223677d8cec09b185e7", null ],
-    [ "StaticGrid", "classvcl_1_1StaticGrid.html#a8e09b852360acf8cbd95405a27f3d07e", null ],
+    [ "StaticGrid", "classvcl_1_1StaticGrid.html#a9b3abbb6ff5ff378e57b4dc32bff4eb6", null ],
+    [ "StaticGrid", "classvcl_1_1StaticGrid.html#a4e6f63e8530af03905c9ad860c9db83b", null ],
     [ "begin", "classvcl_1_1StaticGrid.html#aed8f1d4ac22b56c38fa315d96601d699", null ],
     [ "begin", "classvcl_1_1StaticGrid.html#ae8b52b334d38c398a239fcb35ff63327", null ],
     [ "build", "classvcl_1_1StaticGrid.html#a633bfcace2a0ae38400411ccd797d665", null ],

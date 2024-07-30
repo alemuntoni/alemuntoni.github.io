@@ -12,6 +12,6 @@ var classvcl_1_1UndirectedNode =
     [ "info", "classvcl_1_1UndirectedNode.html#a1e9d544cb4ffc24739c56748010ba817", null ],
     [ "isAdjacent", "classvcl_1_1UndirectedNode.html#a451cac7fa79b2d22245c73d9ea219d81", null ],
     [ "sizeAdjacentNodes", "classvcl_1_1UndirectedNode.html#aeedd0acb946b71561b3a355cfed9d872", null ],
-    [ "adjacentNodes", "classvcl_1_1UndirectedNode.html#a003134433a77467e1d5014652147bd69", null ],
-    [ "inf", "classvcl_1_1UndirectedNode.html#aee903ddeca6d4796f640e4f7cad56629", null ]
+    [ "mAdjacentNodes", "classvcl_1_1UndirectedNode.html#a92e9f2dad65f5825e8e4d8102899a61d", null ],
+    [ "mInfo", "classvcl_1_1UndirectedNode.html#aa0328f84464aced69321f2ff010d8442", null ]
 ];

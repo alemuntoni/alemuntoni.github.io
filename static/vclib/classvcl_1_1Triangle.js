@@ -2,7 +2,7 @@ var classvcl_1_1Triangle =
 [
     [ "PointType", "classvcl_1_1Triangle.html#a0c6a9b53c80371be678e091367fe42fa", null ],
     [ "ScalarType", "classvcl_1_1Triangle.html#af17cec498b5739d60afa528dfb6041d0", null ],
-    [ "Triangle", "classvcl_1_1Triangle.html#a1a2f0f9ffa6a8d49c9342da01f3465c6", null ],
+    [ "Triangle", "classvcl_1_1Triangle.html#a1afb0d8943c742f613cd91011873e373", null ],
     [ "Triangle", "classvcl_1_1Triangle.html#acdbd8f5d7728e9a0963ad40c3b03cdf5", null ],
     [ "area", "classvcl_1_1Triangle.html#a0170ec5bd9c19bca717743e7617f05e4", null ],
     [ "area", "classvcl_1_1Triangle.html#a71ba343503aa502c152ad0c65fbf246e", null ],
@@ -31,6 +31,7 @@ var classvcl_1_1Triangle =
     [ "qualityMeanRatio", "classvcl_1_1Triangle.html#a52d78a79a8ba2be9e4c0a8736f2a2949", null ],
     [ "qualityRadii", "classvcl_1_1Triangle.html#acfd53cb563503c49cc7b73703729bf22", null ],
     [ "qualityRadii", "classvcl_1_1Triangle.html#afa6648cf35d36b84d2e9ce4cb2750046", null ],
+    [ "sideLength", "classvcl_1_1Triangle.html#af2813942a878ae0ad877a63ae09fef0f", null ],
     [ "sideLength", "classvcl_1_1Triangle.html#a6e24c8fe4cea5e81c6695e35b2740e71", null ],
     [ "sideLength0", "classvcl_1_1Triangle.html#a4884b74dff79d40336e4933254c40413", null ],
     [ "sideLength1", "classvcl_1_1Triangle.html#ab3aab09f6e3433dcc77416d1c56b829e", null ],

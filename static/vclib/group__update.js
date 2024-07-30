@@ -1,6 +1,8 @@
 var group__update =
 [
     [ "vcl::setMeshColor", "group__update.html#gafa7a7bdb880ed18451dbad7b220ad708", null ],
+    [ "vcl::setPerEdgeColor", "group__update.html#ga0219bcd298aa7039dc3b772d5bf2422d", null ],
+    [ "vcl::setPerEdgeColorFromVertexColor", "group__update.html#ga74663732e6ecc892378c9a9f4d485b54", null ],
     [ "vcl::setPerFaceColor", "group__update.html#gafd40b9510ebcbbc885f2b251eff19c85", null ],
     [ "vcl::setPerFaceColorFromConnectedComponents", "group__update.html#ga39a8c9027a5e7c936518969bda799f71", null ],
     [ "vcl::setPerFaceColorFromConnectedComponents", "group__update.html#gaefda81ff00c7e8d3b5ff19c9e90c03bf", null ],

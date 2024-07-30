@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['quality_0',['quality',['../namespacevcl_1_1views.html#afea14786d5ffc9bd4df67d34c32fe69b',1,'vcl::views']]]
+  ['rmsdist_0',['RMSDist',['../structvcl_1_1HausdorffDistResult.html#ab93081b87e054b0d330aee1d271b8676',1,'vcl::HausdorffDistResult']]]
 ];

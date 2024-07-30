@@ -1,8 +1,9 @@
 var string_8h =
 [
-    [ "containsCaseInsensitive", "string_8h.html#a92bb6f9cd5134b88322b1660dd15e4b1", null ],
-    [ "findCaseInsensitive", "string_8h.html#a019a5b9a4a02cb95811b2e16582d943c", null ],
-    [ "removeWindowsNewLine", "string_8h.html#a0427a5825823d34b4beb3ea516c27520", null ],
-    [ "toLower", "string_8h.html#a5f64cab3e01e112b398dc6ee1fbd4177", null ],
-    [ "toUpper", "string_8h.html#a3241a99a2eae236e521ee6c7c75ac2f2", null ]
+    [ "containsCaseInsensitive", "string_8h.html#af9101a04223deed528addeb4dbf722bf", null ],
+    [ "findCaseInsensitive", "string_8h.html#a45834fe7b55127feba8ce3050653ca96", null ],
+    [ "removeCarriageReturn", "string_8h.html#afbeefcb5ecbc42c311e46711ee48ecd2", null ],
+    [ "toLower", "string_8h.html#a9bb7f6b147a8bc291fee7ef462f8a1bd", null ],
+    [ "toString", "string_8h.html#a9231ca38abac20eb8ced8246ab485899", null ],
+    [ "toUpper", "string_8h.html#ac83671737ba679edb3511815c82494d1", null ]
 ];

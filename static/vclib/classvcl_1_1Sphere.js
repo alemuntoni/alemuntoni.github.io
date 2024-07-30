@@ -1,10 +1,11 @@
 var classvcl_1_1Sphere =
 [
+    [ "BoxType", "classvcl_1_1Sphere.html#a05f1b8cc541c410b40010ec28e8c6f65", null ],
     [ "PointType", "classvcl_1_1Sphere.html#a28871d99f95ea30deba27629b9d66230", null ],
     [ "ScalarType", "classvcl_1_1Sphere.html#a44f1d69fa93f3e53878ab09d60655712", null ],
     [ "Sphere", "classvcl_1_1Sphere.html#a9632f80d28d02dc6d5154727f0bb3c8b", null ],
     [ "Sphere", "classvcl_1_1Sphere.html#ae8a10eaef63429e349d52fa4ad567c4c", null ],
-    [ "cast", "classvcl_1_1Sphere.html#a04165df1ed88aa0fa97a89dc1b456b1e", null ],
+    [ "cast", "classvcl_1_1Sphere.html#a9f75e4890440448c9bdeba456dfafd21", null ],
     [ "center", "classvcl_1_1Sphere.html#ae0c02189effe0586624dd5cbf05eb514", null ],
     [ "center", "classvcl_1_1Sphere.html#afab978a8be4e75d911e7daf4385615ce", null ],
     [ "circumference", "classvcl_1_1Sphere.html#aa30c2e5dedaaf84715d842e5d2c4582b", null ],

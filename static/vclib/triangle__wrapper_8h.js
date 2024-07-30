@@ -1,6 +1,5 @@
 var triangle__wrapper_8h =
 [
-    [ "vcl::TriangleWrapper< PointT >", "classvcl_1_1TriangleWrapper.html", "classvcl_1_1TriangleWrapper" ],
     [ "TriangleWrapper2", "triangle__wrapper_8h.html#a92c93a12005e031d04c92971247414ef", null ],
     [ "TriangleWrapper2d", "triangle__wrapper_8h.html#a27931fc2ea467c03c1019dc025d218e5", null ],
     [ "TriangleWrapper2f", "triangle__wrapper_8h.html#a5ff16ee6b33f9bdd47405cb91f29e2d0", null ],

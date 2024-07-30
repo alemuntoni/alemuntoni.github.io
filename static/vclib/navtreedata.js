@@ -29,22 +29,34 @@ var NAVTREE =
     [ "Get Started", "get_started_page.html", [
       [ "Introduction", "get_started_page.html#autotoc_md1", null ],
       [ "Supported Compilers", "get_started_page.html#autotoc_md2", null ],
-      [ "Dependencies", "get_started_page.html#autotoc_md3", null ],
+      [ "Dependencies", "get_started_page.html#autotoc_md3", [
+        [ "C++17 Parallel STL", "get_started_page.html#autotoc_md4", null ]
+      ] ],
       [ "CMake Configuration", "get_started_page.html#cmake_config", null ],
-      [ "Usage with INCLUDE_PATH", "get_started_page.html#autotoc_md4", null ]
+      [ "Usage with INCLUDE_PATH", "get_started_page.html#autotoc_md5", null ]
     ] ],
     [ "Basic Concepts", "basic_concepts_page.html", [
-      [ "Let's start", "basic_concepts_page.html#autotoc_md5", null ],
-      [ "Add, set and delete Elements", "basic_concepts_page.html#autotoc_md6", null ]
+      [ "Let's start", "basic_concepts_page.html#autotoc_md6", null ],
+      [ "Add, set and delete Elements", "basic_concepts_page.html#autotoc_md7", null ]
     ] ],
-    [ "VCLib Meshes", "mesh_documentation_page.html", "mesh_documentation_page" ],
+    [ "VCLib Meshes", "mesh_documentation_page.html", [
+      [ "Overview", "mesh_documentation_page.html#autotoc_md8", [
+        [ "Prebuilt Mesh data structures", "mesh_documentation_page.html#autotoc_md9", null ],
+        [ "Mesh Structure", "mesh_documentation_page.html#autotoc_md10", null ],
+        [ "Components", "mesh_documentation_page.html#autotoc_md11", null ]
+      ] ],
+      [ "Components", "mesh_components_page.html", null ],
+      [ "Elements", "mesh_elements_page.html", null ],
+      [ "Containers", "mesh_containers_page.html", null ]
+    ] ],
     [ "Spatial and other Data Structures", "space_page.html", [
-      [ "Spatial Data Structures", "space_page.html#autotoc_md11", null ],
-      [ "Utility and Miscellanous Data Structures", "space_page.html#autotoc_md12", null ]
+      [ "Spatial Data Structures", "space_page.html#autotoc_md12", null ],
+      [ "Utility and Miscellaneous Data Structures", "space_page.html#autotoc_md13", null ]
     ] ],
     [ "Load/Save", "load_save_page.html", null ],
+    [ "External Libraries", "md_include_2vclib_2ext_2README.html", null ],
     [ "Todo List", "todo.html", null ],
-    [ "Modules", "modules.html", "modules" ],
+    [ "Topics", "topics.html", "topics" ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -65,10 +77,10 @@ var NAVTREE =
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", null ],
-        [ "Typedefs", "functions_type.html", null ],
+        [ "Typedefs", "functions_type.html", "functions_type" ],
         [ "Enumerations", "functions_enum.html", null ],
         [ "Enumerator", "functions_eval.html", null ],
-        [ "Related Functions", "functions_rela.html", null ]
+        [ "Related Symbols", "functions_rela.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
@@ -76,7 +88,6 @@ var NAVTREE =
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
-        [ "Typedefs", "globals_type.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
@@ -86,31 +97,36 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "abstract__grid_8h.html",
-"classvcl_1_1BipartiteGraph.html#a3ad64f3f9708e8ff123ac5582a7f3d73",
-"classvcl_1_1ConstMeshEdgeUtil.html#a44b166863ebff2f6f5eaf64a2f6f4b1e",
-"classvcl_1_1EdgeAdjFaceIterator.html#a961ae2e0ab42db4331ce15e7f50f346a",
-"classvcl_1_1Image.html#a0a93ae4c3fffc7e3adc34454e50aae97",
-"classvcl_1_1MeshInfo.html#a2f550bfc19f66f851c6f28e2cd7f69c3",
-"classvcl_1_1MeshRenderSettings.html#a0073d2da462d3048d8fa9af913b02eb8",
-"classvcl_1_1NestedInitializerListsProcessor_3_01T_00_011_01_4.html#aa5d06dc94a95ee2bf030dd18487ca2fb",
-"classvcl_1_1RegularGrid.html",
-"classvcl_1_1Timer.html#ad7d32efca98a1a036e8225bceb9c5afc",
-"classvcl_1_1ViewerMainWindow.html#a01b382d2c3073003ead95f2e449d0f96",
-"classvcl_1_1comp_1_1PolygonBitFlags.html#afc85cc31422c104964d8ccfc3006de8c",
-"classvcl_1_1mesh_1_1EdgeContainer.html#a04bde7297eb0887bb90b9a737d356978",
-"classvcl_1_1mesh_1_1VertexContainer.html#a1b042c41437a30e5078d7c1b5a150004",
-"conceptvcl_1_1EdgeRangeConcept.html",
-"conceptvcl_1_1comp_1_1HasOptionalQuality.html",
-"conceptvcl_1_1vert_1_1HasAdjacentVertices.html",
-"face__components_8h_source.html",
-"group__face__components.html#ga35d629b1252d27f1dc4e81f9ce114ef5",
-"group__vert__components.html#gaba3f44196cc6fb3ad0e463b0baa7c045",
-"misc_2logger_8h_source.html",
-"namespacevcl.html#a77d6ff7d119b08bd6bc8d5e84b9fe2ec",
-"namespacevcl_1_1io_1_1off.html#a12d7d98b6ec3dee95b0938f7cd5b0e7f",
-"requirements_8h.html",
-"structvcl_1_1MakeConstPointer_3_01T_01_5_01_4.html",
-"vertex__requirements_8h.html#a579b161f8a4132e5106608bebc70e363"
+"classvcl_1_1AbstractLogger.html#ae2ea71ae3e242f2a59b7193a33223246",
+"classvcl_1_1CellIterator.html#acb641d06faed567d4d0150d9a03f0a37",
+"classvcl_1_1CustomComponentVectorHandle_1_1Iterator.html#a80287f111aae61655e5b73636a3dd487",
+"classvcl_1_1Histogram.html#a7ee1b929dabec08e285763f01044b780",
+"classvcl_1_1Mesh.html#a626d70e0a71c1e13052d2a94fbc022f0",
+"classvcl_1_1MeshPos.html#a17b38bf65a61f08c217c61dc4288d6e7",
+"classvcl_1_1PointSampler.html#a67fc1244ae653d13a908cc789bf5b3ae",
+"classvcl_1_1PolymorphicObjectVector.html#a953b40857800f43e9eafd18930fe5ba9",
+"classvcl_1_1StaticGridIterator.html#ac03542eb78a5fb229a068f8f94c8bae1",
+"classvcl_1_1UndirectedNode.html#a70a72c5d4fb0d697b01d832216c7248a",
+"classvcl_1_1comp_1_1BitFlags.html#a6c83b719981e6b40006d01d111fab12a",
+"classvcl_1_1comp_1_1ReferenceContainerComponent.html#ab01140b60b2e91220f0a5ceb3e4a4310",
+"classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#a9e89fb6e57bcfe1ca0554ed164dd155a",
+"classvcl_1_1mesh_1_1FaceContainer.html#acb30a5c4d894ea5003bdb2620d120680",
+"classvcl_1_1proc_1_1CreateConeFilter.html#af04b4ef2f03e7d3914ba7fa893a21cf8",
+"classvcl_1_1proc_1_1OffSaveMeshAction.html#a3161a37f9a97fc73bc63c1064c05ea89",
+"comparators_8h.html",
+"conceptvcl_1_1HasTextureImages.html",
+"conceptvcl_1_1comp_1_1SanityCheckAdjacentEdges.html",
+"conceptvcl_1_1vert_1_1HasOptionalAdjacentVertices.html",
+"file__info_8h.html",
+"group__edge__mesh__concepts.html",
+"group__mesh__requirements.html#ga64d5aafc5d7a737a9654c763ee5a8132",
+"io_2image_8h.html#aefe397a94e8feddc652f92ef40ce9597",
+"namespacemembers_func_e.html",
+"namespacevcl.html#a86df839f39f7541f73198a9e5c6e921f",
+"namespacevcl_1_1polyedgemesh.html",
+"shuffle_8h.html#ad656a119fe2eb1573d28a28e6576d41d",
+"structvcl_1_1HausdorffDistResult.html#a48c9f8546364e0799914b92d9fbc5622",
+"variadic__templates_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

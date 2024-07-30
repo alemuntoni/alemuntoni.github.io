@@ -1,10 +1,12 @@
 var searchData=
 [
-  ['secondrefpair_0',['SecondRefPair',['../classvcl_1_1SecondRefPair.html',1,'vcl']]],
-  ['secondrefpair_3c_20keytype_2c_20const_20valuetype_20_3e_1',['SecondRefPair&lt; KeyType, const ValueType &gt;',['../classvcl_1_1SecondRefPair.html',1,'vcl']]],
-  ['secondrefpair_3c_20keytype_2c_20valuetype_20_3e_2',['SecondRefPair&lt; KeyType, ValueType &gt;',['../classvcl_1_1SecondRefPair.html',1,'vcl']]],
-  ['segment_3',['Segment',['../classvcl_1_1Segment.html',1,'vcl']]],
-  ['sphere_4',['Sphere',['../classvcl_1_1Sphere.html',1,'vcl']]],
-  ['staticgrid_5',['StaticGrid',['../classvcl_1_1StaticGrid.html',1,'vcl']]],
-  ['staticgriditerator_6',['StaticGridIterator',['../classvcl_1_1StaticGridIterator.html',1,'vcl']]]
+  ['referencecontainercomponent_0',['ReferenceContainerComponent',['../classvcl_1_1comp_1_1ReferenceContainerComponent.html',1,'vcl::comp']]],
+  ['referencecontainercomponent_3c_20store_5findices_2c_20adjacentedges_3c_20store_5findices_2c_20edge_2c_20n_2c_20ttvn_2c_20void_2c_20false_2c_20false_20_3e_2c_20compid_3a_3aadjacent_5fedges_2c_20edge_2c_20n_2c_20void_2c_20false_2c_20false_2c_20ttvn_20_3e_1',['ReferenceContainerComponent&lt; STORE_INDICES, AdjacentEdges&lt; STORE_INDICES, Edge, N, TTVN, void, false, false &gt;, CompId::ADJACENT_EDGES, Edge, N, void, false, false, TTVN &gt;',['../classvcl_1_1comp_1_1ReferenceContainerComponent.html',1,'vcl::comp']]],
+  ['referencecontainercomponent_3c_20store_5findices_2c_20adjacentfaces_3c_20store_5findices_2c_20face_2c_20n_2c_20ttvn_2c_20void_2c_20false_2c_20false_20_3e_2c_20compid_3a_3aadjacent_5ffaces_2c_20face_2c_20n_2c_20void_2c_20false_2c_20false_2c_20ttvn_20_3e_2',['ReferenceContainerComponent&lt; STORE_INDICES, AdjacentFaces&lt; STORE_INDICES, Face, N, TTVN, void, false, false &gt;, CompId::ADJACENT_FACES, Face, N, void, false, false, TTVN &gt;',['../classvcl_1_1comp_1_1ReferenceContainerComponent.html',1,'vcl::comp']]],
+  ['referencecontainercomponent_3c_20store_5findices_2c_20adjacentvertices_3c_20store_5findices_2c_20vertex_2c_20void_2c_20false_2c_20false_20_3e_2c_20compid_3a_3aadjacent_5fvertices_2c_20vertex_2c_20_2d1_2c_20void_2c_20false_2c_20false_2c_20false_20_3e_3',['ReferenceContainerComponent&lt; STORE_INDICES, AdjacentVertices&lt; STORE_INDICES, Vertex, void, false, false &gt;, CompId::ADJACENT_VERTICES, Vertex, -1, void, false, false, false &gt;',['../classvcl_1_1comp_1_1ReferenceContainerComponent.html',1,'vcl::comp']]],
+  ['referencecontainercomponent_3c_20store_5findices_2c_20vertexreferences_3c_20store_5findices_2c_20vertex_2c_20n_2c_20void_2c_20false_20_3e_2c_20compid_3a_3avertex_5freferences_2c_20vertex_2c_20n_2c_20void_2c_20false_2c_20false_2c_20false_20_3e_4',['ReferenceContainerComponent&lt; STORE_INDICES, VertexReferences&lt; STORE_INDICES, Vertex, N, void, false &gt;, CompId::VERTEX_REFERENCES, Vertex, N, void, false, false, false &gt;',['../classvcl_1_1comp_1_1ReferenceContainerComponent.html',1,'vcl::comp']]],
+  ['referencescomponenttriggerer_5',['ReferencesComponentTriggerer',['../classvcl_1_1comp_1_1ReferencesComponentTriggerer.html',1,'vcl::comp']]],
+  ['referencescomponenttriggerer_3c_20referencedtypes_20_3e_6',['ReferencesComponentTriggerer&lt; ReferencedTypes &gt;',['../classvcl_1_1comp_1_1ReferencesComponentTriggerer.html',1,'vcl::comp']]],
+  ['refpair_7',['RefPair',['../classvcl_1_1RefPair.html',1,'vcl']]],
+  ['regulargrid_8',['RegularGrid',['../classvcl_1_1RegularGrid.html',1,'vcl']]]
 ];

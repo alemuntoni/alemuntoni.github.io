@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['uint_0',['uint',['../types_2base_8h.html#a69aa29b598b851b0640aa225a9e5d61d',1,'base.h']]],
-  ['ushort_1',['ushort',['../types_2base_8h.html#ae666ff9c44d45e6b7b6b8ed4340dd9c0',1,'base.h']]]
+  ['uint_0',['uint',['../namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c',1,'vcl']]],
+  ['ushort_1',['ushort',['../namespacevcl.html#a5ee777e6ef2036ffa4ea83d39f83663b',1,'vcl']]]
 ];
