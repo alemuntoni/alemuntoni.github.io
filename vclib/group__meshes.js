@@ -1,8 +1,12 @@
 var group__meshes =
 [
-    [ "vcl::TriMeshT< Scalar >", "classvcl_1_1TriMeshT.html", [
-      [ "ScalarType", "classvcl_1_1TriMeshT.html#aa45078706ae26ace529c614bd44256cc", null ]
+    [ "vcl::PolyEdgeMeshT< Scalar, INDEXED >", "classvcl_1_1PolyEdgeMeshT.html", [
+      [ "ScalarType", "classvcl_1_1PolyEdgeMeshT.html#ab1090b46d4efaed5877f1eece912743b", null ]
     ] ],
-    [ "vcl::TriMesh", "group__meshes.html#gadc7d9c9e25692d22fc9015ac3b3fa4d5", null ],
-    [ "vcl::TriMeshf", "group__meshes.html#gaa63bf0911d51c7377fd467056b2914ff", null ]
+    [ "vcl::TriEdgeMeshT< Scalar, INDEXED >", "classvcl_1_1TriEdgeMeshT.html", [
+      [ "ScalarType", "classvcl_1_1TriEdgeMeshT.html#a03da4e2f5fd9ecb6ffc66ad36473f863", null ]
+    ] ],
+    [ "vcl::TriMeshT< Scalar, INDEXED >", "classvcl_1_1TriMeshT.html", [
+      [ "ScalarType", "classvcl_1_1TriMeshT.html#a1991c3149a18e260eda43a68e5a36249", null ]
+    ] ]
 ];

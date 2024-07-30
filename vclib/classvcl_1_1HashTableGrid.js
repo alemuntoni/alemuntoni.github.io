@@ -1,13 +1,13 @@
 var classvcl_1_1HashTableGrid =
 [
     [ "ConstIterator", "classvcl_1_1HashTableGrid.html#aa16c57e4739b9e96c16fc360190c63b7", null ],
-    [ "IsInCellFunction", "classvcl_1_1HashTableGrid.html#ac9024031e625a639cc6bd88fe72af03f", null ],
+    [ "IntersectsCellFunction", "classvcl_1_1HashTableGrid.html#a59d5ae3f66e49a40a0ea3ca1a448d9c4", null ],
     [ "Iterator", "classvcl_1_1HashTableGrid.html#a62a66f4a11bd9c829d9129705a6a90b2", null ],
     [ "KeyType", "classvcl_1_1HashTableGrid.html#a846437a2c76eeccc89151375aa6a09ab", null ],
     [ "HashTableGrid", "classvcl_1_1HashTableGrid.html#a338f5d88776460969bd037ad55ab8500", null ],
     [ "HashTableGrid", "classvcl_1_1HashTableGrid.html#a11417ec18b71d3a8fecf05bc5b31353c", null ],
-    [ "HashTableGrid", "classvcl_1_1HashTableGrid.html#a3af7fc05adca96f3f0b8fb5c30bd1aaf", null ],
-    [ "HashTableGrid", "classvcl_1_1HashTableGrid.html#a98aaad2bd825be3183c6060bb72f9253", null ],
+    [ "HashTableGrid", "classvcl_1_1HashTableGrid.html#ae1bec0a6120debcb85f5904272efbbcc", null ],
+    [ "HashTableGrid", "classvcl_1_1HashTableGrid.html#af59e5cd3e5817668acacc70f7035aacf", null ],
     [ "begin", "classvcl_1_1HashTableGrid.html#a2a4c0aac3e52a721a197bce0cf881873", null ],
     [ "begin", "classvcl_1_1HashTableGrid.html#aa9f8b97ad170c972c168b067a00d6f9d", null ],
     [ "cellEmpty", "classvcl_1_1HashTableGrid.html#ae3d73e4e4ed2ba9052c1d8d14905fb0a", null ],

@@ -1,8 +1,8 @@
 var classvcl_1_1BipartiteGraph =
 [
-    [ "AdjacentLeftNodeIterator", "classvcl_1_1BipartiteGraph.html#adffe289f29364242b2c7c2a862e97c92", null ],
+    [ "AdjacentLeftNodeIterator", "classvcl_1_1BipartiteGraph.html#a85f0038835f1ef44b52624138db2fb76", null ],
     [ "AdjacentLeftNodeView", "classvcl_1_1BipartiteGraph.html#adb8cadb9b2331ec47d991045cdda9615", null ],
-    [ "AdjacentRightNodeIterator", "classvcl_1_1BipartiteGraph.html#a4e8dd3906a345cadb5c5d29abbfbb78a", null ],
+    [ "AdjacentRightNodeIterator", "classvcl_1_1BipartiteGraph.html#a67c64f4c8c34f81d7d82d36ea9d40b50", null ],
     [ "AdjacentRightNodeView", "classvcl_1_1BipartiteGraph.html#a497ef3b56d025fe056aca25bd97c3136", null ],
     [ "LeftNodeIterator", "classvcl_1_1BipartiteGraph.html#a012a223d3ce4226253caf07b06ad19bb", null ],
     [ "LeftNodeType", "classvcl_1_1BipartiteGraph.html#abcf3935e9a83bf548aedda5a6c507b4f", null ],
@@ -43,10 +43,10 @@ var classvcl_1_1BipartiteGraph =
     [ "rightNodesNumber", "classvcl_1_1BipartiteGraph.html#ad4f8084ae7c2fc8841e4dc609b7652b3", null ],
     [ "setLeftNode", "classvcl_1_1BipartiteGraph.html#a0e2a8a0b358baba38f6bc9409f848cb3", null ],
     [ "setRightNode", "classvcl_1_1BipartiteGraph.html#a04ce3f8e4808f82217aa115bc812a668", null ],
-    [ "mapL", "classvcl_1_1BipartiteGraph.html#a8253b00c0ef86cc4306aef24d14e9671", null ],
-    [ "mapR", "classvcl_1_1BipartiteGraph.html#a868b86d3e5cda3b3958a7e00446cc276", null ],
-    [ "nodesL", "classvcl_1_1BipartiteGraph.html#a434cb2a96604cf85bc6d70ba8b76ad0c", null ],
-    [ "nodesR", "classvcl_1_1BipartiteGraph.html#a1d4c70011e27b53796faf0bbf04a6b80", null ],
-    [ "unusedLNodes", "classvcl_1_1BipartiteGraph.html#a57c8d024bbba2f0432738e09f8ba6f65", null ],
-    [ "unusedRNodes", "classvcl_1_1BipartiteGraph.html#a863c8759a6d81a5df26ee79a9f2816b0", null ]
+    [ "mMapL", "classvcl_1_1BipartiteGraph.html#a1edafd6aebfea9ae169820478d69f1d5", null ],
+    [ "mMapR", "classvcl_1_1BipartiteGraph.html#a7ce0b943b4ed5165bd32ea8822007f01", null ],
+    [ "mNodesL", "classvcl_1_1BipartiteGraph.html#afcd47e6ccb87ca79be06b5c0988a2d21", null ],
+    [ "mNodesR", "classvcl_1_1BipartiteGraph.html#a19c9de9d97db2c842d1c78706e3c92ca", null ],
+    [ "mUnusedLNodes", "classvcl_1_1BipartiteGraph.html#a455bb160de2c9fb05c2356c41a34c3ef", null ],
+    [ "mUnusedRNodes", "classvcl_1_1BipartiteGraph.html#a40caca34dbf4a4e030ec0ab011a2c0e0", null ]
 ];

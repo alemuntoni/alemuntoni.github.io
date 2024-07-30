@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['spatial_20and_20other_20data_20structures_0',['Spatial and other Data Structures',['../space_page.html',1,'']]]
+  ['get_20started_0',['Get Started',['../get_started_page.html',1,'']]]
 ];

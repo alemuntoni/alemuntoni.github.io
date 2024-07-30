@@ -1,27 +1,7 @@
 var dir_f5c67e0d94465501863c6ccee7fad822 =
 [
-    [ "bit_set", "dir_7e1e2f72f3b83ccc40aa4775ce2a6488.html", "dir_7e1e2f72f3b83ccc40aa4775ce2a6488" ],
-    [ "graph", "dir_3b9241111c754f934b0c850b9c138b7a.html", "dir_3b9241111c754f934b0c850b9c138b7a" ],
-    [ "grid", "dir_43bec620be745f7600a80b4863ec33ca.html", "dir_43bec620be745f7600a80b4863ec33ca" ],
-    [ "sampler", "dir_4ede5ed5af704acfffe4a29c47832e78.html", "dir_4ede5ed5af704acfffe4a29c47832e78" ],
-    [ "array.h", "space_2array_8h.html", "space_2array_8h" ],
-    [ "bit_set.h", "bit__set_8h.html", "bit__set_8h" ],
-    [ "box.h", "space_2box_8h.html", "space_2box_8h" ],
-    [ "color.h", "space_2color_8h.html", "space_2color_8h" ],
-    [ "graph.h", "graph_8h.html", null ],
-    [ "grid.h", "grid_8h.html", null ],
-    [ "image.h", "space_2image_8h.html", "space_2image_8h" ],
-    [ "kd_tree.h", "kd__tree_8h.html", "kd__tree_8h" ],
-    [ "matrix.h", "space_2matrix_8h.html", "space_2matrix_8h" ],
-    [ "plane.h", "space_2plane_8h.html", "space_2plane_8h" ],
-    [ "point.h", "space_2point_8h.html", "space_2point_8h" ],
-    [ "polygon.h", "space_2polygon_8h.html", "space_2polygon_8h" ],
-    [ "principal_curvature.h", "space_2principal__curvature_8h.html", null ],
-    [ "sampler.h", "space_2sampler_8h.html", null ],
-    [ "segment.h", "space_2segment_8h.html", "space_2segment_8h" ],
-    [ "sphere.h", "space_2sphere_8h.html", "space_2sphere_8h" ],
-    [ "tex_coord.h", "space_2tex__coord_8h.html", "space_2tex__coord_8h" ],
-    [ "triangle.h", "space_2triangle_8h.html", "space_2triangle_8h" ],
-    [ "triangle_wrapper.h", "triangle__wrapper_8h.html", "triangle__wrapper_8h" ],
-    [ "vector.h", "vector_8h.html", null ]
+    [ "complex", "dir_87d8f51ecc605eaed395771040127619.html", "dir_87d8f51ecc605eaed395771040127619" ],
+    [ "core", "dir_bd555a36da4326e56d008e73b6217276.html", "dir_bd555a36da4326e56d008e73b6217276" ],
+    [ "complex.h", "complex_8h.html", null ],
+    [ "core.h", "space_2core_8h.html", null ]
 ];

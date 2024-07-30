@@ -1,5 +1,5 @@
 var vertex__sampler_8h =
 [
-    [ "ConstVertexSampler", "vertex__sampler_8h.html#af12c15595ec95998920b3ded3c1a8dbf", null ],
-    [ "VertexSampler", "vertex__sampler_8h.html#a2cb93e7b8a1ccd33f76ba2d53ef9ecfa", null ]
+    [ "ConstVertexSampler", "vertex__sampler_8h.html#a6c937acb41381e0ce8bb27471da48d24", null ],
+    [ "VertexSampler", "vertex__sampler_8h.html#a06db57219f01121229b9d6a138d3a24f", null ]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['utility_20concepts_0',['Utility Concepts',['../group__uconcepts.html',1,'']]]
+  ['types_20module_0',['VCLib Types Module',['../group__types.html',1,'']]]
 ];

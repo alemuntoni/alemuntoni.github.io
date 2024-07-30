@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['loglevel_0',['LogLevel',['../classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61',1,'vcl::Logger']]]
+  ['vclibprincipalcurvaturealgorithm_0',['VCLibPrincipalCurvatureAlgorithm',['../namespacevcl.html#aaca879a6bfd47ff8429d6b2f6cfa9440',1,'vcl']]]
 ];

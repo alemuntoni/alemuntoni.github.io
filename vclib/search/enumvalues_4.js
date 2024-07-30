@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['edge_0',['EDGE',['../classvcl_1_1MeshInfo.html#abb085ab601fbf6c3044c3da811209622a9ef0e296333c3b99e0df166082b3fe6d',1,'vcl::MeshInfo::EDGE()'],['../namespacevcl_1_1io_1_1ply.html#ab6978d1c3ac5e80bd46c2132b4567acba7387ee3a5f4ab94a61029c54a03db219',1,'vcl::io::ply::EDGE()'],['../namespacevcl.html#ae046f7dd555ae870338041167e1fcb72a277eb4b09247da79fe02b8a334452e67',1,'vcl::EDGE()']]],
-  ['error_1',['ERROR',['../classvcl_1_1Logger.html#a3437f70505396f678b94e1f790a58a61a98f7adc0feda996c00a894fba3e3a85b',1,'vcl::Logger']]]
+  ['edge_0',['edge',['../classvcl_1_1MeshInfo.html#abb085ab601fbf6c3044c3da811209622a9ef0e296333c3b99e0df166082b3fe6d',1,'vcl::MeshInfo::EDGE'],['../structvcl_1_1ElemId.html#a1c18d2f7814686d14cc0dacc8f33a09fa425ae52b91d7725ed644b8e6c59a088e',1,'vcl::ElemId::EDGE']]],
+  ['elements_5fnumber_1',['ELEMENTS_NUMBER',['../structvcl_1_1ElemId.html#a1c18d2f7814686d14cc0dacc8f33a09fa5383a8d3ce75f1f431f09f343aa14fff',1,'vcl::ElemId']]],
+  ['enum_2',['ENUM',['../structvcl_1_1proc_1_1ParameterType.html#a58b58f73da7e531309c292150c8d11feae88a123ba2b15f03fbd4720a817eaf3f',1,'vcl::proc::ParameterType']]],
+  ['error_3',['ERROR',['../classvcl_1_1AbstractLogger.html#a0fd4fdf40fcb48af7aba5c15be59c849a46abb01ccf5f5d43b43455c5d85b143d',1,'vcl::AbstractLogger']]]
 ];

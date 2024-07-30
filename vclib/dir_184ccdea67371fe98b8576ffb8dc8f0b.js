@@ -1,27 +1,7 @@
 var dir_184ccdea67371fe98b8576ffb8dc8f0b =
 [
-    [ "create", "dir_fdd557d0d6a3c6ee041918900d1f64b9.html", "dir_fdd557d0d6a3c6ee041918900d1f64b9" ],
-    [ "distance", "dir_63f1290cec33f733cb816f0be112408a.html", "dir_63f1290cec33f733cb816f0be112408a" ],
-    [ "export", "dir_0f340c9a3084f1b9bfa6c053ef203bda.html", "dir_0f340c9a3084f1b9bfa6c053ef203bda" ],
-    [ "import", "dir_8e193214686fe94d7366810286e94582.html", "dir_8e193214686fe94d7366810286e94582" ],
-    [ "intersection", "dir_7698d2adaaee9753485ce51928fdf04b.html", "dir_7698d2adaaee9753485ce51928fdf04b" ],
-    [ "polygon", "dir_b71a624c868ac2c9e6ac383c0ced45fd.html", "dir_b71a624c868ac2c9e6ac383c0ced45fd" ],
-    [ "stat", "dir_9358a53b6f69720eb50b3df8727a85d2.html", "dir_9358a53b6f69720eb50b3df8727a85d2" ],
-    [ "update", "dir_0c30c288609dca947c9a20e317fd48dd.html", "dir_0c30c288609dca947c9a20e317fd48dd" ],
-    [ "bounding_box.h", "algorithms_2bounding__box_8h.html", "algorithms_2bounding__box_8h" ],
-    [ "clean.h", "clean_8h.html", "clean_8h" ],
-    [ "create.h", "create_8h.html", null ],
-    [ "distance.h", "distance_8h.html", null ],
-    [ "export.h", "export_8h.html", null ],
-    [ "filter.h", "filter_8h.html", "filter_8h" ],
-    [ "fitting.h", "fitting_8h.html", "fitting_8h" ],
-    [ "import.h", "algorithms_2import_8h.html", null ],
-    [ "intersection.h", "intersection_8h.html", null ],
-    [ "point_sampling.h", "point__sampling_8h.html", "point__sampling_8h" ],
-    [ "polygon.h", "algorithms_2polygon_8h.html", null ],
-    [ "shuffle.h", "shuffle_8h.html", "shuffle_8h" ],
-    [ "smooth.h", "smooth_8h.html", "smooth_8h" ],
-    [ "sort.h", "sort_8h.html", "sort_8h" ],
-    [ "stat.h", "stat_8h.html", "stat_8h" ],
-    [ "update.h", "update_8h.html", null ]
+    [ "core", "dir_bd41bd6b1658aa4f7e59b92a6cacf32c.html", "dir_bd41bd6b1658aa4f7e59b92a6cacf32c" ],
+    [ "mesh", "dir_0c5541bf23a81a3310fdbb547aefe07f.html", "dir_0c5541bf23a81a3310fdbb547aefe07f" ],
+    [ "core.h", "algorithms_2core_8h.html", null ],
+    [ "mesh.h", "algorithms_2mesh_8h.html", null ]
 ];

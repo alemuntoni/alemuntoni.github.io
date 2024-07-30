@@ -1,10 +1,11 @@
 var dir_d71e4c2580782f77754656728837316e =
 [
-    [ "internal", "dir_9bee955455a9a4bc7309d37946a1f48e.html", "dir_9bee955455a9a4bc7309d37946a1f48e" ],
-    [ "obj", "dir_7349b7f2b7bdff106ff83b415d731490.html", "dir_7349b7f2b7bdff106ff83b415d731490" ],
-    [ "off", "dir_24dfdf8cff44867d30f8c5ca983eb652.html", "dir_24dfdf8cff44867d30f8c5ca983eb652" ],
-    [ "ply", "dir_a91a2a4111f4fa00c4f6937b2c93ea7c.html", "dir_a91a2a4111f4fa00c4f6937b2c93ea7c" ],
-    [ "stl", "dir_7d67d009f47305a64f4cd1bb92471349.html", "dir_7d67d009f47305a64f4cd1bb92471349" ],
-    [ "load.h", "load_8h.html", "load_8h" ],
-    [ "save.h", "save_8h.html", "save_8h" ]
+    [ "serialization", "dir_efa4975072234361e0050b3bff9b2689.html", "dir_efa4975072234361e0050b3bff9b2689" ],
+    [ "file_format.h", "file__format_8h.html", "file__format_8h" ],
+    [ "file_info.h", "file__info_8h.html", "file__info_8h" ],
+    [ "file_type.h", "file__type_8h.html", "file__type_8h" ],
+    [ "image.h", "io_2image_8h.html", "io_2image_8h" ],
+    [ "read.h", "read_8h.html", "read_8h" ],
+    [ "serialization.h", "io_2serialization_8h.html", null ],
+    [ "write.h", "write_8h.html", "write_8h" ]
 ];

@@ -12,6 +12,7 @@ var group__create =
       [ "mode", "structvcl_1_1CreateSphereArgs.html#a3f9cba5bfa584bf3ee01653af6e3c262", null ],
       [ "parallels", "structvcl_1_1CreateSphereArgs.html#a849cb5b8913d6dbc661e5135e0d41704", null ]
     ] ],
+    [ "vcl::createCube", "group__create.html#ga6fb4ccc7456d5cfc0b4dfa61775d43fd", null ],
     [ "vcl::createCube", "group__create.html#ga7383cbe54f93fa408ebd2f3e6f66ae21", null ],
     [ "vcl::createDodecahedron", "group__create.html#gaed05ee87778462738625d7c0f6ac38e6", null ],
     [ "vcl::createHexahedron", "group__create.html#gad27918bc874e941633aeeb83c09ef8bc", null ],
@@ -22,7 +23,7 @@ var group__create =
     [ "vcl::createSphereIcosahedron", "group__create.html#ga4fa15f02159bbc4db0b84ffa8978b154", null ],
     [ "vcl::createSphereNormalizedCube", "group__create.html#gad6f54ee450c902f94c4185193d7bfed0", null ],
     [ "vcl::createSphereSpherifiedCube", "group__create.html#ga964925e1a22e75db7dea160f6ca9b9bd", null ],
-    [ "vcl::createSphereUV", "group__create.html#ga178428edf0329a0ed798ccc4b9a6feae", null ],
+    [ "vcl::createSphereUV", "group__create.html#ga0701cdc9e67076fe0c2267193305af66", null ],
     [ "vcl::createTetrahedron", "group__create.html#ga3d38a6ecac2b2ab64dd11d53d78e98ca", null ],
     [ "vcl::createTetrahedron", "group__create.html#ga7c70a856983dfae4697e3521825dce90", null ]
 ];

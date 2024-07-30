@@ -11,7 +11,7 @@ var group__face__mesh__concepts =
     [ "vcl::HasPerFacePrincipalCurvature", "conceptvcl_1_1HasPerFacePrincipalCurvature.html", null ],
     [ "vcl::HasPerFaceQuality", "conceptvcl_1_1HasPerFaceQuality.html", null ],
     [ "vcl::HasPerFaceTriangleBitFlags", "conceptvcl_1_1HasPerFaceTriangleBitFlags.html", null ],
-    [ "vcl::HasPerFaceVertexPointers", "conceptvcl_1_1HasPerFaceVertexPointers.html", null ],
+    [ "vcl::HasPerFaceVertexReferences", "conceptvcl_1_1HasPerFaceVertexReferences.html", null ],
     [ "vcl::HasPerFaceWedgeColors", "conceptvcl_1_1HasPerFaceWedgeColors.html", null ],
     [ "vcl::HasPerFaceWedgeTexCoords", "conceptvcl_1_1HasPerFaceWedgeTexCoords.html", null ]
 ];

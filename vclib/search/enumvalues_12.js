@@ -1,10 +1,8 @@
 var searchData=
 [
-  ['uchar_0',['UCHAR',['../classvcl_1_1MeshInfo.html#a121d8fd64434bb213b5c1bb19140203aa4cc09385fcb632a350dd8b490e76dc38',1,'vcl::MeshInfo']]],
-  ['uint_1',['UINT',['../classvcl_1_1MeshInfo.html#a121d8fd64434bb213b5c1bb19140203aa2fd2a86fcbd73d809e209ff321d78630',1,'vcl::MeshInfo']]],
-  ['unknown_2',['UNKNOWN',['../classvcl_1_1MeshInfo.html#a121d8fd64434bb213b5c1bb19140203aa536f44783a2a9a0111d1e99439f45371',1,'vcl::MeshInfo']]],
-  ['unknown_3',['unknown',['../namespacevcl_1_1io_1_1ply.html#ae59b1615f98338e68cfa5b0612c249c4a0adc4c6877eccd7935bf709c078f3f07',1,'vcl::io::ply']]],
-  ['unknown_4',['UNKNOWN',['../namespacevcl_1_1io_1_1ply.html#a78b5af43f267ecc24ce3262f59f331a2a2c2a69ac0b9a0bcce9e89a0090c81abb',1,'vcl::io::ply']]],
-  ['ushort_5',['USHORT',['../classvcl_1_1MeshInfo.html#a121d8fd64434bb213b5c1bb19140203aa20a16f41e6b8bc23d968c890d5083082',1,'vcl::MeshInfo']]],
-  ['uv_6',['UV',['../structvcl_1_1CreateSphereArgs.html#a021e62dca730f7ee2e72e8daea4f479aa2a5d31d517908f82638cc024b560ed1a',1,'vcl::CreateSphereArgs']]]
+  ['vcl_5fprincipal_5fcurvature_5fpca_0',['VCL_PRINCIPAL_CURVATURE_PCA',['../namespacevcl.html#aaca879a6bfd47ff8429d6b2f6cfa9440a2c812dad0f96c382657b60bb2d2f8180',1,'vcl']]],
+  ['vcl_5fprincipal_5fcurvature_5ftaubin95_1',['VCL_PRINCIPAL_CURVATURE_TAUBIN95',['../namespacevcl.html#aaca879a6bfd47ff8429d6b2f6cfa9440a16e818963316b0b43fcbdec6d75f25ed',1,'vcl']]],
+  ['vertex_2',['vertex',['../classvcl_1_1MeshInfo.html#abb085ab601fbf6c3044c3da811209622a905e0c64aaaf7fdccb8cb931385ba467',1,'vcl::MeshInfo::VERTEX'],['../structvcl_1_1ElemId.html#a1c18d2f7814686d14cc0dacc8f33a09fa8ee2b32dabeee8f630d63f6d5113128a',1,'vcl::ElemId::VERTEX']]],
+  ['vertex_5freferences_3',['VERTEX_REFERENCES',['../structvcl_1_1CompId.html#a49eaa4bf71f2e6fe44b614a91b94735aa3e36359ef76465fa81b4f862810afcb6',1,'vcl::CompId']]],
+  ['vrefs_4',['VREFS',['../classvcl_1_1MeshInfo.html#a3816cab30d019e0d9b862af5580ca0cea56b76e5e5381c855e07eb2b15e7a8b1f',1,'vcl::MeshInfo']]]
 ];

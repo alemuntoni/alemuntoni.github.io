@@ -6,7 +6,7 @@ var classvcl_1_1Plane =
     [ "Plane", "classvcl_1_1Plane.html#aac84e9d534898801cf049ce84b55a228", null ],
     [ "Plane", "classvcl_1_1Plane.html#a349632b61df1eef758fe431f7b64f002", null ],
     [ "Plane", "classvcl_1_1Plane.html#a5ce6499f4ac19b0e346d551e079e0ad8", null ],
-    [ "cast", "classvcl_1_1Plane.html#aa0b18ae0a05608d955aed8c968b47f94", null ],
+    [ "cast", "classvcl_1_1Plane.html#a58cbdae80911db1ed0627cfd220a29a6", null ],
     [ "direction", "classvcl_1_1Plane.html#ac39550899eca0c0613d3ff06f40b9ebc", null ],
     [ "mirrorPoint", "classvcl_1_1Plane.html#a8713851a6e62ac626eadfae08c79e69a", null ],
     [ "offset", "classvcl_1_1Plane.html#aed68cb2e98080ee7325f0d3b36565c0b", null ],

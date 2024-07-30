@@ -1,6 +1,9 @@
 var classvcl_1_1comp_1_1Name =
 [
-    [ "importFrom", "classvcl_1_1comp_1_1Name.html#a570091b4334752b9ba2e419033ac2f8d", null ],
-    [ "name", "classvcl_1_1comp_1_1Name.html#a32026a825c11867049e2c7d1cc0e1610", null ],
-    [ "name", "classvcl_1_1comp_1_1Name.html#a3dc355db99fb3c1c8d09aeb0e30aeaa5", null ]
+    [ "Name", "classvcl_1_1comp_1_1Name.html#a0425bbdb6df1ed391af5bd09fb688979", null ],
+    [ "deserialize", "classvcl_1_1comp_1_1Name.html#aefe580a87ebd8421788f0b6c2942d5a3", null ],
+    [ "importFrom", "classvcl_1_1comp_1_1Name.html#a86ff48273fd7c6b32a92e8152a225c63", null ],
+    [ "name", "classvcl_1_1comp_1_1Name.html#a7cbb2fa8393b626460e3da8dd9985ea9", null ],
+    [ "name", "classvcl_1_1comp_1_1Name.html#a80784558cddd1cd52b4021babcd6a4c1", null ],
+    [ "serialize", "classvcl_1_1comp_1_1Name.html#a68caa9b53ef4e3f53e5e057eb142eddb", null ]
 ];

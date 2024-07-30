@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['_7edrawableobject_0',['~DrawableObject',['../classvcl_1_1DrawableObject.html#a05a74a1cbb1034d4ac8896712226d55a',1,'vcl::DrawableObject']]],
-  ['_7edrawableobjectframe_1',['~DrawableObjectFrame',['../classvcl_1_1DrawableObjectFrame.html#a200811f440943a8a8789f39ddb582f75',1,'vcl::DrawableObjectFrame']]],
-  ['_7edrawableobjectvector_2',['~DrawableObjectVector',['../classvcl_1_1DrawableObjectVector.html#a8727442d552578b3fc67d9be8d26ba83',1,'vcl::DrawableObjectVector']]],
-  ['_7edrawableobjectvectorframe_3',['~DrawableObjectVectorFrame',['../classvcl_1_1DrawableObjectVectorFrame.html#aa2716abe48bbccc685f5da9a54f029e3',1,'vcl::DrawableObjectVectorFrame']]],
-  ['_7emeshrendersettingsframe_4',['~MeshRenderSettingsFrame',['../classvcl_1_1MeshRenderSettingsFrame.html#a0c33e447f8ef33c224dbe8197c2987cf',1,'vcl::MeshRenderSettingsFrame']]],
-  ['_7eqclickablelabel_5',['~QClickableLabel',['../classvcl_1_1QClickableLabel.html#a7d2de037141042d69f5ee1a2273efbc4',1,'vcl::QClickableLabel']]],
-  ['_7eviewermainwindow_6',['~ViewerMainWindow',['../classvcl_1_1ViewerMainWindow.html#a292212ac8586405bee0be9d245ed24e1',1,'vcl::ViewerMainWindow']]]
+  ['_7eaction_0',['~Action',['../classvcl_1_1proc_1_1Action.html#a794cc7ef8d7992f3aee9cfbf35b79049',1,'vcl::proc::Action']]],
+  ['_7ebaseloadimageaction_1',['~BaseLoadImageAction',['../classvcl_1_1proc_1_1BaseLoadImageAction.html#a25782708664efc69971a13ecefe7dacb',1,'vcl::proc::BaseLoadImageAction']]],
+  ['_7ebasesaveimageaction_2',['~BaseSaveImageAction',['../classvcl_1_1proc_1_1BaseSaveImageAction.html#a039ca5cdd06315a58c59349ddecb38d5',1,'vcl::proc::BaseSaveImageAction']]],
+  ['_7emeshaction_3',['~MeshAction',['../classvcl_1_1proc_1_1MeshAction.html#aafc91b5762cbc84201b522fb2d67276a',1,'vcl::proc::MeshAction']]],
+  ['_7emeshi_4',['~MeshI',['../classvcl_1_1proc_1_1MeshI.html#afd50707259ee29ef364c40f9eba5b3ee',1,'vcl::proc::MeshI']]],
+  ['_7eparameter_5',['~Parameter',['../classvcl_1_1proc_1_1Parameter.html#a18c25ab7d361278e9da413a666f48088',1,'vcl::proc::Parameter']]]
 ];

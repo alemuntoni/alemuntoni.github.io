@@ -10,6 +10,7 @@ var classvcl_1_1mesh_1_1VerticalComponentsVectorTuple =
     [ "enableAllOptionalComponents", "classvcl_1_1mesh_1_1VerticalComponentsVectorTuple.html#a78af4d734719280d09fd30079311c6b2", null ],
     [ "enableComponent", "classvcl_1_1mesh_1_1VerticalComponentsVectorTuple.html#a0eb6f41b340f994c7f5e1ed37b8e841a", null ],
     [ "enableComponent", "classvcl_1_1mesh_1_1VerticalComponentsVectorTuple.html#a0eb6f41b340f994c7f5e1ed37b8e841a", null ],
+    [ "hasComponent", "classvcl_1_1mesh_1_1VerticalComponentsVectorTuple.html#a8784cf886faf1fe091068d7f7389a71e", null ],
     [ "isComponentEnabled", "classvcl_1_1mesh_1_1VerticalComponentsVectorTuple.html#a79217310c24f59f1a52b57d6c8a94b71", null ],
     [ "isComponentEnabled", "classvcl_1_1mesh_1_1VerticalComponentsVectorTuple.html#a79217310c24f59f1a52b57d6c8a94b71", null ],
     [ "reserve", "classvcl_1_1mesh_1_1VerticalComponentsVectorTuple.html#ab84da2f9f764556913aa0ce6d823d1c4", null ],

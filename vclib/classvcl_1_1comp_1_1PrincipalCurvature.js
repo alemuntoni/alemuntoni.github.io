@@ -1,7 +1,10 @@
 var classvcl_1_1comp_1_1PrincipalCurvature =
 [
-    [ "PrincipalCurvatureType", "classvcl_1_1comp_1_1PrincipalCurvature.html#a244203675b6024d2e8a1c35f852a3784", null ],
-    [ "importFrom", "classvcl_1_1comp_1_1PrincipalCurvature.html#a870e4f211000cc6e95a533945a6bb96d", null ],
-    [ "principalCurvature", "classvcl_1_1comp_1_1PrincipalCurvature.html#afd22ce2b9f804dd7c5e4cc6e6d7d1fc7", null ],
-    [ "principalCurvature", "classvcl_1_1comp_1_1PrincipalCurvature.html#a0c6c7571bce15f34c216897d3cbee5db", null ]
+    [ "PrincipalCurvatureType", "classvcl_1_1comp_1_1PrincipalCurvature.html#a64982f608421800a9b55cebf114c73d4", null ],
+    [ "PrincipalCurvature", "classvcl_1_1comp_1_1PrincipalCurvature.html#a1c25b031665daf466dac08f33a8a5077", null ],
+    [ "deserialize", "classvcl_1_1comp_1_1PrincipalCurvature.html#ad153d562a634e0bdabd40a9598f92234", null ],
+    [ "importFrom", "classvcl_1_1comp_1_1PrincipalCurvature.html#a5749aa3b9839f245d373c678eb762892", null ],
+    [ "principalCurvature", "classvcl_1_1comp_1_1PrincipalCurvature.html#ab6a8192feb55e0ce2a6bfe1a8f87b09a", null ],
+    [ "principalCurvature", "classvcl_1_1comp_1_1PrincipalCurvature.html#a1472a5d01962ff46d1d8077ba4129f84", null ],
+    [ "serialize", "classvcl_1_1comp_1_1PrincipalCurvature.html#afa534760029f1886a090cf48c90f8bf0", null ]
 ];

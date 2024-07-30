@@ -13,7 +13,9 @@ var group__edge__concepts =
     [ "vcl::edge::HasCustomComponents", "conceptvcl_1_1edge_1_1HasCustomComponents.html", null ],
     [ "vcl::edge::HasMark", "conceptvcl_1_1edge_1_1HasMark.html", null ],
     [ "vcl::edge::HasOptionalMark", "conceptvcl_1_1edge_1_1HasOptionalMark.html", null ],
+    [ "vcl::edge::HasNormal", "conceptvcl_1_1edge_1_1HasNormal.html", null ],
+    [ "vcl::edge::HasOptionalNormal", "conceptvcl_1_1edge_1_1HasOptionalNormal.html", null ],
     [ "vcl::edge::HasQuality", "conceptvcl_1_1edge_1_1HasQuality.html", null ],
     [ "vcl::edge::HasOptionalQuality", "conceptvcl_1_1edge_1_1HasOptionalQuality.html", null ],
-    [ "vcl::edge::HasVertexPointers", "conceptvcl_1_1edge_1_1HasVertexPointers.html", null ]
+    [ "vcl::edge::HasVertexReferences", "conceptvcl_1_1edge_1_1HasVertexReferences.html", null ]
 ];
