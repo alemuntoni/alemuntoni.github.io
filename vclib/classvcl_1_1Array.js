@@ -10,7 +10,7 @@ var classvcl_1_1Array =
     [ "ValueType", "classvcl_1_1Array.html#a6d5640f6e77f808983ff257e327418a0", null ],
     [ "Array", "classvcl_1_1Array.html#a046fce610329e9647c33d37cc6d822e6", null ],
     [ "Array", "classvcl_1_1Array.html#ad9e62809de538c1459345068ca3c0e61", null ],
-    [ "Array", "classvcl_1_1Array.html#ab41e12c66603c3e8dd42d9c941311088", null ],
+    [ "Array", "classvcl_1_1Array.html#acc1d1cc2dae16055b961acd6f67821f1", null ],
     [ "begin", "classvcl_1_1Array.html#a217ea7f702e755c5cdd8a9b20e137cbe", null ],
     [ "begin", "classvcl_1_1Array.html#adad8822683e339a36c6fb1cc12b4f3ec", null ],
     [ "clear", "classvcl_1_1Array.html#ae1e318a975488b1df465c90af6b8502e", null ],
@@ -18,7 +18,6 @@ var classvcl_1_1Array =
     [ "conservativeResize", "classvcl_1_1Array.html#ab80dd741bc127a7207d5b7eae99bc874", null ],
     [ "data", "classvcl_1_1Array.html#a1ff7b3cd5c9688d5eb40b73d9b2a6a35", null ],
     [ "data", "classvcl_1_1Array.html#acb06e9a9aff947d985e12968b72a79c7", null ],
-    [ "deserialize", "classvcl_1_1Array.html#a168106a1dd8d9a7d8f1cc52f41209aed", null ],
     [ "empty", "classvcl_1_1Array.html#ab09bd341a395c55d573e01c83c5d55ef", null ],
     [ "end", "classvcl_1_1Array.html#a151157f5ef795c56d2eaa9331d27dacd", null ],
     [ "end", "classvcl_1_1Array.html#a0f389a0a10c411b3f4bee48b0417d312", null ],
@@ -28,7 +27,6 @@ var classvcl_1_1Array =
     [ "operator()", "classvcl_1_1Array.html#a11ada779e74f020354d798bfc52405f4", null ],
     [ "resize", "classvcl_1_1Array.html#a3c891203bac1838e2ccef171b4d26c27", null ],
     [ "rows", "classvcl_1_1Array.html#a547b9f5e1fe03fbc16ab1891b7e60163", null ],
-    [ "serialize", "classvcl_1_1Array.html#a393a14c4514aac1a12aa274a7c3ce5ea", null ],
     [ "size", "classvcl_1_1Array.html#a1efd1ae823d83a9463c602d7364bfc64", null ],
     [ "sizeW", "classvcl_1_1Array.html#aaaf7b5e18c960f11f0793e8da6092699", null ],
     [ "sizeX", "classvcl_1_1Array.html#abc65e35968c636b53c1eb0ee72d92009", null ],
@@ -38,7 +36,5 @@ var classvcl_1_1Array =
     [ "stdVector", "classvcl_1_1Array.html#a511880bb288b9d7d559796ba520f0ff4", null ],
     [ "stdVector", "classvcl_1_1Array.html#af8a38e8ab4a08daefe5aee176f167a4e", null ],
     [ "subArray", "classvcl_1_1Array.html#a2f5aab97aa392a2994f2c62b7d59d116", null ],
-    [ "Array< T, N+1 >", "classvcl_1_1Array.html#ac9f556ef4a01719619a54a05db6fe51f", null ],
-    [ "operator<<", "classvcl_1_1Array.html#a94db4c7688b5bd36827f4112d8af4f4a", null ],
     [ "DIM", "classvcl_1_1Array.html#a4f8a25f6a9adb48f6f8454936fb282b5", null ]
 ];

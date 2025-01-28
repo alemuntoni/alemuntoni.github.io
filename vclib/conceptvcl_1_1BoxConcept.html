@@ -106,57 +106,68 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1BoxConcept.html',''); in
 <p><code>#include &lt;<a class="el" href="concepts_2space_2box_8h_source.html">vclib/concepts/space/box.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1BoxConcept.html">vcl::BoxConcept</a> = </div>
-<div class="line">    <span class="keyword">requires</span> (T o, <span class="keyword">const</span> T&amp; co, <span class="keyword">const</span> <span class="keyword">typename</span> T::PointType&amp; p) {</div>
-<div class="line">        </div>
-<div class="line">        <span class="keyword">typename</span> T::PointType;</div>
-<div class="line">        o.DIM;</div>
+<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1BoxConcept.html">vcl::BoxConcept</a> =  <span class="keyword">requires</span> (</div>
+<div class="line">    T&amp;&amp;                                          obj,</div>
+<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::PointType             p,</div>
+<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::PointType&amp;            pR,</div>
+<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::PointType::ScalarType s) {</div>
+<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::PointType;</div>
+<div class="line">    obj.DIM;</div>
+<div class="line"> </div>
+<div class="line">    </div>
+<div class="line">    RemoveRef&lt;T&gt;();</div>
+<div class="line">    RemoveRef&lt;T&gt;(p);</div>
+<div class="line">    RemoveRef&lt;T&gt;(p, p);</div>
+<div class="line"> </div>
+<div class="line">    </div>
+<div class="line">    { obj.min() } -&gt; <a class="code hl_concept" href="conceptvcl_1_1PointConcept.html">PointConcept</a>;</div>
+<div class="line">    { <a class="code hl_class" href="classvcl_1_1Box.html">obj</a>.<a class="code hl_function" href="classvcl_1_1Box.html#a535809db66680a6de48f02fd371c68f7">max</a>() } -&gt; PointConcept;</div>
+<div class="line"> </div>
+<div class="line">    </div>
+<div class="line">    { obj.isNull() } -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line">    { obj.isEmpty() } -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line"> </div>
+<div class="line">    </div>
+<div class="line">    { obj.isInside(p) } -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line">    { obj.isInsideOpenBox(p) } -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line"> </div>
+<div class="line">    </div>
+<div class="line">    { obj.overlap(obj) } -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line">    { obj.collide(obj) } -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line">    { obj.intersects(obj) } -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line"> </div>
+<div class="line">    </div>
+<div class="line">    { obj.diagonal() } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(s)&gt;;</div>
+<div class="line">    { obj.squaredDiagonal() } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(s)&gt;;</div>
+<div class="line">    { obj.center() } -&gt; PointConcept;</div>
+<div class="line">    { obj.size() } -&gt; PointConcept;</div>
+<div class="line">    { obj.volume() } -&gt; std::convertible_to&lt;<span class="keyword">decltype</span>(s)&gt;;</div>
+<div class="line">    { obj.dim(uint()) } -&gt; std::convertible_to&lt;<span class="keyword">decltype</span>(s)&gt;;</div>
+<div class="line">    { obj.minDim() } -&gt; std::convertible_to&lt;<span class="keyword">decltype</span>(s)&gt;;</div>
+<div class="line">    { obj.maxDim() } -&gt; std::convertible_to&lt;<span class="keyword">decltype</span>(s)&gt;;</div>
+<div class="line">    { obj.intersection(obj) } -&gt; std::convertible_to&lt;RemoveRef&lt;T&gt;&gt;;</div>
+<div class="line"> </div>
+<div class="line">    </div>
+<div class="line">    { obj == obj } -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line">    { obj != obj } -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line"> </div>
+<div class="line">    </div>
+<div class="line">    <span class="keyword">requires</span> IsConst&lt;T&gt; || <span class="keyword">requires</span> {</div>
+<div class="line">        { obj.min() } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(pR)&gt;;</div>
+<div class="line">        { obj.max() } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(pR)&gt;;</div>
 <div class="line"> </div>
 <div class="line">        </div>
-<div class="line">        { co.min() } -&gt; std::same_as&lt;const typename T::PointType&amp;&gt;;</div>
-<div class="line">        { <a class="code hl_class" href="classvcl_1_1Matrix.html">o</a>.min() } -&gt; std::same_as&lt;typename T::PointType&amp;&gt;;</div>
-<div class="line">        { co.max() } -&gt; std::same_as&lt;const typename T::PointType&amp;&gt;;</div>
-<div class="line">        { o.max() } -&gt; std::same_as&lt;typename T::PointType&amp;&gt;;</div>
-<div class="line"> </div>
-<div class="line">        </div>
-<div class="line">        { co.isNull() } -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line">        { co.isEmpty() } -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line"> </div>
-<div class="line">        </div>
-<div class="line">        { co.isInside(p) }  -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line">        { co.isInsideOpenBox(p) }  -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line"> </div>
-<div class="line">        </div>
-<div class="line">        { co.overlap(co) }  -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line">        { co.collide(co) }  -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line">        { co.intersects(co) }  -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line"> </div>
-<div class="line">        </div>
-<div class="line">        { co.diagonal() } -&gt; std::same_as&lt;typename T::PointType::ScalarType&gt;;</div>
-<div class="line">        { co.squaredDiagonal() } -&gt; std::same_as&lt;typename T::PointType::ScalarType&gt;;</div>
-<div class="line">        { co.center() } -&gt; std::same_as&lt;typename T::PointType&gt;;</div>
-<div class="line">        { co.size() } -&gt; std::same_as&lt;typename T::PointType&gt;;</div>
-<div class="line">        { co.volume() } -&gt; std::same_as&lt;typename T::PointType::ScalarType&gt;;</div>
-<div class="line">        { co.dim(<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>()) } -&gt; std::same_as&lt;typename T::PointType::ScalarType&gt;;</div>
-<div class="line">        { co.minDim() } -&gt; std::same_as&lt;typename T::PointType::ScalarType&gt;;</div>
-<div class="line">        { co.maxDim() } -&gt; std::same_as&lt;typename T::PointType::ScalarType&gt;;</div>
-<div class="line">        { co.intersection(co) } -&gt; std::same_as&lt;T&gt;;</div>
-<div class="line"> </div>
-<div class="line">        </div>
-<div class="line">        { o.setNull() } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">        { o.add(<span class="keyword">typename</span> T::PointType()) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">        { o.add(<span class="keyword">typename</span> T::PointType(), double()) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">        { o.add(co) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">        { o.translate(<span class="keyword">typename</span> T::PointType()) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line"> </div>
-<div class="line">        </div>
-<div class="line">        { co == co } -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line">        { co != co } -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line">        </div>
-<div class="line">    }</div>
-<div class="ttc" id="aclassvcl_1_1Matrix_html"><div class="ttname"><a href="classvcl_1_1Matrix.html">vcl::Matrix</a></div><div class="ttdef"><b>Definition</b> matrix.h:36</div></div>
-<div class="ttc" id="aconceptvcl_1_1BoxConcept_html"><div class="ttname"><a href="conceptvcl_1_1BoxConcept.html">vcl::BoxConcept</a></div><div class="ttdoc">A concept representing a N-Dimensional Box.</div><div class="ttdef"><b>Definition</b> box.h:41</div></div>
-<div class="ttc" id="anamespacevcl_html_af74b42dd9d759d565bb701a5b845d05c"><div class="ttname"><a href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">vcl::uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition</b> base.h:34</div></div>
+<div class="line">        { obj.setNull() } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">        { obj.add(p) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">        { obj.add(p, s) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">        { obj.add(obj) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">        { obj.translate(p) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">    };</div>
+<div class="line">}</div>
+<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:49</div></div>
+<div class="ttc" id="aclassvcl_1_1Box_html_a535809db66680a6de48f02fd371c68f7"><div class="ttname"><a href="classvcl_1_1Box.html#a535809db66680a6de48f02fd371c68f7">vcl::Box::max</a></div><div class="ttdeci">PointT &amp; max()</div><div class="ttdoc">Returns a reference to the maximum point of the box.</div><div class="ttdef"><b>Definition</b> box.h:107</div></div>
+<div class="ttc" id="aconceptvcl_1_1BoxConcept_html"><div class="ttname"><a href="conceptvcl_1_1BoxConcept.html">vcl::BoxConcept</a></div><div class="ttdoc">A concept representing a N-Dimensional Box.</div><div class="ttdef"><b>Definition</b> box.h:43</div></div>
+<div class="ttc" id="aconceptvcl_1_1PointConcept_html"><div class="ttname"><a href="conceptvcl_1_1PointConcept.html">vcl::PointConcept</a></div><div class="ttdoc">Concept for types representing points in Euclidean space.</div><div class="ttdef"><b>Definition</b> point.h:40</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A concept representing a N-Dimensional Box. </p>
 <p>This concept defines a set of requirements that must be satisfied by any type that wishes to be considered a Box. A Box is a geometric object that is defined by two points in space, typically referred to as the minimum and maximum corners of the box.</p>
@@ -171,7 +182,7 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1BoxConcept.html',''); in
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespacevcl.html">vcl</a></li><li class="navelem"><a class="el" href="conceptvcl_1_1BoxConcept.html">BoxConcept</a></li>
+    <li class="navelem"><b>vcl</b></li><li class="navelem"><a class="el" href="conceptvcl_1_1BoxConcept.html">BoxConcept</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

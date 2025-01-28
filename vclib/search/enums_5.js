@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vclibprincipalcurvaturealgorithm_0',['VCLibPrincipalCurvatureAlgorithm',['../namespacevcl.html#aaca879a6bfd47ff8429d6b2f6cfa9440',1,'vcl']]]
+  ['representation_0',['Representation',['../classvcl_1_1Color.html#a59da32385451a205500eea4432cc151d',1,'vcl::Color']]]
 ];

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visual Computing Library: include/vclib/types/const_correctness.h Source File</title>
+<title>Visual Computing Library: vclib/core/include/vclib/types/const_correctness.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -104,11 +104,11 @@ $(document).ready(function(){initNavTree('types_2const__correctness_8h_source.ht
   <div class="headertitle"><div class="title">const_correctness.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="types_2const__correctness_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2024                                                    *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2025                                                    *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
@@ -132,80 +132,77 @@ $(document).ready(function(){initNavTree('types_2const__correctness_8h_source.ht
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;type_traits&gt;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span>vcl {</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="foldopen" id="foldopen00043" data-start="{" data-end="};">
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="structvcl_1_1MakeConstPointer.html">   43</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1MakeConstPointer.html">MakeConstPointer</a></div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>{</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="structvcl_1_1MakeConstPointer.html#a0d5b6e8799bbacc2459c5bc708c69825">   45</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="structvcl_1_1MakeConstPointer.html#a0d5b6e8799bbacc2459c5bc708c69825">type</a> = T;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">using </span>type = T;</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>};</div>
 </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00052" data-start="{" data-end="};">
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="structvcl_1_1MakeConstPointer_3_01T_01_5_01_4.html">   52</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1MakeConstPointer.html">MakeConstPointer</a>&lt;T*&gt;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>{</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="structvcl_1_1MakeConstPointer_3_01T_01_5_01_4.html#a255fd5577bda8c2d5d035429ba7f0b2e">   54</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="structvcl_1_1MakeConstPointer_3_01T_01_5_01_4.html#a255fd5577bda8c2d5d035429ba7f0b2e">type</a> = <span class="keyword">const</span> T*;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>};</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="};">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="structvcl_1_1MakeConstPointer_3_01T_01_5_01_4.html">   54</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1MakeConstPointer.html">MakeConstPointer</a>&lt;T*&gt;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>{</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">using </span>type = <span class="keyword">const</span> T*;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>};</div>
 </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1MakeConstPointer.html">MakeConstPointer</a>&lt;std::shared_ptr&lt;T&gt;&gt;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>{</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">using </span><a class="code hl_typedef" href="structvcl_1_1MakeConstPointer.html#a0d5b6e8799bbacc2459c5bc708c69825">type</a> = std::shared_ptr&lt;const T&gt;;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>};</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="group__types.html#gaacc96304be3365c944d0239dd550f74e">   74</a></span><span class="keyword">using </span><a class="code hl_typedef" href="group__types.html#gaacc96304be3365c944d0239dd550f74e">MakeConstPointerT</a> = <span class="keyword">typename</span> <a class="code hl_typedef" href="structvcl_1_1MakeConstPointer.html#a0d5b6e8799bbacc2459c5bc708c69825">MakeConstPointer&lt;T&gt;::type</a>;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">/*</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment"> * Full deduction for the possibility to re-use same code for const and</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment"> * non-const member functions https://stackoverflow.com/a/47369227/5851101</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00099" data-start="{" data-end="}">
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="group__types.html#ga9ca8accd2e2b6881a3b2359e56396e77">   99</a></span><span class="keyword">constexpr</span> T&amp; <a class="code hl_function" href="group__types.html#ga9ca8accd2e2b6881a3b2359e56396e77">asConst</a>(<span class="keyword">const</span> T&amp; value) <span class="keyword">noexcept</span></div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>{</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordflow">return</span> <span class="keyword">const_cast&lt;</span>T&amp;<span class="keyword">&gt;</span>(value);</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>}</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1MakeConstPointer.html">MakeConstPointer</a>&lt;std::shared_ptr&lt;T&gt;&gt;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>{</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keyword">using </span>type = std::shared_ptr&lt;const T&gt;;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>};</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="group__types.html#gaacc96304be3365c944d0239dd550f74e">   78</a></span><span class="keyword">using </span><a class="code hl_typedef" href="group__types.html#gaacc96304be3365c944d0239dd550f74e">MakeConstPointerT</a> = <span class="keyword">typename</span> MakeConstPointer&lt;T&gt;::type;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment"> * Full deduction for the possibility to re-use same code for const and</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment"> * non-const member functions https://stackoverflow.com/a/47369227/5851101</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00103" data-start="{" data-end="}">
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="group__types.html#ga9ca8accd2e2b6881a3b2359e56396e77">  103</a></span><span class="keyword">constexpr</span> T&amp; <a class="code hl_function" href="group__types.html#ga9ca8accd2e2b6881a3b2359e56396e77">asConst</a>(<span class="keyword">const</span> T&amp; value) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>{</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordflow">return</span> <span class="keyword">const_cast&lt;</span>T&amp;<span class="keyword">&gt;</span>(value);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>}</div>
 </div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00108" data-start="{" data-end="}">
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="namespacevcl.html#a943a3fda661e6e71d8fd7106f41dd878">  108</a></span><span class="keyword">constexpr</span> T* <a class="code hl_function" href="group__types.html#ga9ca8accd2e2b6881a3b2359e56396e77">asConst</a>(<span class="keyword">const</span> T* value) <span class="keyword">noexcept</span></div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>{</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordflow">return</span> <span class="keyword">const_cast&lt;</span>T*<span class="keyword">&gt;</span>(value);</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>}</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00114" data-start="{" data-end="}">
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="group__types.html#ga943a3fda661e6e71d8fd7106f41dd878">  114</a></span><span class="keyword">constexpr</span> T* <a class="code hl_function" href="group__types.html#ga9ca8accd2e2b6881a3b2359e56396e77">asConst</a>(<span class="keyword">const</span> T* value) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>{</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordflow">return</span> <span class="keyword">const_cast&lt;</span>T*<span class="keyword">&gt;</span>(value);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>}</div>
 </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00117" data-start="{" data-end="}">
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="namespacevcl.html#abe5c457181ae725f99627c541993a3a8">  117</a></span><span class="keyword">constexpr</span> T* <a class="code hl_function" href="group__types.html#ga9ca8accd2e2b6881a3b2359e56396e77">asConst</a>(T* value) <span class="keyword">noexcept</span></div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>{</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordflow">return</span> value;</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>}</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00125" data-start="{" data-end="}">
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="group__types.html#gabe5c457181ae725f99627c541993a3a8">  125</a></span><span class="keyword">constexpr</span> T* <a class="code hl_function" href="group__types.html#ga9ca8accd2e2b6881a3b2359e56396e77">asConst</a>(T* value) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>{</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keywordflow">return</span> value;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>}</div>
 </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="namespacevcl.html#a58e916cd5d73eca35e6f8ae1be248637">  123</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__types.html#ga9ca8accd2e2b6881a3b2359e56396e77">asConst</a>(<span class="keyword">const</span> T&amp;&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="preprocessor">#endif </span><span class="comment">// VCL_TYPES_CONST_CORRECTNESS_H</span></div>
-<div class="ttc" id="agroup__types_html_ga9ca8accd2e2b6881a3b2359e56396e77"><div class="ttname"><a href="group__types.html#ga9ca8accd2e2b6881a3b2359e56396e77">vcl::asConst</a></div><div class="ttdeci">constexpr T &amp; asConst(const T &amp;value) noexcept</div><div class="ttdoc">Utility function that converts a const pointer/reference to a non-const pointer/reference.</div><div class="ttdef"><b>Definition</b> const_correctness.h:99</div></div>
-<div class="ttc" id="agroup__types_html_gaacc96304be3365c944d0239dd550f74e"><div class="ttname"><a href="group__types.html#gaacc96304be3365c944d0239dd550f74e">vcl::MakeConstPointerT</a></div><div class="ttdeci">typename MakeConstPointer&lt; T &gt;::type MakeConstPointerT</div><div class="ttdoc">Utility alias for the MakeConstPointer type.</div><div class="ttdef"><b>Definition</b> const_correctness.h:74</div></div>
-<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition</b> bounding_box.h:48</div></div>
-<div class="ttc" id="astructvcl_1_1MakeConstPointer_3_01T_01_5_01_4_html_a255fd5577bda8c2d5d035429ba7f0b2e"><div class="ttname"><a href="structvcl_1_1MakeConstPointer_3_01T_01_5_01_4.html#a255fd5577bda8c2d5d035429ba7f0b2e">vcl::MakeConstPointer&lt; T * &gt;::type</a></div><div class="ttdeci">const T * type</div><div class="ttdef"><b>Definition</b> const_correctness.h:54</div></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__types.html#ga9ca8accd2e2b6881a3b2359e56396e77">asConst</a>(<span class="keyword">const</span> T&amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="preprocessor">#endif </span><span class="comment">// VCL_TYPES_CONST_CORRECTNESS_H</span></div>
+<div class="ttc" id="agroup__types_html_ga9ca8accd2e2b6881a3b2359e56396e77"><div class="ttname"><a href="group__types.html#ga9ca8accd2e2b6881a3b2359e56396e77">vcl::asConst</a></div><div class="ttdeci">constexpr T &amp; asConst(const T &amp;value) noexcept</div><div class="ttdoc">Utility function that converts a const pointer/reference to a non-const pointer/reference.</div><div class="ttdef"><b>Definition</b> const_correctness.h:103</div></div>
+<div class="ttc" id="agroup__types_html_gaacc96304be3365c944d0239dd550f74e"><div class="ttname"><a href="group__types.html#gaacc96304be3365c944d0239dd550f74e">vcl::MakeConstPointerT</a></div><div class="ttdeci">typename MakeConstPointer&lt; T &gt;::type MakeConstPointerT</div><div class="ttdoc">Utility alias for the MakeConstPointer type.</div><div class="ttdef"><b>Definition</b> const_correctness.h:78</div></div>
 <div class="ttc" id="astructvcl_1_1MakeConstPointer_html"><div class="ttname"><a href="structvcl_1_1MakeConstPointer.html">vcl::MakeConstPointer</a></div><div class="ttdoc">Utility type that makes possible to treat const pointers in a templated class that can treat a both c...</div><div class="ttdef"><b>Definition</b> const_correctness.h:44</div></div>
-<div class="ttc" id="astructvcl_1_1MakeConstPointer_html_a0d5b6e8799bbacc2459c5bc708c69825"><div class="ttname"><a href="structvcl_1_1MakeConstPointer.html#a0d5b6e8799bbacc2459c5bc708c69825">vcl::MakeConstPointer::type</a></div><div class="ttdeci">T type</div><div class="ttdef"><b>Definition</b> const_correctness.h:45</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d2fdbf172f8ae9790b339bfcb66b3af7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_e102405455576d9ff546bfbc8ea68757.html">types</a></li><li class="navelem"><a class="el" href="types_2const__correctness_8h.html">const_correctness.h</a></li>
+    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_ae5876ed1a21dfe8c57b4e8d41da885b.html">types</a></li><li class="navelem"><b>const_correctness.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

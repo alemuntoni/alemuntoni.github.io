@@ -1,11 +1,7 @@
 var classvcl_1_1comp_1_1AdjacentFaces =
 [
-    [ "AdjacentFaceIterator", "classvcl_1_1comp_1_1AdjacentFaces.html#abb7f5e45d200d254251db1879e7129dd", null ],
     [ "AdjacentFaceType", "classvcl_1_1comp_1_1AdjacentFaces.html#a628fc5696e394f6f431a704e191c5d3b", null ],
-    [ "ConstAdjacentFaceIndexIterator", "classvcl_1_1comp_1_1AdjacentFaces.html#ab960872046ffc1e806130c22393501e5", null ],
-    [ "ConstAdjacentFaceIterator", "classvcl_1_1comp_1_1AdjacentFaces.html#ab89d66228406ca24f412f2d6e9c483a8", null ],
     [ "AdjacentFaces", "classvcl_1_1comp_1_1AdjacentFaces.html#ac4e84803e00028a144e02b0eeae644c6", null ],
-    [ "__adjacentFaces", "classvcl_1_1comp_1_1AdjacentFaces.html#a22c9df70e42572303a68674e062618b3", null ],
     [ "adjFace", "classvcl_1_1comp_1_1AdjacentFaces.html#aa5d67e5d2fd25e9234aff3a74a05e978", null ],
     [ "adjFace", "classvcl_1_1comp_1_1AdjacentFaces.html#a79542e1e4c78267dfdd4a2ecc1fcb7c6", null ],
     [ "adjFaceBegin", "classvcl_1_1comp_1_1AdjacentFaces.html#a646be9c8cdc006eeda0cab27a73ccc2d", null ],
@@ -25,9 +21,7 @@ var classvcl_1_1comp_1_1AdjacentFaces =
     [ "clearAdjFaces", "classvcl_1_1comp_1_1AdjacentFaces.html#a8817b4212bfeb9a76bb07663e3ab0756", null ],
     [ "containsAdjFace", "classvcl_1_1comp_1_1AdjacentFaces.html#a81949d55c0f4d7793f57a523fbffc348", null ],
     [ "containsAdjFace", "classvcl_1_1comp_1_1AdjacentFaces.html#ac71ff6576d6da05371f35b0aec87a228", null ],
-    [ "deserialize", "classvcl_1_1comp_1_1AdjacentFaces.html#abd0021f3515878c5f4bbb301023ab08c", null ],
     [ "eraseAdjFace", "classvcl_1_1comp_1_1AdjacentFaces.html#ae8d6e5b90fc327b2f015d02ed2f0f251", null ],
-    [ "importFrom", "classvcl_1_1comp_1_1AdjacentFaces.html#a6bc9703880b13c4457e3e46f261b61f1", null ],
     [ "indexOfAdjFace", "classvcl_1_1comp_1_1AdjacentFaces.html#a6bdc4f7a60b7519df571dc33771c5446", null ],
     [ "indexOfAdjFace", "classvcl_1_1comp_1_1AdjacentFaces.html#a75d34bed34447f350d15c248abd879f2", null ],
     [ "insertAdjFace", "classvcl_1_1comp_1_1AdjacentFaces.html#accba199f83752de2ec5fcb66d731a86f", null ],
@@ -35,7 +29,6 @@ var classvcl_1_1comp_1_1AdjacentFaces =
     [ "pushAdjFace", "classvcl_1_1comp_1_1AdjacentFaces.html#a60f33225270061c89afb8b9e103892e1", null ],
     [ "pushAdjFace", "classvcl_1_1comp_1_1AdjacentFaces.html#a7b3c5591a323f38281c8409fc9053ad4", null ],
     [ "resizeAdjFaces", "classvcl_1_1comp_1_1AdjacentFaces.html#a841d8af03d2d929e4671f5397ffc538f", null ],
-    [ "serialize", "classvcl_1_1comp_1_1AdjacentFaces.html#a0c59d11622ca7d8be82ff19f23ce3722", null ],
     [ "setAdjFace", "classvcl_1_1comp_1_1AdjacentFaces.html#a5ae26b6cfd36db23c549af917ba0f10b", null ],
     [ "setAdjFace", "classvcl_1_1comp_1_1AdjacentFaces.html#acc3a242a866f39d07f04e652952adb27", null ],
     [ "setAdjFace", "classvcl_1_1comp_1_1AdjacentFaces.html#a6336a789c177d3e43fac8f0fa9b00183", null ],
@@ -44,7 +37,7 @@ var classvcl_1_1comp_1_1AdjacentFaces =
     [ "setAdjFace", "classvcl_1_1comp_1_1AdjacentFaces.html#a2b8aeb381747461148daf3914fac1b2d", null ],
     [ "setAdjFaceMod", "classvcl_1_1comp_1_1AdjacentFaces.html#a5357e3737058323eaed2802753a7b6f4", null ],
     [ "setAdjFaceMod", "classvcl_1_1comp_1_1AdjacentFaces.html#a9e3fdc1ea6f0234ced228e85600f1d82", null ],
-    [ "setAdjFaces", "classvcl_1_1comp_1_1AdjacentFaces.html#a8563ca0d2592fef768041fa20c44658d", null ],
-    [ "setAdjFaces", "classvcl_1_1comp_1_1AdjacentFaces.html#a797deab1e59215e2c01442b903351c99", null ],
+    [ "setAdjFaces", "classvcl_1_1comp_1_1AdjacentFaces.html#aba809bafa2607a499a2805f3c1fa8c81", null ],
+    [ "setAdjFaces", "classvcl_1_1comp_1_1AdjacentFaces.html#a152a8a1f7faee4d58b1db87735bb43f4", null ],
     [ "ADJ_FACE_NUMBER", "classvcl_1_1comp_1_1AdjacentFaces.html#a6b8a02df9bc585eeb245f12f12bad1bf", null ]
 ];

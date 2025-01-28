@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visual Computing Library: include/vclib/algorithms/mesh/stat/geometry.h Source File</title>
+<title>Visual Computing Library: vclib/core/include/vclib/algorithms/mesh/stat/geometry.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -104,11 +104,11 @@ $(document).ready(function(){initNavTree('mesh_2stat_2geometry_8h_source.html','
   <div class="headertitle"><div class="title">geometry.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="mesh_2stat_2geometry_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2024                                                    *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2025                                                    *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
@@ -129,226 +129,197 @@ $(document).ready(function(){initNavTree('mesh_2stat_2geometry_8h_source.html','
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_ALGORITHMS_MESH_STAT_GEOMETRY_H</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_ALGORITHMS_MESH_STAT_GEOMETRY_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;<a class="code" href="face__topology_8h.html">vclib/algorithms/mesh/face_topology.h</a>&gt;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="mesh__inertia_8h.html">vclib/space/complex/mesh_inertia.h</a>&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="space_2core_2matrix_8h.html">vclib/space/core/matrix.h</a>&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &quot;<a class="code" href="barycenter_8h.html">barycenter.h</a>&quot;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;barycenter.h&quot;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;vclib/algorithms/mesh/face_topology.h&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;vclib/space/complex/mesh_inertia.h&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;vclib/space/core/matrix.h&gt;</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">namespace </span>vcl {</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">template</span>&lt;FaceMeshConcept MeshType&gt;</div>
-<div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="namespacevcl.html#a9a3eb7aeb0da02be51ca136620616b43">   42</a></span><span class="keywordtype">double</span> <a class="code hl_function" href="namespacevcl.html#a9a3eb7aeb0da02be51ca136620616b43">volume</a>(<span class="keyword">const</span> MeshType&amp; <a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>)</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keywordtype">double</span> volume(<span class="keyword">const</span> MeshType&amp; m)</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>{</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <a class="code hl_class" href="classvcl_1_1Matrix.html">MeshInertia&lt;MeshType&gt;</a> <a class="code hl_class" href="classvcl_1_1Matrix.html">i</a>(<a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">i</a>.volume();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    MeshInertia&lt;MeshType&gt; i(m);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordflow">return</span> i.volume();</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
-</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keyword">template</span>&lt;FaceMeshConcept MeshType&gt;</div>
-<div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="namespacevcl.html#a5dfa8d4e30b457c12c3e5e21b4fc123a">   56</a></span><span class="keywordtype">double</span> <a class="code hl_function" href="namespacevcl.html#a5dfa8d4e30b457c12c3e5e21b4fc123a">surfaceArea</a>(<span class="keyword">const</span> MeshType&amp; <a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>)</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keywordtype">double</span> surfaceArea(<span class="keyword">const</span> MeshType&amp; m)</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>{</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">using </span>FaceType = MeshType::FaceType;</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">double</span> area = 0;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> FaceType&amp; f : <a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>.faces()) {</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        area += <a class="code hl_function" href="namespacevcl.html#a9fc3b9cae851d7a729f40dc2f4ebe824">faceArea</a>(f);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> FaceType&amp; f : m.<a class="code hl_variable" href="group__views.html#ga33947d4d6db5271a84ac1ae5555d50d7">faces</a>()) {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        area += <a class="code hl_function" href="group__core__polygon.html#ga9fc3b9cae851d7a729f40dc2f4ebe824">faceArea</a>(f);</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordflow">return</span> area;</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>}</div>
-</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keyword">template</span>&lt;FaceMeshConcept MeshType&gt;</div>
-<div class="foldopen" id="foldopen00075" data-start="{" data-end="}">
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="namespacevcl.html#a86c0811cfbc37a3b319d57902e81e949">   75</a></span><span class="keywordtype">double</span> <a class="code hl_function" href="namespacevcl.html#a86c0811cfbc37a3b319d57902e81e949">borderLength</a>(<span class="keyword">const</span> MeshType&amp; <a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>)</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keywordtype">double</span> borderLength(<span class="keyword">const</span> MeshType&amp; m)</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>{</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keyword">using </span>FaceType = MeshType::FaceType;</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordtype">double</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">l</a> = 0;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> FaceType&amp; f : <a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>.faces()) {</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> <a class="code hl_class" href="classvcl_1_1Matrix.html">i</a> = 0; <a class="code hl_class" href="classvcl_1_1Matrix.html">i</a> &lt; f.vertexNumber(); ++<a class="code hl_class" href="classvcl_1_1Matrix.html">i</a>) {</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keywordflow">if</span> (f.adjFace(<a class="code hl_class" href="classvcl_1_1Matrix.html">i</a>) == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                <a class="code hl_class" href="classvcl_1_1Matrix.html">l</a> += f.vertex(<a class="code hl_class" href="classvcl_1_1Matrix.html">i</a>)-&gt;coord().dist(f.vertexMod(<a class="code hl_class" href="classvcl_1_1Matrix.html">i</a> + 1)-&gt;coord());</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordtype">double</span> l = 0;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> FaceType&amp; f : m.<a class="code hl_variable" href="group__views.html#ga33947d4d6db5271a84ac1ae5555d50d7">faces</a>()) {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordflow">for</span> (uint i = 0; i &lt; f.vertexNumber(); ++i) {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keywordflow">if</span> (f.adjFace(i) == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                l += f.vertex(i)-&gt;coord().dist(f.vertexMod(i + 1)-&gt;coord());</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            }</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        }</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">l</a>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordflow">return</span> l;</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>}</div>
-</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="keyword">template</span>&lt;MeshConcept MeshType&gt;</div>
-<div class="foldopen" id="foldopen00101" data-start="{" data-end="}">
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="namespacevcl.html#a46a67e9dd1e0a9805f812c10328caaa2">  101</a></span><span class="keyword">auto</span> <a class="code hl_function" href="namespacevcl.html#af9fd633374c0d8ab86df9e354a9a0fb5">covarianceMatrixOfPointCloud</a>(<span class="keyword">const</span> MeshType&amp; <a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>)</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="keyword">auto</span> covarianceMatrixOfPointCloud(<span class="keyword">const</span> MeshType&amp; m)</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>{</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keyword">using </span>VertexType = MeshType::VertexType;</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keyword">using </span>ScalarType = VertexType::CoordType::ScalarType;</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keyword">auto</span> <a class="code hl_function" href="namespacevcl.html#a66e2e1e0ec5d91e9def735ecf4f84b0e">barycenter</a> = <a class="code hl_function" href="namespacevcl.html#a66e2e1e0ec5d91e9def735ecf4f84b0e">vcl::barycenter</a>(<a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keyword">auto</span> bar = barycenter(m);</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <a class="code hl_class" href="classvcl_1_1Matrix.html">Matrix33&lt;ScalarType&gt;</a> <a class="code hl_class" href="classvcl_1_1Matrix.html">mm</a>;</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <a class="code hl_class" href="classvcl_1_1Matrix.html">mm</a>.setZero();</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    Matrix33&lt;ScalarType&gt; mm;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    mm.setZero();</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="comment">// compute covariance matrix</span></div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> VertexType&amp; v : <a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>.vertices()) {</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keyword">auto</span> e = v.coord() - <a class="code hl_function" href="namespacevcl.html#a66e2e1e0ec5d91e9def735ecf4f84b0e">barycenter</a>;</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">m</a> += e.outerProduct(e);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> VertexType&amp; v : m.<a class="code hl_variable" href="group__views.html#gae55a7544cb59464c26959bcc4cec23ea">vertices</a>()) {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keyword">auto</span> e = v.coord() - bar;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        m += e.outerProduct(e);</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    }</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keywordflow">return</span> m;</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>}</div>
-</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="keyword">template</span>&lt;FaceMeshConcept MeshType&gt;</div>
-<div class="foldopen" id="foldopen00127" data-start="{" data-end="}">
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="namespacevcl.html#a49e57acf0c1cb51e98f7a176051d99ee">  127</a></span><span class="keyword">auto</span> <a class="code hl_function" href="namespacevcl.html#a49e57acf0c1cb51e98f7a176051d99ee">covarianceMatrixOfMesh</a>(<span class="keyword">const</span> MeshType&amp; <a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>)</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="keyword">auto</span> covarianceMatrixOfMesh(<span class="keyword">const</span> MeshType&amp; m)</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>{</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keyword">using </span>VertexType = MeshType::VertexType;</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keyword">using </span>FaceType   = MeshType::FaceType;</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keyword">using </span>CoordType  = VertexType::CoordType;</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keyword">using </span>ScalarType = CoordType::ScalarType;</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    CoordType            <a class="code hl_class" href="classvcl_1_1Matrix.html">bar</a> = <a class="code hl_function" href="namespacevcl.html#aecc52dfd02e09e49a5dd1612183a2cb8">shellBarycenter</a>(<a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>);</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <a class="code hl_class" href="classvcl_1_1Matrix.html">Matrix33&lt;ScalarType&gt;</a> <a class="code hl_class" href="classvcl_1_1Matrix.html">C</a>;</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <a class="code hl_class" href="classvcl_1_1Matrix.html">C</a>.setZero();</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <a class="code hl_class" href="classvcl_1_1Matrix.html">Matrix33&lt;ScalarType&gt;</a> <a class="code hl_class" href="classvcl_1_1Matrix.html">C0</a>;</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <a class="code hl_class" href="classvcl_1_1Matrix.html">C0</a>.setZero();</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <a class="code hl_class" href="classvcl_1_1Matrix.html">C0</a>(0, 0) = <a class="code hl_class" href="classvcl_1_1Matrix.html">C0</a>(1, 1) = 2.0;</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <a class="code hl_class" href="classvcl_1_1Matrix.html">C0</a>(0, 1) = <a class="code hl_class" href="classvcl_1_1Matrix.html">C0</a>(1, 0) = 1.0;</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <a class="code hl_class" href="classvcl_1_1Matrix.html">C0</a> *= 1 / 24.0;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    CoordType            bar = shellBarycenter(m);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    Matrix33&lt;ScalarType&gt; C;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    C.setZero();</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    Matrix33&lt;ScalarType&gt; C0;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    C0.setZero();</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    C0(0, 0) = C0(1, 1) = 2.0;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    C0(0, 1) = C0(1, 0) = 1.0;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    C0 *= 1 / 24.0;</div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="comment">// integral of (x,y,0) in the same triangle</span></div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    Eigen::Vector3&lt;ScalarType&gt; x;</div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    x &lt;&lt; 1 / 6.0, 1 / 6.0, 0;</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <a class="code hl_class" href="classvcl_1_1Matrix.html">Matrix33&lt;ScalarType&gt;</a> <a class="code hl_class" href="classvcl_1_1Matrix.html">A</a>; <span class="comment">// matrix that bring the vertices to (v1-v0,v2-v0,n)</span></div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <a class="code hl_class" href="classvcl_1_1Matrix.html">Matrix33&lt;ScalarType&gt;</a> <a class="code hl_class" href="classvcl_1_1Matrix.html">DC</a>;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    Matrix33&lt;ScalarType&gt; A; <span class="comment">// matrix that bring the vertices to (v1-v0,v2-v0,n)</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    Matrix33&lt;ScalarType&gt; DC;</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> FaceType&amp; f : <a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>.faces()) {</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> FaceType&amp; f : m.<a class="code hl_variable" href="group__views.html#ga33947d4d6db5271a84ac1ae5555d50d7">faces</a>()) {</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        <span class="keyword">const</span> CoordType&amp; p0 = f.vertex(0)-&gt;coord();</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        <span class="keyword">const</span> CoordType&amp; p1 = f.vertex(1)-&gt;coord();</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        <span class="keyword">const</span> CoordType&amp; <a class="code hl_class" href="classvcl_1_1Matrix.html">p2</a> = f.vertex(2)-&gt;coord();</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        CoordType        <a class="code hl_class" href="classvcl_1_1Matrix.html">n</a>  = (p1 - p0).<a class="code hl_class" href="classvcl_1_1Matrix.html">cross</a>(<a class="code hl_class" href="classvcl_1_1Matrix.html">p2</a> - p0);</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <span class="keywordtype">double</span>           <a class="code hl_class" href="classvcl_1_1Matrix.html">da</a> = <a class="code hl_class" href="classvcl_1_1Matrix.html">n</a>.norm();</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">n</a> /= <a class="code hl_class" href="classvcl_1_1Matrix.html">da</a> * <a class="code hl_class" href="classvcl_1_1Matrix.html">da</a>;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        <span class="keyword">const</span> CoordType&amp; p2 = f.vertex(2)-&gt;coord();</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        CoordType        n  = (p1 - p0).cross(p2 - p0);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <span class="keywordtype">double</span>           da = n.norm();</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        n /= da * da;</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        CoordType <a class="code hl_class" href="classvcl_1_1Matrix.html">tmpp</a> = p1 - p0;</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> <a class="code hl_class" href="classvcl_1_1Matrix.html">j</a> = 0; <a class="code hl_class" href="classvcl_1_1Matrix.html">j</a> &lt; 3; <a class="code hl_class" href="classvcl_1_1Matrix.html">j</a>++)</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            <a class="code hl_class" href="classvcl_1_1Matrix.html">A</a>(<a class="code hl_class" href="classvcl_1_1Matrix.html">j</a>, 0) = <a class="code hl_class" href="classvcl_1_1Matrix.html">tmpp</a>(<a class="code hl_class" href="classvcl_1_1Matrix.html">j</a>);</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">tmpp</a> = <a class="code hl_class" href="classvcl_1_1Matrix.html">p2</a> - p0;</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> <a class="code hl_class" href="classvcl_1_1Matrix.html">j</a> = 0; <a class="code hl_class" href="classvcl_1_1Matrix.html">j</a> &lt; 3; <a class="code hl_class" href="classvcl_1_1Matrix.html">j</a>++)</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            <a class="code hl_class" href="classvcl_1_1Matrix.html">A</a>(<a class="code hl_class" href="classvcl_1_1Matrix.html">j</a>, 1) = <a class="code hl_class" href="classvcl_1_1Matrix.html">tmpp</a>(<a class="code hl_class" href="classvcl_1_1Matrix.html">j</a>);</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> <a class="code hl_class" href="classvcl_1_1Matrix.html">j</a> = 0; <a class="code hl_class" href="classvcl_1_1Matrix.html">j</a> &lt; 3; <a class="code hl_class" href="classvcl_1_1Matrix.html">j</a>++)</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>            <a class="code hl_class" href="classvcl_1_1Matrix.html">A</a>(<a class="code hl_class" href="classvcl_1_1Matrix.html">j</a>, 2) = <a class="code hl_class" href="classvcl_1_1Matrix.html">n</a>(<a class="code hl_class" href="classvcl_1_1Matrix.html">j</a>);</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        Eigen::Vector3&lt;ScalarType&gt; <a class="code hl_class" href="classvcl_1_1Matrix.html">delta</a>;</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">tmpp</a> = p0 - <a class="code hl_class" href="classvcl_1_1Matrix.html">bar</a>;</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> <a class="code hl_class" href="classvcl_1_1Matrix.html">j</a> = 0; <a class="code hl_class" href="classvcl_1_1Matrix.html">j</a> &lt; 3; <a class="code hl_class" href="classvcl_1_1Matrix.html">j</a>++)</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            <a class="code hl_class" href="classvcl_1_1Matrix.html">delta</a>(<a class="code hl_class" href="classvcl_1_1Matrix.html">j</a>) = <a class="code hl_class" href="classvcl_1_1Matrix.html">tmpp</a>(<a class="code hl_class" href="classvcl_1_1Matrix.html">j</a>);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        CoordType tmpp = p1 - p0;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <span class="keywordflow">for</span> (uint j = 0; j &lt; 3; j++)</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            A(j, 0) = tmpp(j);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        tmpp = p2 - p0;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        <span class="keywordflow">for</span> (uint j = 0; j &lt; 3; j++)</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            A(j, 1) = tmpp(j);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        <span class="keywordflow">for</span> (uint j = 0; j &lt; 3; j++)</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>            A(j, 2) = n(j);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        Eigen::Vector3&lt;ScalarType&gt; delta;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        tmpp = p0 - bar;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        <span class="keywordflow">for</span> (uint j = 0; j &lt; 3; j++)</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            delta(j) = tmpp(j);</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        <span class="comment">/* DC is calculated as integral of (A*x+delta) * (A*x+delta)^T over the</span></div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="comment">         * triangle, where delta = v0-bary */</span></div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">DC</a>.setZero();</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">DC</a> += <a class="code hl_class" href="classvcl_1_1Matrix.html">A</a> * <a class="code hl_class" href="classvcl_1_1Matrix.html">C0</a> * <a class="code hl_class" href="classvcl_1_1Matrix.html">A</a>.transpose();</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">Matrix33&lt;ScalarType&gt;</a> <a class="code hl_class" href="classvcl_1_1Matrix.html">tmp</a> = (<a class="code hl_class" href="classvcl_1_1Matrix.html">A</a> * x) * <a class="code hl_class" href="classvcl_1_1Matrix.html">delta</a>.transpose();</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">DC</a> += <a class="code hl_class" href="classvcl_1_1Matrix.html">tmp</a> + <a class="code hl_class" href="classvcl_1_1Matrix.html">tmp</a>.transpose();</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">DC</a> += <a class="code hl_class" href="classvcl_1_1Matrix.html">tmp</a>;</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">tmp</a> = <a class="code hl_class" href="classvcl_1_1Matrix.html">delta</a> * <a class="code hl_class" href="classvcl_1_1Matrix.html">delta</a>.transpose();</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">DC</a> += <a class="code hl_class" href="classvcl_1_1Matrix.html">tmp</a> * 0.5;</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">DC</a> *= <a class="code hl_class" href="classvcl_1_1Matrix.html">da</a>; <span class="comment">// the determinant of A is also the double area of f</span></div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">C</a> += <a class="code hl_class" href="classvcl_1_1Matrix.html">DC</a>;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        DC.setZero();</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        DC += A * C0 * A.transpose();</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        Matrix33&lt;ScalarType&gt; tmp = (A * x) * delta.transpose();</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        DC += tmp + tmp.transpose();</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        DC += tmp;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        tmp = delta * delta.transpose();</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        DC += tmp * 0.5;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        DC *= da; <span class="comment">// the determinant of A is also the double area of f</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        C += DC;</div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    }</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">C</a>;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <span class="keywordflow">return</span> C;</div>
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>}</div>
-</div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="keyword">template</span>&lt;MeshConcept MeshType, <span class="keyword">typename</span> ScalarType&gt;</div>
-<div class="foldopen" id="foldopen00199" data-start="{" data-end="}">
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno"><a class="line" href="namespacevcl.html#a598979803f34d74d1c4c9d4599d01eb8">  199</a></span>std::vector&lt;ScalarType&gt; <a class="code hl_function" href="namespacevcl.html#a598979803f34d74d1c4c9d4599d01eb8">vertexRadiusFromWeights</a>(</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <span class="keyword">const</span> MeshType&amp;                <a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>,</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    <span class="keyword">const</span> std::vector&lt;ScalarType&gt;&amp; <a class="code hl_class" href="classvcl_1_1Matrix.html">weights</a>,</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <span class="keywordtype">double</span>                         <a class="code hl_class" href="classvcl_1_1Matrix.html">diskRadius</a>,</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <span class="keywordtype">double</span>                         <a class="code hl_class" href="classvcl_1_1Matrix.html">radiusVariance</a>,</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    <span class="keywordtype">bool</span>                           <a class="code hl_class" href="classvcl_1_1Matrix.html">invert</a> = <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>std::vector&lt;ScalarType&gt; vertexRadiusFromWeights(</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <span class="keyword">const</span> MeshType&amp;                m,</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    <span class="keyword">const</span> std::vector&lt;ScalarType&gt;&amp; weights,</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <span class="keywordtype">double</span>                         diskRadius,</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <span class="keywordtype">double</span>                         radiusVariance,</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    <span class="keywordtype">bool</span>                           invert = <span class="keyword">false</span>)</div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>{</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    <span class="keyword">using </span>VertexType = MeshType::VertexType;</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    std::vector&lt;ScalarType&gt; radius(<a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>.vertexContainerSize());</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <span class="keyword">auto</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">minmax</a> = std::minmax_element(<a class="code hl_class" href="classvcl_1_1Matrix.html">weights</a>.begin(), <a class="code hl_class" href="classvcl_1_1Matrix.html">weights</a>.end());</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    std::vector&lt;ScalarType&gt; radius(m.vertexContainerSize());</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <span class="keyword">auto</span> minmax = std::minmax_element(weights.begin(), weights.end());</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <span class="keywordtype">float</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">minRad</a>   = <a class="code hl_class" href="classvcl_1_1Matrix.html">diskRadius</a>;</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <span class="keywordtype">float</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">maxRad</a>   = <a class="code hl_class" href="classvcl_1_1Matrix.html">diskRadius</a> * <a class="code hl_class" href="classvcl_1_1Matrix.html">radiusVariance</a>;</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <span class="keywordtype">float</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">deltaQ</a>   = *<a class="code hl_class" href="classvcl_1_1Matrix.html">minmax</a>.second - *<a class="code hl_class" href="classvcl_1_1Matrix.html">minmax</a>.first;</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <span class="keywordtype">float</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">deltaRad</a> = <a class="code hl_class" href="classvcl_1_1Matrix.html">maxRad</a> - <a class="code hl_class" href="classvcl_1_1Matrix.html">minRad</a>;</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> VertexType&amp; v : <a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>.vertices()) {</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        ScalarType w = <a class="code hl_class" href="classvcl_1_1Matrix.html">weights</a>[<a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>.index(v)];</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        radius[<a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>.index(v)] =</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>            <a class="code hl_class" href="classvcl_1_1Matrix.html">minRad</a> +</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            <a class="code hl_class" href="classvcl_1_1Matrix.html">deltaRad</a> *</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                ((<a class="code hl_class" href="classvcl_1_1Matrix.html">invert</a> ? *<a class="code hl_class" href="classvcl_1_1Matrix.html">minmax</a>.second - w : w - *<a class="code hl_class" href="classvcl_1_1Matrix.html">minmax</a>.first) / <a class="code hl_class" href="classvcl_1_1Matrix.html">deltaQ</a>);</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <span class="keywordtype">float</span> minRad   = diskRadius;</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <span class="keywordtype">float</span> maxRad   = diskRadius * radiusVariance;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <span class="keywordtype">float</span> deltaQ   = *minmax.second - *minmax.first;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <span class="keywordtype">float</span> deltaRad = maxRad - minRad;</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> VertexType&amp; v : m.<a class="code hl_variable" href="group__views.html#gae55a7544cb59464c26959bcc4cec23ea">vertices</a>()) {</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        ScalarType w = weights[m.index(v)];</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        radius[m.index(v)] =</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>            minRad +</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            deltaRad *</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                ((invert ? *minmax.second - w : w - *minmax.first) / deltaQ);</div>
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    }</div>
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    <span class="keywordflow">return</span> radius;</div>
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>}</div>
-</div>
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span><span class="keyword">template</span>&lt;FaceMeshConcept MeshType&gt;</div>
-<div class="foldopen" id="foldopen00242" data-start="{" data-end="}">
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno"><a class="line" href="namespacevcl.html#a74127bca614f622db4ffc101f3d6c241">  242</a></span>std::vector&lt;std::pair&lt;uint, uint&gt;&gt; <a class="code hl_function" href="namespacevcl.html#a74127bca614f622db4ffc101f3d6c241">creaseFaceEdges</a>(</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    <span class="keyword">const</span> MeshType&amp; <a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>,</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    <span class="keywordtype">double</span>          <a class="code hl_class" href="classvcl_1_1Matrix.html">angleRadNeg</a>,</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    <span class="keywordtype">double</span>          <a class="code hl_class" href="classvcl_1_1Matrix.html">angleRadPos</a>,</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    <span class="keywordtype">bool</span>            <a class="code hl_class" href="classvcl_1_1Matrix.html">alsoBorderEdges</a> = <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>std::vector&lt;std::pair&lt;uint, uint&gt;&gt; creaseFaceEdges(</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    <span class="keyword">const</span> MeshType&amp; m,</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    <span class="keywordtype">double</span>          angleRadNeg,</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    <span class="keywordtype">double</span>          angleRadPos,</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    <span class="keywordtype">bool</span>            alsoBorderEdges = <span class="keyword">false</span>)</div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>{</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    <a class="code hl_function" href="group__face__requirements.html#gaff3602e750a1d1c93374f642be47a6b0">vcl::requirePerFaceAdjacentFaces</a>(<a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>);</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    <a class="code hl_function" href="group__face__requirements.html#gaff3602e750a1d1c93374f642be47a6b0">requirePerFaceAdjacentFaces</a>(m);</div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    std::vector&lt;std::pair&lt;uint, uint&gt;&gt; <a class="code hl_class" href="classvcl_1_1Matrix.html">creaseEdges</a>;</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    std::vector&lt;std::pair&lt;uint, uint&gt;&gt; creaseEdges;</div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; f : <a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>.faces()) {</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> <a class="code hl_class" href="classvcl_1_1Matrix.html">i</a> = 0; <a class="code hl_class" href="classvcl_1_1Matrix.html">i</a> &lt; f.vertexNumber(); ++<a class="code hl_class" href="classvcl_1_1Matrix.html">i</a>) {</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>            <span class="keywordflow">if</span> (f.adjFace(<a class="code hl_class" href="classvcl_1_1Matrix.html">i</a>) == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; f : m.<a class="code hl_variable" href="group__views.html#ga33947d4d6db5271a84ac1ae5555d50d7">faces</a>()) {</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        <span class="keywordflow">for</span> (uint i = 0; i &lt; f.vertexNumber(); ++i) {</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>            <span class="keywordflow">if</span> (f.adjFace(i) == <span class="keyword">nullptr</span>) {</div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>                <span class="comment">// border edge</span></div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classvcl_1_1Matrix.html">alsoBorderEdges</a>) {</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>                    <a class="code hl_class" href="classvcl_1_1Matrix.html">creaseEdges</a>.push_back({f.index(), <a class="code hl_class" href="classvcl_1_1Matrix.html">i</a>});</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>                <span class="keywordflow">if</span> (alsoBorderEdges) {</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>                    creaseEdges.push_back({f.index(), i});</div>
 <div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>                }</div>
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>            }</div>
 <div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>            <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>                <span class="comment">// internal edge</span></div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>                <span class="keywordtype">double</span> angle = <a class="code hl_function" href="namespacevcl.html#a2177afd92cfc4dbe6468aa05892b016f">vcl::faceDihedralAngleOnEdge</a>(f, <a class="code hl_class" href="classvcl_1_1Matrix.html">i</a>);</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classvcl_1_1Matrix.html">angle &lt; angleRadNeg || angle &gt;</a> <a class="code hl_class" href="classvcl_1_1Matrix.html">angleRadPos</a>) {</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>                    <a class="code hl_class" href="classvcl_1_1Matrix.html">creaseEdges</a>.push_back({f.index(), <a class="code hl_class" href="classvcl_1_1Matrix.html">i</a>});</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>                <span class="keywordtype">double</span> angle = faceDihedralAngleOnEdge(f, i);</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>                <span class="keywordflow">if</span> (angle &lt; angleRadNeg || angle &gt; angleRadPos) {</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>                    creaseEdges.push_back({f.index(), i});</div>
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>                }</div>
 <div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>            }</div>
 <div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>        }</div>
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    }</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">creaseEdges</a>;</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    <span class="keywordflow">return</span> creaseEdges;</div>
 <div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>}</div>
-</div>
 <div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span> </div>
 <div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>} <span class="comment">// namespace vcl</span></div>
 <div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
 <div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span><span class="preprocessor">#endif </span><span class="comment">// VCL_ALGORITHMS_MESH_STAT_GEOMETRY_H</span></div>
-<div class="ttc" id="abarycenter_8h_html"><div class="ttname"><a href="barycenter_8h.html">barycenter.h</a></div></div>
-<div class="ttc" id="aclassvcl_1_1Matrix_html"><div class="ttname"><a href="classvcl_1_1Matrix.html">vcl::Matrix</a></div><div class="ttdef"><b>Definition</b> matrix.h:36</div></div>
-<div class="ttc" id="aface__topology_8h_html"><div class="ttname"><a href="face__topology_8h.html">face_topology.h</a></div></div>
+<div class="ttc" id="agroup__core__polygon_html_ga9fc3b9cae851d7a729f40dc2f4ebe824"><div class="ttname"><a href="group__core__polygon.html#ga9fc3b9cae851d7a729f40dc2f4ebe824">vcl::faceArea</a></div><div class="ttdeci">auto faceArea(const FaceType &amp;f)</div><div class="ttdoc">Computes the area of a face. Works both for triangle and polygonal faces, and it is optimized in case...</div><div class="ttdef"><b>Definition</b> geometry.h:101</div></div>
 <div class="ttc" id="agroup__face__requirements_html_gaff3602e750a1d1c93374f642be47a6b0"><div class="ttname"><a href="group__face__requirements.html#gaff3602e750a1d1c93374f642be47a6b0">vcl::requirePerFaceAdjacentFaces</a></div><div class="ttdeci">void requirePerFaceAdjacentFaces(const MeshType &amp;m)</div><div class="ttdoc">This function asserts that a Mesh has a FaceContainer, the Face has a AdjacentFaces Component,...</div><div class="ttdef"><b>Definition</b> face_requirements.h:698</div></div>
-<div class="ttc" id="amesh__inertia_8h_html"><div class="ttname"><a href="mesh__inertia_8h.html">mesh_inertia.h</a></div></div>
-<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition</b> bounding_box.h:48</div></div>
-<div class="ttc" id="anamespacevcl_html_a2177afd92cfc4dbe6468aa05892b016f"><div class="ttname"><a href="namespacevcl.html#a2177afd92cfc4dbe6468aa05892b016f">vcl::faceDihedralAngleOnEdge</a></div><div class="ttdeci">auto faceDihedralAngleOnEdge(const FaceType &amp;f, uint e)</div><div class="ttdoc">Compute the signed dihedral angle between the normals of the given face and its adjacent face on the ...</div><div class="ttdef"><b>Definition</b> face_topology.h:271</div></div>
-<div class="ttc" id="anamespacevcl_html_a49e57acf0c1cb51e98f7a176051d99ee"><div class="ttname"><a href="namespacevcl.html#a49e57acf0c1cb51e98f7a176051d99ee">vcl::covarianceMatrixOfMesh</a></div><div class="ttdeci">auto covarianceMatrixOfMesh(const MeshType &amp;m)</div><div class="ttdoc">Compute covariance matrix of a mesh, i.e. the integral int_{m} { (x-b)(x-b)^T }dx where b is the bary...</div><div class="ttdef"><b>Definition</b> geometry.h:127</div></div>
-<div class="ttc" id="anamespacevcl_html_a598979803f34d74d1c4c9d4599d01eb8"><div class="ttname"><a href="namespacevcl.html#a598979803f34d74d1c4c9d4599d01eb8">vcl::vertexRadiusFromWeights</a></div><div class="ttdeci">std::vector&lt; ScalarType &gt; vertexRadiusFromWeights(const MeshType &amp;m, const std::vector&lt; ScalarType &gt; &amp;weights, double diskRadius, double radiusVariance, bool invert=false)</div><div class="ttdoc">When performing an adptive pruning for each sample we expect a varying radius to be removed....</div><div class="ttdef"><b>Definition</b> geometry.h:199</div></div>
-<div class="ttc" id="anamespacevcl_html_a5dfa8d4e30b457c12c3e5e21b4fc123a"><div class="ttname"><a href="namespacevcl.html#a5dfa8d4e30b457c12c3e5e21b4fc123a">vcl::surfaceArea</a></div><div class="ttdeci">double surfaceArea(const MeshType &amp;m)</div><div class="ttdoc">Computes the surface area of the given Mesh, that is the sum of the areas of each face of the mesh.</div><div class="ttdef"><b>Definition</b> geometry.h:56</div></div>
-<div class="ttc" id="anamespacevcl_html_a66e2e1e0ec5d91e9def735ecf4f84b0e"><div class="ttname"><a href="namespacevcl.html#a66e2e1e0ec5d91e9def735ecf4f84b0e">vcl::barycenter</a></div><div class="ttdeci">MeshType::VertexType::CoordType barycenter(const MeshType &amp;m)</div><div class="ttdoc">Returns the barycenter of the mesh, that is the simple average of all the vertex coordintes of the me...</div><div class="ttdef"><b>Definition</b> barycenter.h:43</div></div>
-<div class="ttc" id="anamespacevcl_html_a74127bca614f622db4ffc101f3d6c241"><div class="ttname"><a href="namespacevcl.html#a74127bca614f622db4ffc101f3d6c241">vcl::creaseFaceEdges</a></div><div class="ttdeci">std::vector&lt; std::pair&lt; uint, uint &gt; &gt; creaseFaceEdges(const MeshType &amp;m, double angleRadNeg, double angleRadPos, bool alsoBorderEdges=false)</div><div class="ttdoc">Returns a vector of pairs &lt;face index; edge index&gt; of the edges that have a dihedral angle outside th...</div><div class="ttdef"><b>Definition</b> geometry.h:242</div></div>
-<div class="ttc" id="anamespacevcl_html_a86c0811cfbc37a3b319d57902e81e949"><div class="ttname"><a href="namespacevcl.html#a86c0811cfbc37a3b319d57902e81e949">vcl::borderLength</a></div><div class="ttdeci">double borderLength(const MeshType &amp;m)</div><div class="ttdoc">Computes the border length of the given Mesh, that is the sum of the length of the edges that are on ...</div><div class="ttdef"><b>Definition</b> geometry.h:75</div></div>
-<div class="ttc" id="anamespacevcl_html_a9a3eb7aeb0da02be51ca136620616b43"><div class="ttname"><a href="namespacevcl.html#a9a3eb7aeb0da02be51ca136620616b43">vcl::volume</a></div><div class="ttdeci">double volume(const MeshType &amp;m)</div><div class="ttdoc">Computes the volume of a closed surface Mesh. Returned value is meaningful only if the input mesh is ...</div><div class="ttdef"><b>Definition</b> geometry.h:42</div></div>
-<div class="ttc" id="anamespacevcl_html_a9fc3b9cae851d7a729f40dc2f4ebe824"><div class="ttname"><a href="namespacevcl.html#a9fc3b9cae851d7a729f40dc2f4ebe824">vcl::faceArea</a></div><div class="ttdeci">auto faceArea(const FaceType &amp;f)</div><div class="ttdoc">Computes the area of a face. Works both for triangle and polygonal faces, and it is optimized in case...</div><div class="ttdef"><b>Definition</b> geometry.h:95</div></div>
-<div class="ttc" id="anamespacevcl_html_aecc52dfd02e09e49a5dd1612183a2cb8"><div class="ttname"><a href="namespacevcl.html#aecc52dfd02e09e49a5dd1612183a2cb8">vcl::shellBarycenter</a></div><div class="ttdeci">MeshType::VertexType::CoordType shellBarycenter(const MeshType &amp;m)</div><div class="ttdoc">Computes the barycenter of the surface thin-shell. E.g. it assume a 'empty' model where all the mass ...</div><div class="ttdef"><b>Definition</b> barycenter.h:109</div></div>
-<div class="ttc" id="anamespacevcl_html_af74b42dd9d759d565bb701a5b845d05c"><div class="ttname"><a href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">vcl::uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition</b> base.h:34</div></div>
-<div class="ttc" id="anamespacevcl_html_af9fd633374c0d8ab86df9e354a9a0fb5"><div class="ttname"><a href="namespacevcl.html#af9fd633374c0d8ab86df9e354a9a0fb5">vcl::covarianceMatrixOfPointCloud</a></div><div class="ttdeci">auto covarianceMatrixOfPointCloud(const std::vector&lt; PointType &gt; &amp;pointVec)</div><div class="ttdoc">Compute the covariance matrix of a set of points.</div><div class="ttdef"><b>Definition</b> stat.h:39</div></div>
-<div class="ttc" id="aspace_2core_2matrix_8h_html"><div class="ttname"><a href="space_2core_2matrix_8h.html">matrix.h</a></div></div>
+<div class="ttc" id="agroup__views_html_ga33947d4d6db5271a84ac1ae5555d50d7"><div class="ttname"><a href="group__views.html#ga33947d4d6db5271a84ac1ae5555d50d7">vcl::views::faces</a></div><div class="ttdeci">constexpr detail::FacesView faces</div><div class="ttdoc">A view that allows to iterate overt the Face elements of an object.</div><div class="ttdef"><b>Definition</b> face.h:52</div></div>
+<div class="ttc" id="agroup__views_html_gae55a7544cb59464c26959bcc4cec23ea"><div class="ttname"><a href="group__views.html#gae55a7544cb59464c26959bcc4cec23ea">vcl::views::vertices</a></div><div class="ttdeci">constexpr detail::VerticesView vertices</div><div class="ttdoc">A view that allows to iterate over the Vertex elements of an object.</div><div class="ttdef"><b>Definition</b> vertex.h:60</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d2fdbf172f8ae9790b339bfcb66b3af7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_184ccdea67371fe98b8576ffb8dc8f0b.html">algorithms</a></li><li class="navelem"><a class="el" href="dir_0c5541bf23a81a3310fdbb547aefe07f.html">mesh</a></li><li class="navelem"><a class="el" href="dir_52a0b830974e64aaab2707881b280894.html">stat</a></li><li class="navelem"><a class="el" href="mesh_2stat_2geometry_8h.html">geometry.h</a></li>
+    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_1c404f8c53fcd1daf12bfcf3dbca1d20.html">algorithms</a></li><li class="navelem"><a class="el" href="dir_7f9308204376ae1cd6edcc22599e3767.html">mesh</a></li><li class="navelem"><a class="el" href="dir_ac5219b72e3a3c687c418553d32cf1cc.html">stat</a></li><li class="navelem"><b>geometry.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

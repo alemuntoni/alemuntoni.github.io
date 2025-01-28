@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visual Computing Library: include/vclib/algorithms/mesh/stat/barycenter.h Source File</title>
+<title>Visual Computing Library: vclib/core/include/vclib/algorithms/mesh/stat/barycenter.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -104,11 +104,11 @@ $(document).ready(function(){initNavTree('barycenter_8h_source.html',''); initRe
   <div class="headertitle"><div class="title">barycenter.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="barycenter_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2024                                                    *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2025                                                    *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
@@ -129,93 +129,81 @@ $(document).ready(function(){initNavTree('barycenter_8h_source.html',''); initRe
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_ALGORITHMS_MESH_STAT_BARYCENTER_H</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_ALGORITHMS_MESH_STAT_BARYCENTER_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;<a class="code" href="concepts_2mesh_8h.html">vclib/concepts/mesh.h</a>&gt;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="requirements_8h.html">vclib/mesh/requirements.h</a>&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;vclib/concepts/mesh.h&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;vclib/mesh/requirements.h&gt;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span>vcl {</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">template</span>&lt;MeshConcept MeshType&gt;</div>
-<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="namespacevcl.html#a66e2e1e0ec5d91e9def735ecf4f84b0e">   43</a></span><span class="keyword">typename</span> MeshType::VertexType::CoordType <a class="code hl_function" href="namespacevcl.html#a66e2e1e0ec5d91e9def735ecf4f84b0e">barycenter</a>(<span class="keyword">const</span> MeshType&amp; <a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>)</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">typename</span> MeshType::VertexType::CoordType barycenter(<span class="keyword">const</span> MeshType&amp; m)</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>{</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">using </span>VertexType = MeshType::VertexType;</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">using </span>CoordType  = VertexType::CoordType;</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    CoordType <a class="code hl_class" href="classvcl_1_1Matrix.html">bar</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    CoordType bar;</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> VertexType&amp; v : <a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>.vertices()) {</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">bar</a> += v.coord();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> VertexType&amp; v : m.<a class="code hl_variable" href="group__views.html#gae55a7544cb59464c26959bcc4cec23ea">vertices</a>()) {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        bar += v.coord();</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">bar</a> / <a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>.vertexNumber();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordflow">return</span> bar / m.vertexNumber();</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>}</div>
-</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="keyword">template</span>&lt;MeshConcept MeshType&gt;</div>
-<div class="foldopen" id="foldopen00073" data-start="{" data-end="}">
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="namespacevcl.html#a63bff22265d64d974b4fe4267b6dbac0">   73</a></span><span class="keyword">typename</span> MeshType::VertexType::CoordType <a class="code hl_function" href="namespacevcl.html#a63bff22265d64d974b4fe4267b6dbac0">scalarWeightedBarycenter</a>(</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keyword">const</span> MeshType&amp; <a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>)</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="keyword">typename</span> MeshType::VertexType::CoordType scalarWeightedBarycenter(</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keyword">const</span> MeshType&amp; m)</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>{</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <a class="code hl_function" href="namespacevcl.html#a49287ff6e3778f10a280b1166006dff9">vcl::requirePerVertexQuality</a>(<a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    requirePerVertexQuality(m);</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keyword">using </span>VertexType  = MeshType::VertexType;</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keyword">using </span>CoordType   = VertexType::CoordType;</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keyword">using </span>QualityType = VertexType::QualityType;</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    CoordType   <a class="code hl_class" href="classvcl_1_1Matrix.html">bar</a>;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    QualityType <a class="code hl_class" href="classvcl_1_1Matrix.html">weightedSum</a> = 0;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    CoordType   bar;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    QualityType weightedSum = 0;</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> VertexType&amp; v : <a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>.vertices()) {</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">bar</a> += v.coord() * v.quality();</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">weightedSum</a> += v.quality();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> VertexType&amp; v : m.<a class="code hl_variable" href="group__views.html#gae55a7544cb59464c26959bcc4cec23ea">vertices</a>()) {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        bar += v.coord() * v.quality();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        weightedSum += v.quality();</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    }</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">bar</a> / <a class="code hl_class" href="classvcl_1_1Matrix.html">weightedSum</a>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordflow">return</span> bar / weightedSum;</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>}</div>
-</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="keyword">template</span>&lt;FaceMeshConcept MeshType&gt;</div>
-<div class="foldopen" id="foldopen00109" data-start="{" data-end="}">
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="namespacevcl.html#aecc52dfd02e09e49a5dd1612183a2cb8">  109</a></span><span class="keyword">typename</span> MeshType::VertexType::CoordType <a class="code hl_function" href="namespacevcl.html#aecc52dfd02e09e49a5dd1612183a2cb8">shellBarycenter</a>(<span class="keyword">const</span> MeshType&amp; <a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>)</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="keyword">typename</span> MeshType::VertexType::CoordType shellBarycenter(<span class="keyword">const</span> MeshType&amp; m)</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>{</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keyword">using </span>VertexType = MeshType::VertexType;</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keyword">using </span>FaceType   = MeshType::FaceType;</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keyword">using </span>CoordType  = VertexType::CoordType;</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keyword">using </span>ScalarType = CoordType::ScalarType;</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    CoordType <a class="code hl_class" href="classvcl_1_1Matrix.html">bar</a>;</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <a class="code hl_class" href="classvcl_1_1Matrix.html">bar</a>.setZero();</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    ScalarType <a class="code hl_class" href="classvcl_1_1Matrix.html">areaSum</a> = 0;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    CoordType bar;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    bar.setZero();</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    ScalarType areaSum = 0;</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> FaceType&amp; f : <a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>.faces()) {</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        ScalarType area = <a class="code hl_function" href="namespacevcl.html#a9fc3b9cae851d7a729f40dc2f4ebe824">faceArea</a>(f);</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">bar</a> += <a class="code hl_function" href="namespacevcl.html#a53b4f63db0979e578ebfa4b9e8b41f8a">faceBarycenter</a>(f) * area;</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">areaSum</a> += area;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> FaceType&amp; f : m.<a class="code hl_variable" href="group__views.html#ga33947d4d6db5271a84ac1ae5555d50d7">faces</a>()) {</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        ScalarType area = <a class="code hl_function" href="group__core__polygon.html#ga9fc3b9cae851d7a729f40dc2f4ebe824">faceArea</a>(f);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        bar += <a class="code hl_function" href="group__core__polygon.html#ga53b4f63db0979e578ebfa4b9e8b41f8a">faceBarycenter</a>(f) * area;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        areaSum += area;</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    }</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">bar</a> / <a class="code hl_class" href="classvcl_1_1Matrix.html">areaSum</a>;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordflow">return</span> bar / areaSum;</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>}</div>
-</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>} <span class="comment">// namespace vcl</span></div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="preprocessor">#endif </span><span class="comment">// VCL_ALGORITHMS_MESH_STAT_BARYCENTER_H</span></div>
-<div class="ttc" id="aclassvcl_1_1Matrix_html"><div class="ttname"><a href="classvcl_1_1Matrix.html">vcl::Matrix</a></div><div class="ttdef"><b>Definition</b> matrix.h:36</div></div>
-<div class="ttc" id="aconcepts_2mesh_8h_html"><div class="ttname"><a href="concepts_2mesh_8h.html">mesh.h</a></div></div>
-<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition</b> bounding_box.h:48</div></div>
-<div class="ttc" id="anamespacevcl_html_a49287ff6e3778f10a280b1166006dff9"><div class="ttname"><a href="namespacevcl.html#a49287ff6e3778f10a280b1166006dff9">vcl::requirePerVertexQuality</a></div><div class="ttdeci">void requirePerVertexQuality(const MeshType &amp;m)</div><div class="ttdef"><b>Definition</b> vertex_requirements.h:227</div></div>
-<div class="ttc" id="anamespacevcl_html_a53b4f63db0979e578ebfa4b9e8b41f8a"><div class="ttname"><a href="namespacevcl.html#a53b4f63db0979e578ebfa4b9e8b41f8a">vcl::faceBarycenter</a></div><div class="ttdeci">FaceType::VertexType::CoordType faceBarycenter(const FaceType &amp;f)</div><div class="ttdoc">Computes the barycenter of a face. Works both for triangle and polygonal faces, and it is optimized i...</div><div class="ttdef"><b>Definition</b> geometry.h:73</div></div>
-<div class="ttc" id="anamespacevcl_html_a63bff22265d64d974b4fe4267b6dbac0"><div class="ttname"><a href="namespacevcl.html#a63bff22265d64d974b4fe4267b6dbac0">vcl::scalarWeightedBarycenter</a></div><div class="ttdeci">MeshType::VertexType::CoordType scalarWeightedBarycenter(const MeshType &amp;m)</div><div class="ttdoc">Returns the barycenter of the mesh weighted on the per vertex quality values.</div><div class="ttdef"><b>Definition</b> barycenter.h:73</div></div>
-<div class="ttc" id="anamespacevcl_html_a66e2e1e0ec5d91e9def735ecf4f84b0e"><div class="ttname"><a href="namespacevcl.html#a66e2e1e0ec5d91e9def735ecf4f84b0e">vcl::barycenter</a></div><div class="ttdeci">MeshType::VertexType::CoordType barycenter(const MeshType &amp;m)</div><div class="ttdoc">Returns the barycenter of the mesh, that is the simple average of all the vertex coordintes of the me...</div><div class="ttdef"><b>Definition</b> barycenter.h:43</div></div>
-<div class="ttc" id="anamespacevcl_html_a9fc3b9cae851d7a729f40dc2f4ebe824"><div class="ttname"><a href="namespacevcl.html#a9fc3b9cae851d7a729f40dc2f4ebe824">vcl::faceArea</a></div><div class="ttdeci">auto faceArea(const FaceType &amp;f)</div><div class="ttdoc">Computes the area of a face. Works both for triangle and polygonal faces, and it is optimized in case...</div><div class="ttdef"><b>Definition</b> geometry.h:95</div></div>
-<div class="ttc" id="anamespacevcl_html_aecc52dfd02e09e49a5dd1612183a2cb8"><div class="ttname"><a href="namespacevcl.html#aecc52dfd02e09e49a5dd1612183a2cb8">vcl::shellBarycenter</a></div><div class="ttdeci">MeshType::VertexType::CoordType shellBarycenter(const MeshType &amp;m)</div><div class="ttdoc">Computes the barycenter of the surface thin-shell. E.g. it assume a 'empty' model where all the mass ...</div><div class="ttdef"><b>Definition</b> barycenter.h:109</div></div>
-<div class="ttc" id="arequirements_8h_html"><div class="ttname"><a href="requirements_8h.html">requirements.h</a></div></div>
+<div class="ttc" id="agroup__core__polygon_html_ga53b4f63db0979e578ebfa4b9e8b41f8a"><div class="ttname"><a href="group__core__polygon.html#ga53b4f63db0979e578ebfa4b9e8b41f8a">vcl::faceBarycenter</a></div><div class="ttdeci">FaceType::VertexType::CoordType faceBarycenter(const FaceType &amp;f)</div><div class="ttdoc">Computes the barycenter of a face. Works both for triangle and polygonal faces, and it is optimized i...</div><div class="ttdef"><b>Definition</b> geometry.h:77</div></div>
+<div class="ttc" id="agroup__core__polygon_html_ga9fc3b9cae851d7a729f40dc2f4ebe824"><div class="ttname"><a href="group__core__polygon.html#ga9fc3b9cae851d7a729f40dc2f4ebe824">vcl::faceArea</a></div><div class="ttdeci">auto faceArea(const FaceType &amp;f)</div><div class="ttdoc">Computes the area of a face. Works both for triangle and polygonal faces, and it is optimized in case...</div><div class="ttdef"><b>Definition</b> geometry.h:101</div></div>
+<div class="ttc" id="agroup__views_html_ga33947d4d6db5271a84ac1ae5555d50d7"><div class="ttname"><a href="group__views.html#ga33947d4d6db5271a84ac1ae5555d50d7">vcl::views::faces</a></div><div class="ttdeci">constexpr detail::FacesView faces</div><div class="ttdoc">A view that allows to iterate overt the Face elements of an object.</div><div class="ttdef"><b>Definition</b> face.h:52</div></div>
+<div class="ttc" id="agroup__views_html_gae55a7544cb59464c26959bcc4cec23ea"><div class="ttname"><a href="group__views.html#gae55a7544cb59464c26959bcc4cec23ea">vcl::views::vertices</a></div><div class="ttdeci">constexpr detail::VerticesView vertices</div><div class="ttdoc">A view that allows to iterate over the Vertex elements of an object.</div><div class="ttdef"><b>Definition</b> vertex.h:60</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d2fdbf172f8ae9790b339bfcb66b3af7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_184ccdea67371fe98b8576ffb8dc8f0b.html">algorithms</a></li><li class="navelem"><a class="el" href="dir_0c5541bf23a81a3310fdbb547aefe07f.html">mesh</a></li><li class="navelem"><a class="el" href="dir_52a0b830974e64aaab2707881b280894.html">stat</a></li><li class="navelem"><a class="el" href="barycenter_8h.html">barycenter.h</a></li>
+    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_1c404f8c53fcd1daf12bfcf3dbca1d20.html">algorithms</a></li><li class="navelem"><a class="el" href="dir_7f9308204376ae1cd6edcc22599e3767.html">mesh</a></li><li class="navelem"><a class="el" href="dir_ac5219b72e3a3c687c418553d32cf1cc.html">stat</a></li><li class="navelem"><b>barycenter.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

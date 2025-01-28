@@ -107,32 +107,35 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1SphereConcept.html','');
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1SphereConcept.html">vcl::SphereConcept</a> =  <span class="keyword">requires</span> (</div>
-<div class="line">    T                            o,</div>
-<div class="line">    <span class="keyword">const</span> T&amp;                     co,</div>
-<div class="line">    <span class="keyword">const</span> <span class="keyword">typename</span> T::PointType&amp; p,</div>
-<div class="line">    <span class="keyword">const</span> <span class="keyword">typename</span> T::BoxType&amp;   b) {</div>
-<div class="line">    </div>
-<div class="line">    <span class="keyword">typename</span> T::ScalarType;</div>
-<div class="line">    <span class="keyword">typename</span> T::PointType;</div>
-<div class="line">    <span class="keyword">typename</span> T::BoxType;</div>
+<div class="line">    T&amp;&amp;                               obj,</div>
+<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::ScalarType s,</div>
+<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::PointType  p,</div>
+<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::BoxType    b) {</div>
+<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::ScalarType;</div>
+<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::PointType;</div>
+<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::BoxType;</div>
 <div class="line"> </div>
-<div class="line">    T::PointType::DIM == 3;</div>
+<div class="line">    <span class="keyword">requires</span> <a class="code hl_concept" href="conceptvcl_1_1Point3Concept.html">Point3Concept&lt;typename RemoveRef&lt;T&gt;::PointType</a>&gt;;</div>
 <div class="line"> </div>
-<div class="line">    { o.center() } -&gt; std::same_as&lt;typename T::PointType&amp;&gt;;</div>
-<div class="line">    { <a class="code hl_class" href="classvcl_1_1Matrix.html">co</a>.center() } -&gt; std::same_as&lt;const typename T::PointType&amp;&gt;;</div>
-<div class="line">    { o.radius() } -&gt; std::same_as&lt;typename T::ScalarType&amp;&gt;;</div>
-<div class="line">    { co.radius() } -&gt; std::same_as&lt;const typename T::ScalarType&amp;&gt;;</div>
+<div class="line">    RemoveRef&lt;T&gt;();</div>
+<div class="line">    RemoveRef&lt;T&gt;(p, s);</div>
 <div class="line"> </div>
-<div class="line">    { co.diameter() } -&gt; std::same_as&lt;typename T::ScalarType&gt;;</div>
-<div class="line">    { co.circumference() } -&gt; std::same_as&lt;typename T::ScalarType&gt;;</div>
-<div class="line">    { co.surfaceArea() } -&gt; std::same_as&lt;typename T::ScalarType&gt;;</div>
-<div class="line">    { co.volume() } -&gt; std::same_as&lt;typename T::ScalarType&gt;;</div>
+<div class="line">    { obj.center() } -&gt; <a class="code hl_concept" href="conceptvcl_1_1Point3Concept.html">Point3Concept</a>;</div>
+<div class="line">    { <a class="code hl_class" href="classvcl_1_1Box.html">obj</a>.radius() } -&gt; std::convertible_to&lt;<span class="keyword">decltype</span>(s)&gt;;</div>
 <div class="line"> </div>
-<div class="line">    { co.isInside(p) } -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line">    { co.intersects(b) } -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line">    </div>
+<div class="line">    { obj.diameter() } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(s)&gt;;</div>
+<div class="line">    { obj.circumference() } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(s)&gt;;</div>
+<div class="line">    { obj.surfaceArea() } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(s)&gt;;</div>
+<div class="line">    { obj.<a class="code hl_function" href="classvcl_1_1Box.html#ac507f07f90b7cb00c5bf16501357e416">volume</a>() } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(s)&gt;;</div>
+<div class="line"> </div>
+<div class="line">    { obj.<a class="code hl_function" href="classvcl_1_1Box.html#a85c9bf310983d70e5beda4e90beecc16">isInside</a>(p) } -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line">    { obj.<a class="code hl_function" href="classvcl_1_1Box.html#a2112e4f51d2f88354009defe73e180bd">intersects</a>(b) } -&gt; std::same_as&lt;bool&gt;;</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassvcl_1_1Matrix_html"><div class="ttname"><a href="classvcl_1_1Matrix.html">vcl::Matrix</a></div><div class="ttdef"><b>Definition</b> matrix.h:36</div></div>
+<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:49</div></div>
+<div class="ttc" id="aclassvcl_1_1Box_html_a2112e4f51d2f88354009defe73e180bd"><div class="ttname"><a href="classvcl_1_1Box.html#a2112e4f51d2f88354009defe73e180bd">vcl::Box::intersects</a></div><div class="ttdeci">bool intersects(const Box&lt; PointT &gt; &amp;b) const</div><div class="ttdoc">Same as Box::overlap.</div><div class="ttdef"><b>Definition</b> box.h:222</div></div>
+<div class="ttc" id="aclassvcl_1_1Box_html_a85c9bf310983d70e5beda4e90beecc16"><div class="ttname"><a href="classvcl_1_1Box.html#a85c9bf310983d70e5beda4e90beecc16">vcl::Box::isInside</a></div><div class="ttdeci">bool isInside(const PointT &amp;p) const</div><div class="ttdoc">Checks whether a given point is inside the box or not, bounds included.</div><div class="ttdef"><b>Definition</b> box.h:166</div></div>
+<div class="ttc" id="aclassvcl_1_1Box_html_ac507f07f90b7cb00c5bf16501357e416"><div class="ttname"><a href="classvcl_1_1Box.html#ac507f07f90b7cb00c5bf16501357e416">vcl::Box::volume</a></div><div class="ttdeci">auto volume() const</div><div class="ttdoc">Computes the volume of the box.</div><div class="ttdef"><b>Definition</b> box.h:257</div></div>
+<div class="ttc" id="aconceptvcl_1_1Point3Concept_html"><div class="ttname"><a href="conceptvcl_1_1Point3Concept.html">vcl::Point3Concept</a></div><div class="ttdoc">Concept for points in three-dimensional space.</div><div class="ttdef"><b>Definition</b> point.h:130</div></div>
 <div class="ttc" id="aconceptvcl_1_1SphereConcept_html"><div class="ttname"><a href="conceptvcl_1_1SphereConcept.html">vcl::SphereConcept</a></div><div class="ttdoc">Concept for types representing spheres in Euclidean space.</div><div class="ttdef"><b>Definition</b> sphere.h:64</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Concept for types representing spheres in Euclidean space. </p>
@@ -164,7 +167,7 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1SphereConcept.html','');
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespacevcl.html">vcl</a></li><li class="navelem"><a class="el" href="conceptvcl_1_1SphereConcept.html">SphereConcept</a></li>
+    <li class="navelem"><b>vcl</b></li><li class="navelem"><a class="el" href="conceptvcl_1_1SphereConcept.html">SphereConcept</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

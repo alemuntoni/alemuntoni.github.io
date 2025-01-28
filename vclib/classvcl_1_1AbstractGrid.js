@@ -1,7 +1,8 @@
 var classvcl_1_1AbstractGrid =
 [
+    [ "DistIterPairComparator", "structvcl_1_1AbstractGrid_1_1DistIterPairComparator.html", null ],
+    [ "IterComparator", "structvcl_1_1AbstractGrid_1_1IterComparator.html", null ],
     [ "IntersectsCellFunction", "classvcl_1_1AbstractGrid.html#aea0f9fee03978168acab9321fbf7956e", null ],
-    [ "KeyType", "classvcl_1_1AbstractGrid.html#a4ba12dd8a5cd0c295b52c11cbd50b466", null ],
     [ "QueryBoundedDistFunction", "classvcl_1_1AbstractGrid.html#af3105d63ad6aa895e62002eb4580aa4e", null ],
     [ "QueryDistFunction", "classvcl_1_1AbstractGrid.html#ab35a3aa3ed5c4caf6c7fd39d2ef3eec7", null ],
     [ "AbstractGrid", "classvcl_1_1AbstractGrid.html#a449b323be92655f25b8c01eaa2f74fc3", null ],
@@ -10,22 +11,9 @@ var classvcl_1_1AbstractGrid =
     [ "AbstractGrid", "classvcl_1_1AbstractGrid.html#aa2a504047d4c34458e4ff137c904623e", null ],
     [ "AbstractGrid", "classvcl_1_1AbstractGrid.html#a6dab107e6c175b6bcdc9539bc1949837", null ],
     [ "AbstractGrid", "classvcl_1_1AbstractGrid.html#ab16f558fed456f1cd64102875fd5a8cc", null ],
-    [ "cellEmpty", "classvcl_1_1AbstractGrid.html#a215c93540477f194f46c6ed19963aaf6", null ],
-    [ "closestValue", "classvcl_1_1AbstractGrid.html#a2f99daab1e9a40c6de2f83646dd745b9", null ],
-    [ "closestValue", "classvcl_1_1AbstractGrid.html#a6165a5213891dbbe35a79f9b1d024ff3", null ],
-    [ "closestValue", "classvcl_1_1AbstractGrid.html#a47b403d60619a1dce49bc404dbe9c06b", null ],
-    [ "closestValue", "classvcl_1_1AbstractGrid.html#a06f7b9bf85facba69ad08bffe517e50b", null ],
-    [ "closestValue", "classvcl_1_1AbstractGrid.html#ab922686d630b964e77961cbae39d88ba", null ],
-    [ "countInCell", "classvcl_1_1AbstractGrid.html#a5e466ae60dc9aed5834c8197738cdbbf", null ],
-    [ "countInSphere", "classvcl_1_1AbstractGrid.html#ab30905437cdd08c17126f46bfbf01b3b", null ],
-    [ "erase", "classvcl_1_1AbstractGrid.html#ade018b7aa4485231699ebf3e7f24499a", null ],
-    [ "eraseAllInCell", "classvcl_1_1AbstractGrid.html#a59585f0fc5853e5e02bd2360260dda22", null ],
-    [ "eraseInSphere", "classvcl_1_1AbstractGrid.html#a53c8c1e93d1d633add4b85ff18c220e5", null ],
+    [ "closestInCells", "classvcl_1_1AbstractGrid.html#aa5268ad187e7a48320a88942d7c40e0a", null ],
     [ "insert", "classvcl_1_1AbstractGrid.html#a871be07005f55ec5e6864118bb830356", null ],
     [ "insert", "classvcl_1_1AbstractGrid.html#a258bcd681fdb79997f654646b93ba564", null ],
     [ "insert", "classvcl_1_1AbstractGrid.html#a0aab9e753d743d75194be33a2014518a", null ],
-    [ "kClosestValues", "classvcl_1_1AbstractGrid.html#a0e696f03d8515bee338aa756e979ee82", null ],
-    [ "kClosestValues", "classvcl_1_1AbstractGrid.html#a9144f270d38cf9bae5b353b9a56a7da7", null ],
-    [ "valuesInSphere", "classvcl_1_1AbstractGrid.html#a476884b2e2a8d566ad83f7878f330b39", null ],
-    [ "mIntersectsFun", "classvcl_1_1AbstractGrid.html#a3b243af4bca65e3474607ef5fbbd8c2a", null ]
+    [ "valueIsInSpehere", "classvcl_1_1AbstractGrid.html#a9229873cf5557af8ca92b81ae5abe304", null ]
 ];

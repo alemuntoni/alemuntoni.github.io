@@ -1,7 +1,5 @@
 var classvcl_1_1TriangleWrapper =
 [
-    [ "PointType", "classvcl_1_1TriangleWrapper.html#a259e8b80b47918e7cffbd2ec7b97bc75", null ],
-    [ "ScalarType", "classvcl_1_1TriangleWrapper.html#ac01bd572f01af420339c114e0bc76483", null ],
     [ "TriangleWrapper", "classvcl_1_1TriangleWrapper.html#a50415ebb9a9e06d3f16c2f0e960bf302", null ],
     [ "area", "classvcl_1_1TriangleWrapper.html#a61b15f85af91e5bb80e0e254fe82b2cd", null ],
     [ "barycenter", "classvcl_1_1TriangleWrapper.html#a7c19c6bf7e4aa65020a915a3bef8a57a", null ],

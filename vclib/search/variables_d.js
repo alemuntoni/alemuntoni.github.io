@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['quality_0',['quality',['../namespacevcl_1_1views.html#afd5b2682f9546541b8f2f0b4f1a7d872',1,'vcl::views']]]
+  ['vertices_0',['vertices',['../group__views.html#gae55a7544cb59464c26959bcc4cec23ea',1,'vcl::views']]]
 ];

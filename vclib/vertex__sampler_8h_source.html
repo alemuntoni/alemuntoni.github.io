@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visual Computing Library: include/vclib/space/complex/sampler/vertex_sampler.h Source File</title>
+<title>Visual Computing Library: vclib/core/include/vclib/space/complex/sampler/vertex_sampler.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -104,79 +104,73 @@ $(document).ready(function(){initNavTree('vertex__sampler_8h_source.html',''); i
   <div class="headertitle"><div class="title">vertex_sampler.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="vertex__sampler_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef VCL_SPACE_COMPLEX_SAMPLER_VERTEX_SAMPLER_H</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef VCL_SPACE_COMPLEX_SAMPLER_VERTEX_SAMPLER_H</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define VCL_SPACE_COMPLEX_SAMPLER_VERTEX_SAMPLER_H</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;<a class="code" href="concepts_2mesh_2elements_2vertex_8h.html">vclib/concepts/mesh/elements/vertex.h</a>&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;<a class="code" href="concepts_2space_2sampler_8h.html">vclib/concepts/space/sampler.h</a>&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;<a class="code" href="views_2mesh_8h.html">vclib/views/mesh.h</a>&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;vclib/concepts/mesh/elements/vertex.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;vclib/concepts/space/sampler.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;vclib/views/mesh.h&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>vcl {</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span>detail {</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">template</span>&lt;VertexConcept VertexType, <span class="keywordtype">bool</span> CNST = false&gt;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">class </span><a class="code hl_typedef" href="namespacevcl.html#a06db57219f01121229b9d6a138d3a24f">VertexSampler</a></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">using </span>VP   = std::conditional_t&lt;CNST, const VertexType*, VertexType*&gt;;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">using </span>VPar = std::conditional_t&lt;CNST, const VertexType&amp;, VertexType&amp;&gt;;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    std::vector&lt;VP&gt; mSamples;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// TODO: make this class the default outside the detail namespace</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// and then define only the const version with CNST = true</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">template</span>&lt;VertexConcept VertexType, <span class="keywordtype">bool</span> CNST = false&gt;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">class </span>VertexSampler</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">using </span>VP   = std::conditional_t&lt;CNST, const VertexType*, VertexType*&gt;;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">using </span>VPar = std::conditional_t&lt;CNST, const VertexType&amp;, VertexType&amp;&gt;;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">using </span>PointType = VertexType::CoordType;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_typedef" href="namespacevcl.html#a06db57219f01121229b9d6a138d3a24f">VertexSampler</a>() {}</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    std::vector&lt;VP&gt; mSamples;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">using </span>PointType = VertexType::CoordType;</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">const</span> std::vector&lt;VP&gt; samples()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mSamples; }</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    VertexSampler() {}</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">const</span> <span class="keyword">typename</span> VertexType::CoordType&amp; sample(<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> i)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keywordflow">return</span> mSamples[i]-&gt;coord();</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    }</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    std::size_t size()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mSamples.size(); }</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">const</span> std::vector&lt;VP&gt; samples()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mSamples; }</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">const</span> <span class="keyword">typename</span> VertexType::CoordType&amp; sample(uint i)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordflow">return</span> mSamples[i]-&gt;coord();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    }</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">void</span> clear() { mSamples.clear(); }</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    std::size_t size()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mSamples.size(); }</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">void</span> reserve(<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> n) { mSamples.reserve(n); }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">void</span> clear() { mSamples.clear(); }</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> resize(<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> n) { mSamples.resize(n); }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> reserve(uint n) { mSamples.reserve(n); }</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">void</span> add(VPar v) { mSamples.push_back(&amp;v); }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">void</span> resize(uint n) { mSamples.resize(n); }</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">void</span> set(<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> i, VPar v) { mSamples[i] = &amp;v; }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">void</span> add(VPar v) { mSamples.push_back(&amp;v); }</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">auto</span> begin()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> std::begin(mSamples | <a class="code hl_variable" href="namespacevcl_1_1views.html#ac41cbb382904df5ff41db5e297243918">views::coords</a>); }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> set(uint i, VPar v) { mSamples[i] = &amp;v; }</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">auto</span> end()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> std::end(mSamples | <a class="code hl_variable" href="namespacevcl_1_1views.html#ac41cbb382904df5ff41db5e297243918">views::coords</a>); }</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>};</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>} <span class="comment">// namespace detail</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">auto</span> begin()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> std::begin(mSamples | views::coords); }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">auto</span> end()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> std::end(mSamples | views::coords); }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>};</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keyword">template</span>&lt;VertexConcept VertexType&gt;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="namespacevcl.html#a06db57219f01121229b9d6a138d3a24f">   52</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacevcl.html#a06db57219f01121229b9d6a138d3a24f">VertexSampler</a> = detail::VertexSampler&lt;VertexType, false&gt;;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keyword">template</span>&lt;VertexConcept VertexType&gt;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="namespacevcl.html#a6c937acb41381e0ce8bb27471da48d24">   55</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacevcl.html#a6c937acb41381e0ce8bb27471da48d24">ConstVertexSampler</a> = detail::VertexSampler&lt;VertexType, true&gt;;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>} <span class="comment">// namespace detail</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keyword">template</span>&lt;VertexConcept VertexType&gt;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keyword">using </span>VertexSampler = detail::VertexSampler&lt;VertexType, false&gt;;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">template</span>&lt;VertexConcept VertexType&gt;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keyword">using </span>ConstVertexSampler = detail::VertexSampler&lt;VertexType, true&gt;;</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#endif </span><span class="comment">// VCL_SPACE_COMPLEX_SAMPLER_VERTEX_SAMPLER_H</span></div>
-<div class="ttc" id="aconcepts_2mesh_2elements_2vertex_8h_html"><div class="ttname"><a href="concepts_2mesh_2elements_2vertex_8h.html">vertex.h</a></div></div>
-<div class="ttc" id="aconcepts_2space_2sampler_8h_html"><div class="ttname"><a href="concepts_2space_2sampler_8h.html">sampler.h</a></div></div>
-<div class="ttc" id="anamespacevcl_1_1views_html_ac41cbb382904df5ff41db5e297243918"><div class="ttname"><a href="namespacevcl_1_1views.html#ac41cbb382904df5ff41db5e297243918">vcl::views::coords</a></div><div class="ttdeci">constexpr detail::CoordsView coords</div><div class="ttdef"><b>Definition</b> coords.h:55</div></div>
-<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition</b> bounding_box.h:48</div></div>
-<div class="ttc" id="anamespacevcl_html_a06db57219f01121229b9d6a138d3a24f"><div class="ttname"><a href="namespacevcl.html#a06db57219f01121229b9d6a138d3a24f">vcl::VertexSampler</a></div><div class="ttdeci">detail::VertexSampler&lt; VertexType, false &gt; VertexSampler</div><div class="ttdef"><b>Definition</b> vertex_sampler.h:52</div></div>
-<div class="ttc" id="anamespacevcl_html_a6c937acb41381e0ce8bb27471da48d24"><div class="ttname"><a href="namespacevcl.html#a6c937acb41381e0ce8bb27471da48d24">vcl::ConstVertexSampler</a></div><div class="ttdeci">detail::VertexSampler&lt; VertexType, true &gt; ConstVertexSampler</div><div class="ttdef"><b>Definition</b> vertex_sampler.h:55</div></div>
-<div class="ttc" id="anamespacevcl_html_af74b42dd9d759d565bb701a5b845d05c"><div class="ttname"><a href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">vcl::uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition</b> base.h:34</div></div>
-<div class="ttc" id="aviews_2mesh_8h_html"><div class="ttname"><a href="views_2mesh_8h.html">mesh.h</a></div></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#endif </span><span class="comment">// VCL_SPACE_COMPLEX_SAMPLER_VERTEX_SAMPLER_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d2fdbf172f8ae9790b339bfcb66b3af7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_f5c67e0d94465501863c6ccee7fad822.html">space</a></li><li class="navelem"><a class="el" href="dir_87d8f51ecc605eaed395771040127619.html">complex</a></li><li class="navelem"><a class="el" href="dir_9554d79a0756b72feba632ea04a01f5d.html">sampler</a></li><li class="navelem"><a class="el" href="vertex__sampler_8h.html">vertex_sampler.h</a></li>
+    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_876bb933d26b04599d60b1bdfe1a5bc5.html">space</a></li><li class="navelem"><a class="el" href="dir_e43535145e3c7fa83df4e11b330f5346.html">complex</a></li><li class="navelem"><a class="el" href="dir_39e23422f8feceaafc57329e8e7ad2ca.html">sampler</a></li><li class="navelem"><b>vertex_sampler.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

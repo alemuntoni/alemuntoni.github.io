@@ -99,6 +99,7 @@ $(document).ready(function(){initNavTree('classvcl_1_1BitSet.html',''); initResi
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classvcl_1_1BitSet-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">vcl::BitSet&lt; T &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__space__core.html">Core Data Structures</a></div></div></div>
@@ -108,83 +109,93 @@ $(document).ready(function(){initNavTree('classvcl_1_1BitSet.html',''); initResi
 <p>The <a class="el" href="classvcl_1_1BitSet.html" title="The BitSet class allows to treat an integral type as an array of booleans of a guaranteed size.">BitSet</a> class allows to treat an integral type as an array of booleans of a guaranteed size.  
  <a href="classvcl_1_1BitSet.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="bit__set_8h_source.html">vclib/space/core/bit_set.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="space_2core_2bit__set_8h_source.html">vclib/space/core/bit_set.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:affd94bccf22eb78574d7562776c31bb6" id="r_affd94bccf22eb78574d7562776c31bb6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#affd94bccf22eb78574d7562776c31bb6">BitSet</a> ()=<a class="el" href="classvcl_1_1Matrix.html">default</a></td></tr>
-<tr class="memdesc:affd94bccf22eb78574d7562776c31bb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empty constructor. All the Bits of the <a class="el" href="classvcl_1_1BitSet.html" title="The BitSet class allows to treat an integral type as an array of booleans of a guaranteed size.">BitSet</a> are set to false.  <br /></td></tr>
+<tr class="memitem:affd94bccf22eb78574d7562776c31bb6" id="r_affd94bccf22eb78574d7562776c31bb6"><td class="memItemLeft" align="right" valign="top"><a id="affd94bccf22eb78574d7562776c31bb6" name="affd94bccf22eb78574d7562776c31bb6"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>BitSet</b> ()=<a class="el" href="classvcl_1_1Box.html">default</a></td></tr>
+<tr class="memdesc:affd94bccf22eb78574d7562776c31bb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empty constructor. All the Bits of the <a class="el" href="classvcl_1_1BitSet.html" title="The BitSet class allows to treat an integral type as an array of booleans of a guaranteed size.">BitSet</a> are set to false. <br /></td></tr>
 <tr class="separator:affd94bccf22eb78574d7562776c31bb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80dc0d495905cb68339f7c43275ff10d" id="r_a80dc0d495905cb68339f7c43275ff10d"><td class="memTemplParams" colspan="2">template&lt;NonBoolIntegralOrEnum I&gt; </td></tr>
-<tr class="memitem:a80dc0d495905cb68339f7c43275ff10d"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#a80dc0d495905cb68339f7c43275ff10d">BitSet</a> (std::initializer_list&lt; <a class="el" href="classvcl_1_1Matrix.html">I</a> &gt; <a class="el" href="classvcl_1_1Matrix.html">l</a>)</td></tr>
+<tr class="memitem:a80dc0d495905cb68339f7c43275ff10d"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#a80dc0d495905cb68339f7c43275ff10d">BitSet</a> (std::initializer_list&lt; I &gt; <a class="el" href="classvcl_1_1Box.html">l</a>)</td></tr>
 <tr class="memdesc:a80dc0d495905cb68339f7c43275ff10d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor from list of integral (or enum) values that represent the indices of the true bits, allowing braces initialization.  <br /></td></tr>
 <tr class="separator:a80dc0d495905cb68339f7c43275ff10d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4daa7e1472db8eaeb5764e5e78c6b30" id="r_af4daa7e1472db8eaeb5764e5e78c6b30"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> <a class="el" href="classvcl_1_1Matrix.html">B</a> &gt; <br />
-requires std::same_as&lt;<a class="el" href="classvcl_1_1Matrix.html">bool</a>, <a class="el" href="classvcl_1_1Matrix.html">B</a>&gt;</td></tr>
-<tr class="memitem:af4daa7e1472db8eaeb5764e5e78c6b30"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#af4daa7e1472db8eaeb5764e5e78c6b30">BitSet</a> (std::initializer_list&lt; <a class="el" href="classvcl_1_1Matrix.html">B</a> &gt; <a class="el" href="classvcl_1_1Matrix.html">l</a>)</td></tr>
+<tr class="memitem:af4daa7e1472db8eaeb5764e5e78c6b30" id="r_af4daa7e1472db8eaeb5764e5e78c6b30"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="classvcl_1_1Box.html">typename</a> B &gt; <br />
+requires std::same_as&lt;<a class="el" href="classvcl_1_1Box.html">bool</a>, B&gt;</td></tr>
+<tr class="memitem:af4daa7e1472db8eaeb5764e5e78c6b30"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#af4daa7e1472db8eaeb5764e5e78c6b30">BitSet</a> (std::initializer_list&lt; B &gt; <a class="el" href="classvcl_1_1Box.html">l</a>)</td></tr>
 <tr class="memdesc:af4daa7e1472db8eaeb5764e5e78c6b30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor from a list of boolean values, allowing braces initialization.  <br /></td></tr>
 <tr class="separator:af4daa7e1472db8eaeb5764e5e78c6b30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f02e641c944ec2c18fea296ab595bfa" id="r_a1f02e641c944ec2c18fea296ab595bfa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Matrix.html">constexpr</a> std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#a1f02e641c944ec2c18fea296ab595bfa">size</a> () <a class="el" href="classvcl_1_1Matrix.html">const</a></td></tr>
+<tr class="memitem:a1f02e641c944ec2c18fea296ab595bfa" id="r_a1f02e641c944ec2c18fea296ab595bfa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">constexpr</a> std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#a1f02e641c944ec2c18fea296ab595bfa">size</a> () <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="memdesc:a1f02e641c944ec2c18fea296ab595bfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of bits of the <a class="el" href="classvcl_1_1BitSet.html" title="The BitSet class allows to treat an integral type as an array of booleans of a guaranteed size.">BitSet</a>.  <br /></td></tr>
 <tr class="separator:a1f02e641c944ec2c18fea296ab595bfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e0c93ee69ae2466fcba3f8512e7c337" id="r_a4e0c93ee69ae2466fcba3f8512e7c337"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Matrix.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#a4e0c93ee69ae2466fcba3f8512e7c337">operator[]</a> (<a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> <a class="el" href="classvcl_1_1Matrix.html">i</a>) <a class="el" href="classvcl_1_1Matrix.html">const</a></td></tr>
+<tr class="memitem:a4e0c93ee69ae2466fcba3f8512e7c337" id="r_a4e0c93ee69ae2466fcba3f8512e7c337"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#a4e0c93ee69ae2466fcba3f8512e7c337">operator[]</a> (<a class="el" href="classvcl_1_1Box.html">uint</a> <a class="el" href="classvcl_1_1Box.html">i</a>) <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="memdesc:a4e0c93ee69ae2466fcba3f8512e7c337"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the i-th bit value of the <a class="el" href="classvcl_1_1BitSet.html" title="The BitSet class allows to treat an integral type as an array of booleans of a guaranteed size.">BitSet</a>.  <br /></td></tr>
 <tr class="separator:a4e0c93ee69ae2466fcba3f8512e7c337"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4725a21057cc8b2e620addd545445fd9" id="r_a4725a21057cc8b2e620addd545445fd9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#a4725a21057cc8b2e620addd545445fd9">operator[]</a> (<a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> <a class="el" href="classvcl_1_1Matrix.html">i</a>)</td></tr>
+<tr class="memitem:a4725a21057cc8b2e620addd545445fd9" id="r_a4725a21057cc8b2e620addd545445fd9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#a4725a21057cc8b2e620addd545445fd9">operator[]</a> (<a class="el" href="classvcl_1_1Box.html">uint</a> <a class="el" href="classvcl_1_1Box.html">i</a>)</td></tr>
 <tr class="memdesc:a4725a21057cc8b2e620addd545445fd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference of the i-th bit value of the <a class="el" href="classvcl_1_1BitSet.html" title="The BitSet class allows to treat an integral type as an array of booleans of a guaranteed size.">BitSet</a>.  <br /></td></tr>
 <tr class="separator:a4725a21057cc8b2e620addd545445fd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa04afd29c32af36a14cf03c6391d9a3a" id="r_aa04afd29c32af36a14cf03c6391d9a3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Matrix.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#aa04afd29c32af36a14cf03c6391d9a3a">at</a> (<a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> <a class="el" href="classvcl_1_1Matrix.html">i</a>) <a class="el" href="classvcl_1_1Matrix.html">const</a></td></tr>
+<tr class="memitem:aa04afd29c32af36a14cf03c6391d9a3a" id="r_aa04afd29c32af36a14cf03c6391d9a3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#aa04afd29c32af36a14cf03c6391d9a3a">at</a> (<a class="el" href="classvcl_1_1Box.html">uint</a> <a class="el" href="classvcl_1_1Box.html">i</a>) <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="memdesc:aa04afd29c32af36a14cf03c6391d9a3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the i-th bit value of the <a class="el" href="classvcl_1_1BitSet.html" title="The BitSet class allows to treat an integral type as an array of booleans of a guaranteed size.">BitSet</a>, with bounds checking.  <br /></td></tr>
 <tr class="separator:aa04afd29c32af36a14cf03c6391d9a3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad201a3b6d76546231bc46705fe673c3e" id="r_ad201a3b6d76546231bc46705fe673c3e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#ad201a3b6d76546231bc46705fe673c3e">at</a> (<a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> <a class="el" href="classvcl_1_1Matrix.html">i</a>)</td></tr>
+<tr class="memitem:ad201a3b6d76546231bc46705fe673c3e" id="r_ad201a3b6d76546231bc46705fe673c3e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#ad201a3b6d76546231bc46705fe673c3e">at</a> (<a class="el" href="classvcl_1_1Box.html">uint</a> <a class="el" href="classvcl_1_1Box.html">i</a>)</td></tr>
 <tr class="memdesc:ad201a3b6d76546231bc46705fe673c3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference of the i-th bit value of the <a class="el" href="classvcl_1_1BitSet.html" title="The BitSet class allows to treat an integral type as an array of booleans of a guaranteed size.">BitSet</a>, with bounds checking.  <br /></td></tr>
 <tr class="separator:ad201a3b6d76546231bc46705fe673c3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a019eb96ecc8331ebbf0ecdf8ddcbe036" id="r_a019eb96ecc8331ebbf0ecdf8ddcbe036"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Matrix.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#a019eb96ecc8331ebbf0ecdf8ddcbe036">all</a> () <a class="el" href="classvcl_1_1Matrix.html">const</a></td></tr>
+<tr class="memitem:a019eb96ecc8331ebbf0ecdf8ddcbe036" id="r_a019eb96ecc8331ebbf0ecdf8ddcbe036"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#a019eb96ecc8331ebbf0ecdf8ddcbe036">all</a> () <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="memdesc:a019eb96ecc8331ebbf0ecdf8ddcbe036"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if all the bits of the <a class="el" href="classvcl_1_1BitSet.html" title="The BitSet class allows to treat an integral type as an array of booleans of a guaranteed size.">BitSet</a> are set to true.  <br /></td></tr>
 <tr class="separator:a019eb96ecc8331ebbf0ecdf8ddcbe036"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12c52aa8d6b3d60b526c87da9e08a485" id="r_a12c52aa8d6b3d60b526c87da9e08a485"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Matrix.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#a12c52aa8d6b3d60b526c87da9e08a485">any</a> () <a class="el" href="classvcl_1_1Matrix.html">const</a></td></tr>
+<tr class="memitem:a12c52aa8d6b3d60b526c87da9e08a485" id="r_a12c52aa8d6b3d60b526c87da9e08a485"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#a12c52aa8d6b3d60b526c87da9e08a485">any</a> () <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="memdesc:a12c52aa8d6b3d60b526c87da9e08a485"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if any of the bits of the <a class="el" href="classvcl_1_1BitSet.html" title="The BitSet class allows to treat an integral type as an array of booleans of a guaranteed size.">BitSet</a> are set to true.  <br /></td></tr>
 <tr class="separator:a12c52aa8d6b3d60b526c87da9e08a485"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac887667e5908f3c452db04241b0ccde2" id="r_ac887667e5908f3c452db04241b0ccde2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Matrix.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#ac887667e5908f3c452db04241b0ccde2">none</a> () <a class="el" href="classvcl_1_1Matrix.html">const</a></td></tr>
+<tr class="memitem:ac887667e5908f3c452db04241b0ccde2" id="r_ac887667e5908f3c452db04241b0ccde2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#ac887667e5908f3c452db04241b0ccde2">none</a> () <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="memdesc:ac887667e5908f3c452db04241b0ccde2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if none of the bits of the <a class="el" href="classvcl_1_1BitSet.html" title="The BitSet class allows to treat an integral type as an array of booleans of a guaranteed size.">BitSet</a> is set to true.  <br /></td></tr>
 <tr class="separator:ac887667e5908f3c452db04241b0ccde2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05f042ce26b0a78a610c38ec04768b53" id="r_a05f042ce26b0a78a610c38ec04768b53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#a05f042ce26b0a78a610c38ec04768b53">set</a> ()</td></tr>
 <tr class="memdesc:a05f042ce26b0a78a610c38ec04768b53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all the bits to true.  <br /></td></tr>
 <tr class="separator:a05f042ce26b0a78a610c38ec04768b53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a8298c9742922c31cf633bf9edb225d" id="r_a6a8298c9742922c31cf633bf9edb225d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#a6a8298c9742922c31cf633bf9edb225d">set</a> (<a class="el" href="classvcl_1_1Matrix.html">bool</a> <a class="el" href="classvcl_1_1Matrix.html">b</a>, <a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> <a class="el" href="classvcl_1_1Matrix.html">i</a>)</td></tr>
+<tr class="memitem:a6a8298c9742922c31cf633bf9edb225d" id="r_a6a8298c9742922c31cf633bf9edb225d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#a6a8298c9742922c31cf633bf9edb225d">set</a> (<a class="el" href="classvcl_1_1Box.html">bool</a> <a class="el" href="classvcl_1_1Box.html">b</a>, <a class="el" href="classvcl_1_1Box.html">uint</a> <a class="el" href="classvcl_1_1Box.html">i</a>)</td></tr>
 <tr class="memdesc:a6a8298c9742922c31cf633bf9edb225d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the bit at position i to b.  <br /></td></tr>
 <tr class="separator:a6a8298c9742922c31cf633bf9edb225d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab80db932bb259c8e27a36c6843d52905" id="r_ab80db932bb259c8e27a36c6843d52905"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#ab80db932bb259c8e27a36c6843d52905">reset</a> ()</td></tr>
 <tr class="memdesc:ab80db932bb259c8e27a36c6843d52905"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all the bits to false.  <br /></td></tr>
 <tr class="separator:ab80db932bb259c8e27a36c6843d52905"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bb89cda9ecf70e6c46cd846b0317c59" id="r_a0bb89cda9ecf70e6c46cd846b0317c59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#a0bb89cda9ecf70e6c46cd846b0317c59">reset</a> (<a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> <a class="el" href="classvcl_1_1Matrix.html">i</a>)</td></tr>
+<tr class="memitem:a0bb89cda9ecf70e6c46cd846b0317c59" id="r_a0bb89cda9ecf70e6c46cd846b0317c59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#a0bb89cda9ecf70e6c46cd846b0317c59">reset</a> (<a class="el" href="classvcl_1_1Box.html">uint</a> <a class="el" href="classvcl_1_1Box.html">i</a>)</td></tr>
 <tr class="memdesc:a0bb89cda9ecf70e6c46cd846b0317c59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the bit at position i to false.  <br /></td></tr>
 <tr class="separator:a0bb89cda9ecf70e6c46cd846b0317c59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b5396113342bc6f93dc0aa99a28d812" id="r_a1b5396113342bc6f93dc0aa99a28d812"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#a1b5396113342bc6f93dc0aa99a28d812">flip</a> ()</td></tr>
 <tr class="memdesc:a1b5396113342bc6f93dc0aa99a28d812"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flips all the bits of the <a class="el" href="classvcl_1_1BitSet.html" title="The BitSet class allows to treat an integral type as an array of booleans of a guaranteed size.">BitSet</a>.  <br /></td></tr>
 <tr class="separator:a1b5396113342bc6f93dc0aa99a28d812"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbe5694b088c0a53cc318bcd417bec09" id="r_abbe5694b088c0a53cc318bcd417bec09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#abbe5694b088c0a53cc318bcd417bec09">flip</a> (<a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> <a class="el" href="classvcl_1_1Matrix.html">i</a>)</td></tr>
+<tr class="memitem:abbe5694b088c0a53cc318bcd417bec09" id="r_abbe5694b088c0a53cc318bcd417bec09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#abbe5694b088c0a53cc318bcd417bec09">flip</a> (<a class="el" href="classvcl_1_1Box.html">uint</a> <a class="el" href="classvcl_1_1Box.html">i</a>)</td></tr>
 <tr class="memdesc:abbe5694b088c0a53cc318bcd417bec09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flips the bit at position i.  <br /></td></tr>
 <tr class="separator:abbe5694b088c0a53cc318bcd417bec09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ccdbe8408dadb5ef0624f5be93d49eb" id="r_a7ccdbe8408dadb5ef0624f5be93d49eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Matrix.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#a7ccdbe8408dadb5ef0624f5be93d49eb">serialize</a> (std::ostream &amp;<a class="el" href="classvcl_1_1Matrix.html">os</a>) <a class="el" href="classvcl_1_1Matrix.html">const</a></td></tr>
+<tr class="memitem:a7ccdbe8408dadb5ef0624f5be93d49eb" id="r_a7ccdbe8408dadb5ef0624f5be93d49eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#a7ccdbe8408dadb5ef0624f5be93d49eb">serialize</a> (std::ostream &amp;<a class="el" href="classvcl_1_1Box.html">os</a>) <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="memdesc:a7ccdbe8408dadb5ef0624f5be93d49eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serializes the <a class="el" href="classvcl_1_1BitSet.html" title="The BitSet class allows to treat an integral type as an array of booleans of a guaranteed size.">BitSet</a> to the given output stream.  <br /></td></tr>
 <tr class="separator:a7ccdbe8408dadb5ef0624f5be93d49eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac88e5b0bebb458ea3a7304d32dd45429" id="r_ac88e5b0bebb458ea3a7304d32dd45429"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Matrix.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#ac88e5b0bebb458ea3a7304d32dd45429">deserialize</a> (std::istream &amp;is)</td></tr>
+<tr class="memitem:ac88e5b0bebb458ea3a7304d32dd45429" id="r_ac88e5b0bebb458ea3a7304d32dd45429"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#ac88e5b0bebb458ea3a7304d32dd45429">deserialize</a> (std::istream &amp;<a class="el" href="classvcl_1_1Box.html">is</a>)</td></tr>
 <tr class="memdesc:ac88e5b0bebb458ea3a7304d32dd45429"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deserializes the <a class="el" href="classvcl_1_1BitSet.html" title="The BitSet class allows to treat an integral type as an array of booleans of a guaranteed size.">BitSet</a> from the given input stream.  <br /></td></tr>
 <tr class="separator:ac88e5b0bebb458ea3a7304d32dd45429"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cea5e15a9677968a2af8e7f4fee87c0" id="r_a4cea5e15a9677968a2af8e7f4fee87c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Matrix.html">auto</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#a4cea5e15a9677968a2af8e7f4fee87c0">operator&lt;=&gt;</a> (<a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; T &gt; &amp;) <a class="el" href="classvcl_1_1Matrix.html">const</a> =<a class="el" href="classvcl_1_1Matrix.html">default</a></td></tr>
+<tr class="memitem:a4cea5e15a9677968a2af8e7f4fee87c0" id="r_a4cea5e15a9677968a2af8e7f4fee87c0"><td class="memItemLeft" align="right" valign="top"><a id="a4cea5e15a9677968a2af8e7f4fee87c0" name="a4cea5e15a9677968a2af8e7f4fee87c0"></a>
+<a class="el" href="classvcl_1_1Box.html">auto</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;=&gt;</b> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; T &gt; &amp;) <a class="el" href="classvcl_1_1Box.html">const</a> =<a class="el" href="classvcl_1_1Box.html">default</a></td></tr>
 <tr class="separator:a4cea5e15a9677968a2af8e7f4fee87c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a5cf700625a27abaeb401fd3aba125a17" id="r_a5cf700625a27abaeb401fd3aba125a17"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Matrix.html">static</a> <a class="el" href="classvcl_1_1Matrix.html">constexpr</a> std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#a5cf700625a27abaeb401fd3aba125a17">SIZE</a> = <a class="el" href="classvcl_1_1Matrix.html">sizeof</a>(T) * 8</td></tr>
-<tr class="memdesc:a5cf700625a27abaeb401fd3aba125a17"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of the bits of the <a class="el" href="classvcl_1_1BitSet.html" title="The BitSet class allows to treat an integral type as an array of booleans of a guaranteed size.">BitSet</a>.  <br /></td></tr>
+<tr class="memitem:a5cf700625a27abaeb401fd3aba125a17" id="r_a5cf700625a27abaeb401fd3aba125a17"><td class="memItemLeft" align="right" valign="top"><a id="a5cf700625a27abaeb401fd3aba125a17" name="a5cf700625a27abaeb401fd3aba125a17"></a>
+<a class="el" href="classvcl_1_1Box.html">static</a> <a class="el" href="classvcl_1_1Box.html">constexpr</a> std::size_t&#160;</td><td class="memItemRight" valign="bottom"><b>SIZE</b> = <a class="el" href="classvcl_1_1Box.html">sizeof</a>(T) * 8</td></tr>
+<tr class="memdesc:a5cf700625a27abaeb401fd3aba125a17"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of the bits of the <a class="el" href="classvcl_1_1BitSet.html" title="The BitSet class allows to treat an integral type as an array of booleans of a guaranteed size.">BitSet</a>. <br /></td></tr>
 <tr class="separator:a5cf700625a27abaeb401fd3aba125a17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a6c4fa4382b5fbb85cf3d83fa0b52fc7c" id="r_a6c4fa4382b5fbb85cf3d83fa0b52fc7c"><td class="memItemLeft" align="right" valign="top"><a id="a6c4fa4382b5fbb85cf3d83fa0b52fc7c" name="a6c4fa4382b5fbb85cf3d83fa0b52fc7c"></a>
+T&#160;</td><td class="memItemRight" valign="bottom"><b>mBits</b> = <a class="el" href="classvcl_1_1Box.html">static_cast</a>&lt;T&gt;(0)</td></tr>
+<tr class="separator:a6c4fa4382b5fbb85cf3d83fa0b52fc7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:adfe1b14694dc5bf20eaf0e93acdd7f97" id="r_adfe1b14694dc5bf20eaf0e93acdd7f97"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> <a class="el" href="classvcl_1_1Matrix.html">U</a> &gt; </td></tr>
-<tr class="memitem:adfe1b14694dc5bf20eaf0e93acdd7f97"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1BitSet.html#adfe1b14694dc5bf20eaf0e93acdd7f97">operator&lt;&lt;</a> (std::ostream &amp;<a class="el" href="classvcl_1_1Matrix.html">os</a>, <a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; <a class="el" href="classvcl_1_1Matrix.html">U</a> &gt; &amp;<a class="el" href="classvcl_1_1Matrix.html">bs</a>)</td></tr>
+<tr class="memitem:adfe1b14694dc5bf20eaf0e93acdd7f97" id="r_adfe1b14694dc5bf20eaf0e93acdd7f97"><td class="memTemplParams" colspan="2"><a id="adfe1b14694dc5bf20eaf0e93acdd7f97" name="adfe1b14694dc5bf20eaf0e93acdd7f97"></a>
+template&lt;<a class="el" href="classvcl_1_1Box.html">typename</a> U &gt; </td></tr>
+<tr class="memitem:adfe1b14694dc5bf20eaf0e93acdd7f97"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;<a class="el" href="classvcl_1_1Box.html">os</a>, <a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; U &gt; &amp;<a class="el" href="classvcl_1_1Box.html">bs</a>)</td></tr>
 <tr class="separator:adfe1b14694dc5bf20eaf0e93acdd7f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -199,37 +210,8 @@ class vcl::BitSet&lt; T &gt;</div><p>The <a class="el" href="classvcl_1_1BitSet.
   </dd>
 </dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="affd94bccf22eb78574d7562776c31bb6" name="affd94bccf22eb78574d7562776c31bb6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#affd94bccf22eb78574d7562776c31bb6">&#9670;&#160;</a></span>BitSet() <span class="overload">[1/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;std::integral T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1BitSet.html">vcl::BitSet</a>&lt; T &gt;::BitSet </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Empty constructor. All the Bits of the <a class="el" href="classvcl_1_1BitSet.html" title="The BitSet class allows to treat an integral type as an array of booleans of a guaranteed size.">BitSet</a> are set to false. </p>
-
-</div>
-</div>
 <a id="a80dc0d495905cb68339f7c43275ff10d" name="a80dc0d495905cb68339f7c43275ff10d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80dc0d495905cb68339f7c43275ff10d">&#9670;&#160;</a></span>BitSet() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a80dc0d495905cb68339f7c43275ff10d">&#9670;&#160;</a></span>BitSet() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -244,7 +226,7 @@ template&lt;NonBoolIntegralOrEnum I&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classvcl_1_1BitSet.html">vcl::BitSet</a>&lt; T &gt;::BitSet </td>
           <td>(</td>
-          <td class="paramtype">std::initializer_list&lt; <a class="el" href="classvcl_1_1Matrix.html">I</a> &gt;&#160;</td>
+          <td class="paramtype">std::initializer_list&lt; I &gt;&#160;</td>
           <td class="paramname"><em>l</em></td><td>)</td>
           <td></td>
         </tr>
@@ -268,15 +250,15 @@ template&lt;NonBoolIntegralOrEnum I&gt; </div>
 </div>
 </div>
 <a id="af4daa7e1472db8eaeb5764e5e78c6b30" name="af4daa7e1472db8eaeb5764e5e78c6b30"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4daa7e1472db8eaeb5764e5e78c6b30">&#9670;&#160;</a></span>BitSet() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af4daa7e1472db8eaeb5764e5e78c6b30">&#9670;&#160;</a></span>BitSet() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;std::integral T&gt; </div>
 <div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> <a class="el" href="classvcl_1_1Matrix.html">B</a> &gt; <br />
-requires std::same_as&lt;<a class="el" href="classvcl_1_1Matrix.html">bool</a>, <a class="el" href="classvcl_1_1Matrix.html">B</a>&gt;</div>
+template&lt;<a class="el" href="classvcl_1_1Box.html">typename</a> B &gt; <br />
+requires std::same_as&lt;<a class="el" href="classvcl_1_1Box.html">bool</a>, B&gt;</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -284,7 +266,7 @@ requires std::same_as&lt;<a class="el" href="classvcl_1_1Matrix.html">bool</a>, 
         <tr>
           <td class="memname"><a class="el" href="classvcl_1_1BitSet.html">vcl::BitSet</a>&lt; T &gt;::BitSet </td>
           <td>(</td>
-          <td class="paramtype">std::initializer_list&lt; <a class="el" href="classvcl_1_1Matrix.html">B</a> &gt;&#160;</td>
+          <td class="paramtype">std::initializer_list&lt; B &gt;&#160;</td>
           <td class="paramname"><em>l</em></td><td>)</td>
           <td></td>
         </tr>
@@ -320,7 +302,7 @@ template&lt;std::integral T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Matrix.html">bool</a> <a class="el" href="classvcl_1_1BitSet.html">vcl::BitSet</a>&lt; T &gt;::all </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">bool</a> <a class="el" href="classvcl_1_1BitSet.html">vcl::BitSet</a>&lt; T &gt;::all </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -350,7 +332,7 @@ template&lt;std::integral T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Matrix.html">bool</a> <a class="el" href="classvcl_1_1BitSet.html">vcl::BitSet</a>&lt; T &gt;::any </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">bool</a> <a class="el" href="classvcl_1_1BitSet.html">vcl::BitSet</a>&lt; T &gt;::any </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -382,7 +364,7 @@ template&lt;std::integral T&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; T &gt; <a class="el" href="classvcl_1_1BitSet.html">vcl::BitSet</a>&lt; T &gt;::at </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">uint</a>&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
           <td></td>
         </tr>
@@ -423,9 +405,9 @@ template&lt;std::integral T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Matrix.html">bool</a> <a class="el" href="classvcl_1_1BitSet.html">vcl::BitSet</a>&lt; T &gt;::at </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">bool</a> <a class="el" href="classvcl_1_1BitSet.html">vcl::BitSet</a>&lt; T &gt;::at </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">uint</a>&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -466,7 +448,7 @@ template&lt;std::integral T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Matrix.html">void</a> <a class="el" href="classvcl_1_1BitSet.html">vcl::BitSet</a>&lt; T &gt;::deserialize </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> <a class="el" href="classvcl_1_1BitSet.html">vcl::BitSet</a>&lt; T &gt;::deserialize </td>
           <td>(</td>
           <td class="paramtype">std::istream &amp;&#160;</td>
           <td class="paramname"><em>is</em></td><td>)</td>
@@ -534,7 +516,7 @@ template&lt;std::integral T&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; T &gt; <a class="el" href="classvcl_1_1BitSet.html">vcl::BitSet</a>&lt; T &gt;::flip </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">uint</a>&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
           <td></td>
         </tr>
@@ -569,7 +551,7 @@ template&lt;std::integral T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Matrix.html">bool</a> <a class="el" href="classvcl_1_1BitSet.html">vcl::BitSet</a>&lt; T &gt;::none </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">bool</a> <a class="el" href="classvcl_1_1BitSet.html">vcl::BitSet</a>&lt; T &gt;::none </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -587,34 +569,6 @@ template&lt;std::integral T&gt; </div>
 
 </div>
 </div>
-<a id="a4cea5e15a9677968a2af8e7f4fee87c0" name="a4cea5e15a9677968a2af8e7f4fee87c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4cea5e15a9677968a2af8e7f4fee87c0">&#9670;&#160;</a></span>operator&lt;=&gt;()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;std::integral T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Matrix.html">auto</a> <a class="el" href="classvcl_1_1BitSet.html">vcl::BitSet</a>&lt; T &gt;::operator&lt;=&gt; </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a4725a21057cc8b2e620addd545445fd9" name="a4725a21057cc8b2e620addd545445fd9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4725a21057cc8b2e620addd545445fd9">&#9670;&#160;</a></span>operator[]() <span class="overload">[1/2]</span></h2>
 
@@ -629,7 +583,7 @@ template&lt;std::integral T&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; T &gt; <a class="el" href="classvcl_1_1BitSet.html">vcl::BitSet</a>&lt; T &gt;::operator[] </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">uint</a>&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
           <td></td>
         </tr>
@@ -664,9 +618,9 @@ template&lt;std::integral T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Matrix.html">bool</a> <a class="el" href="classvcl_1_1BitSet.html">vcl::BitSet</a>&lt; T &gt;::operator[] </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">bool</a> <a class="el" href="classvcl_1_1BitSet.html">vcl::BitSet</a>&lt; T &gt;::operator[] </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">uint</a>&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -733,7 +687,7 @@ template&lt;std::integral T&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; T &gt; <a class="el" href="classvcl_1_1BitSet.html">vcl::BitSet</a>&lt; T &gt;::reset </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">uint</a>&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
           <td></td>
         </tr>
@@ -768,7 +722,7 @@ template&lt;std::integral T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Matrix.html">void</a> <a class="el" href="classvcl_1_1BitSet.html">vcl::BitSet</a>&lt; T &gt;::serialize </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> <a class="el" href="classvcl_1_1BitSet.html">vcl::BitSet</a>&lt; T &gt;::serialize </td>
           <td>(</td>
           <td class="paramtype">std::ostream &amp;&#160;</td>
           <td class="paramname"><em>os</em></td><td>)</td>
@@ -836,13 +790,13 @@ template&lt;std::integral T&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; T &gt; <a class="el" href="classvcl_1_1BitSet.html">vcl::BitSet</a>&lt; T &gt;::set </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Matrix.html">bool</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">bool</a>&#160;</td>
           <td class="paramname"><em>b</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">uint</a>&#160;</td>
           <td class="paramname"><em>i</em>&#160;</td>
         </tr>
         <tr>
@@ -882,7 +836,7 @@ template&lt;std::integral T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Matrix.html">constexpr</a> std::size_t <a class="el" href="classvcl_1_1BitSet.html">vcl::BitSet</a>&lt; T &gt;::size </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">constexpr</a> std::size_t <a class="el" href="classvcl_1_1BitSet.html">vcl::BitSet</a>&lt; T &gt;::size </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -900,83 +854,15 @@ template&lt;std::integral T&gt; </div>
 
 </div>
 </div>
-<h2 class="groupheader">Friends And Related Symbol Documentation</h2>
-<a id="adfe1b14694dc5bf20eaf0e93acdd7f97" name="adfe1b14694dc5bf20eaf0e93acdd7f97"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adfe1b14694dc5bf20eaf0e93acdd7f97">&#9670;&#160;</a></span>operator&lt;&lt;</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;std::integral T&gt; </div>
-<div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> <a class="el" href="classvcl_1_1Matrix.html">U</a> &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream &amp; <a class="el" href="classvcl_1_1Matrix.html">operator</a>&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>os</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; <a class="el" href="classvcl_1_1Matrix.html">U</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>bs</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a5cf700625a27abaeb401fd3aba125a17" name="a5cf700625a27abaeb401fd3aba125a17"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5cf700625a27abaeb401fd3aba125a17">&#9670;&#160;</a></span>SIZE</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;std::integral T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Matrix.html">constexpr</a> std::size_t <a class="el" href="classvcl_1_1BitSet.html">vcl::BitSet</a>&lt; T &gt;::SIZE = <a class="el" href="classvcl_1_1Matrix.html">sizeof</a>(T) * 8</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>The number of the bits of the <a class="el" href="classvcl_1_1BitSet.html" title="The BitSet class allows to treat an integral type as an array of booleans of a guaranteed size.">BitSet</a>. </p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>include/vclib/space/core/<a class="el" href="bit__set_8h_source.html">bit_set.h</a></li>
+<li>vclib/core/include/vclib/space/core/<a class="el" href="space_2core_2bit__set_8h_source.html">bit_set.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespacevcl.html">vcl</a></li><li class="navelem"><a class="el" href="classvcl_1_1BitSet.html">BitSet</a></li>
+    <li class="navelem"><b>vcl</b></li><li class="navelem"><a class="el" href="classvcl_1_1BitSet.html">BitSet</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

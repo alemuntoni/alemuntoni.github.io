@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visual Computing Library: include/vclib/load_save/ply/detail/tristrip.h Source File</title>
+<title>Visual Computing Library: vclib/core/include/vclib/load_save/ply/detail/tristrip.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -104,11 +104,11 @@ $(document).ready(function(){initNavTree('tristrip_8h_source.html',''); initResi
   <div class="headertitle"><div class="title">tristrip.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="tristrip_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2024                                                    *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2025                                                    *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
@@ -129,12 +129,12 @@ $(document).ready(function(){initNavTree('tristrip_8h_source.html',''); initResi
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_LOAD_SAVE_PLY_DETAIL_TRISTRIP_H</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_LOAD_SAVE_PLY_DETAIL_TRISTRIP_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;istream&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;header.h&quot;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="read_8h.html">vclib/io/read.h</a>&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="tokenizer_8h.html">vclib/misc/tokenizer.h</a>&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;vclib/io/read.h&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;vclib/misc/tokenizer.h&gt;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &quot;<a class="code" href="header_8h.html">header.h</a>&quot;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;istream&gt;</span></div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">namespace </span>vcl::detail {</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
@@ -144,7 +144,7 @@ $(document).ready(function(){initNavTree('tristrip_8h_source.html',''); initResi
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">using </span>FaceType = MeshType::FaceType;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">bool</span> firstOddPos = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> k = 0; k &lt; tristrip.size() - 2; ++k) {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordflow">for</span> (uint k = 0; k &lt; tristrip.size() - 2; ++k) {</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">if</span> (tristrip[k + 2] &lt; 0) {</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            k += 2;</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keywordflow">if</span> (k % 2 == 0)</div>
@@ -153,12 +153,12 @@ $(document).ready(function(){initNavTree('tristrip_8h_source.html',''); initResi
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                firstOddPos = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        }</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>      fid = m.addFace();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            uint      fid = m.addFace();</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            FaceType&amp; f   = m.face(fid);</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (FaceType::VERTEX_NUMBER &lt; 0) {</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                f.resizeVertices(3);</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            }</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> i = 0; i &lt; f.vertexNumber(); ++i) {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="keywordflow">for</span> (uint i = 0; i &lt; f.vertexNumber(); ++i) {</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                f.setVertex(i, tristrip[k + i]);</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            }</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
@@ -177,18 +177,18 @@ $(document).ready(function(){initNavTree('tristrip_8h_source.html',''); initResi
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keyword">const</span> PlyHeader&amp; header,</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    MeshType&amp;        m)</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>{</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> tid = 0; tid &lt; header.numberTriStrips(); ++tid) {</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <a class="code hl_class" href="classvcl_1_1Tokenizer.html">vcl::Tokenizer</a> spaceTokenizer  = <a class="code hl_function" href="namespacevcl.html#a8b5e5d8a685a997ee41edc94bc5136c1">readAndTokenizeNextNonEmptyLine</a>(file);</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <a class="code hl_typedef" href="classvcl_1_1Tokenizer.html#aecde7e69ec15be24bbf181dbedab145d">vcl::Tokenizer::iterator</a> token = spaceTokenizer.<a class="code hl_function" href="classvcl_1_1Tokenizer.html#a0a43797da9f19da28265bb0dc7821ff9">begin</a>();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordflow">for</span> (uint tid = 0; tid &lt; header.numberTriStrips(); ++tid) {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        Tokenizer spaceTokenizer  = readAndTokenizeNextNonEmptyLine(file);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        Tokenizer::iterator token = spaceTokenizer.begin();</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> PlyProperty&amp; p : header.triStripsProperties()) {</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            <span class="keywordflow">if</span> (token == spaceTokenizer.<a class="code hl_function" href="classvcl_1_1Tokenizer.html#a11af63c350f3b8e698f7fcac4b6b9abd">end</a>()) {</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                <span class="keywordflow">throw</span> <a class="code hl_class" href="classvcl_1_1MalformedFileException.html">vcl::MalformedFileException</a>(<span class="stringliteral">&quot;Unexpected end of line.&quot;</span>);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            <span class="keywordflow">if</span> (token == spaceTokenizer.end()) {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                <span class="keywordflow">throw</span> MalformedFileException(<span class="stringliteral">&quot;Unexpected end of line.&quot;</span>);</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            }</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            <span class="keywordtype">bool</span> hasBeenRead = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keywordflow">if</span> (p.name == ply::vertex_indices) {</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                <a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> tSize = io::readPrimitiveType&lt;uint&gt;(token, p.listSizeType);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                uint tSize = io::readPrimitiveType&lt;uint&gt;(token, p.listSizeType);</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                std::vector&lt;int&gt; tristrip(tSize);</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> i = 0; i &lt; tSize; ++i) {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                <span class="keywordflow">for</span> (uint i = 0; i &lt; tSize; ++i) {</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                    tristrip[i] = io::readPrimitiveType&lt;size_t&gt;(token, p.type);</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                }</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                hasBeenRead = <span class="keyword">true</span>;</div>
@@ -196,8 +196,8 @@ $(document).ready(function(){initNavTree('tristrip_8h_source.html',''); initResi
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            }</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            <span class="keywordflow">if</span> (!hasBeenRead) {</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                <span class="keywordflow">if</span> (p.list) {</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                    <a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> s = io::readPrimitiveType&lt;int&gt;(token, p.listSizeType);</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> i = 0; i &lt; s; ++i) {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                    uint s = io::readPrimitiveType&lt;int&gt;(token, p.listSizeType);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                    <span class="keywordflow">for</span> (uint i = 0; i &lt; s; ++i) {</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                        ++token;</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                    }</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                }</div>
@@ -216,23 +216,23 @@ $(document).ready(function(){initNavTree('tristrip_8h_source.html',''); initResi
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    MeshType&amp;        m,</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    std::endian      end)</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>{</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> tid = 0; tid &lt; header.numberTriStrips(); ++tid) {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordflow">for</span> (uint tid = 0; tid &lt; header.numberTriStrips(); ++tid) {</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> PlyProperty&amp; p : header.triStripsProperties()) {</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            <span class="keywordtype">bool</span> hasBeenRead = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            <span class="keywordflow">if</span> (p.name == ply::vertex_indices) {</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                <a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> tSize =</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                uint tSize =</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                    io::readPrimitiveType&lt;uint&gt;(file, p.listSizeType, end);</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                std::vector&lt;int&gt; tristrip(tSize);</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> i = 0; i &lt; tSize; ++i)</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                <span class="keywordflow">for</span> (uint i = 0; i &lt; tSize; ++i)</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                    tristrip[i] = io::readPrimitiveType&lt;int&gt;(file, p.type, end);</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                hasBeenRead = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                facesFromPlyTriStrip(m, tristrip);</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            }</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            <span class="keywordflow">if</span> (!hasBeenRead) {</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                <span class="keywordflow">if</span> (p.list) {</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                    <a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> s =</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                    uint s =</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                        io::readPrimitiveType&lt;int&gt;(file, p.listSizeType, end);</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                    <span class="keywordflow">for</span> (<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> i = 0; i &lt; s; ++i)</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                    <span class="keywordflow">for</span> (uint i = 0; i &lt; s; ++i)</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                        io::readPrimitiveType&lt;int&gt;(file, p.type, end);</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                }</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                <span class="keywordflow">else</span> {</div>
@@ -265,22 +265,12 @@ $(document).ready(function(){initNavTree('tristrip_8h_source.html',''); initResi
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>} <span class="comment">// namespace vcl::detail</span></div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="preprocessor">#endif </span><span class="comment">// VCL_LOAD_SAVE_PLY_DETAIL_TRISTRIP_H</span></div>
-<div class="ttc" id="aclassvcl_1_1MalformedFileException_html"><div class="ttname"><a href="classvcl_1_1MalformedFileException.html">vcl::MalformedFileException</a></div><div class="ttdef"><b>Definition</b> io.h:61</div></div>
-<div class="ttc" id="aclassvcl_1_1Tokenizer_html"><div class="ttname"><a href="classvcl_1_1Tokenizer.html">vcl::Tokenizer</a></div><div class="ttdoc">The Tokenizer class.</div><div class="ttdef"><b>Definition</b> tokenizer.h:37</div></div>
-<div class="ttc" id="aclassvcl_1_1Tokenizer_html_a0a43797da9f19da28265bb0dc7821ff9"><div class="ttname"><a href="classvcl_1_1Tokenizer.html#a0a43797da9f19da28265bb0dc7821ff9">vcl::Tokenizer::begin</a></div><div class="ttdeci">iterator begin() const</div><div class="ttdef"><b>Definition</b> tokenizer.h:62</div></div>
-<div class="ttc" id="aclassvcl_1_1Tokenizer_html_a11af63c350f3b8e698f7fcac4b6b9abd"><div class="ttname"><a href="classvcl_1_1Tokenizer.html#a11af63c350f3b8e698f7fcac4b6b9abd">vcl::Tokenizer::end</a></div><div class="ttdeci">iterator end() const</div><div class="ttdef"><b>Definition</b> tokenizer.h:64</div></div>
-<div class="ttc" id="aclassvcl_1_1Tokenizer_html_aecde7e69ec15be24bbf181dbedab145d"><div class="ttname"><a href="classvcl_1_1Tokenizer.html#aecde7e69ec15be24bbf181dbedab145d">vcl::Tokenizer::iterator</a></div><div class="ttdeci">std::vector&lt; std::string &gt;::const_iterator iterator</div><div class="ttdef"><b>Definition</b> tokenizer.h:43</div></div>
-<div class="ttc" id="aheader_8h_html"><div class="ttname"><a href="header_8h.html">header.h</a></div></div>
-<div class="ttc" id="anamespacevcl_html_a8b5e5d8a685a997ee41edc94bc5136c1"><div class="ttname"><a href="namespacevcl.html#a8b5e5d8a685a997ee41edc94bc5136c1">vcl::readAndTokenizeNextNonEmptyLine</a></div><div class="ttdeci">vcl::Tokenizer readAndTokenizeNextNonEmptyLine(std::istream &amp;file, char separator=' ')</div><div class="ttdoc">Reads and returns the next non-empty line from a txt stream, tokenized with the given separator.</div><div class="ttdef"><b>Definition</b> read.h:138</div></div>
-<div class="ttc" id="anamespacevcl_html_af74b42dd9d759d565bb701a5b845d05c"><div class="ttname"><a href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">vcl::uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition</b> base.h:34</div></div>
-<div class="ttc" id="aread_8h_html"><div class="ttname"><a href="read_8h.html">read.h</a></div></div>
-<div class="ttc" id="atokenizer_8h_html"><div class="ttname"><a href="tokenizer_8h.html">tokenizer.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d2fdbf172f8ae9790b339bfcb66b3af7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_b062475d276f2bc8526a3b8fd274bef1.html">load_save</a></li><li class="navelem"><a class="el" href="dir_d1e73a48f65f4a3060a336415e0e07b9.html">ply</a></li><li class="navelem"><a class="el" href="dir_f4877dc67a23fd17e5aaf55c1e5e0dfe.html">detail</a></li><li class="navelem"><a class="el" href="tristrip_8h.html">tristrip.h</a></li>
+    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_d82254d0eafdb62b552353fdd758eaeb.html">load_save</a></li><li class="navelem"><a class="el" href="dir_11be3b4d45313fb6f4a2595834ef2877.html">ply</a></li><li class="navelem"><a class="el" href="dir_aedef405df8af65188067e19a571083f.html">detail</a></li><li class="navelem"><b>tristrip.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

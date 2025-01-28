@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visual Computing Library: include/vclib/types/variadic_templates.h Source File</title>
+<title>Visual Computing Library: vclib/core/include/vclib/types/variadic_templates.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -104,11 +104,11 @@ $(document).ready(function(){initNavTree('variadic__templates_8h_source.html',''
   <div class="headertitle"><div class="title">variadic_templates.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="variadic__templates_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2024                                                    *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2025                                                    *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
@@ -129,12 +129,12 @@ $(document).ready(function(){initNavTree('variadic__templates_8h_source.html',''
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_TYPES_VARIADIC_TEMPLATES_H</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_TYPES_VARIADIC_TEMPLATES_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;<a class="code" href="types_2base_8h.html">base.h</a>&quot;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;base.h&quot;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;tuple&gt;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;typeindex&gt;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span>vcl {</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">// TODO: write documentation for all the functions and classes in this file</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
@@ -142,7 +142,7 @@ $(document).ready(function(){initNavTree('variadic__templates_8h_source.html',''
 <div class="foldopen" id="foldopen00043" data-start="{" data-end="};">
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="structvcl_1_1TypeWrapper.html">   43</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1TypeWrapper.html">TypeWrapper</a></div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>{</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="structvcl_1_1TypeWrapper.html#a7d24b27f794a7ea7127f6c59bdb92fea">   45</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">uint</a> <a class="code hl_function" href="structvcl_1_1TypeWrapper.html#a7d24b27f794a7ea7127f6c59bdb92fea">size</a>() { <span class="keywordflow">return</span> <span class="keyword">sizeof</span>...(Args); }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <a class="code hl_class" href="classvcl_1_1Box.html">uint</a> size() { <span class="keywordflow">return</span> <span class="keyword">sizeof</span>...(Args); }</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>};</div>
 </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
@@ -150,249 +150,231 @@ $(document).ready(function(){initNavTree('variadic__templates_8h_source.html',''
 <div class="foldopen" id="foldopen00061" data-start="{" data-end="};">
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="structvcl_1_1FirstType.html">   61</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1FirstType.html">FirstType</a></div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>{</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="structvcl_1_1FirstType.html#adfc61a756c81150c4a12f798feda1b2d">   63</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="structvcl_1_1FirstType.html#adfc61a756c81150c4a12f798feda1b2d">type</a> = std::tuple_element&lt;0, std::tuple&lt;Args...&gt;&gt;<a class="code hl_typedef" href="structvcl_1_1FirstType.html#adfc61a756c81150c4a12f798feda1b2d">::type</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">using </span>type = std::tuple_element&lt;0, std::tuple&lt;Args...&gt;&gt;::type;</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>};</div>
 </div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="foldopen" id="foldopen00070" data-start="{" data-end="};">
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="structvcl_1_1FirstType_3_01TypeWrapper_3_01Args_8_8_8_01_4_01_4.html">   70</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1FirstType.html">FirstType</a>&lt;<a class="code hl_struct" href="structvcl_1_1TypeWrapper.html">TypeWrapper</a>&lt;Args...&gt;&gt;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>{</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="structvcl_1_1FirstType_3_01TypeWrapper_3_01Args_8_8_8_01_4_01_4.html#a37019e81622f70a79fa67889c90b5409">   72</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="structvcl_1_1FirstType_3_01TypeWrapper_3_01Args_8_8_8_01_4_01_4.html#a37019e81622f70a79fa67889c90b5409">type</a> = std::tuple_element&lt;0, std::tuple&lt;Args...&gt;&gt;<a class="code hl_typedef" href="structvcl_1_1FirstType.html#adfc61a756c81150c4a12f798feda1b2d">::type</a>;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>};</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="foldopen" id="foldopen00072" data-start="{" data-end="};">
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="structvcl_1_1FirstType_3_01TypeWrapper_3_01Args_8_8_8_01_4_01_4.html">   72</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1FirstType.html">FirstType</a>&lt;<a class="code hl_struct" href="structvcl_1_1TypeWrapper.html">TypeWrapper</a>&lt;Args...&gt;&gt;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>{</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keyword">using </span>type = std::tuple_element&lt;0, std::tuple&lt;Args...&gt;&gt;::type;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>};</div>
 </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="group__types.html#ga38c527736a2d0a3d7af0493e228227e3">   87</a></span><span class="keyword">using </span><a class="code hl_typedef" href="group__types.html#ga38c527736a2d0a3d7af0493e228227e3">FirstTypeT</a> = <span class="keyword">typename</span> <a class="code hl_struct" href="structvcl_1_1FirstType.html">FirstType</a>&lt;Args...&gt;::type;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="comment">// https://stackoverflow.com/a/71477756/5851101</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">U</a>, <span class="keyword">typename</span>... <a class="code hl_class" href="classvcl_1_1Matrix.html">Us</a>&gt;</div>
-<div class="foldopen" id="foldopen00097" data-start="{" data-end="}">
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="group__types.html#gae01694fdca8b252384be3296f82fa946">   97</a></span><span class="keyword">constexpr</span> <a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> <a class="code hl_function" href="group__types.html#gae01694fdca8b252384be3296f82fa946">indexInTypePack</a>()</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>{</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::is_same_v&lt;T, U&gt;) {</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    }</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<span class="keyword">sizeof</span>...(Us)) {</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            <span class="comment">// there is at least another type to check</span></div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            <span class="keyword">constexpr</span> <a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> <a class="code hl_class" href="classvcl_1_1Matrix.html">res</a> =</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                <a class="code hl_function" href="group__types.html#gae01694fdca8b252384be3296f82fa946">indexInTypePack</a>&lt;T, <a class="code hl_class" href="classvcl_1_1Matrix.html">Us</a>...&gt;(); <span class="comment">// look in the rest of the types</span></div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<a class="code hl_class" href="classvcl_1_1Matrix.html">res</a> == <a class="code hl_variable" href="group__types.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>)  <span class="comment">// not found in the rest</span></div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="group__types.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>;</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                <span class="keywordflow">return</span> 1 + <a class="code hl_class" href="classvcl_1_1Matrix.html">res</a>; <span class="comment">// found</span></div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        }</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keywordflow">else</span> { <span class="comment">// not found</span></div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="group__types.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>;</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        }</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    }</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>}</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="group__types.html#ga38c527736a2d0a3d7af0493e228227e3">   89</a></span><span class="keyword">using </span><a class="code hl_typedef" href="group__types.html#ga38c527736a2d0a3d7af0493e228227e3">FirstTypeT</a> = <span class="keyword">typename</span> <a class="code hl_struct" href="structvcl_1_1FirstType.html">FirstType</a>&lt;Args...&gt;::type;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="comment">// https://stackoverflow.com/a/71477756/5851101</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> U, <span class="keyword">typename</span>... <a class="code hl_class" href="classvcl_1_1Box.html">Us</a>&gt;</div>
+<div class="foldopen" id="foldopen00099" data-start="{" data-end="}">
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="group__types.html#gae01694fdca8b252384be3296f82fa946">   99</a></span><span class="keyword">constexpr</span> uint <a class="code hl_function" href="group__types.html#gae01694fdca8b252384be3296f82fa946">indexInTypePack</a>()</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>{</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::is_same_v&lt;T, U&gt;) {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    }</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<span class="keyword">sizeof</span>...(Us)) {</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            <span class="comment">// there is at least another type to check</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            <span class="keyword">constexpr</span> uint <a class="code hl_class" href="classvcl_1_1Box.html">res</a> =</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                <a class="code hl_function" href="group__types.html#gae01694fdca8b252384be3296f82fa946">indexInTypePack</a>&lt;T, <a class="code hl_class" href="classvcl_1_1Box.html">Us</a>...&gt;(); <span class="comment">// look in the rest of the types</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<a class="code hl_class" href="classvcl_1_1Box.html">res</a> == <a class="code hl_variable" href="group__types.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>)  <span class="comment">// not found in the rest</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="group__types.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                <span class="keywordflow">return</span> 1 + <a class="code hl_class" href="classvcl_1_1Box.html">res</a>; <span class="comment">// found</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        }</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keywordflow">else</span> { <span class="comment">// not found</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="group__types.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        }</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    }</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>}</div>
 </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> U, <span class="keyword">typename</span>... Us&gt;</div>
-<div class="foldopen" id="foldopen00128" data-start="{" data-end="}">
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="group__types.html#gac398b3cd16575f92ffc3e6cfd6ba1669">  128</a></span><a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> <a class="code hl_function" href="group__types.html#gae01694fdca8b252384be3296f82fa946">indexInTypePack</a>(std::type_index <a class="code hl_class" href="classvcl_1_1Matrix.html">ti</a>)</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>{</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordflow">if</span> (<a class="code hl_class" href="classvcl_1_1Matrix.html">ti</a> == <span class="keyword">typeid</span>(<a class="code hl_class" href="classvcl_1_1Matrix.html">U</a>)) {</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    }</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<span class="keyword">sizeof</span>...(Us)) {</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            <span class="comment">// there is at least another type to check</span></div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            <a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> <a class="code hl_class" href="classvcl_1_1Matrix.html">res</a> = <a class="code hl_function" href="group__types.html#gae01694fdca8b252384be3296f82fa946">indexInTypePack</a>&lt;<a class="code hl_class" href="classvcl_1_1Matrix.html">Us</a>...&gt;(<a class="code hl_class" href="classvcl_1_1Matrix.html">ti</a>);</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classvcl_1_1Matrix.html">res</a> == <a class="code hl_variable" href="group__types.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>)</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="group__types.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>;</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>            <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                <span class="keywordflow">return</span> 1 + <a class="code hl_class" href="classvcl_1_1Matrix.html">res</a>;</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        }</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        <span class="keywordflow">else</span> { <span class="comment">// not found</span></div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="group__types.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>;</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        }</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    }</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>}</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> U, <span class="keyword">typename</span>... Us&gt;</div>
+<div class="foldopen" id="foldopen00130" data-start="{" data-end="}">
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="group__types.html#gac398b3cd16575f92ffc3e6cfd6ba1669">  130</a></span>uint <a class="code hl_function" href="group__types.html#gae01694fdca8b252384be3296f82fa946">indexInTypePack</a>(std::type_index <a class="code hl_class" href="classvcl_1_1Box.html">ti</a>)</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>{</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keywordflow">if</span> (<a class="code hl_class" href="classvcl_1_1Box.html">ti</a> == <span class="keyword">typeid</span>(U)) {</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    }</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<span class="keyword">sizeof</span>...(Us)) {</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            <span class="comment">// there is at least another type to check</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>            uint <a class="code hl_class" href="classvcl_1_1Box.html">res</a> = <a class="code hl_function" href="group__types.html#gae01694fdca8b252384be3296f82fa946">indexInTypePack</a>&lt;<a class="code hl_class" href="classvcl_1_1Box.html">Us</a>...&gt;(<a class="code hl_class" href="classvcl_1_1Box.html">ti</a>);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classvcl_1_1Box.html">res</a> == <a class="code hl_variable" href="group__types.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>)</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="group__types.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                <span class="keywordflow">return</span> 1 + <a class="code hl_class" href="classvcl_1_1Box.html">res</a>;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        }</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <span class="keywordflow">else</span> { <span class="comment">// not found</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="group__types.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        }</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    }</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>}</div>
 </div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="foldopen" id="foldopen00149" data-start="{" data-end="}">
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="namespacevcl.html#ad6ce6ce1ca6a9813f3437aa0aeee2d94">  149</a></span><a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> <a class="code hl_function" href="group__types.html#gae01694fdca8b252384be3296f82fa946">indexInTypePack</a>(std::type_index <a class="code hl_class" href="classvcl_1_1Matrix.html">ti</a>, <a class="code hl_class" href="classvcl_1_1Matrix.html">TypeWrapper&lt;Args...&gt;</a>)</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>{</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="group__types.html#gae01694fdca8b252384be3296f82fa946">indexInTypePack</a>&lt;Args...&gt;(<a class="code hl_class" href="classvcl_1_1Matrix.html">ti</a>);</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>}</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>uint <a class="code hl_function" href="group__types.html#gae01694fdca8b252384be3296f82fa946">indexInTypePack</a>(std::type_index ti, TypeWrapper&lt;Args...&gt;)</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>{</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="group__types.html#gae01694fdca8b252384be3296f82fa946">indexInTypePack</a>&lt;Args...&gt;(ti);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>}</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Us&gt;</div>
+<div class="foldopen" id="foldopen00157" data-start="{" data-end="};">
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="structvcl_1_1IndexInTypes.html">  157</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1IndexInTypes.html">IndexInTypes</a></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>{</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> uint value = <a class="code hl_function" href="group__types.html#gae01694fdca8b252384be3296f82fa946">indexInTypePack</a>&lt;T, <a class="code hl_class" href="classvcl_1_1Box.html">Us</a>...&gt;();</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>};</div>
 </div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Us&gt;</div>
-<div class="foldopen" id="foldopen00155" data-start="{" data-end="};">
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="structvcl_1_1IndexInTypes.html">  155</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1IndexInTypes.html">IndexInTypes</a></div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>{</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="structvcl_1_1IndexInTypes.html#adfcc80bafb29623a170df2615d043d83">  157</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> <a class="code hl_variable" href="structvcl_1_1IndexInTypes.html#adfcc80bafb29623a170df2615d043d83">value</a> = <a class="code hl_function" href="group__types.html#gae01694fdca8b252384be3296f82fa946">indexInTypePack</a>&lt;T, <a class="code hl_class" href="classvcl_1_1Matrix.html">Us</a>...&gt;();</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>};</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... <a class="code hl_class" href="classvcl_1_1Box.html">Us</a>&gt;</div>
+<div class="foldopen" id="foldopen00163" data-start="{" data-end="};">
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="structvcl_1_1IndexInTypes_3_01T_00_01TypeWrapper_3_01Us_8_8_8_01_4_01_4.html">  163</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1IndexInTypes.html">IndexInTypes</a>&lt;T, <a class="code hl_struct" href="structvcl_1_1TypeWrapper.html">TypeWrapper</a>&lt;<a class="code hl_class" href="classvcl_1_1Box.html">Us</a>...&gt;&gt;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>{</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> uint value = <a class="code hl_function" href="group__types.html#gae01694fdca8b252384be3296f82fa946">indexInTypePack</a>&lt;T, <a class="code hl_class" href="classvcl_1_1Box.html">Us</a>...&gt;();</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>};</div>
 </div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... <a class="code hl_class" href="classvcl_1_1Matrix.html">Us</a>&gt;</div>
-<div class="foldopen" id="foldopen00161" data-start="{" data-end="};">
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="structvcl_1_1IndexInTypes_3_01T_00_01TypeWrapper_3_01Us_8_8_8_01_4_01_4.html">  161</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1IndexInTypes.html">IndexInTypes</a>&lt;T, <a class="code hl_struct" href="structvcl_1_1TypeWrapper.html">TypeWrapper</a>&lt;<a class="code hl_class" href="classvcl_1_1Matrix.html">Us</a>...&gt;&gt;</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>{</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="structvcl_1_1IndexInTypes_3_01T_00_01TypeWrapper_3_01Us_8_8_8_01_4_01_4.html#acd22d447bc0c5a1f7e84feb8828fa0f0">  163</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> <a class="code hl_variable" href="structvcl_1_1IndexInTypes.html#adfcc80bafb29623a170df2615d043d83">value</a> = <a class="code hl_function" href="group__types.html#gae01694fdca8b252384be3296f82fa946">indexInTypePack</a>&lt;T, <a class="code hl_class" href="classvcl_1_1Matrix.html">Us</a>...&gt;();</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>};</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="foldopen" id="foldopen00169" data-start="{" data-end="};">
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="structvcl_1_1NumberOfTypes.html">  169</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1NumberOfTypes.html">NumberOfTypes</a></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>{</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> uint value = <span class="keyword">sizeof</span>...(Args);</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>};</div>
 </div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="foldopen" id="foldopen00167" data-start="{" data-end="};">
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="structvcl_1_1NumberOfTypes.html">  167</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1NumberOfTypes.html">NumberOfTypes</a></div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>{</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="structvcl_1_1NumberOfTypes.html#a4a9c38fba8d8f7e9e64921846908902b">  169</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> <a class="code hl_variable" href="structvcl_1_1NumberOfTypes.html#a4a9c38fba8d8f7e9e64921846908902b">value</a> = <span class="keyword">sizeof</span>...(Args);</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>};</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="foldopen" id="foldopen00175" data-start="{" data-end="};">
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="structvcl_1_1NumberOfTypes_3_01TypeWrapper_3_01Args_8_8_8_01_4_01_4.html">  175</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1NumberOfTypes.html">NumberOfTypes</a>&lt;<a class="code hl_struct" href="structvcl_1_1TypeWrapper.html">TypeWrapper</a>&lt;Args...&gt;&gt; : <span class="keyword">public</span> <a class="code hl_struct" href="structvcl_1_1NumberOfTypes.html">NumberOfTypes</a>&lt;Args...&gt;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>{</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>};</div>
 </div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="foldopen" id="foldopen00173" data-start="{" data-end="};">
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="structvcl_1_1NumberOfTypes_3_01TypeWrapper_3_01Args_8_8_8_01_4_01_4.html">  173</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1NumberOfTypes.html">NumberOfTypes</a>&lt;<a class="code hl_struct" href="structvcl_1_1TypeWrapper.html">TypeWrapper</a>&lt;Args...&gt;&gt; : <span class="keyword">public</span> <a class="code hl_struct" href="structvcl_1_1NumberOfTypes.html">NumberOfTypes</a>&lt;Args...&gt;</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>{</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>};</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span>... T&gt;</div>
+<div class="foldopen" id="foldopen00197" data-start="{" data-end="};">
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno"><a class="line" href="structvcl_1_1ForEachType.html">  197</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1ForEachType.html">ForEachType</a></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>{</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> F&gt;</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> apply(F&amp;&amp; f)</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    {</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        (f.template <a class="code hl_class" href="classvcl_1_1Box.html">operator</a>()&lt;T&gt;(), ...);</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    }</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>};</div>
 </div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span>... T&gt;</div>
-<div class="foldopen" id="foldopen00195" data-start="{" data-end="};">
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno"><a class="line" href="structvcl_1_1ForEachType.html">  195</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1ForEachType.html">ForEachType</a></div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>{</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> F&gt;</div>
-<div class="foldopen" id="foldopen00198" data-start="{" data-end="}">
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno"><a class="line" href="structvcl_1_1ForEachType.html#a62e43580dd02cab4fd94afa67fd10b46">  198</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="structvcl_1_1ForEachType.html#a62e43580dd02cab4fd94afa67fd10b46">apply</a>(<a class="code hl_class" href="classvcl_1_1Matrix.html">F</a>&amp;&amp; f)</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    {</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        (f.template <a class="code hl_class" href="classvcl_1_1Matrix.html">operator</a>()&lt;T&gt;(), ...);</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    }</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span>... T&gt;</div>
+<div class="foldopen" id="foldopen00207" data-start="{" data-end="};">
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno"><a class="line" href="structvcl_1_1ForEachType_3_01TypeWrapper_3_01T_8_8_8_01_4_01_4.html">  207</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1ForEachType.html">ForEachType</a>&lt;<a class="code hl_struct" href="structvcl_1_1TypeWrapper.html">TypeWrapper</a>&lt;T...&gt;&gt; : <span class="keyword">public</span> <a class="code hl_struct" href="structvcl_1_1ForEachType.html">ForEachType</a>&lt;T...&gt;</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>{</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>};</div>
 </div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>};</div>
-</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span>... T&gt;</div>
-<div class="foldopen" id="foldopen00205" data-start="{" data-end="};">
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno"><a class="line" href="structvcl_1_1ForEachType_3_01TypeWrapper_3_01T_8_8_8_01_4_01_4.html">  205</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1ForEachType.html">ForEachType</a>&lt;<a class="code hl_struct" href="structvcl_1_1TypeWrapper.html">TypeWrapper</a>&lt;T...&gt;&gt; : <span class="keyword">public</span> <a class="code hl_struct" href="structvcl_1_1ForEachType.html">ForEachType</a>&lt;T...&gt;</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>{</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>};</div>
-</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="keyword">namespace </span>detail {</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span>, <span class="keyword">typename</span>&gt;</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="keyword">struct </span>TypeWrapperConstructor;</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Args&gt;</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span><span class="keyword">struct </span>TypeWrapperConstructor&lt;T, <a class="code hl_struct" href="structvcl_1_1TypeWrapper.html">TypeWrapper</a>&lt;Args...&gt;&gt;</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>{</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    <span class="keyword">using </span>type = <a class="code hl_struct" href="structvcl_1_1TypeWrapper.html">TypeWrapper</a>&lt;T, Args...&gt;;</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>};</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>} <span class="comment">// namespace detail</span></div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span><span class="keyword">namespace </span>detail {</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span>, <span class="keyword">typename</span>&gt;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span><span class="keyword">struct </span>TypeWrapperConstructor;</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span><span class="keyword">struct </span>TypeWrapperConstructor&lt;T, <a class="code hl_struct" href="structvcl_1_1TypeWrapper.html">TypeWrapper</a>&lt;Args...&gt;&gt;</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>{</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    <span class="keyword">using </span>type = <a class="code hl_struct" href="structvcl_1_1TypeWrapper.html">TypeWrapper</a>&lt;T, Args...&gt;;</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>};</div>
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> </div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span><span class="keyword">template</span>&lt;<span class="keyword">template</span>&lt;<span class="keyword">class</span>&gt; <span class="keyword">class</span>, <span class="keyword">typename</span>...&gt;</div>
-<div class="foldopen" id="foldopen00248" data-start="{" data-end="};">
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno"><a class="line" href="structvcl_1_1FilterTypesByCondition.html">  248</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1FilterTypesByCondition.html">FilterTypesByCondition</a></div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>{</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno"><a class="line" href="structvcl_1_1FilterTypesByCondition.html#a81339ee1dcedfab5f4966fc785809c3a">  250</a></span>    <span class="keyword">using </span><a class="code hl_class" href="classvcl_1_1Matrix.html">type</a> = <a class="code hl_class" href="classvcl_1_1Matrix.html">TypeWrapper&lt;&gt;</a>;</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>};</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>} <span class="comment">// namespace detail</span></div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span><span class="keyword">template</span>&lt;<span class="keyword">template</span>&lt;<span class="keyword">class</span>&gt; <span class="keyword">class</span>, <span class="keyword">typename</span>...&gt;</div>
+<div class="foldopen" id="foldopen00250" data-start="{" data-end="};">
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno"><a class="line" href="structvcl_1_1FilterTypesByCondition.html">  250</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1FilterTypesByCondition.html">FilterTypesByCondition</a></div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>{</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    <span class="keyword">using </span><a class="code hl_class" href="classvcl_1_1Box.html">type</a> = <a class="code hl_class" href="classvcl_1_1Box.html">TypeWrapper&lt;&gt;</a>;</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>};</div>
 </div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span> </div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span><span class="keyword">template</span>&lt;<span class="keyword">template</span>&lt;<span class="keyword">class</span>&gt; <span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1Matrix.html">Pred</a>, <span class="keyword">typename</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">Head</a>, <span class="keyword">typename</span>... <a class="code hl_class" href="classvcl_1_1Matrix.html">Tail</a>&gt;</div>
-<div class="foldopen" id="foldopen00257" data-start="{" data-end="};">
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno"><a class="line" href="structvcl_1_1FilterTypesByCondition_3_01Pred_00_01Head_00_01Tail_8_8_8_01_4.html">  257</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1FilterTypesByCondition.html">FilterTypesByCondition</a>&lt;<a class="code hl_class" href="classvcl_1_1Matrix.html">Pred</a>, <a class="code hl_class" href="classvcl_1_1Matrix.html">Head</a>, <a class="code hl_class" href="classvcl_1_1Matrix.html">Tail</a>...&gt;</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>{</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno"><a class="line" href="structvcl_1_1FilterTypesByCondition_3_01Pred_00_01Head_00_01Tail_8_8_8_01_4.html#a41ad30388cdf1bce7931852033e3e774">  259</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="structvcl_1_1FilterTypesByCondition_3_01Pred_00_01Head_00_01Tail_8_8_8_01_4.html#a41ad30388cdf1bce7931852033e3e774">type</a> = std::conditional&lt;</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">Pred&lt;Head&gt;::value</a>,</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        <span class="keyword">typename</span> detail::TypeWrapperConstructor&lt;</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>            <a class="code hl_class" href="classvcl_1_1Matrix.html">Head</a>,</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>            <span class="keyword">typename</span> <a class="code hl_struct" href="structvcl_1_1FilterTypesByCondition.html">FilterTypesByCondition</a>&lt;<a class="code hl_class" href="classvcl_1_1Matrix.html">Pred</a>, <a class="code hl_class" href="classvcl_1_1Matrix.html">Tail</a>...&gt;<a class="code hl_typedef" href="structvcl_1_1FilterTypesByCondition.html#a81339ee1dcedfab5f4966fc785809c3a">::type</a>&gt;<a class="code hl_typedef" href="structvcl_1_1FilterTypesByCondition.html#a81339ee1dcedfab5f4966fc785809c3a">::type</a>,</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        <span class="keyword">typename</span> <a class="code hl_struct" href="structvcl_1_1FilterTypesByCondition.html">FilterTypesByCondition</a>&lt;<a class="code hl_class" href="classvcl_1_1Matrix.html">Pred</a>, <a class="code hl_class" href="classvcl_1_1Matrix.html">Tail</a>...&gt;<a class="code hl_typedef" href="structvcl_1_1FilterTypesByCondition.html#a81339ee1dcedfab5f4966fc785809c3a">::type</a>&gt;<a class="code hl_typedef" href="structvcl_1_1FilterTypesByCondition.html#a81339ee1dcedfab5f4966fc785809c3a">::type</a>;</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>};</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span><span class="keyword">template</span>&lt;<span class="keyword">template</span>&lt;<span class="keyword">class</span>&gt; <span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1Box.html">Pred</a>, <span class="keyword">typename</span> <a class="code hl_class" href="classvcl_1_1Box.html">Head</a>, <span class="keyword">typename</span>... <a class="code hl_class" href="classvcl_1_1Box.html">Tail</a>&gt;</div>
+<div class="foldopen" id="foldopen00261" data-start="{" data-end="};">
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno"><a class="line" href="structvcl_1_1FilterTypesByCondition_3_01Pred_00_01Head_00_01Tail_8_8_8_01_4.html">  261</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1FilterTypesByCondition.html">FilterTypesByCondition</a>&lt;<a class="code hl_class" href="classvcl_1_1Box.html">Pred</a>, <a class="code hl_class" href="classvcl_1_1Box.html">Head</a>, <a class="code hl_class" href="classvcl_1_1Box.html">Tail</a>...&gt;</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>{</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    <span class="keyword">using </span>type = std::conditional&lt;</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        <a class="code hl_class" href="classvcl_1_1Box.html">Pred&lt;Head&gt;::value</a>,</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>        <span class="keyword">typename</span> detail::TypeWrapperConstructor&lt;</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>            <a class="code hl_class" href="classvcl_1_1Box.html">Head</a>,</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>            <span class="keyword">typename</span> <a class="code hl_struct" href="structvcl_1_1FilterTypesByCondition.html">FilterTypesByCondition</a>&lt;<a class="code hl_class" href="classvcl_1_1Box.html">Pred</a>, <a class="code hl_class" href="classvcl_1_1Box.html">Tail</a>...&gt;::type&gt;::type,</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        <span class="keyword">typename</span> <a class="code hl_struct" href="structvcl_1_1FilterTypesByCondition.html">FilterTypesByCondition</a>&lt;<a class="code hl_class" href="classvcl_1_1Box.html">Pred</a>, <a class="code hl_class" href="classvcl_1_1Box.html">Tail</a>...&gt;::type&gt;::type;</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>};</div>
 </div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span><span class="comment">// TypeWrapper specialization</span></div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span><span class="keyword">template</span>&lt;<span class="keyword">template</span>&lt;<span class="keyword">class</span>&gt; <span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1Matrix.html">Pred</a>, <span class="keyword">typename</span>... <a class="code hl_class" href="classvcl_1_1Matrix.html">Tail</a>&gt;</div>
-<div class="foldopen" id="foldopen00272" data-start="{" data-end="};">
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno"><a class="line" href="structvcl_1_1FilterTypesByCondition_3_01Pred_00_01TypeWrapper_3_01Tail_8_8_8_01_4_01_4.html">  272</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1FilterTypesByCondition.html">FilterTypesByCondition</a>&lt;<a class="code hl_class" href="classvcl_1_1Matrix.html">Pred</a>, <a class="code hl_struct" href="structvcl_1_1TypeWrapper.html">TypeWrapper</a>&lt;<a class="code hl_class" href="classvcl_1_1Matrix.html">Tail</a>...&gt;&gt;</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>{</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno"><a class="line" href="structvcl_1_1FilterTypesByCondition_3_01Pred_00_01TypeWrapper_3_01Tail_8_8_8_01_4_01_4.html#af06079931d816e8eb6df2ce84633d400">  274</a></span>    <span class="keyword">using </span><a class="code hl_class" href="classvcl_1_1Matrix.html">type</a> = <a class="code hl_struct" href="structvcl_1_1FilterTypesByCondition.html">FilterTypesByCondition</a>&lt;<a class="code hl_class" href="classvcl_1_1Matrix.html">Pred</a>, <a class="code hl_class" href="classvcl_1_1Matrix.html">Tail</a>...&gt;<a class="code hl_typedef" href="structvcl_1_1FilterTypesByCondition.html#a81339ee1dcedfab5f4966fc785809c3a">::type</a>;</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>};</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span> </div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span><span class="comment">// TypeWrapper specialization</span></div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span><span class="keyword">template</span>&lt;<span class="keyword">template</span>&lt;<span class="keyword">class</span>&gt; <span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1Box.html">Pred</a>, <span class="keyword">typename</span>... <a class="code hl_class" href="classvcl_1_1Box.html">Tail</a>&gt;</div>
+<div class="foldopen" id="foldopen00278" data-start="{" data-end="};">
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno"><a class="line" href="structvcl_1_1FilterTypesByCondition_3_01Pred_00_01TypeWrapper_3_01Tail_8_8_8_01_4_01_4.html">  278</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1FilterTypesByCondition.html">FilterTypesByCondition</a>&lt;<a class="code hl_class" href="classvcl_1_1Box.html">Pred</a>, <a class="code hl_struct" href="structvcl_1_1TypeWrapper.html">TypeWrapper</a>&lt;<a class="code hl_class" href="classvcl_1_1Box.html">Tail</a>...&gt;&gt;</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>{</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    <span class="keyword">using </span><a class="code hl_class" href="classvcl_1_1Box.html">type</a> = <a class="code hl_struct" href="structvcl_1_1FilterTypesByCondition.html">FilterTypesByCondition</a>&lt;<a class="code hl_class" href="classvcl_1_1Box.html">Pred</a>, <a class="code hl_class" href="classvcl_1_1Box.html">Tail</a>...&gt;::type;</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>};</div>
 </div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> </div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span><span class="keyword">template</span>&lt;<span class="keyword">template</span>&lt;<span class="keyword">class</span>&gt; <span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1Matrix.html">Pred</a>, <span class="keyword">typename</span>... Args&gt;</div>
-<div class="foldopen" id="foldopen00297" data-start="{" data-end="};">
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno"><a class="line" href="structvcl_1_1TypesSatisfyCondition.html">  297</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1TypesSatisfyCondition.html">TypesSatisfyCondition</a></div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>{</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    <span class="keyword">using </span><a class="code hl_class" href="classvcl_1_1Matrix.html">ResTypes</a> = <a class="code hl_struct" href="structvcl_1_1FilterTypesByCondition.html">FilterTypesByCondition</a>&lt;<a class="code hl_class" href="classvcl_1_1Matrix.html">Pred</a>, Args...&gt;::type;</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span> </div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno"><a class="line" href="structvcl_1_1TypesSatisfyCondition.html#aa532c9253fd5fbaba3bf61967c82834f">  303</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="structvcl_1_1TypesSatisfyCondition.html#aa532c9253fd5fbaba3bf61967c82834f">value</a> = <a class="code hl_struct" href="structvcl_1_1NumberOfTypes.html">NumberOfTypes&lt;ResTypes&gt;::value</a> != 0;</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>};</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span> </div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span><span class="keyword">template</span>&lt;<span class="keyword">template</span>&lt;<span class="keyword">class</span>&gt; <span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1Box.html">Pred</a>, <span class="keyword">typename</span>... Args&gt;</div>
+<div class="foldopen" id="foldopen00303" data-start="{" data-end="};">
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno"><a class="line" href="structvcl_1_1TypesSatisfyCondition.html">  303</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1TypesSatisfyCondition.html">TypesSatisfyCondition</a></div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>{</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    <span class="keyword">using </span><a class="code hl_class" href="classvcl_1_1Box.html">ResTypes</a> = <a class="code hl_struct" href="structvcl_1_1FilterTypesByCondition.html">FilterTypesByCondition</a>&lt;<a class="code hl_class" href="classvcl_1_1Box.html">Pred</a>, Args...&gt;::type;</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span> </div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> value = <a class="code hl_struct" href="structvcl_1_1NumberOfTypes.html">NumberOfTypes&lt;ResTypes&gt;::value</a> != 0;</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>};</div>
 </div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span> </div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span><span class="comment">// TypeWrapper specialization</span></div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span><span class="keyword">template</span>&lt;<span class="keyword">template</span>&lt;<span class="keyword">class</span>&gt; <span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1Matrix.html">Pred</a>, <span class="keyword">typename</span>... Args&gt;</div>
-<div class="foldopen" id="foldopen00311" data-start="{" data-end="};">
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno"><a class="line" href="structvcl_1_1TypesSatisfyCondition_3_01Pred_00_01TypeWrapper_3_01Args_8_8_8_01_4_01_4.html">  311</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1TypesSatisfyCondition.html">TypesSatisfyCondition</a>&lt;<a class="code hl_class" href="classvcl_1_1Matrix.html">Pred</a>, <a class="code hl_struct" href="structvcl_1_1TypeWrapper.html">TypeWrapper</a>&lt;Args...&gt;&gt;</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>{</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno"><a class="line" href="structvcl_1_1TypesSatisfyCondition_3_01Pred_00_01TypeWrapper_3_01Args_8_8_8_01_4_01_4.html#ac4a072766459c6ac90c8bcb1a753d404">  313</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="structvcl_1_1TypesSatisfyCondition_3_01Pred_00_01TypeWrapper_3_01Args_8_8_8_01_4_01_4.html#ac4a072766459c6ac90c8bcb1a753d404">type</a> = <a class="code hl_struct" href="structvcl_1_1TypesSatisfyCondition.html">TypesSatisfyCondition</a>&lt;<a class="code hl_class" href="classvcl_1_1Matrix.html">Pred</a>, Args...&gt;::type;</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>};</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span> </div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span><span class="comment">// TypeWrapper specialization</span></div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span><span class="keyword">template</span>&lt;<span class="keyword">template</span>&lt;<span class="keyword">class</span>&gt; <span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1Box.html">Pred</a>, <span class="keyword">typename</span>... Args&gt;</div>
+<div class="foldopen" id="foldopen00319" data-start="{" data-end="};">
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno"><a class="line" href="structvcl_1_1TypesSatisfyCondition_3_01Pred_00_01TypeWrapper_3_01Args_8_8_8_01_4_01_4.html">  319</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1TypesSatisfyCondition.html">TypesSatisfyCondition</a>&lt;<a class="code hl_class" href="classvcl_1_1Box.html">Pred</a>, <a class="code hl_struct" href="structvcl_1_1TypeWrapper.html">TypeWrapper</a>&lt;Args...&gt;&gt;</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>{</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    <span class="keyword">using </span>type = <a class="code hl_struct" href="structvcl_1_1TypesSatisfyCondition.html">TypesSatisfyCondition</a>&lt;<a class="code hl_class" href="classvcl_1_1Box.html">Pred</a>, Args...&gt;::type;</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>};</div>
 </div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span> </div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span><span class="keyword">template</span>&lt;<span class="keyword">template</span>&lt;<span class="keyword">class</span>&gt; <span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1Matrix.html">Pred</a>, <span class="keyword">typename</span>... Args&gt;</div>
-<div class="foldopen" id="foldopen00330" data-start="{" data-end="};">
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno"><a class="line" href="structvcl_1_1GetTypeByCondition.html">  330</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1GetTypeByCondition.html">GetTypeByCondition</a></div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>{</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>    <span class="keyword">using </span><a class="code hl_class" href="classvcl_1_1Matrix.html">ResTypes</a> = <a class="code hl_struct" href="structvcl_1_1FilterTypesByCondition.html">FilterTypesByCondition</a>&lt;<a class="code hl_class" href="classvcl_1_1Matrix.html">Pred</a>, Args...&gt;<a class="code hl_typedef" href="structvcl_1_1GetTypeByCondition.html#a6fb41ee27fda23422cefce4ad4486072">::type</a>;</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span> </div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno"><a class="line" href="structvcl_1_1GetTypeByCondition.html#a6fb41ee27fda23422cefce4ad4486072">  336</a></span>    <span class="keyword">using </span><a class="code hl_class" href="classvcl_1_1Matrix.html">type</a> = <a class="code hl_class" href="classvcl_1_1Matrix.html">FirstTypeT&lt;ResTypes&gt;</a>;</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>};</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span> </div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span><span class="keyword">template</span>&lt;<span class="keyword">template</span>&lt;<span class="keyword">class</span>&gt; <span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1Box.html">Pred</a>, <span class="keyword">typename</span>... Args&gt;</div>
+<div class="foldopen" id="foldopen00338" data-start="{" data-end="};">
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno"><a class="line" href="structvcl_1_1GetTypeByCondition.html">  338</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1GetTypeByCondition.html">GetTypeByCondition</a></div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>{</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>    <span class="keyword">using </span><a class="code hl_class" href="classvcl_1_1Box.html">ResTypes</a> = <a class="code hl_struct" href="structvcl_1_1FilterTypesByCondition.html">FilterTypesByCondition</a>&lt;<a class="code hl_class" href="classvcl_1_1Box.html">Pred</a>, Args...&gt;::type;</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span> </div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>    <span class="keyword">using </span><a class="code hl_class" href="classvcl_1_1Box.html">type</a> = <a class="code hl_class" href="classvcl_1_1Box.html">FirstTypeT&lt;ResTypes&gt;</a>;</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>};</div>
 </div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span> </div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span><span class="comment">// TypeWrapper specialization</span></div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span><span class="keyword">template</span>&lt;<span class="keyword">template</span>&lt;<span class="keyword">class</span>&gt; <span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1Matrix.html">Pred</a>, <span class="keyword">typename</span>... Args&gt;</div>
-<div class="foldopen" id="foldopen00344" data-start="{" data-end="};">
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno"><a class="line" href="structvcl_1_1GetTypeByCondition_3_01Pred_00_01TypeWrapper_3_01Args_8_8_8_01_4_01_4.html">  344</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1GetTypeByCondition.html">GetTypeByCondition</a>&lt;<a class="code hl_class" href="classvcl_1_1Matrix.html">Pred</a>, <a class="code hl_struct" href="structvcl_1_1TypeWrapper.html">TypeWrapper</a>&lt;Args...&gt;&gt;</div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>{</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno"><a class="line" href="structvcl_1_1GetTypeByCondition_3_01Pred_00_01TypeWrapper_3_01Args_8_8_8_01_4_01_4.html#a5709d819a22fa78503a2753437734769">  346</a></span>    <span class="keyword">using </span><a class="code hl_class" href="classvcl_1_1Matrix.html">type</a> = <a class="code hl_struct" href="structvcl_1_1GetTypeByCondition.html">GetTypeByCondition</a>&lt;<a class="code hl_class" href="classvcl_1_1Matrix.html">Pred</a>, Args...&gt;<a class="code hl_typedef" href="structvcl_1_1GetTypeByCondition.html#a6fb41ee27fda23422cefce4ad4486072">::type</a>;</div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>};</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span> </div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span><span class="comment">// TypeWrapper specialization</span></div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span><span class="keyword">template</span>&lt;<span class="keyword">template</span>&lt;<span class="keyword">class</span>&gt; <span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1Box.html">Pred</a>, <span class="keyword">typename</span>... Args&gt;</div>
+<div class="foldopen" id="foldopen00354" data-start="{" data-end="};">
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno"><a class="line" href="structvcl_1_1GetTypeByCondition_3_01Pred_00_01TypeWrapper_3_01Args_8_8_8_01_4_01_4.html">  354</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1GetTypeByCondition.html">GetTypeByCondition</a>&lt;<a class="code hl_class" href="classvcl_1_1Box.html">Pred</a>, <a class="code hl_struct" href="structvcl_1_1TypeWrapper.html">TypeWrapper</a>&lt;Args...&gt;&gt;</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>{</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>    <span class="keyword">using </span><a class="code hl_class" href="classvcl_1_1Box.html">type</a> = <a class="code hl_struct" href="structvcl_1_1GetTypeByCondition.html">GetTypeByCondition</a>&lt;<a class="code hl_class" href="classvcl_1_1Box.html">Pred</a>, Args...&gt;::type;</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>};</div>
 </div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span> </div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span> </div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span><span class="preprocessor">#endif </span><span class="comment">// VCL_TYPES_VARIADIC_TEMPLATES_H</span></div>
-<div class="ttc" id="aclassvcl_1_1Matrix_html"><div class="ttname"><a href="classvcl_1_1Matrix.html">vcl::Matrix</a></div><div class="ttdef"><b>Definition</b> matrix.h:36</div></div>
-<div class="ttc" id="agroup__types_html_ga38c527736a2d0a3d7af0493e228227e3"><div class="ttname"><a href="group__types.html#ga38c527736a2d0a3d7af0493e228227e3">vcl::FirstTypeT</a></div><div class="ttdeci">typename FirstType&lt; Args... &gt;::type FirstTypeT</div><div class="ttdoc">Alias for the type of the first type in a pack of types.</div><div class="ttdef"><b>Definition</b> variadic_templates.h:87</div></div>
-<div class="ttc" id="agroup__types_html_ga9ad8104cd9ccfa9352d33bc7e6ba47e6"><div class="ttname"><a href="group__types.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">vcl::UINT_NULL</a></div><div class="ttdeci">constexpr uint UINT_NULL</div><div class="ttdoc">The UINT_NULL value represent a null value of uint that is the maximum value that can be represented ...</div><div class="ttdef"><b>Definition</b> base.h:47</div></div>
-<div class="ttc" id="agroup__types_html_gae01694fdca8b252384be3296f82fa946"><div class="ttname"><a href="group__types.html#gae01694fdca8b252384be3296f82fa946">vcl::indexInTypePack</a></div><div class="ttdeci">constexpr uint indexInTypePack()</div><div class="ttdoc">Function that returns the index of a Type T in a pack of types (variadic templates)....</div><div class="ttdef"><b>Definition</b> variadic_templates.h:97</div></div>
-<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition</b> bounding_box.h:48</div></div>
-<div class="ttc" id="anamespacevcl_html_af74b42dd9d759d565bb701a5b845d05c"><div class="ttname"><a href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">vcl::uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition</b> base.h:34</div></div>
-<div class="ttc" id="astructvcl_1_1FilterTypesByCondition_3_01Pred_00_01Head_00_01Tail_8_8_8_01_4_html_a41ad30388cdf1bce7931852033e3e774"><div class="ttname"><a href="structvcl_1_1FilterTypesByCondition_3_01Pred_00_01Head_00_01Tail_8_8_8_01_4.html#a41ad30388cdf1bce7931852033e3e774">vcl::FilterTypesByCondition&lt; Pred, Head, Tail... &gt;::type</a></div><div class="ttdeci">std::conditional&lt; Pred&lt; Head &gt;::value, typename detail::TypeWrapperConstructor&lt; Head, typename FilterTypesByCondition&lt; Pred, Tail... &gt;::type &gt;::type, typename FilterTypesByCondition&lt; Pred, Tail... &gt;::type &gt;::type type</div><div class="ttdef"><b>Definition</b> variadic_templates.h:264</div></div>
-<div class="ttc" id="astructvcl_1_1FilterTypesByCondition_html"><div class="ttname"><a href="structvcl_1_1FilterTypesByCondition.html">vcl::FilterTypesByCondition</a></div><div class="ttdoc">Removes all types that do not satisfy a condition, and get them as a tuple.</div><div class="ttdef"><b>Definition</b> variadic_templates.h:249</div></div>
-<div class="ttc" id="astructvcl_1_1FilterTypesByCondition_html_a81339ee1dcedfab5f4966fc785809c3a"><div class="ttname"><a href="structvcl_1_1FilterTypesByCondition.html#a81339ee1dcedfab5f4966fc785809c3a">vcl::FilterTypesByCondition::type</a></div><div class="ttdeci">TypeWrapper&lt;&gt; type</div><div class="ttdef"><b>Definition</b> variadic_templates.h:250</div></div>
-<div class="ttc" id="astructvcl_1_1FirstType_3_01TypeWrapper_3_01Args_8_8_8_01_4_01_4_html_a37019e81622f70a79fa67889c90b5409"><div class="ttname"><a href="structvcl_1_1FirstType_3_01TypeWrapper_3_01Args_8_8_8_01_4_01_4.html#a37019e81622f70a79fa67889c90b5409">vcl::FirstType&lt; TypeWrapper&lt; Args... &gt; &gt;::type</a></div><div class="ttdeci">std::tuple_element&lt; 0, std::tuple&lt; Args... &gt; &gt;::type type</div><div class="ttdef"><b>Definition</b> variadic_templates.h:72</div></div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span> </div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span> </div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span><span class="preprocessor">#endif </span><span class="comment">// VCL_TYPES_VARIADIC_TEMPLATES_H</span></div>
+<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:49</div></div>
+<div class="ttc" id="agroup__types_html_ga38c527736a2d0a3d7af0493e228227e3"><div class="ttname"><a href="group__types.html#ga38c527736a2d0a3d7af0493e228227e3">vcl::FirstTypeT</a></div><div class="ttdeci">typename FirstType&lt; Args... &gt;::type FirstTypeT</div><div class="ttdoc">Alias for the type of the first type in a pack of types.</div><div class="ttdef"><b>Definition</b> variadic_templates.h:89</div></div>
+<div class="ttc" id="agroup__types_html_ga9ad8104cd9ccfa9352d33bc7e6ba47e6"><div class="ttname"><a href="group__types.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">vcl::UINT_NULL</a></div><div class="ttdeci">constexpr uint UINT_NULL</div><div class="ttdoc">The UINT_NULL value represent a null value of uint that is the maximum value that can be represented ...</div><div class="ttdef"><b>Definition</b> base.h:48</div></div>
+<div class="ttc" id="agroup__types_html_gae01694fdca8b252384be3296f82fa946"><div class="ttname"><a href="group__types.html#gae01694fdca8b252384be3296f82fa946">vcl::indexInTypePack</a></div><div class="ttdeci">constexpr uint indexInTypePack()</div><div class="ttdoc">Function that returns the index of a Type T in a pack of types (variadic templates)....</div><div class="ttdef"><b>Definition</b> variadic_templates.h:99</div></div>
+<div class="ttc" id="astructvcl_1_1FilterTypesByCondition_html"><div class="ttname"><a href="structvcl_1_1FilterTypesByCondition.html">vcl::FilterTypesByCondition</a></div><div class="ttdoc">Removes all types that do not satisfy a condition, and get them as a tuple.</div><div class="ttdef"><b>Definition</b> variadic_templates.h:251</div></div>
 <div class="ttc" id="astructvcl_1_1FirstType_html"><div class="ttname"><a href="structvcl_1_1FirstType.html">vcl::FirstType</a></div><div class="ttdoc">Get the first type of a pack of types (variadic templates) or a TypeWrapper.</div><div class="ttdef"><b>Definition</b> variadic_templates.h:62</div></div>
-<div class="ttc" id="astructvcl_1_1FirstType_html_adfc61a756c81150c4a12f798feda1b2d"><div class="ttname"><a href="structvcl_1_1FirstType.html#adfc61a756c81150c4a12f798feda1b2d">vcl::FirstType::type</a></div><div class="ttdeci">std::tuple_element&lt; 0, std::tuple&lt; Args... &gt; &gt;::type type</div><div class="ttdef"><b>Definition</b> variadic_templates.h:63</div></div>
-<div class="ttc" id="astructvcl_1_1ForEachType_html"><div class="ttname"><a href="structvcl_1_1ForEachType.html">vcl::ForEachType</a></div><div class="ttdoc">Allows to apply a function to each type in a variadic template pack.</div><div class="ttdef"><b>Definition</b> variadic_templates.h:196</div></div>
-<div class="ttc" id="astructvcl_1_1ForEachType_html_a62e43580dd02cab4fd94afa67fd10b46"><div class="ttname"><a href="structvcl_1_1ForEachType.html#a62e43580dd02cab4fd94afa67fd10b46">vcl::ForEachType::apply</a></div><div class="ttdeci">static void apply(F &amp;&amp;f)</div><div class="ttdef"><b>Definition</b> variadic_templates.h:198</div></div>
-<div class="ttc" id="astructvcl_1_1GetTypeByCondition_html"><div class="ttname"><a href="structvcl_1_1GetTypeByCondition.html">vcl::GetTypeByCondition</a></div><div class="ttdoc">The the first type of a pack that satisfies the given condition.</div><div class="ttdef"><b>Definition</b> variadic_templates.h:331</div></div>
-<div class="ttc" id="astructvcl_1_1GetTypeByCondition_html_a6fb41ee27fda23422cefce4ad4486072"><div class="ttname"><a href="structvcl_1_1GetTypeByCondition.html#a6fb41ee27fda23422cefce4ad4486072">vcl::GetTypeByCondition::type</a></div><div class="ttdeci">FirstTypeT&lt; ResTypes &gt; type</div><div class="ttdef"><b>Definition</b> variadic_templates.h:336</div></div>
-<div class="ttc" id="astructvcl_1_1IndexInTypes_html"><div class="ttname"><a href="structvcl_1_1IndexInTypes.html">vcl::IndexInTypes</a></div><div class="ttdef"><b>Definition</b> variadic_templates.h:156</div></div>
-<div class="ttc" id="astructvcl_1_1IndexInTypes_html_adfcc80bafb29623a170df2615d043d83"><div class="ttname"><a href="structvcl_1_1IndexInTypes.html#adfcc80bafb29623a170df2615d043d83">vcl::IndexInTypes::value</a></div><div class="ttdeci">static constexpr uint value</div><div class="ttdef"><b>Definition</b> variadic_templates.h:157</div></div>
-<div class="ttc" id="astructvcl_1_1NumberOfTypes_html"><div class="ttname"><a href="structvcl_1_1NumberOfTypes.html">vcl::NumberOfTypes</a></div><div class="ttdef"><b>Definition</b> variadic_templates.h:168</div></div>
-<div class="ttc" id="astructvcl_1_1NumberOfTypes_html_a4a9c38fba8d8f7e9e64921846908902b"><div class="ttname"><a href="structvcl_1_1NumberOfTypes.html#a4a9c38fba8d8f7e9e64921846908902b">vcl::NumberOfTypes::value</a></div><div class="ttdeci">static constexpr uint value</div><div class="ttdef"><b>Definition</b> variadic_templates.h:169</div></div>
+<div class="ttc" id="astructvcl_1_1ForEachType_html"><div class="ttname"><a href="structvcl_1_1ForEachType.html">vcl::ForEachType</a></div><div class="ttdoc">Allows to apply a function to each type in a variadic template pack.</div><div class="ttdef"><b>Definition</b> variadic_templates.h:198</div></div>
+<div class="ttc" id="astructvcl_1_1GetTypeByCondition_html"><div class="ttname"><a href="structvcl_1_1GetTypeByCondition.html">vcl::GetTypeByCondition</a></div><div class="ttdoc">The the first type of a pack that satisfies the given condition.</div><div class="ttdef"><b>Definition</b> variadic_templates.h:339</div></div>
+<div class="ttc" id="astructvcl_1_1IndexInTypes_html"><div class="ttname"><a href="structvcl_1_1IndexInTypes.html">vcl::IndexInTypes</a></div><div class="ttdef"><b>Definition</b> variadic_templates.h:158</div></div>
+<div class="ttc" id="astructvcl_1_1NumberOfTypes_html"><div class="ttname"><a href="structvcl_1_1NumberOfTypes.html">vcl::NumberOfTypes</a></div><div class="ttdef"><b>Definition</b> variadic_templates.h:170</div></div>
 <div class="ttc" id="astructvcl_1_1TypeWrapper_html"><div class="ttname"><a href="structvcl_1_1TypeWrapper.html">vcl::TypeWrapper</a></div><div class="ttdoc">A simple structure that wraps a list of variadic templates, without instantiating anything....</div><div class="ttdef"><b>Definition</b> variadic_templates.h:44</div></div>
-<div class="ttc" id="astructvcl_1_1TypeWrapper_html_a7d24b27f794a7ea7127f6c59bdb92fea"><div class="ttname"><a href="structvcl_1_1TypeWrapper.html#a7d24b27f794a7ea7127f6c59bdb92fea">vcl::TypeWrapper::size</a></div><div class="ttdeci">static constexpr uint size()</div><div class="ttdef"><b>Definition</b> variadic_templates.h:45</div></div>
-<div class="ttc" id="astructvcl_1_1TypesSatisfyCondition_3_01Pred_00_01TypeWrapper_3_01Args_8_8_8_01_4_01_4_html_ac4a072766459c6ac90c8bcb1a753d404"><div class="ttname"><a href="structvcl_1_1TypesSatisfyCondition_3_01Pred_00_01TypeWrapper_3_01Args_8_8_8_01_4_01_4.html#ac4a072766459c6ac90c8bcb1a753d404">vcl::TypesSatisfyCondition&lt; Pred, TypeWrapper&lt; Args... &gt; &gt;::type</a></div><div class="ttdeci">TypesSatisfyCondition&lt; Pred, Args... &gt;::type type</div><div class="ttdef"><b>Definition</b> variadic_templates.h:313</div></div>
-<div class="ttc" id="astructvcl_1_1TypesSatisfyCondition_html"><div class="ttname"><a href="structvcl_1_1TypesSatisfyCondition.html">vcl::TypesSatisfyCondition</a></div><div class="ttdoc">Its value is set to true if there is at least one type in the given pack Args... that satisfies the g...</div><div class="ttdef"><b>Definition</b> variadic_templates.h:298</div></div>
-<div class="ttc" id="astructvcl_1_1TypesSatisfyCondition_html_aa532c9253fd5fbaba3bf61967c82834f"><div class="ttname"><a href="structvcl_1_1TypesSatisfyCondition.html#aa532c9253fd5fbaba3bf61967c82834f">vcl::TypesSatisfyCondition::value</a></div><div class="ttdeci">static constexpr bool value</div><div class="ttdef"><b>Definition</b> variadic_templates.h:303</div></div>
-<div class="ttc" id="atypes_2base_8h_html"><div class="ttname"><a href="types_2base_8h.html">base.h</a></div></div>
+<div class="ttc" id="astructvcl_1_1TypesSatisfyCondition_html"><div class="ttname"><a href="structvcl_1_1TypesSatisfyCondition.html">vcl::TypesSatisfyCondition</a></div><div class="ttdoc">Its value is set to true if there is at least one type in the given pack Args... that satisfies the g...</div><div class="ttdef"><b>Definition</b> variadic_templates.h:304</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d2fdbf172f8ae9790b339bfcb66b3af7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_e102405455576d9ff546bfbc8ea68757.html">types</a></li><li class="navelem"><a class="el" href="variadic__templates_8h.html">variadic_templates.h</a></li>
+    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_ae5876ed1a21dfe8c57b4e8d41da885b.html">types</a></li><li class="navelem"><b>variadic_templates.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

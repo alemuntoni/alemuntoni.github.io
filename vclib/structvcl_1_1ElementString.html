@@ -110,12 +110,12 @@ $(document).ready(function(){initNavTree('structvcl_1_1ElementString.html',''); 
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:adf709994861b97ace3d6f67096dfe07e" id="r_adf709994861b97ace3d6f67096dfe07e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1Matrix.html">char</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvcl_1_1ElementString.html#adf709994861b97ace3d6f67096dfe07e">str</a></td></tr>
+<tr class="memitem:adf709994861b97ace3d6f67096dfe07e" id="r_adf709994861b97ace3d6f67096dfe07e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">char</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvcl_1_1ElementString.html#adf709994861b97ace3d6f67096dfe07e">str</a></td></tr>
 <tr class="memdesc:adf709994861b97ace3d6f67096dfe07e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The string associated to the ELEM_ID.  <br /></td></tr>
 <tr class="separator:adf709994861b97ace3d6f67096dfe07e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> ELEM_ID&gt;<br />
+<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="classvcl_1_1Box.html">uint</a> ELEM_ID&gt;<br />
 struct vcl::ElementString&lt; ELEM_ID &gt;</div><p>The <a class="el" href="structvcl_1_1ElementString.html" title="The ElementString class is used to retrieve the string associated to a ELEM_ID value,...">ElementString</a> class is used to retrieve the string associated to a ELEM_ID value, trough its member 'str'. </p>
 <p>If you use a custom element class, you should specialize this struct with your ELEM_ID value (that is &gt;= ELEMENTS_NUMBER).</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
@@ -131,32 +131,31 @@ struct vcl::ElementString&lt; ELEM_ID &gt;</div><p>The <a class="el" href="struc
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> ELEM_ID&gt; </div>
+template&lt;<a class="el" href="classvcl_1_1Box.html">uint</a> ELEM_ID&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1Matrix.html">char</a>* <a class="el" href="structvcl_1_1ElementString.html">vcl::ElementString</a>&lt; ELEM_ID &gt;::str</td>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">char</a>* <a class="el" href="structvcl_1_1ElementString.html">vcl::ElementString</a>&lt; ELEM_ID &gt;::str</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= ELEM_ID &lt; <a class="code hl_enumvalue" href="structvcl_1_1ElemId.html#a1c18d2f7814686d14cc0dacc8f33a09fa5383a8d3ce75f1f431f09f343aa14fff">ElemId::ELEMENTS_NUMBER</a> ?</div>
+<b>Initial value:</b><div class="fragment"><div class="line">= ELEM_ID &lt; ElemId::ELEMENTS_NUMBER ?</div>
 <div class="line">                          <a class="code hl_variable" href="group__types.html#gaead83eb7c9cee68431c31c3890cbb10f">ELEMENT_ENUM_STRINGS</a>[ELEM_ID] :</div>
 <div class="line">                          <span class="keyword">nullptr</span></div>
 <div class="ttc" id="agroup__types_html_gaead83eb7c9cee68431c31c3890cbb10f"><div class="ttname"><a href="group__types.html#gaead83eb7c9cee68431c31c3890cbb10f">vcl::ELEMENT_ENUM_STRINGS</a></div><div class="ttdeci">constexpr const char * ELEMENT_ENUM_STRINGS[ElemId::ELEMENTS_NUMBER]</div><div class="ttdoc">The ELEMENT_ENUM_STRINGS array contains the string representation of the elements that can compose a ...</div><div class="ttdef"><b>Definition</b> mesh_elements.h:69</div></div>
-<div class="ttc" id="astructvcl_1_1ElemId_html_a1c18d2f7814686d14cc0dacc8f33a09fa5383a8d3ce75f1f431f09f343aa14fff"><div class="ttname"><a href="structvcl_1_1ElemId.html#a1c18d2f7814686d14cc0dacc8f33a09fa5383a8d3ce75f1f431f09f343aa14fff">vcl::ElemId::ELEMENTS_NUMBER</a></div><div class="ttdeci">@ ELEMENTS_NUMBER</div><div class="ttdef"><b>Definition</b> mesh_elements.h:59</div></div>
 </div><!-- fragment -->
 <p>The string associated to the ELEM_ID. </p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>include/vclib/types/<a class="el" href="mesh__elements_8h_source.html">mesh_elements.h</a></li>
+<li>vclib/core/include/vclib/types/<a class="el" href="mesh__elements_8h_source.html">mesh_elements.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespacevcl.html">vcl</a></li><li class="navelem"><a class="el" href="structvcl_1_1ElementString.html">ElementString</a></li>
+    <li class="navelem"><b>vcl</b></li><li class="navelem"><a class="el" href="structvcl_1_1ElementString.html">ElementString</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

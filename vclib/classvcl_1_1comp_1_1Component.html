@@ -100,6 +100,8 @@ $(document).ready(function(){initNavTree('classvcl_1_1comp_1_1Component.html',''
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classvcl_1_1comp_1_1Component-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">vcl::comp::Component&lt; DerivedComponent, COMP_ID, DataType, ParentElemType, VERT, OPT, ReferencedTypes &gt; Class Template Reference</div></div>
 </div><!--header-->
@@ -143,48 +145,57 @@ Inheritance diagram for vcl::comp::Component&lt; DerivedComponent, COMP_ID, Data
 <area shape="poly" title=" " alt="" coords="260,391,294,391,294,396,260,396"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for vcl::comp::Component&lt; DerivedComponent, COMP_ID, DataType, ParentElemType, VERT, OPT, ReferencedTypes &gt;:</div>
-<div class="dyncontent">
-<div class="center"><img src="classvcl_1_1comp_1_1Component__coll__graph.png" border="0" usemap="#avcl_1_1comp_1_1Component_3_01DerivedComponent_00_01COMP__ID_00_01DataType_00_01ParentElemType_00_01VERT_00_01OPT_00_01ReferencedTypes_01_4_coll__map" alt="Collaboration graph"/></div>
-<map name="avcl_1_1comp_1_1Component_3_01DerivedComponent_00_01COMP__ID_00_01DataType_00_01ParentElemType_00_01VERT_00_01OPT_00_01ReferencedTypes_01_4_coll__map" id="avcl_1_1comp_1_1Component_3_01DerivedComponent_00_01COMP__ID_00_01DataType_00_01ParentElemType_00_01VERT_00_01OPT_00_01ReferencedTypes_01_4_coll__map">
-<area shape="rect" title="The Component class is the base class for almost all the components of VCLib (with the exception of C..." alt="" coords="12,93,240,163"/>
-<area shape="rect" href="classvcl_1_1comp_1_1ReferencesComponentTriggerer.html" title=" " alt="" coords="5,5,247,45"/>
-<area shape="poly" title=" " alt="" coords="129,59,129,93,123,93,123,59"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a4288595030360500e49a06c2342c898d" id="r_a4288595030360500e49a06c2342c898d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Matrix.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1Component.html#a4288595030360500e49a06c2342c898d">DataValueType</a> = DataType</td></tr>
-<tr class="memdesc:a4288595030360500e49a06c2342c898d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Data that the component will store (e.g. a <a class="el" href="group__space__core.html#gabb47c1364fb2fe1464a54417684f011e" title="A convenience alias for a 3-dimensional Point with double-precision floating-point components.">vcl::Point3d</a> for a <a class="el" href="classvcl_1_1comp_1_1Normal.html" title="The Normal class represents a N-Dimensional normal vector that will be part of an Element (e....">Normal</a> component).  <br /></td></tr>
+<tr class="memitem:a4288595030360500e49a06c2342c898d" id="r_a4288595030360500e49a06c2342c898d"><td class="memItemLeft" align="right" valign="top"><a id="a4288595030360500e49a06c2342c898d" name="a4288595030360500e49a06c2342c898d"></a>
+<a class="el" href="classvcl_1_1Box.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><b>DataValueType</b> = DataType</td></tr>
+<tr class="memdesc:a4288595030360500e49a06c2342c898d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Data that the component will store (e.g. a <a class="el" href="group__space__core.html#gabb47c1364fb2fe1464a54417684f011e" title="A convenience alias for a 3-dimensional Point with double-precision floating-point components.">vcl::Point3d</a> for a <a class="el" href="classvcl_1_1comp_1_1Normal.html" title="The Normal class represents a N-Dimensional normal vector that will be part of an Element (e....">Normal</a> component). <br /></td></tr>
 <tr class="separator:a4288595030360500e49a06c2342c898d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a55e1d1ddabda2c78327a09285918c798" id="r_a55e1d1ddabda2c78327a09285918c798"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Matrix.html">static</a> <a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1Matrix.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1Component.html#a55e1d1ddabda2c78327a09285918c798">IS_VERTICAL</a></td></tr>
+<tr class="memitem:a55e1d1ddabda2c78327a09285918c798" id="r_a55e1d1ddabda2c78327a09285918c798"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">static</a> <a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1Component.html#a55e1d1ddabda2c78327a09285918c798">IS_VERTICAL</a></td></tr>
 <tr class="memdesc:a55e1d1ddabda2c78327a09285918c798"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean that tells if this component type stores its data vertically (not in the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> frame memory, but in another vector).  <br /></td></tr>
 <tr class="separator:a55e1d1ddabda2c78327a09285918c798"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed3f1eb6162a9fc30e93e70042685b54" id="r_aed3f1eb6162a9fc30e93e70042685b54"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Matrix.html">static</a> <a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1Component.html#aed3f1eb6162a9fc30e93e70042685b54">COMPONENT_ID</a> = <a class="el" href="classvcl_1_1Matrix.html">COMP_ID</a></td></tr>
-<tr class="memdesc:aed3f1eb6162a9fc30e93e70042685b54"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ID of the component.  <br /></td></tr>
+<tr class="memitem:aed3f1eb6162a9fc30e93e70042685b54" id="r_aed3f1eb6162a9fc30e93e70042685b54"><td class="memItemLeft" align="right" valign="top"><a id="aed3f1eb6162a9fc30e93e70042685b54" name="aed3f1eb6162a9fc30e93e70042685b54"></a>
+<a class="el" href="classvcl_1_1Box.html">static</a> <a class="el" href="classvcl_1_1Box.html">const</a> uint&#160;</td><td class="memItemRight" valign="bottom"><b>COMPONENT_ID</b> = <a class="el" href="classvcl_1_1Box.html">COMP_ID</a></td></tr>
+<tr class="memdesc:aed3f1eb6162a9fc30e93e70042685b54"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ID of the component. <br /></td></tr>
 <tr class="separator:aed3f1eb6162a9fc30e93e70042685b54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad078446b11d81e7195f23f7d6e95c532" id="r_ad078446b11d81e7195f23f7d6e95c532"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Matrix.html">static</a> <a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1Matrix.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1Component.html#ad078446b11d81e7195f23f7d6e95c532">IS_OPTIONAL</a> = <a class="el" href="classvcl_1_1Matrix.html">VERT</a> &amp;&amp; <a class="el" href="classvcl_1_1Matrix.html">OPT</a></td></tr>
-<tr class="memdesc:ad078446b11d81e7195f23f7d6e95c532"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean that tells if this component is optional. Makes sense only when the component is vertical.  <br /></td></tr>
+<tr class="memitem:ad078446b11d81e7195f23f7d6e95c532" id="r_ad078446b11d81e7195f23f7d6e95c532"><td class="memItemLeft" align="right" valign="top"><a id="ad078446b11d81e7195f23f7d6e95c532" name="ad078446b11d81e7195f23f7d6e95c532"></a>
+<a class="el" href="classvcl_1_1Box.html">static</a> <a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>IS_OPTIONAL</b> = <a class="el" href="classvcl_1_1Box.html">VERT</a> &amp;&amp; <a class="el" href="classvcl_1_1Box.html">OPT</a></td></tr>
+<tr class="memdesc:ad078446b11d81e7195f23f7d6e95c532"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean that tells if this component is optional. Makes sense only when the component is vertical. <br /></td></tr>
 <tr class="separator:ad078446b11d81e7195f23f7d6e95c532"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:aec459fa25a95c351302e869f4d744e25" id="r_aec459fa25a95c351302e869f4d744e25"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1comp_1_1Component.html#a4288595030360500e49a06c2342c898d">DataValueType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1Component.html#aec459fa25a95c351302e869f4d744e25">data</a> ()</td></tr>
+<tr class="memitem:aec459fa25a95c351302e869f4d744e25" id="r_aec459fa25a95c351302e869f4d744e25"><td class="memItemLeft" align="right" valign="top"><a id="aec459fa25a95c351302e869f4d744e25" name="aec459fa25a95c351302e869f4d744e25"></a>
+<a class="el" href="classvcl_1_1comp_1_1Component.html#a4288595030360500e49a06c2342c898d">DataValueType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>data</b> ()</td></tr>
 <tr class="separator:aec459fa25a95c351302e869f4d744e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0494d8e6ece360a760fea9869b39c52" id="r_ac0494d8e6ece360a760fea9869b39c52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1comp_1_1Component.html#a4288595030360500e49a06c2342c898d">DataValueType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1Component.html#ac0494d8e6ece360a760fea9869b39c52">data</a> () <a class="el" href="classvcl_1_1Matrix.html">const</a></td></tr>
+<tr class="memitem:ac0494d8e6ece360a760fea9869b39c52" id="r_ac0494d8e6ece360a760fea9869b39c52"><td class="memItemLeft" align="right" valign="top"><a id="ac0494d8e6ece360a760fea9869b39c52" name="ac0494d8e6ece360a760fea9869b39c52"></a>
+<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1comp_1_1Component.html#a4288595030360500e49a06c2342c898d">DataValueType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>data</b> () <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="separator:ac0494d8e6ece360a760fea9869b39c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9d66d5db0b3b22c7285a72dc66db4c6" id="r_ab9d66d5db0b3b22c7285a72dc66db4c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Matrix.html">ParentElemType</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1Component.html#ab9d66d5db0b3b22c7285a72dc66db4c6">parentElement</a> ()</td></tr>
+<tr class="memitem:ab9d66d5db0b3b22c7285a72dc66db4c6" id="r_ab9d66d5db0b3b22c7285a72dc66db4c6"><td class="memItemLeft" align="right" valign="top"><a id="ab9d66d5db0b3b22c7285a72dc66db4c6" name="ab9d66d5db0b3b22c7285a72dc66db4c6"></a>
+<a class="el" href="classvcl_1_1Box.html">ParentElemType</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>parentElement</b> ()</td></tr>
 <tr class="separator:ab9d66d5db0b3b22c7285a72dc66db4c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3b534a6e2e52ad4dd642717a59970a5" id="r_ae3b534a6e2e52ad4dd642717a59970a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1Matrix.html">ParentElemType</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1Component.html#ae3b534a6e2e52ad4dd642717a59970a5">parentElement</a> () <a class="el" href="classvcl_1_1Matrix.html">const</a></td></tr>
+<tr class="memitem:ae3b534a6e2e52ad4dd642717a59970a5" id="r_ae3b534a6e2e52ad4dd642717a59970a5"><td class="memItemLeft" align="right" valign="top"><a id="ae3b534a6e2e52ad4dd642717a59970a5" name="ae3b534a6e2e52ad4dd642717a59970a5"></a>
+<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">ParentElemType</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>parentElement</b> () <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="separator:ae3b534a6e2e52ad4dd642717a59970a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ab529ccd5b72896dfff7e882f4ba077f7" id="r_ab529ccd5b72896dfff7e882f4ba077f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1Component.html#ab529ccd5b72896dfff7e882f4ba077f7">isAvailable</a> () <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
+<tr class="memdesc:ab529ccd5b72896dfff7e882f4ba077f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if the component is available, <code>false</code> otherwise.  <br /></td></tr>
+<tr class="separator:ab529ccd5b72896dfff7e882f4ba077f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a0187eaa61aa997fec24979377cf79a94" id="r_a0187eaa61aa997fec24979377cf79a94"><td class="memItemLeft" align="right" valign="top"><a id="a0187eaa61aa997fec24979377cf79a94" name="a0187eaa61aa997fec24979377cf79a94"></a>
+detail::ComponentData&lt; <a class="el" href="classvcl_1_1comp_1_1Component.html#a4288595030360500e49a06c2342c898d">DataValueType</a>, <a class="el" href="classvcl_1_1comp_1_1Component.html#a55e1d1ddabda2c78327a09285918c798">IS_VERTICAL</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mData</b></td></tr>
+<tr class="separator:a0187eaa61aa997fec24979377cf79a94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> <a class="el" href="classvcl_1_1Matrix.html">DerivedComponent</a>, <a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> COMP_ID, <a class="el" href="classvcl_1_1Matrix.html">typename</a> DataType, <a class="el" href="classvcl_1_1Matrix.html">typename</a> <a class="el" href="classvcl_1_1Matrix.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Matrix.html">bool</a> VERT, <a class="el" href="classvcl_1_1Matrix.html">bool</a> OPT, typename... ReferencedTypes&gt;<br />
+<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="classvcl_1_1Box.html">typename</a> <a class="el" href="classvcl_1_1Box.html">DerivedComponent</a>, uint COMP_ID, <a class="el" href="classvcl_1_1Box.html">typename</a> DataType, <a class="el" href="classvcl_1_1Box.html">typename</a> <a class="el" href="classvcl_1_1Box.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Box.html">bool</a> VERT, <a class="el" href="classvcl_1_1Box.html">bool</a> OPT, typename... ReferencedTypes&gt;<br />
 class vcl::comp::Component&lt; DerivedComponent, COMP_ID, DataType, ParentElemType, VERT, OPT, ReferencedTypes &gt;</div><p>The <a class="el" href="classvcl_1_1comp_1_1Component.html" title="The Component class is the base class for almost all the components of VCLib (with the exception of C...">Component</a> class is the base class for almost all the components of VCLib (with the exception of <a class="el" href="classvcl_1_1comp_1_1CustomComponents.html" title="The CustomComponents Component is a container of additional components associated to an Element (e....">CustomComponents</a>). </p>
 <p>Inheriting from this class, a component will have some necessary definitions to be used smoothly by the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">vcl::Mesh</a> class, managing all the possible features of a component automatically.</p>
 <p>The features that a <a class="el" href="classvcl_1_1comp_1_1Component.html" title="The Component class is the base class for almost all the components of VCLib (with the exception of C...">Component</a> could have are:</p>
@@ -203,13 +214,13 @@ class vcl::comp::Component&lt; DerivedComponent, COMP_ID, DataType, ParentElemTy
 <p>There are also some additional features that are given by the <a class="el" href="classvcl_1_1comp_1_1ContainerComponent.html">ContainerComponent</a>, <a class="el" href="classvcl_1_1comp_1_1PointerContainerComponent.html">PointerContainerComponent</a> and <a class="el" href="classvcl_1_1comp_1_1IndexContainerComponent.html">IndexContainerComponent</a> classes. If you need to implement a <a class="el" href="classvcl_1_1comp_1_1Component.html" title="The Component class is the base class for almost all the components of VCLib (with the exception of C...">Component</a> that stores a Container of data, a Container of Pointers or a Container of Indices, take a look to that classes.</p>
 <p>All the features of a <a class="el" href="classvcl_1_1comp_1_1Component.html" title="The Component class is the base class for almost all the components of VCLib (with the exception of C...">Component</a> can be defined trough its template parameters, and implementing some protected member functions. To properly implement a <a class="el" href="classvcl_1_1comp_1_1Component.html" title="The Component class is the base class for almost all the components of VCLib (with the exception of C...">Component</a> class, must define the following protected member function:</p>
 <div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Element&gt;</div>
-<div class="line"><span class="keywordtype">void</span> importFrom(<span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Element.html">Element</a>&amp; e, <span class="keywordtype">bool</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">importRefs</a> = <span class="keyword">true</span>);</div>
+<div class="line"><span class="keywordtype">void</span> importFrom(<span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Element.html">Element</a>&amp; e, <span class="keywordtype">bool</span> <a class="code hl_class" href="classvcl_1_1Box.html">importRefs</a> = <span class="keyword">true</span>);</div>
+<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:49</div></div>
 <div class="ttc" id="aclassvcl_1_1Element_html"><div class="ttname"><a href="classvcl_1_1Element.html">vcl::Element</a></div><div class="ttdoc">The Element class.</div><div class="ttdef"><b>Definition</b> element.h:57</div></div>
-<div class="ttc" id="aclassvcl_1_1Matrix_html"><div class="ttname"><a href="classvcl_1_1Matrix.html">vcl::Matrix</a></div><div class="ttdef"><b>Definition</b> matrix.h:36</div></div>
 </div><!-- fragment --><p>Moreover, if the component has at least one ReferencedType, it must define the following protected member functions:</p>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> updateReferences(<span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">PointedType</a>* <a class="code hl_class" href="classvcl_1_1Matrix.html">oldBase</a>, std::size_t offset = 0);</div>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> updateReferences(<span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Box.html">PointedType</a>* <a class="code hl_class" href="classvcl_1_1Box.html">oldBase</a>, std::size_t offset = 0);</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> updateReferences(<span class="keyword">const</span> std::vector&lt;uint&gt;&amp; <a class="code hl_class" href="classvcl_1_1Matrix.html">newIndices</a>);</div>
+<div class="line"><span class="keywordtype">void</span> updateReferences(<span class="keyword">const</span> std::vector&lt;uint&gt;&amp; <a class="code hl_class" href="classvcl_1_1Box.html">newIndices</a>);</div>
 </div><!-- fragment --><p>If your component stores a Container of pointers or indices, look for the <a class="el" href="classvcl_1_1comp_1_1PointerContainerComponent.html">PointerContainerComponent</a> or <a class="el" href="classvcl_1_1comp_1_1IndexContainerComponent.html">IndexContainerComponent</a> classes, that provide the implementation of these functions.</p>
 <p>For further details , please refer to the page implement_component page.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
@@ -224,66 +235,20 @@ class vcl::comp::Component&lt; DerivedComponent, COMP_ID, DataType, ParentElemTy
   </table>
   </dd>
 </dl>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a4288595030360500e49a06c2342c898d" name="a4288595030360500e49a06c2342c898d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4288595030360500e49a06c2342c898d">&#9670;&#160;</a></span>DataValueType</h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab529ccd5b72896dfff7e882f4ba077f7" name="ab529ccd5b72896dfff7e882f4ba077f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab529ccd5b72896dfff7e882f4ba077f7">&#9670;&#160;</a></span>isAvailable()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> <a class="el" href="classvcl_1_1Matrix.html">DerivedComponent</a> , <a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> COMP_ID, <a class="el" href="classvcl_1_1Matrix.html">typename</a> DataType , <a class="el" href="classvcl_1_1Matrix.html">typename</a> <a class="el" href="classvcl_1_1Matrix.html">ParentElemType</a> , <a class="el" href="classvcl_1_1Matrix.html">bool</a> VERT, <a class="el" href="classvcl_1_1Matrix.html">bool</a> OPT, typename... ReferencedTypes&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Matrix.html">using</a> <a class="el" href="classvcl_1_1comp_1_1Component.html">vcl::comp::Component</a>&lt; <a class="el" href="classvcl_1_1Matrix.html">DerivedComponent</a>, <a class="el" href="classvcl_1_1Matrix.html">COMP_ID</a>, DataType, <a class="el" href="classvcl_1_1Matrix.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Matrix.html">VERT</a>, <a class="el" href="classvcl_1_1Matrix.html">OPT</a>, <a class="el" href="classvcl_1_1Matrix.html">ReferencedTypes</a> &gt;::DataValueType =  DataType</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The Data that the component will store (e.g. a <a class="el" href="group__space__core.html#gabb47c1364fb2fe1464a54417684f011e" title="A convenience alias for a 3-dimensional Point with double-precision floating-point components.">vcl::Point3d</a> for a <a class="el" href="classvcl_1_1comp_1_1Normal.html" title="The Normal class represents a N-Dimensional normal vector that will be part of an Element (e....">Normal</a> component). </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="aec459fa25a95c351302e869f4d744e25" name="aec459fa25a95c351302e869f4d744e25"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec459fa25a95c351302e869f4d744e25">&#9670;&#160;</a></span>data() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> <a class="el" href="classvcl_1_1Matrix.html">DerivedComponent</a> , <a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> COMP_ID, <a class="el" href="classvcl_1_1Matrix.html">typename</a> DataType , <a class="el" href="classvcl_1_1Matrix.html">typename</a> <a class="el" href="classvcl_1_1Matrix.html">ParentElemType</a> , <a class="el" href="classvcl_1_1Matrix.html">bool</a> VERT, <a class="el" href="classvcl_1_1Matrix.html">bool</a> OPT, typename... ReferencedTypes&gt; </div>
+template&lt;<a class="el" href="classvcl_1_1Box.html">typename</a> <a class="el" href="classvcl_1_1Box.html">DerivedComponent</a> , uint COMP_ID, <a class="el" href="classvcl_1_1Box.html">typename</a> DataType , <a class="el" href="classvcl_1_1Box.html">typename</a> <a class="el" href="classvcl_1_1Box.html">ParentElemType</a> , <a class="el" href="classvcl_1_1Box.html">bool</a> VERT, <a class="el" href="classvcl_1_1Box.html">bool</a> OPT, typename... ReferencedTypes&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1comp_1_1Component.html#a4288595030360500e49a06c2342c898d">DataValueType</a> &amp; <a class="el" href="classvcl_1_1comp_1_1Component.html">vcl::comp::Component</a>&lt; <a class="el" href="classvcl_1_1Matrix.html">DerivedComponent</a>, <a class="el" href="classvcl_1_1Matrix.html">COMP_ID</a>, DataType, <a class="el" href="classvcl_1_1Matrix.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Matrix.html">VERT</a>, <a class="el" href="classvcl_1_1Matrix.html">OPT</a>, <a class="el" href="classvcl_1_1Matrix.html">ReferencedTypes</a> &gt;::data </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac0494d8e6ece360a760fea9869b39c52" name="ac0494d8e6ece360a760fea9869b39c52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0494d8e6ece360a760fea9869b39c52">&#9670;&#160;</a></span>data() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> <a class="el" href="classvcl_1_1Matrix.html">DerivedComponent</a> , <a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> COMP_ID, <a class="el" href="classvcl_1_1Matrix.html">typename</a> DataType , <a class="el" href="classvcl_1_1Matrix.html">typename</a> <a class="el" href="classvcl_1_1Matrix.html">ParentElemType</a> , <a class="el" href="classvcl_1_1Matrix.html">bool</a> VERT, <a class="el" href="classvcl_1_1Matrix.html">bool</a> OPT, typename... ReferencedTypes&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1comp_1_1Component.html#a4288595030360500e49a06c2342c898d">DataValueType</a> &amp; <a class="el" href="classvcl_1_1comp_1_1Component.html">vcl::comp::Component</a>&lt; <a class="el" href="classvcl_1_1Matrix.html">DerivedComponent</a>, <a class="el" href="classvcl_1_1Matrix.html">COMP_ID</a>, DataType, <a class="el" href="classvcl_1_1Matrix.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Matrix.html">VERT</a>, <a class="el" href="classvcl_1_1Matrix.html">OPT</a>, <a class="el" href="classvcl_1_1Matrix.html">ReferencedTypes</a> &gt;::data </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">bool</a> <a class="el" href="classvcl_1_1comp_1_1Component.html">vcl::comp::Component</a>&lt; <a class="el" href="classvcl_1_1Box.html">DerivedComponent</a>, <a class="el" href="classvcl_1_1Box.html">COMP_ID</a>, DataType, <a class="el" href="classvcl_1_1Box.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Box.html">VERT</a>, <a class="el" href="classvcl_1_1Box.html">OPT</a>, <a class="el" href="classvcl_1_1Box.html">ReferencedTypes</a> &gt;::isAvailable </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -291,133 +256,32 @@ template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> <a class="
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="ab9d66d5db0b3b22c7285a72dc66db4c6" name="ab9d66d5db0b3b22c7285a72dc66db4c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab9d66d5db0b3b22c7285a72dc66db4c6">&#9670;&#160;</a></span>parentElement() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> <a class="el" href="classvcl_1_1Matrix.html">DerivedComponent</a> , <a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> COMP_ID, <a class="el" href="classvcl_1_1Matrix.html">typename</a> DataType , <a class="el" href="classvcl_1_1Matrix.html">typename</a> <a class="el" href="classvcl_1_1Matrix.html">ParentElemType</a> , <a class="el" href="classvcl_1_1Matrix.html">bool</a> VERT, <a class="el" href="classvcl_1_1Matrix.html">bool</a> OPT, typename... ReferencedTypes&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Matrix.html">ParentElemType</a> * <a class="el" href="classvcl_1_1comp_1_1Component.html">vcl::comp::Component</a>&lt; <a class="el" href="classvcl_1_1Matrix.html">DerivedComponent</a>, <a class="el" href="classvcl_1_1Matrix.html">COMP_ID</a>, DataType, <a class="el" href="classvcl_1_1Matrix.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Matrix.html">VERT</a>, <a class="el" href="classvcl_1_1Matrix.html">OPT</a>, <a class="el" href="classvcl_1_1Matrix.html">ReferencedTypes</a> &gt;::parentElement </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae3b534a6e2e52ad4dd642717a59970a5" name="ae3b534a6e2e52ad4dd642717a59970a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3b534a6e2e52ad4dd642717a59970a5">&#9670;&#160;</a></span>parentElement() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> <a class="el" href="classvcl_1_1Matrix.html">DerivedComponent</a> , <a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> COMP_ID, <a class="el" href="classvcl_1_1Matrix.html">typename</a> DataType , <a class="el" href="classvcl_1_1Matrix.html">typename</a> <a class="el" href="classvcl_1_1Matrix.html">ParentElemType</a> , <a class="el" href="classvcl_1_1Matrix.html">bool</a> VERT, <a class="el" href="classvcl_1_1Matrix.html">bool</a> OPT, typename... ReferencedTypes&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1Matrix.html">ParentElemType</a> * <a class="el" href="classvcl_1_1comp_1_1Component.html">vcl::comp::Component</a>&lt; <a class="el" href="classvcl_1_1Matrix.html">DerivedComponent</a>, <a class="el" href="classvcl_1_1Matrix.html">COMP_ID</a>, DataType, <a class="el" href="classvcl_1_1Matrix.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Matrix.html">VERT</a>, <a class="el" href="classvcl_1_1Matrix.html">OPT</a>, <a class="el" href="classvcl_1_1Matrix.html">ReferencedTypes</a> &gt;::parentElement </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>Returns <code>true</code> if the component is available, <code>false</code> otherwise. </p>
+<p>This member function can return <code>false</code> only if the component is optional, and it is not enabled.</p>
+<p>This member function is hidden by the element that inherits this class.</p>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the component is available, <code>false</code> otherwise. </dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="aed3f1eb6162a9fc30e93e70042685b54" name="aed3f1eb6162a9fc30e93e70042685b54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed3f1eb6162a9fc30e93e70042685b54">&#9670;&#160;</a></span>COMPONENT_ID</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> <a class="el" href="classvcl_1_1Matrix.html">DerivedComponent</a> , <a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> COMP_ID, <a class="el" href="classvcl_1_1Matrix.html">typename</a> DataType , <a class="el" href="classvcl_1_1Matrix.html">typename</a> <a class="el" href="classvcl_1_1Matrix.html">ParentElemType</a> , <a class="el" href="classvcl_1_1Matrix.html">bool</a> VERT, <a class="el" href="classvcl_1_1Matrix.html">bool</a> OPT, typename... ReferencedTypes&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> <a class="el" href="classvcl_1_1comp_1_1Component.html">vcl::comp::Component</a>&lt; <a class="el" href="classvcl_1_1Matrix.html">DerivedComponent</a>, <a class="el" href="classvcl_1_1Matrix.html">COMP_ID</a>, DataType, <a class="el" href="classvcl_1_1Matrix.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Matrix.html">VERT</a>, <a class="el" href="classvcl_1_1Matrix.html">OPT</a>, <a class="el" href="classvcl_1_1Matrix.html">ReferencedTypes</a> &gt;::COMPONENT_ID = <a class="el" href="classvcl_1_1Matrix.html">COMP_ID</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>The ID of the component. </p>
-
-</div>
-</div>
-<a id="ad078446b11d81e7195f23f7d6e95c532" name="ad078446b11d81e7195f23f7d6e95c532"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad078446b11d81e7195f23f7d6e95c532">&#9670;&#160;</a></span>IS_OPTIONAL</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> <a class="el" href="classvcl_1_1Matrix.html">DerivedComponent</a> , <a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> COMP_ID, <a class="el" href="classvcl_1_1Matrix.html">typename</a> DataType , <a class="el" href="classvcl_1_1Matrix.html">typename</a> <a class="el" href="classvcl_1_1Matrix.html">ParentElemType</a> , <a class="el" href="classvcl_1_1Matrix.html">bool</a> VERT, <a class="el" href="classvcl_1_1Matrix.html">bool</a> OPT, typename... ReferencedTypes&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1Matrix.html">bool</a> <a class="el" href="classvcl_1_1comp_1_1Component.html">vcl::comp::Component</a>&lt; <a class="el" href="classvcl_1_1Matrix.html">DerivedComponent</a>, <a class="el" href="classvcl_1_1Matrix.html">COMP_ID</a>, DataType, <a class="el" href="classvcl_1_1Matrix.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Matrix.html">VERT</a>, <a class="el" href="classvcl_1_1Matrix.html">OPT</a>, <a class="el" href="classvcl_1_1Matrix.html">ReferencedTypes</a> &gt;::IS_OPTIONAL = <a class="el" href="classvcl_1_1Matrix.html">VERT</a> &amp;&amp; <a class="el" href="classvcl_1_1Matrix.html">OPT</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Boolean that tells if this component is optional. Makes sense only when the component is vertical. </p>
-
-</div>
-</div>
 <a id="a55e1d1ddabda2c78327a09285918c798" name="a55e1d1ddabda2c78327a09285918c798"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a55e1d1ddabda2c78327a09285918c798">&#9670;&#160;</a></span>IS_VERTICAL</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> <a class="el" href="classvcl_1_1Matrix.html">DerivedComponent</a> , <a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> COMP_ID, <a class="el" href="classvcl_1_1Matrix.html">typename</a> DataType , <a class="el" href="classvcl_1_1Matrix.html">typename</a> <a class="el" href="classvcl_1_1Matrix.html">ParentElemType</a> , <a class="el" href="classvcl_1_1Matrix.html">bool</a> VERT, <a class="el" href="classvcl_1_1Matrix.html">bool</a> OPT, typename... ReferencedTypes&gt; </div>
+template&lt;<a class="el" href="classvcl_1_1Box.html">typename</a> <a class="el" href="classvcl_1_1Box.html">DerivedComponent</a> , uint COMP_ID, <a class="el" href="classvcl_1_1Box.html">typename</a> DataType , <a class="el" href="classvcl_1_1Box.html">typename</a> <a class="el" href="classvcl_1_1Box.html">ParentElemType</a> , <a class="el" href="classvcl_1_1Box.html">bool</a> VERT, <a class="el" href="classvcl_1_1Box.html">bool</a> OPT, typename... ReferencedTypes&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1Matrix.html">bool</a> <a class="el" href="classvcl_1_1comp_1_1Component.html">vcl::comp::Component</a>&lt; <a class="el" href="classvcl_1_1Matrix.html">DerivedComponent</a>, <a class="el" href="classvcl_1_1Matrix.html">COMP_ID</a>, DataType, <a class="el" href="classvcl_1_1Matrix.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Matrix.html">VERT</a>, <a class="el" href="classvcl_1_1Matrix.html">OPT</a>, <a class="el" href="classvcl_1_1Matrix.html">ReferencedTypes</a> &gt;::IS_VERTICAL</td>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">bool</a> <a class="el" href="classvcl_1_1comp_1_1Component.html">vcl::comp::Component</a>&lt; <a class="el" href="classvcl_1_1Box.html">DerivedComponent</a>, <a class="el" href="classvcl_1_1Box.html">COMP_ID</a>, DataType, <a class="el" href="classvcl_1_1Box.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Box.html">VERT</a>, <a class="el" href="classvcl_1_1Box.html">OPT</a>, <a class="el" href="classvcl_1_1Box.html">ReferencedTypes</a> &gt;::IS_VERTICAL</td>
         </tr>
       </table>
   </td>
@@ -434,14 +298,14 @@ template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> <a class="
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>include/vclib/mesh/components/bases/<a class="el" href="mesh_2components_2bases_2component_8h_source.html">component.h</a></li>
+<li>vclib/core/include/vclib/mesh/components/bases/<a class="el" href="mesh_2components_2bases_2component_8h_source.html">component.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespacevcl.html">vcl</a></li><li class="navelem"><a class="el" href="namespacevcl_1_1comp.html">comp</a></li><li class="navelem"><a class="el" href="classvcl_1_1comp_1_1Component.html">Component</a></li>
+    <li class="navelem"><b>vcl</b></li><li class="navelem"><b>comp</b></li><li class="navelem"><a class="el" href="classvcl_1_1comp_1_1Component.html">Component</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

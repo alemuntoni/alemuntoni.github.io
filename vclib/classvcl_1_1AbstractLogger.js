@@ -1,36 +1,12 @@
 var classvcl_1_1AbstractLogger =
 [
-    [ "LogLevel", "classvcl_1_1AbstractLogger.html#a0fd4fdf40fcb48af7aba5c15be59c849", [
-      [ "ERROR", "classvcl_1_1AbstractLogger.html#a0fd4fdf40fcb48af7aba5c15be59c849a46abb01ccf5f5d43b43455c5d85b143d", null ],
-      [ "WARNING", "classvcl_1_1AbstractLogger.html#a0fd4fdf40fcb48af7aba5c15be59c849a1a2e0b8764925a2653d60331014d159a", null ],
-      [ "MESSAGE", "classvcl_1_1AbstractLogger.html#a0fd4fdf40fcb48af7aba5c15be59c849aa4bf95940193fcb3a3b490980c19574d", null ],
-      [ "PROGRESS", "classvcl_1_1AbstractLogger.html#a0fd4fdf40fcb48af7aba5c15be59c849a36f99874216b5c137531109108ec6882", null ],
-      [ "DEBUG", "classvcl_1_1AbstractLogger.html#a0fd4fdf40fcb48af7aba5c15be59c849afc8371197288680503aab6fce7dc6ba8", null ]
-    ] ],
-    [ "AbstractLogger", "classvcl_1_1AbstractLogger.html#a68faa789aebc4abe111ebbd2cbf8ce71", null ],
-    [ "disableIndentation", "classvcl_1_1AbstractLogger.html#a34241fc0b55c419cb152b41bd259665f", null ],
-    [ "disablePrintMessageDuringProgress", "classvcl_1_1AbstractLogger.html#a53edd221e9e2fb60e222182e02bec299", null ],
-    [ "disablePrintPercentage", "classvcl_1_1AbstractLogger.html#a4b30a176998a8fe22e16e2537e8b8d4d", null ],
-    [ "disablePrintTimer", "classvcl_1_1AbstractLogger.html#a404edbc5a8905553425a4dce42a4ee1d", null ],
-    [ "enableIndentation", "classvcl_1_1AbstractLogger.html#a31530456c4d8c2b43cb0f526d03f2413", null ],
-    [ "enablePrintMessageDuringProgress", "classvcl_1_1AbstractLogger.html#a8ea3a2b45bad458a45bae9527e611020", null ],
-    [ "enablePrintPercentage", "classvcl_1_1AbstractLogger.html#a9cdde17c363a415e35902b2a70a0cf34", null ],
-    [ "enablePrintTimer", "classvcl_1_1AbstractLogger.html#a92c07875d4c698d3907641343eb93824", null ],
     [ "endProgress", "classvcl_1_1AbstractLogger.html#a48b36ced6e0e7637fc130aa53e1c0f27", null ],
-    [ "endTask", "classvcl_1_1AbstractLogger.html#aed42b04dc7cac310ab7085f6dd56cedf", null ],
-    [ "getTime", "classvcl_1_1AbstractLogger.html#acefc01fd05fc446c2236d90030c7e78a", null ],
-    [ "log", "classvcl_1_1AbstractLogger.html#a7d045ac82f35b50dfe3cf315d2bd4741", null ],
-    [ "log", "classvcl_1_1AbstractLogger.html#a60d2eee882400cf6022db85aca136b42", null ],
+    [ "log", "classvcl_1_1AbstractLogger.html#a2cbae5a3d36ba543e70984b42ba100f0", null ],
+    [ "log", "classvcl_1_1AbstractLogger.html#a78adcd14f588e6dc42008809a734e63b", null ],
     [ "log", "classvcl_1_1AbstractLogger.html#ad2a35d9110821cb6246980bbe49754a7", null ],
-    [ "log", "classvcl_1_1AbstractLogger.html#a908ce84b2f13efe23e5c6faf0d0db40d", null ],
-    [ "percentage", "classvcl_1_1AbstractLogger.html#ab215c669bcefa8f0d9e176817fd43fe3", null ],
+    [ "log", "classvcl_1_1AbstractLogger.html#a7a45c0c8b69e11aa5f78905d238ccb01", null ],
     [ "progress", "classvcl_1_1AbstractLogger.html#a78b100ace1f6f9538eac6a1c32e69d21", null ],
-    [ "reset", "classvcl_1_1AbstractLogger.html#a0bf13a9e252948ea6dfedc572137311d", null ],
-    [ "setMaxLineWidth", "classvcl_1_1AbstractLogger.html#ae2ea71ae3e242f2a59b7193a33223246", null ],
-    [ "setPercentage", "classvcl_1_1AbstractLogger.html#a7519035f44afab964f1ef904b4e4062c", null ],
     [ "setPrintLevel", "classvcl_1_1AbstractLogger.html#a72c280cc748bfefcc2e5888a18741b4c", null ],
-    [ "startNewTask", "classvcl_1_1AbstractLogger.html#a7a2d4538585b83caa5bbf02f047359aa", null ],
     [ "startProgress", "classvcl_1_1AbstractLogger.html#a5b511f0b50d8a54633a6feb77c0dc693", null ],
-    [ "startTimer", "classvcl_1_1AbstractLogger.html#ae57db94126c5ed3a8998f4ba3815ea1e", null ],
-    [ "stopTimer", "classvcl_1_1AbstractLogger.html#ad083fcf2bea446f9bfca96d79c2d8e15", null ]
+    [ "time", "classvcl_1_1AbstractLogger.html#a30c2861e818f319933b3b60cbdd92584", null ]
 ];

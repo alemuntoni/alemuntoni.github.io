@@ -106,9 +106,9 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1HasEdges.html',''); init
 <p><code>#include &lt;<a class="el" href="concepts_2mesh_2containers_2edge__container_8h_source.html">vclib/concepts/mesh/containers/edge_container.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1HasEdges.html">vcl::HasEdges</a> =  (<a class="code hl_concept" href="conceptvcl_1_1mesh_1_1HasEdgeContainer.html">vcl::mesh::HasEdgeContainer&lt;Args&gt;</a> || ...)</div>
-<div class="ttc" id="aconceptvcl_1_1HasEdges_html"><div class="ttname"><a href="conceptvcl_1_1HasEdges.html">vcl::HasEdges</a></div><div class="ttdoc">HasEdges concepts is satisfied when at least one of its template types is (or inherits from) a vcl::m...</div><div class="ttdef"><b>Definition</b> edge_container.h:112</div></div>
-<div class="ttc" id="aconceptvcl_1_1mesh_1_1HasEdgeContainer_html"><div class="ttname"><a href="conceptvcl_1_1mesh_1_1HasEdgeContainer.html">vcl::mesh::HasEdgeContainer</a></div><div class="ttdoc">The HasEdgeContainer concept is satisfied only if a container class provides the types and member fun...</div><div class="ttdef"><b>Definition</b> edge_container.h:43</div></div>
+<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1HasEdges.html">vcl::HasEdges</a> =  (<a class="code hl_concept" href="conceptvcl_1_1mesh_1_1HasEdgeContainer.html">mesh::HasEdgeContainer&lt;Args&gt;</a> || ...)</div>
+<div class="ttc" id="aconceptvcl_1_1HasEdges_html"><div class="ttname"><a href="conceptvcl_1_1HasEdges.html">vcl::HasEdges</a></div><div class="ttdoc">HasEdges concepts is satisfied when at least one of its template types is (or inherits from) a vcl::m...</div><div class="ttdef"><b>Definition</b> edge_container.h:131</div></div>
+<div class="ttc" id="aconceptvcl_1_1mesh_1_1HasEdgeContainer_html"><div class="ttname"><a href="conceptvcl_1_1mesh_1_1HasEdgeContainer.html">vcl::mesh::HasEdgeContainer</a></div><div class="ttdoc">The HasEdgeContainer concept is satisfied only if a container class provides the types and member fun...</div><div class="ttdef"><b>Definition</b> edge_container.h:44</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>HasEdges concepts is satisfied when at least one of its template types is (or inherits from) a <a class="el" href="classvcl_1_1mesh_1_1EdgeContainer.html">vcl::mesh::EdgeContainer</a>. It can be used both to check if a Mesh has edges, or if in a list of types there is a EdgeContainer. </p>
 <p>In the following example, a MyMesh type can be instantiated only if one of its template Args is a EdgeContainer: </p><div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt; <span class="keyword">requires</span> <a class="code hl_concept" href="conceptvcl_1_1HasEdges.html">HasEdges</a>&lt;Args...&gt;</div>
@@ -118,10 +118,10 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1HasEdges.html',''); init
 <div class="line"> </div>
 <div class="line"><span class="comment">// ...</span></div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_class" href="classvcl_1_1Matrix.html">MyMesh&lt;vcl::VertexContainer&lt;MyVertex&gt;</a>&gt; <a class="code hl_class" href="classvcl_1_1Matrix.html">m1</a>; <span class="comment">// not ok</span></div>
-<div class="line"><a class="code hl_class" href="classvcl_1_1Matrix.html">MyMesh&lt;vcl::EdgeContainer&lt;MyEdge&gt;</a>&gt; <a class="code hl_class" href="classvcl_1_1Matrix.html">m2</a>; <span class="comment">// ok</span></div>
-<div class="line"><a class="code hl_class" href="classvcl_1_1Matrix.html">MyMesh&lt;vcl::VertexContainer&lt;MyVertex&gt;</a>, <a class="code hl_class" href="classvcl_1_1Matrix.html">vcl::EdgeContainer&lt;MyEdge&gt;</a>&gt; <a class="code hl_class" href="classvcl_1_1Matrix.html">m3</a>; <span class="comment">// ok</span></div>
-<div class="ttc" id="aclassvcl_1_1Matrix_html"><div class="ttname"><a href="classvcl_1_1Matrix.html">vcl::Matrix</a></div><div class="ttdef"><b>Definition</b> matrix.h:36</div></div>
+<div class="line"><a class="code hl_class" href="classvcl_1_1Box.html">MyMesh&lt;vcl::VertexContainer&lt;MyVertex&gt;</a>&gt; <a class="code hl_class" href="classvcl_1_1Box.html">m1</a>; <span class="comment">// not ok</span></div>
+<div class="line"><a class="code hl_class" href="classvcl_1_1Box.html">MyMesh&lt;vcl::EdgeContainer&lt;MyEdge&gt;</a>&gt; <a class="code hl_class" href="classvcl_1_1Box.html">m2</a>; <span class="comment">// ok</span></div>
+<div class="line"><a class="code hl_class" href="classvcl_1_1Box.html">MyMesh&lt;vcl::VertexContainer&lt;MyVertex&gt;</a>, <a class="code hl_class" href="classvcl_1_1Box.html">vcl::EdgeContainer&lt;MyEdge&gt;</a>&gt; <a class="code hl_class" href="classvcl_1_1Box.html">m3</a>; <span class="comment">// ok</span></div>
+<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:49</div></div>
 </div><!-- fragment --><p>To check if a type has (inherits from) EdgeContainer: </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<a class="code hl_concept" href="conceptvcl_1_1HasEdges.html">vcl::HasEdges&lt;MyMeshType&gt;</a>) {</div>
 <div class="line">    <span class="comment">// ...</span></div>
 <div class="line">}</div>
@@ -131,7 +131,7 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1HasEdges.html',''); init
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespacevcl.html">vcl</a></li><li class="navelem"><a class="el" href="conceptvcl_1_1HasEdges.html">HasEdges</a></li>
+    <li class="navelem"><b>vcl</b></li><li class="navelem"><a class="el" href="conceptvcl_1_1HasEdges.html">HasEdges</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

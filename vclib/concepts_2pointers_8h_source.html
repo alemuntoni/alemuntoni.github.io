@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visual Computing Library: include/vclib/concepts/pointers.h Source File</title>
+<title>Visual Computing Library: vclib/core/include/vclib/concepts/pointers.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -104,11 +104,11 @@ $(document).ready(function(){initNavTree('concepts_2pointers_8h_source.html','')
   <div class="headertitle"><div class="title">pointers.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="concepts_2pointers_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2024                                                    *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2025                                                    *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
@@ -129,11 +129,11 @@ $(document).ready(function(){initNavTree('concepts_2pointers_8h_source.html','')
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_CONCEPTS_POINTERS_H</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_CONCEPTS_POINTERS_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;const_correctness.h&quot;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;<a class="code" href="types_2const__correctness_8h.html">const_correctness.h</a>&quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span>vcl {</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">namespace </span>detail {</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
@@ -150,7 +150,7 @@ $(document).ready(function(){initNavTree('concepts_2pointers_8h_source.html','')
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>} <span class="comment">// namespace detail</span></div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="conceptvcl_1_1IsPointer.html">   53</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1IsPointer.html">IsPointer</a> = std::is_pointer_v&lt;std::remove_reference_t&lt;T&gt;&gt;;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="conceptvcl_1_1IsPointer.html">   53</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1IsPointer.html">IsPointer</a> = std::is_pointer_v&lt;RemoveRef&lt;T&gt;&gt;;</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="conceptvcl_1_1IsSharedPointer.html">   61</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1IsSharedPointer.html">IsSharedPointer</a> = detail::IsSharedPtr&lt;T&gt;::value;</div>
@@ -158,35 +158,32 @@ $(document).ready(function(){initNavTree('concepts_2pointers_8h_source.html','')
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="conceptvcl_1_1IsAnyPointer.html">   70</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1IsAnyPointer.html">IsAnyPointer</a> = <a class="code hl_concept" href="conceptvcl_1_1IsPointer.html">IsPointer&lt;T&gt;</a> || <a class="code hl_concept" href="conceptvcl_1_1IsSharedPointer.html">IsSharedPointer&lt;T&gt;</a>;</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment">// https://stackoverflow.com/a/37370281/5851101</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="conceptvcl_1_1IsPointerToConst.html">   80</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1IsPointerToConst.html">IsPointerToConst</a> = <a class="code hl_concept" href="conceptvcl_1_1IsPointer.html">IsPointer&lt;T&gt;</a> &amp;&amp; <a class="code hl_concept" href="conceptvcl_1_1IsConst.html">IsConst&lt;T&gt;</a>;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="conceptvcl_1_1IsSharedPointerToConst.html">   89</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1IsSharedPointerToConst.html">IsSharedPointerToConst</a> =</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <a class="code hl_concept" href="conceptvcl_1_1IsSharedPointer.html">IsSharedPointer&lt;T&gt;</a> &amp;&amp; <a class="code hl_concept" href="conceptvcl_1_1IsConst.html">IsConst&lt;typename T::element_type&gt;</a>;</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="conceptvcl_1_1IsAnyPointerToConst.html">   99</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1IsAnyPointerToConst.html">IsAnyPointerToConst</a> = <a class="code hl_concept" href="conceptvcl_1_1IsPointerToConst.html">IsPointerToConst&lt;T&gt;</a> || <a class="code hl_concept" href="conceptvcl_1_1IsSharedPointerToConst.html">IsSharedPointerToConst&lt;T&gt;</a>;</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="preprocessor">#endif </span><span class="comment">// VCL_CONCEPTS_POINTERS_H</span></div>
-<div class="ttc" id="aconceptvcl_1_1IsAnyPointerToConst_html"><div class="ttname"><a href="conceptvcl_1_1IsAnyPointerToConst.html">vcl::IsAnyPointerToConst</a></div><div class="ttdoc">Utility concept that is evaluated true if T is a Pointer or a shared pointer to a constant object.</div><div class="ttdef"><b>Definition</b> pointers.h:99</div></div>
-<div class="ttc" id="aconceptvcl_1_1IsAnyPointer_html"><div class="ttname"><a href="conceptvcl_1_1IsAnyPointer.html">vcl::IsAnyPointer</a></div><div class="ttdoc">Utility concept that is evaluated true if T is a Pointer or a shared pointer.</div><div class="ttdef"><b>Definition</b> pointers.h:70</div></div>
-<div class="ttc" id="aconceptvcl_1_1IsConst_html"><div class="ttname"><a href="conceptvcl_1_1IsConst.html">vcl::IsConst</a></div><div class="ttdoc">Utility concept that is evaluated true if T is const or it is a pointer to const.</div><div class="ttdef"><b>Definition</b> const_correctness.h:37</div></div>
-<div class="ttc" id="aconceptvcl_1_1IsPointerToConst_html"><div class="ttname"><a href="conceptvcl_1_1IsPointerToConst.html">vcl::IsPointerToConst</a></div><div class="ttdoc">Utility concept that is evaluated true if T is a Pointer to a constant object.</div><div class="ttdef"><b>Definition</b> pointers.h:80</div></div>
-<div class="ttc" id="aconceptvcl_1_1IsPointer_html"><div class="ttname"><a href="conceptvcl_1_1IsPointer.html">vcl::IsPointer</a></div><div class="ttdoc">Utility concept that is evaluated true if T is a Pointer, even if the type T is a reference to a poin...</div><div class="ttdef"><b>Definition</b> pointers.h:53</div></div>
-<div class="ttc" id="aconceptvcl_1_1IsSharedPointerToConst_html"><div class="ttname"><a href="conceptvcl_1_1IsSharedPointerToConst.html">vcl::IsSharedPointerToConst</a></div><div class="ttdoc">Utility concept that is evaluated true if T is a shared pointer to a constant object.</div><div class="ttdef"><b>Definition</b> pointers.h:89</div></div>
-<div class="ttc" id="aconceptvcl_1_1IsSharedPointer_html"><div class="ttname"><a href="conceptvcl_1_1IsSharedPointer.html">vcl::IsSharedPointer</a></div><div class="ttdoc">Utility concept that is evaluated true if T is a shared pointer.</div><div class="ttdef"><b>Definition</b> pointers.h:61</div></div>
-<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition</b> bounding_box.h:48</div></div>
-<div class="ttc" id="atypes_2const__correctness_8h_html"><div class="ttname"><a href="types_2const__correctness_8h.html">const_correctness.h</a></div></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="conceptvcl_1_1IsPointerToConst.html">   81</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1IsPointerToConst.html">IsPointerToConst</a> = <a class="code hl_concept" href="conceptvcl_1_1IsPointer.html">IsPointer&lt;T&gt;</a> &amp;&amp; <a class="code hl_concept" href="conceptvcl_1_1IsConst.html">IsConst&lt;T&gt;</a>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="conceptvcl_1_1IsSharedPointerToConst.html">   90</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1IsSharedPointerToConst.html">IsSharedPointerToConst</a> =</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <a class="code hl_concept" href="conceptvcl_1_1IsSharedPointer.html">IsSharedPointer&lt;T&gt;</a> &amp;&amp; <a class="code hl_concept" href="conceptvcl_1_1IsConst.html">IsConst&lt;typename T::element_type&gt;</a>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="conceptvcl_1_1IsAnyPointerToConst.html">  100</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1IsAnyPointerToConst.html">IsAnyPointerToConst</a> = <a class="code hl_concept" href="conceptvcl_1_1IsPointerToConst.html">IsPointerToConst&lt;T&gt;</a> || <a class="code hl_concept" href="conceptvcl_1_1IsSharedPointerToConst.html">IsSharedPointerToConst&lt;T&gt;</a>;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="preprocessor">#endif </span><span class="comment">// VCL_CONCEPTS_POINTERS_H</span></div>
+<div class="ttc" id="aconceptvcl_1_1IsAnyPointerToConst_html"><div class="ttname"><a href="conceptvcl_1_1IsAnyPointerToConst.html">vcl::IsAnyPointerToConst</a></div><div class="ttdoc">The IsAnyPointerToConst concept is satisfied if T is a Pointer or a shared pointer to a constant obje...</div><div class="ttdef"><b>Definition</b> pointers.h:100</div></div>
+<div class="ttc" id="aconceptvcl_1_1IsAnyPointer_html"><div class="ttname"><a href="conceptvcl_1_1IsAnyPointer.html">vcl::IsAnyPointer</a></div><div class="ttdoc">The IsAnyPointer concept is satisfied if T is a Pointer or a shared pointer.</div><div class="ttdef"><b>Definition</b> pointers.h:70</div></div>
+<div class="ttc" id="aconceptvcl_1_1IsConst_html"><div class="ttname"><a href="conceptvcl_1_1IsConst.html">vcl::IsConst</a></div><div class="ttdoc">The IsConst concept is satisfied if T satisfies one of the following conditions:</div><div class="ttdef"><b>Definition</b> const_correctness.h:43</div></div>
+<div class="ttc" id="aconceptvcl_1_1IsPointerToConst_html"><div class="ttname"><a href="conceptvcl_1_1IsPointerToConst.html">vcl::IsPointerToConst</a></div><div class="ttdoc">The IsPointerToConst concept is satisfied if T is a Pointer to a constant object.</div><div class="ttdef"><b>Definition</b> pointers.h:81</div></div>
+<div class="ttc" id="aconceptvcl_1_1IsPointer_html"><div class="ttname"><a href="conceptvcl_1_1IsPointer.html">vcl::IsPointer</a></div><div class="ttdoc">The IsPointer concept is satisfied if T is a Pointer, even if the type T is a reference to a pointer.</div><div class="ttdef"><b>Definition</b> pointers.h:53</div></div>
+<div class="ttc" id="aconceptvcl_1_1IsSharedPointerToConst_html"><div class="ttname"><a href="conceptvcl_1_1IsSharedPointerToConst.html">vcl::IsSharedPointerToConst</a></div><div class="ttdoc">The IsSharedPointerToConst concept is satisfied if T is a shared pointer to a constant object.</div><div class="ttdef"><b>Definition</b> pointers.h:90</div></div>
+<div class="ttc" id="aconceptvcl_1_1IsSharedPointer_html"><div class="ttname"><a href="conceptvcl_1_1IsSharedPointer.html">vcl::IsSharedPointer</a></div><div class="ttdoc">The IsSharedPointer concept is satisfied if T is a shared pointer.</div><div class="ttdef"><b>Definition</b> pointers.h:61</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d2fdbf172f8ae9790b339bfcb66b3af7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_d8d31096cdb23314816d0514c2e28657.html">concepts</a></li><li class="navelem"><a class="el" href="concepts_2pointers_8h.html">pointers.h</a></li>
+    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_dd968cc90108d82a40e31b676831d617.html">concepts</a></li><li class="navelem"><b>pointers.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

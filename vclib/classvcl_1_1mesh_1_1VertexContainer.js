@@ -1,9 +1,5 @@
 var classvcl_1_1mesh_1_1VertexContainer =
 [
-    [ "ConstVertexIterator", "classvcl_1_1mesh_1_1VertexContainer.html#aa863a1cf721acd8a6c8177e6d4342878", null ],
-    [ "Vertex", "classvcl_1_1mesh_1_1VertexContainer.html#a6e0332114044b439d6738c1bb64ad7dc", null ],
-    [ "VertexIterator", "classvcl_1_1mesh_1_1VertexContainer.html#a12702551c437573303004846b926c3da", null ],
-    [ "VertexType", "classvcl_1_1mesh_1_1VertexContainer.html#a64eb23d0ad8115b2aac98d5fbae0bc43", null ],
     [ "VertexContainer", "classvcl_1_1mesh_1_1VertexContainer.html#ad2cac8daece6d44babf7a880241b21f6", null ],
     [ "addPerVertexCustomComponent", "classvcl_1_1mesh_1_1VertexContainer.html#a7fef9e15ba6e654141ec74041369b87e", null ],
     [ "addVertex", "classvcl_1_1mesh_1_1VertexContainer.html#a98f6b97063334e7dcc0a8abb3bcb6c27", null ],
@@ -66,6 +62,5 @@ var classvcl_1_1mesh_1_1VertexContainer =
     [ "vertexIndexIfCompact", "classvcl_1_1mesh_1_1VertexContainer.html#a8bd411cf90c0448949360036246d0e0b", null ],
     [ "vertexNumber", "classvcl_1_1mesh_1_1VertexContainer.html#a7c9be0bf45c7d2b18356181591bbb3ee", null ],
     [ "vertices", "classvcl_1_1mesh_1_1VertexContainer.html#a1aac0c075f3ff34ab9efa083ff1fd4e8", null ],
-    [ "vertices", "classvcl_1_1mesh_1_1VertexContainer.html#a3140ae97a7243135bb2e762309d3ac42", null ],
-    [ "VertexContainer", "classvcl_1_1mesh_1_1VertexContainer.html#a30bc2bb15c0d6f6bcd7211755523e8d1", null ]
+    [ "vertices", "classvcl_1_1mesh_1_1VertexContainer.html#a3140ae97a7243135bb2e762309d3ac42", null ]
 ];

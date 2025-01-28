@@ -106,15 +106,15 @@ $(document).ready(function(){initNavTree('structvcl_1_1mesh_1_1IsElementContaine
 <p>The predicate <a class="el" href="structvcl_1_1mesh_1_1IsElementContainerPred.html" title="The predicate IsElementContainerPred sets its bool value to true when the type T satisfies the Elemen...">IsElementContainerPred</a> sets its bool <code>value</code> to <code>true</code> when the type T satisfies the ElementContainerConcept concept.  
  <a href="structvcl_1_1mesh_1_1IsElementContainerPred.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="concepts_2mesh_2containers_2element__container_8h_source.html">vclib/concepts/mesh/containers/element_container.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="types_2mesh__containers_8h_source.html">vclib/types/mesh_containers.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a4c77e1292fb436591abb59169c6a2055" id="r_a4c77e1292fb436591abb59169c6a2055"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Matrix.html">static</a> <a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1Matrix.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvcl_1_1mesh_1_1IsElementContainerPred.html#a4c77e1292fb436591abb59169c6a2055">value</a> = ElementContainerConcept&lt;T&gt;</td></tr>
+<tr class="memitem:a4c77e1292fb436591abb59169c6a2055" id="r_a4c77e1292fb436591abb59169c6a2055"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">static</a> <a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvcl_1_1mesh_1_1IsElementContainerPred.html#a4c77e1292fb436591abb59169c6a2055">value</a></td></tr>
 <tr class="separator:a4c77e1292fb436591abb59169c6a2055"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> T&gt;<br />
+<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="classvcl_1_1Box.html">typename</a> T&gt;<br />
 struct vcl::mesh::IsElementContainerPred&lt; T &gt;</div><p>The predicate <a class="el" href="structvcl_1_1mesh_1_1IsElementContainerPred.html" title="The predicate IsElementContainerPred sets its bool value to true when the type T satisfies the Elemen...">IsElementContainerPred</a> sets its bool <code>value</code> to <code>true</code> when the type T satisfies the ElementContainerConcept concept. </p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="a4c77e1292fb436591abb59169c6a2055" name="a4c77e1292fb436591abb59169c6a2055"></a>
@@ -123,13 +123,13 @@ struct vcl::mesh::IsElementContainerPred&lt; T &gt;</div><p>The predicate <a cla
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> T &gt; </div>
+template&lt;<a class="el" href="classvcl_1_1Box.html">typename</a> T &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1Matrix.html">bool</a> <a class="el" href="structvcl_1_1mesh_1_1IsElementContainerPred.html">vcl::mesh::IsElementContainerPred</a>&lt; T &gt;::value = ElementContainerConcept&lt;T&gt;</td>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">bool</a> <a class="el" href="structvcl_1_1mesh_1_1IsElementContainerPred.html">vcl::mesh::IsElementContainerPred</a>&lt; T &gt;::value</td>
         </tr>
       </table>
   </td>
@@ -138,18 +138,20 @@ template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> T &gt; </d
   </tr>
 </table>
 </div><div class="memdoc">
-
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">        std::is_base_of&lt;ElementContainerTriggerer, RemoveRef&lt;T&gt;&gt;::value</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>include/vclib/concepts/mesh/containers/<a class="el" href="concepts_2mesh_2containers_2element__container_8h_source.html">element_container.h</a></li>
+<li>vclib/core/include/vclib/types/<a class="el" href="types_2mesh__containers_8h_source.html">mesh_containers.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespacevcl.html">vcl</a></li><li class="navelem"><a class="el" href="namespacevcl_1_1mesh.html">mesh</a></li><li class="navelem"><a class="el" href="structvcl_1_1mesh_1_1IsElementContainerPred.html">IsElementContainerPred</a></li>
+    <li class="navelem"><b>vcl</b></li><li class="navelem"><b>mesh</b></li><li class="navelem"><a class="el" href="structvcl_1_1mesh_1_1IsElementContainerPred.html">IsElementContainerPred</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

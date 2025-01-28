@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visual Computing Library: include/vclib/exceptions/misc.h Source File</title>
+<title>Visual Computing Library: vclib/core/include/vclib/exceptions/misc.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -104,11 +104,11 @@ $(document).ready(function(){initNavTree('exceptions_2misc_8h_source.html',''); 
   <div class="headertitle"><div class="title">misc.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="exceptions_2misc_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2024                                                    *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2025                                                    *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
@@ -132,59 +132,50 @@ $(document).ready(function(){initNavTree('exceptions_2misc_8h_source.html',''); 
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span>vcl {</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="foldopen" id="foldopen00031" data-start="{" data-end="};">
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classvcl_1_1WrongSizeException.html">   31</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1WrongSizeException.html">WrongSizeException</a> : <span class="keyword">public</span> std::runtime_error</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>{</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classvcl_1_1WrongSizeException.html#a6914e312a10783cd619d13239734531c">   34</a></span>    <a class="code hl_function" href="classvcl_1_1WrongSizeException.html#a6914e312a10783cd619d13239734531c">WrongSizeException</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Matrix.html">err</a>) : std::runtime_error(<a class="code hl_class" href="classvcl_1_1Matrix.html">err</a>) {}</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classvcl_1_1WrongSizeException.html#a772d8665e15063f616c92dd27b02ee7b">   36</a></span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="classvcl_1_1WrongSizeException.html#a772d8665e15063f616c92dd27b02ee7b">what</a>() <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">throw</a>()</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">static</span> std::string <a class="code hl_class" href="classvcl_1_1Matrix.html">error</a>;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">error</a> = std::string(<span class="stringliteral">&quot;Wrong Size - &quot;</span>) + std::runtime_error::what();</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">error</a>.c_str();</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="};">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classvcl_1_1WrongSizeException.html">   37</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1WrongSizeException.html">WrongSizeException</a> : <span class="keyword">public</span> std::runtime_error</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>{</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <a class="code hl_class" href="classvcl_1_1WrongSizeException.html">WrongSizeException</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Box.html">err</a>) : std::runtime_error(<a class="code hl_class" href="classvcl_1_1Box.html">err</a>) {}</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* what() <span class="keyword">const</span> <span class="keywordflow">throw</span>()</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keyword">static</span> std::string <a class="code hl_class" href="classvcl_1_1Box.html">error</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <a class="code hl_class" href="classvcl_1_1Box.html">error</a> = std::string(<span class="stringliteral">&quot;Wrong Size - &quot;</span>) + std::runtime_error::what();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Box.html">error</a>.c_str();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>};</div>
 </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>};</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="foldopen" id="foldopen00055" data-start="{" data-end="};">
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classvcl_1_1NoIntersectionException.html">   55</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1NoIntersectionException.html">NoIntersectionException</a> : <span class="keyword">public</span> std::runtime_error</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>{</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <a class="code hl_class" href="classvcl_1_1NoIntersectionException.html">NoIntersectionException</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Box.html">err</a>) : std::runtime_error(<a class="code hl_class" href="classvcl_1_1Box.html">err</a>) {}</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* what() <span class="keyword">const</span> <span class="keywordflow">throw</span>()</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keyword">static</span> std::string <a class="code hl_class" href="classvcl_1_1Box.html">error</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <a class="code hl_class" href="classvcl_1_1Box.html">error</a> = std::string(<span class="stringliteral">&quot;No Intersection - &quot;</span>) + std::runtime_error::what();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Box.html">error</a>.c_str();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>};</div>
 </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="foldopen" id="foldopen00044" data-start="{" data-end="};">
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classvcl_1_1NoIntersectionException.html">   44</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1NoIntersectionException.html">NoIntersectionException</a> : <span class="keyword">public</span> std::runtime_error</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>{</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classvcl_1_1NoIntersectionException.html#ae76980ba1a96296b8b3710fa9e3d41e2">   47</a></span>    <a class="code hl_function" href="classvcl_1_1NoIntersectionException.html#ae76980ba1a96296b8b3710fa9e3d41e2">NoIntersectionException</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Matrix.html">err</a>) : std::runtime_error(<a class="code hl_class" href="classvcl_1_1Matrix.html">err</a>) {}</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classvcl_1_1NoIntersectionException.html#a80f68129c975c775427a4c91053b8255">   49</a></span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="classvcl_1_1NoIntersectionException.html#a80f68129c975c775427a4c91053b8255">what</a>() <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">throw</a>()</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    {</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keyword">static</span> std::string <a class="code hl_class" href="classvcl_1_1Matrix.html">error</a>;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">error</a> = std::string(<span class="stringliteral">&quot;No Intersection - &quot;</span>) + std::runtime_error::what();</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">error</a>.c_str();</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    }</div>
-</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>};</div>
-</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#endif </span><span class="comment">// VCL_EXCEPTIONS_MISC_H</span></div>
-<div class="ttc" id="aclassvcl_1_1Matrix_html"><div class="ttname"><a href="classvcl_1_1Matrix.html">vcl::Matrix</a></div><div class="ttdef"><b>Definition</b> matrix.h:36</div></div>
-<div class="ttc" id="aclassvcl_1_1NoIntersectionException_html"><div class="ttname"><a href="classvcl_1_1NoIntersectionException.html">vcl::NoIntersectionException</a></div><div class="ttdef"><b>Definition</b> misc.h:45</div></div>
-<div class="ttc" id="aclassvcl_1_1NoIntersectionException_html_a80f68129c975c775427a4c91053b8255"><div class="ttname"><a href="classvcl_1_1NoIntersectionException.html#a80f68129c975c775427a4c91053b8255">vcl::NoIntersectionException::what</a></div><div class="ttdeci">virtual const char * what() const</div><div class="ttdef"><b>Definition</b> misc.h:49</div></div>
-<div class="ttc" id="aclassvcl_1_1NoIntersectionException_html_ae76980ba1a96296b8b3710fa9e3d41e2"><div class="ttname"><a href="classvcl_1_1NoIntersectionException.html#ae76980ba1a96296b8b3710fa9e3d41e2">vcl::NoIntersectionException::NoIntersectionException</a></div><div class="ttdeci">NoIntersectionException(const std::string &amp;err)</div><div class="ttdef"><b>Definition</b> misc.h:47</div></div>
-<div class="ttc" id="aclassvcl_1_1WrongSizeException_html"><div class="ttname"><a href="classvcl_1_1WrongSizeException.html">vcl::WrongSizeException</a></div><div class="ttdef"><b>Definition</b> misc.h:32</div></div>
-<div class="ttc" id="aclassvcl_1_1WrongSizeException_html_a6914e312a10783cd619d13239734531c"><div class="ttname"><a href="classvcl_1_1WrongSizeException.html#a6914e312a10783cd619d13239734531c">vcl::WrongSizeException::WrongSizeException</a></div><div class="ttdeci">WrongSizeException(const std::string &amp;err)</div><div class="ttdef"><b>Definition</b> misc.h:34</div></div>
-<div class="ttc" id="aclassvcl_1_1WrongSizeException_html_a772d8665e15063f616c92dd27b02ee7b"><div class="ttname"><a href="classvcl_1_1WrongSizeException.html#a772d8665e15063f616c92dd27b02ee7b">vcl::WrongSizeException::what</a></div><div class="ttdeci">virtual const char * what() const</div><div class="ttdef"><b>Definition</b> misc.h:36</div></div>
-<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition</b> bounding_box.h:48</div></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#endif </span><span class="comment">// VCL_EXCEPTIONS_MISC_H</span></div>
+<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:49</div></div>
+<div class="ttc" id="aclassvcl_1_1NoIntersectionException_html"><div class="ttname"><a href="classvcl_1_1NoIntersectionException.html">vcl::NoIntersectionException</a></div><div class="ttdoc">Exception thrown when the intersection between two objects is empty.</div><div class="ttdef"><b>Definition</b> misc.h:56</div></div>
+<div class="ttc" id="aclassvcl_1_1WrongSizeException_html"><div class="ttname"><a href="classvcl_1_1WrongSizeException.html">vcl::WrongSizeException</a></div><div class="ttdoc">Exception thrown when the size (generally of a container) is not the expected one.</div><div class="ttdef"><b>Definition</b> misc.h:38</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d2fdbf172f8ae9790b339bfcb66b3af7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_faecc92ba3fe640bc81c479e685075f2.html">exceptions</a></li><li class="navelem"><a class="el" href="exceptions_2misc_8h.html">misc.h</a></li>
+    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_213721054bd7777fbdb8608854e63df7.html">exceptions</a></li><li class="navelem"><b>misc.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

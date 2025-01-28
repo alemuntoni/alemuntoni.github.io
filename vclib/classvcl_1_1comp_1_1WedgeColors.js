@@ -1,20 +1,9 @@
 var classvcl_1_1comp_1_1WedgeColors =
 [
-    [ "ConstWedgeColorsIterator", "classvcl_1_1comp_1_1WedgeColors.html#a71b5d379722c007c8376968817538da0", null ],
-    [ "WedgeColorsIterator", "classvcl_1_1comp_1_1WedgeColors.html#a0fca99f34dced719b170368b6703abf4", null ],
     [ "WedgeColorType", "classvcl_1_1comp_1_1WedgeColors.html#a0d69a05ae011c55e7dfb2e5d9da986de", null ],
     [ "WedgeColors", "classvcl_1_1comp_1_1WedgeColors.html#a5e09c385cc1118e4705e9adbd4553c9b", null ],
-    [ "__wedgeColors", "classvcl_1_1comp_1_1WedgeColors.html#a9a050c2801bf61b53c9d56b369df4eb8", null ],
-    [ "clear", "classvcl_1_1comp_1_1WedgeColors.html#ab14044abd76f07f9421074bfe747b06d", null ],
-    [ "deserialize", "classvcl_1_1comp_1_1WedgeColors.html#ace0b59d712002e18033fda7a3db17cd8", null ],
-    [ "erase", "classvcl_1_1comp_1_1WedgeColors.html#a299d1f412f434e6edbf7df4440fa32da", null ],
-    [ "importFrom", "classvcl_1_1comp_1_1WedgeColors.html#a3a1042065ce609a52c913bc89a3ebd06", null ],
-    [ "insert", "classvcl_1_1comp_1_1WedgeColors.html#a7ca5b52513b301b5cf80720d6cb242e3", null ],
-    [ "pushBack", "classvcl_1_1comp_1_1WedgeColors.html#a8372be6358811580fe65c7c09a6e6688", null ],
-    [ "resize", "classvcl_1_1comp_1_1WedgeColors.html#a6318e73d3a486d18eeb575d073ed150f", null ],
-    [ "serialize", "classvcl_1_1comp_1_1WedgeColors.html#a3fa0535f50b92a53cd697c8f6247db4e", null ],
     [ "setWedgeColor", "classvcl_1_1comp_1_1WedgeColors.html#ae60ae3dc1d4f30d9a6d8ac5824f12d1f", null ],
-    [ "setWedgeColors", "classvcl_1_1comp_1_1WedgeColors.html#a45872185e0079531469e6732eddad27e", null ],
+    [ "setWedgeColors", "classvcl_1_1comp_1_1WedgeColors.html#a96155c3194c7db7d047d61937248f1cf", null ],
     [ "wedgeColor", "classvcl_1_1comp_1_1WedgeColors.html#a2bb7d453770071ac117c14af735fe58a", null ],
     [ "wedgeColor", "classvcl_1_1comp_1_1WedgeColors.html#ab797f9bca3472e2dd45ae6c6f1bde26b", null ],
     [ "wedgeColorBegin", "classvcl_1_1comp_1_1WedgeColors.html#a5f4c7d5b631538dce8b6fd2fdffad8c7", null ],
@@ -24,6 +13,5 @@ var classvcl_1_1comp_1_1WedgeColors =
     [ "wedgeColorMod", "classvcl_1_1comp_1_1WedgeColors.html#a21e3fbc82cec66c0b090d67aa8eb2882", null ],
     [ "wedgeColorMod", "classvcl_1_1comp_1_1WedgeColors.html#aba90f040cb0220debac1e1549a147b4e", null ],
     [ "wedgeColors", "classvcl_1_1comp_1_1WedgeColors.html#ad4d90884d3a264a18460e6a7638264ac", null ],
-    [ "wedgeColors", "classvcl_1_1comp_1_1WedgeColors.html#a0e9d8b1be406a94c36a0f443971aeae3", null ],
-    [ "WEDGE_COLOR_NUMBER", "classvcl_1_1comp_1_1WedgeColors.html#a5dbdf14a5f33819a290ed6f4cbaf95ee", null ]
+    [ "wedgeColors", "classvcl_1_1comp_1_1WedgeColors.html#a0e9d8b1be406a94c36a0f443971aeae3", null ]
 ];

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visual Computing Library: include/vclib/load_save/ply/save.h Source File</title>
+<title>Visual Computing Library: vclib/core/include/vclib/load_save/ply/save.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -104,11 +104,11 @@ $(document).ready(function(){initNavTree('ply_2save_8h_source.html',''); initRes
   <div class="headertitle"><div class="title">save.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="ply_2save_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2024                                                    *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2025                                                    *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
@@ -129,136 +129,113 @@ $(document).ready(function(){initNavTree('ply_2save_8h_source.html',''); initRes
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_LOAD_SAVE_PLY_SAVE_H</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_LOAD_SAVE_PLY_SAVE_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;<a class="code" href="io_8h.html">vclib/exceptions/io.h</a>&gt;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="load__save_2settings_8h.html">vclib/load_save/settings.h</a>&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="misc_2logger_8h.html">vclib/misc/logger.h</a>&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &quot;<a class="code" href="load__save_2ply_2detail_2edge_8h.html">detail/edge.h</a>&quot;</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &quot;<a class="code" href="extra_8h.html">detail/extra.h</a>&quot;</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;<a class="code" href="load__save_2ply_2detail_2face_8h.html">detail/face.h</a>&quot;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &quot;<a class="code" href="load__save_2ply_2detail_2vertex_8h.html">detail/vertex.h</a>&quot;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;detail/edge.h&quot;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;detail/extra.h&quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;detail/face.h&quot;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &quot;detail/vertex.h&quot;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;vclib/exceptions/io.h&gt;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;vclib/load_save/settings.h&gt;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;vclib/misc/logger.h&gt;</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">namespace </span>vcl {</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">template</span>&lt;MeshConcept MeshType, LoggerConcept LogType = NullLogger&gt;</div>
-<div class="foldopen" id="foldopen00038" data-start="{" data-end="}">
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="namespacevcl.html#ae7f540d003359dcb537a9a9bd371ecc3">   38</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacevcl.html#ae7f540d003359dcb537a9a9bd371ecc3">savePly</a>(</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">const</span> MeshType&amp;     <a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>,</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    std::ostream&amp;       <a class="code hl_class" href="classvcl_1_1Matrix.html">fp</a>,</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <a class="code hl_class" href="classvcl_1_1Matrix.html">LogType</a>&amp;            log      = <a class="code hl_variable" href="group__miscellaneous.html#ga3377e3c875ec245e90ac5a395105ce99">nullLogger</a>,</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structvcl_1_1SaveSettings.html">SaveSettings</a>&amp; <a class="code hl_class" href="classvcl_1_1Matrix.html">settings</a> = <a class="code hl_struct" href="structvcl_1_1SaveSettings.html">SaveSettings</a>())</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keywordtype">void</span> savePly(</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">const</span> MeshType&amp;     m,</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    std::ostream&amp;       fp,</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    LogType&amp;            log      = <a class="code hl_variable" href="group__miscellaneous.html#ga3377e3c875ec245e90ac5a395105ce99">nullLogger</a>,</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">const</span> SaveSettings&amp; settings = SaveSettings())</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>{</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">using namespace </span>detail;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_class" href="classvcl_1_1MeshInfo.html">MeshInfo</a> <a class="code hl_class" href="classvcl_1_1Matrix.html">meshInfo</a>(<a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    MeshInfo meshInfo(m);</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="comment">// make sure that the given info contains only components that are actually</span></div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="comment">// available in the mesh. meshInfo will contain the intersection between the</span></div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="comment">// components that the user wants to save and the components that are</span></div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="comment">// available in the mesh.</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">if</span> (!<a class="code hl_class" href="classvcl_1_1Matrix.html">settings</a>.info.isEmpty())</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">meshInfo</a> = <a class="code hl_class" href="classvcl_1_1Matrix.html">settings</a>.info.intersect(<a class="code hl_class" href="classvcl_1_1Matrix.html">meshInfo</a>);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">if</span> (!settings.info.isEmpty())</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        meshInfo = settings.info.intersect(meshInfo);</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    PlyHeader <a class="code hl_class" href="classvcl_1_1Matrix.html">header</a>(</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">settings</a>.binary ? ply::BINARY_LITTLE_ENDIAN : ply::ASCII, <a class="code hl_class" href="classvcl_1_1Matrix.html">meshInfo</a>);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <a class="code hl_class" href="classvcl_1_1Matrix.html">header</a>.setNumberVertices(<a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>.vertexNumber());</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    PlyHeader header(</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        settings.binary ? ply::BINARY_LITTLE_ENDIAN : ply::ASCII, meshInfo);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    header.setNumberVertices(m.vertexNumber());</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<a class="code hl_concept" href="conceptvcl_1_1HasFaces.html">vcl::HasFaces&lt;MeshType&gt;</a>) {</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classvcl_1_1Matrix.html">header</a>.hasFaces()) {</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <a class="code hl_class" href="classvcl_1_1Matrix.html">header</a>.setNumberFaces(<a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>.faceNumber());</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (HasFaces&lt;MeshType&gt;) {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordflow">if</span> (header.hasFaces()) {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            header.setNumberFaces(m.faceNumber());</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        }</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    }</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<a class="code hl_concept" href="conceptvcl_1_1HasEdges.html">vcl::HasEdges&lt;MeshType&gt;</a>) {</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classvcl_1_1Matrix.html">header</a>.hasEdges()) {</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <a class="code hl_class" href="classvcl_1_1Matrix.html">header</a>.setNumberEdges(<a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>.edgeNumber());</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (HasEdges&lt;MeshType&gt;) {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">if</span> (header.hasEdges()) {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            header.setNumberEdges(m.edgeNumber());</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        }</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    writePlyTextures(<a class="code hl_class" href="classvcl_1_1Matrix.html">header</a>, <a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>, log, <a class="code hl_class" href="classvcl_1_1Matrix.html">settings</a>);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    writePlyTextures(header, m, log, settings);</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="comment">// this should never happen</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordflow">if</span> (!<a class="code hl_class" href="classvcl_1_1Matrix.html">header</a>.isValid())</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordflow">if</span> (!header.isValid())</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Ply Header not valid.&quot;</span>);</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <a class="code hl_class" href="classvcl_1_1Matrix.html">fp</a> &lt;&lt; <a class="code hl_class" href="classvcl_1_1Matrix.html">header</a>.toString();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    fp &lt;&lt; header.toString();</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    writePlyVertices(<a class="code hl_class" href="classvcl_1_1Matrix.html">fp</a>, <a class="code hl_class" href="classvcl_1_1Matrix.html">header</a>, <a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    writePlyVertices(fp, header, m);</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<a class="code hl_concept" href="conceptvcl_1_1HasFaces.html">vcl::HasFaces&lt;MeshType&gt;</a>) {</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classvcl_1_1Matrix.html">header</a>.hasFaces()) {</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            writePlyFaces(<a class="code hl_class" href="classvcl_1_1Matrix.html">fp</a>, <a class="code hl_class" href="classvcl_1_1Matrix.html">header</a>, <a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (HasFaces&lt;MeshType&gt;) {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordflow">if</span> (header.hasFaces()) {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            writePlyFaces(fp, header, m);</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        }</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    }</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<a class="code hl_concept" href="conceptvcl_1_1HasEdges.html">vcl::HasEdges&lt;MeshType&gt;</a>) {</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classvcl_1_1Matrix.html">header</a>.hasEdges()) {</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            writePlyEdges(<a class="code hl_class" href="classvcl_1_1Matrix.html">fp</a>, <a class="code hl_class" href="classvcl_1_1Matrix.html">header</a>, <a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (HasEdges&lt;MeshType&gt;) {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordflow">if</span> (header.hasEdges()) {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            writePlyEdges(fp, header, m);</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        }</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    }</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>}</div>
-</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="keyword">template</span>&lt;MeshConcept MeshType, LoggerConcept LogType = NullLogger&gt;</div>
-<div class="foldopen" id="foldopen00092" data-start="{" data-end="}">
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="namespacevcl.html#ad2d567e8169973c8b6948d7ba9ae2f5b">   92</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacevcl.html#ae7f540d003359dcb537a9a9bd371ecc3">savePly</a>(</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keyword">const</span> MeshType&amp;     <a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>,</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    std::ostream&amp;       <a class="code hl_class" href="classvcl_1_1Matrix.html">fp</a>,</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structvcl_1_1SaveSettings.html">SaveSettings</a>&amp; <a class="code hl_class" href="classvcl_1_1Matrix.html">settings</a>,</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <a class="code hl_class" href="classvcl_1_1Matrix.html">LogType</a>&amp;            log = <a class="code hl_variable" href="group__miscellaneous.html#ga3377e3c875ec245e90ac5a395105ce99">nullLogger</a>)</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="keywordtype">void</span> savePly(</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keyword">const</span> MeshType&amp;     m,</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    std::ostream&amp;       fp,</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keyword">const</span> SaveSettings&amp; settings,</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    LogType&amp;            log = <a class="code hl_variable" href="group__miscellaneous.html#ga3377e3c875ec245e90ac5a395105ce99">nullLogger</a>)</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>{</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <a class="code hl_function" href="namespacevcl.html#ae7f540d003359dcb537a9a9bd371ecc3">savePly</a>(<a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>, <a class="code hl_class" href="classvcl_1_1Matrix.html">fp</a>, log, <a class="code hl_class" href="classvcl_1_1Matrix.html">settings</a>);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    savePly(m, fp, log, settings);</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>}</div>
-</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="keyword">template</span>&lt;MeshConcept MeshType, LoggerConcept LogType = NullLogger&gt;</div>
-<div class="foldopen" id="foldopen00102" data-start="{" data-end="}">
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="namespacevcl.html#abb4c76b10afab737e57b2bc224a60bba">  102</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacevcl.html#ae7f540d003359dcb537a9a9bd371ecc3">savePly</a>(</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keyword">const</span> MeshType&amp;     <a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>,</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keyword">const</span> std::string&amp;  <a class="code hl_class" href="classvcl_1_1Matrix.html">filename</a>,</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <a class="code hl_class" href="classvcl_1_1Matrix.html">LogType</a>&amp;            log      = <a class="code hl_variable" href="group__miscellaneous.html#ga3377e3c875ec245e90ac5a395105ce99">nullLogger</a>,</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structvcl_1_1SaveSettings.html">SaveSettings</a>&amp; <a class="code hl_class" href="classvcl_1_1Matrix.html">settings</a> = <a class="code hl_struct" href="structvcl_1_1SaveSettings.html">SaveSettings</a>())</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="keywordtype">void</span> savePly(</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keyword">const</span> MeshType&amp;     m,</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keyword">const</span> std::string&amp;  filename,</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    LogType&amp;            log      = <a class="code hl_variable" href="group__miscellaneous.html#ga3377e3c875ec245e90ac5a395105ce99">nullLogger</a>,</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keyword">const</span> SaveSettings&amp; settings = SaveSettings())</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>{</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    std::ofstream <a class="code hl_class" href="classvcl_1_1Matrix.html">fp</a> = <a class="code hl_function" href="namespacevcl.html#aea5f889621e9a85c0c893d082b34b474">openOutputFileStream</a>(<a class="code hl_class" href="classvcl_1_1Matrix.html">filename</a>, <span class="stringliteral">&quot;ply&quot;</span>);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    std::ofstream fp = openOutputFileStream(filename, <span class="stringliteral">&quot;ply&quot;</span>);</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <a class="code hl_function" href="namespacevcl.html#ae7f540d003359dcb537a9a9bd371ecc3">savePly</a>(<a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>, <a class="code hl_class" href="classvcl_1_1Matrix.html">fp</a>, log, <a class="code hl_class" href="classvcl_1_1Matrix.html">settings</a>);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    savePly(m, fp, log, settings);</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>}</div>
-</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="keyword">template</span>&lt;MeshConcept MeshType, LoggerConcept LogType = NullLogger&gt;</div>
-<div class="foldopen" id="foldopen00114" data-start="{" data-end="}">
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="namespacevcl.html#a0d5216e450e5401b0a2140547a181cc4">  114</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacevcl.html#ae7f540d003359dcb537a9a9bd371ecc3">savePly</a>(</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keyword">const</span> MeshType&amp;     <a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>,</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keyword">const</span> std::string&amp;  <a class="code hl_class" href="classvcl_1_1Matrix.html">filename</a>,</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structvcl_1_1SaveSettings.html">SaveSettings</a>&amp; <a class="code hl_class" href="classvcl_1_1Matrix.html">settings</a>,</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <a class="code hl_class" href="classvcl_1_1Matrix.html">LogType</a>&amp;            log = <a class="code hl_variable" href="group__miscellaneous.html#ga3377e3c875ec245e90ac5a395105ce99">nullLogger</a>)</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="keywordtype">void</span> savePly(</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keyword">const</span> MeshType&amp;     m,</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keyword">const</span> std::string&amp;  filename,</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keyword">const</span> SaveSettings&amp; settings,</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    LogType&amp;            log = <a class="code hl_variable" href="group__miscellaneous.html#ga3377e3c875ec245e90ac5a395105ce99">nullLogger</a>)</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>{</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <a class="code hl_function" href="namespacevcl.html#ae7f540d003359dcb537a9a9bd371ecc3">savePly</a>(<a class="code hl_class" href="classvcl_1_1Matrix.html">m</a>, <a class="code hl_class" href="classvcl_1_1Matrix.html">filename</a>, log, <a class="code hl_class" href="classvcl_1_1Matrix.html">settings</a>);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    savePly(m, filename, log, settings);</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>}</div>
-</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>} <span class="comment">// namespace vcl</span></div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="preprocessor">#endif </span><span class="comment">// VCL_LOAD_SAVE_PLY_SAVE_H</span></div>
-<div class="ttc" id="aclassvcl_1_1Matrix_html"><div class="ttname"><a href="classvcl_1_1Matrix.html">vcl::Matrix</a></div><div class="ttdef"><b>Definition</b> matrix.h:36</div></div>
-<div class="ttc" id="aclassvcl_1_1MeshInfo_html"><div class="ttname"><a href="classvcl_1_1MeshInfo.html">vcl::MeshInfo</a></div><div class="ttdoc">A simple class that allows to store which elements and their components have been imported/loaded or ...</div><div class="ttdef"><b>Definition</b> mesh_info.h:76</div></div>
-<div class="ttc" id="aconceptvcl_1_1HasEdges_html"><div class="ttname"><a href="conceptvcl_1_1HasEdges.html">vcl::HasEdges</a></div><div class="ttdoc">HasEdges concepts is satisfied when at least one of its template types is (or inherits from) a vcl::m...</div><div class="ttdef"><b>Definition</b> edge_container.h:112</div></div>
-<div class="ttc" id="aconceptvcl_1_1HasFaces_html"><div class="ttname"><a href="conceptvcl_1_1HasFaces.html">vcl::HasFaces</a></div><div class="ttdoc">HasFaces concepts is satisfied when at least one of its template types is (or inherits from) a vcl::m...</div><div class="ttdef"><b>Definition</b> face_container.h:112</div></div>
-<div class="ttc" id="aextra_8h_html"><div class="ttname"><a href="extra_8h.html">extra.h</a></div></div>
 <div class="ttc" id="agroup__miscellaneous_html_ga3377e3c875ec245e90ac5a395105ce99"><div class="ttname"><a href="group__miscellaneous.html#ga3377e3c875ec245e90ac5a395105ce99">vcl::nullLogger</a></div><div class="ttdeci">NullLogger nullLogger</div><div class="ttdoc">The nullLogger object is an object of type NullLogger that is used as default argument in the functio...</div><div class="ttdef"><b>Definition</b> null_logger.h:125</div></div>
-<div class="ttc" id="aio_8h_html"><div class="ttname"><a href="io_8h.html">io.h</a></div></div>
-<div class="ttc" id="aload__save_2ply_2detail_2edge_8h_html"><div class="ttname"><a href="load__save_2ply_2detail_2edge_8h.html">edge.h</a></div></div>
-<div class="ttc" id="aload__save_2ply_2detail_2face_8h_html"><div class="ttname"><a href="load__save_2ply_2detail_2face_8h.html">face.h</a></div></div>
-<div class="ttc" id="aload__save_2ply_2detail_2vertex_8h_html"><div class="ttname"><a href="load__save_2ply_2detail_2vertex_8h.html">vertex.h</a></div></div>
-<div class="ttc" id="aload__save_2settings_8h_html"><div class="ttname"><a href="load__save_2settings_8h.html">settings.h</a></div></div>
-<div class="ttc" id="amisc_2logger_8h_html"><div class="ttname"><a href="misc_2logger_8h.html">logger.h</a></div></div>
-<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition</b> bounding_box.h:48</div></div>
-<div class="ttc" id="anamespacevcl_html_ae7f540d003359dcb537a9a9bd371ecc3"><div class="ttname"><a href="namespacevcl.html#ae7f540d003359dcb537a9a9bd371ecc3">vcl::savePly</a></div><div class="ttdeci">void savePly(const MeshType &amp;m, std::ostream &amp;fp, LogType &amp;log=nullLogger, const SaveSettings &amp;settings=SaveSettings())</div><div class="ttdef"><b>Definition</b> save.h:38</div></div>
-<div class="ttc" id="anamespacevcl_html_aea5f889621e9a85c0c893d082b34b474"><div class="ttname"><a href="namespacevcl.html#aea5f889621e9a85c0c893d082b34b474">vcl::openOutputFileStream</a></div><div class="ttdeci">std::ofstream openOutputFileStream(const std::string &amp;filename, const std::string &amp;ext=&quot;&quot;)</div><div class="ttdef"><b>Definition</b> write.h:39</div></div>
-<div class="ttc" id="astructvcl_1_1SaveSettings_html"><div class="ttname"><a href="structvcl_1_1SaveSettings.html">vcl::SaveSettings</a></div><div class="ttdoc">The SaveSettings structure contains the settings that can be used to save a mesh to a stream/file.</div><div class="ttdef"><b>Definition</b> settings.h:62</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d2fdbf172f8ae9790b339bfcb66b3af7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_b062475d276f2bc8526a3b8fd274bef1.html">load_save</a></li><li class="navelem"><a class="el" href="dir_d1e73a48f65f4a3060a336415e0e07b9.html">ply</a></li><li class="navelem"><a class="el" href="ply_2save_8h.html">save.h</a></li>
+    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_d82254d0eafdb62b552353fdd758eaeb.html">load_save</a></li><li class="navelem"><a class="el" href="dir_11be3b4d45313fb6f4a2595834ef2877.html">ply</a></li><li class="navelem"><b>save.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

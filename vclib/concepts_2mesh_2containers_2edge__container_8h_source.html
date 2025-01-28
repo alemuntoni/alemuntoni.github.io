@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visual Computing Library: include/vclib/concepts/mesh/containers/edge_container.h Source File</title>
+<title>Visual Computing Library: vclib/core/include/vclib/concepts/mesh/containers/edge_container.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -104,11 +104,11 @@ $(document).ready(function(){initNavTree('concepts_2mesh_2containers_2edge__cont
   <div class="headertitle"><div class="title">edge_container.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="concepts_2mesh_2containers_2edge__container_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2024                                                    *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2025                                                    *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
@@ -129,71 +129,90 @@ $(document).ready(function(){initNavTree('concepts_2mesh_2containers_2edge__cont
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_CONCEPTS_MESH_CONTAINERS_EDGE_CONTAINER_H</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_CONCEPTS_MESH_CONTAINERS_EDGE_CONTAINER_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;ranges&gt;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &quot;<a class="code" href="mesh_2containers_2element__container_8h.html">element_container.h</a>&quot;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
-<div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="namespacevcl_1_1mesh.html">   32</a></span><span class="keyword">namespace </span>mesh {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="conceptvcl_1_1mesh_1_1HasEdgeContainer.html">   43</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1mesh_1_1HasEdgeContainer.html">HasEdgeContainer</a> =</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">requires</span> (T o, <span class="keyword">const</span> T&amp; co, <span class="keyword">typename</span> T::EdgeType* e) {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="comment">// clang-format off</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keyword">typename</span> T::EdgeType;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keyword">typename</span> T::EdgeIterator;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keyword">typename</span> T::ConstEdgeIterator;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        { o.edge(<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>()) } -&gt; std::same_as&lt;typename T::EdgeType&amp;&gt;;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        { co.edge(<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>()) } -&gt; std::same_as&lt;const typename T::EdgeType&amp;&gt;;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        { co.edgeNumber() } -&gt; std::same_as&lt;uint&gt;;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        { co.edgeContainerSize() } -&gt; std::same_as&lt;uint&gt;;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        { co.deletedEdgeNumber() } -&gt; std::same_as&lt;uint&gt;;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        o.deleteEdge(<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>());</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        o.deleteEdge(e);</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        { o.edgeIndexIfCompact(<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>()) } -&gt; std::same_as&lt;uint&gt;;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        { o.edgeCompactIndices() } -&gt; std::same_as&lt;std::vector&lt;uint&gt;&gt;;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        { o.addEdge() } -&gt; std::same_as&lt;uint&gt;;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        { o.addEdges(<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>()) } -&gt; std::same_as&lt;uint&gt;;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        { o.reserveEdges(<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>()) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        { o.compactEdges() } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        { o.edgeBegin() } -&gt; std::same_as&lt;typename T::EdgeIterator&gt;;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        { co.edgeBegin() } -&gt; std::same_as&lt;typename T::ConstEdgeIterator&gt;;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        { o.edgeEnd() } -&gt; std::same_as&lt;typename T::EdgeIterator&gt;;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        { co.edgeEnd() } -&gt; std::same_as&lt;typename T::ConstEdgeIterator&gt;;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keyword">requires</span> std::ranges::range&lt;<span class="keyword">decltype</span>(o.edges())&gt;;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keyword">requires</span> std::ranges::range&lt;<span class="keyword">decltype</span>(co.edges())&gt;;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="comment">// clang-format on</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    };</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;vclib/concepts/const_correctness.h&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;vclib/concepts/iterators.h&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;vclib/concepts/ranges/range.h&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">namespace </span>vcl {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">namespace </span>mesh {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="conceptvcl_1_1mesh_1_1HasEdgeContainer.html">   44</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1mesh_1_1HasEdgeContainer.html">HasEdgeContainer</a> = <span class="keyword">requires</span> (</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    T&amp;&amp;                                          obj,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::EdgeType              e,</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::EdgeType*             eP,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::EdgeType&amp;             eR,</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::EdgeType::VertexType* vP,</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    std::vector&lt;uint&gt;                            vec) {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::EdgeType;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::EdgeIterator;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::ConstEdgeIterator;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    { obj.edge(uint()) } -&gt; std::convertible_to&lt;<span class="keyword">decltype</span>(e)&gt;;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    { obj.edgeNumber() } -&gt; std::same_as&lt;uint&gt;;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    { obj.edgeContainerSize() } -&gt; std::same_as&lt;uint&gt;;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    { obj.deletedEdgeNumber() } -&gt; std::same_as&lt;uint&gt;;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    { obj.edgeIndexIfCompact(uint()) } -&gt; std::same_as&lt;uint&gt;;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    { obj.edgeCompactIndices() } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(vec)&gt;;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    { obj.edgeBegin() } -&gt; <a class="code hl_concept" href="conceptvcl_1_1InputIterator.html">InputIterator</a>&lt;<span class="keyword">decltype</span>(e)&gt;;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    { obj.edgeEnd() } -&gt; <a class="code hl_concept" href="conceptvcl_1_1InputIterator.html">InputIterator</a>&lt;<span class="keyword">decltype</span>(e)&gt;;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    { obj.edges() } -&gt; <a class="code hl_concept" href="conceptvcl_1_1InputRange.html">InputRange</a>&lt;<span class="keyword">decltype</span>(e)&gt;;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    { obj.edges(<span class="keywordtype">bool</span>()) } -&gt; <a class="code hl_concept" href="conceptvcl_1_1InputRange.html">InputRange</a>&lt;<span class="keyword">decltype</span>(e)&gt;;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="comment">// non const requirements</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keyword">requires</span> <a class="code hl_concept" href="conceptvcl_1_1IsConst.html">IsConst&lt;T&gt;</a> || <span class="keyword">requires</span> {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        { obj.edge(uint()) } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(eR)&gt;;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        { obj.addEdge() } -&gt; std::same_as&lt;uint&gt;;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        { obj.addEdge(uint(), uint()) } -&gt; std::same_as&lt;uint&gt;;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        { obj.addEdge(vP, vP) } -&gt; std::same_as&lt;uint&gt;;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        { obj.addEdges(uint()) } -&gt; std::same_as&lt;uint&gt;;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        { obj.clearEdges() } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        { obj.resizeEdges(uint()) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        { obj.reserveEdges(uint()) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        { obj.compactEdges() } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        { obj.deleteEdge(uint()) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        { obj.deleteEdge(eP) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        { obj.updateEdgeIndices(vec) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        { obj.edgeBegin() } -&gt; <a class="code hl_concept" href="conceptvcl_1_1OutputIterator.html">OutputIterator</a>&lt;<span class="keyword">decltype</span>(e)&gt;;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        { obj.edgeEnd() } -&gt; <a class="code hl_concept" href="conceptvcl_1_1OutputIterator.html">OutputIterator</a>&lt;<span class="keyword">decltype</span>(e)&gt;;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        { obj.edges() } -&gt; <a class="code hl_concept" href="conceptvcl_1_1OutputRange.html">OutputRange</a>&lt;<span class="keyword">decltype</span>(e)&gt;;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        { obj.edges(<span class="keywordtype">bool</span>()) } -&gt; <a class="code hl_concept" href="conceptvcl_1_1OutputRange.html">OutputRange</a>&lt;<span class="keyword">decltype</span>(e)&gt;;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        { obj.enableAllPerEdgeOptionalComponents() } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        { obj.disableAllPerEdgeOptionalComponents() } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    };</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>};</div>
 </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>} <span class="comment">// namespace mesh</span></div>
-</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="conceptvcl_1_1HasEdges.html">  112</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1HasEdges.html">HasEdges</a> = (<a class="code hl_concept" href="conceptvcl_1_1mesh_1_1HasEdgeContainer.html">vcl::mesh::HasEdgeContainer&lt;Args&gt;</a> || ...);</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="preprocessor">#endif </span><span class="comment">// VCL_CONCEPTS_MESH_CONTAINERS_EDGE_CONTAINER_H</span></div>
-<div class="ttc" id="aconceptvcl_1_1HasEdges_html"><div class="ttname"><a href="conceptvcl_1_1HasEdges.html">vcl::HasEdges</a></div><div class="ttdoc">HasEdges concepts is satisfied when at least one of its template types is (or inherits from) a vcl::m...</div><div class="ttdef"><b>Definition</b> edge_container.h:112</div></div>
-<div class="ttc" id="aconceptvcl_1_1mesh_1_1HasEdgeContainer_html"><div class="ttname"><a href="conceptvcl_1_1mesh_1_1HasEdgeContainer.html">vcl::mesh::HasEdgeContainer</a></div><div class="ttdoc">The HasEdgeContainer concept is satisfied only if a container class provides the types and member fun...</div><div class="ttdef"><b>Definition</b> edge_container.h:43</div></div>
-<div class="ttc" id="amesh_2containers_2element__container_8h_html"><div class="ttname"><a href="mesh_2containers_2element__container_8h.html">element_container.h</a></div></div>
-<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition</b> bounding_box.h:48</div></div>
-<div class="ttc" id="anamespacevcl_html_af74b42dd9d759d565bb701a5b845d05c"><div class="ttname"><a href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">vcl::uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition</b> base.h:34</div></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>} <span class="comment">// namespace mesh</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="conceptvcl_1_1HasEdges.html">  131</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1HasEdges.html">HasEdges</a> = (<a class="code hl_concept" href="conceptvcl_1_1mesh_1_1HasEdgeContainer.html">mesh::HasEdgeContainer&lt;Args&gt;</a> || ...);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="preprocessor">#endif </span><span class="comment">// VCL_CONCEPTS_MESH_CONTAINERS_EDGE_CONTAINER_H</span></div>
+<div class="ttc" id="aconceptvcl_1_1HasEdges_html"><div class="ttname"><a href="conceptvcl_1_1HasEdges.html">vcl::HasEdges</a></div><div class="ttdoc">HasEdges concepts is satisfied when at least one of its template types is (or inherits from) a vcl::m...</div><div class="ttdef"><b>Definition</b> edge_container.h:131</div></div>
+<div class="ttc" id="aconceptvcl_1_1InputIterator_html"><div class="ttname"><a href="conceptvcl_1_1InputIterator.html">vcl::InputIterator</a></div><div class="ttdoc">The InputIterator concept is satisfied if T is an input iterator that implements the operator* return...</div><div class="ttdef"><b>Definition</b> iterators.h:46</div></div>
+<div class="ttc" id="aconceptvcl_1_1InputRange_html"><div class="ttname"><a href="conceptvcl_1_1InputRange.html">vcl::InputRange</a></div><div class="ttdoc">Utility concept that is evaluated true the Range R is an Input Range and has a value_type that is con...</div><div class="ttdef"><b>Definition</b> range.h:89</div></div>
+<div class="ttc" id="aconceptvcl_1_1IsConst_html"><div class="ttname"><a href="conceptvcl_1_1IsConst.html">vcl::IsConst</a></div><div class="ttdoc">The IsConst concept is satisfied if T satisfies one of the following conditions:</div><div class="ttdef"><b>Definition</b> const_correctness.h:43</div></div>
+<div class="ttc" id="aconceptvcl_1_1OutputIterator_html"><div class="ttname"><a href="conceptvcl_1_1OutputIterator.html">vcl::OutputIterator</a></div><div class="ttdoc">The OutputIterator concept is satisfied if T is an output iterator that implements the operator* retu...</div><div class="ttdef"><b>Definition</b> iterators.h:60</div></div>
+<div class="ttc" id="aconceptvcl_1_1OutputRange_html"><div class="ttname"><a href="conceptvcl_1_1OutputRange.html">vcl::OutputRange</a></div><div class="ttdoc">Utility concept that is evaluated true the Range R is an Output Range and has a value_type that is T.</div><div class="ttdef"><b>Definition</b> range.h:113</div></div>
+<div class="ttc" id="aconceptvcl_1_1mesh_1_1HasEdgeContainer_html"><div class="ttname"><a href="conceptvcl_1_1mesh_1_1HasEdgeContainer.html">vcl::mesh::HasEdgeContainer</a></div><div class="ttdoc">The HasEdgeContainer concept is satisfied only if a container class provides the types and member fun...</div><div class="ttdef"><b>Definition</b> edge_container.h:44</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d2fdbf172f8ae9790b339bfcb66b3af7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_d8d31096cdb23314816d0514c2e28657.html">concepts</a></li><li class="navelem"><a class="el" href="dir_50753de5cfa25b667fa931e759fe9caf.html">mesh</a></li><li class="navelem"><a class="el" href="dir_52e0669b5c830663f2fa8f451697e198.html">containers</a></li><li class="navelem"><a class="el" href="concepts_2mesh_2containers_2edge__container_8h.html">edge_container.h</a></li>
+    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_dd968cc90108d82a40e31b676831d617.html">concepts</a></li><li class="navelem"><a class="el" href="dir_219f652b702ba78d999e101abb8207c2.html">mesh</a></li><li class="navelem"><a class="el" href="dir_1717fcbdc5053ae67f6a641e1ce492f5.html">containers</a></li><li class="navelem"><b>edge_container.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

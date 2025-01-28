@@ -106,33 +106,40 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1Array2Concept.html','');
 <p><code>#include &lt;<a class="el" href="concepts_2space_2array_8h_source.html">vclib/concepts/space/array.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1Array2Concept.html">vcl::Array2Concept</a> =  <a class="code hl_concept" href="conceptvcl_1_1ArrayConcept.html">ArrayConcept&lt;T&gt;</a> &amp;&amp; <span class="keyword">requires</span> (T o, <span class="keyword">const</span> T&amp; co) {</div>
-<div class="line">    </div>
-<div class="line">    <span class="keyword">requires</span> T::DIM == 2;</div>
+<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1Array2Concept.html">vcl::Array2Concept</a> = </div>
+<div class="line">    <a class="code hl_concept" href="conceptvcl_1_1ArrayConcept.html">ArrayConcept&lt;T&gt;</a> &amp;&amp; <span class="keyword">requires</span> (</div>
+<div class="line">                           T&amp;&amp;                                   obj,</div>
+<div class="line">                           std::size_t                           n,</div>
+<div class="line">                           <span class="keyword">typename</span> RemoveRef&lt;T&gt;::Reference      ref,</div>
+<div class="line">                           <span class="keyword">typename</span> RemoveRef&lt;T&gt;::ConstReference cRef,</div>
+<div class="line">                           <span class="keyword">typename</span> RemoveRef&lt;T&gt;::Pointer        ptr,</div>
+<div class="line">                           <span class="keyword">typename</span> RemoveRef&lt;T&gt;::ConstPointer   cPtr) {</div>
+<div class="line">        <span class="keyword">requires</span> RemoveRef&lt;T&gt;::DIM == 2;</div>
 <div class="line"> </div>
-<div class="line">    T(std::size_t(), std::size_t());</div>
+<div class="line">        RemoveRef&lt;T&gt;(n, n);</div>
 <div class="line"> </div>
-<div class="line">    { co.rows() } -&gt; std::convertible_to&lt;std::size_t&gt;;</div>
-<div class="line">    { <a class="code hl_class" href="classvcl_1_1Matrix.html">co</a>.cols() } -&gt; std::convertible_to&lt;std::size_t&gt;;</div>
-<div class="line">    { co.sizeX() } -&gt; std::convertible_to&lt;std::size_t&gt;;</div>
-<div class="line">    { co.sizeY() } -&gt; std::convertible_to&lt;std::size_t&gt;;</div>
+<div class="line">        { obj.rows() } -&gt; std::integral;</div>
+<div class="line">        { <a class="code hl_class" href="classvcl_1_1Box.html">obj</a>.cols() } -&gt; std::integral;</div>
+<div class="line">        { obj.sizeX() } -&gt; std::integral;</div>
+<div class="line">        { obj.sizeY() } -&gt; std::integral;</div>
 <div class="line"> </div>
-<div class="line">    { o.operator()(std::size_t(), std::size_t()) } -&gt;</div>
-<div class="line">        std::same_as&lt;typename T::Reference&gt;;</div>
-<div class="line">    { co.operator()(std::size_t(), std::size_t()) } -&gt;</div>
-<div class="line">        std::same_as&lt;typename T::ConstReference&gt;;</div>
+<div class="line">        { obj.operator()(n, n) } -&gt; std::convertible_to&lt;<span class="keyword">decltype</span>(cRef)&gt;;</div>
 <div class="line"> </div>
-<div class="line">    { o.data(std::size_t()) } -&gt; std::same_as&lt;typename T::Pointer&gt;;</div>
-<div class="line">    { co.data(std::size_t()) } -&gt; std::same_as&lt;typename T::ConstPointer&gt;;</div>
+<div class="line">        { obj.data(n) } -&gt; std::convertible_to&lt;<span class="keyword">decltype</span>(cPtr)&gt;;</div>
 <div class="line"> </div>
-<div class="line">    { o.resize(std::size_t(), std::size_t()) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">    { o.conservativeResize(std::size_t(), std::size_t()) } -&gt;</div>
-<div class="line">        std::same_as&lt;void&gt;;</div>
-<div class="line">    </div>
-<div class="line">}</div>
-<div class="ttc" id="aclassvcl_1_1Matrix_html"><div class="ttname"><a href="classvcl_1_1Matrix.html">vcl::Matrix</a></div><div class="ttdef"><b>Definition</b> matrix.h:36</div></div>
-<div class="ttc" id="aconceptvcl_1_1Array2Concept_html"><div class="ttname"><a href="conceptvcl_1_1Array2Concept.html">vcl::Array2Concept</a></div><div class="ttdoc">A concept representing a 2-dimensional array.</div><div class="ttdef"><b>Definition</b> array.h:85</div></div>
-<div class="ttc" id="aconceptvcl_1_1ArrayConcept_html"><div class="ttname"><a href="conceptvcl_1_1ArrayConcept.html">vcl::ArrayConcept</a></div><div class="ttdoc">A concept representing a N-dimensional array.</div><div class="ttdef"><b>Definition</b> array.h:41</div></div>
+<div class="line">        </div>
+<div class="line">        <span class="keyword">requires</span> IsConst&lt;T&gt; || <span class="keyword">requires</span> {</div>
+<div class="line">            { obj.operator()(n, n) } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(ref)&gt;;</div>
+<div class="line"> </div>
+<div class="line">            { obj.data(n) } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(ptr)&gt;;</div>
+<div class="line"> </div>
+<div class="line">            { obj.resize(n, n) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">            { obj.conservativeResize(n, n) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">        };</div>
+<div class="line">    }</div>
+<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:49</div></div>
+<div class="ttc" id="aconceptvcl_1_1Array2Concept_html"><div class="ttname"><a href="conceptvcl_1_1Array2Concept.html">vcl::Array2Concept</a></div><div class="ttdoc">A concept representing a 2-dimensional array.</div><div class="ttdef"><b>Definition</b> array.h:105</div></div>
+<div class="ttc" id="aconceptvcl_1_1ArrayConcept_html"><div class="ttname"><a href="conceptvcl_1_1ArrayConcept.html">vcl::ArrayConcept</a></div><div class="ttdoc">A concept representing a N-dimensional array.</div><div class="ttdef"><b>Definition</b> array.h:45</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A concept representing a 2-dimensional array. </p>
 <p>This concept defines a set of requirements that must be satisfied by any type that wants to model a 2-dimensional array.</p>
@@ -147,7 +154,7 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1Array2Concept.html','');
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespacevcl.html">vcl</a></li><li class="navelem"><a class="el" href="conceptvcl_1_1Array2Concept.html">Array2Concept</a></li>
+    <li class="navelem"><b>vcl</b></li><li class="navelem"><a class="el" href="conceptvcl_1_1Array2Concept.html">Array2Concept</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

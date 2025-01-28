@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visual Computing Library: include/vclib/space/complex/grid/iterators/cell_iterator.h Source File</title>
+<title>Visual Computing Library: vclib/core/include/vclib/space/complex/grid/iterators/cell_iterator.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -104,11 +104,11 @@ $(document).ready(function(){initNavTree('cell__iterator_8h_source.html',''); in
   <div class="headertitle"><div class="title">cell_iterator.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="cell__iterator_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2024                                                    *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2025                                                    *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
@@ -129,101 +129,78 @@ $(document).ready(function(){initNavTree('cell__iterator_8h_source.html',''); in
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_SPACE_COMPLEX_GRID_ITERATORS_CELL_ITERATOR_H</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_SPACE_COMPLEX_GRID_ITERATORS_CELL_ITERATOR_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;<a class="code" href="space_2core_2point_8h.html">vclib/space/core/point.h</a>&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;vclib/space/core/point.h&gt;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">namespace </span>vcl {</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">template</span>&lt;<span class="keywordtype">int</span> N&gt;</div>
 <div class="foldopen" id="foldopen00031" data-start="{" data-end="};">
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classvcl_1_1CellIterator.html">   31</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1CellIterator.html">CellIterator</a></div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>{</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_class" href="classvcl_1_1Matrix.html">vcl::Point&lt;uint, N&gt;</a> mIt;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_class" href="classvcl_1_1Matrix.html">vcl::Point&lt;uint, N&gt;</a> mFirst, mEnd;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_class" href="classvcl_1_1Box.html">Point&lt;uint, N&gt;</a> mIt;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_class" href="classvcl_1_1Box.html">Point&lt;uint, N&gt;</a> mFirst, mEnd;</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classvcl_1_1CellIterator.html#a2ce8dba8267b07e2d288b6e00b2dd054">   37</a></span>    <span class="keyword">using </span><a class="code hl_class" href="classvcl_1_1Matrix.html">difference_type</a>   = <a class="code hl_class" href="classvcl_1_1Matrix.html">ptrdiff_t</a>;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classvcl_1_1CellIterator.html#a98c25fada569eb970267bf2699f92875">   38</a></span>    <span class="keyword">using </span><a class="code hl_class" href="classvcl_1_1Point.html">value_type</a>        = <a class="code hl_class" href="classvcl_1_1Matrix.html">vcl::Point&lt;uint, N&gt;</a>;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classvcl_1_1CellIterator.html#acb8f26514d8dc46474ccc76d1cf2f8a5">   39</a></span>    <span class="keyword">using </span><a class="code hl_class" href="classvcl_1_1Point.html">reference</a>         = <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">vcl::Point&lt;uint, N&gt;</a>&amp;;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classvcl_1_1CellIterator.html#aebf80596eba3fc602bf124a9a1187347">   40</a></span>    <span class="keyword">using </span><a class="code hl_class" href="classvcl_1_1Point.html">pointer</a>           = <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">vcl::Point&lt;uint, N&gt;</a>*;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classvcl_1_1CellIterator.html#a3b404150c7af6da50febefd4bdf097d6">   41</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="classvcl_1_1CellIterator.html#a3b404150c7af6da50febefd4bdf097d6">iterator_category</a> = std::forward_iterator_tag;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">using </span><a class="code hl_class" href="classvcl_1_1Box.html">difference_type</a>   = <a class="code hl_class" href="classvcl_1_1Box.html">ptrdiff_t</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">using </span><a class="code hl_class" href="classvcl_1_1Point.html">value_type</a>        = <a class="code hl_class" href="classvcl_1_1Box.html">Point&lt;uint, N&gt;</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">using </span><a class="code hl_class" href="classvcl_1_1Point.html">reference</a>         = <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Box.html">Point&lt;uint, N&gt;</a>&amp;;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">using </span><a class="code hl_class" href="classvcl_1_1Point.html">pointer</a>           = <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Box.html">Point&lt;uint, N&gt;</a>*;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">using </span>iterator_category = std::forward_iterator_tag;</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classvcl_1_1CellIterator.html#aa696c5bc276e9749d166e9a43cc6c4fe">   43</a></span>    <a class="code hl_function" href="classvcl_1_1CellIterator.html#aa696c5bc276e9749d166e9a43cc6c4fe">CellIterator</a>()</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_class" href="classvcl_1_1CellIterator.html">CellIterator</a>()</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    {</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        mIt.setConstant(-1);</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        mFirst = mEnd = mIt;</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    }</div>
-</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classvcl_1_1CellIterator.html#acb641d06faed567d4d0150d9a03f0a37">   49</a></span>    <a class="code hl_function" href="classvcl_1_1CellIterator.html#acb641d06faed567d4d0150d9a03f0a37">CellIterator</a>(</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">vcl::Point&lt;uint, N&gt;</a>&amp; first,</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">vcl::Point&lt;uint, N&gt;</a>&amp; end) :</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            mIt(first),</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            mFirst(first), mEnd(end)</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    {</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_class" href="classvcl_1_1CellIterator.html">CellIterator</a>(<span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Box.html">Point&lt;uint, N&gt;</a>&amp; first, <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Box.html">Point&lt;uint, N&gt;</a>&amp; end) :</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            mIt(first), mFirst(first), mEnd(end)</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <a class="code hl_class" href="classvcl_1_1Point.html">reference</a> operator*()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mIt; }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <a class="code hl_class" href="classvcl_1_1Point.html">pointer</a> operator-&gt;()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> &amp;mIt; }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1CellIterator.html">CellIterator</a>&amp; <a class="code hl_class" href="classvcl_1_1Box.html">oi</a>)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (mIt == <a class="code hl_class" href="classvcl_1_1Box.html">oi</a>.mIt); }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1CellIterator.html">CellIterator</a>&amp; <a class="code hl_class" href="classvcl_1_1Box.html">oi</a>)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (mIt != <a class="code hl_class" href="classvcl_1_1Box.html">oi</a>.mIt); }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <a class="code hl_class" href="classvcl_1_1CellIterator.html">CellIterator</a> operator++()</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        uint d = N - 1;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordflow">while</span> (d != -1 &amp;&amp; mIt(d) == mEnd(d) - 1) {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            mIt(d) = mFirst(d);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            d--;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordflow">if</span> (d != -1)</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            mIt(d)++;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            mIt.setConstant(-1);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <a class="code hl_class" href="classvcl_1_1CellIterator.html">CellIterator</a> operator++(<span class="keywordtype">int</span>)</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <a class="code hl_class" href="classvcl_1_1Box.html">CellIterator&lt;N&gt;</a> <a class="code hl_class" href="classvcl_1_1Box.html">oit</a> = mIt;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        ++(*this);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Box.html">oit</a>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>};</div>
 </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classvcl_1_1CellIterator.html#a01065494ccd04744ccf827a2ffc10f5c">   57</a></span>    <a class="code hl_class" href="classvcl_1_1Point.html">reference</a> <a class="code hl_function" href="classvcl_1_1CellIterator.html#a01065494ccd04744ccf827a2ffc10f5c">operator*</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mIt; }</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classvcl_1_1CellIterator.html#ac48081807972c822557be86bf4685f7d">   59</a></span>    <a class="code hl_class" href="classvcl_1_1Point.html">pointer</a> <a class="code hl_function" href="classvcl_1_1CellIterator.html#ac48081807972c822557be86bf4685f7d">operator-&gt;</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> &amp;mIt; }</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classvcl_1_1CellIterator.html#a1be23b7c3787dfb1751d526c7fae70db">   61</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classvcl_1_1CellIterator.html#a1be23b7c3787dfb1751d526c7fae70db">operator==</a>(<span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1CellIterator.html">CellIterator</a>&amp; <a class="code hl_class" href="classvcl_1_1Matrix.html">oi</a>)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (mIt == <a class="code hl_class" href="classvcl_1_1Matrix.html">oi</a>.mIt); }</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="classvcl_1_1CellIterator.html#aee311a4e33dba52a194c628c91d0d15f">   63</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classvcl_1_1CellIterator.html#aee311a4e33dba52a194c628c91d0d15f">operator!=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1CellIterator.html">CellIterator</a>&amp; <a class="code hl_class" href="classvcl_1_1Matrix.html">oi</a>)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (mIt != <a class="code hl_class" href="classvcl_1_1Matrix.html">oi</a>.mIt); }</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="foldopen" id="foldopen00065" data-start="{" data-end="}">
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classvcl_1_1CellIterator.html#ac725563ed613828573c853f61bf4232d">   65</a></span>    <a class="code hl_class" href="classvcl_1_1CellIterator.html">CellIterator</a> <a class="code hl_function" href="classvcl_1_1CellIterator.html#ac725563ed613828573c853f61bf4232d">operator++</a>()</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    {</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> d = <a class="code hl_class" href="classvcl_1_1Matrix.html">N</a> - 1;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">while</span> (d != -1 &amp;&amp; mIt(d) == mEnd(d) - 1) {</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            mIt(d) = mFirst(d);</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            d--;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        }</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">if</span> (d != -1)</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            mIt(d)++;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            mIt.setConstant(-1);</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
-</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="foldopen" id="foldopen00079" data-start="{" data-end="}">
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="classvcl_1_1CellIterator.html#ab3370010518f0edcef2f5caf198e2f5f">   79</a></span>    <a class="code hl_class" href="classvcl_1_1CellIterator.html">CellIterator</a> <a class="code hl_function" href="classvcl_1_1CellIterator.html#ab3370010518f0edcef2f5caf198e2f5f">operator++</a>(<span class="keywordtype">int</span>)</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    {</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">CellIterator&lt;N&gt;</a> <a class="code hl_class" href="classvcl_1_1Matrix.html">oit</a> = mIt;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        ++(*this);</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">oit</a>;</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    }</div>
-</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>};</div>
-</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#endif </span><span class="comment">// VCL_SPACE_COMPLEX_GRID_ITERATORS_CELL_ITERATOR_H</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">#endif </span><span class="comment">// VCL_SPACE_COMPLEX_GRID_ITERATORS_CELL_ITERATOR_H</span></div>
+<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:49</div></div>
 <div class="ttc" id="aclassvcl_1_1CellIterator_html"><div class="ttname"><a href="classvcl_1_1CellIterator.html">vcl::CellIterator</a></div><div class="ttdef"><b>Definition</b> cell_iterator.h:32</div></div>
-<div class="ttc" id="aclassvcl_1_1CellIterator_html_a01065494ccd04744ccf827a2ffc10f5c"><div class="ttname"><a href="classvcl_1_1CellIterator.html#a01065494ccd04744ccf827a2ffc10f5c">vcl::CellIterator::operator*</a></div><div class="ttdeci">reference operator*() const</div><div class="ttdef"><b>Definition</b> cell_iterator.h:57</div></div>
-<div class="ttc" id="aclassvcl_1_1CellIterator_html_a1be23b7c3787dfb1751d526c7fae70db"><div class="ttname"><a href="classvcl_1_1CellIterator.html#a1be23b7c3787dfb1751d526c7fae70db">vcl::CellIterator::operator==</a></div><div class="ttdeci">bool operator==(const CellIterator &amp;oi) const</div><div class="ttdef"><b>Definition</b> cell_iterator.h:61</div></div>
-<div class="ttc" id="aclassvcl_1_1CellIterator_html_a3b404150c7af6da50febefd4bdf097d6"><div class="ttname"><a href="classvcl_1_1CellIterator.html#a3b404150c7af6da50febefd4bdf097d6">vcl::CellIterator::iterator_category</a></div><div class="ttdeci">std::forward_iterator_tag iterator_category</div><div class="ttdef"><b>Definition</b> cell_iterator.h:41</div></div>
-<div class="ttc" id="aclassvcl_1_1CellIterator_html_aa696c5bc276e9749d166e9a43cc6c4fe"><div class="ttname"><a href="classvcl_1_1CellIterator.html#aa696c5bc276e9749d166e9a43cc6c4fe">vcl::CellIterator::CellIterator</a></div><div class="ttdeci">CellIterator()</div><div class="ttdef"><b>Definition</b> cell_iterator.h:43</div></div>
-<div class="ttc" id="aclassvcl_1_1CellIterator_html_ab3370010518f0edcef2f5caf198e2f5f"><div class="ttname"><a href="classvcl_1_1CellIterator.html#ab3370010518f0edcef2f5caf198e2f5f">vcl::CellIterator::operator++</a></div><div class="ttdeci">CellIterator operator++(int)</div><div class="ttdef"><b>Definition</b> cell_iterator.h:79</div></div>
-<div class="ttc" id="aclassvcl_1_1CellIterator_html_ac48081807972c822557be86bf4685f7d"><div class="ttname"><a href="classvcl_1_1CellIterator.html#ac48081807972c822557be86bf4685f7d">vcl::CellIterator::operator-&gt;</a></div><div class="ttdeci">pointer operator-&gt;() const</div><div class="ttdef"><b>Definition</b> cell_iterator.h:59</div></div>
-<div class="ttc" id="aclassvcl_1_1CellIterator_html_ac725563ed613828573c853f61bf4232d"><div class="ttname"><a href="classvcl_1_1CellIterator.html#ac725563ed613828573c853f61bf4232d">vcl::CellIterator::operator++</a></div><div class="ttdeci">CellIterator operator++()</div><div class="ttdef"><b>Definition</b> cell_iterator.h:65</div></div>
-<div class="ttc" id="aclassvcl_1_1CellIterator_html_acb641d06faed567d4d0150d9a03f0a37"><div class="ttname"><a href="classvcl_1_1CellIterator.html#acb641d06faed567d4d0150d9a03f0a37">vcl::CellIterator::CellIterator</a></div><div class="ttdeci">CellIterator(const vcl::Point&lt; uint, N &gt; &amp;first, const vcl::Point&lt; uint, N &gt; &amp;end)</div><div class="ttdef"><b>Definition</b> cell_iterator.h:49</div></div>
-<div class="ttc" id="aclassvcl_1_1CellIterator_html_aee311a4e33dba52a194c628c91d0d15f"><div class="ttname"><a href="classvcl_1_1CellIterator.html#aee311a4e33dba52a194c628c91d0d15f">vcl::CellIterator::operator!=</a></div><div class="ttdeci">bool operator!=(const CellIterator &amp;oi) const</div><div class="ttdef"><b>Definition</b> cell_iterator.h:63</div></div>
-<div class="ttc" id="aclassvcl_1_1Matrix_html"><div class="ttname"><a href="classvcl_1_1Matrix.html">vcl::Matrix</a></div><div class="ttdef"><b>Definition</b> matrix.h:36</div></div>
 <div class="ttc" id="aclassvcl_1_1Point_html"><div class="ttname"><a href="classvcl_1_1Point.html">vcl::Point&lt; uint, N &gt;</a></div></div>
-<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition</b> bounding_box.h:48</div></div>
-<div class="ttc" id="anamespacevcl_html_af74b42dd9d759d565bb701a5b845d05c"><div class="ttname"><a href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">vcl::uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition</b> base.h:34</div></div>
-<div class="ttc" id="aspace_2core_2point_8h_html"><div class="ttname"><a href="space_2core_2point_8h.html">point.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d2fdbf172f8ae9790b339bfcb66b3af7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_f5c67e0d94465501863c6ccee7fad822.html">space</a></li><li class="navelem"><a class="el" href="dir_87d8f51ecc605eaed395771040127619.html">complex</a></li><li class="navelem"><a class="el" href="dir_9efef6eac3f9aaa3ae991cfa68b22cd0.html">grid</a></li><li class="navelem"><a class="el" href="dir_fc1487aba69fbf9be258bc85cb219594.html">iterators</a></li><li class="navelem"><a class="el" href="cell__iterator_8h.html">cell_iterator.h</a></li>
+    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_876bb933d26b04599d60b1bdfe1a5bc5.html">space</a></li><li class="navelem"><a class="el" href="dir_e43535145e3c7fa83df4e11b330f5346.html">complex</a></li><li class="navelem"><a class="el" href="dir_229574e671a4e3fe57c6e440feedf984.html">grid</a></li><li class="navelem"><a class="el" href="dir_062d560b5ff005eb131a4a2f553ff2d4.html">iterators</a></li><li class="navelem"><b>cell_iterator.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

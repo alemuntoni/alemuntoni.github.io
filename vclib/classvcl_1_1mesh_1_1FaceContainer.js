@@ -1,13 +1,7 @@
 var classvcl_1_1mesh_1_1FaceContainer =
 [
-    [ "ConstFaceIterator", "classvcl_1_1mesh_1_1FaceContainer.html#aafc5566b74b958696a94d6bf9000279a", null ],
-    [ "Face", "classvcl_1_1mesh_1_1FaceContainer.html#a29a1d4bc75492ec6933d8f5925d86512", null ],
-    [ "FaceIterator", "classvcl_1_1mesh_1_1FaceContainer.html#a28686323579d5f027c3dd58e890d6e55", null ],
-    [ "FaceType", "classvcl_1_1mesh_1_1FaceContainer.html#a95d8f8d22283acc8249d902ad82297e7", null ],
     [ "FaceContainer", "classvcl_1_1mesh_1_1FaceContainer.html#a8b5ffcb56c14833a385f9f0f5c100ec7", null ],
     [ "addFace", "classvcl_1_1mesh_1_1FaceContainer.html#aeeb7225b419501564622d46a44e4ce9f", null ],
-    [ "addFace", "classvcl_1_1mesh_1_1FaceContainer.html#a4ccecdd4c0df1bd5b2369c8399cf2928", null ],
-    [ "addFace", "classvcl_1_1mesh_1_1FaceContainer.html#a987a34001b5a41870e4f650b530745fe", null ],
     [ "addFaces", "classvcl_1_1mesh_1_1FaceContainer.html#ae19e1eaf2f6fb7ad5d5a01d89baf1f0a", null ],
     [ "addPerFaceCustomComponent", "classvcl_1_1mesh_1_1FaceContainer.html#a79a4a941f489ac3a6cea7954ae786806", null ],
     [ "clearFaces", "classvcl_1_1mesh_1_1FaceContainer.html#a8c12ccf4396c8d4361e3f229137254f1", null ],
@@ -67,6 +61,5 @@ var classvcl_1_1mesh_1_1FaceContainer =
     [ "perFaceCustomComponentVectorHandle", "classvcl_1_1mesh_1_1FaceContainer.html#ac633da1546b2354d0a281eb9aec30baa", null ],
     [ "reserveFaces", "classvcl_1_1mesh_1_1FaceContainer.html#aaf6308ed0895cf92980d0549c2dabaf5", null ],
     [ "resizeFaces", "classvcl_1_1mesh_1_1FaceContainer.html#afb30c7554f37dc934fab1e5a9c26e97e", null ],
-    [ "updateFaceIndices", "classvcl_1_1mesh_1_1FaceContainer.html#aef0cbf495dc75aea0fddf456965103ce", null ],
-    [ "FaceContainer", "classvcl_1_1mesh_1_1FaceContainer.html#aaf33ec7b61fdd9b294c4800c197bebdd", null ]
+    [ "updateFaceIndices", "classvcl_1_1mesh_1_1FaceContainer.html#aef0cbf495dc75aea0fddf456965103ce", null ]
 ];

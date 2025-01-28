@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visual Computing Library: include/vclib/types/mesh_elements.h Source File</title>
+<title>Visual Computing Library: vclib/core/include/vclib/types/mesh_elements.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -104,11 +104,11 @@ $(document).ready(function(){initNavTree('mesh__elements_8h_source.html',''); in
   <div class="headertitle"><div class="title">mesh_elements.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="mesh__elements_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2024                                                    *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2025                                                    *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
@@ -129,28 +129,26 @@ $(document).ready(function(){initNavTree('mesh__elements_8h_source.html',''); in
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_TYPES_MESH_ELEMENTS_H</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_TYPES_MESH_ELEMENTS_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;base.h&quot;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;<a class="code" href="types_2base_8h.html">base.h</a>&quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span>vcl {</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="foldopen" id="foldopen00053" data-start="{" data-end="};">
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="structvcl_1_1ElemId.html">   53</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1ElemId.html">ElemId</a></div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>{</div>
-<div class="foldopen" id="foldopen00055" data-start="{" data-end="};">
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="structvcl_1_1ElemId.html#a1c18d2f7814686d14cc0dacc8f33a09f">   55</a></span>    <span class="keyword">enum</span> <a class="code hl_enumeration" href="structvcl_1_1ElemId.html#a1c18d2f7814686d14cc0dacc8f33a09f">Enum</a> : <a class="code hl_class" href="classvcl_1_1Matrix.html">uint</a> {</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="structvcl_1_1ElemId.html#a1c18d2f7814686d14cc0dacc8f33a09fa8ee2b32dabeee8f630d63f6d5113128a">   56</a></span>        <a class="code hl_enumvalue" href="structvcl_1_1ElemId.html#a1c18d2f7814686d14cc0dacc8f33a09fa8ee2b32dabeee8f630d63f6d5113128a">VERTEX</a> = 0,</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="structvcl_1_1ElemId.html#a1c18d2f7814686d14cc0dacc8f33a09fabc76c2c9553250f05803431f64894eb8">   57</a></span>        <a class="code hl_enumvalue" href="structvcl_1_1ElemId.html#a1c18d2f7814686d14cc0dacc8f33a09fabc76c2c9553250f05803431f64894eb8">FACE</a>,</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="structvcl_1_1ElemId.html#a1c18d2f7814686d14cc0dacc8f33a09fa425ae52b91d7725ed644b8e6c59a088e">   58</a></span>        <a class="code hl_enumvalue" href="structvcl_1_1ElemId.html#a1c18d2f7814686d14cc0dacc8f33a09fa425ae52b91d7725ed644b8e6c59a088e">EDGE</a>,</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="structvcl_1_1ElemId.html#a1c18d2f7814686d14cc0dacc8f33a09fa5383a8d3ce75f1f431f09f343aa14fff">   59</a></span>        <a class="code hl_enumvalue" href="structvcl_1_1ElemId.html#a1c18d2f7814686d14cc0dacc8f33a09fa5383a8d3ce75f1f431f09f343aa14fff">ELEMENTS_NUMBER</a>,</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">enum</span> Enum : <a class="code hl_class" href="classvcl_1_1Box.html">uint</a> {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        VERTEX = 0,</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        FACE,</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        EDGE,</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        ELEMENTS_NUMBER,</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    };</div>
-</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>};</div>
 </div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
 <div class="foldopen" id="foldopen00069" data-start="{" data-end="};">
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="group__types.html#gaead83eb7c9cee68431c31c3890cbb10f">   69</a></span><span class="keyword">constexpr</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="group__types.html#gaead83eb7c9cee68431c31c3890cbb10f">ELEMENT_ENUM_STRINGS</a>[<a class="code hl_enumvalue" href="structvcl_1_1ElemId.html#a1c18d2f7814686d14cc0dacc8f33a09fa5383a8d3ce75f1f431f09f343aa14fff">ElemId::ELEMENTS_NUMBER</a>] = {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="group__types.html#gaead83eb7c9cee68431c31c3890cbb10f">   69</a></span><span class="keyword">constexpr</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="group__types.html#gaead83eb7c9cee68431c31c3890cbb10f">ELEMENT_ENUM_STRINGS</a>[ElemId::ELEMENTS_NUMBER] = {</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="stringliteral">&quot;Vertex&quot;</span>,</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="stringliteral">&quot;Face&quot;</span>,</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="stringliteral">&quot;Edge&quot;</span>,</div>
@@ -161,7 +159,7 @@ $(document).ready(function(){initNavTree('mesh__elements_8h_source.html',''); in
 <div class="foldopen" id="foldopen00087" data-start="{" data-end="};">
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="structvcl_1_1ElementString.html">   87</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1ElementString.html">ElementString</a></div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>{</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="structvcl_1_1ElementString.html#adf709994861b97ace3d6f67096dfe07e">   92</a></span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="structvcl_1_1ElementString.html#adf709994861b97ace3d6f67096dfe07e">str</a> = ELEM_ID &lt; <a class="code hl_enumvalue" href="structvcl_1_1ElemId.html#a1c18d2f7814686d14cc0dacc8f33a09fa5383a8d3ce75f1f431f09f343aa14fff">ElemId::ELEMENTS_NUMBER</a> ?</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="structvcl_1_1ElementString.html#adf709994861b97ace3d6f67096dfe07e">   92</a></span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="structvcl_1_1ElementString.html#adf709994861b97ace3d6f67096dfe07e">str</a> = ELEM_ID &lt; ElemId::ELEMENTS_NUMBER ?</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                          <a class="code hl_variable" href="group__types.html#gaead83eb7c9cee68431c31c3890cbb10f">ELEMENT_ENUM_STRINGS</a>[ELEM_ID] :</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                          <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>};</div>
@@ -172,11 +170,11 @@ $(document).ready(function(){initNavTree('mesh__elements_8h_source.html',''); in
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="group__types.html#ga0068c984cb7a600004242ea341b506eb">  106</a></span><span class="keyword">constexpr</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="group__types.html#ga0068c984cb7a600004242ea341b506eb">elementEnumCString</a>()</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>{</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keyword">static_assert</span>(</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">ElementString&lt;ELEM_ID&gt;</a>().str != <span class="keyword">nullptr</span>,</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <a class="code hl_class" href="classvcl_1_1Box.html">ElementString&lt;ELEM_ID&gt;</a>().str != <span class="keyword">nullptr</span>,</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="stringliteral">&quot;Invalid ElementIDEnum. You should specialize &#39;the ElementString&#39; &quot;</span></div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="stringliteral">&quot;struct with your ELEM_ID value.&quot;</span>);</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">ElementString&lt;ELEM_ID&gt;</a>().str;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Box.html">ElementString&lt;ELEM_ID&gt;</a>().str;</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>}</div>
 </div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
@@ -185,7 +183,7 @@ $(document).ready(function(){initNavTree('mesh__elements_8h_source.html',''); in
 <div class="foldopen" id="foldopen00126" data-start="{" data-end="}">
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="group__types.html#gab2bbb176efb4243ea25469bbbd1c53af">  126</a></span><span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="group__types.html#gab2bbb176efb4243ea25469bbbd1c53af">elementEnumString</a>()</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>{</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keyword">static</span> <span class="keyword">const</span> std::string str = <a class="code hl_class" href="classvcl_1_1Matrix.html">elementEnumCString&lt;ELEM_ID&gt;</a>();</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keyword">static</span> <span class="keyword">const</span> std::string str = <a class="code hl_class" href="classvcl_1_1Box.html">elementEnumCString&lt;ELEM_ID&gt;</a>();</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordflow">return</span> str;</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>}</div>
@@ -194,26 +192,19 @@ $(document).ready(function(){initNavTree('mesh__elements_8h_source.html',''); in
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>} <span class="comment">// namespace vcl</span></div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="preprocessor">#endif </span><span class="comment">// VCL_TYPES_MESH_ELEMENTS_H</span></div>
-<div class="ttc" id="aclassvcl_1_1Matrix_html"><div class="ttname"><a href="classvcl_1_1Matrix.html">vcl::Matrix</a></div><div class="ttdef"><b>Definition</b> matrix.h:36</div></div>
+<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:49</div></div>
 <div class="ttc" id="agroup__types_html_ga0068c984cb7a600004242ea341b506eb"><div class="ttname"><a href="group__types.html#ga0068c984cb7a600004242ea341b506eb">vcl::elementEnumCString</a></div><div class="ttdeci">constexpr const char * elementEnumCString()</div><div class="ttdoc">Returns the string associated to the ELEM_ID value.</div><div class="ttdef"><b>Definition</b> mesh_elements.h:106</div></div>
 <div class="ttc" id="agroup__types_html_gab2bbb176efb4243ea25469bbbd1c53af"><div class="ttname"><a href="group__types.html#gab2bbb176efb4243ea25469bbbd1c53af">vcl::elementEnumString</a></div><div class="ttdeci">const std::string &amp; elementEnumString()</div><div class="ttdoc">Returns the string associated to the ELEM_ID value.</div><div class="ttdef"><b>Definition</b> mesh_elements.h:126</div></div>
 <div class="ttc" id="agroup__types_html_gaead83eb7c9cee68431c31c3890cbb10f"><div class="ttname"><a href="group__types.html#gaead83eb7c9cee68431c31c3890cbb10f">vcl::ELEMENT_ENUM_STRINGS</a></div><div class="ttdeci">constexpr const char * ELEMENT_ENUM_STRINGS[ElemId::ELEMENTS_NUMBER]</div><div class="ttdoc">The ELEMENT_ENUM_STRINGS array contains the string representation of the elements that can compose a ...</div><div class="ttdef"><b>Definition</b> mesh_elements.h:69</div></div>
-<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition</b> bounding_box.h:48</div></div>
 <div class="ttc" id="astructvcl_1_1ElemId_html"><div class="ttname"><a href="structvcl_1_1ElemId.html">vcl::ElemId</a></div><div class="ttdoc">The ElemId struct enumerates the elements that can compose a mesh.</div><div class="ttdef"><b>Definition</b> mesh_elements.h:54</div></div>
-<div class="ttc" id="astructvcl_1_1ElemId_html_a1c18d2f7814686d14cc0dacc8f33a09f"><div class="ttname"><a href="structvcl_1_1ElemId.html#a1c18d2f7814686d14cc0dacc8f33a09f">vcl::ElemId::Enum</a></div><div class="ttdeci">Enum</div><div class="ttdef"><b>Definition</b> mesh_elements.h:55</div></div>
-<div class="ttc" id="astructvcl_1_1ElemId_html_a1c18d2f7814686d14cc0dacc8f33a09fa425ae52b91d7725ed644b8e6c59a088e"><div class="ttname"><a href="structvcl_1_1ElemId.html#a1c18d2f7814686d14cc0dacc8f33a09fa425ae52b91d7725ed644b8e6c59a088e">vcl::ElemId::EDGE</a></div><div class="ttdeci">@ EDGE</div><div class="ttdef"><b>Definition</b> mesh_elements.h:58</div></div>
-<div class="ttc" id="astructvcl_1_1ElemId_html_a1c18d2f7814686d14cc0dacc8f33a09fa5383a8d3ce75f1f431f09f343aa14fff"><div class="ttname"><a href="structvcl_1_1ElemId.html#a1c18d2f7814686d14cc0dacc8f33a09fa5383a8d3ce75f1f431f09f343aa14fff">vcl::ElemId::ELEMENTS_NUMBER</a></div><div class="ttdeci">@ ELEMENTS_NUMBER</div><div class="ttdef"><b>Definition</b> mesh_elements.h:59</div></div>
-<div class="ttc" id="astructvcl_1_1ElemId_html_a1c18d2f7814686d14cc0dacc8f33a09fa8ee2b32dabeee8f630d63f6d5113128a"><div class="ttname"><a href="structvcl_1_1ElemId.html#a1c18d2f7814686d14cc0dacc8f33a09fa8ee2b32dabeee8f630d63f6d5113128a">vcl::ElemId::VERTEX</a></div><div class="ttdeci">@ VERTEX</div><div class="ttdef"><b>Definition</b> mesh_elements.h:56</div></div>
-<div class="ttc" id="astructvcl_1_1ElemId_html_a1c18d2f7814686d14cc0dacc8f33a09fabc76c2c9553250f05803431f64894eb8"><div class="ttname"><a href="structvcl_1_1ElemId.html#a1c18d2f7814686d14cc0dacc8f33a09fabc76c2c9553250f05803431f64894eb8">vcl::ElemId::FACE</a></div><div class="ttdeci">@ FACE</div><div class="ttdef"><b>Definition</b> mesh_elements.h:57</div></div>
 <div class="ttc" id="astructvcl_1_1ElementString_html"><div class="ttname"><a href="structvcl_1_1ElementString.html">vcl::ElementString</a></div><div class="ttdoc">The ElementString class is used to retrieve the string associated to a ELEM_ID value,...</div><div class="ttdef"><b>Definition</b> mesh_elements.h:88</div></div>
 <div class="ttc" id="astructvcl_1_1ElementString_html_adf709994861b97ace3d6f67096dfe07e"><div class="ttname"><a href="structvcl_1_1ElementString.html#adf709994861b97ace3d6f67096dfe07e">vcl::ElementString::str</a></div><div class="ttdeci">const char * str</div><div class="ttdoc">The string associated to the ELEM_ID.</div><div class="ttdef"><b>Definition</b> mesh_elements.h:92</div></div>
-<div class="ttc" id="atypes_2base_8h_html"><div class="ttname"><a href="types_2base_8h.html">base.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d2fdbf172f8ae9790b339bfcb66b3af7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_e102405455576d9ff546bfbc8ea68757.html">types</a></li><li class="navelem"><a class="el" href="mesh__elements_8h.html">mesh_elements.h</a></li>
+    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_ae5876ed1a21dfe8c57b4e8d41da885b.html">types</a></li><li class="navelem"><b>mesh_elements.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

@@ -11,7 +11,6 @@ var classvcl_1_1BitSet =
     [ "flip", "classvcl_1_1BitSet.html#a1b5396113342bc6f93dc0aa99a28d812", null ],
     [ "flip", "classvcl_1_1BitSet.html#abbe5694b088c0a53cc318bcd417bec09", null ],
     [ "none", "classvcl_1_1BitSet.html#ac887667e5908f3c452db04241b0ccde2", null ],
-    [ "operator<=>", "classvcl_1_1BitSet.html#a4cea5e15a9677968a2af8e7f4fee87c0", null ],
     [ "operator[]", "classvcl_1_1BitSet.html#a4725a21057cc8b2e620addd545445fd9", null ],
     [ "operator[]", "classvcl_1_1BitSet.html#a4e0c93ee69ae2466fcba3f8512e7c337", null ],
     [ "reset", "classvcl_1_1BitSet.html#ab80db932bb259c8e27a36c6843d52905", null ],
@@ -20,6 +19,5 @@ var classvcl_1_1BitSet =
     [ "set", "classvcl_1_1BitSet.html#a05f042ce26b0a78a610c38ec04768b53", null ],
     [ "set", "classvcl_1_1BitSet.html#a6a8298c9742922c31cf633bf9edb225d", null ],
     [ "size", "classvcl_1_1BitSet.html#a1f02e641c944ec2c18fea296ab595bfa", null ],
-    [ "operator<<", "classvcl_1_1BitSet.html#adfe1b14694dc5bf20eaf0e93acdd7f97", null ],
     [ "SIZE", "classvcl_1_1BitSet.html#a5cf700625a27abaeb401fd3aba125a17", null ]
 ];

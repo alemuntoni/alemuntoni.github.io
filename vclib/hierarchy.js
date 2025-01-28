@@ -4,43 +4,20 @@ var hierarchy =
       [ "vcl::Logger< std::ostream >", "classvcl_1_1Logger.html", [
         [ "vcl::ConsoleLogger", "classvcl_1_1ConsoleLogger.html", null ]
       ] ],
+      [ "vcl::Logger< QTextStream >", "classvcl_1_1Logger.html", [
+        [ "vcl::qt::TextEditLogger", "classvcl_1_1qt_1_1TextEditLogger.html", null ]
+      ] ],
       [ "vcl::Logger< Stream >", "classvcl_1_1Logger.html", null ],
       [ "vcl::NullLogger", "classvcl_1_1NullLogger.html", null ]
     ] ],
-    [ "vcl::proc::Action", "classvcl_1_1proc_1_1Action.html", [
-      [ "vcl::proc::LoadImageAction", "classvcl_1_1proc_1_1LoadImageAction.html", [
-        [ "vcl::proc::BaseLoadImageAction", "classvcl_1_1proc_1_1BaseLoadImageAction.html", null ]
-      ] ],
-      [ "vcl::proc::MeshAction", "classvcl_1_1proc_1_1MeshAction.html", [
-        [ "vcl::proc::FilterMeshAction", "classvcl_1_1proc_1_1FilterMeshAction.html", [
-          [ "vcl::proc::CreateConeFilter", "classvcl_1_1proc_1_1CreateConeFilter.html", null ],
-          [ "vcl::proc::LaplacianSmoothingFilter", "classvcl_1_1proc_1_1LaplacianSmoothingFilter.html", null ]
-        ] ],
-        [ "vcl::proc::LoadMeshAction", "classvcl_1_1proc_1_1LoadMeshAction.html", [
-          [ "vcl::proc::ObjLoadMeshAction", "classvcl_1_1proc_1_1ObjLoadMeshAction.html", null ],
-          [ "vcl::proc::OffLoadMeshAction", "classvcl_1_1proc_1_1OffLoadMeshAction.html", null ],
-          [ "vcl::proc::PlyLoadMeshAction", "classvcl_1_1proc_1_1PlyLoadMeshAction.html", null ],
-          [ "vcl::proc::StlLoadMeshAction", "classvcl_1_1proc_1_1StlLoadMeshAction.html", null ]
-        ] ],
-        [ "vcl::proc::SaveMeshAction", "classvcl_1_1proc_1_1SaveMeshAction.html", [
-          [ "vcl::proc::ObjSaveMeshAction", "classvcl_1_1proc_1_1ObjSaveMeshAction.html", null ],
-          [ "vcl::proc::OffSaveMeshAction", "classvcl_1_1proc_1_1OffSaveMeshAction.html", null ],
-          [ "vcl::proc::PlySaveMeshAction", "classvcl_1_1proc_1_1PlySaveMeshAction.html", null ],
-          [ "vcl::proc::StlSaveMeshAction", "classvcl_1_1proc_1_1StlSaveMeshAction.html", null ]
-        ] ]
-      ] ],
-      [ "vcl::proc::SaveImageAction", "classvcl_1_1proc_1_1SaveImageAction.html", [
-        [ "vcl::proc::BaseSaveImageAction", "classvcl_1_1proc_1_1BaseSaveImageAction.html", null ]
-      ] ]
-    ] ],
-    [ "vcl::proc::ActionManager", "classvcl_1_1proc_1_1ActionManager.html", null ],
-    [ "vcl::proc::ActionType", "structvcl_1_1proc_1_1ActionType.html", null ],
     [ "Args", null, [
       [ "vcl::Mesh< mesh::VertexContainer< edgemesh::Vertex< Scalar, INDEXED > >, mesh::EdgeContainer< edgemesh::Edge< Scalar, INDEXED > >, mesh::BoundingBox3< Scalar >, mesh::Mark, mesh::Name, mesh::TextureImages, mesh::TransformMatrix< Scalar >, mesh::CustomComponents >", "classvcl_1_1Mesh.html", [
         [ "vcl::EdgeMeshT< Scalar, I >", "classvcl_1_1EdgeMeshT.html", null ],
         [ "vcl::EdgeMeshT< Scalar, INDEXED >", "classvcl_1_1EdgeMeshT.html", null ]
       ] ],
-      [ "vcl::Mesh< mesh::VertexContainer< pointcloud::Vertex< double > >, mesh::BoundingBox3< double >, mesh::Mark, mesh::Name, mesh::TextureImages, mesh::TransformMatrix< double >, mesh::CustomComponents >", "classvcl_1_1Mesh.html", null ],
+      [ "vcl::Mesh< mesh::VertexContainer< pointcloud::Vertex< Scalar > >, mesh::BoundingBox3< Scalar >, mesh::Mark, mesh::Name, mesh::TextureImages, mesh::TransformMatrix< Scalar >, mesh::CustomComponents >", "classvcl_1_1Mesh.html", [
+        [ "vcl::PointCloudT< Scalar >", "classvcl_1_1PointCloudT.html", null ]
+      ] ],
       [ "vcl::Mesh< mesh::VertexContainer< polyedgemesh::Vertex< Scalar, INDEXED > >, mesh::FaceContainer< polyedgemesh::Face< Scalar, INDEXED > >, mesh::EdgeContainer< polyedgemesh::Edge< Scalar, INDEXED > >, mesh::BoundingBox3< Scalar >, mesh::Color, mesh::Mark, mesh::Name, mesh::TextureImages, mesh::TransformMatrix< Scalar >, mesh::CustomComponents >", "classvcl_1_1Mesh.html", [
         [ "vcl::PolyEdgeMeshT< Scalar, I >", "classvcl_1_1PolyEdgeMeshT.html", null ],
         [ "vcl::PolyEdgeMeshT< Scalar, INDEXED >", "classvcl_1_1PolyEdgeMeshT.html", null ]
@@ -59,20 +36,7 @@ var hierarchy =
       ] ],
       [ "vcl::Mesh< mesh::VertexContainer< tmpMesh::PolyVertex >, mesh::FaceContainer< tmpMesh::PolyFace > >", "classvcl_1_1Mesh.html", null ],
       [ "vcl::Mesh< mesh::VertexContainer< tmpMesh::TriVertex >, mesh::FaceContainer< tmpMesh::TriFace > >", "classvcl_1_1Mesh.html", null ],
-      [ "vcl::Mesh< mesh::VertexContainer< pointcloud::Vertex< Scalar > >, mesh::BoundingBox3< Scalar >, mesh::Mark, mesh::Name, mesh::TextureImages, mesh::TransformMatrix< Scalar >, mesh::CustomComponents >", "classvcl_1_1Mesh.html", [
-        [ "vcl::PointCloudT< Scalar >", "classvcl_1_1PointCloudT.html", null ]
-      ] ],
-      [ "vcl::Mesh< mesh::VertexContainer< polymesh::Vertex< ProcScalarType, INDEXED > >, mesh::FaceContainer< polymesh::Face< ProcScalarType, INDEXED > >, mesh::BoundingBox3< ProcScalarType >, mesh::Color, mesh::Mark, mesh::Name, mesh::TextureImages, mesh::TransformMatrix< ProcScalarType >, mesh::CustomComponents >", "classvcl_1_1Mesh.html", null ],
-      [ "vcl::Mesh< mesh::VertexContainer< trimesh::Vertex< ProcScalarType, INDEXED > >, mesh::FaceContainer< trimesh::Face< ProcScalarType, INDEXED > >, mesh::BoundingBox3< ProcScalarType >, mesh::Color, mesh::Mark, mesh::Name, mesh::TextureImages, mesh::TransformMatrix< ProcScalarType >, mesh::CustomComponents >", "classvcl_1_1Mesh.html", null ],
-      [ "vcl::Mesh< Args >", "classvcl_1_1Mesh.html", [
-        [ "vcl::PolyMeshT< ProcScalarType, INDEXED_MESHES >", "classvcl_1_1PolyMeshT.html", [
-          [ "vcl::proc::PolyMesh", "classvcl_1_1proc_1_1PolyMesh.html", null ]
-        ] ],
-        [ "vcl::TriMeshT< ProcScalarType, INDEXED_MESHES >", "classvcl_1_1TriMeshT.html", [
-          [ "vcl::proc::TriMesh", "classvcl_1_1proc_1_1TriMesh.html", null ]
-        ] ],
-        [ "vcl::PointCloudT< Scalar >", "classvcl_1_1PointCloudT.html", null ]
-      ] ]
+      [ "vcl::Mesh< Args >", "classvcl_1_1Mesh.html", null ]
     ] ],
     [ "vcl::Array< T, N >", "classvcl_1_1Array.html", null ],
     [ "vcl::Array< uint32_t >", "classvcl_1_1Array.html", null ],
@@ -80,10 +44,25 @@ var hierarchy =
     [ "vcl::BipartiteGraph< T1, T2 >", "classvcl_1_1BipartiteGraph.html", null ],
     [ "vcl::BitProxy< T >", "classvcl_1_1BitProxy.html", null ],
     [ "vcl::BitSet< T >", "classvcl_1_1BitSet.html", null ],
+    [ "vcl::BitSet< char >", "classvcl_1_1BitSet.html", null ],
     [ "vcl::Box< PointT >", "classvcl_1_1Box.html", null ],
+    [ "vcl::Box< Point3d >", "classvcl_1_1Box.html", null ],
     [ "vcl::Box< PointType >", "classvcl_1_1Box.html", null ],
+    [ "bgfx::CallbackI", null, [
+      [ "vcl::Callback", "classvcl_1_1Callback.html", null ]
+    ] ],
+    [ "vcl::Camera< Scalar >", "classvcl_1_1Camera.html", null ],
+    [ "vcl::Camera< float >", "classvcl_1_1Camera.html", null ],
+    [ "vcl::CameraUniforms", "classvcl_1_1CameraUniforms.html", null ],
+    [ "vcl::CanvasBGFX< DerivedRenderApp >", "classvcl_1_1CanvasBGFX.html", null ],
+    [ "vcl::CanvasOpenGL2< DerivedRenderApp >", "classvcl_1_1CanvasOpenGL2.html", null ],
+    [ "CanvasT", null, [
+      [ "vcl::RenderApp< WindowManagerT, CanvasT, Drawers >", "classvcl_1_1RenderApp.html", null ]
+    ] ],
     [ "vcl::CellIterator< N >", "classvcl_1_1CellIterator.html", null ],
+    [ "vcl::RenderApp< WindowManagerT, CanvasT, Drawers >::CNV", "classvcl_1_1RenderApp_1_1CNV.html", null ],
     [ "vcl::CompId", "structvcl_1_1CompId.html", null ],
+    [ "vcl::Element< ELEM_ID, MeshType, Comps >::ComponentIDPred< COMP_ID >", "structvcl_1_1Element_1_1ComponentIDPred.html", null ],
     [ "vcl::ComponentString< COMP_ID >", "structvcl_1_1ComponentString.html", null ],
     [ "Comps", null, [
       [ "vcl::Element< ElemId::EDGE, MeshType, Comps... >", "classvcl_1_1Element.html", [
@@ -131,8 +110,8 @@ var hierarchy =
         [ "vcl::Edge< TriEdgeMeshT< Scalar, I >, edge::BitFlags, edge::VertexReferences< I, Vertex< Scalar, I >, Edge< Scalar, I > >, edge::OptionalNormal3< Scalar, Edge< Scalar, I > >, edge::OptionalColor< Edge< Scalar, I > >, edge::OptionalQuality< Scalar, Edge< Scalar, I > >, edge::OptionalAdjacentEdges< I, Edge< Scalar, I > >, edge::OptionalAdjacentFaces< I, Face< Scalar, I >, Edge< Scalar, I > >, edge::OptionalMark< Edge< Scalar, I > >, edge::CustomComponents< Edge< Scalar, I > > >", "classvcl_1_1Edge.html", [
           [ "vcl::triedgemesh::Edge< Scalar, I >", "classvcl_1_1triedgemesh_1_1Edge.html", null ]
         ] ],
-        [ "vcl::Face< TMPSimplePolyMesh, vcl::face::PolygonBitFlags, vcl::face::PolygonVertexPtrs< PolyVertex, PolyFace > >", "classvcl_1_1Face.html", null ],
-        [ "vcl::Face< TMPSimpleTriMesh, vcl::face::TriangleBitFlags, vcl::face::TriangleVertexPtrs< TriVertex, TriFace > >", "classvcl_1_1Face.html", null ],
+        [ "vcl::Face< TMPSimplePolyMesh, face::PolygonBitFlags, face::PolygonVertexPtrs< PolyVertex, PolyFace > >", "classvcl_1_1Face.html", null ],
+        [ "vcl::Face< TMPSimpleTriMesh, face::TriangleBitFlags, face::TriangleVertexPtrs< TriVertex, TriFace > >", "classvcl_1_1Face.html", null ],
         [ "vcl::Face< PolyEdgeMeshT< Scalar, I >, face::PolygonBitFlags, face::PolygonVertexRefs< I, Vertex< Scalar, I >, Face< Scalar, I > >, face::Normal3< Scalar >, face::OptionalColor< Face< Scalar, I > >, face::OptionalQuality< Scalar, Face< Scalar, I > >, face::OptionalAdjacentPolygons< I, Face< Scalar, I > >, face::OptionalAdjacentEdges< I, Edge< Scalar, I >, Face< Scalar, I > >, face::OptionalTriangleWedgeTexCoords< Scalar, Face< Scalar, I > >, face::OptionalMark< Face< Scalar, I > >, face::CustomComponents< Face< Scalar, I > > >", "classvcl_1_1Face.html", [
           [ "vcl::polyedgemesh::Face< Scalar, I >", "classvcl_1_1polyedgemesh_1_1Face.html", null ]
         ] ],
@@ -145,8 +124,8 @@ var hierarchy =
         [ "vcl::Face< TriMeshT< Scalar, I >, face::TriangleBitFlags, face::TriangleVertexRefs< I, Vertex< Scalar, I >, Face< Scalar, I > >, face::Normal3< Scalar >, face::OptionalColor< Face< Scalar, I > >, face::OptionalQuality< Scalar, Face< Scalar, I > >, face::OptionalAdjacentTriangles< I, Face< Scalar, I > >, face::OptionalTriangleWedgeTexCoords< Scalar, Face< Scalar, I > >, face::OptionalMark< Face< Scalar, I > >, face::CustomComponents< Face< Scalar, I > > >", "classvcl_1_1Face.html", [
           [ "vcl::trimesh::Face< Scalar, I >", "classvcl_1_1trimesh_1_1Face.html", null ]
         ] ],
-        [ "vcl::Vertex< TMPSimplePolyMesh, vcl::vert::BitFlags, vcl::vert::Coordinate3d >", "classvcl_1_1Vertex.html", null ],
-        [ "vcl::Vertex< TMPSimpleTriMesh, vcl::vert::BitFlags, vcl::vert::Coordinate3d >", "classvcl_1_1Vertex.html", null ],
+        [ "vcl::Vertex< TMPSimplePolyMesh, vert::BitFlags, vert::Coordinate3d >", "classvcl_1_1Vertex.html", null ],
+        [ "vcl::Vertex< TMPSimpleTriMesh, vert::BitFlags, vert::Coordinate3d >", "classvcl_1_1Vertex.html", null ],
         [ "vcl::Vertex< EdgeMeshT< Scalar, I >, vert::BitFlags, vert::Coordinate3< Scalar >, vert::Normal3< Scalar >, vert::OptionalColor< Vertex< Scalar, I > >, vert::OptionalQuality< Scalar, Vertex< Scalar, I > >, vert::OptionalAdjacentEdges< I, Edge< Scalar, I >, Vertex< Scalar, I > >, vert::OptionalAdjacentVertices< I, Vertex< Scalar, I > >, vert::OptionalTexCoord< Scalar, Vertex< Scalar, I > >, vert::OptionalMark< Vertex< Scalar, I > >, vert::CustomComponents< Vertex< Scalar, I > > >", "classvcl_1_1Vertex.html", [
           [ "vcl::edgemesh::Vertex< Scalar, I >", "classvcl_1_1edgemesh_1_1Vertex.html", null ]
         ] ],
@@ -186,7 +165,12 @@ var hierarchy =
     [ "vcl::ConstPointerIterator< It >", "classvcl_1_1ConstPointerIterator.html", null ],
     [ "vcl::ConstStaticGridIterator< KeyType, ValueType, GridType >", "classvcl_1_1ConstStaticGridIterator.html", null ],
     [ "vcl::mesh::ContainerOfElement< ELEM_ID, MeshType >", "structvcl_1_1mesh_1_1ContainerOfElement.html", null ],
-    [ "vcl::mesh::ContainerOfElement< ELEM_ID, Mesh< Args... > >", "structvcl_1_1mesh_1_1ContainerOfElement.html", null ],
+    [ "vcl::mesh::ContainerOfElement< ELEM_ID, Mesh< Args... > >", "structvcl_1_1mesh_1_1ContainerOfElement.html", [
+      [ "vcl::Mesh< Args >::ContainerOfElement< El::ELEMENT_ID >", "structvcl_1_1Mesh_1_1ContainerOfElement.html", [
+        [ "vcl::Mesh< Args >::ContainerOf< El >", "structvcl_1_1Mesh_1_1ContainerOf.html", null ]
+      ] ],
+      [ "vcl::Mesh< Args >::ContainerOfElement< ELEM_ID >", "structvcl_1_1Mesh_1_1ContainerOfElement.html", null ]
+    ] ],
     [ "detail::ContCompBase", null, [
       [ "vcl::comp::ContainerComponent< DerivedComponent, COMP_ID, uint, N, void, ParentElemType, VERT, OPT, TTVN, Elem >", "classvcl_1_1comp_1_1ContainerComponent.html", [
         [ "vcl::comp::IndexContainerComponent< DerivedComponent, COMP_ID, Elem, N, ParentElemType, VERT, OPT, TTVN >", "classvcl_1_1comp_1_1IndexContainerComponent.html", null ]
@@ -200,6 +184,7 @@ var hierarchy =
         [ "vcl::comp::WedgeTexCoords< Scalar, N, ParentElemType, OPT >", "classvcl_1_1comp_1_1WedgeTexCoords.html", null ]
       ] ]
     ] ],
+    [ "vcl::Context", "classvcl_1_1Context.html", null ],
     [ "vcl::CreateSphereArgs", "structvcl_1_1CreateSphereArgs.html", null ],
     [ "vcl::MeshInfo::CustomComponent", "structvcl_1_1MeshInfo_1_1CustomComponent.html", null ],
     [ "vcl::comp::CustomComponents< ParentElemType >", "classvcl_1_1comp_1_1CustomComponents.html", null ],
@@ -207,9 +192,35 @@ var hierarchy =
     [ "vcl::mesh::CustomComponentsVectorMap< comp::HasCustomComponents< T > >", "classvcl_1_1mesh_1_1CustomComponentsVectorMap.html", null ],
     [ "vcl::mesh::CustomComponentsVectorMap< true >", "classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html", null ],
     [ "vcl::CustomComponentVectorHandle< T >", "classvcl_1_1CustomComponentVectorHandle.html", null ],
-    [ "vcl::DistFunctionStruct< Obj1, Obj2, ScalarType >", "structvcl_1_1DistFunctionStruct.html", null ],
-    [ "vcl::DistFunctionStruct< Obj1, Obj2, ScalarType >", "structvcl_1_1DistFunctionStruct_3_01Obj1_00_01Obj2_00_01ScalarType_01_4.html", null ],
+    [ "vcl::DesktopTrackBall< Scalar >", "classvcl_1_1DesktopTrackBall.html", null ],
+    [ "vcl::DesktopTrackBall< float >", "classvcl_1_1DesktopTrackBall.html", [
+      [ "vcl::AbstractViewerDrawer< DerivedRenderApp >", "classvcl_1_1AbstractViewerDrawer.html", [
+        [ "vcl::ViewerDrawerBGFX< DerivedRenderApp >", "classvcl_1_1ViewerDrawerBGFX.html", null ],
+        [ "vcl::ViewerDrawerOpenGL2< DerivedRenderApp >", "classvcl_1_1ViewerDrawerOpenGL2.html", null ]
+      ] ]
+    ] ],
+    [ "vcl::DirectionalLight< ScalarType >", "classvcl_1_1DirectionalLight.html", null ],
+    [ "vcl::DirectionalLightUniforms", "classvcl_1_1DirectionalLightUniforms.html", null ],
+    [ "vcl::AbstractGrid< GridType, ValueType, DerivedGrid >::DistIterPairComparator< Pair >", "structvcl_1_1AbstractGrid_1_1DistIterPairComparator.html", null ],
     [ "vcl::Distribution< Scalar >", "classvcl_1_1Distribution.html", null ],
+    [ "vcl::DrawableAxisUniforms", "classvcl_1_1DrawableAxisUniforms.html", null ],
+    [ "vcl::DrawableDirectionalLightUniforms", "classvcl_1_1DrawableDirectionalLightUniforms.html", null ],
+    [ "vcl::DrawableMeshUniforms", "classvcl_1_1DrawableMeshUniforms.html", null ],
+    [ "vcl::DrawableObject", "classvcl_1_1DrawableObject.html", [
+      [ "vcl::AbstractDrawableMesh", "classvcl_1_1AbstractDrawableMesh.html", [
+        [ "vcl::DrawableMeshBGFX< MeshType >", "classvcl_1_1DrawableMeshBGFX.html", null ],
+        [ "vcl::DrawableMeshOpenGL2< MeshType >", "classvcl_1_1DrawableMeshOpenGL2.html", null ]
+      ] ],
+      [ "vcl::DrawableAxis", "classvcl_1_1DrawableAxis.html", null ],
+      [ "vcl::DrawableDirectionalLight", "classvcl_1_1DrawableDirectionalLight.html", null ],
+      [ "vcl::DrawableObjectVector", "classvcl_1_1DrawableObjectVector.html", null ],
+      [ "vcl::DrawableTrackBall", "classvcl_1_1DrawableTrackBall.html", null ]
+    ] ],
+    [ "vcl::DrawableTrackballUniforms", "classvcl_1_1DrawableTrackballUniforms.html", null ],
+    [ "Drawers", null, [
+      [ "vcl::RenderApp< WindowManagerT, CanvasT, Drawers >", "classvcl_1_1RenderApp.html", null ]
+    ] ],
+    [ "vcl::RenderApp< WindowManagerT, CanvasT, Drawers >::DRW", "classvcl_1_1RenderApp_1_1DRW.html", null ],
     [ "vcl::EdgeAdjFaceIterator< FaceType, CNST >", "classvcl_1_1EdgeAdjFaceIterator.html", null ],
     [ "vcl::ElementContainerIterator< Container, T, CNST >", "classvcl_1_1ElementContainerIterator.html", null ],
     [ "vcl::mesh::ElementContainerTriggerer", "classvcl_1_1mesh_1_1ElementContainerTriggerer.html", [
@@ -221,6 +232,21 @@ var hierarchy =
     ] ],
     [ "vcl::ElementString< ELEM_ID >", "structvcl_1_1ElementString.html", null ],
     [ "vcl::ElemId", "structvcl_1_1ElemId.html", null ],
+    [ "vcl::EmbeddedFont< FONT >", "structvcl_1_1EmbeddedFont.html", null ],
+    [ "vcl::EmbeddedFont< VclFont::DROID_SANS >", "structvcl_1_1EmbeddedFont_3_01VclFont_1_1DROID__SANS_01_4.html", null ],
+    [ "vcl::EmbeddedShader< PROGRAM >", "structvcl_1_1EmbeddedShader.html", null ],
+    [ "vcl::EmbeddedShader< VclProgram::DRAWABLE_AXIS >", "structvcl_1_1EmbeddedShader_3_01VclProgram_1_1DRAWABLE__AXIS_01_4.html", null ],
+    [ "vcl::EmbeddedShader< VclProgram::DRAWABLE_DIRECTIONAL_LIGHT >", "structvcl_1_1EmbeddedShader_3_01VclProgram_1_1DRAWABLE__DIRECTIONAL__LIGHT_01_4.html", null ],
+    [ "vcl::EmbeddedShader< VclProgram::DRAWABLE_MESH >", "structvcl_1_1EmbeddedShader_3_01VclProgram_1_1DRAWABLE__MESH_01_4.html", null ],
+    [ "vcl::EmbeddedShader< VclProgram::DRAWABLE_TRACKBALL >", "structvcl_1_1EmbeddedShader_3_01VclProgram_1_1DRAWABLE__TRACKBALL_01_4.html", null ],
+    [ "vcl::EmbeddedShader< VclProgram::FONT_BASIC >", "structvcl_1_1EmbeddedShader_3_01VclProgram_1_1FONT__BASIC_01_4.html", null ],
+    [ "vcl::EmbeddedShader< VclProgram::FONT_DISTANCE_FIELD >", "structvcl_1_1EmbeddedShader_3_01VclProgram_1_1FONT__DISTANCE__FIELD_01_4.html", null ],
+    [ "vcl::EmbeddedShader< VclProgram::FONT_DISTANCE_FIELD_DROP_SHADOW >", "structvcl_1_1EmbeddedShader_3_01VclProgram_1_1FONT__DISTANCE__FIELD__DROP__SHADOW_01_4.html", null ],
+    [ "vcl::EmbeddedShader< VclProgram::FONT_DISTANCE_FIELD_DROP_SHADOW_IMAGE >", "structvcl_1_1EmbeddedShader_3_01VclProgram_1_1FONT__DISTANCE__FIELD__DROP__SHADOW__IMAGE_01_4.html", null ],
+    [ "vcl::EmbeddedShader< VclProgram::FONT_DISTANCE_FIELD_OUTLINE >", "structvcl_1_1EmbeddedShader_3_01VclProgram_1_1FONT__DISTANCE__FIELD__OUTLINE_01_4.html", null ],
+    [ "vcl::EmbeddedShader< VclProgram::FONT_DISTANCE_FIELD_OUTLINE_DROP_SHADOW_IMAGE >", "structvcl_1_1EmbeddedShader_3_01VclProgram_1_1FONT__DISTANCE__FIELD__OUTLINE__DROP__SHADOW__IMAGE_01_4.html", null ],
+    [ "vcl::EmbeddedShader< VclProgram::FONT_DISTANCE_FIELD_OUTLINE_IMAGE >", "structvcl_1_1EmbeddedShader_3_01VclProgram_1_1FONT__DISTANCE__FIELD__OUTLINE__IMAGE_01_4.html", null ],
+    [ "vcl::EmbeddedShader< VclProgram::FONT_DISTANCE_FIELD_SUBPIXEL >", "structvcl_1_1EmbeddedShader_3_01VclProgram_1_1FONT__DISTANCE__FIELD__SUBPIXEL_01_4.html", null ],
     [ "std::exception", null, [
       [ "std::runtime_error", null, [
         [ "vcl::BadCustomComponentTypeException", "classvcl_1_1BadCustomComponentTypeException.html", null ],
@@ -230,7 +256,6 @@ var hierarchy =
         [ "vcl::MalformedFileException", "classvcl_1_1MalformedFileException.html", null ],
         [ "vcl::MissingCompactnessException", "classvcl_1_1MissingCompactnessException.html", null ],
         [ "vcl::MissingComponentException", "classvcl_1_1MissingComponentException.html", null ],
-        [ "vcl::MissingPolygonalRequirementException", "classvcl_1_1MissingPolygonalRequirementException.html", null ],
         [ "vcl::MissingPreconditionException", "classvcl_1_1MissingPreconditionException.html", null ],
         [ "vcl::MissingQuadRequirementException", "classvcl_1_1MissingQuadRequirementException.html", null ],
         [ "vcl::MissingTriangularRequirementException", "classvcl_1_1MissingTriangularRequirementException.html", null ],
@@ -251,11 +276,13 @@ var hierarchy =
     [ "vcl::FirstRefPair< T1, T2 >", "classvcl_1_1FirstRefPair.html", null ],
     [ "vcl::FirstType< Args >", "structvcl_1_1FirstType.html", null ],
     [ "vcl::FirstType< TypeWrapper< Args... > >", "structvcl_1_1FirstType_3_01TypeWrapper_3_01Args_8_8_8_01_4_01_4.html", null ],
+    [ "vcl::FontData", "structvcl_1_1FontData.html", null ],
+    [ "vcl::FontManager", "classvcl_1_1FontManager.html", null ],
     [ "vcl::ForEachType< T >", "structvcl_1_1ForEachType.html", null ],
     [ "vcl::ForEachType< T... >", "structvcl_1_1ForEachType.html", [
       [ "vcl::ForEachType< TypeWrapper< T... > >", "structvcl_1_1ForEachType_3_01TypeWrapper_3_01T_8_8_8_01_4_01_4.html", null ]
     ] ],
-    [ "vcl::Color::Format", "structvcl_1_1Color_1_1Format.html", null ],
+    [ "vcl::Element< ELEM_ID, MeshType, Comps >::GetComponentFromID< COMP_ID >", "structvcl_1_1Element_1_1GetComponentFromID.html", null ],
     [ "vcl::GetTypeByCondition< Pred, Args >", "structvcl_1_1GetTypeByCondition.html", null ],
     [ "vcl::GetTypeByCondition< Pred, TypeWrapper< Args... > >", "structvcl_1_1GetTypeByCondition_3_01Pred_00_01TypeWrapper_3_01Args_8_8_8_01_4_01_4.html", null ],
     [ "GridType", null, [
@@ -272,76 +299,169 @@ var hierarchy =
     [ "vcl::HausdorffDistResult", "structvcl_1_1HausdorffDistResult.html", null ],
     [ "vcl::Histogram< ScalarType >", "classvcl_1_1Histogram.html", null ],
     [ "vcl::Histogram< double >", "classvcl_1_1Histogram.html", null ],
-    [ "vcl::proc::IdentifierActionManager< IDAction >", "classvcl_1_1proc_1_1IdentifierActionManager.html", null ],
-    [ "vcl::proc::IdentifierActionManager< vcl::proc::FilterMeshAction >", "classvcl_1_1proc_1_1IdentifierActionManager.html", null ],
     [ "vcl::Image", "classvcl_1_1Image.html", null ],
+    [ "ImGui_ImplQt_Data", "structImGui__ImplQt__Data.html", null ],
+    [ "vcl::ImGuiShaders", "structvcl_1_1ImGuiShaders.html", null ],
+    [ "vcl::IndexBuffer", "classvcl_1_1IndexBuffer.html", null ],
     [ "vcl::IndexFromPointerIterator< Iterator >", "classvcl_1_1IndexFromPointerIterator.html", null ],
     [ "vcl::IndexInTypes< T, Us >", "structvcl_1_1IndexInTypes.html", null ],
     [ "vcl::IndexInTypes< T, TypeWrapper< Us... > >", "structvcl_1_1IndexInTypes_3_01T_00_01TypeWrapper_3_01Us_8_8_8_01_4_01_4.html", null ],
-    [ "vcl::IntersFunctionStruct< Obj1, Obj2 >", "structvcl_1_1IntersFunctionStruct.html", null ],
-    [ "vcl::IntersFunctionStruct< Obj1, Obj2 >", "structvcl_1_1IntersFunctionStruct_3_01Obj1_00_01Obj2_01_4.html", null ],
-    [ "vcl::proc::IOActionManager< IOAction >", "classvcl_1_1proc_1_1IOActionManager.html", null ],
-    [ "vcl::proc::IOActionManager< vcl::proc::LoadImageAction >", "classvcl_1_1proc_1_1IOActionManager.html", null ],
-    [ "vcl::proc::IOActionManager< vcl::proc::LoadMeshAction >", "classvcl_1_1proc_1_1IOActionManager.html", null ],
-    [ "vcl::proc::IOActionManager< vcl::proc::SaveImageAction >", "classvcl_1_1proc_1_1IOActionManager.html", null ],
-    [ "vcl::proc::IOActionManager< vcl::proc::SaveMeshAction >", "classvcl_1_1proc_1_1IOActionManager.html", null ],
     [ "vcl::comp::IsComponentPred< T >", "structvcl_1_1comp_1_1IsComponentPred.html", null ],
     [ "vcl::mesh::IsElementContainerPred< T >", "structvcl_1_1mesh_1_1IsElementContainerPred.html", null ],
     [ "vcl::comp::IsVerticalComponentPred< T >", "structvcl_1_1comp_1_1IsVerticalComponentPred.html", null ],
+    [ "Iterator", null, [
+      [ "vcl::NodeIterator< Iterator >", "classvcl_1_1NodeIterator.html", null ]
+    ] ],
     [ "std::vector< T >::iterator", null, [
       [ "vcl::CustomComponentVectorHandle< T >::Iterator", "classvcl_1_1CustomComponentVectorHandle_1_1Iterator.html", null ]
     ] ],
+    [ "vcl::AbstractGrid< GridType, ValueType, DerivedGrid >::IterComparator< Iter >", "structvcl_1_1AbstractGrid_1_1IterComparator.html", null ],
     [ "vcl::KDTree< PointType >", "classvcl_1_1KDTree.html", null ],
+    [ "vcl::Key", "structvcl_1_1Key.html", null ],
+    [ "vcl::KeyModifier", "structvcl_1_1KeyModifier.html", null ],
     [ "vcl::LoadSettings", "structvcl_1_1LoadSettings.html", null ],
     [ "vcl::MakeConstPointer< T >", "structvcl_1_1MakeConstPointer.html", null ],
     [ "vcl::MakeConstPointer< T * >", "structvcl_1_1MakeConstPointer_3_01T_01_5_01_4.html", null ],
     [ "Eigen::Matrix", null, [
-      [ "vcl::Point< uint, N >", "classvcl_1_1Point.html", null ],
+      [ "vcl::Matrix< float >", "classvcl_1_1Matrix.html", null ],
+      [ "vcl::Point< float >", "classvcl_1_1Point.html", null ],
       [ "vcl::Point< Scalar >", "classvcl_1_1Point.html", null ],
+      [ "vcl::Point< uint >", "classvcl_1_1Point.html", null ],
+      [ "vcl::Point< int >", "classvcl_1_1Point.html", null ],
+      [ "vcl::Point< uint, N >", "classvcl_1_1Point.html", null ],
+      [ "vcl::Point< ScalarType >", "classvcl_1_1Point.html", null ],
+      [ "vcl::Point< double >", "classvcl_1_1Point.html", null ],
       [ "vcl::Matrix< Scalar, R, C >", "classvcl_1_1Matrix.html", null ],
       [ "vcl::Point< Scalar, N >", "classvcl_1_1Point.html", [
         [ "vcl::Color", "classvcl_1_1Color.html", null ]
       ] ]
     ] ],
     [ "vcl::MeshEdgeUtil< MeshType >", "classvcl_1_1MeshEdgeUtil.html", null ],
-    [ "vcl::proc::MeshI", "classvcl_1_1proc_1_1MeshI.html", [
-      [ "vcl::proc::PolyMesh", "classvcl_1_1proc_1_1PolyMesh.html", null ],
-      [ "vcl::proc::TriMesh", "classvcl_1_1proc_1_1TriMesh.html", null ]
-    ] ],
     [ "vcl::MeshInertia< MeshType >", "classvcl_1_1MeshInertia.html", null ],
     [ "vcl::MeshInfo", "classvcl_1_1MeshInfo.html", null ],
-    [ "vcl::proc::MeshIType", "structvcl_1_1proc_1_1MeshIType.html", null ],
     [ "vcl::MeshPos< FaceType >", "classvcl_1_1MeshPos.html", null ],
+    [ "vcl::MeshRenderData< MeshType >", "classvcl_1_1MeshRenderData.html", [
+      [ "vcl::MeshRenderBuffers< vcl::TriMeshT >", "classvcl_1_1MeshRenderBuffers.html", null ],
+      [ "vcl::MeshRenderBuffers< MeshType >", "classvcl_1_1MeshRenderBuffers.html", null ]
+    ] ],
+    [ "vcl::MeshRenderSettings", "classvcl_1_1MeshRenderSettings.html", null ],
+    [ "vcl::MeshRenderSettingsUniforms", "classvcl_1_1MeshRenderSettingsUniforms.html", null ],
     [ "vcl::MeshSampler< MeshType >", "classvcl_1_1MeshSampler.html", null ],
-    [ "vcl::MeshInfo::MeshType", "structvcl_1_1MeshInfo_1_1MeshType.html", null ],
+    [ "vcl::qt::MessageHider", "classvcl_1_1qt_1_1MessageHider.html", null ],
+    [ "vcl::MouseButton", "structvcl_1_1MouseButton.html", null ],
     [ "vcl::NestedInitializerListsProcessor< T, L >", "classvcl_1_1NestedInitializerListsProcessor.html", null ],
     [ "vcl::NestedInitializerListsProcessor< T, 1 >", "classvcl_1_1NestedInitializerListsProcessor_3_01T_00_011_01_4.html", null ],
-    [ "vcl::NodeIterator< Iterator >", "classvcl_1_1NodeIterator.html", null ],
+    [ "vcl::KDTree< PointType >::Node", "structvcl_1_1KDTree_1_1Node.html", null ],
     [ "vcl::NumberOfTypes< Args >", "structvcl_1_1NumberOfTypes.html", null ],
     [ "vcl::NumberOfTypes< Args... >", "structvcl_1_1NumberOfTypes.html", [
       [ "vcl::NumberOfTypes< TypeWrapper< Args... > >", "structvcl_1_1NumberOfTypes_3_01TypeWrapper_3_01Args_8_8_8_01_4_01_4.html", null ]
     ] ],
+    [ "OcornutImguiContext", "structOcornutImguiContext.html", null ],
     [ "vcl::PairComparator< Pair >", "structvcl_1_1PairComparator.html", null ],
-    [ "vcl::proc::Parameter", "classvcl_1_1proc_1_1Parameter.html", [
-      [ "vcl::proc::BoolParameter", "classvcl_1_1proc_1_1BoolParameter.html", null ],
-      [ "vcl::proc::EnumParameter", "classvcl_1_1proc_1_1EnumParameter.html", null ],
-      [ "vcl::proc::IntParameter", "classvcl_1_1proc_1_1IntParameter.html", null ],
-      [ "vcl::proc::MeshParameter", "classvcl_1_1proc_1_1MeshParameter.html", null ],
-      [ "vcl::proc::ScalarParameter", "classvcl_1_1proc_1_1ScalarParameter.html", null ],
-      [ "vcl::proc::StringParameter", "classvcl_1_1proc_1_1StringParameter.html", null ],
-      [ "vcl::proc::UintParameter", "classvcl_1_1proc_1_1UintParameter.html", null ],
-      [ "vcl::proc::UscalarParameter", "classvcl_1_1proc_1_1UscalarParameter.html", null ]
+    [ "vcl::qt::ParameterRow", "classvcl_1_1qt_1_1ParameterRow.html", [
+      [ "vcl::qt::BoolParameterRow", "classvcl_1_1qt_1_1BoolParameterRow.html", null ],
+      [ "vcl::qt::EnumParameterRow", "classvcl_1_1qt_1_1EnumParameterRow.html", null ],
+      [ "vcl::qt::ScalarParameterRow", "classvcl_1_1qt_1_1ScalarParameterRow.html", null ],
+      [ "vcl::qt::UintParameterRow", "classvcl_1_1qt_1_1UintParameterRow.html", null ],
+      [ "vcl::qt::UscalarParameterRow", "classvcl_1_1qt_1_1UscalarParameterRow.html", null ]
     ] ],
-    [ "vcl::proc::ParameterType", "structvcl_1_1proc_1_1ParameterType.html", null ],
+    [ "vcl::comp::ParentMeshPointer< MeshType >", "classvcl_1_1comp_1_1ParentMeshPointer.html", [
+      [ "vcl::Element< ElemId::EDGE, MeshType, Comps... >", "classvcl_1_1Element.html", null ],
+      [ "vcl::Element< ElemId::FACE, MeshType, Comps... >", "classvcl_1_1Element.html", null ],
+      [ "vcl::Element< ElemId::VERTEX, MeshType, Comps... >", "classvcl_1_1Element.html", null ],
+      [ "vcl::Element< ElemId::FACE, TMPSimplePolyMesh, Comps... >", "classvcl_1_1Element.html", null ],
+      [ "vcl::Element< ElemId::VERTEX, TMPSimplePolyMesh, Comps... >", "classvcl_1_1Element.html", null ],
+      [ "vcl::Element< ElemId::FACE, TMPSimpleTriMesh, Comps... >", "classvcl_1_1Element.html", null ],
+      [ "vcl::Element< ElemId::VERTEX, TMPSimpleTriMesh, Comps... >", "classvcl_1_1Element.html", null ],
+      [ "vcl::Element< ElemId::EDGE, EdgeMeshT< Scalar, I >, Comps... >", "classvcl_1_1Element.html", null ],
+      [ "vcl::Element< ElemId::VERTEX, EdgeMeshT< Scalar, I >, Comps... >", "classvcl_1_1Element.html", null ],
+      [ "vcl::Element< ElemId::VERTEX, PointCloudT< Scalar >, Comps... >", "classvcl_1_1Element.html", null ],
+      [ "vcl::Element< ElemId::EDGE, PolyEdgeMeshT< Scalar, I >, Comps... >", "classvcl_1_1Element.html", null ],
+      [ "vcl::Element< ElemId::FACE, PolyEdgeMeshT< Scalar, I >, Comps... >", "classvcl_1_1Element.html", null ],
+      [ "vcl::Element< ElemId::VERTEX, PolyEdgeMeshT< Scalar, I >, Comps... >", "classvcl_1_1Element.html", null ],
+      [ "vcl::Element< ElemId::FACE, PolyMeshT< Scalar, I >, Comps... >", "classvcl_1_1Element.html", null ],
+      [ "vcl::Element< ElemId::VERTEX, PolyMeshT< Scalar, I >, Comps... >", "classvcl_1_1Element.html", null ],
+      [ "vcl::Element< ElemId::EDGE, TriEdgeMeshT< Scalar, I >, Comps... >", "classvcl_1_1Element.html", null ],
+      [ "vcl::Element< ElemId::FACE, TriEdgeMeshT< Scalar, I >, Comps... >", "classvcl_1_1Element.html", null ],
+      [ "vcl::Element< ElemId::VERTEX, TriEdgeMeshT< Scalar, I >, Comps... >", "classvcl_1_1Element.html", null ],
+      [ "vcl::Element< ElemId::FACE, TriMeshT< Scalar, I >, Comps... >", "classvcl_1_1Element.html", null ],
+      [ "vcl::Element< ElemId::VERTEX, TriMeshT< Scalar, I >, Comps... >", "classvcl_1_1Element.html", null ],
+      [ "vcl::Element< ELEM_ID, MeshType, Comps >", "classvcl_1_1Element.html", null ]
+    ] ],
+    [ "vcl::comp::ParentMeshPointer< EdgeMeshT< Scalar, I > >", "classvcl_1_1comp_1_1ParentMeshPointer.html", null ],
+    [ "vcl::comp::ParentMeshPointer< PointCloudT< Scalar > >", "classvcl_1_1comp_1_1ParentMeshPointer.html", null ],
+    [ "vcl::comp::ParentMeshPointer< PolyEdgeMeshT< Scalar, I > >", "classvcl_1_1comp_1_1ParentMeshPointer.html", null ],
+    [ "vcl::comp::ParentMeshPointer< PolyMeshT< Scalar, I > >", "classvcl_1_1comp_1_1ParentMeshPointer.html", null ],
+    [ "vcl::comp::ParentMeshPointer< TMPSimplePolyMesh >", "classvcl_1_1comp_1_1ParentMeshPointer.html", null ],
+    [ "vcl::comp::ParentMeshPointer< TMPSimpleTriMesh >", "classvcl_1_1comp_1_1ParentMeshPointer.html", null ],
+    [ "vcl::comp::ParentMeshPointer< TriEdgeMeshT< Scalar, I > >", "classvcl_1_1comp_1_1ParentMeshPointer.html", null ],
+    [ "vcl::comp::ParentMeshPointer< TriMeshT< Scalar, I > >", "classvcl_1_1comp_1_1ParentMeshPointer.html", null ],
+    [ "vcl::PlainDrawer< DerivedRenderApp >", "classvcl_1_1PlainDrawer.html", [
+      [ "vcl::BlockerEventDrawer< DerivedRenderApp >", "classvcl_1_1BlockerEventDrawer.html", [
+        [ "vcl::imgui::ImGuiDrawer< DerivedRenderApp >", "classvcl_1_1imgui_1_1ImGuiDrawer.html", null ]
+      ] ],
+      [ "vcl::EventDrawer< DerivedRenderApp >", "classvcl_1_1EventDrawer.html", [
+        [ "vcl::AbstractViewerDrawer< DerivedRenderApp >", "classvcl_1_1AbstractViewerDrawer.html", null ]
+      ] ],
+      [ "vcl::TextDrawer< DerivedRenderApp >", "classvcl_1_1TextDrawer.html", null ]
+    ] ],
     [ "vcl::Plane< Scalar, NORM >", "classvcl_1_1Plane.html", null ],
     [ "vcl::PointerFromIndexIterator< Iterator, ElementType, ParentElement, CNST >", "classvcl_1_1PointerFromIndexIterator.html", null ],
     [ "vcl::PointSampler< PointT >", "classvcl_1_1PointSampler.html", null ],
     [ "vcl::Polygon< PointT >", "classvcl_1_1Polygon.html", null ],
-    [ "vcl::PrimitiveType", "structvcl_1_1PrimitiveType.html", null ],
     [ "vcl::PrincipalCurvature< Scalar >", "classvcl_1_1PrincipalCurvature.html", null ],
+    [ "vcl::ProgramManager", "classvcl_1_1ProgramManager.html", null ],
+    [ "vcl::Camera< Scalar >::ProjectionMode", "structvcl_1_1Camera_1_1ProjectionMode.html", null ],
+    [ "QDockWidget", null, [
+      [ "vcl::qt::FilterMeshDockWidget", "classvcl_1_1qt_1_1FilterMeshDockWidget.html", null ]
+    ] ],
+    [ "QFileDialog", null, [
+      [ "vcl::qt::ActionFileDialog< IOAction, OPEN >", "classvcl_1_1qt_1_1ActionFileDialog.html", null ],
+      [ "vcl::qt::ScreenShotDialog", "classvcl_1_1qt_1_1ScreenShotDialog.html", null ]
+    ] ],
+    [ "QFrame", null, [
+      [ "vcl::qt::DrawableObjectFrame", "classvcl_1_1qt_1_1DrawableObjectFrame.html", null ],
+      [ "vcl::qt::DrawableObjectVectorFrame", "classvcl_1_1qt_1_1DrawableObjectVectorFrame.html", null ],
+      [ "vcl::qt::GenericMeshRenderSettingsFrame", "classvcl_1_1qt_1_1GenericMeshRenderSettingsFrame.html", [
+        [ "vcl::qt::EdgesFrame", "classvcl_1_1qt_1_1EdgesFrame.html", null ],
+        [ "vcl::qt::PointsFrame", "classvcl_1_1qt_1_1PointsFrame.html", null ],
+        [ "vcl::qt::SurfaceFrame", "classvcl_1_1qt_1_1SurfaceFrame.html", null ],
+        [ "vcl::qt::WireframeFrame", "classvcl_1_1qt_1_1WireframeFrame.html", null ]
+      ] ],
+      [ "vcl::qt::MeshRenderSettingsFrame", "classvcl_1_1qt_1_1MeshRenderSettingsFrame.html", null ],
+      [ "vcl::qt::MultiParameterFrame", "classvcl_1_1qt_1_1MultiParameterFrame.html", [
+        [ "vcl::qt::ParameterFrame", "classvcl_1_1qt_1_1ParameterFrame.html", null ]
+      ] ],
+      [ "vcl::qt::ParameterSubFrame", "classvcl_1_1qt_1_1ParameterSubFrame.html", null ],
+      [ "vcl::qt::TextEditLogger", "classvcl_1_1qt_1_1TextEditLogger.html", null ]
+    ] ],
+    [ "QGridLayout", null, [
+      [ "vcl::qt::ParametersGridLayout", "classvcl_1_1qt_1_1ParametersGridLayout.html", null ]
+    ] ],
+    [ "QIODevice", null, [
+      [ "vcl::qt::DebugIODevice", "classvcl_1_1qt_1_1DebugIODevice.html", null ],
+      [ "vcl::qt::ErrorIODevice", "classvcl_1_1qt_1_1ErrorIODevice.html", null ],
+      [ "vcl::qt::MessageIODevice", "classvcl_1_1qt_1_1MessageIODevice.html", null ],
+      [ "vcl::qt::WarningIODevice", "classvcl_1_1qt_1_1WarningIODevice.html", null ]
+    ] ],
+    [ "QLabel", null, [
+      [ "vcl::qt::QClickableLabel", "classvcl_1_1qt_1_1QClickableLabel.html", null ]
+    ] ],
+    [ "QMainWindow", null, [
+      [ "vcl::qt::MeshProcessingMainWindow", "classvcl_1_1qt_1_1MeshProcessingMainWindow.html", null ]
+    ] ],
+    [ "QObject", null, [
+      [ "ImGuiQtEventFilter", "classImGuiQtEventFilter.html", null ]
+    ] ],
     [ "Eigen::Quaternion", null, [
+      [ "vcl::Quaternion< float >", "classvcl_1_1Quaternion.html", null ],
       [ "vcl::Quaternion< Scalar >", "classvcl_1_1Quaternion.html", null ]
     ] ],
+    [ "vcl::KDTree< PointType >::QueryNode", "structvcl_1_1KDTree_1_1QueryNode.html", null ],
+    [ "QWidget", null, [
+      [ "vcl::qt::MeshViewer", "classvcl_1_1qt_1_1MeshViewer.html", null ]
+    ] ],
+    [ "vcl::ReadBufferTypes", "structvcl_1_1ReadBufferTypes.html", null ],
     [ "vcl::comp::ReferencesComponentTriggerer< T >", "classvcl_1_1comp_1_1ReferencesComponentTriggerer.html", null ],
     [ "vcl::comp::ReferencesComponentTriggerer< ReferencedTypes >", "classvcl_1_1comp_1_1ReferencesComponentTriggerer.html", [
       [ "vcl::comp::Component< TextureImages, CompId::TEXTURE_IMAGES, detail::TData, void, false, false >", "classvcl_1_1comp_1_1Component.html", [
@@ -369,6 +489,7 @@ var hierarchy =
       [ "vcl::KeyRefValueRefPair< T1, T2 >", "classvcl_1_1KeyRefValueRefPair.html", null ]
     ] ],
     [ "vcl::RegularGrid< Scalar, N >", "classvcl_1_1RegularGrid.html", null ],
+    [ "vcl::Element< ELEM_ID, MeshType, Comps >::ComponentIDPred< COMP_ID >::SameCmpPred< Cont >", "structvcl_1_1Element_1_1ComponentIDPred_1_1SameCmpPred.html", null ],
     [ "vcl::SaveSettings", "structvcl_1_1SaveSettings.html", null ],
     [ "vcl::SecondRefPair< T1, T2 >", "classvcl_1_1SecondRefPair.html", [
       [ "vcl::KeyValueRefPair< T1, T2 >", "classvcl_1_1KeyValueRefPair.html", null ]
@@ -377,33 +498,40 @@ var hierarchy =
     [ "vcl::Segment< PointT >", "classvcl_1_1Segment.html", null ],
     [ "vcl::Sphere< Scalar >", "classvcl_1_1Sphere.html", null ],
     [ "vcl::StaticGridIterator< KeyType, ValueType, GridType >", "classvcl_1_1StaticGridIterator.html", null ],
-    [ "vcl::TexCoord< Scalar >", "classvcl_1_1TexCoord.html", null ],
+    [ "vcl::TexCoord< Scalar >", "classvcl_1_1TexCoord.html", [
+      [ "vcl::TexCoordIndexed< Scalar >", "classvcl_1_1TexCoordIndexed.html", null ]
+    ] ],
+    [ "vcl::TextManager", "classvcl_1_1TextManager.html", null ],
     [ "vcl::Texture", "classvcl_1_1Texture.html", null ],
+    [ "vcl::TextView", "classvcl_1_1TextView.html", null ],
     [ "vcl::Timer", "classvcl_1_1Timer.html", null ],
     [ "vcl::Tokenizer", "classvcl_1_1Tokenizer.html", null ],
+    [ "vcl::TrackBall< Scalar >", "classvcl_1_1TrackBall.html", null ],
+    [ "vcl::TrackBall< float >", "classvcl_1_1TrackBall.html", null ],
+    [ "vcl::TrackBall< Scalar >::TransformArgs", "structvcl_1_1TrackBall_1_1TransformArgs.html", null ],
     [ "vcl::Triangle< PointT >", "classvcl_1_1Triangle.html", null ],
     [ "vcl::TriangleWrapper< PointT >", "classvcl_1_1TriangleWrapper.html", null ],
     [ "vcl::TriPolyIndexBiMap", "classvcl_1_1TriPolyIndexBiMap.html", null ],
-    [ "vcl::vc::TypeMapping< T >", "structvcl_1_1vc_1_1TypeMapping.html", null ],
-    [ "vcl::vc::TypeMapping< T >", "structvcl_1_1vc_1_1TypeMapping_3_01T_01_4.html", null ],
     [ "vcl::TypesSatisfyCondition< Pred, Args >", "structvcl_1_1TypesSatisfyCondition.html", null ],
     [ "vcl::TypesSatisfyCondition< Pred, TypeWrapper< Args... > >", "structvcl_1_1TypesSatisfyCondition_3_01Pred_00_01TypeWrapper_3_01Args_8_8_8_01_4_01_4.html", null ],
+    [ "vcl::Element< ELEM_ID, MeshType, Comps >::GetComponentFromID< COMP_ID >::TypeUnwrapper< typename >", "structvcl_1_1Element_1_1GetComponentFromID_1_1TypeUnwrapper.html", null ],
+    [ "vcl::Element< ELEM_ID, MeshType, Comps >::GetComponentFromID< COMP_ID >::TypeUnwrapper< TypeWrapper< C > >", "structvcl_1_1Element_1_1GetComponentFromID_1_1TypeUnwrapper_3_01TypeWrapper_3_01C_01_4_01_4.html", null ],
     [ "vcl::TypeWrapper< Args >", "structvcl_1_1TypeWrapper.html", null ],
     [ "vcl::UndirectedNode< T >", "classvcl_1_1UndirectedNode.html", null ],
+    [ "vcl::Uniform", "classvcl_1_1Uniform.html", null ],
     [ "vcl::UnorderedPairComparator< T >", "structvcl_1_1UnorderedPairComparator.html", null ],
+    [ "vcl::VclFont", "structvcl_1_1VclFont.html", null ],
+    [ "vcl::VclProgram", "structvcl_1_1VclProgram.html", null ],
     [ "vcl::Vector< T, N >", "classvcl_1_1Vector.html", [
-      [ "vcl::PointerVector< std::shared_ptr< MeshI > >", "classvcl_1_1PointerVector.html", [
-        [ "vcl::proc::MeshVector", "classvcl_1_1proc_1_1MeshVector.html", null ]
-      ] ],
       [ "vcl::PointerVector< T, N >", "classvcl_1_1PointerVector.html", [
-        [ "vcl::PolymorphicObjectVector< Parameter >", "classvcl_1_1PolymorphicObjectVector.html", [
-          [ "vcl::proc::ParameterVector", "classvcl_1_1proc_1_1ParameterVector.html", null ]
+        [ "vcl::PolymorphicObjectVector< DrawableObject >", "classvcl_1_1PolymorphicObjectVector.html", [
+          [ "vcl::DrawableObjectVector", "classvcl_1_1DrawableObjectVector.html", null ]
         ] ],
-        [ "vcl::PolymorphicObjectVector< vcl::proc::Action >", "classvcl_1_1PolymorphicObjectVector.html", null ],
         [ "vcl::PolymorphicObjectVector< T, N >", "classvcl_1_1PolymorphicObjectVector.html", null ]
       ] ]
     ] ],
     [ "vcl::Vector< T, -1 >", "classvcl_1_1Vector.html", null ],
+    [ "vcl::VertexBuffer", "classvcl_1_1VertexBuffer.html", null ],
     [ "vcl::mesh::VerticalComponentsVectorTuple< Comp >", "classvcl_1_1mesh_1_1VerticalComponentsVectorTuple.html", null ],
     [ "vcl::mesh::VerticalComponentsVectorTuple< Comp... >", "classvcl_1_1mesh_1_1VerticalComponentsVectorTuple.html", [
       [ "vcl::mesh::VerticalComponentsVectorTuple< TypeWrapper< Comp... > >", "classvcl_1_1mesh_1_1VerticalComponentsVectorTuple_3_01TypeWrapper_3_01Comp_8_8_8_01_4_01_4.html", null ]
@@ -411,5 +539,16 @@ var hierarchy =
     [ "vcl::mesh::VerticalComponentsVectorTuple< vcl::TypeWrapper >", "classvcl_1_1mesh_1_1VerticalComponentsVectorTuple.html", null ],
     [ "std::ranges::view_interface", null, [
       [ "vcl::View< It >", "classvcl_1_1View.html", null ]
+    ] ],
+    [ "vcl::qt::WidgetManager< DerivedRenderApp >", "classvcl_1_1qt_1_1WidgetManager.html", null ],
+    [ "vcl::glfw::WindowManager< DerivedRenderApp >", "classvcl_1_1glfw_1_1WindowManager.html", null ],
+    [ "vcl::WindowManagerId", "structvcl_1_1WindowManagerId.html", null ],
+    [ "WindowManagerT", null, [
+      [ "vcl::RenderApp< WindowManagerT, CanvasT, Drawers >", "classvcl_1_1RenderApp.html", null ]
+    ] ],
+    [ "vcl::RenderApp< WindowManagerT, CanvasT, Drawers >::WM", "classvcl_1_1RenderApp_1_1WM.html", null ],
+    [ "vcl::MeshType", null, [
+      [ "vcl::DrawableMeshBGFX< MeshType >", "classvcl_1_1DrawableMeshBGFX.html", null ],
+      [ "vcl::DrawableMeshOpenGL2< MeshType >", "classvcl_1_1DrawableMeshOpenGL2.html", null ]
     ] ]
 ];

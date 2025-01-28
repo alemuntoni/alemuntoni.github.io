@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visual Computing Library: include/vclib/load_save/stl/capability.h Source File</title>
+<title>Visual Computing Library: vclib/core/include/vclib/load_save/stl/capability.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -104,11 +104,11 @@ $(document).ready(function(){initNavTree('stl_2capability_8h_source.html',''); i
   <div class="headertitle"><div class="title">capability.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="stl_2capability_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2024                                                    *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2025                                                    *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
@@ -129,51 +129,38 @@ $(document).ready(function(){initNavTree('stl_2capability_8h_source.html',''); i
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_LOAD_SAVE_STL_CAPABILITY_H</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_LOAD_SAVE_STL_CAPABILITY_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;<a class="code" href="mesh__info_8h.html">vclib/space/complex/mesh_info.h</a>&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;vclib/space/complex/mesh_info.h&gt;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">namespace </span>vcl {</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="foldopen" id="foldopen00030" data-start="{" data-end="}">
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="namespacevcl.html#aaa57501f92552253dc35fc6cf5797540">   30</a></span><span class="keyword">inline</span> <a class="code hl_class" href="classvcl_1_1MeshInfo.html">MeshInfo</a> <a class="code hl_function" href="namespacevcl.html#aaa57501f92552253dc35fc6cf5797540">stlFormatCapability</a>()</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">inline</span> MeshInfo stlFormatCapability()</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>{</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_class" href="classvcl_1_1MeshInfo.html">MeshInfo</a> info;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    MeshInfo info;</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    info.<a class="code hl_function" href="classvcl_1_1MeshInfo.html#aa5b88cc405fa2478d54472190111522c">setTriangleMesh</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    info.setTriangleMesh();</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    info.<a class="code hl_function" href="classvcl_1_1MeshInfo.html#a3b7a4086de46249949b49778082135e0">setVertices</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    info.setVertices();</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    info.<a class="code hl_function" href="classvcl_1_1MeshInfo.html#ab416468992553495ca9e1e022c9797dc">setVertexCoords</a>();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    info.setVertexCoords();</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    info.<a class="code hl_function" href="classvcl_1_1MeshInfo.html#a70ee34075954abb0cb4dfc90e19f99f0">setFaces</a>();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    info.setFaces();</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    info.<a class="code hl_function" href="classvcl_1_1MeshInfo.html#a5193a033cb000d1ed3c541326aa8f562">setFaceVRefs</a>();</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    info.<a class="code hl_function" href="classvcl_1_1MeshInfo.html#ad93a695eb3766515936ed8f473ccc638">setFaceColors</a>();</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    info.<a class="code hl_function" href="classvcl_1_1MeshInfo.html#acac73b7b33c7572621635ec151507975">setFaceNormals</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    info.setFaceVRefs();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    info.setFaceColors();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    info.setFaceNormals();</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordflow">return</span> info;</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
-</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>} <span class="comment">// namespace vcl</span></div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#endif </span><span class="comment">// VCL_LOAD_SAVE_STL_CAPABILITY_H</span></div>
-<div class="ttc" id="aclassvcl_1_1MeshInfo_html"><div class="ttname"><a href="classvcl_1_1MeshInfo.html">vcl::MeshInfo</a></div><div class="ttdoc">A simple class that allows to store which elements and their components have been imported/loaded or ...</div><div class="ttdef"><b>Definition</b> mesh_info.h:76</div></div>
-<div class="ttc" id="aclassvcl_1_1MeshInfo_html_a3b7a4086de46249949b49778082135e0"><div class="ttname"><a href="classvcl_1_1MeshInfo.html#a3b7a4086de46249949b49778082135e0">vcl::MeshInfo::setVertices</a></div><div class="ttdeci">void setVertices(bool b=true)</div><div class="ttdef"><b>Definition</b> mesh_info.h:485</div></div>
-<div class="ttc" id="aclassvcl_1_1MeshInfo_html_a5193a033cb000d1ed3c541326aa8f562"><div class="ttname"><a href="classvcl_1_1MeshInfo.html#a5193a033cb000d1ed3c541326aa8f562">vcl::MeshInfo::setFaceVRefs</a></div><div class="ttdeci">void setFaceVRefs(bool b=true)</div><div class="ttdef"><b>Definition</b> mesh_info.h:519</div></div>
-<div class="ttc" id="aclassvcl_1_1MeshInfo_html_a70ee34075954abb0cb4dfc90e19f99f0"><div class="ttname"><a href="classvcl_1_1MeshInfo.html#a70ee34075954abb0cb4dfc90e19f99f0">vcl::MeshInfo::setFaces</a></div><div class="ttdeci">void setFaces(bool b=true)</div><div class="ttdef"><b>Definition</b> mesh_info.h:517</div></div>
-<div class="ttc" id="aclassvcl_1_1MeshInfo_html_aa5b88cc405fa2478d54472190111522c"><div class="ttname"><a href="classvcl_1_1MeshInfo.html#aa5b88cc405fa2478d54472190111522c">vcl::MeshInfo::setTriangleMesh</a></div><div class="ttdeci">void setTriangleMesh()</div><div class="ttdef"><b>Definition</b> mesh_info.h:467</div></div>
-<div class="ttc" id="aclassvcl_1_1MeshInfo_html_ab416468992553495ca9e1e022c9797dc"><div class="ttname"><a href="classvcl_1_1MeshInfo.html#ab416468992553495ca9e1e022c9797dc">vcl::MeshInfo::setVertexCoords</a></div><div class="ttdeci">void setVertexCoords(bool b=true, DataType t=PrimitiveType::DOUBLE)</div><div class="ttdef"><b>Definition</b> mesh_info.h:487</div></div>
-<div class="ttc" id="aclassvcl_1_1MeshInfo_html_acac73b7b33c7572621635ec151507975"><div class="ttname"><a href="classvcl_1_1MeshInfo.html#acac73b7b33c7572621635ec151507975">vcl::MeshInfo::setFaceNormals</a></div><div class="ttdeci">void setFaceNormals(bool b=true, DataType t=PrimitiveType::FLOAT)</div><div class="ttdef"><b>Definition</b> mesh_info.h:524</div></div>
-<div class="ttc" id="aclassvcl_1_1MeshInfo_html_ad93a695eb3766515936ed8f473ccc638"><div class="ttname"><a href="classvcl_1_1MeshInfo.html#ad93a695eb3766515936ed8f473ccc638">vcl::MeshInfo::setFaceColors</a></div><div class="ttdeci">void setFaceColors(bool b=true, DataType t=PrimitiveType::UCHAR)</div><div class="ttdef"><b>Definition</b> mesh_info.h:529</div></div>
-<div class="ttc" id="amesh__info_8h_html"><div class="ttname"><a href="mesh__info_8h.html">mesh_info.h</a></div></div>
-<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition</b> bounding_box.h:48</div></div>
-<div class="ttc" id="anamespacevcl_html_aaa57501f92552253dc35fc6cf5797540"><div class="ttname"><a href="namespacevcl.html#aaa57501f92552253dc35fc6cf5797540">vcl::stlFormatCapability</a></div><div class="ttdeci">MeshInfo stlFormatCapability()</div><div class="ttdef"><b>Definition</b> capability.h:30</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d2fdbf172f8ae9790b339bfcb66b3af7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_b062475d276f2bc8526a3b8fd274bef1.html">load_save</a></li><li class="navelem"><a class="el" href="dir_ef362fb329e8ae9cc9bbfb28172f0f1a.html">stl</a></li><li class="navelem"><a class="el" href="stl_2capability_8h.html">capability.h</a></li>
+    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_d82254d0eafdb62b552353fdd758eaeb.html">load_save</a></li><li class="navelem"><a class="el" href="dir_f81775b8bd525390bc77fbacd0eb2558.html">stl</a></li><li class="navelem"><b>capability.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

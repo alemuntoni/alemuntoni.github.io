@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['quality_0',['quality',['../group__edge__components.html#ga5cdf1bd7cca492e8f78174f0ed3db70a',1,'vcl::edge::Quality'],['../group__face__components.html#ga7d5892f5fbedd447bd8d53d0a0e6a942',1,'vcl::face::Quality'],['../group__vert__components.html#ga14bd6acafdea9280e8af549626271746',1,'vcl::vert::Quality']]],
-  ['qualityd_1',['qualityd',['../group__components.html#gaefd4d50585ce2aa170d469eb1d4bbce3',1,'vcl::comp::Qualityd'],['../group__edge__components.html#ga07dee132a85390c196c57f0247b998ee',1,'vcl::edge::Qualityd'],['../group__face__components.html#ga7ad79d436764fd50a70b5f61cbfb1447',1,'vcl::face::Qualityd'],['../group__vert__components.html#ga1a3f0b35bef1194a2a059baeeca56d3a',1,'vcl::vert::Qualityd']]],
-  ['qualityf_2',['qualityf',['../group__components.html#gad14bbf090e3c6268f9b6d297f142b5b3',1,'vcl::comp::Qualityf'],['../group__edge__components.html#ga100855a87bd0c2f0e27c578aa6407acf',1,'vcl::edge::Qualityf'],['../group__face__components.html#ga31bee7c9eab8c40fea88ef0e1a91195e',1,'vcl::face::Qualityf'],['../group__vert__components.html#ga269655f9d6880ff9e0d95a725382388a',1,'vcl::vert::Qualityf']]],
-  ['qualitytype_3',['QualityType',['../classvcl_1_1comp_1_1Quality.html#a8ff000dce1397d1c6cb69c23fa10fe18',1,'vcl::comp::Quality']]],
-  ['queryboundeddistfunction_4',['QueryBoundedDistFunction',['../classvcl_1_1AbstractGrid.html#af3105d63ad6aa895e62002eb4580aa4e',1,'vcl::AbstractGrid']]],
-  ['querydistfunction_5',['QueryDistFunction',['../classvcl_1_1AbstractGrid.html#ab35a3aa3ed5c4caf6c7fd39d2ef3eec7',1,'vcl::AbstractGrid']]]
+  ['valuetype_0',['valuetype',['../classvcl_1_1Array.html#a6d5640f6e77f808983ff257e327418a0',1,'vcl::Array::ValueType'],['../classvcl_1_1Vector.html#a370f8115d4ec9476dc8fd018232c6b0e',1,'vcl::Vector::ValueType']]],
+  ['vertextype_1',['VertexType',['../classvcl_1_1comp_1_1VertexReferences.html#a6e706cc54ddca3bd2ab917d2ad43e7c1',1,'vcl::comp::VertexReferences']]]
 ];

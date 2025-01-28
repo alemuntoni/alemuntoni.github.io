@@ -1,24 +1,12 @@
 var searchData=
 [
-  ['base_0',['Base',['../classvcl_1_1comp_1_1ReferenceContainerComponent.html#a6455f3247268c88b45b17171a910dfd6',1,'vcl::comp::ReferenceContainerComponent']]],
-  ['bboxtype_1',['BBoxType',['../classvcl_1_1RegularGrid.html#a07756233b2e391a4642f792831cc46ce',1,'vcl::RegularGrid']]],
-  ['bitflags_2',['bitflags',['../group__edge__components.html#gaa0f4b34812de9436e8c3858e0f4da1d6',1,'vcl::edge::BitFlags'],['../group__face__components.html#gadb40f1264607accae52638613505271a',1,'vcl::face::BitFlags'],['../group__vert__components.html#ga58212a54e42eb52aed2a439e5de77891',1,'vcl::vert::BitFlags']]],
-  ['bitset16_3',['BitSet16',['../group__space__core.html#ga786ec6ce6be37c1142bbf8869a43bad2',1,'vcl']]],
-  ['bitset32_4',['BitSet32',['../group__space__core.html#gaec46141b5b3ac113188412f11ebe977e',1,'vcl']]],
-  ['bitset64_5',['BitSet64',['../group__space__core.html#ga63e94ce4d048118f147e2fb0c8c1eeaa',1,'vcl']]],
-  ['bitset8_6',['BitSet8',['../group__space__core.html#gadae55ab660469ee37aa80a2b619527fa',1,'vcl']]],
-  ['boundingbox_7',['BoundingBox',['../group__mesh__components.html#gaa7f3490f12d500ce1ab225404b20b5fb',1,'vcl::mesh']]],
-  ['boundingbox3_8',['boundingbox3',['../group__mesh__components.html#ga494767309af98551da2b348e2158211f',1,'vcl::mesh::BoundingBox3'],['../group__components.html#gaba5675d4f893151fd9cfd4ef6cf5b7ff',1,'vcl::comp::BoundingBox3']]],
-  ['boundingbox3d_9',['boundingbox3d',['../group__components.html#ga1b301f5c0a87431129e09412592e1027',1,'vcl::comp::BoundingBox3d'],['../group__mesh__components.html#ga4b3bdfb2c5e702985f77f2ce545ec14c',1,'vcl::mesh::BoundingBox3d']]],
-  ['boundingbox3f_10',['boundingbox3f',['../group__components.html#gac2572a57804d1889936ba6e175c82979',1,'vcl::comp::BoundingBox3f'],['../group__mesh__components.html#gab61aa8a9d92782fc117651e7d748d1a3',1,'vcl::mesh::BoundingBox3f']]],
-  ['boundingboxtype_11',['BoundingBoxType',['../classvcl_1_1comp_1_1BoundingBox.html#a17a84cf4b8d0cbb364fdb1001235b0a8',1,'vcl::comp::BoundingBox']]],
-  ['box2_12',['Box2',['../namespacevcl.html#ad892770b57d7187fe007fc5c7b8e28c6',1,'vcl']]],
-  ['box2d_13',['Box2d',['../namespacevcl.html#a77d7b12e8258d508469b505f056917f1',1,'vcl']]],
-  ['box2f_14',['Box2f',['../namespacevcl.html#ae6dc1589c361fc5f1b6444b74aae377d',1,'vcl']]],
-  ['box2i_15',['Box2i',['../namespacevcl.html#a43d66b66fa1219da110325fc3c9020f9',1,'vcl']]],
-  ['box3_16',['Box3',['../namespacevcl.html#a6539e58b4183d50e78e631047cd7ad12',1,'vcl']]],
-  ['box3d_17',['Box3d',['../namespacevcl.html#a4d5a81b5a74bca25157b2bf0de2c3f6d',1,'vcl']]],
-  ['box3f_18',['Box3f',['../namespacevcl.html#ad03a804ee48eb9b3cd5aaf47f7641b3f',1,'vcl']]],
-  ['box3i_19',['Box3i',['../namespacevcl.html#a84825556201de0537b996b08d1f8aeca',1,'vcl']]],
-  ['boxtype_20',['BoxType',['../classvcl_1_1Sphere.html#a05f1b8cc541c410b40010ec28e8c6f65',1,'vcl::Sphere']]]
+  ['bitset16_0',['BitSet16',['../group__space__core.html#ga786ec6ce6be37c1142bbf8869a43bad2',1,'vcl']]],
+  ['bitset32_1',['BitSet32',['../group__space__core.html#gaec46141b5b3ac113188412f11ebe977e',1,'vcl']]],
+  ['bitset64_2',['BitSet64',['../group__space__core.html#ga63e94ce4d048118f147e2fb0c8c1eeaa',1,'vcl']]],
+  ['bitset8_3',['BitSet8',['../group__space__core.html#gadae55ab660469ee37aa80a2b619527fa',1,'vcl']]],
+  ['boundingbox_4',['BoundingBox',['../group__mesh__components.html#gaa7f3490f12d500ce1ab225404b20b5fb',1,'vcl::mesh']]],
+  ['boundingbox3_5',['BoundingBox3',['../group__components.html#gaba5675d4f893151fd9cfd4ef6cf5b7ff',1,'vcl::comp']]],
+  ['boundingbox3d_6',['BoundingBox3d',['../group__components.html#ga1b301f5c0a87431129e09412592e1027',1,'vcl::comp']]],
+  ['boundingbox3f_7',['BoundingBox3f',['../group__components.html#gac2572a57804d1889936ba6e175c82979',1,'vcl::comp']]],
+  ['boundingboxtype_8',['BoundingBoxType',['../classvcl_1_1comp_1_1BoundingBox.html#a17a84cf4b8d0cbb364fdb1001235b0a8',1,'vcl::comp::BoundingBox']]]
 ];

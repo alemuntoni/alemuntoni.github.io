@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visual Computing Library: include/vclib/load_save/ply/detail/ply.h Source File</title>
+<title>Visual Computing Library: vclib/core/include/vclib/load_save/ply/detail/ply.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -104,11 +104,11 @@ $(document).ready(function(){initNavTree('ply_8h_source.html',''); initResizable
   <div class="headertitle"><div class="title">ply.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="ply_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2024                                                    *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2025                                                    *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
@@ -129,9 +129,9 @@ $(document).ready(function(){initNavTree('ply_8h_source.html',''); initResizable
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_LOAD_SAVE_PLY_DETAIL_PLY_H</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_LOAD_SAVE_PLY_DETAIL_PLY_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;list&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;vclib/misc/tokenizer.h&gt;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="tokenizer_8h.html">vclib/misc/tokenizer.h</a>&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;list&gt;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span>vcl::detail {</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
@@ -167,40 +167,37 @@ $(document).ready(function(){initNavTree('ply_8h_source.html',''); initResizable
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    vertex2</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>} PropertyName;</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keyword">using </span>PropertyType = <a class="code hl_struct" href="structvcl_1_1PrimitiveType.html">vcl::PrimitiveType</a>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keyword">using </span>PropertyType = <a class="code hl_enumeration" href="group__types.html#ga35a36b617de9550e23e0c1426a783464">PrimitiveType</a>;</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>} <span class="comment">// namespace ply</span></div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keyword">struct </span>PlyProperty</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>{</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    ply::PropertyName       name;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <a class="code hl_enumeration" href="structvcl_1_1PrimitiveType.html#af7c35736cf3a350dd3c62ae35fad52c3">ply::PropertyType::Enum</a> type;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">bool</span>                    list = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <a class="code hl_enumeration" href="structvcl_1_1PrimitiveType.html#af7c35736cf3a350dd3c62ae35fad52c3">ply::PropertyType::Enum</a> listSizeType;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    std::string unknownPropertyName; <span class="comment">// when a property is not recognized</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    ply::PropertyName name;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    ply::PropertyType type;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">bool</span>              list = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    ply::PropertyType listSizeType;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    std::string       unknownPropertyName; <span class="comment">// when a property is not recognized</span></div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>};</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="keyword">struct </span>PlyElement</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>{</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    ply::ElementType       type;</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    std::list&lt;PlyProperty&gt; properties;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>                   numberElements;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    uint                   numberElements;</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    std::string unknownElementType; <span class="comment">// when an element is not recognized</span></div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>};</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>} <span class="comment">// namespace vcl::detail</span></div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">#endif </span><span class="comment">// VCL_LOAD_SAVE_PLY_DETAIL_PLY_H</span></div>
-<div class="ttc" id="anamespacevcl_html_af74b42dd9d759d565bb701a5b845d05c"><div class="ttname"><a href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">vcl::uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition</b> base.h:34</div></div>
-<div class="ttc" id="astructvcl_1_1PrimitiveType_html"><div class="ttname"><a href="structvcl_1_1PrimitiveType.html">vcl::PrimitiveType</a></div><div class="ttdoc">A simple type that enumerates the main primitive types.</div><div class="ttdef"><b>Definition</b> base.h:58</div></div>
-<div class="ttc" id="astructvcl_1_1PrimitiveType_html_af7c35736cf3a350dd3c62ae35fad52c3"><div class="ttname"><a href="structvcl_1_1PrimitiveType.html#af7c35736cf3a350dd3c62ae35fad52c3">vcl::PrimitiveType::Enum</a></div><div class="ttdeci">Enum</div><div class="ttdef"><b>Definition</b> base.h:59</div></div>
-<div class="ttc" id="atokenizer_8h_html"><div class="ttname"><a href="tokenizer_8h.html">tokenizer.h</a></div></div>
+<div class="ttc" id="agroup__types_html_ga35a36b617de9550e23e0c1426a783464"><div class="ttname"><a href="group__types.html#ga35a36b617de9550e23e0c1426a783464">vcl::PrimitiveType</a></div><div class="ttdeci">PrimitiveType</div><div class="ttdoc">A simple type that enumerates the main primitive types.</div><div class="ttdef"><b>Definition</b> base.h:58</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d2fdbf172f8ae9790b339bfcb66b3af7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_b062475d276f2bc8526a3b8fd274bef1.html">load_save</a></li><li class="navelem"><a class="el" href="dir_d1e73a48f65f4a3060a336415e0e07b9.html">ply</a></li><li class="navelem"><a class="el" href="dir_f4877dc67a23fd17e5aaf55c1e5e0dfe.html">detail</a></li><li class="navelem"><a class="el" href="ply_8h.html">ply.h</a></li>
+    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_d82254d0eafdb62b552353fdd758eaeb.html">load_save</a></li><li class="navelem"><a class="el" href="dir_11be3b4d45313fb6f4a2595834ef2877.html">ply</a></li><li class="navelem"><a class="el" href="dir_aedef405df8af65188067e19a571083f.html">detail</a></li><li class="navelem"><b>ply.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
