@@ -107,67 +107,72 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1comp_1_1HasAdjacentEdges
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasAdjacentEdges.html">vcl::comp::HasAdjacentEdges</a> =  <span class="keyword">requires</span> (</div>
-<div class="line">    T                                          o,</div>
-<div class="line">    <span class="keyword">const</span> T&amp;                                   co,</div>
-<div class="line">    <span class="keyword">typename</span> T::AdjacentEdgeType               e,</div>
-<div class="line">    std::vector&lt;typename T::AdjacentEdgeType*&gt; v) {</div>
+<div class="line">    T&amp;&amp;                                                   obj,</div>
+<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::AdjacentEdgeType               e,</div>
+<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::AdjacentEdgeIterator           it,</div>
+<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::ConstAdjacentEdgeIterator      cIt,</div>
+<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::ConstAdjacentEdgeIndexIterator cIIt,</div>
+<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::AdjacentEdgeType*              eP,</div>
+<div class="line">    <span class="keyword">const</span> <span class="keyword">typename</span> RemoveRef&lt;T&gt;::AdjacentEdgeType*        cEP,</div>
+<div class="line">    std::vector&lt;typename RemoveRef&lt;T&gt;::AdjacentEdgeType*&gt; vec) {</div>
+<div class="line">    RemoveRef&lt;T&gt;::ADJ_EDGE_NUMBER;</div>
+<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::AdjacentEdgeType;</div>
+<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::AdjacentEdgeIterator;</div>
+<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::ConstAdjacentEdgeIterator;</div>
+<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::ConstAdjacentEdgeIndexIterator;</div>
+<div class="line"> </div>
+<div class="line">    { obj.adjEdgesNumber() } -&gt; std::same_as&lt;uint&gt;;</div>
+<div class="line"> </div>
+<div class="line">    { <a class="code hl_class" href="classvcl_1_1Box.html">obj</a>.adjEdge(<a class="code hl_class" href="classvcl_1_1Box.html">uint</a>()) } -&gt; std::convertible_to&lt;<span class="keyword">decltype</span>(<a class="code hl_class" href="classvcl_1_1Box.html">cEP</a>)&gt;;</div>
+<div class="line">    { <a class="code hl_class" href="classvcl_1_1Box.html">obj</a>.adjEdgeIndex(uint()) } -&gt; std::same_as&lt;uint&gt;;</div>
+<div class="line">    { obj.adjEdgeMod(<span class="keywordtype">int</span>()) } -&gt; std::convertible_to&lt;<span class="keyword">decltype</span>(cEP)&gt;;</div>
+<div class="line">    { obj.adjEdgeIndexMod(uint()) } -&gt; std::same_as&lt;uint&gt;;</div>
+<div class="line"> </div>
+<div class="line">    { obj.containsAdjEdge(&amp;e) } -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line">    { obj.containsAdjEdge(uint()) } -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line">    { obj.indexOfAdjEdge(&amp;e) } -&gt; std::same_as&lt;uint&gt;;</div>
+<div class="line">    { obj.indexOfAdjEdge(uint()) } -&gt; std::same_as&lt;uint&gt;;</div>
+<div class="line"> </div>
+<div class="line">    { obj.adjEdgeBegin() } -&gt; InputIterator&lt;<span class="keyword">decltype</span>(cEP)&gt;;</div>
+<div class="line">    { obj.adjEdgeEnd() } -&gt; InputIterator&lt;<span class="keyword">decltype</span>(cEP)&gt;;</div>
+<div class="line"> </div>
+<div class="line">    { obj.adjEdgeIndexBegin() } -&gt; InputIterator&lt;uint&gt;;</div>
+<div class="line">    { obj.adjEdgeIndexEnd() } -&gt; InputIterator&lt;uint&gt;;</div>
+<div class="line"> </div>
+<div class="line">    { obj.adjEdges() } -&gt; InputRange&lt;<span class="keyword">decltype</span>(cEP)&gt;;</div>
+<div class="line">    { obj.adjEdgeIndices() } -&gt; InputRange&lt;uint&gt;;</div>
+<div class="line"> </div>
 <div class="line">    </div>
-<div class="line">    T::ADJ_EDGE_NUMBER;</div>
-<div class="line">    <span class="keyword">typename</span> T::AdjacentEdgeType;</div>
-<div class="line">    <span class="keyword">typename</span> T::AdjacentEdgeIterator;</div>
-<div class="line">    <span class="keyword">typename</span> T::ConstAdjacentEdgeIterator;</div>
-<div class="line">    <span class="keyword">typename</span> T::ConstAdjacentEdgeIndexIterator;</div>
+<div class="line">    <span class="keyword">requires</span> IsConst&lt;T&gt; || <span class="keyword">requires</span> {</div>
+<div class="line">        { obj.adjEdge(uint()) } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(eP)&gt;;</div>
+<div class="line">        { obj.adjEdgeMod(<span class="keywordtype">int</span>()) } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(eP)&gt;;</div>
 <div class="line"> </div>
-<div class="line">    { o.adjEdgesNumber() } -&gt; std::same_as&lt;uint&gt;;</div>
-<div class="line">    { <a class="code hl_class" href="classvcl_1_1Matrix.html">o</a>.adjEdge(<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>()) } -&gt; std::same_as&lt;typename T::AdjacentEdgeType*&gt;;</div>
-<div class="line">    { <a class="code hl_class" href="classvcl_1_1Matrix.html">co</a>.adjEdge(<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>()) } -&gt; std::same_as&lt;const typename T::AdjacentEdgeType*&gt;;</div>
-<div class="line">    { co.adjEdgeIndex(<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>()) } -&gt; std::same_as&lt;uint&gt;;</div>
-<div class="line">    { o.adjEdgeMod(<span class="keywordtype">int</span>()) } -&gt; std::same_as&lt;typename T::AdjacentEdgeType*&gt;;</div>
-<div class="line">    { co.adjEdgeMod(<span class="keywordtype">int</span>()) } -&gt;</div>
-<div class="line">        std::same_as&lt;const typename T::AdjacentEdgeType*&gt;;</div>
-<div class="line">    { co.adjEdgeIndexMod(<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>()) } -&gt; std::same_as&lt;uint&gt;;</div>
+<div class="line">        { obj.setAdjEdge(uint(), &amp;e) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">        { obj.setAdjEdge(uint(), uint()) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">        { obj.setAdjEdge(it, &amp;e) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">        { obj.setAdjEdge(it, uint()) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">        { obj.setAdjEdge(cIt, &amp;e) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">        { obj.setAdjEdge(cIt, uint()) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">        { obj.setAdjEdge(cIIt, &amp;e) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">        { obj.setAdjEdge(cIIt, uint()) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">        { obj.setAdjEdgeMod(<span class="keywordtype">int</span>(), &amp;e) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">        { obj.setAdjEdgeMod(<span class="keywordtype">int</span>(), uint()) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">        { obj.setAdjEdges(vec) } -&gt; std::same_as&lt;void&gt;;</div>
 <div class="line"> </div>
-<div class="line">    { o.setAdjEdge(<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>(), &amp;e) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">    { o.setAdjEdge(<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>(), <a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>()) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">    { o.setAdjEdge(<span class="keyword">typename</span> T::AdjacentEdgeIterator(), &amp;e) } -&gt;</div>
-<div class="line">        std::same_as&lt;void&gt;;</div>
-<div class="line">    { o.setAdjEdge(<span class="keyword">typename</span> T::AdjacentEdgeIterator(), <a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>()) } -&gt;</div>
-<div class="line">        std::same_as&lt;void&gt;;</div>
-<div class="line">    { o.setAdjEdge(<span class="keyword">typename</span> T::ConstAdjacentEdgeIterator(), &amp;e) } -&gt;</div>
-<div class="line">        std::same_as&lt;void&gt;;</div>
-<div class="line">    { o.setAdjEdge(<span class="keyword">typename</span> T::ConstAdjacentEdgeIterator(), <a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>()) } -&gt;</div>
-<div class="line">        std::same_as&lt;void&gt;;</div>
-<div class="line">    { o.setAdjEdge(<span class="keyword">typename</span> T::ConstAdjacentEdgeIndexIterator(), &amp;e) } -&gt;</div>
-<div class="line">        std::same_as&lt;void&gt;;</div>
-<div class="line">    { o.setAdjEdge(<span class="keyword">typename</span> T::ConstAdjacentEdgeIndexIterator(), <a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>()) } -&gt;</div>
-<div class="line">        std::same_as&lt;void&gt;;</div>
-<div class="line">    { o.setAdjEdgeMod(<span class="keywordtype">int</span>(), &amp;e) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">    { o.setAdjEdgeMod(<span class="keywordtype">int</span>(), <a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>()) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">    { o.setAdjEdges(v) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">        </div>
+<div class="line">        </div>
+<div class="line">        </div>
+<div class="line">        </div>
+<div class="line">        </div>
+<div class="line">        </div>
+<div class="line">        { obj.adjEdgeBegin() } -&gt; InputIterator&lt;<span class="keyword">decltype</span>(eP)&gt;;</div>
+<div class="line">        { obj.adjEdgeEnd() } -&gt; InputIterator&lt;<span class="keyword">decltype</span>(eP)&gt;;</div>
 <div class="line"> </div>
-<div class="line">    { co.containsAdjEdge(&amp;e) } -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line">    { co.containsAdjEdge(<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>()) } -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line">    { co.indexOfAdjEdge(&amp;e) } -&gt; std::same_as&lt;uint&gt;;</div>
-<div class="line">    { co.indexOfAdjEdge(<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>()) } -&gt; std::same_as&lt;uint&gt;;</div>
-<div class="line"> </div>
-<div class="line">    { co.adjEdgeBegin() } -&gt;</div>
-<div class="line">        std::same_as&lt;typename T::ConstAdjacentEdgeIterator&gt;;</div>
-<div class="line">    { co.adjEdgeEnd() } -&gt; std::same_as&lt;typename T::ConstAdjacentEdgeIterator&gt;;</div>
-<div class="line"> </div>
-<div class="line">    { co.adjEdgeIndexBegin() } -&gt;</div>
-<div class="line">        std::same_as&lt;typename T::ConstAdjacentEdgeIndexIterator&gt;;</div>
-<div class="line">    { co.adjEdgeIndexEnd() } -&gt;</div>
-<div class="line">        std::same_as&lt;typename T::ConstAdjacentEdgeIndexIterator&gt;;</div>
-<div class="line"> </div>
-<div class="line">    { o.adjEdges() } -&gt; <a class="code hl_concept" href="conceptvcl_1_1RangeOf.html">vcl::RangeOf&lt;typename T::AdjacentEdgeType*&gt;</a>;</div>
-<div class="line">    { co.adjEdges() } -&gt; <a class="code hl_concept" href="conceptvcl_1_1RangeOf.html">vcl::RangeOf&lt;const typename T::AdjacentEdgeType*&gt;</a>;</div>
-<div class="line">    { co.adjEdgeIndices() } -&gt; <a class="code hl_concept" href="conceptvcl_1_1RangeOf.html">vcl::RangeOf&lt;uint&gt;</a>;</div>
-<div class="line">    </div>
+<div class="line">        { obj.adjEdges() } -&gt; InputRange&lt;<span class="keyword">decltype</span>(eP)&gt;;</div>
+<div class="line">    };</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassvcl_1_1Matrix_html"><div class="ttname"><a href="classvcl_1_1Matrix.html">vcl::Matrix</a></div><div class="ttdef"><b>Definition</b> matrix.h:36</div></div>
-<div class="ttc" id="aconceptvcl_1_1RangeOf_html"><div class="ttname"><a href="conceptvcl_1_1RangeOf.html">vcl::RangeOf</a></div><div class="ttdoc">Utility concept that is evaluated true the Range R has a value_type that is T.</div><div class="ttdef"><b>Definition</b> range.h:48</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasAdjacentEdges_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasAdjacentEdges.html">vcl::comp::HasAdjacentEdges</a></div><div class="ttdoc">HasAdjacentEdges concept is satisfied only if a Element class provides the types and member functions...</div><div class="ttdef"><b>Definition</b> adjacent_edges.h:49</div></div>
-<div class="ttc" id="anamespacevcl_html_af74b42dd9d759d565bb701a5b845d05c"><div class="ttname"><a href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">vcl::uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition</b> base.h:34</div></div>
+<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:49</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasAdjacentEdges_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasAdjacentEdges.html">vcl::comp::HasAdjacentEdges</a></div><div class="ttdoc">HasAdjacentEdges concept is satisfied only if a Element class provides the types and member functions...</div><div class="ttdef"><b>Definition</b> adjacent_edges.h:51</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>HasAdjacentEdges concept is satisfied only if a Element class provides the types and member functions specified in this concept. These types and member functions allow to access to a <a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html">vcl::comp::AdjacentEdges</a> component of a given element. </p>
 <p>Note that this concept does not discriminate between the Horizontal AdjacentEdges component and the vertical OptionalAdjacentEdges component, therefore it does not guarantee that a template Element type that satisfies this concept provides AdjacentEdges component at runtime (it is guaranteed only that the proper member functions are available at compile time). </p>
@@ -176,7 +181,7 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1comp_1_1HasAdjacentEdges
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespacevcl.html">vcl</a></li><li class="navelem"><a class="el" href="namespacevcl_1_1comp.html">comp</a></li><li class="navelem"><a class="el" href="conceptvcl_1_1comp_1_1HasAdjacentEdges.html">HasAdjacentEdges</a></li>
+    <li class="navelem"><b>vcl</b></li><li class="navelem"><b>comp</b></li><li class="navelem"><a class="el" href="conceptvcl_1_1comp_1_1HasAdjacentEdges.html">HasAdjacentEdges</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

@@ -106,14 +106,25 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1comp_1_1HasCustomCompone
 <p><code>#include &lt;<a class="el" href="concepts_2mesh_2components_2custom__components_8h_source.html">vclib/concepts/mesh/components/custom_components.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasCustomComponents.html">vcl::comp::HasCustomComponents</a> =  <span class="keyword">requires</span> (T o, <span class="keyword">const</span> T&amp; co, std::string s) {</div>
-<div class="line">    </div>
-<div class="line">    { o.hasCustomComponent( std::string() ) } -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line">    { <a class="code hl_class" href="classvcl_1_1Matrix.html">o</a>.template <a class="code hl_class" href="classvcl_1_1Matrix.html">customComponent&lt;int&gt;</a>(s) } -&gt; std::same_as&lt;int&amp;&gt;;</div>
-<div class="line">    { <a class="code hl_class" href="classvcl_1_1Matrix.html">co</a>.template <a class="code hl_class" href="classvcl_1_1Matrix.html">customComponent&lt;int&gt;</a>(s) } -&gt; std::same_as&lt;const int&amp;&gt;;</div>
-<div class="line">    </div>
-<div class="line">}</div>
-<div class="ttc" id="aclassvcl_1_1Matrix_html"><div class="ttname"><a href="classvcl_1_1Matrix.html">vcl::Matrix</a></div><div class="ttdef"><b>Definition</b> matrix.h:36</div></div>
+<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasCustomComponents.html">vcl::comp::HasCustomComponents</a> = </div>
+<div class="line">    <span class="keyword">requires</span> (T&amp;&amp; obj, std::string str, std::vector&lt;std::string&gt; vStr) {</div>
+<div class="line">        { obj.hasCustomComponent(str) } -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line">        {</div>
+<div class="line">            <a class="code hl_class" href="classvcl_1_1Box.html">obj</a>.template <a class="code hl_class" href="classvcl_1_1Box.html">isCustomComponentOfType&lt;int&gt;</a>(str)</div>
+<div class="line">        } -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line">        { <a class="code hl_class" href="classvcl_1_1Box.html">obj</a>.customComponentType(str) } -&gt; std::same_as&lt;std::type_index&gt;;</div>
+<div class="line">        {</div>
+<div class="line">            obj.template customComponentNamesOfType&lt;int&gt;()</div>
+<div class="line">        } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(vStr)&gt;;</div>
+<div class="line"> </div>
+<div class="line">        { obj.template customComponent&lt;int&gt;(str) } -&gt; std::convertible_to&lt;int&gt;;</div>
+<div class="line"> </div>
+<div class="line">        </div>
+<div class="line">        <span class="keyword">requires</span> IsConst&lt;T&gt; || <span class="keyword">requires</span> {</div>
+<div class="line">            { obj.template customComponent&lt;int&gt;(str) } -&gt; std::same_as&lt;int&amp;&gt;;</div>
+<div class="line">        };</div>
+<div class="line">    }</div>
+<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:49</div></div>
 <div class="ttc" id="aconceptvcl_1_1comp_1_1HasCustomComponents_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasCustomComponents.html">vcl::comp::HasCustomComponents</a></div><div class="ttdoc">HasCustomComponents concept is satisfied only if a Element class provides the types and member functi...</div><div class="ttdef"><b>Definition</b> custom_components.h:41</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>HasCustomComponents concept is satisfied only if a Element class provides the types and member functions specified in this concept. These types and member functions allow to access to a <a class="el" href="classvcl_1_1comp_1_1CustomComponents.html">vcl::comp::CustomComponents</a> component of a given element. </p>
@@ -122,7 +133,7 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1comp_1_1HasCustomCompone
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespacevcl.html">vcl</a></li><li class="navelem"><a class="el" href="namespacevcl_1_1comp.html">comp</a></li><li class="navelem"><a class="el" href="conceptvcl_1_1comp_1_1HasCustomComponents.html">HasCustomComponents</a></li>
+    <li class="navelem"><b>vcl</b></li><li class="navelem"><b>comp</b></li><li class="navelem"><a class="el" href="conceptvcl_1_1comp_1_1HasCustomComponents.html">HasCustomComponents</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

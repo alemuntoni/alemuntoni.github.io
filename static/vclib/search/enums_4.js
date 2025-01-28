@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['meshactioncategory_0',['MeshActionCategory',['../classvcl_1_1proc_1_1FilterMeshAction.html#a82750d1cb322aa708454a986a93350f9',1,'vcl::proc::FilterMeshAction']]]
+  ['primitivetype_0',['PrimitiveType',['../group__types.html#ga35a36b617de9550e23e0c1426a783464',1,'vcl']]]
 ];

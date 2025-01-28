@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visual Computing Library: include/vclib/misc/string.h Source File</title>
+<title>Visual Computing Library: vclib/core/include/vclib/misc/string.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -104,11 +104,11 @@ $(document).ready(function(){initNavTree('string_8h_source.html',''); initResiza
   <div class="headertitle"><div class="title">string.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="string_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2024                                                    *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2025                                                    *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
@@ -134,100 +134,78 @@ $(document).ready(function(){initNavTree('string_8h_source.html',''); initResiza
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span>vcl {</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="namespacevcl.html#a45834fe7b55127feba8ce3050653ca96">   43</a></span><span class="keyword">inline</span> std::string::const_iterator <a class="code hl_function" href="namespacevcl.html#a45834fe7b55127feba8ce3050653ca96">findCaseInsensitive</a>(</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Matrix.html">input</a>,</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Matrix.html">substr</a>)</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">inline</span> std::string::const_iterator findCaseInsensitive(</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">const</span> std::string&amp; input,</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">const</span> std::string&amp; substr)</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>{</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="comment">// link: https://stackoverflow.com/a/19839371/5851101</span></div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    std::string::const_iterator <a class="code hl_class" href="classvcl_1_1Matrix.html">it</a> = std::search(</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">input</a>.begin(),</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">input</a>.end(),</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">substr</a>.begin(),</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">substr</a>.end(),</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        [](<span class="keywordtype">char</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">ch1</a>, <span class="keywordtype">char</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">ch2</a>) {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    std::string::const_iterator it = std::search(</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        input.begin(),</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        input.end(),</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        substr.begin(),</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        substr.end(),</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        [](<span class="keywordtype">char</span> ch1, <span class="keywordtype">char</span> ch2) {</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            return std::toupper(ch1) == std::toupper(ch2);</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        });</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">it</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordflow">return</span> it;</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
-</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00069" data-start="{" data-end="}">
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="namespacevcl.html#a9231ca38abac20eb8ced8246ab485899">   69</a></span>std::string <a class="code hl_function" href="namespacevcl.html#a9231ca38abac20eb8ced8246ab485899">toString</a>(T <a class="code hl_class" href="classvcl_1_1Matrix.html">val</a>)</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>std::string toString(T val)</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>{</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="comment">// if T is a pointer</span></div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::is_pointer_v&lt;T&gt;) {</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keyword">const</span> <span class="keywordtype">void</span>*       <a class="code hl_class" href="classvcl_1_1Matrix.html">address</a> = <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(<a class="code hl_class" href="classvcl_1_1Matrix.html">val</a>);</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        std::stringstream <a class="code hl_class" href="classvcl_1_1Matrix.html">ss</a>;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">ss</a> &lt;&lt; <a class="code hl_class" href="classvcl_1_1Matrix.html">address</a>;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">ss</a>.str();</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keyword">const</span> <span class="keywordtype">void</span>*       address = <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(val);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        std::stringstream ss;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        ss &lt;&lt; address;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">return</span> ss.str();</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordflow">return</span> std::to_string(<a class="code hl_class" href="classvcl_1_1Matrix.html">val</a>);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordflow">return</span> std::to_string(val);</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    }</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>}</div>
-</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="foldopen" id="foldopen00090" data-start="{" data-end="}">
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="namespacevcl.html#af9101a04223deed528addeb4dbf722bf">   90</a></span><span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespacevcl.html#af9101a04223deed528addeb4dbf722bf">containsCaseInsensitive</a>(</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Matrix.html">input</a>,</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Matrix.html">substr</a>)</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="keyword">inline</span> <span class="keywordtype">bool</span> containsCaseInsensitive(</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keyword">const</span> std::string&amp; input,</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keyword">const</span> std::string&amp; substr)</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>{</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacevcl.html#a45834fe7b55127feba8ce3050653ca96">findCaseInsensitive</a>(<a class="code hl_class" href="classvcl_1_1Matrix.html">input</a>, <a class="code hl_class" href="classvcl_1_1Matrix.html">substr</a>) != <a class="code hl_class" href="classvcl_1_1Matrix.html">input</a>.end();</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keywordflow">return</span> findCaseInsensitive(input, substr) != input.end();</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>}</div>
-</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
-<div class="foldopen" id="foldopen00097" data-start="{" data-end="}">
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="namespacevcl.html#a9bb7f6b147a8bc291fee7ef462f8a1bd">   97</a></span><span class="keyword">inline</span> std::string <a class="code hl_function" href="namespacevcl.html#a9bb7f6b147a8bc291fee7ef462f8a1bd">toLower</a>(<span class="keyword">const</span> std::string&amp; s)</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="keyword">inline</span> std::string toLower(<span class="keyword">const</span> std::string&amp; s)</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>{</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    std::string <a class="code hl_class" href="classvcl_1_1Matrix.html">ret</a>(s);</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    std::transform(s.begin(), s.end(), <a class="code hl_class" href="classvcl_1_1Matrix.html">ret</a>.begin(), [](<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> c) {</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        return std::tolower(c);</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    });</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">ret</a>;</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>}</div>
-</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
-<div class="foldopen" id="foldopen00106" data-start="{" data-end="}">
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="namespacevcl.html#ac83671737ba679edb3511815c82494d1">  106</a></span><span class="keyword">inline</span> std::string <a class="code hl_function" href="namespacevcl.html#ac83671737ba679edb3511815c82494d1">toUpper</a>(<span class="keyword">const</span> std::string&amp; s)</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>{</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    std::string <a class="code hl_class" href="classvcl_1_1Matrix.html">ret</a>(s);</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    std::transform(s.begin(), s.end(), <a class="code hl_class" href="classvcl_1_1Matrix.html">ret</a>.begin(), [](<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> c) {</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        return std::toupper(c);</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    });</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">ret</a>;</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>}</div>
-</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="foldopen" id="foldopen00124" data-start="{" data-end="}">
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="namespacevcl.html#afbeefcb5ecbc42c311e46711ee48ecd2">  124</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacevcl.html#afbeefcb5ecbc42c311e46711ee48ecd2">removeCarriageReturn</a>(std::string&amp; s)</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>{</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordflow">if</span> (s.size() &gt; 0 &amp;&amp; s[s.size() - 1] == <span class="charliteral">&#39;\r&#39;</span>)</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        s = s.substr(0, s.size() - 1);</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>}</div>
-</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    std::string ret(s);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    std::transform(s.begin(), s.end(), ret.begin(), ::tolower);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>}</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="keyword">inline</span> std::string toUpper(<span class="keyword">const</span> std::string&amp; s)</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>{</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    std::string ret(s);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    std::transform(s.begin(), s.end(), ret.begin(), [](<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> c) {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        return std::toupper(c);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    });</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>}</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="keyword">inline</span> <span class="keywordtype">void</span> removeCarriageReturn(std::string&amp; s)</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>{</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordflow">if</span> (s.size() &gt; 0 &amp;&amp; s[s.size() - 1] == <span class="charliteral">&#39;\r&#39;</span>)</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        s = s.substr(0, s.size() - 1);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>}</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>} <span class="comment">// namespace vcl</span></div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="preprocessor">#endif </span><span class="comment">// VCL_MISC_STRING_H</span></div>
-<div class="ttc" id="aclassvcl_1_1Matrix_html"><div class="ttname"><a href="classvcl_1_1Matrix.html">vcl::Matrix</a></div><div class="ttdef"><b>Definition</b> matrix.h:36</div></div>
-<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition</b> bounding_box.h:48</div></div>
-<div class="ttc" id="anamespacevcl_html_a45834fe7b55127feba8ce3050653ca96"><div class="ttname"><a href="namespacevcl.html#a45834fe7b55127feba8ce3050653ca96">vcl::findCaseInsensitive</a></div><div class="ttdeci">std::string::const_iterator findCaseInsensitive(const std::string &amp;input, const std::string &amp;substr)</div><div class="ttdoc">Looks into input if there is a substring equal to substr, without taking into account case sensitiven...</div><div class="ttdef"><b>Definition</b> string.h:43</div></div>
-<div class="ttc" id="anamespacevcl_html_a9231ca38abac20eb8ced8246ab485899"><div class="ttname"><a href="namespacevcl.html#a9231ca38abac20eb8ced8246ab485899">vcl::toString</a></div><div class="ttdeci">std::string toString(T val)</div><div class="ttdoc">Converts a value of type T to a string.</div><div class="ttdef"><b>Definition</b> string.h:69</div></div>
-<div class="ttc" id="anamespacevcl_html_a9bb7f6b147a8bc291fee7ef462f8a1bd"><div class="ttname"><a href="namespacevcl.html#a9bb7f6b147a8bc291fee7ef462f8a1bd">vcl::toLower</a></div><div class="ttdeci">std::string toLower(const std::string &amp;s)</div><div class="ttdef"><b>Definition</b> string.h:97</div></div>
-<div class="ttc" id="anamespacevcl_html_ac83671737ba679edb3511815c82494d1"><div class="ttname"><a href="namespacevcl.html#ac83671737ba679edb3511815c82494d1">vcl::toUpper</a></div><div class="ttdeci">std::string toUpper(const std::string &amp;s)</div><div class="ttdef"><b>Definition</b> string.h:106</div></div>
-<div class="ttc" id="anamespacevcl_html_af9101a04223deed528addeb4dbf722bf"><div class="ttname"><a href="namespacevcl.html#af9101a04223deed528addeb4dbf722bf">vcl::containsCaseInsensitive</a></div><div class="ttdeci">bool containsCaseInsensitive(const std::string &amp;input, const std::string &amp;substr)</div><div class="ttdoc">Returns true if the input string contains substr as a substring, without taking into account case sen...</div><div class="ttdef"><b>Definition</b> string.h:90</div></div>
-<div class="ttc" id="anamespacevcl_html_afbeefcb5ecbc42c311e46711ee48ecd2"><div class="ttname"><a href="namespacevcl.html#afbeefcb5ecbc42c311e46711ee48ecd2">vcl::removeCarriageReturn</a></div><div class="ttdeci">void removeCarriageReturn(std::string &amp;s)</div><div class="ttdoc">Removes the carriage return character (\r) from the end of the string.</div><div class="ttdef"><b>Definition</b> string.h:124</div></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="preprocessor">#endif </span><span class="comment">// VCL_MISC_STRING_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d2fdbf172f8ae9790b339bfcb66b3af7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_1d5d86545c5ee72848d4833136f0caa9.html">misc</a></li><li class="navelem"><a class="el" href="string_8h.html">string.h</a></li>
+    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_7c92f5c95a7eb1889f78d1875330f054.html">misc</a></li><li class="navelem"><b>string.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

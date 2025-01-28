@@ -7,7 +7,6 @@ var classvcl_1_1Box =
     [ "add", "classvcl_1_1Box.html#a68d74263e5a0122d543150cad282e02e", null ],
     [ "add", "classvcl_1_1Box.html#a6c157599d2c281d1c74a1e7c7b8f3fd7", null ],
     [ "add", "classvcl_1_1Box.html#a6340bde52c20e21089d86fb499a91e60", null ],
-    [ "cast", "classvcl_1_1Box.html#a2f932f9067c88bec37ad69891521e41a", null ],
     [ "center", "classvcl_1_1Box.html#aa28eddc1ddba75487d978de73b3b8b2e", null ],
     [ "collide", "classvcl_1_1Box.html#a902e1511ffed22f20d86f28e9c52c1c2", null ],
     [ "deserialize", "classvcl_1_1Box.html#a355a889437820f80fbf89143e3da6259", null ],

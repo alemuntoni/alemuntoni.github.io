@@ -1,9 +1,5 @@
 var classvcl_1_1mesh_1_1EdgeContainer =
 [
-    [ "ConstEdgeIterator", "classvcl_1_1mesh_1_1EdgeContainer.html#ad9ad8d7051406d4945b891c1481af077", null ],
-    [ "Edge", "classvcl_1_1mesh_1_1EdgeContainer.html#ab6eb4398501fc7a71b62aa02ceb6dd44", null ],
-    [ "EdgeIterator", "classvcl_1_1mesh_1_1EdgeContainer.html#afc45268905d33b8ba808cd2cdab22726", null ],
-    [ "EdgeType", "classvcl_1_1mesh_1_1EdgeContainer.html#a0dd392ff1664930e0903414e505e60ba", null ],
     [ "EdgeContainer", "classvcl_1_1mesh_1_1EdgeContainer.html#af3b240aead0971b940928a2b028fd51c", null ],
     [ "addEdge", "classvcl_1_1mesh_1_1EdgeContainer.html#a1676f6f206bcb59a7ab0101cc4f29765", null ],
     [ "addEdge", "classvcl_1_1mesh_1_1EdgeContainer.html#a58f055e71925000375d229999ac9bc21", null ],
@@ -54,6 +50,5 @@ var classvcl_1_1mesh_1_1EdgeContainer =
     [ "perEdgeCustomComponentVectorHandle", "classvcl_1_1mesh_1_1EdgeContainer.html#a744d454e513b203d931760b9fed49c67", null ],
     [ "reserveEdges", "classvcl_1_1mesh_1_1EdgeContainer.html#aacc7a00243db99c16f2b305f3c04804e", null ],
     [ "resizeEdges", "classvcl_1_1mesh_1_1EdgeContainer.html#a4de50de9042dd64dc4889cb8baa2b8ea", null ],
-    [ "updateEdgeIndices", "classvcl_1_1mesh_1_1EdgeContainer.html#adb4e3cd37b1e8951c749f808fe677660", null ],
-    [ "EdgeContainer", "classvcl_1_1mesh_1_1EdgeContainer.html#a329964657dd625f46489470523e732a2", null ]
+    [ "updateEdgeIndices", "classvcl_1_1mesh_1_1EdgeContainer.html#adb4e3cd37b1e8951c749f808fe677660", null ]
 ];

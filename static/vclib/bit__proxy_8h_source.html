@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visual Computing Library: include/vclib/space/core/bit_set/bit_proxy.h Source File</title>
+<title>Visual Computing Library: vclib/core/include/vclib/space/core/bit_set/bit_proxy.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -104,11 +104,11 @@ $(document).ready(function(){initNavTree('bit__proxy_8h_source.html',''); initRe
   <div class="headertitle"><div class="title">bit_proxy.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="bit__proxy_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2024                                                    *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2025                                                    *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
@@ -129,12 +129,12 @@ $(document).ready(function(){initNavTree('bit__proxy_8h_source.html',''); initRe
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_SPACE_CORE_BIT_SET_BIT_PROXY_H</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_SPACE_CORE_BIT_SET_BIT_PROXY_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;concepts&gt;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;<a class="code" href="types_8h.html">vclib/types.h</a>&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;vclib/types.h&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;concepts&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span>vcl {</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">// See: https://stackoverflow.com/a/10145050/5851101</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
@@ -143,43 +143,35 @@ $(document).ready(function(){initNavTree('bit__proxy_8h_source.html',''); initRe
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classvcl_1_1BitProxy.html">   42</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1BitProxy.html">BitProxy</a></div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>{</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    std::reference_wrapper&lt;T&gt; mMask;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>                mIndex;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">const</span> uint                mIndex;</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classvcl_1_1BitProxy.html#aed2457f83f357b38321a29d20358e379">   53</a></span>    <a class="code hl_function" href="classvcl_1_1BitProxy.html#aed2457f83f357b38321a29d20358e379">BitProxy</a>(T&amp; <a class="code hl_class" href="classvcl_1_1Matrix.html">mask</a>, <a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> index) : mMask(<a class="code hl_class" href="classvcl_1_1Matrix.html">mask</a>), mIndex(index) {}</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classvcl_1_1BitProxy.html#aed2457f83f357b38321a29d20358e379">   53</a></span>    <a class="code hl_function" href="classvcl_1_1BitProxy.html#aed2457f83f357b38321a29d20358e379">BitProxy</a>(T&amp; mask, uint index) : mMask(mask), mIndex(index) {}</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classvcl_1_1BitProxy.html#a9745706840c4220db7e865581208c254">   55</a></span>    <span class="keyword">operator</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">bool</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mMask.get() &amp; (1 &lt;&lt; mIndex); }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">operator</span> <a class="code hl_class" href="classvcl_1_1Box.html">bool</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mMask.get() &amp; (1 &lt;&lt; mIndex); }</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classvcl_1_1BitProxy.html#a88b2612eb7ca7050cb03db3124aa62f7">   57</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1BitProxy.html#a88b2612eb7ca7050cb03db3124aa62f7">operator=</a>(<span class="keywordtype">bool</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">bit</a>)</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">void</span> operator=(<span class="keywordtype">bool</span> bit)</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    {</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        mMask.get() = (mMask.get() &amp; ~(1 &lt;&lt; mIndex)) | (<a class="code hl_class" href="classvcl_1_1Matrix.html">bit</a> &lt;&lt; mIndex);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        mMask.get() = (mMask.get() &amp; ~(1 &lt;&lt; mIndex)) | (bit &lt;&lt; mIndex);</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
-</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classvcl_1_1BitProxy.html#a95e8b9922052ac6407ecfe12a8532dd5">   62</a></span>    <a class="code hl_class" href="classvcl_1_1BitProxy.html">BitProxy</a>&amp; <a class="code hl_function" href="classvcl_1_1BitProxy.html#a95e8b9922052ac6407ecfe12a8532dd5">operator|=</a>(<span class="keywordtype">bool</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">bit</a>)</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <a class="code hl_function" href="classvcl_1_1BitProxy.html#aed2457f83f357b38321a29d20358e379">BitProxy</a>&amp; operator|=(<span class="keywordtype">bool</span> bit)</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    {</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        mMask.get() |= (<a class="code hl_class" href="classvcl_1_1Matrix.html">bit</a> &lt;&lt; mIndex);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        mMask.get() |= (bit &lt;&lt; mIndex);</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    }</div>
-</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="foldopen" id="foldopen00068" data-start="{" data-end="}">
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classvcl_1_1BitProxy.html#a405496541ceb2b2f05159f6f34187fd4">   68</a></span>    <a class="code hl_class" href="classvcl_1_1BitProxy.html">BitProxy</a>&amp; <a class="code hl_function" href="classvcl_1_1BitProxy.html#a405496541ceb2b2f05159f6f34187fd4">operator&amp;=</a>(<span class="keywordtype">bool</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">bit</a>)</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <a class="code hl_function" href="classvcl_1_1BitProxy.html#aed2457f83f357b38321a29d20358e379">BitProxy</a>&amp; operator&amp;=(<span class="keywordtype">bool</span> bit)</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    {</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        mMask.get() &amp;= ~(<a class="code hl_class" href="classvcl_1_1Matrix.html">bit</a> &lt;&lt; mIndex);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        mMask.get() &amp;= ~(bit &lt;&lt; mIndex);</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
-</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="foldopen" id="foldopen00074" data-start="{" data-end="}">
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="classvcl_1_1BitProxy.html#ac8f918defa4244eac5778a51d68f37cc">   74</a></span>    <a class="code hl_class" href="classvcl_1_1BitProxy.html">BitProxy</a>&amp; <a class="code hl_function" href="classvcl_1_1BitProxy.html#ac8f918defa4244eac5778a51d68f37cc">operator/=</a>(<span class="keywordtype">bool</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">bit</a>)</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <a class="code hl_function" href="classvcl_1_1BitProxy.html#aed2457f83f357b38321a29d20358e379">BitProxy</a>&amp; operator/=(<span class="keywordtype">bool</span> bit)</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    {</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        mMask.get() ^= (<a class="code hl_class" href="classvcl_1_1Matrix.html">bit</a> &lt;&lt; mIndex);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        mMask.get() ^= (bit &lt;&lt; mIndex);</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    }</div>
-</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>};</div>
 </div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
@@ -187,21 +179,14 @@ $(document).ready(function(){initNavTree('bit__proxy_8h_source.html',''); initRe
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#endif </span><span class="comment">// VCL_SPACE_CORE_BIT_SET_BIT_PROXY_H</span></div>
 <div class="ttc" id="aclassvcl_1_1BitProxy_html"><div class="ttname"><a href="classvcl_1_1BitProxy.html">vcl::BitProxy</a></div><div class="ttdoc">The BitProxy class allows to access to a bool reference from a bit saved in a mask,...</div><div class="ttdef"><b>Definition</b> bit_proxy.h:43</div></div>
-<div class="ttc" id="aclassvcl_1_1BitProxy_html_a405496541ceb2b2f05159f6f34187fd4"><div class="ttname"><a href="classvcl_1_1BitProxy.html#a405496541ceb2b2f05159f6f34187fd4">vcl::BitProxy::operator&amp;=</a></div><div class="ttdeci">BitProxy &amp; operator&amp;=(bool bit)</div><div class="ttdef"><b>Definition</b> bit_proxy.h:68</div></div>
-<div class="ttc" id="aclassvcl_1_1BitProxy_html_a88b2612eb7ca7050cb03db3124aa62f7"><div class="ttname"><a href="classvcl_1_1BitProxy.html#a88b2612eb7ca7050cb03db3124aa62f7">vcl::BitProxy::operator=</a></div><div class="ttdeci">void operator=(bool bit)</div><div class="ttdef"><b>Definition</b> bit_proxy.h:57</div></div>
-<div class="ttc" id="aclassvcl_1_1BitProxy_html_a95e8b9922052ac6407ecfe12a8532dd5"><div class="ttname"><a href="classvcl_1_1BitProxy.html#a95e8b9922052ac6407ecfe12a8532dd5">vcl::BitProxy::operator|=</a></div><div class="ttdeci">BitProxy &amp; operator|=(bool bit)</div><div class="ttdef"><b>Definition</b> bit_proxy.h:62</div></div>
-<div class="ttc" id="aclassvcl_1_1BitProxy_html_ac8f918defa4244eac5778a51d68f37cc"><div class="ttname"><a href="classvcl_1_1BitProxy.html#ac8f918defa4244eac5778a51d68f37cc">vcl::BitProxy::operator/=</a></div><div class="ttdeci">BitProxy &amp; operator/=(bool bit)</div><div class="ttdef"><b>Definition</b> bit_proxy.h:74</div></div>
 <div class="ttc" id="aclassvcl_1_1BitProxy_html_aed2457f83f357b38321a29d20358e379"><div class="ttname"><a href="classvcl_1_1BitProxy.html#aed2457f83f357b38321a29d20358e379">vcl::BitProxy::BitProxy</a></div><div class="ttdeci">BitProxy(T &amp;mask, uint index)</div><div class="ttdoc">Constructs the BitProxy with the given mask and index.</div><div class="ttdef"><b>Definition</b> bit_proxy.h:53</div></div>
-<div class="ttc" id="aclassvcl_1_1Matrix_html"><div class="ttname"><a href="classvcl_1_1Matrix.html">vcl::Matrix</a></div><div class="ttdef"><b>Definition</b> matrix.h:36</div></div>
-<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition</b> bounding_box.h:48</div></div>
-<div class="ttc" id="anamespacevcl_html_af74b42dd9d759d565bb701a5b845d05c"><div class="ttname"><a href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">vcl::uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition</b> base.h:34</div></div>
-<div class="ttc" id="atypes_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div></div>
+<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:49</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d2fdbf172f8ae9790b339bfcb66b3af7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_f5c67e0d94465501863c6ccee7fad822.html">space</a></li><li class="navelem"><a class="el" href="dir_bd555a36da4326e56d008e73b6217276.html">core</a></li><li class="navelem"><a class="el" href="dir_3b1fcaf3f737a2465e14be35fc84aa0a.html">bit_set</a></li><li class="navelem"><a class="el" href="bit__proxy_8h.html">bit_proxy.h</a></li>
+    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_876bb933d26b04599d60b1bdfe1a5bc5.html">space</a></li><li class="navelem"><a class="el" href="dir_3eb6a9b3fcbc86ec135451ef3945f0c7.html">core</a></li><li class="navelem"><a class="el" href="dir_a09d32db7b4cfa6c0a71c46316497008.html">bit_set</a></li><li class="navelem"><b>bit_proxy.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

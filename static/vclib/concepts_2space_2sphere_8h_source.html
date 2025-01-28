@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visual Computing Library: include/vclib/concepts/space/sphere.h Source File</title>
+<title>Visual Computing Library: vclib/core/include/vclib/concepts/space/sphere.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -104,11 +104,11 @@ $(document).ready(function(){initNavTree('concepts_2space_2sphere_8h_source.html
   <div class="headertitle"><div class="title">sphere.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="concepts_2space_2sphere_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2024                                                    *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2025                                                    *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
@@ -129,52 +129,50 @@ $(document).ready(function(){initNavTree('concepts_2space_2sphere_8h_source.html
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_CONCEPTS_SPACE_SPHERE_H</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_CONCEPTS_SPACE_SPHERE_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;<a class="code" href="space_2core_2point_8h.html">point.h</a>&quot;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;point.h&quot;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">namespace </span>vcl {</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="conceptvcl_1_1SphereConcept.html">   64</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1SphereConcept.html">SphereConcept</a> = <span class="keyword">requires</span> (</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    T                            o,</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keyword">const</span> T&amp;                     co,</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keyword">const</span> <span class="keyword">typename</span> T::PointType&amp; p,</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keyword">const</span> <span class="keyword">typename</span> T::BoxType&amp;   b) {</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="comment">// clang-format off</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keyword">typename</span> T::ScalarType;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keyword">typename</span> T::PointType;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keyword">typename</span> T::BoxType;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    T::PointType::DIM == 3;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    { o.center() } -&gt; std::same_as&lt;typename T::PointType&amp;&gt;;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    { co.center() } -&gt; std::same_as&lt;const typename T::PointType&amp;&gt;;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    { o.radius() } -&gt; std::same_as&lt;typename T::ScalarType&amp;&gt;;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    { co.radius() } -&gt; std::same_as&lt;const typename T::ScalarType&amp;&gt;;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    T&amp;&amp;                               obj,</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::ScalarType s,</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::PointType  p,</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::BoxType    b) {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::ScalarType;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::PointType;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::BoxType;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keyword">requires</span> <a class="code hl_concept" href="conceptvcl_1_1Point3Concept.html">Point3Concept&lt;typename RemoveRef&lt;T&gt;::PointType</a>&gt;;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    RemoveRef&lt;T&gt;();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    RemoveRef&lt;T&gt;(p, s);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    { obj.center() } -&gt; <a class="code hl_concept" href="conceptvcl_1_1Point3Concept.html">Point3Concept</a>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    { obj.radius() } -&gt; std::convertible_to&lt;<span class="keyword">decltype</span>(s)&gt;;</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    { co.diameter() } -&gt; std::same_as&lt;typename T::ScalarType&gt;;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    { co.circumference() } -&gt; std::same_as&lt;typename T::ScalarType&gt;;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    { co.surfaceArea() } -&gt; std::same_as&lt;typename T::ScalarType&gt;;</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    { co.volume() } -&gt; std::same_as&lt;typename T::ScalarType&gt;;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    { obj.diameter() } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(s)&gt;;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    { obj.circumference() } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(s)&gt;;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    { obj.surfaceArea() } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(s)&gt;;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    { obj.volume() } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(s)&gt;;</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    { co.isInside(p) } -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    { co.intersects(b) } -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="comment">// clang-format on</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>};</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    { obj.isInside(p) } -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    { obj.intersects(b) } -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>};</div>
 </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">#endif </span><span class="comment">// VCL_CONCEPTS_SPACE_SPHERE_H</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">#endif </span><span class="comment">// VCL_CONCEPTS_SPACE_SPHERE_H</span></div>
+<div class="ttc" id="aconceptvcl_1_1Point3Concept_html"><div class="ttname"><a href="conceptvcl_1_1Point3Concept.html">vcl::Point3Concept</a></div><div class="ttdoc">Concept for points in three-dimensional space.</div><div class="ttdef"><b>Definition</b> point.h:130</div></div>
 <div class="ttc" id="aconceptvcl_1_1SphereConcept_html"><div class="ttname"><a href="conceptvcl_1_1SphereConcept.html">vcl::SphereConcept</a></div><div class="ttdoc">Concept for types representing spheres in Euclidean space.</div><div class="ttdef"><b>Definition</b> sphere.h:64</div></div>
-<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition</b> bounding_box.h:48</div></div>
-<div class="ttc" id="aspace_2core_2point_8h_html"><div class="ttname"><a href="space_2core_2point_8h.html">point.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d2fdbf172f8ae9790b339bfcb66b3af7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_d8d31096cdb23314816d0514c2e28657.html">concepts</a></li><li class="navelem"><a class="el" href="dir_10c6edf3c5a4ecaf692bbe67eb2870a0.html">space</a></li><li class="navelem"><a class="el" href="concepts_2space_2sphere_8h.html">sphere.h</a></li>
+    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_dd968cc90108d82a40e31b676831d617.html">concepts</a></li><li class="navelem"><a class="el" href="dir_538ab9b9284e892a6758a2873ac1fcc5.html">space</a></li><li class="navelem"><b>sphere.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

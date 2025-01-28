@@ -106,32 +106,24 @@ $(document).ready(function(){initNavTree('structvcl_1_1SaveSettings.html',''); i
 <p>The <a class="el" href="structvcl_1_1SaveSettings.html" title="The SaveSettings structure contains the settings that can be used to save a mesh to a stream/file.">SaveSettings</a> structure contains the settings that can be used to save a mesh to a stream/file.  
  <a href="structvcl_1_1SaveSettings.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="load__save_2settings_8h_source.html">vclib/load_save/settings.h</a>&gt;</code></p>
-<div class="dynheader">
-Collaboration diagram for vcl::SaveSettings:</div>
-<div class="dyncontent">
-<div class="center"><img src="structvcl_1_1SaveSettings__coll__graph.png" border="0" usemap="#avcl_1_1SaveSettings_coll__map" alt="Collaboration graph"/></div>
-<map name="avcl_1_1SaveSettings_coll__map" id="avcl_1_1SaveSettings_coll__map">
-<area shape="rect" title="The SaveSettings structure contains the settings that can be used to save a mesh to a stream/file." alt="" coords="5,93,140,119"/>
-<area shape="rect" href="classvcl_1_1MeshInfo.html" title="A simple class that allows to store which elements and their components have been imported/loaded or ..." alt="" coords="18,5,127,31"/>
-<area shape="poly" title=" " alt="" coords="75,45,75,93,70,93,70,45"/>
-</map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<p><code>#include &lt;<a class="el" href="settings_8h_source.html">vclib/load_save/settings.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a2543b816d94fe26b06368f50fe413d86" id="r_a2543b816d94fe26b06368f50fe413d86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Matrix.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvcl_1_1SaveSettings.html#a2543b816d94fe26b06368f50fe413d86">binary</a> = <a class="el" href="classvcl_1_1Matrix.html">true</a></td></tr>
+<tr class="memitem:a2543b816d94fe26b06368f50fe413d86" id="r_a2543b816d94fe26b06368f50fe413d86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvcl_1_1SaveSettings.html#a2543b816d94fe26b06368f50fe413d86">binary</a> = <a class="el" href="classvcl_1_1Box.html">true</a></td></tr>
 <tr class="memdesc:a2543b816d94fe26b06368f50fe413d86"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, the mesh will be saved in binary format. Otherwise, it will be saved in ASCII format.  <br /></td></tr>
 <tr class="separator:a2543b816d94fe26b06368f50fe413d86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3349b22705fee5f654f8e8bee22e440" id="r_aa3349b22705fee5f654f8e8bee22e440"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Matrix.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvcl_1_1SaveSettings.html#aa3349b22705fee5f654f8e8bee22e440">saveTextureImages</a> = <a class="el" href="classvcl_1_1Matrix.html">false</a></td></tr>
+<tr class="memitem:aa3349b22705fee5f654f8e8bee22e440" id="r_aa3349b22705fee5f654f8e8bee22e440"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvcl_1_1SaveSettings.html#aa3349b22705fee5f654f8e8bee22e440">saveTextureImages</a> = <a class="el" href="classvcl_1_1Box.html">false</a></td></tr>
 <tr class="memdesc:aa3349b22705fee5f654f8e8bee22e440"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, and if the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> has the TextureImages component, the saving function will save the texture images to the paths stored in the TextureImages component. Otherwise, only the paths of the textures will be saved.  <br /></td></tr>
 <tr class="separator:aa3349b22705fee5f654f8e8bee22e440"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3666ddbec1b5985916a87af67283da3" id="r_aa3666ddbec1b5985916a87af67283da3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Matrix.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvcl_1_1SaveSettings.html#aa3666ddbec1b5985916a87af67283da3">magicsMode</a> = <a class="el" href="classvcl_1_1Matrix.html">false</a></td></tr>
-<tr class="memdesc:aa3666ddbec1b5985916a87af67283da3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applied only to STL binary files. Magics mode is a specific file format used by the Magics software, which includes more information than the standard STL format, like face colors. The magicsMode works only when binary flag is set to <code>true</code>.  <br /></td></tr>
+<tr class="memitem:aa3666ddbec1b5985916a87af67283da3" id="r_aa3666ddbec1b5985916a87af67283da3"><td class="memItemLeft" align="right" valign="top"><a id="aa3666ddbec1b5985916a87af67283da3" name="aa3666ddbec1b5985916a87af67283da3"></a>
+<a class="el" href="classvcl_1_1Box.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>magicsMode</b> = <a class="el" href="classvcl_1_1Box.html">false</a></td></tr>
+<tr class="memdesc:aa3666ddbec1b5985916a87af67283da3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applied only to STL binary files. Magics mode is a specific file format used by the Magics software, which includes more information than the standard STL format, like face colors. The magicsMode works only when binary flag is set to <code>true</code>. <br /></td></tr>
 <tr class="separator:aa3666ddbec1b5985916a87af67283da3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14170a3190850dadf6413eaa4635eb04" id="r_a14170a3190850dadf6413eaa4635eb04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1MeshInfo.html">vcl::MeshInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvcl_1_1SaveSettings.html#a14170a3190850dadf6413eaa4635eb04">info</a></td></tr>
-<tr class="memdesc:a14170a3190850dadf6413eaa4635eb04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data structure that tells the saving functions which components of the mesh should be saved. Only the components that can be saved in the file format will be saved. If the info is uninitialized, all the components that can be saved will be saved.  <br /></td></tr>
-<tr class="separator:a14170a3190850dadf6413eaa4635eb04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a838dcb7142b60a9e351d6f706e88e019" id="r_a838dcb7142b60a9e351d6f706e88e019"><td class="memItemLeft" align="right" valign="top"><a id="a838dcb7142b60a9e351d6f706e88e019" name="a838dcb7142b60a9e351d6f706e88e019"></a>
+<a class="el" href="classvcl_1_1MeshInfo.html">MeshInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
+<tr class="memdesc:a838dcb7142b60a9e351d6f706e88e019"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data structure that tells the saving functions which components of the mesh should be saved. Only the components that can be saved in the file format will be saved. If the info is uninitialized, all the components that can be saved will be saved. <br /></td></tr>
+<tr class="separator:a838dcb7142b60a9e351d6f706e88e019"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="structvcl_1_1SaveSettings.html" title="The SaveSettings structure contains the settings that can be used to save a mesh to a stream/file.">SaveSettings</a> structure contains the settings that can be used to save a mesh to a stream/file. </p>
@@ -143,45 +135,13 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Matrix.html">bool</a> vcl::SaveSettings::binary = <a class="el" href="classvcl_1_1Matrix.html">true</a></td>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">bool</a> vcl::SaveSettings::binary = <a class="el" href="classvcl_1_1Box.html">true</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>If true, the mesh will be saved in binary format. Otherwise, it will be saved in ASCII format. </p>
 <p>It applies to all the saving functions that save to a file format that supports both binary and ASCII format. </p>
-
-</div>
-</div>
-<a id="a14170a3190850dadf6413eaa4635eb04" name="a14170a3190850dadf6413eaa4635eb04"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a14170a3190850dadf6413eaa4635eb04">&#9670;&#160;</a></span>info</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1MeshInfo.html">vcl::MeshInfo</a> vcl::SaveSettings::info</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Data structure that tells the saving functions which components of the mesh should be saved. Only the components that can be saved in the file format will be saved. If the info is uninitialized, all the components that can be saved will be saved. </p>
-
-</div>
-</div>
-<a id="aa3666ddbec1b5985916a87af67283da3" name="aa3666ddbec1b5985916a87af67283da3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3666ddbec1b5985916a87af67283da3">&#9670;&#160;</a></span>magicsMode</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Matrix.html">bool</a> vcl::SaveSettings::magicsMode = <a class="el" href="classvcl_1_1Matrix.html">false</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Applied only to STL binary files. Magics mode is a specific file format used by the Magics software, which includes more information than the standard STL format, like face colors. The magicsMode works only when binary flag is set to <code>true</code>. </p>
 
 </div>
 </div>
@@ -192,7 +152,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Matrix.html">bool</a> vcl::SaveSettings::saveTextureImages = <a class="el" href="classvcl_1_1Matrix.html">false</a></td>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">bool</a> vcl::SaveSettings::saveTextureImages = <a class="el" href="classvcl_1_1Box.html">false</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -203,14 +163,14 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>include/vclib/load_save/<a class="el" href="load__save_2settings_8h_source.html">settings.h</a></li>
+<li>vclib/core/include/vclib/load_save/<a class="el" href="settings_8h_source.html">settings.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespacevcl.html">vcl</a></li><li class="navelem"><a class="el" href="structvcl_1_1SaveSettings.html">SaveSettings</a></li>
+    <li class="navelem"><b>vcl</b></li><li class="navelem"><a class="el" href="structvcl_1_1SaveSettings.html">SaveSettings</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

@@ -99,7 +99,7 @@ $(document).ready(function(){initNavTree('structvcl_1_1FirstType_3_01TypeWrapper
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="structvcl_1_1FirstType_3_01TypeWrapper_3_01Args_8_8_8_01_4_01_4-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">vcl::FirstType&lt; TypeWrapper&lt; Args... &gt; &gt; Struct Template Reference</div></div>
+  <div class="headertitle"><div class="title">vcl::FirstType&lt; TypeWrapper&lt; Args... &gt; &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group__types.html">VCLib Types Module</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -110,42 +110,25 @@ $(document).ready(function(){initNavTree('structvcl_1_1FirstType_3_01TypeWrapper
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a37019e81622f70a79fa67889c90b5409" id="r_a37019e81622f70a79fa67889c90b5409"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Matrix.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvcl_1_1FirstType_3_01TypeWrapper_3_01Args_8_8_8_01_4_01_4.html#a37019e81622f70a79fa67889c90b5409">type</a> = std::tuple_element&lt; 0, std::tuple&lt; Args... &gt; &gt;::type</td></tr>
+<tr class="memitem:a37019e81622f70a79fa67889c90b5409" id="r_a37019e81622f70a79fa67889c90b5409"><td class="memItemLeft" align="right" valign="top"><a id="a37019e81622f70a79fa67889c90b5409" name="a37019e81622f70a79fa67889c90b5409"></a>
+<a class="el" href="classvcl_1_1Box.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> = std::tuple_element&lt; 0, std::tuple&lt; Args... &gt; &gt;::type</td></tr>
 <tr class="separator:a37019e81622f70a79fa67889c90b5409"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename... Args&gt;<br />
 struct vcl::FirstType&lt; TypeWrapper&lt; Args... &gt; &gt;</div><p>Get the first type of a pack of types (variadic templates) or a <a class="el" href="structvcl_1_1TypeWrapper.html" title="A simple structure that wraps a list of variadic templates, without instantiating anything....">TypeWrapper</a>.   </p>
-<p>Usage: </p><div class="fragment"><div class="line"><span class="keyword">using </span><a class="code hl_class" href="classvcl_1_1Matrix.html">ResType</a> = <a class="code hl_typedef" href="structvcl_1_1FirstType.html#adfc61a756c81150c4a12f798feda1b2d">FirstType&lt;int, float, double&gt;::type</a>;</div>
+<p>Usage: </p><div class="fragment"><div class="line"><span class="keyword">using </span><a class="code hl_class" href="classvcl_1_1Box.html">ResType</a> = FirstType&lt;int, float, double&gt;::type;</div>
 <div class="line"><span class="keyword">static_assert</span>(std::is_same&lt;ResType, int&gt;::value, <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="ttc" id="aclassvcl_1_1Matrix_html"><div class="ttname"><a href="classvcl_1_1Matrix.html">vcl::Matrix</a></div><div class="ttdef"><b>Definition</b> matrix.h:36</div></div>
-<div class="ttc" id="astructvcl_1_1FirstType_html_adfc61a756c81150c4a12f798feda1b2d"><div class="ttname"><a href="structvcl_1_1FirstType.html#adfc61a756c81150c4a12f798feda1b2d">vcl::FirstType::type</a></div><div class="ttdeci">std::tuple_element&lt; 0, std::tuple&lt; Args... &gt; &gt;::type type</div><div class="ttdef"><b>Definition</b> variadic_templates.h:63</div></div>
-</div><!-- fragment -->   </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a37019e81622f70a79fa67889c90b5409" name="a37019e81622f70a79fa67889c90b5409"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a37019e81622f70a79fa67889c90b5409">&#9670;&#160;</a></span>type</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename... Args&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Matrix.html">using</a> <a class="el" href="structvcl_1_1FirstType.html">vcl::FirstType</a>&lt; <a class="el" href="structvcl_1_1TypeWrapper.html">TypeWrapper</a>&lt; Args... &gt; &gt;::type =  std::tuple_element&lt;0, std::tuple&lt;Args...&gt; &gt;::type</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li>include/vclib/types/<a class="el" href="variadic__templates_8h_source.html">variadic_templates.h</a></li>
+<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:49</div></div>
+</div><!-- fragment -->   </div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li>vclib/core/include/vclib/types/<a class="el" href="variadic__templates_8h_source.html">variadic_templates.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespacevcl.html">vcl</a></li><li class="navelem"><a class="el" href="structvcl_1_1FirstType_3_01TypeWrapper_3_01Args_8_8_8_01_4_01_4.html">FirstType&lt; TypeWrapper&lt; Args... &gt; &gt;</a></li>
+    <li class="navelem"><b>vcl</b></li><li class="navelem"><a class="el" href="structvcl_1_1FirstType_3_01TypeWrapper_3_01Args_8_8_8_01_4_01_4.html">FirstType&lt; TypeWrapper&lt; Args... &gt; &gt;</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

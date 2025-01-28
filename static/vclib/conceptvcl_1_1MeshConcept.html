@@ -107,22 +107,123 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1MeshConcept.html',''); i
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1MeshConcept.html">vcl::MeshConcept</a> = </div>
-<div class="line">    <a class="code hl_concept" href="conceptvcl_1_1mesh_1_1HasVertexContainer.html">mesh::HasVertexContainer&lt;T&gt;</a> &amp;&amp; <span class="keyword">requires</span> (T o, <span class="keyword">const</span> T&amp; co) {</div>
+<div class="line">    </div>
+<div class="line">    <a class="code hl_concept" href="conceptvcl_1_1mesh_1_1HasVertexContainer.html">mesh::HasVertexContainer&lt;T&gt;</a> &amp;&amp; <span class="keyword">requires</span> (</div>
+<div class="line">                                       T&amp;&amp;                                obj,</div>
+<div class="line">                                       <span class="keyword">typename</span> RemoveRef&lt;T&gt;::VertexType  v,</div>
+<div class="line">                                       <span class="keyword">typename</span> RemoveRef&lt;T&gt;::VertexType&amp; vR,</div>
+<div class="line">                                       <span class="keyword">typename</span> RemoveRef&lt;T&gt;::VertexType* vP,</div>
+<div class="line">                                       std::vector&lt;uint&gt;                  vec) {</div>
 <div class="line">        </div>
-<div class="line">        <span class="keyword">typename</span> T::Containers;</div>
-<div class="line">        <span class="keyword">typename</span> T::Components;</div>
+<div class="line">        <span class="keyword">typename</span> RemoveRef&lt;T&gt;::Containers;</div>
+<div class="line">        <span class="keyword">typename</span> RemoveRef&lt;T&gt;::Components;</div>
 <div class="line"> </div>
-<div class="line">        { o.clear() } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">        { <a class="code hl_class" href="classvcl_1_1Matrix.html">co</a>.isCompact() } -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line">        { o.compact() } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">        { o.enableSameOptionalComponentsOf(T()) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">        { o.importFrom(T()) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">        { o.swap(o) } -&gt; std::same_as&lt;void&gt;;</div>
 <div class="line">        </div>
+<div class="line">        </div>
+<div class="line">        <span class="keyword">requires</span> std::same_as&lt;</div>
+<div class="line">            <span class="keyword">decltype</span>(v),</div>
+<div class="line">            <span class="keyword">typename</span> RemoveRef&lt;T&gt;::template ElementType&lt;ElemId::VERTEX&gt;&gt;;</div>
+<div class="line"> </div>
+<div class="line">        </div>
+<div class="line">        <span class="keyword">requires</span> RemoveRef&lt;T&gt;::template hasContainerOf&lt;decltype(v)&gt;();</div>
+<div class="line"> </div>
+<div class="line">        </div>
+<div class="line">        <span class="keyword">requires</span> RemoveRef&lt;T&gt;::template hasContainerOf&lt;ElemId::VERTEX&gt;();</div>
+<div class="line"> </div>
+<div class="line">        </div>
+<div class="line">        <span class="keyword">requires</span> RemoveRef&lt;T&gt;::template hasPerElementComponent&lt;</div>
+<div class="line">            ElemId::VERTEX,</div>
+<div class="line">            CompId::COORDINATE&gt;();</div>
+<div class="line"> </div>
+<div class="line">        </div>
+<div class="line">        RemoveRef&lt;T&gt;();</div>
+<div class="line">        RemoveRef&lt;T&gt;(obj);</div>
+<div class="line"> </div>
+<div class="line">        </div>
+<div class="line">        { obj.isCompact() } -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line">        { <a class="code hl_class" href="classvcl_1_1Box.html">obj</a>.index(v) } -&gt; std::same_as&lt;uint&gt;;</div>
+<div class="line"> </div>
+<div class="line">        </div>
+<div class="line">        {</div>
+<div class="line">            obj.template element&lt;ElemId::VERTEX&gt;(uint())</div>
+<div class="line">        } -&gt; std::convertible_to&lt;<span class="keyword">decltype</span>(v)&gt;;</div>
+<div class="line"> </div>
+<div class="line">        { obj.template number&lt;ElemId::VERTEX&gt;() } -&gt; std::same_as&lt;uint&gt;;</div>
+<div class="line">        { obj.template containerSize&lt;ElemId::VERTEX&gt;() } -&gt; std::same_as&lt;uint&gt;;</div>
+<div class="line">        { obj.template deletedNumber&lt;ElemId::VERTEX&gt;() } -&gt; std::same_as&lt;uint&gt;;</div>
+<div class="line">        {</div>
+<div class="line">            obj.template compactIndices&lt;ElemId::VERTEX&gt;()</div>
+<div class="line">        } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(vec)&gt;;</div>
+<div class="line"> </div>
+<div class="line">        { obj.template begin&lt;ElemId::VERTEX&gt;() } -&gt; InputIterator&lt;<span class="keyword">decltype</span>(v)&gt;;</div>
+<div class="line">        {</div>
+<div class="line">            obj.template begin&lt;ElemId::VERTEX&gt;(<span class="keywordtype">bool</span>())</div>
+<div class="line">        } -&gt; InputIterator&lt;<span class="keyword">decltype</span>(v)&gt;;</div>
+<div class="line">        { obj.template end&lt;ElemId::VERTEX&gt;() } -&gt; InputIterator&lt;<span class="keyword">decltype</span>(v)&gt;;</div>
+<div class="line">        { obj.template elements&lt;ElemId::VERTEX&gt;() } -&gt; InputRange&lt;<span class="keyword">decltype</span>(v)&gt;;</div>
+<div class="line">        {</div>
+<div class="line">            obj.template elements&lt;ElemId::VERTEX&gt;(<span class="keywordtype">bool</span>())</div>
+<div class="line">        } -&gt; InputRange&lt;<span class="keyword">decltype</span>(v)&gt;;</div>
+<div class="line"> </div>
+<div class="line">        </div>
+<div class="line">        <span class="keyword">requires</span> IsConst&lt;T&gt; || <span class="keyword">requires</span> {</div>
+<div class="line">            </div>
+<div class="line">            { obj.clear() } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">            { obj.compact() } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">            { obj.enableAllOptionalComponents() } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">            { obj.disableAllOptionalComponents() } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">            { obj.enableSameOptionalComponentsOf(obj) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">            { obj.append(obj) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">            { obj.importFrom(obj) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">            { obj.swap(obj) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">            { obj.deleteElement(v) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">            { obj.deleteElement(vP) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line"> </div>
+<div class="line">            </div>
+<div class="line">            { obj = obj } -&gt; std::same_as&lt;T&amp;&gt;;</div>
+<div class="line"> </div>
+<div class="line">            </div>
+<div class="line">            {</div>
+<div class="line">                obj.template element&lt;ElemId::VERTEX&gt;(uint())</div>
+<div class="line">            } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(vR)&gt;;</div>
+<div class="line">            { obj.template add&lt;ElemId::VERTEX&gt;() } -&gt; std::same_as&lt;uint&gt;;</div>
+<div class="line">            { obj.template add&lt;ElemId::VERTEX&gt;(uint()) } -&gt; std::same_as&lt;uint&gt;;</div>
+<div class="line">            {</div>
+<div class="line">                obj.template clearElements&lt;ElemId::VERTEX&gt;()</div>
+<div class="line">            } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">            {</div>
+<div class="line">                obj.template resize&lt;ElemId::VERTEX&gt;(uint())</div>
+<div class="line">            } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">            {</div>
+<div class="line">                obj.template reserve&lt;ElemId::VERTEX&gt;(uint())</div>
+<div class="line">            } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">            {</div>
+<div class="line">                obj.template deleteElement&lt;ElemId::VERTEX&gt;(uint())</div>
+<div class="line">            } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">            {</div>
+<div class="line">                obj.template updateIndices&lt;ElemId::VERTEX&gt;(vec)</div>
+<div class="line">            } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line"> </div>
+<div class="line">            {</div>
+<div class="line">                obj.template begin&lt;ElemId::VERTEX&gt;()</div>
+<div class="line">            } -&gt; OutputIterator&lt;<span class="keyword">decltype</span>(v)&gt;;</div>
+<div class="line">            {</div>
+<div class="line">                obj.template begin&lt;ElemId::VERTEX&gt;(<span class="keywordtype">bool</span>())</div>
+<div class="line">            } -&gt; OutputIterator&lt;<span class="keyword">decltype</span>(v)&gt;;</div>
+<div class="line">            {</div>
+<div class="line">                obj.template end&lt;ElemId::VERTEX&gt;()</div>
+<div class="line">            } -&gt; OutputIterator&lt;<span class="keyword">decltype</span>(v)&gt;;</div>
+<div class="line">            {</div>
+<div class="line">                obj.template elements&lt;ElemId::VERTEX&gt;()</div>
+<div class="line">            } -&gt; OutputRange&lt;<span class="keyword">decltype</span>(v)&gt;;</div>
+<div class="line">            {</div>
+<div class="line">                obj.template elements&lt;ElemId::VERTEX&gt;(<span class="keywordtype">bool</span>())</div>
+<div class="line">            } -&gt; OutputRange&lt;<span class="keyword">decltype</span>(v)&gt;;</div>
+<div class="line">        };</div>
 <div class="line">    }</div>
-<div class="ttc" id="aclassvcl_1_1Matrix_html"><div class="ttname"><a href="classvcl_1_1Matrix.html">vcl::Matrix</a></div><div class="ttdef"><b>Definition</b> matrix.h:36</div></div>
-<div class="ttc" id="aconceptvcl_1_1MeshConcept_html"><div class="ttname"><a href="conceptvcl_1_1MeshConcept.html">vcl::MeshConcept</a></div><div class="ttdoc">The Mesh Concept is evaluated to true when the type is a Mesh.</div><div class="ttdef"><b>Definition</b> mesh_concept.h:53</div></div>
-<div class="ttc" id="aconceptvcl_1_1mesh_1_1HasVertexContainer_html"><div class="ttname"><a href="conceptvcl_1_1mesh_1_1HasVertexContainer.html">vcl::mesh::HasVertexContainer</a></div><div class="ttdoc">The HasVertexContainer concept is satisfied only if a container class provides the types and member f...</div><div class="ttdef"><b>Definition</b> vertex_container.h:43</div></div>
+<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:49</div></div>
+<div class="ttc" id="aconceptvcl_1_1MeshConcept_html"><div class="ttname"><a href="conceptvcl_1_1MeshConcept.html">vcl::MeshConcept</a></div><div class="ttdoc">The Mesh Concept is evaluated to true when the type is a Mesh.</div><div class="ttdef"><b>Definition</b> mesh_concept.h:77</div></div>
+<div class="ttc" id="aconceptvcl_1_1mesh_1_1HasVertexContainer_html"><div class="ttname"><a href="conceptvcl_1_1mesh_1_1HasVertexContainer.html">vcl::mesh::HasVertexContainer</a></div><div class="ttdoc">The HasVertexContainer concept is satisfied only if a container class provides the types and member f...</div><div class="ttdef"><b>Definition</b> vertex_container.h:44</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The Mesh Concept is evaluated to true when the type is a Mesh. </p>
 <p>A type T is a Mesh when it contains a VertexContainer, which is the only container that is mandatory in a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">vcl::Mesh</a>, and provides:</p>
@@ -141,7 +242,7 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1MeshConcept.html',''); i
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespacevcl.html">vcl</a></li><li class="navelem"><a class="el" href="conceptvcl_1_1MeshConcept.html">MeshConcept</a></li>
+    <li class="navelem"><b>vcl</b></li><li class="navelem"><a class="el" href="conceptvcl_1_1MeshConcept.html">MeshConcept</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

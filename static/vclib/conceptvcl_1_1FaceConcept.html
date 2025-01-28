@@ -107,22 +107,21 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1FaceConcept.html',''); i
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1FaceConcept.html">vcl::FaceConcept</a> = </div>
-<div class="line">    <a class="code hl_concept" href="conceptvcl_1_1ElementConcept.html">ElementConcept&lt;T&gt;</a> &amp;&amp; T::ELEMENT_ID == <a class="code hl_enumvalue" href="structvcl_1_1ElemId.html#a1c18d2f7814686d14cc0dacc8f33a09fabc76c2c9553250f05803431f64894eb8">ElemId::FACE</a> &amp;&amp;</div>
+<div class="line">    <a class="code hl_concept" href="conceptvcl_1_1ElementConcept.html">ElementConcept&lt;T&gt;</a> &amp;&amp; RemoveRef&lt;T&gt;::ELEMENT_ID == ElemId::FACE &amp;&amp;</div>
 <div class="line">    <a class="code hl_concept" href="conceptvcl_1_1face_1_1HasBitFlags.html">face::HasBitFlags&lt;T&gt;</a> &amp;&amp; <a class="code hl_concept" href="conceptvcl_1_1face_1_1HasVertexReferences.html">face::HasVertexReferences&lt;T&gt;</a> &amp;&amp;</div>
-<div class="line">    (T::VERTEX_NUMBER &lt; 0 || T::VERTEX_NUMBER &gt;= 3) &amp;&amp;</div>
-<div class="line">    (!<a class="code hl_concept" href="conceptvcl_1_1face_1_1HasTriangleBitFlags.html">face::HasTriangleBitFlags&lt;T&gt;</a> || T::VERTEX_NUMBER == 3) &amp;&amp;</div>
+<div class="line">    (RemoveRef&lt;T&gt;::VERTEX_NUMBER &lt; 0 || RemoveRef&lt;T&gt;::VERTEX_NUMBER &gt;= 3) &amp;&amp;</div>
+<div class="line">    (!<a class="code hl_concept" href="conceptvcl_1_1face_1_1HasTriangleBitFlags.html">face::HasTriangleBitFlags&lt;T&gt;</a> || RemoveRef&lt;T&gt;::VERTEX_NUMBER == 3) &amp;&amp;</div>
 <div class="line">    <a class="code hl_concept" href="conceptvcl_1_1comp_1_1SanityCheckAdjacentEdges.html">comp::SanityCheckAdjacentEdges&lt;T&gt;</a> &amp;&amp; <a class="code hl_concept" href="conceptvcl_1_1comp_1_1SanityCheckAdjacentFaces.html">comp::SanityCheckAdjacentFaces&lt;T&gt;</a> &amp;&amp;</div>
 <div class="line">    <a class="code hl_concept" href="conceptvcl_1_1comp_1_1SanityCheckWedgeColors.html">comp::SanityCheckWedgeColors&lt;T&gt;</a> &amp;&amp; <a class="code hl_concept" href="conceptvcl_1_1comp_1_1SanityCheckWedgeTexCoords.html">comp::SanityCheckWedgeTexCoords&lt;T&gt;</a></div>
-<div class="ttc" id="aconceptvcl_1_1ElementConcept_html"><div class="ttname"><a href="conceptvcl_1_1ElementConcept.html">vcl::ElementConcept</a></div><div class="ttdef"><b>Definition</b> element.h:33</div></div>
+<div class="ttc" id="aconceptvcl_1_1ElementConcept_html"><div class="ttname"><a href="conceptvcl_1_1ElementConcept.html">vcl::ElementConcept</a></div><div class="ttdef"><b>Definition</b> element.h:31</div></div>
 <div class="ttc" id="aconceptvcl_1_1FaceConcept_html"><div class="ttname"><a href="conceptvcl_1_1FaceConcept.html">vcl::FaceConcept</a></div><div class="ttdoc">The FaceConcept describes how a Face element that can be used for a FaceContainer should be organized...</div><div class="ttdef"><b>Definition</b> face.h:124</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1SanityCheckAdjacentEdges_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1SanityCheckAdjacentEdges.html">vcl::comp::SanityCheckAdjacentEdges</a></div><div class="ttdoc">SanityCheckAdjacentEdges concept.</div><div class="ttdef"><b>Definition</b> adjacent_edges.h:148</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1SanityCheckAdjacentFaces_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1SanityCheckAdjacentFaces.html">vcl::comp::SanityCheckAdjacentFaces</a></div><div class="ttdoc">SanityCheckAdjacentFaces concept.</div><div class="ttdef"><b>Definition</b> adjacent_faces.h:148</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1SanityCheckWedgeColors_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1SanityCheckWedgeColors.html">vcl::comp::SanityCheckWedgeColors</a></div><div class="ttdoc">SanityCheckWedgeColors concept.</div><div class="ttdef"><b>Definition</b> wedge_colors.h:113</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1SanityCheckWedgeTexCoords_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1SanityCheckWedgeTexCoords.html">vcl::comp::SanityCheckWedgeTexCoords</a></div><div class="ttdoc">SanityCheckWedgeTexCoords concept.</div><div class="ttdef"><b>Definition</b> wedge_tex_coords.h:121</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1SanityCheckAdjacentEdges_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1SanityCheckAdjacentEdges.html">vcl::comp::SanityCheckAdjacentEdges</a></div><div class="ttdoc">SanityCheckAdjacentEdges concept.</div><div class="ttdef"><b>Definition</b> adjacent_edges.h:158</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1SanityCheckAdjacentFaces_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1SanityCheckAdjacentFaces.html">vcl::comp::SanityCheckAdjacentFaces</a></div><div class="ttdoc">SanityCheckAdjacentFaces concept.</div><div class="ttdef"><b>Definition</b> adjacent_faces.h:158</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1SanityCheckWedgeColors_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1SanityCheckWedgeColors.html">vcl::comp::SanityCheckWedgeColors</a></div><div class="ttdoc">SanityCheckWedgeColors concept.</div><div class="ttdef"><b>Definition</b> wedge_colors.h:118</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1SanityCheckWedgeTexCoords_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1SanityCheckWedgeTexCoords.html">vcl::comp::SanityCheckWedgeTexCoords</a></div><div class="ttdoc">SanityCheckWedgeTexCoords concept.</div><div class="ttdef"><b>Definition</b> wedge_tex_coords.h:124</div></div>
 <div class="ttc" id="aconceptvcl_1_1face_1_1HasBitFlags_html"><div class="ttname"><a href="conceptvcl_1_1face_1_1HasBitFlags.html">vcl::face::HasBitFlags</a></div><div class="ttdef"><b>Definition</b> face.h:56</div></div>
 <div class="ttc" id="aconceptvcl_1_1face_1_1HasTriangleBitFlags_html"><div class="ttname"><a href="conceptvcl_1_1face_1_1HasTriangleBitFlags.html">vcl::face::HasTriangleBitFlags</a></div><div class="ttdef"><b>Definition</b> face.h:84</div></div>
 <div class="ttc" id="aconceptvcl_1_1face_1_1HasVertexReferences_html"><div class="ttname"><a href="conceptvcl_1_1face_1_1HasVertexReferences.html">vcl::face::HasVertexReferences</a></div><div class="ttdef"><b>Definition</b> face.h:86</div></div>
-<div class="ttc" id="astructvcl_1_1ElemId_html_a1c18d2f7814686d14cc0dacc8f33a09fabc76c2c9553250f05803431f64894eb8"><div class="ttname"><a href="structvcl_1_1ElemId.html#a1c18d2f7814686d14cc0dacc8f33a09fabc76c2c9553250f05803431f64894eb8">vcl::ElemId::FACE</a></div><div class="ttdeci">@ FACE</div><div class="ttdef"><b>Definition</b> mesh_elements.h:57</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The FaceConcept describes how a Face element that can be used for a FaceContainer should be organized. </p>
 <p>The Face concept is satisfied for a class F if ALL the following sentences are true:</p><ul>
@@ -140,7 +139,7 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1FaceConcept.html',''); i
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespacevcl.html">vcl</a></li><li class="navelem"><a class="el" href="conceptvcl_1_1FaceConcept.html">FaceConcept</a></li>
+    <li class="navelem"><b>vcl</b></li><li class="navelem"><a class="el" href="conceptvcl_1_1FaceConcept.html">FaceConcept</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

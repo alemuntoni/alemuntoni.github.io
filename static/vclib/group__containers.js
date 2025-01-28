@@ -2,10 +2,6 @@ var group__containers =
 [
     [ "Containers Concepts", "group__containers__concepts.html", "group__containers__concepts" ],
     [ "vcl::mesh::EdgeContainer< T >", "classvcl_1_1mesh_1_1EdgeContainer.html", [
-      [ "ConstEdgeIterator", "classvcl_1_1mesh_1_1EdgeContainer.html#ad9ad8d7051406d4945b891c1481af077", null ],
-      [ "Edge", "classvcl_1_1mesh_1_1EdgeContainer.html#ab6eb4398501fc7a71b62aa02ceb6dd44", null ],
-      [ "EdgeIterator", "classvcl_1_1mesh_1_1EdgeContainer.html#afc45268905d33b8ba808cd2cdab22726", null ],
-      [ "EdgeType", "classvcl_1_1mesh_1_1EdgeContainer.html#a0dd392ff1664930e0903414e505e60ba", null ],
       [ "EdgeContainer", "classvcl_1_1mesh_1_1EdgeContainer.html#af3b240aead0971b940928a2b028fd51c", null ],
       [ "addEdge", "classvcl_1_1mesh_1_1EdgeContainer.html#a1676f6f206bcb59a7ab0101cc4f29765", null ],
       [ "addEdge", "classvcl_1_1mesh_1_1EdgeContainer.html#a58f055e71925000375d229999ac9bc21", null ],
@@ -56,18 +52,11 @@ var group__containers =
       [ "perEdgeCustomComponentVectorHandle", "classvcl_1_1mesh_1_1EdgeContainer.html#a744d454e513b203d931760b9fed49c67", null ],
       [ "reserveEdges", "classvcl_1_1mesh_1_1EdgeContainer.html#aacc7a00243db99c16f2b305f3c04804e", null ],
       [ "resizeEdges", "classvcl_1_1mesh_1_1EdgeContainer.html#a4de50de9042dd64dc4889cb8baa2b8ea", null ],
-      [ "updateEdgeIndices", "classvcl_1_1mesh_1_1EdgeContainer.html#adb4e3cd37b1e8951c749f808fe677660", null ],
-      [ "EdgeContainer", "classvcl_1_1mesh_1_1EdgeContainer.html#a329964657dd625f46489470523e732a2", null ]
+      [ "updateEdgeIndices", "classvcl_1_1mesh_1_1EdgeContainer.html#adb4e3cd37b1e8951c749f808fe677660", null ]
     ] ],
     [ "vcl::mesh::FaceContainer< T >", "classvcl_1_1mesh_1_1FaceContainer.html", [
-      [ "ConstFaceIterator", "classvcl_1_1mesh_1_1FaceContainer.html#aafc5566b74b958696a94d6bf9000279a", null ],
-      [ "Face", "classvcl_1_1mesh_1_1FaceContainer.html#a29a1d4bc75492ec6933d8f5925d86512", null ],
-      [ "FaceIterator", "classvcl_1_1mesh_1_1FaceContainer.html#a28686323579d5f027c3dd58e890d6e55", null ],
-      [ "FaceType", "classvcl_1_1mesh_1_1FaceContainer.html#a95d8f8d22283acc8249d902ad82297e7", null ],
       [ "FaceContainer", "classvcl_1_1mesh_1_1FaceContainer.html#a8b5ffcb56c14833a385f9f0f5c100ec7", null ],
       [ "addFace", "classvcl_1_1mesh_1_1FaceContainer.html#aeeb7225b419501564622d46a44e4ce9f", null ],
-      [ "addFace", "classvcl_1_1mesh_1_1FaceContainer.html#a4ccecdd4c0df1bd5b2369c8399cf2928", null ],
-      [ "addFace", "classvcl_1_1mesh_1_1FaceContainer.html#a987a34001b5a41870e4f650b530745fe", null ],
       [ "addFaces", "classvcl_1_1mesh_1_1FaceContainer.html#ae19e1eaf2f6fb7ad5d5a01d89baf1f0a", null ],
       [ "addPerFaceCustomComponent", "classvcl_1_1mesh_1_1FaceContainer.html#a79a4a941f489ac3a6cea7954ae786806", null ],
       [ "clearFaces", "classvcl_1_1mesh_1_1FaceContainer.html#a8c12ccf4396c8d4361e3f229137254f1", null ],
@@ -127,14 +116,9 @@ var group__containers =
       [ "perFaceCustomComponentVectorHandle", "classvcl_1_1mesh_1_1FaceContainer.html#ac633da1546b2354d0a281eb9aec30baa", null ],
       [ "reserveFaces", "classvcl_1_1mesh_1_1FaceContainer.html#aaf6308ed0895cf92980d0549c2dabaf5", null ],
       [ "resizeFaces", "classvcl_1_1mesh_1_1FaceContainer.html#afb30c7554f37dc934fab1e5a9c26e97e", null ],
-      [ "updateFaceIndices", "classvcl_1_1mesh_1_1FaceContainer.html#aef0cbf495dc75aea0fddf456965103ce", null ],
-      [ "FaceContainer", "classvcl_1_1mesh_1_1FaceContainer.html#aaf33ec7b61fdd9b294c4800c197bebdd", null ]
+      [ "updateFaceIndices", "classvcl_1_1mesh_1_1FaceContainer.html#aef0cbf495dc75aea0fddf456965103ce", null ]
     ] ],
     [ "vcl::mesh::VertexContainer< T >", "classvcl_1_1mesh_1_1VertexContainer.html", [
-      [ "ConstVertexIterator", "classvcl_1_1mesh_1_1VertexContainer.html#aa863a1cf721acd8a6c8177e6d4342878", null ],
-      [ "Vertex", "classvcl_1_1mesh_1_1VertexContainer.html#a6e0332114044b439d6738c1bb64ad7dc", null ],
-      [ "VertexIterator", "classvcl_1_1mesh_1_1VertexContainer.html#a12702551c437573303004846b926c3da", null ],
-      [ "VertexType", "classvcl_1_1mesh_1_1VertexContainer.html#a64eb23d0ad8115b2aac98d5fbae0bc43", null ],
       [ "VertexContainer", "classvcl_1_1mesh_1_1VertexContainer.html#ad2cac8daece6d44babf7a880241b21f6", null ],
       [ "addPerVertexCustomComponent", "classvcl_1_1mesh_1_1VertexContainer.html#a7fef9e15ba6e654141ec74041369b87e", null ],
       [ "addVertex", "classvcl_1_1mesh_1_1VertexContainer.html#a98f6b97063334e7dcc0a8abb3bcb6c27", null ],
@@ -197,7 +181,6 @@ var group__containers =
       [ "vertexIndexIfCompact", "classvcl_1_1mesh_1_1VertexContainer.html#a8bd411cf90c0448949360036246d0e0b", null ],
       [ "vertexNumber", "classvcl_1_1mesh_1_1VertexContainer.html#a7c9be0bf45c7d2b18356181591bbb3ee", null ],
       [ "vertices", "classvcl_1_1mesh_1_1VertexContainer.html#a1aac0c075f3ff34ab9efa083ff1fd4e8", null ],
-      [ "vertices", "classvcl_1_1mesh_1_1VertexContainer.html#a3140ae97a7243135bb2e762309d3ac42", null ],
-      [ "VertexContainer", "classvcl_1_1mesh_1_1VertexContainer.html#a30bc2bb15c0d6f6bcd7211755523e8d1", null ]
+      [ "vertices", "classvcl_1_1mesh_1_1VertexContainer.html#a3140ae97a7243135bb2e762309d3ac42", null ]
     ] ]
 ];

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visual Computing Library: include/vclib/mesh/iterators/face/edge_adj_face_iterator.h Source File</title>
+<title>Visual Computing Library: vclib/core/include/vclib/mesh/iterators/face/edge_adj_face_iterator.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -104,11 +104,11 @@ $(document).ready(function(){initNavTree('edge__adj__face__iterator_8h_source.ht
   <div class="headertitle"><div class="title">edge_adj_face_iterator.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="edge__adj__face__iterator_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2024                                                    *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2025                                                    *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
@@ -129,11 +129,11 @@ $(document).ready(function(){initNavTree('edge__adj__face__iterator_8h_source.ht
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_MESH_ITERATORS_FACE_EDGE_ADJ_FACE_ITERATOR_H</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_MESH_ITERATORS_FACE_EDGE_ADJ_FACE_ITERATOR_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;iterator&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;vclib/types.h&gt;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;<a class="code" href="types_8h.html">vclib/types.h</a>&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;iterator&gt;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span>vcl {</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> FaceType, <span class="keywordtype">bool</span> CNST = false&gt;</div>
 <div class="foldopen" id="foldopen00033" data-start="{" data-end="};">
@@ -142,7 +142,7 @@ $(document).ready(function(){initNavTree('edge__adj__face__iterator_8h_source.ht
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">using </span>FT = std::conditional_t&lt;CNST, const FaceType, FaceType&gt;;</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">using </span>VT = std::conditional_t&lt;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">CNST</a>,</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <a class="code hl_class" href="classvcl_1_1Box.html">CNST</a>,</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keyword">const</span> <span class="keyword">typename</span> FT::VertexType,</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">typename</span> FT::VertexType&gt;;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
@@ -152,42 +152,35 @@ $(document).ready(function(){initNavTree('edge__adj__face__iterator_8h_source.ht
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    VT* mV1      = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classvcl_1_1EdgeAdjFaceIterator.html#a0f591985f5340d9d92f6792636ed09b8">   48</a></span>    <span class="keyword">using </span><a class="code hl_class" href="classvcl_1_1Matrix.html">difference_type</a>   = <a class="code hl_class" href="classvcl_1_1Matrix.html">ptrdiff_t</a>;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classvcl_1_1EdgeAdjFaceIterator.html#a961ae2e0ab42db4331ce15e7f50f346a">   49</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="classvcl_1_1EdgeAdjFaceIterator.html#a961ae2e0ab42db4331ce15e7f50f346a">iterator_category</a> = std::forward_iterator_tag;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classvcl_1_1EdgeAdjFaceIterator.html#aae90b1645f388d6963d8a80c9b0f93c7">   50</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="classvcl_1_1EdgeAdjFaceIterator.html#aae90b1645f388d6963d8a80c9b0f93c7">value_type</a>        = FT*;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classvcl_1_1EdgeAdjFaceIterator.html#a0ba940e8c6bf91d9a2d964110acb44ba">   51</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="classvcl_1_1EdgeAdjFaceIterator.html#a0ba940e8c6bf91d9a2d964110acb44ba">reference</a>         = FT*&amp;;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classvcl_1_1EdgeAdjFaceIterator.html#a12ab1fe3dca3fd0a569f86b0179ac066">   52</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="classvcl_1_1EdgeAdjFaceIterator.html#a12ab1fe3dca3fd0a569f86b0179ac066">pointer</a>           = FT**;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">using </span><a class="code hl_class" href="classvcl_1_1Box.html">difference_type</a>   = <a class="code hl_class" href="classvcl_1_1Box.html">ptrdiff_t</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">using </span>iterator_category = std::forward_iterator_tag;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">using </span>value_type        = FT*;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">using </span>reference         = FT*&amp;;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">using </span>pointer           = FT**;</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classvcl_1_1EdgeAdjFaceIterator.html#af598ef5bbc59678fcb968ed6dfdcd385">   54</a></span>    <a class="code hl_function" href="classvcl_1_1EdgeAdjFaceIterator.html#af598ef5bbc59678fcb968ed6dfdcd385">EdgeAdjFaceIterator</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <a class="code hl_class" href="classvcl_1_1EdgeAdjFaceIterator.html">EdgeAdjFaceIterator</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classvcl_1_1EdgeAdjFaceIterator.html#a0bc0ec60eb45bc20a9ce002445ae8aa0">   56</a></span>    <a class="code hl_function" href="classvcl_1_1EdgeAdjFaceIterator.html#a0bc0ec60eb45bc20a9ce002445ae8aa0">EdgeAdjFaceIterator</a>(FT&amp; f, <a class="code hl_class" href="classvcl_1_1Matrix.html">uint</a> edge) :</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <a class="code hl_class" href="classvcl_1_1EdgeAdjFaceIterator.html">EdgeAdjFaceIterator</a>(FT&amp; f, <a class="code hl_class" href="classvcl_1_1Box.html">uint</a> edge) :</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            mCurrent(&amp;f), mEnd(&amp;f), mV0(f.vertex(edge)),</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            mV1(f.vertexMod(edge + 1))</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    {</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
-</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classvcl_1_1EdgeAdjFaceIterator.html#afc940eb51e89001e99890ccdb57b67ab">   62</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classvcl_1_1EdgeAdjFaceIterator.html#afc940eb51e89001e99890ccdb57b67ab">operator==</a>(<span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1EdgeAdjFaceIterator.html">EdgeAdjFaceIterator</a>&amp; <a class="code hl_class" href="classvcl_1_1Matrix.html">oi</a>)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1EdgeAdjFaceIterator.html">EdgeAdjFaceIterator</a>&amp; <a class="code hl_class" href="classvcl_1_1Box.html">oi</a>)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">return</span> mCurrent == <a class="code hl_class" href="classvcl_1_1Matrix.html">oi</a>.mCurrent &amp;&amp; mV0 == <a class="code hl_class" href="classvcl_1_1Matrix.html">oi</a>.mV0 &amp;&amp; mV1 == <a class="code hl_class" href="classvcl_1_1Matrix.html">oi</a>.mV1;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">return</span> mCurrent == <a class="code hl_class" href="classvcl_1_1Box.html">oi</a>.mCurrent &amp;&amp; mV0 == <a class="code hl_class" href="classvcl_1_1Box.html">oi</a>.mV0 &amp;&amp; mV1 == <a class="code hl_class" href="classvcl_1_1Box.html">oi</a>.mV1;</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
-</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="foldopen" id="foldopen00067" data-start="{" data-end="}">
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classvcl_1_1EdgeAdjFaceIterator.html#ac91e1321e8fe06c141734696bcd3d4a4">   67</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classvcl_1_1EdgeAdjFaceIterator.html#ac91e1321e8fe06c141734696bcd3d4a4">operator!=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1EdgeAdjFaceIterator.html">EdgeAdjFaceIterator</a>&amp; <a class="code hl_class" href="classvcl_1_1Matrix.html">oi</a>)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1EdgeAdjFaceIterator.html">EdgeAdjFaceIterator</a>&amp; <a class="code hl_class" href="classvcl_1_1Box.html">oi</a>)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordflow">return</span> !(*<span class="keyword">this</span> == <a class="code hl_class" href="classvcl_1_1Matrix.html">oi</a>);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordflow">return</span> !(*<span class="keyword">this</span> == <a class="code hl_class" href="classvcl_1_1Box.html">oi</a>);</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
-</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="foldopen" id="foldopen00072" data-start="{" data-end="}">
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classvcl_1_1EdgeAdjFaceIterator.html#a67de5f1361a619b320b293628e1968d4">   72</a></span>    <a class="code hl_class" href="classvcl_1_1EdgeAdjFaceIterator.html">EdgeAdjFaceIterator</a>&amp; <a class="code hl_function" href="classvcl_1_1EdgeAdjFaceIterator.html#a67de5f1361a619b320b293628e1968d4">operator++</a>()</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <a class="code hl_class" href="classvcl_1_1EdgeAdjFaceIterator.html">EdgeAdjFaceIterator</a>&amp; operator++()</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    {</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">assert</a>(mCurrent);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">uint</a> edge = mCurrent-&gt;indexOfEdge(mV0, mV1);</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">assert</a>(edge != <a class="code hl_variable" href="group__types.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <a class="code hl_class" href="classvcl_1_1Box.html">assert</a>(mCurrent);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <a class="code hl_class" href="classvcl_1_1Box.html">uint</a> edge = mCurrent-&gt;indexOfEdge(mV0, mV1);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <a class="code hl_class" href="classvcl_1_1Box.html">assert</a>(edge != <a class="code hl_variable" href="group__types.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>);</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        mCurrent = mCurrent-&gt;adjFace(edge);</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordflow">if</span> (mCurrent == mEnd || mCurrent == <span class="keyword">nullptr</span>) {</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            mCurrent = <span class="keyword">nullptr</span>;</div>
@@ -196,52 +189,35 @@ $(document).ready(function(){initNavTree('edge__adj__face__iterator_8h_source.ht
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        }</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    }</div>
-</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="foldopen" id="foldopen00086" data-start="{" data-end="}">
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="classvcl_1_1EdgeAdjFaceIterator.html#afbf27e4e23f4a0fc3ac43a676663e67a">   86</a></span>    <a class="code hl_class" href="classvcl_1_1EdgeAdjFaceIterator.html">EdgeAdjFaceIterator</a> <a class="code hl_function" href="classvcl_1_1EdgeAdjFaceIterator.html#afbf27e4e23f4a0fc3ac43a676663e67a">operator++</a>(<span class="keywordtype">int</span>)</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <a class="code hl_class" href="classvcl_1_1EdgeAdjFaceIterator.html">EdgeAdjFaceIterator</a> operator++(<span class="keywordtype">int</span>)</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    {</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keyword">auto</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">it</a> = *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keyword">auto</span> <a class="code hl_class" href="classvcl_1_1Box.html">it</a> = *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        ++(*this);</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">it</a>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Box.html">it</a>;</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    }</div>
-</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="classvcl_1_1EdgeAdjFaceIterator.html#afa642053c5f74245c987b4ae950544e2">   93</a></span>    <a class="code hl_typedef" href="classvcl_1_1EdgeAdjFaceIterator.html#a0ba940e8c6bf91d9a2d964110acb44ba">reference</a> <a class="code hl_function" href="classvcl_1_1EdgeAdjFaceIterator.html#afa642053c5f74245c987b4ae950544e2">operator*</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mCurrent; }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    reference operator*()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mCurrent; }</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="classvcl_1_1EdgeAdjFaceIterator.html#ae4e38e8edb56d4385384a42f5be5a40b">   95</a></span>    <a class="code hl_typedef" href="classvcl_1_1EdgeAdjFaceIterator.html#a12ab1fe3dca3fd0a569f86b0179ac066">pointer</a> <a class="code hl_function" href="classvcl_1_1EdgeAdjFaceIterator.html#ae4e38e8edb56d4385384a42f5be5a40b">operator-&gt;</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> &amp;mCurrent; }</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    pointer operator-&gt;()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> &amp;mCurrent; }</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>};</div>
 </div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> FaceType&gt;</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="namespacevcl.html#a70592efcf2670361a337c528b34e4dfb">   99</a></span><span class="keyword">using </span><a class="code hl_class" href="classvcl_1_1Matrix.html">ConstEdgeAdjFaceIterator</a> = <a class="code hl_class" href="classvcl_1_1Matrix.html">EdgeAdjFaceIterator&lt;FaceType, true&gt;</a>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="keyword">using </span><a class="code hl_class" href="classvcl_1_1Box.html">ConstEdgeAdjFaceIterator</a> = <a class="code hl_class" href="classvcl_1_1Box.html">EdgeAdjFaceIterator&lt;FaceType, true&gt;</a>;</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>} <span class="comment">// namespace vcl</span></div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="preprocessor">#endif </span><span class="comment">// VCL_MESH_ITERATORS_FACE_EDGE_ADJ_FACE_ITERATOR_H</span></div>
+<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:49</div></div>
 <div class="ttc" id="aclassvcl_1_1EdgeAdjFaceIterator_html"><div class="ttname"><a href="classvcl_1_1EdgeAdjFaceIterator.html">vcl::EdgeAdjFaceIterator</a></div><div class="ttdef"><b>Definition</b> edge_adj_face_iterator.h:34</div></div>
-<div class="ttc" id="aclassvcl_1_1EdgeAdjFaceIterator_html_a0ba940e8c6bf91d9a2d964110acb44ba"><div class="ttname"><a href="classvcl_1_1EdgeAdjFaceIterator.html#a0ba940e8c6bf91d9a2d964110acb44ba">vcl::EdgeAdjFaceIterator::reference</a></div><div class="ttdeci">FT *&amp; reference</div><div class="ttdef"><b>Definition</b> edge_adj_face_iterator.h:51</div></div>
-<div class="ttc" id="aclassvcl_1_1EdgeAdjFaceIterator_html_a0bc0ec60eb45bc20a9ce002445ae8aa0"><div class="ttname"><a href="classvcl_1_1EdgeAdjFaceIterator.html#a0bc0ec60eb45bc20a9ce002445ae8aa0">vcl::EdgeAdjFaceIterator::EdgeAdjFaceIterator</a></div><div class="ttdeci">EdgeAdjFaceIterator(FT &amp;f, uint edge)</div><div class="ttdef"><b>Definition</b> edge_adj_face_iterator.h:56</div></div>
-<div class="ttc" id="aclassvcl_1_1EdgeAdjFaceIterator_html_a12ab1fe3dca3fd0a569f86b0179ac066"><div class="ttname"><a href="classvcl_1_1EdgeAdjFaceIterator.html#a12ab1fe3dca3fd0a569f86b0179ac066">vcl::EdgeAdjFaceIterator::pointer</a></div><div class="ttdeci">FT ** pointer</div><div class="ttdef"><b>Definition</b> edge_adj_face_iterator.h:52</div></div>
-<div class="ttc" id="aclassvcl_1_1EdgeAdjFaceIterator_html_a67de5f1361a619b320b293628e1968d4"><div class="ttname"><a href="classvcl_1_1EdgeAdjFaceIterator.html#a67de5f1361a619b320b293628e1968d4">vcl::EdgeAdjFaceIterator::operator++</a></div><div class="ttdeci">EdgeAdjFaceIterator &amp; operator++()</div><div class="ttdef"><b>Definition</b> edge_adj_face_iterator.h:72</div></div>
-<div class="ttc" id="aclassvcl_1_1EdgeAdjFaceIterator_html_a961ae2e0ab42db4331ce15e7f50f346a"><div class="ttname"><a href="classvcl_1_1EdgeAdjFaceIterator.html#a961ae2e0ab42db4331ce15e7f50f346a">vcl::EdgeAdjFaceIterator::iterator_category</a></div><div class="ttdeci">std::forward_iterator_tag iterator_category</div><div class="ttdef"><b>Definition</b> edge_adj_face_iterator.h:49</div></div>
-<div class="ttc" id="aclassvcl_1_1EdgeAdjFaceIterator_html_aae90b1645f388d6963d8a80c9b0f93c7"><div class="ttname"><a href="classvcl_1_1EdgeAdjFaceIterator.html#aae90b1645f388d6963d8a80c9b0f93c7">vcl::EdgeAdjFaceIterator::value_type</a></div><div class="ttdeci">FT * value_type</div><div class="ttdef"><b>Definition</b> edge_adj_face_iterator.h:50</div></div>
-<div class="ttc" id="aclassvcl_1_1EdgeAdjFaceIterator_html_ac91e1321e8fe06c141734696bcd3d4a4"><div class="ttname"><a href="classvcl_1_1EdgeAdjFaceIterator.html#ac91e1321e8fe06c141734696bcd3d4a4">vcl::EdgeAdjFaceIterator::operator!=</a></div><div class="ttdeci">bool operator!=(const EdgeAdjFaceIterator &amp;oi) const</div><div class="ttdef"><b>Definition</b> edge_adj_face_iterator.h:67</div></div>
-<div class="ttc" id="aclassvcl_1_1EdgeAdjFaceIterator_html_ae4e38e8edb56d4385384a42f5be5a40b"><div class="ttname"><a href="classvcl_1_1EdgeAdjFaceIterator.html#ae4e38e8edb56d4385384a42f5be5a40b">vcl::EdgeAdjFaceIterator::operator-&gt;</a></div><div class="ttdeci">pointer operator-&gt;() const</div><div class="ttdef"><b>Definition</b> edge_adj_face_iterator.h:95</div></div>
-<div class="ttc" id="aclassvcl_1_1EdgeAdjFaceIterator_html_af598ef5bbc59678fcb968ed6dfdcd385"><div class="ttname"><a href="classvcl_1_1EdgeAdjFaceIterator.html#af598ef5bbc59678fcb968ed6dfdcd385">vcl::EdgeAdjFaceIterator::EdgeAdjFaceIterator</a></div><div class="ttdeci">EdgeAdjFaceIterator()=default</div></div>
-<div class="ttc" id="aclassvcl_1_1EdgeAdjFaceIterator_html_afa642053c5f74245c987b4ae950544e2"><div class="ttname"><a href="classvcl_1_1EdgeAdjFaceIterator.html#afa642053c5f74245c987b4ae950544e2">vcl::EdgeAdjFaceIterator::operator*</a></div><div class="ttdeci">reference operator*() const</div><div class="ttdef"><b>Definition</b> edge_adj_face_iterator.h:93</div></div>
-<div class="ttc" id="aclassvcl_1_1EdgeAdjFaceIterator_html_afbf27e4e23f4a0fc3ac43a676663e67a"><div class="ttname"><a href="classvcl_1_1EdgeAdjFaceIterator.html#afbf27e4e23f4a0fc3ac43a676663e67a">vcl::EdgeAdjFaceIterator::operator++</a></div><div class="ttdeci">EdgeAdjFaceIterator operator++(int)</div><div class="ttdef"><b>Definition</b> edge_adj_face_iterator.h:86</div></div>
-<div class="ttc" id="aclassvcl_1_1EdgeAdjFaceIterator_html_afc940eb51e89001e99890ccdb57b67ab"><div class="ttname"><a href="classvcl_1_1EdgeAdjFaceIterator.html#afc940eb51e89001e99890ccdb57b67ab">vcl::EdgeAdjFaceIterator::operator==</a></div><div class="ttdeci">bool operator==(const EdgeAdjFaceIterator &amp;oi) const</div><div class="ttdef"><b>Definition</b> edge_adj_face_iterator.h:62</div></div>
-<div class="ttc" id="aclassvcl_1_1Matrix_html"><div class="ttname"><a href="classvcl_1_1Matrix.html">vcl::Matrix</a></div><div class="ttdef"><b>Definition</b> matrix.h:36</div></div>
-<div class="ttc" id="agroup__types_html_ga9ad8104cd9ccfa9352d33bc7e6ba47e6"><div class="ttname"><a href="group__types.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">vcl::UINT_NULL</a></div><div class="ttdeci">constexpr uint UINT_NULL</div><div class="ttdoc">The UINT_NULL value represent a null value of uint that is the maximum value that can be represented ...</div><div class="ttdef"><b>Definition</b> base.h:47</div></div>
-<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition</b> bounding_box.h:48</div></div>
-<div class="ttc" id="atypes_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div></div>
+<div class="ttc" id="agroup__types_html_ga9ad8104cd9ccfa9352d33bc7e6ba47e6"><div class="ttname"><a href="group__types.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">vcl::UINT_NULL</a></div><div class="ttdeci">constexpr uint UINT_NULL</div><div class="ttdoc">The UINT_NULL value represent a null value of uint that is the maximum value that can be represented ...</div><div class="ttdef"><b>Definition</b> base.h:48</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d2fdbf172f8ae9790b339bfcb66b3af7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_b7cba7c08bd1746e313314f7773d6465.html">mesh</a></li><li class="navelem"><a class="el" href="dir_6889ae968e80656580beafd3f2fa6a8c.html">iterators</a></li><li class="navelem"><a class="el" href="dir_34d17d677de49c2c283492a22b3cb936.html">face</a></li><li class="navelem"><a class="el" href="edge__adj__face__iterator_8h.html">edge_adj_face_iterator.h</a></li>
+    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_57e9d4f65bede1d20512a0464756b99f.html">mesh</a></li><li class="navelem"><a class="el" href="dir_22c1b21f0ac0680af3888a9aea836d41.html">iterators</a></li><li class="navelem"><a class="el" href="dir_ec2b53e260d0008226d46b6c75c94a78.html">face</a></li><li class="navelem"><b>edge_adj_face_iterator.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

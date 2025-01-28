@@ -1,9 +1,6 @@
 var classvcl_1_1comp_1_1AdjacentEdges =
 [
-    [ "AdjacentEdgeIterator", "classvcl_1_1comp_1_1AdjacentEdges.html#a89c6aca28a84e4919ba49cc2a183e28b", null ],
     [ "AdjacentEdgeType", "classvcl_1_1comp_1_1AdjacentEdges.html#a07e7f81d22ffe77c7a9d2ef125811590", null ],
-    [ "ConstAdjacentEdgeIndexIterator", "classvcl_1_1comp_1_1AdjacentEdges.html#ad8c0963c4aac8e32cc862e282abe9177", null ],
-    [ "ConstAdjacentEdgeIterator", "classvcl_1_1comp_1_1AdjacentEdges.html#a6b9a037743b59727e10ce5c5e73c0a19", null ],
     [ "AdjacentEdges", "classvcl_1_1comp_1_1AdjacentEdges.html#a28043428ab4f24f437a2fb151ed339d6", null ],
     [ "adjEdge", "classvcl_1_1comp_1_1AdjacentEdges.html#ab7a0fb98f573247a1a0f2206b4af49cc", null ],
     [ "adjEdge", "classvcl_1_1comp_1_1AdjacentEdges.html#a578f4d5bb3d9136a662210867f71489a", null ],
@@ -24,9 +21,7 @@ var classvcl_1_1comp_1_1AdjacentEdges =
     [ "clearAdjEdges", "classvcl_1_1comp_1_1AdjacentEdges.html#ac5bd0e4fc93042633067a684bd8ad36d", null ],
     [ "containsAdjEdge", "classvcl_1_1comp_1_1AdjacentEdges.html#a9e1c703e876b3e76c50ae88f1060a59e", null ],
     [ "containsAdjEdge", "classvcl_1_1comp_1_1AdjacentEdges.html#a674bc18d9ce0d154e55ba335cef3fc9f", null ],
-    [ "deserialize", "classvcl_1_1comp_1_1AdjacentEdges.html#a115de8d46061804165d52bb9366b24b6", null ],
     [ "eraseAdjEdge", "classvcl_1_1comp_1_1AdjacentEdges.html#a562a7e689c4c09f2f0cdd592f74a7b00", null ],
-    [ "importFrom", "classvcl_1_1comp_1_1AdjacentEdges.html#ad95681fafeccd76f9fb9d8bec119525a", null ],
     [ "indexOfAdjEdge", "classvcl_1_1comp_1_1AdjacentEdges.html#aff633c8c17059b7dcbb16461609580b9", null ],
     [ "indexOfAdjEdge", "classvcl_1_1comp_1_1AdjacentEdges.html#aed620701f82c9669827e70321b59b7b9", null ],
     [ "insertAdjEdge", "classvcl_1_1comp_1_1AdjacentEdges.html#aea98ad40691fba854d36a3c6bab8bc89", null ],
@@ -34,7 +29,6 @@ var classvcl_1_1comp_1_1AdjacentEdges =
     [ "pushAdjEdge", "classvcl_1_1comp_1_1AdjacentEdges.html#aba26134681bdc9cef096218ae5e02cc1", null ],
     [ "pushAdjEdge", "classvcl_1_1comp_1_1AdjacentEdges.html#a732edc78d86bc2a78963dcffc092497d", null ],
     [ "resizeAdjEdges", "classvcl_1_1comp_1_1AdjacentEdges.html#a79762d43f6055be6b918def127187a02", null ],
-    [ "serialize", "classvcl_1_1comp_1_1AdjacentEdges.html#a0f9802015a1861389868a7a3b2f121de", null ],
     [ "setAdjEdge", "classvcl_1_1comp_1_1AdjacentEdges.html#ad8cc9da78e7bdaa7f01b8b4bc8c80033", null ],
     [ "setAdjEdge", "classvcl_1_1comp_1_1AdjacentEdges.html#a0cf9a11f655cb8ed9e2ef8a0f745aa96", null ],
     [ "setAdjEdge", "classvcl_1_1comp_1_1AdjacentEdges.html#ac3150f1df87e220a69ca10d64877ead2", null ],
@@ -43,7 +37,7 @@ var classvcl_1_1comp_1_1AdjacentEdges =
     [ "setAdjEdge", "classvcl_1_1comp_1_1AdjacentEdges.html#a2c888fbe19b8b7bc4052db6f6f68107c", null ],
     [ "setAdjEdgeMod", "classvcl_1_1comp_1_1AdjacentEdges.html#afef95f1266b35fef8995c3fcc03aae5a", null ],
     [ "setAdjEdgeMod", "classvcl_1_1comp_1_1AdjacentEdges.html#affa9c098d27e22a64f58212d6b09b93b", null ],
-    [ "setAdjEdges", "classvcl_1_1comp_1_1AdjacentEdges.html#abaad3feb85c9346e5ee541969705e3c5", null ],
-    [ "setAdjEdges", "classvcl_1_1comp_1_1AdjacentEdges.html#a50c950dec58f838a3dc73a8ce9787aef", null ],
+    [ "setAdjEdges", "classvcl_1_1comp_1_1AdjacentEdges.html#a57abf077c820d9af98ebcae9b99319b2", null ],
+    [ "setAdjEdges", "classvcl_1_1comp_1_1AdjacentEdges.html#acdffa25ccd7094ce2f04bef9000501c8", null ],
     [ "ADJ_EDGE_NUMBER", "classvcl_1_1comp_1_1AdjacentEdges.html#aa0dd43a9cb402142e1cfbd684d85ae06", null ]
 ];

@@ -105,14 +105,14 @@ Overview</h1>
 Prebuilt Mesh data structures</h2>
 <p>VCLib provides a set of prebuilt mesh data structures:</p>
 <ul>
-<li>vcl::TriMesh: a simple Triangle Mesh data structure, allows to store a container of Vertices, a container of Triangles and some other components;</li>
+<li><a class="el" href="group__meshes.html#ga6be863913f1a692b9ad2342f49e0fb57" title="The TriMesh class is a specialization of TriMeshT that uses double as scalar and pointers to store ve...">vcl::TriMesh</a>: a simple Triangle Mesh data structure, allows to store a container of Vertices, a container of Triangles and some other components;</li>
 <li>vcl::PolyMesh: a Polygon Mesh data structure, allows to store a container of Vertices, a container of Polygons (no constraints on the number of vertices of each polygon) and some other components;</li>
 <li>vcl::EdgeMesh: a Mesh data structure that allows to store a container of Vertices, a container of Edges (segments), and some other components;</li>
 <li>vcl::PointClout: a Mesh data structure that stores just a container of Vertices and some other components;</li>
 <li>(ToDo: QuadMesh)</li>
 <li>(ToDo: volumetric data structures)</li>
 </ul>
-<p>All these meshes store scalar values using <code>double</code> floating-point precision, but the library provides also the alternative with the <code>f</code> suffix that stores scalars using single floating point precision (vcl::TriMeshf, vcl::PolyMeshf, ...).</p>
+<p>All these meshes store scalar values using <code>double</code> floating-point precision, but the library provides also the alternative with the <code>f</code> suffix that stores scalars using single floating point precision (<a class="el" href="group__meshes.html#ga68fbff34c0d6b5dcf7c47dec84c424e3" title="The TriMeshf class is a specialization of TriMeshT that uses float as scalar and pointers to store ve...">vcl::TriMeshf</a>, vcl::PolyMeshf, ...).</p>
 <p>All the prebuilt data structures are documented in the <a class="el" href="group__meshes.html">Meshes</a> group.</p>
 <p>All these data structures are implemented by customizing the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">vcl::Mesh</a> data structure, which is a highly customizable mesh data structure.</p>
 <h2><a class="anchor" id="autotoc_md10"></a>
@@ -143,13 +143,11 @@ Components</h2>
 <p>For example, the <a class="el" href="classvcl_1_1comp_1_1Color.html" title="The Color class represents a RGBA color that will be part of an Element (e.g. Vertex,...">vcl::comp::Color</a> component can be used by Elements, but also by the Mesh (it may be useful sometimes to assign a uniform color to the Mesh). The color component exposes the member functions <code>color()</code> and <code>color() const</code>, meaning that it will be possible to call these functions from all the Elements/Meshes that will have that component:</p>
 <div class="fragment"><div class="line">AMeshType m; <span class="comment">// A Mesh type that has the Color component</span></div>
 <div class="line"> </div>
-<div class="line">m.color() = <a class="code hl_enumvalue" href="classvcl_1_1Color.html#a002e401382a7608e0c68f42c089057bca9acef5e91bae5a2cc4e481578e3ece42">vcl::Color::Red</a>;</div>
+<div class="line">m.color() = vcl::Color::Red;</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">auto</span>&amp; v : m.vertex(0); <span class="comment">// Get a vertex from the mesh</span></div>
 <div class="line"> </div>
-<div class="line">v.color() = <a class="code hl_enumvalue" href="classvcl_1_1Color.html#a002e401382a7608e0c68f42c089057bca1adf4b9d84921fef14b84c21232c1418">vcl::Color::Green</a>; <span class="comment">// The Vertex Element of AMeshType has the Color component</span></div>
-<div class="ttc" id="aclassvcl_1_1Color_html_a002e401382a7608e0c68f42c089057bca1adf4b9d84921fef14b84c21232c1418"><div class="ttname"><a href="classvcl_1_1Color.html#a002e401382a7608e0c68f42c089057bca1adf4b9d84921fef14b84c21232c1418">vcl::Color::Green</a></div><div class="ttdeci">@ Green</div><div class="ttdef"><b>Definition</b> color.h:79</div></div>
-<div class="ttc" id="aclassvcl_1_1Color_html_a002e401382a7608e0c68f42c089057bca9acef5e91bae5a2cc4e481578e3ece42"><div class="ttname"><a href="classvcl_1_1Color.html#a002e401382a7608e0c68f42c089057bca9acef5e91bae5a2cc4e481578e3ece42">vcl::Color::Red</a></div><div class="ttdeci">@ Red</div><div class="ttdef"><b>Definition</b> color.h:78</div></div>
+<div class="line">v.color() = vcl::Color::Green; <span class="comment">// The Vertex Element of AMeshType has the Color component</span></div>
 </div><!-- fragment --><p>When Components are part of Elements, they can actually be of two categories:</p>
 <ul>
 <li>Horizontal (default): The data of the Component is stored inside the Component itself;</li>

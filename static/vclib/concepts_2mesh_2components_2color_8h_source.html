@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visual Computing Library: include/vclib/concepts/mesh/components/color.h Source File</title>
+<title>Visual Computing Library: vclib/core/include/vclib/concepts/mesh/components/color.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -104,11 +104,11 @@ $(document).ready(function(){initNavTree('concepts_2mesh_2components_2color_8h_s
   <div class="headertitle"><div class="title">color.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="concepts_2mesh_2components_2color_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2024                                                    *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2025                                                    *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
@@ -129,39 +129,37 @@ $(document).ready(function(){initNavTree('concepts_2mesh_2components_2color_8h_s
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_CONCEPTS_MESH_COMPONENTS_COLOR_H</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_CONCEPTS_MESH_COMPONENTS_COLOR_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;<a class="code" href="mesh_2components_2bases_2component_8h.html">component.h</a>&quot;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;component.h&quot;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl_1_1comp.html">vcl::comp</a> {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;vclib/concepts/space.h&gt;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1HasColor.html">   45</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasColor.html">HasColor</a> = <span class="keyword">requires</span> (T o, <span class="keyword">const</span> T&amp; co) {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="comment">// clang-format off</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">typename</span> T::ColorType;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    { o.color() } -&gt; std::same_as&lt;typename T::ColorType&amp;&gt;;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    { co.color() } -&gt; std::same_as&lt;const typename T::ColorType&amp;&gt;;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="comment">// clang-format on</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>};</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span>vcl::comp {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1HasColor.html">   47</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasColor.html">HasColor</a> = <span class="keyword">requires</span> (T&amp;&amp; obj) {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::ColorType;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    { obj.color() } -&gt; <a class="code hl_concept" href="conceptvcl_1_1ColorConcept.html">ColorConcept</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>};</div>
 </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1HasOptionalColor.html">   61</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasOptionalColor.html">HasOptionalColor</a> =</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasColor.html">HasColor&lt;T&gt;</a> &amp;&amp; <a class="code hl_concept" href="conceptvcl_1_1comp_1_1IsOptionalComponent.html">IsOptionalComponent&lt;typename T::Color&gt;</a>;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>} <span class="comment">// namespace vcl::comp</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#endif </span><span class="comment">// VCL_CONCEPTS_MESH_COMPONENTS_COLOR_H</span></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasColor_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasColor.html">vcl::comp::HasColor</a></div><div class="ttdoc">HasColor concept is satisfied only if a Element/Mesh class provides the types and member functions sp...</div><div class="ttdef"><b>Definition</b> color.h:45</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasOptionalColor_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasOptionalColor.html">vcl::comp::HasOptionalColor</a></div><div class="ttdoc">HasOptionalColor concept is satisfied only if a class satisfies the vcl::comp::HasColor concept and t...</div><div class="ttdef"><b>Definition</b> color.h:61</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1IsOptionalComponent_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1IsOptionalComponent.html">vcl::comp::IsOptionalComponent</a></div><div class="ttdoc">Evaluates to true if the type T is a component that is stored vertically in its element container,...</div><div class="ttdef"><b>Definition</b> component.h:75</div></div>
-<div class="ttc" id="amesh_2components_2bases_2component_8h_html"><div class="ttname"><a href="mesh_2components_2bases_2component_8h.html">component.h</a></div></div>
-<div class="ttc" id="anamespacevcl_1_1comp_html"><div class="ttname"><a href="namespacevcl_1_1comp.html">vcl::comp</a></div><div class="ttdef"><b>Definition</b> adjacent_edges.h:32</div></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="conceptvcl_1_1comp_1_1HasOptionalColor.html">   60</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasOptionalColor.html">HasOptionalColor</a> =</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasColor.html">HasColor&lt;T&gt;</a> &amp;&amp; <a class="code hl_concept" href="conceptvcl_1_1comp_1_1IsOptionalComponent.html">IsOptionalComponent&lt;typename RemoveRef&lt;T&gt;::Color</a>&gt;;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>} <span class="comment">// namespace vcl::comp</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#endif </span><span class="comment">// VCL_CONCEPTS_MESH_COMPONENTS_COLOR_H</span></div>
+<div class="ttc" id="aconceptvcl_1_1ColorConcept_html"><div class="ttname"><a href="conceptvcl_1_1ColorConcept.html">vcl::ColorConcept</a></div><div class="ttdoc">ColorConcept is satisfied only if a class provides the member functions specified in this concept....</div><div class="ttdef"><b>Definition</b> color.h:41</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasColor_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasColor.html">vcl::comp::HasColor</a></div><div class="ttdoc">HasColor concept is satisfied only if a Element/Mesh class provides the types and member functions sp...</div><div class="ttdef"><b>Definition</b> color.h:47</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasOptionalColor_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasOptionalColor.html">vcl::comp::HasOptionalColor</a></div><div class="ttdoc">HasOptionalColor concept is satisfied only if a class satisfies the vcl::comp::HasColor concept and t...</div><div class="ttdef"><b>Definition</b> color.h:60</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1IsOptionalComponent_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1IsOptionalComponent.html">vcl::comp::IsOptionalComponent</a></div><div class="ttdoc">Evaluates to true if the type T is a component that is stored vertically in its element container,...</div><div class="ttdef"><b>Definition</b> component.h:72</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d2fdbf172f8ae9790b339bfcb66b3af7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_d8d31096cdb23314816d0514c2e28657.html">concepts</a></li><li class="navelem"><a class="el" href="dir_50753de5cfa25b667fa931e759fe9caf.html">mesh</a></li><li class="navelem"><a class="el" href="dir_428f44f51414044b8fb8c65c07b4030e.html">components</a></li><li class="navelem"><a class="el" href="concepts_2mesh_2components_2color_8h.html">color.h</a></li>
+    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_dd968cc90108d82a40e31b676831d617.html">concepts</a></li><li class="navelem"><a class="el" href="dir_219f652b702ba78d999e101abb8207c2.html">mesh</a></li><li class="navelem"><a class="el" href="dir_d80585bfb201bd57ea5160384a6df8f1.html">components</a></li><li class="navelem"><b>color.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

@@ -5,8 +5,6 @@ var classvcl_1_1Point =
     [ "Point", "classvcl_1_1Point.html#a13e911dce09c034eaa69dc7b90124873", null ],
     [ "Point", "classvcl_1_1Point.html#a2a9ca3b34d2410abb87a3d9be9528829", null ],
     [ "angle", "classvcl_1_1Point.html#a52b8d303f3e830f2749a4c06b86b3d67", null ],
-    [ "at", "classvcl_1_1Point.html#a02325ecc40180026718d7fa1c4bdf783", null ],
-    [ "at", "classvcl_1_1Point.html#a5081944ce22de8ea3ebfb2920796d4e3", null ],
     [ "cast", "classvcl_1_1Point.html#a2c51d808119f59efcdac8de4c3a069ee", null ],
     [ "deserialize", "classvcl_1_1Point.html#aa0d153abb5af2f5e62778f4b1654bfba", null ],
     [ "dist", "classvcl_1_1Point.html#a54fa99e271c7ec7f426fa5b8cea86ee8", null ],

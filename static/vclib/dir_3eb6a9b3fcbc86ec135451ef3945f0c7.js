@@ -1,0 +1,25 @@
+var dir_3eb6a9b3fcbc86ec135451ef3945f0c7 =
+[
+    [ "bit_set", "dir_a09d32db7b4cfa6c0a71c46316497008.html", "dir_a09d32db7b4cfa6c0a71c46316497008" ],
+    [ "matrix", "dir_8277401a9e435b4fdbbb05dda0130fe7.html", "dir_8277401a9e435b4fdbbb05dda0130fe7" ],
+    [ "vector", "dir_661f0b79192f9e747ba0cc6f51f7aee4.html", "dir_661f0b79192f9e747ba0cc6f51f7aee4" ],
+    [ "array.h", "space_2core_2array_8h_source.html", null ],
+    [ "bit_set.h", "space_2core_2bit__set_8h_source.html", null ],
+    [ "box.h", "space_2core_2box_8h_source.html", null ],
+    [ "color.h", "space_2core_2color_8h_source.html", null ],
+    [ "image.h", "space_2core_2image_8h_source.html", null ],
+    [ "matrix.h", "core_2include_2vclib_2space_2core_2matrix_8h_source.html", null ],
+    [ "plane.h", "space_2core_2plane_8h_source.html", null ],
+    [ "point.h", "space_2core_2point_8h_source.html", null ],
+    [ "polygon.h", "space_2core_2polygon_8h_source.html", null ],
+    [ "principal_curvature.h", "space_2core_2principal__curvature_8h_source.html", null ],
+    [ "quaternion.h", "quaternion_8h_source.html", null ],
+    [ "segment.h", "space_2core_2segment_8h_source.html", null ],
+    [ "sphere.h", "space_2core_2sphere_8h_source.html", null ],
+    [ "tex_coord.h", "space_2core_2tex__coord_8h_source.html", null ],
+    [ "tex_coord_indexed.h", "space_2core_2tex__coord__indexed_8h_source.html", null ],
+    [ "texture.h", "space_2core_2texture_8h_source.html", null ],
+    [ "triangle.h", "space_2core_2triangle_8h_source.html", null ],
+    [ "triangle_wrapper.h", "triangle__wrapper_8h_source.html", null ],
+    [ "vector.h", "vector_8h_source.html", null ]
+];

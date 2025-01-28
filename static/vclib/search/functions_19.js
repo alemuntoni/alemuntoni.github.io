@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['z_0',['z',['../classvcl_1_1Point.html#a4944e81562f28479f0a12ce10d1d8fda',1,'vcl::Point::z()'],['../classvcl_1_1Point.html#aac34b96496fe385d679d8db24d2c9ca5',1,'vcl::Point::z() const']]]
+  ['_7eindexbuffer_0',['~IndexBuffer',['../classvcl_1_1IndexBuffer.html#a2504fb0aa38ef0b8c391eb741fd49f70',1,'vcl::IndexBuffer']]],
+  ['_7evertexbuffer_1',['~VertexBuffer',['../classvcl_1_1VertexBuffer.html#ae5308d8361c5f68bbf61d9ee5c9974d2',1,'vcl::VertexBuffer']]]
 ];

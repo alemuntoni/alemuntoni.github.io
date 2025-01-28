@@ -1,11 +1,7 @@
 var classvcl_1_1comp_1_1AdjacentVertices =
 [
-    [ "AdjacentVertexIterator", "classvcl_1_1comp_1_1AdjacentVertices.html#a0aca42a2475e6722f2e0dbefa6ee40b8", null ],
     [ "AdjacentVertexType", "classvcl_1_1comp_1_1AdjacentVertices.html#ad16d3629bc6dce9ce1a190e90a02033a", null ],
-    [ "ConstAdjacentVertexIndexIterator", "classvcl_1_1comp_1_1AdjacentVertices.html#a0b34c30196b84ab2878dd507a7795680", null ],
-    [ "ConstAdjacentVertexIterator", "classvcl_1_1comp_1_1AdjacentVertices.html#a566bb7ccd8ae1f02b49d97b54ca4e427", null ],
     [ "AdjacentVertices", "classvcl_1_1comp_1_1AdjacentVertices.html#ad9eaec1526107bb0cd57005abb1267b3", null ],
-    [ "__adjacentVertices", "classvcl_1_1comp_1_1AdjacentVertices.html#ad0109fca84762200c2aea1707276c6be", null ],
     [ "adjVertex", "classvcl_1_1comp_1_1AdjacentVertices.html#a9112d4799495bc088ba97608a27b034d", null ],
     [ "adjVertex", "classvcl_1_1comp_1_1AdjacentVertices.html#abf8f98ee41214485bc48ef64c4a6ec9f", null ],
     [ "adjVertexBegin", "classvcl_1_1comp_1_1AdjacentVertices.html#aff562f1b238bc1fede16865506558d1f", null ],
@@ -25,9 +21,7 @@ var classvcl_1_1comp_1_1AdjacentVertices =
     [ "clearAdjVertices", "classvcl_1_1comp_1_1AdjacentVertices.html#a32f615b21edb71441a1b165f4ba0100f", null ],
     [ "containsAdjVertex", "classvcl_1_1comp_1_1AdjacentVertices.html#affcd46474390138c87847707a2e213f8", null ],
     [ "containsAdjVertex", "classvcl_1_1comp_1_1AdjacentVertices.html#a95f22cd6fc1ae7d11bb3442ead42fc13", null ],
-    [ "deserialize", "classvcl_1_1comp_1_1AdjacentVertices.html#acc96171caa96918b734889ac445794a8", null ],
     [ "eraseAdjVertex", "classvcl_1_1comp_1_1AdjacentVertices.html#a4fd294d01439818918ae7ef59fc2cee6", null ],
-    [ "importFrom", "classvcl_1_1comp_1_1AdjacentVertices.html#a281b8616c7ff939dc539f26cb704121f", null ],
     [ "indexOfAdjVertex", "classvcl_1_1comp_1_1AdjacentVertices.html#a912c99d5e0a636bb51504daace50a241", null ],
     [ "indexOfAdjVertex", "classvcl_1_1comp_1_1AdjacentVertices.html#a9bd85d722e3ce0111830a4bc7a983f5f", null ],
     [ "insertAdjVertex", "classvcl_1_1comp_1_1AdjacentVertices.html#a39fc5b78fb1967533e70e5ddd6bf4b7b", null ],
@@ -35,7 +29,6 @@ var classvcl_1_1comp_1_1AdjacentVertices =
     [ "pushAdjVertex", "classvcl_1_1comp_1_1AdjacentVertices.html#aea7bd1fb962aca59b281da24af739bc7", null ],
     [ "pushAdjVertex", "classvcl_1_1comp_1_1AdjacentVertices.html#a8a430f916cee7d4d350337ff374fbd8d", null ],
     [ "resizeAdjVertices", "classvcl_1_1comp_1_1AdjacentVertices.html#a525cff3041a46adce6b2dc6c7c1e0fa2", null ],
-    [ "serialize", "classvcl_1_1comp_1_1AdjacentVertices.html#aeb9126c867f73cc2a9a3a732afb7ed41", null ],
     [ "setAdjVertex", "classvcl_1_1comp_1_1AdjacentVertices.html#a794db2f8a29358934194b9a661603f57", null ],
     [ "setAdjVertex", "classvcl_1_1comp_1_1AdjacentVertices.html#a158247b368ee8381e93e548321e2bbc0", null ],
     [ "setAdjVertex", "classvcl_1_1comp_1_1AdjacentVertices.html#ad965e83549e474a9c490e234d8a587ae", null ],
@@ -44,6 +37,6 @@ var classvcl_1_1comp_1_1AdjacentVertices =
     [ "setAdjVertex", "classvcl_1_1comp_1_1AdjacentVertices.html#a6a4fee1fdaac78c60f5cd42c0930ca46", null ],
     [ "setAdjVertexMod", "classvcl_1_1comp_1_1AdjacentVertices.html#a7afd10be4834e0a1627d30b3f8da90ab", null ],
     [ "setAdjVertexMod", "classvcl_1_1comp_1_1AdjacentVertices.html#a9e34ef4cd3ffdb2cd2bd4723b0c485ea", null ],
-    [ "setAdjVertices", "classvcl_1_1comp_1_1AdjacentVertices.html#a43db9b36d360585976c85138c07f1285", null ],
-    [ "setAdjVertices", "classvcl_1_1comp_1_1AdjacentVertices.html#ad0557eeea773535c1a4f7d129f324959", null ]
+    [ "setAdjVertices", "classvcl_1_1comp_1_1AdjacentVertices.html#ad3106687ba1a50bd5ad36a81a28234d8", null ],
+    [ "setAdjVertices", "classvcl_1_1comp_1_1AdjacentVertices.html#aaaedf9236cc88dd7adb5cd4de5e4fc0e", null ]
 ];

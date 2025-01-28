@@ -1,6 +1,5 @@
 var classvcl_1_1Color =
 [
-    [ "Format", "structvcl_1_1Color_1_1Format.html", "structvcl_1_1Color_1_1Format" ],
     [ "ColorABGR", "classvcl_1_1Color.html#a002e401382a7608e0c68f42c089057bc", [
       [ "Black", "classvcl_1_1Color.html#a002e401382a7608e0c68f42c089057bca5777c5f96e2970090b99598c215292f7", null ],
       [ "DarkGray", "classvcl_1_1Color.html#a002e401382a7608e0c68f42c089057bca0e92f068f5b62fafa2b47b631b124dc0", null ],
@@ -30,21 +29,26 @@ var classvcl_1_1Color =
       [ "Brown", "classvcl_1_1Color.html#a002e401382a7608e0c68f42c089057bca82e9123859586013d090b3045c679e82", null ]
     ] ],
     [ "ColorMap", "classvcl_1_1Color.html#a32ace7bd7fccf742b39f6cd83042a10f", [
-      [ "RedBlue", "classvcl_1_1Color.html#a32ace7bd7fccf742b39f6cd83042a10fab41395ae78ccecdb7c2a311a4bb25130", null ],
-      [ "Parula", "classvcl_1_1Color.html#a32ace7bd7fccf742b39f6cd83042a10faf9a3e7c09df3865685e50d36c45990ce", null ],
-      [ "GreyShade", "classvcl_1_1Color.html#a32ace7bd7fccf742b39f6cd83042a10fa6e00efa0b01720ed1dd54df87f58c1a4", null ]
+      [ "RedBlue", "classvcl_1_1Color.html#a32ace7bd7fccf742b39f6cd83042a10fadf9ee7fed74f56c5c5444e3ac08038c7", null ],
+      [ "Parula", "classvcl_1_1Color.html#a32ace7bd7fccf742b39f6cd83042a10fa83073a89d56be610594499e444ee4440", null ],
+      [ "GreyShade", "classvcl_1_1Color.html#a32ace7bd7fccf742b39f6cd83042a10fac83276e18b495457f949726d81618dfe", null ]
+    ] ],
+    [ "Format", "classvcl_1_1Color.html#a51d1c2a5b8ce06d43362026194a14523", [
+      [ "ABGR", "classvcl_1_1Color.html#a51d1c2a5b8ce06d43362026194a14523adce7d10c2f9ffc8ed9e7b6a3f7d8ba6c", null ],
+      [ "ARGB", "classvcl_1_1Color.html#a51d1c2a5b8ce06d43362026194a14523ae192297ecf3602fabbec5f0a38ede758", null ],
+      [ "RGBA", "classvcl_1_1Color.html#a51d1c2a5b8ce06d43362026194a14523aea3495a278957dc58165e48a8945469f", null ],
+      [ "BGRA", "classvcl_1_1Color.html#a51d1c2a5b8ce06d43362026194a14523a5a1fe3c61c9e2fd6dbbc823589f6e697", null ]
+    ] ],
+    [ "Representation", "classvcl_1_1Color.html#a59da32385451a205500eea4432cc151d", [
+      [ "INT_0_255", "classvcl_1_1Color.html#a59da32385451a205500eea4432cc151da0bf4bb89ef4e186b232f8b7406a72966", null ],
+      [ "FLOAT_0_1", "classvcl_1_1Color.html#a59da32385451a205500eea4432cc151da4adc0c637baeed5bee458d2a520f7f87", null ]
     ] ],
     [ "Color", "classvcl_1_1Color.html#a98b1ed982327614fa25d6feaf53baed0", null ],
-    [ "Color", "classvcl_1_1Color.html#a96fae9fe31425c974c5ddfb8b38692ca", null ],
-    [ "Color", "classvcl_1_1Color.html#a5f768be0897e45f1ee9665546ee6d028", null ],
     [ "Color", "classvcl_1_1Color.html#a4c297ede3982a3b9dadd9a5b3f40749b", null ],
-    [ "Color", "classvcl_1_1Color.html#a09f1e51ed2078a8d3617bbdc152a93d3", null ],
-    [ "abgr", "classvcl_1_1Color.html#ab18c390a7912919fcc88286a1881f3b9", null ],
     [ "alpha", "classvcl_1_1Color.html#a8116d00a12ef282bf5375edd9a993620", null ],
     [ "alpha", "classvcl_1_1Color.html#ad0cff34fadbdcb37717d8f0fe4d72449", null ],
     [ "alphaF", "classvcl_1_1Color.html#a67bf1be4c629e2f6dc8467c96b2e80c1", null ],
     [ "bgr5", "classvcl_1_1Color.html#a1f3d0380c65ac92437c89cadbc17d62d", null ],
-    [ "bgra", "classvcl_1_1Color.html#ae3e8e351b6f5be34228ec36b7708f148", null ],
     [ "blue", "classvcl_1_1Color.html#a185abf0fab1046111770f09e9d6b7dc1", null ],
     [ "blue", "classvcl_1_1Color.html#af6c4cf6b24155ffd1147078341e42d3b", null ],
     [ "blueF", "classvcl_1_1Color.html#a5f991dbf22a42ce73034788c92fda640", null ],
@@ -62,25 +66,19 @@ var classvcl_1_1Color =
     [ "red", "classvcl_1_1Color.html#a58864c5072d97b7d717829a4809da05c", null ],
     [ "redF", "classvcl_1_1Color.html#a8fa714b76cf16673b229a1a54aa5779e", null ],
     [ "rgb5", "classvcl_1_1Color.html#aa13c9774de3d99a11c8bcecc15491d14", null ],
-    [ "rgba", "classvcl_1_1Color.html#a64aa5f764b3b0f009a721e21bac9d0fb", null ],
-    [ "set", "classvcl_1_1Color.html#acd8b08ae01a685950e9512c8abdbeda6", null ],
-    [ "setAbgr", "classvcl_1_1Color.html#a0010b138a6d9daae00e606a9598b6317", null ],
     [ "setAlpha", "classvcl_1_1Color.html#a8f18a478de52693dba416ecf7deef7be", null ],
     [ "setAlphaF", "classvcl_1_1Color.html#a918434ccc507ccc6226480e883283af2", null ],
-    [ "setArgb", "classvcl_1_1Color.html#a3537645bed8a3ca28e83dad8de18140b", null ],
     [ "setBgr5", "classvcl_1_1Color.html#a57bdd7649c866bb214507bdd99b8df36", null ],
-    [ "setBgra", "classvcl_1_1Color.html#a79957f4133746db2283e9df29f0d40a8", null ],
     [ "setBlue", "classvcl_1_1Color.html#a1dbaaf3735acbd4e3d3f61f822fdc67b", null ],
     [ "setBlueF", "classvcl_1_1Color.html#aa8b790ef1ca36bcd4e0a1af2f5036022", null ],
     [ "setGreen", "classvcl_1_1Color.html#acffd59b24333c3d0da1762d26332b795", null ],
     [ "setGreenF", "classvcl_1_1Color.html#afd36d181b7b6f7bfb0c822bacfbe8d3c", null ],
-    [ "setHsv", "classvcl_1_1Color.html#a9e6cd87abe68b5d5e0d0ff7305277131", null ],
+    [ "setHsv", "classvcl_1_1Color.html#a5ed053671bc80a23c49974d8bbcd2a18", null ],
     [ "setHsvF", "classvcl_1_1Color.html#a2de983e704a0ba637bde9a163fdd9f6f", null ],
     [ "setRed", "classvcl_1_1Color.html#a81a724e0892ea3e75753ba5f5fd9ba35", null ],
     [ "setRedF", "classvcl_1_1Color.html#a7bbabd9cb15e6ee17d4ba79773b9887e", null ],
     [ "setRgb", "classvcl_1_1Color.html#ae46c5ea1f8e9404bc0fbdecae1d6b26d", null ],
     [ "setRgb5", "classvcl_1_1Color.html#ab89f9b855018fbe0490cb1d38d6ea5eb", null ],
-    [ "setRgba", "classvcl_1_1Color.html#a87e061b66f2202d3b9efb133a0157ade", null ],
     [ "setRgbF", "classvcl_1_1Color.html#a5073ea810a3d16ac301846cf690e3aad", null ],
     [ "operator<<", "classvcl_1_1Color.html#aecec73b123325e5bb890b013616e88aa", null ]
 ];

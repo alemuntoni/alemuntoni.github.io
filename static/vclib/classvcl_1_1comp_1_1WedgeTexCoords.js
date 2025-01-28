@@ -1,23 +1,11 @@
 var classvcl_1_1comp_1_1WedgeTexCoords =
 [
-    [ "ConstWedgeTexCoordsIterator", "classvcl_1_1comp_1_1WedgeTexCoords.html#a39d349ad3593c4fbed1af9cfd18052de", null ],
-    [ "WedgeTexCoordScalarType", "classvcl_1_1comp_1_1WedgeTexCoords.html#ae69a561fed1825158ec7fc2c8323b2c3", null ],
-    [ "WedgeTexCoordsIterator", "classvcl_1_1comp_1_1WedgeTexCoords.html#a4d476de013c33a029fe57433d3fe7288", null ],
     [ "WedgeTexCoordType", "classvcl_1_1comp_1_1WedgeTexCoords.html#a98577b38306485a80e52a86823406104", null ],
     [ "WedgeTexCoords", "classvcl_1_1comp_1_1WedgeTexCoords.html#a8dfc9863486643f6baad93b2e6da35fd", null ],
-    [ "__wedgeTexCoords", "classvcl_1_1comp_1_1WedgeTexCoords.html#ab71394ba56fda927aa15ee252f210296", null ],
-    [ "clear", "classvcl_1_1comp_1_1WedgeTexCoords.html#a37c65f8294428df393e511d4cae324ba", null ],
-    [ "deserialize", "classvcl_1_1comp_1_1WedgeTexCoords.html#acb19a99ab3c09e6c8c01bdef96e08005", null ],
-    [ "erase", "classvcl_1_1comp_1_1WedgeTexCoords.html#a1cee6b63890a76b6071c9742730732c9", null ],
-    [ "importFrom", "classvcl_1_1comp_1_1WedgeTexCoords.html#ad958144fb3a60db086a746faf9efa7e9", null ],
-    [ "insert", "classvcl_1_1comp_1_1WedgeTexCoords.html#a2f15f15c46b768463ba303722c9c32df", null ],
-    [ "pushBack", "classvcl_1_1comp_1_1WedgeTexCoords.html#a22377a3166c43460b56892d70fcbb5c4", null ],
-    [ "resize", "classvcl_1_1comp_1_1WedgeTexCoords.html#a8985029fcbe26dde218bf49f1fa20088", null ],
-    [ "serialize", "classvcl_1_1comp_1_1WedgeTexCoords.html#a41c0d77451d7f51ab39cfea273d50007", null ],
     [ "setWedgeTexCoord", "classvcl_1_1comp_1_1WedgeTexCoords.html#afc229f0ec231f0cc5a3bbc90c2b5f65f", null ],
-    [ "setWedgeTexCoords", "classvcl_1_1comp_1_1WedgeTexCoords.html#a77d4cc86ad3e2402e5d2eeccdbbaed66", null ],
-    [ "textureIndex", "classvcl_1_1comp_1_1WedgeTexCoords.html#a9bd684bac236fafcb31c672690d017a9", null ],
-    [ "textureIndex", "classvcl_1_1comp_1_1WedgeTexCoords.html#ab57324be8526d7476135dbc59cf3b609", null ],
+    [ "setWedgeTexCoords", "classvcl_1_1comp_1_1WedgeTexCoords.html#acf46120815d27340da445222e2138fbf", null ],
+    [ "textureIndex", "classvcl_1_1comp_1_1WedgeTexCoords.html#a4f9b59ab4334897d50e2c636441c0c3f", null ],
+    [ "textureIndex", "classvcl_1_1comp_1_1WedgeTexCoords.html#a974c4618b4ba3226dfbf6df611e5a210", null ],
     [ "wedgeTexCoord", "classvcl_1_1comp_1_1WedgeTexCoords.html#a4481f174bec9acd8ecf36fc212729859", null ],
     [ "wedgeTexCoord", "classvcl_1_1comp_1_1WedgeTexCoords.html#ad62944d9c89a0377f368f549af6ac781", null ],
     [ "wedgeTexCoordBegin", "classvcl_1_1comp_1_1WedgeTexCoords.html#ac07056481ca5a0eab4fa550341d280de", null ],
@@ -27,6 +15,5 @@ var classvcl_1_1comp_1_1WedgeTexCoords =
     [ "wedgeTexCoordMod", "classvcl_1_1comp_1_1WedgeTexCoords.html#a451b846b8026fcc3a4d6e6318bce40d9", null ],
     [ "wedgeTexCoordMod", "classvcl_1_1comp_1_1WedgeTexCoords.html#adacc84b781c2a6bbd1d581e4165280a0", null ],
     [ "wedgeTexCoords", "classvcl_1_1comp_1_1WedgeTexCoords.html#aa441fe3b74d64634e516d33f55069a0e", null ],
-    [ "wedgeTexCoords", "classvcl_1_1comp_1_1WedgeTexCoords.html#aa3ff40d5f4ebbdf1d48a72ae2438b101", null ],
-    [ "WEDGE_TEX_COORD_NUMBER", "classvcl_1_1comp_1_1WedgeTexCoords.html#aea8e8c86feba13b3548e9e6b5b6b6b88", null ]
+    [ "wedgeTexCoords", "classvcl_1_1comp_1_1WedgeTexCoords.html#aa3ff40d5f4ebbdf1d48a72ae2438b101", null ]
 ];

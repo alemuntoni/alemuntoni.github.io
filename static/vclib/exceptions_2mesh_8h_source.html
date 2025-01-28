@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visual Computing Library: include/vclib/exceptions/mesh.h Source File</title>
+<title>Visual Computing Library: vclib/core/include/vclib/exceptions/mesh.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -104,11 +104,11 @@ $(document).ready(function(){initNavTree('exceptions_2mesh_8h_source.html',''); 
   <div class="headertitle"><div class="title">mesh.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="exceptions_2mesh_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2024                                                    *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2025                                                    *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
@@ -132,245 +132,172 @@ $(document).ready(function(){initNavTree('exceptions_2mesh_8h_source.html',''); 
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span>vcl {</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="foldopen" id="foldopen00031" data-start="{" data-end="};">
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classvcl_1_1InconsistentMeshException.html">   31</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1InconsistentMeshException.html">InconsistentMeshException</a> : <span class="keyword">public</span> std::runtime_error</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>{</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">public</span>:</div>
-<div class="foldopen" id="foldopen00034" data-start="{" data-end="}">
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classvcl_1_1InconsistentMeshException.html#a47de7d4e37f9449fd033d0947b3bb990">   34</a></span>    <a class="code hl_function" href="classvcl_1_1InconsistentMeshException.html#a47de7d4e37f9449fd033d0947b3bb990">InconsistentMeshException</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Matrix.html">err</a>) : std::runtime_error(<a class="code hl_class" href="classvcl_1_1Matrix.html">err</a>)</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    {</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    }</div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="};">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classvcl_1_1InconsistentMeshException.html">   36</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1InconsistentMeshException.html">InconsistentMeshException</a> : <span class="keyword">public</span> std::runtime_error</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>{</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_class" href="classvcl_1_1InconsistentMeshException.html">InconsistentMeshException</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Box.html">err</a>) : std::runtime_error(<a class="code hl_class" href="classvcl_1_1Box.html">err</a>)</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* what() <span class="keyword">const</span> <span class="keywordflow">throw</span>()</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">static</span> std::string <a class="code hl_class" href="classvcl_1_1Box.html">error</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_class" href="classvcl_1_1Box.html">error</a> =</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            std::string(<span class="stringliteral">&quot;Inconsistent Mesh - &quot;</span>) + std::runtime_error::what();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Box.html">error</a>.c_str();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>};</div>
 </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="foldopen" id="foldopen00038" data-start="{" data-end="}">
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classvcl_1_1InconsistentMeshException.html#aae57cec61c6c3f2ae08f1fd0ee87917b">   38</a></span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="classvcl_1_1InconsistentMeshException.html#aae57cec61c6c3f2ae08f1fd0ee87917b">what</a>() <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">throw</a>()</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">static</span> std::string <a class="code hl_class" href="classvcl_1_1Matrix.html">error</a>;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">error</a> =</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            std::string(<span class="stringliteral">&quot;Inconsistent Mesh - &quot;</span>) + std::runtime_error::what();</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">error</a>.c_str();</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="};">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classvcl_1_1MissingPreconditionException.html">   58</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1MissingPreconditionException.html">MissingPreconditionException</a> : <span class="keyword">public</span> std::runtime_error</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>{</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <a class="code hl_class" href="classvcl_1_1MissingPreconditionException.html">MissingPreconditionException</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Box.html">err</a>) :</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            std::runtime_error(<a class="code hl_class" href="classvcl_1_1Box.html">err</a>)</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* what() <span class="keyword">const</span> <span class="keywordflow">throw</span>()</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keyword">static</span> std::string <a class="code hl_class" href="classvcl_1_1Box.html">error</a>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <a class="code hl_class" href="classvcl_1_1Box.html">error</a> = std::string(<span class="stringliteral">&quot;Missing Mesh Precondition - &quot;</span>) +</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                std::runtime_error::what();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Box.html">error</a>.c_str();</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>};</div>
 </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>};</div>
-</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="foldopen" id="foldopen00047" data-start="{" data-end="};">
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classvcl_1_1MissingPreconditionException.html">   47</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1MissingPreconditionException.html">MissingPreconditionException</a> : <span class="keyword">public</span> std::runtime_error</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>{</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keyword">public</span>:</div>
-<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classvcl_1_1MissingPreconditionException.html#a68ad71cf037bf5f024c893081642eb51">   50</a></span>    <a class="code hl_function" href="classvcl_1_1MissingPreconditionException.html#a68ad71cf037bf5f024c893081642eb51">MissingPreconditionException</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Matrix.html">err</a>) :</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            std::runtime_error(<a class="code hl_class" href="classvcl_1_1Matrix.html">err</a>)</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }</div>
-</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="foldopen" id="foldopen00055" data-start="{" data-end="}">
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classvcl_1_1MissingPreconditionException.html#aba3b1b37919f6fcb6d47119d6ed3231f">   55</a></span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="classvcl_1_1MissingPreconditionException.html#aba3b1b37919f6fcb6d47119d6ed3231f">what</a>() <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">throw</a>()</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    {</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keyword">static</span> std::string <a class="code hl_class" href="classvcl_1_1Matrix.html">error</a>;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">error</a> = std::string(<span class="stringliteral">&quot;Missing Mesh Precondition - &quot;</span>) +</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                std::runtime_error::what();</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">error</a>.c_str();</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    }</div>
-</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>};</div>
-</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="foldopen" id="foldopen00064" data-start="{" data-end="};">
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classvcl_1_1MissingCompactnessException.html">   64</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1MissingCompactnessException.html">MissingCompactnessException</a> : <span class="keyword">public</span> std::runtime_error</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>{</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keyword">public</span>:</div>
-<div class="foldopen" id="foldopen00067" data-start="{" data-end="}">
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classvcl_1_1MissingCompactnessException.html#afb1fcc33aad8d6ecc54e62296441298c">   67</a></span>    <a class="code hl_function" href="classvcl_1_1MissingCompactnessException.html#afb1fcc33aad8d6ecc54e62296441298c">MissingCompactnessException</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Matrix.html">err</a>) :</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            std::runtime_error(<a class="code hl_class" href="classvcl_1_1Matrix.html">err</a>)</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    {</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
-</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="foldopen" id="foldopen00072" data-start="{" data-end="}">
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classvcl_1_1MissingCompactnessException.html#a8b7a2a27a00787cb68d70b71eefd43c1">   72</a></span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="classvcl_1_1MissingCompactnessException.html#a8b7a2a27a00787cb68d70b71eefd43c1">what</a>() <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">throw</a>()</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    {</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keyword">static</span> std::string <a class="code hl_class" href="classvcl_1_1Matrix.html">error</a>;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">error</a> =</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            std::string(<span class="stringliteral">&quot;Lack of Compactness - &quot;</span>) + std::runtime_error::what();</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">error</a>.c_str();</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    }</div>
-</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>};</div>
-</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="foldopen" id="foldopen00081" data-start="{" data-end="};">
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classvcl_1_1MissingComponentException.html">   81</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1MissingComponentException.html">MissingComponentException</a> : <span class="keyword">public</span> std::runtime_error</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>{</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="keyword">public</span>:</div>
-<div class="foldopen" id="foldopen00084" data-start="{" data-end="}">
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="classvcl_1_1MissingComponentException.html#a354929fc63dec25151dbde55ad19a6a4">   84</a></span>    <a class="code hl_function" href="classvcl_1_1MissingComponentException.html#a354929fc63dec25151dbde55ad19a6a4">MissingComponentException</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Matrix.html">err</a>) : std::runtime_error(<a class="code hl_class" href="classvcl_1_1Matrix.html">err</a>)</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="foldopen" id="foldopen00080" data-start="{" data-end="};">
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="classvcl_1_1MissingCompactnessException.html">   80</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1MissingCompactnessException.html">MissingCompactnessException</a> : <span class="keyword">public</span> std::runtime_error</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>{</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <a class="code hl_class" href="classvcl_1_1MissingCompactnessException.html">MissingCompactnessException</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Box.html">err</a>) :</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            std::runtime_error(<a class="code hl_class" href="classvcl_1_1Box.html">err</a>)</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    {</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
-</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="foldopen" id="foldopen00088" data-start="{" data-end="}">
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="classvcl_1_1MissingComponentException.html#ad590cf27f0900f1197d1a0153a3a3421">   88</a></span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="classvcl_1_1MissingComponentException.html#ad590cf27f0900f1197d1a0153a3a3421">what</a>() <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">throw</a>()</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* what() <span class="keyword">const</span> <span class="keywordflow">throw</span>()</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    {</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keyword">static</span> std::string <a class="code hl_class" href="classvcl_1_1Matrix.html">error</a>;</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">error</a> =</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            std::string(<span class="stringliteral">&quot;Missing Component - &quot;</span>) + std::runtime_error::what();</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">error</a>.c_str();</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keyword">static</span> std::string <a class="code hl_class" href="classvcl_1_1Box.html">error</a>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <a class="code hl_class" href="classvcl_1_1Box.html">error</a> =</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            std::string(<span class="stringliteral">&quot;Lack of Compactness - &quot;</span>) + std::runtime_error::what();</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Box.html">error</a>.c_str();</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    }</div>
-</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>};</div>
 </div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
-<div class="foldopen" id="foldopen00097" data-start="{" data-end="};">
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="classvcl_1_1MissingTriangularRequirementException.html">   97</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1MissingTriangularRequirementException.html">MissingTriangularRequirementException</a> : <span class="keyword">public</span> std::runtime_error</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>{</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="keyword">public</span>:</div>
-<div class="foldopen" id="foldopen00100" data-start="{" data-end="}">
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="classvcl_1_1MissingTriangularRequirementException.html#a1a693ca163f4c18221d94c9a13b9f945">  100</a></span>    <a class="code hl_function" href="classvcl_1_1MissingTriangularRequirementException.html#a1a693ca163f4c18221d94c9a13b9f945">MissingTriangularRequirementException</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Matrix.html">err</a>) :</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            std::runtime_error(<a class="code hl_class" href="classvcl_1_1Matrix.html">err</a>)</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    {</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    }</div>
+<div class="foldopen" id="foldopen00103" data-start="{" data-end="};">
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="classvcl_1_1MissingComponentException.html">  103</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1MissingComponentException.html">MissingComponentException</a> : <span class="keyword">public</span> std::runtime_error</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>{</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <a class="code hl_class" href="classvcl_1_1MissingComponentException.html">MissingComponentException</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Box.html">err</a>) : std::runtime_error(<a class="code hl_class" href="classvcl_1_1Box.html">err</a>)</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    }</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* what() <span class="keyword">const</span> <span class="keywordflow">throw</span>()</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keyword">static</span> std::string <a class="code hl_class" href="classvcl_1_1Box.html">error</a>;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <a class="code hl_class" href="classvcl_1_1Box.html">error</a> =</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            std::string(<span class="stringliteral">&quot;Missing Component - &quot;</span>) + std::runtime_error::what();</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Box.html">error</a>.c_str();</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    }</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>};</div>
 </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="foldopen" id="foldopen00105" data-start="{" data-end="}">
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="classvcl_1_1MissingTriangularRequirementException.html#a41a7aa7e7691909048363b26f1906c9c">  105</a></span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="classvcl_1_1MissingTriangularRequirementException.html#a41a7aa7e7691909048363b26f1906c9c">what</a>() <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">throw</a>()</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    {</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keyword">static</span> std::string <a class="code hl_class" href="classvcl_1_1Matrix.html">error</a>;</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">error</a> = std::string(<span class="stringliteral">&quot;Missing Triangular Mesh Requirement - &quot;</span>) +</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                std::runtime_error::what();</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">error</a>.c_str();</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    }</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="foldopen" id="foldopen00125" data-start="{" data-end="};">
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="classvcl_1_1MissingTriangularRequirementException.html">  125</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1MissingTriangularRequirementException.html">MissingTriangularRequirementException</a> : <span class="keyword">public</span> std::runtime_error</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>{</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <a class="code hl_class" href="classvcl_1_1MissingTriangularRequirementException.html">MissingTriangularRequirementException</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Box.html">err</a>) :</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            std::runtime_error(<a class="code hl_class" href="classvcl_1_1Box.html">err</a>)</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    {</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    }</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* what() <span class="keyword">const</span> <span class="keywordflow">throw</span>()</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <span class="keyword">static</span> std::string <a class="code hl_class" href="classvcl_1_1Box.html">error</a>;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <a class="code hl_class" href="classvcl_1_1Box.html">error</a> = std::string(<span class="stringliteral">&quot;Missing Triangular Mesh Requirement - &quot;</span>) +</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                std::runtime_error::what();</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Box.html">error</a>.c_str();</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    }</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>};</div>
 </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>};</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="foldopen" id="foldopen00147" data-start="{" data-end="};">
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="classvcl_1_1MissingQuadRequirementException.html">  147</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1MissingQuadRequirementException.html">MissingQuadRequirementException</a> : <span class="keyword">public</span> std::runtime_error</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>{</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <a class="code hl_class" href="classvcl_1_1MissingQuadRequirementException.html">MissingQuadRequirementException</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Box.html">err</a>) :</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            std::runtime_error(<a class="code hl_class" href="classvcl_1_1Box.html">err</a>)</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    {</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    }</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* what() <span class="keyword">const</span> <span class="keywordflow">throw</span>()</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    {</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <span class="keyword">static</span> std::string <a class="code hl_class" href="classvcl_1_1Box.html">error</a>;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        <a class="code hl_class" href="classvcl_1_1Box.html">error</a> = std::string(<span class="stringliteral">&quot;Missing Quad Mesh Requirement - &quot;</span>) +</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                std::runtime_error::what();</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Box.html">error</a>.c_str();</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    }</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>};</div>
 </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
-<div class="foldopen" id="foldopen00114" data-start="{" data-end="};">
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="classvcl_1_1MissingQuadRequirementException.html">  114</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1MissingQuadRequirementException.html">MissingQuadRequirementException</a> : <span class="keyword">public</span> std::runtime_error</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>{</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="keyword">public</span>:</div>
-<div class="foldopen" id="foldopen00117" data-start="{" data-end="}">
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="classvcl_1_1MissingQuadRequirementException.html#a787f1b4096ecb4211de62eb1e7ff0ced">  117</a></span>    <a class="code hl_function" href="classvcl_1_1MissingQuadRequirementException.html#a787f1b4096ecb4211de62eb1e7ff0ced">MissingQuadRequirementException</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Matrix.html">err</a>) :</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            std::runtime_error(<a class="code hl_class" href="classvcl_1_1Matrix.html">err</a>)</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    {</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    }</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="foldopen" id="foldopen00169" data-start="{" data-end="};">
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="classvcl_1_1BadVertexIndexException.html">  169</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1BadVertexIndexException.html">BadVertexIndexException</a> : <span class="keyword">public</span> std::runtime_error</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>{</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <a class="code hl_class" href="classvcl_1_1BadVertexIndexException.html">BadVertexIndexException</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Box.html">err</a>) : std::runtime_error(<a class="code hl_class" href="classvcl_1_1Box.html">err</a>) {}</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* what() <span class="keyword">const</span> <span class="keywordflow">throw</span>()</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    {</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        <span class="keyword">static</span> std::string <a class="code hl_class" href="classvcl_1_1Box.html">error</a>;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        <a class="code hl_class" href="classvcl_1_1Box.html">error</a> = std::string(<span class="stringliteral">&quot;Bad Vertex Index - &quot;</span>) + std::runtime_error::what();</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Box.html">error</a>.c_str();</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    }</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>};</div>
 </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
-<div class="foldopen" id="foldopen00122" data-start="{" data-end="}">
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="classvcl_1_1MissingQuadRequirementException.html#a004429808c99f3c0a3bb189068ddaa86">  122</a></span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="classvcl_1_1MissingQuadRequirementException.html#a004429808c99f3c0a3bb189068ddaa86">what</a>() <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">throw</a>()</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    {</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <span class="keyword">static</span> std::string <a class="code hl_class" href="classvcl_1_1Matrix.html">error</a>;</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">error</a> = std::string(<span class="stringliteral">&quot;Missing Quad Mesh Requirement - &quot;</span>) +</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                std::runtime_error::what();</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">error</a>.c_str();</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    }</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="foldopen" id="foldopen00188" data-start="{" data-end="};">
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="classvcl_1_1BadCustomComponentTypeException.html">  188</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1BadCustomComponentTypeException.html">BadCustomComponentTypeException</a> : <span class="keyword">public</span> std::runtime_error</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>{</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <a class="code hl_class" href="classvcl_1_1BadCustomComponentTypeException.html">BadCustomComponentTypeException</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Box.html">err</a>) :</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>            std::runtime_error(<a class="code hl_class" href="classvcl_1_1Box.html">err</a>)</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    {</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    }</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* what() <span class="keyword">const</span> <span class="keywordflow">throw</span>()</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    {</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        <span class="keyword">static</span> std::string <a class="code hl_class" href="classvcl_1_1Box.html">error</a>;</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        <a class="code hl_class" href="classvcl_1_1Box.html">error</a> = std::string(<span class="stringliteral">&quot;Bad Custom Component Type - &quot;</span>) +</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                std::runtime_error::what();</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Box.html">error</a>.c_str();</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    }</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>};</div>
 </div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>};</div>
-</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
-<div class="foldopen" id="foldopen00131" data-start="{" data-end="};">
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="classvcl_1_1MissingPolygonalRequirementException.html">  131</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1MissingPolygonalRequirementException.html">MissingPolygonalRequirementException</a> : <span class="keyword">public</span> std::runtime_error</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>{</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="keyword">public</span>:</div>
-<div class="foldopen" id="foldopen00134" data-start="{" data-end="}">
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="classvcl_1_1MissingPolygonalRequirementException.html#a3143c34e065655cd59ef37af65140b52">  134</a></span>    <a class="code hl_function" href="classvcl_1_1MissingPolygonalRequirementException.html#a3143c34e065655cd59ef37af65140b52">MissingPolygonalRequirementException</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Matrix.html">err</a>) :</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            std::runtime_error(<a class="code hl_class" href="classvcl_1_1Matrix.html">err</a>)</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    {</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    }</div>
-</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
-<div class="foldopen" id="foldopen00139" data-start="{" data-end="}">
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="classvcl_1_1MissingPolygonalRequirementException.html#a627a7f21401e345d2bad681a725d61e9">  139</a></span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="classvcl_1_1MissingPolygonalRequirementException.html#a627a7f21401e345d2bad681a725d61e9">what</a>() <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">throw</a>()</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    {</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        <span class="keyword">static</span> std::string <a class="code hl_class" href="classvcl_1_1Matrix.html">error</a>;</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">error</a> = std::string(<span class="stringliteral">&quot;Missing Polygonal Mesh Requirement - &quot;</span>) +</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                std::runtime_error::what();</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">error</a>.c_str();</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    }</div>
-</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>};</div>
-</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
-<div class="foldopen" id="foldopen00148" data-start="{" data-end="};">
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="classvcl_1_1BadVertexIndexException.html">  148</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1BadVertexIndexException.html">BadVertexIndexException</a> : <span class="keyword">public</span> std::runtime_error</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>{</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="classvcl_1_1BadVertexIndexException.html#ac1521f3ebe97b1f0f6aaf0f975f8853e">  151</a></span>    <a class="code hl_function" href="classvcl_1_1BadVertexIndexException.html#ac1521f3ebe97b1f0f6aaf0f975f8853e">BadVertexIndexException</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Matrix.html">err</a>) : std::runtime_error(<a class="code hl_class" href="classvcl_1_1Matrix.html">err</a>) {}</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
-<div class="foldopen" id="foldopen00153" data-start="{" data-end="}">
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="classvcl_1_1BadVertexIndexException.html#ad7730b9e78e2fa800690e1c3ec857c7f">  153</a></span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="classvcl_1_1BadVertexIndexException.html#ad7730b9e78e2fa800690e1c3ec857c7f">what</a>() <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">throw</a>()</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    {</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <span class="keyword">static</span> std::string <a class="code hl_class" href="classvcl_1_1Matrix.html">error</a>;</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">error</a> = std::string(<span class="stringliteral">&quot;Bad Vertex Index - &quot;</span>) + std::runtime_error::what();</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">error</a>.c_str();</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    }</div>
-</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>};</div>
-</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
-<div class="foldopen" id="foldopen00161" data-start="{" data-end="};">
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="classvcl_1_1BadCustomComponentTypeException.html">  161</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1BadCustomComponentTypeException.html">BadCustomComponentTypeException</a> : <span class="keyword">public</span> std::runtime_error</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>{</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="keyword">public</span>:</div>
-<div class="foldopen" id="foldopen00164" data-start="{" data-end="}">
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="classvcl_1_1BadCustomComponentTypeException.html#a0a70c3f85f0c3a7557e9967e84b25640">  164</a></span>    <a class="code hl_function" href="classvcl_1_1BadCustomComponentTypeException.html#a0a70c3f85f0c3a7557e9967e84b25640">BadCustomComponentTypeException</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Matrix.html">err</a>) :</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>            std::runtime_error(<a class="code hl_class" href="classvcl_1_1Matrix.html">err</a>)</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    {</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    }</div>
-</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
-<div class="foldopen" id="foldopen00169" data-start="{" data-end="}">
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="classvcl_1_1BadCustomComponentTypeException.html#a93bf4f4f33a7019fb3a000f8364cad0c">  169</a></span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="classvcl_1_1BadCustomComponentTypeException.html#a93bf4f4f33a7019fb3a000f8364cad0c">what</a>() <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">throw</a>()</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    {</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        <span class="keyword">static</span> std::string <a class="code hl_class" href="classvcl_1_1Matrix.html">error</a>;</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        <a class="code hl_class" href="classvcl_1_1Matrix.html">error</a> = std::string(<span class="stringliteral">&quot;Bad Custom Component Type - &quot;</span>) +</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                std::runtime_error::what();</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">error</a>.c_str();</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    }</div>
-</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>};</div>
-</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="preprocessor">#endif </span><span class="comment">// VCL_EXCEPTIONS_MESH_H</span></div>
-<div class="ttc" id="aclassvcl_1_1BadCustomComponentTypeException_html"><div class="ttname"><a href="classvcl_1_1BadCustomComponentTypeException.html">vcl::BadCustomComponentTypeException</a></div><div class="ttdef"><b>Definition</b> mesh.h:162</div></div>
-<div class="ttc" id="aclassvcl_1_1BadCustomComponentTypeException_html_a0a70c3f85f0c3a7557e9967e84b25640"><div class="ttname"><a href="classvcl_1_1BadCustomComponentTypeException.html#a0a70c3f85f0c3a7557e9967e84b25640">vcl::BadCustomComponentTypeException::BadCustomComponentTypeException</a></div><div class="ttdeci">BadCustomComponentTypeException(const std::string &amp;err)</div><div class="ttdef"><b>Definition</b> mesh.h:164</div></div>
-<div class="ttc" id="aclassvcl_1_1BadCustomComponentTypeException_html_a93bf4f4f33a7019fb3a000f8364cad0c"><div class="ttname"><a href="classvcl_1_1BadCustomComponentTypeException.html#a93bf4f4f33a7019fb3a000f8364cad0c">vcl::BadCustomComponentTypeException::what</a></div><div class="ttdeci">virtual const char * what() const</div><div class="ttdef"><b>Definition</b> mesh.h:169</div></div>
-<div class="ttc" id="aclassvcl_1_1BadVertexIndexException_html"><div class="ttname"><a href="classvcl_1_1BadVertexIndexException.html">vcl::BadVertexIndexException</a></div><div class="ttdef"><b>Definition</b> mesh.h:149</div></div>
-<div class="ttc" id="aclassvcl_1_1BadVertexIndexException_html_ac1521f3ebe97b1f0f6aaf0f975f8853e"><div class="ttname"><a href="classvcl_1_1BadVertexIndexException.html#ac1521f3ebe97b1f0f6aaf0f975f8853e">vcl::BadVertexIndexException::BadVertexIndexException</a></div><div class="ttdeci">BadVertexIndexException(const std::string &amp;err)</div><div class="ttdef"><b>Definition</b> mesh.h:151</div></div>
-<div class="ttc" id="aclassvcl_1_1BadVertexIndexException_html_ad7730b9e78e2fa800690e1c3ec857c7f"><div class="ttname"><a href="classvcl_1_1BadVertexIndexException.html#ad7730b9e78e2fa800690e1c3ec857c7f">vcl::BadVertexIndexException::what</a></div><div class="ttdeci">virtual const char * what() const</div><div class="ttdef"><b>Definition</b> mesh.h:153</div></div>
-<div class="ttc" id="aclassvcl_1_1InconsistentMeshException_html"><div class="ttname"><a href="classvcl_1_1InconsistentMeshException.html">vcl::InconsistentMeshException</a></div><div class="ttdef"><b>Definition</b> mesh.h:32</div></div>
-<div class="ttc" id="aclassvcl_1_1InconsistentMeshException_html_a47de7d4e37f9449fd033d0947b3bb990"><div class="ttname"><a href="classvcl_1_1InconsistentMeshException.html#a47de7d4e37f9449fd033d0947b3bb990">vcl::InconsistentMeshException::InconsistentMeshException</a></div><div class="ttdeci">InconsistentMeshException(const std::string &amp;err)</div><div class="ttdef"><b>Definition</b> mesh.h:34</div></div>
-<div class="ttc" id="aclassvcl_1_1InconsistentMeshException_html_aae57cec61c6c3f2ae08f1fd0ee87917b"><div class="ttname"><a href="classvcl_1_1InconsistentMeshException.html#aae57cec61c6c3f2ae08f1fd0ee87917b">vcl::InconsistentMeshException::what</a></div><div class="ttdeci">virtual const char * what() const</div><div class="ttdef"><b>Definition</b> mesh.h:38</div></div>
-<div class="ttc" id="aclassvcl_1_1Matrix_html"><div class="ttname"><a href="classvcl_1_1Matrix.html">vcl::Matrix</a></div><div class="ttdef"><b>Definition</b> matrix.h:36</div></div>
-<div class="ttc" id="aclassvcl_1_1MissingCompactnessException_html"><div class="ttname"><a href="classvcl_1_1MissingCompactnessException.html">vcl::MissingCompactnessException</a></div><div class="ttdef"><b>Definition</b> mesh.h:65</div></div>
-<div class="ttc" id="aclassvcl_1_1MissingCompactnessException_html_a8b7a2a27a00787cb68d70b71eefd43c1"><div class="ttname"><a href="classvcl_1_1MissingCompactnessException.html#a8b7a2a27a00787cb68d70b71eefd43c1">vcl::MissingCompactnessException::what</a></div><div class="ttdeci">virtual const char * what() const</div><div class="ttdef"><b>Definition</b> mesh.h:72</div></div>
-<div class="ttc" id="aclassvcl_1_1MissingCompactnessException_html_afb1fcc33aad8d6ecc54e62296441298c"><div class="ttname"><a href="classvcl_1_1MissingCompactnessException.html#afb1fcc33aad8d6ecc54e62296441298c">vcl::MissingCompactnessException::MissingCompactnessException</a></div><div class="ttdeci">MissingCompactnessException(const std::string &amp;err)</div><div class="ttdef"><b>Definition</b> mesh.h:67</div></div>
-<div class="ttc" id="aclassvcl_1_1MissingComponentException_html"><div class="ttname"><a href="classvcl_1_1MissingComponentException.html">vcl::MissingComponentException</a></div><div class="ttdef"><b>Definition</b> mesh.h:82</div></div>
-<div class="ttc" id="aclassvcl_1_1MissingComponentException_html_a354929fc63dec25151dbde55ad19a6a4"><div class="ttname"><a href="classvcl_1_1MissingComponentException.html#a354929fc63dec25151dbde55ad19a6a4">vcl::MissingComponentException::MissingComponentException</a></div><div class="ttdeci">MissingComponentException(const std::string &amp;err)</div><div class="ttdef"><b>Definition</b> mesh.h:84</div></div>
-<div class="ttc" id="aclassvcl_1_1MissingComponentException_html_ad590cf27f0900f1197d1a0153a3a3421"><div class="ttname"><a href="classvcl_1_1MissingComponentException.html#ad590cf27f0900f1197d1a0153a3a3421">vcl::MissingComponentException::what</a></div><div class="ttdeci">virtual const char * what() const</div><div class="ttdef"><b>Definition</b> mesh.h:88</div></div>
-<div class="ttc" id="aclassvcl_1_1MissingPolygonalRequirementException_html"><div class="ttname"><a href="classvcl_1_1MissingPolygonalRequirementException.html">vcl::MissingPolygonalRequirementException</a></div><div class="ttdef"><b>Definition</b> mesh.h:132</div></div>
-<div class="ttc" id="aclassvcl_1_1MissingPolygonalRequirementException_html_a3143c34e065655cd59ef37af65140b52"><div class="ttname"><a href="classvcl_1_1MissingPolygonalRequirementException.html#a3143c34e065655cd59ef37af65140b52">vcl::MissingPolygonalRequirementException::MissingPolygonalRequirementException</a></div><div class="ttdeci">MissingPolygonalRequirementException(const std::string &amp;err)</div><div class="ttdef"><b>Definition</b> mesh.h:134</div></div>
-<div class="ttc" id="aclassvcl_1_1MissingPolygonalRequirementException_html_a627a7f21401e345d2bad681a725d61e9"><div class="ttname"><a href="classvcl_1_1MissingPolygonalRequirementException.html#a627a7f21401e345d2bad681a725d61e9">vcl::MissingPolygonalRequirementException::what</a></div><div class="ttdeci">virtual const char * what() const</div><div class="ttdef"><b>Definition</b> mesh.h:139</div></div>
-<div class="ttc" id="aclassvcl_1_1MissingPreconditionException_html"><div class="ttname"><a href="classvcl_1_1MissingPreconditionException.html">vcl::MissingPreconditionException</a></div><div class="ttdef"><b>Definition</b> mesh.h:48</div></div>
-<div class="ttc" id="aclassvcl_1_1MissingPreconditionException_html_a68ad71cf037bf5f024c893081642eb51"><div class="ttname"><a href="classvcl_1_1MissingPreconditionException.html#a68ad71cf037bf5f024c893081642eb51">vcl::MissingPreconditionException::MissingPreconditionException</a></div><div class="ttdeci">MissingPreconditionException(const std::string &amp;err)</div><div class="ttdef"><b>Definition</b> mesh.h:50</div></div>
-<div class="ttc" id="aclassvcl_1_1MissingPreconditionException_html_aba3b1b37919f6fcb6d47119d6ed3231f"><div class="ttname"><a href="classvcl_1_1MissingPreconditionException.html#aba3b1b37919f6fcb6d47119d6ed3231f">vcl::MissingPreconditionException::what</a></div><div class="ttdeci">virtual const char * what() const</div><div class="ttdef"><b>Definition</b> mesh.h:55</div></div>
-<div class="ttc" id="aclassvcl_1_1MissingQuadRequirementException_html"><div class="ttname"><a href="classvcl_1_1MissingQuadRequirementException.html">vcl::MissingQuadRequirementException</a></div><div class="ttdef"><b>Definition</b> mesh.h:115</div></div>
-<div class="ttc" id="aclassvcl_1_1MissingQuadRequirementException_html_a004429808c99f3c0a3bb189068ddaa86"><div class="ttname"><a href="classvcl_1_1MissingQuadRequirementException.html#a004429808c99f3c0a3bb189068ddaa86">vcl::MissingQuadRequirementException::what</a></div><div class="ttdeci">virtual const char * what() const</div><div class="ttdef"><b>Definition</b> mesh.h:122</div></div>
-<div class="ttc" id="aclassvcl_1_1MissingQuadRequirementException_html_a787f1b4096ecb4211de62eb1e7ff0ced"><div class="ttname"><a href="classvcl_1_1MissingQuadRequirementException.html#a787f1b4096ecb4211de62eb1e7ff0ced">vcl::MissingQuadRequirementException::MissingQuadRequirementException</a></div><div class="ttdeci">MissingQuadRequirementException(const std::string &amp;err)</div><div class="ttdef"><b>Definition</b> mesh.h:117</div></div>
-<div class="ttc" id="aclassvcl_1_1MissingTriangularRequirementException_html"><div class="ttname"><a href="classvcl_1_1MissingTriangularRequirementException.html">vcl::MissingTriangularRequirementException</a></div><div class="ttdef"><b>Definition</b> mesh.h:98</div></div>
-<div class="ttc" id="aclassvcl_1_1MissingTriangularRequirementException_html_a1a693ca163f4c18221d94c9a13b9f945"><div class="ttname"><a href="classvcl_1_1MissingTriangularRequirementException.html#a1a693ca163f4c18221d94c9a13b9f945">vcl::MissingTriangularRequirementException::MissingTriangularRequirementException</a></div><div class="ttdeci">MissingTriangularRequirementException(const std::string &amp;err)</div><div class="ttdef"><b>Definition</b> mesh.h:100</div></div>
-<div class="ttc" id="aclassvcl_1_1MissingTriangularRequirementException_html_a41a7aa7e7691909048363b26f1906c9c"><div class="ttname"><a href="classvcl_1_1MissingTriangularRequirementException.html#a41a7aa7e7691909048363b26f1906c9c">vcl::MissingTriangularRequirementException::what</a></div><div class="ttdeci">virtual const char * what() const</div><div class="ttdef"><b>Definition</b> mesh.h:105</div></div>
-<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition</b> bounding_box.h:48</div></div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="preprocessor">#endif </span><span class="comment">// VCL_EXCEPTIONS_MESH_H</span></div>
+<div class="ttc" id="aclassvcl_1_1BadCustomComponentTypeException_html"><div class="ttname"><a href="classvcl_1_1BadCustomComponentTypeException.html">vcl::BadCustomComponentTypeException</a></div><div class="ttdoc">Exception thrown when the type of a custom component is not the one expected.</div><div class="ttdef"><b>Definition</b> mesh.h:189</div></div>
+<div class="ttc" id="aclassvcl_1_1BadVertexIndexException_html"><div class="ttname"><a href="classvcl_1_1BadVertexIndexException.html">vcl::BadVertexIndexException</a></div><div class="ttdoc">Exception thrown when an index is out of bounds in a vertex container.</div><div class="ttdef"><b>Definition</b> mesh.h:170</div></div>
+<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:49</div></div>
+<div class="ttc" id="aclassvcl_1_1InconsistentMeshException_html"><div class="ttname"><a href="classvcl_1_1InconsistentMeshException.html">vcl::InconsistentMeshException</a></div><div class="ttdoc">Exception thrown when the mesh is inconsistent.</div><div class="ttdef"><b>Definition</b> mesh.h:37</div></div>
+<div class="ttc" id="aclassvcl_1_1MissingCompactnessException_html"><div class="ttname"><a href="classvcl_1_1MissingCompactnessException.html">vcl::MissingCompactnessException</a></div><div class="ttdoc">Exception thrown when the mesh is not compact.</div><div class="ttdef"><b>Definition</b> mesh.h:81</div></div>
+<div class="ttc" id="aclassvcl_1_1MissingComponentException_html"><div class="ttname"><a href="classvcl_1_1MissingComponentException.html">vcl::MissingComponentException</a></div><div class="ttdoc">Exception thrown when a mesh/element component is missing (not enabled).</div><div class="ttdef"><b>Definition</b> mesh.h:104</div></div>
+<div class="ttc" id="aclassvcl_1_1MissingPreconditionException_html"><div class="ttname"><a href="classvcl_1_1MissingPreconditionException.html">vcl::MissingPreconditionException</a></div><div class="ttdoc">Exception thrown when a precondition on an input/output mesh is missing.</div><div class="ttdef"><b>Definition</b> mesh.h:59</div></div>
+<div class="ttc" id="aclassvcl_1_1MissingQuadRequirementException_html"><div class="ttname"><a href="classvcl_1_1MissingQuadRequirementException.html">vcl::MissingQuadRequirementException</a></div><div class="ttdoc">Exception thrown when an input/output mesh is not composed of quads.</div><div class="ttdef"><b>Definition</b> mesh.h:148</div></div>
+<div class="ttc" id="aclassvcl_1_1MissingTriangularRequirementException_html"><div class="ttname"><a href="classvcl_1_1MissingTriangularRequirementException.html">vcl::MissingTriangularRequirementException</a></div><div class="ttdoc">Exception thrown when an input/output mesh is not composed of triangles.</div><div class="ttdef"><b>Definition</b> mesh.h:126</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d2fdbf172f8ae9790b339bfcb66b3af7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_faecc92ba3fe640bc81c479e685075f2.html">exceptions</a></li><li class="navelem"><a class="el" href="exceptions_2mesh_8h.html">mesh.h</a></li>
+    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_213721054bd7777fbdb8608854e63df7.html">exceptions</a></li><li class="navelem"><b>mesh.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

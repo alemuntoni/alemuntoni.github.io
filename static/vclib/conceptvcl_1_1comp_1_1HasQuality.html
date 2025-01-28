@@ -106,15 +106,21 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1comp_1_1HasQuality.html'
 <p><code>#include &lt;<a class="el" href="concepts_2mesh_2components_2quality_8h_source.html">vclib/concepts/mesh/components/quality.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasQuality.html">vcl::comp::HasQuality</a> =  <span class="keyword">requires</span> (T o, <span class="keyword">const</span> T&amp; co) {</div>
+<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasQuality.html">vcl::comp::HasQuality</a> =  <span class="keyword">requires</span> (</div>
+<div class="line">    T&amp;&amp;                                 obj,</div>
+<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::QualityType  q,</div>
+<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::QualityType&amp; qR) {</div>
+<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::QualityType;</div>
+<div class="line">    { obj.quality() } -&gt; std::convertible_to&lt;<span class="keyword">decltype</span>(<a class="code hl_class" href="classvcl_1_1Box.html">q</a>)&gt;;</div>
+<div class="line"> </div>
 <div class="line">    </div>
-<div class="line">    <span class="keyword">typename</span> T::QualityType;</div>
-<div class="line">    { o.quality() } -&gt; std::same_as&lt;typename T::QualityType&amp;&gt;;</div>
-<div class="line">    { <a class="code hl_class" href="classvcl_1_1Matrix.html">co</a>.quality() } -&gt; std::same_as&lt;const typename T::QualityType&amp;&gt;;</div>
-<div class="line">    </div>
+<div class="line">    <span class="keyword">requires</span> <a class="code hl_concept" href="conceptvcl_1_1IsConst.html">IsConst&lt;T&gt;</a> || <span class="keyword">requires</span> {</div>
+<div class="line">        { <a class="code hl_class" href="classvcl_1_1Box.html">obj</a>.quality() } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(<a class="code hl_class" href="classvcl_1_1Box.html">qR</a>)&gt;;</div>
+<div class="line">    };</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassvcl_1_1Matrix_html"><div class="ttname"><a href="classvcl_1_1Matrix.html">vcl::Matrix</a></div><div class="ttdef"><b>Definition</b> matrix.h:36</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasQuality_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasQuality.html">vcl::comp::HasQuality</a></div><div class="ttdoc">HasQuality concept is satisfied only if a Element class provides the types and member functions speci...</div><div class="ttdef"><b>Definition</b> quality.h:45</div></div>
+<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:49</div></div>
+<div class="ttc" id="aconceptvcl_1_1IsConst_html"><div class="ttname"><a href="conceptvcl_1_1IsConst.html">vcl::IsConst</a></div><div class="ttdoc">The IsConst concept is satisfied if T satisfies one of the following conditions:</div><div class="ttdef"><b>Definition</b> const_correctness.h:43</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasQuality_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasQuality.html">vcl::comp::HasQuality</a></div><div class="ttdoc">HasQuality concept is satisfied only if a Element class provides the types and member functions speci...</div><div class="ttdef"><b>Definition</b> quality.h:47</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>HasQuality concept is satisfied only if a Element class provides the types and member functions specified in this concept. These types and member functions allow to access to a <a class="el" href="classvcl_1_1comp_1_1Quality.html">vcl::comp::Quality</a> component of a given element. </p>
 <p>Note that this concept does not discriminate between the Horizontal Quality component and the vertical OptionalQuality component, therefore it does not guarantee that a template Element type that satisfies this concept provides Quality component at runtime (it is guaranteed only that the proper member functions are available at compile time). </p>
@@ -123,7 +129,7 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1comp_1_1HasQuality.html'
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespacevcl.html">vcl</a></li><li class="navelem"><a class="el" href="namespacevcl_1_1comp.html">comp</a></li><li class="navelem"><a class="el" href="conceptvcl_1_1comp_1_1HasQuality.html">HasQuality</a></li>
+    <li class="navelem"><b>vcl</b></li><li class="navelem"><b>comp</b></li><li class="navelem"><a class="el" href="conceptvcl_1_1comp_1_1HasQuality.html">HasQuality</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

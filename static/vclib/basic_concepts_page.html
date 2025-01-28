@@ -101,46 +101,45 @@ $(document).ready(function(){initNavTree('basic_concepts_page.html',''); initRes
 <div class="contents">
 <div class="textblock"><p>There are a small set of headers that will bring all the library functionalities that need to be exposed to the user:</p>
 <ul>
-<li><code>#include&lt;<a class="el" href="types_8h.html">vclib/types.h</a>&gt;</code>: includes all the basic types used by the library. It is generally not required to include it since almost all the other library files include this header;</li>
-<li><code>#include&lt;<a class="el" href="concepts_8h.html">vclib/concepts.h</a>&gt;</code>: includes all the c++20 <a href="https://en.cppreference.com/w/cpp/language/constraints">concepts</a> of the library. They define all the constraints that a template type must satisfy to be treated, for example, as Mesh, Triangle Mesh, Point by a function (e.g. an algorithm) or another class.</li>
-<li><code>#include&lt;<a class="el" href="miscellaneous_8h.html">vclib/miscellaneous.h</a>&gt;</code>: includes a list of miscellaneous classes, functions or utility structures (e.g. comparators, loggers, timers, ...);</li>
-<li><code>#include&lt;<a class="el" href="space_8h.html">vclib/space.h</a>&gt;</code>: includes all the spatial (but also non-spatial) data structures of the library, with the exception of meshes. These data structures are used by the library algorithms but they are meant to be used also by the user. Examples of data structures included by this header are Points (2D, 3D, N-Dimensional), Boxes, Triangles and Polygons, Planes, Spheres, Segments, but also complex structures like spatial regular Grids, KD-Trees, Graphs;</li>
-<li><code>#include&lt;<a class="el" href="meshes_8h.html">vclib/meshes.h</a>&gt;</code>: includes a set of predefined Mesh data structures, such as Triangle Meshes, Polygonal Meshes, Point Clouds, <a href="https://en.wikipedia.org/wiki/Doubly_connected_edge_list">Doubly-Connected Edge List</a> Meshes. Along with the predefined meshes, all the definitions that allow to create a custom Mesh data structure are included using this header;</li>
-<li><code>#include&lt;<a class="el" href="load__save_8h.html">vclib/load_save.h</a>&gt;</code>: includes all the functions to load or save meshes into the formats supported by the library;</li>
-<li><code>#include&lt;<a class="el" href="algorithms_8h.html">vclib/algorithms.h</a>&gt;</code>: includes all the algorithms implemented by the library. Algorithms in VCLib are simple functions that take arguments constrained by concepts. Most of the algorithms work with Meshes, but also some other utility algorithms that work with other entities are included by this header (e.g. distance or intersection functions);</li>
-<li><code>#include&lt;<a class="el" href="views_8h.html">vclib/views.h</a>&gt;</code>: includes all the c++20 <a href="https://en.cppreference.com/w/cpp/ranges">Range Views</a> of the library. They allow to iterate easily along all the elements and components contained by the Meshes;</li>
+<li><code>#include&lt;<a class="el" href="types_8h_source.html">vclib/types.h</a>&gt;</code>: includes all the basic types used by the library. It is generally not required to include it since almost all the other library files include this header;</li>
+<li><code>#include&lt;<a class="el" href="concepts_8h_source.html">vclib/concepts.h</a>&gt;</code>: includes all the c++20 <a href="https://en.cppreference.com/w/cpp/language/constraints">concepts</a> of the library. They define all the constraints that a template type must satisfy to be treated, for example, as Mesh, Triangle Mesh, Point by a function (e.g. an algorithm) or another class.</li>
+<li><code>#include&lt;<a class="el" href="miscellaneous_8h_source.html">vclib/miscellaneous.h</a>&gt;</code>: includes a list of miscellaneous classes, functions or utility structures (e.g. comparators, loggers, timers, ...);</li>
+<li><code>#include&lt;<a class="el" href="space_8h_source.html">vclib/space.h</a>&gt;</code>: includes all the spatial (but also non-spatial) data structures of the library, with the exception of meshes. These data structures are used by the library algorithms but they are meant to be used also by the user. Examples of data structures included by this header are Points (2D, 3D, N-Dimensional), Boxes, Triangles and Polygons, Planes, Spheres, Segments, but also complex structures like spatial regular Grids, KD-Trees, Graphs;</li>
+<li><code>#include&lt;<a class="el" href="meshes_8h_source.html">vclib/meshes.h</a>&gt;</code>: includes a set of predefined Mesh data structures, such as Triangle Meshes, Polygonal Meshes, Point Clouds, <a href="https://en.wikipedia.org/wiki/Doubly_connected_edge_list">Doubly-Connected Edge List</a> Meshes. Along with the predefined meshes, all the definitions that allow to create a custom Mesh data structure are included using this header;</li>
+<li><code>#include&lt;<a class="el" href="load__save_8h_source.html">vclib/load_save.h</a>&gt;</code>: includes all the functions to load or save meshes into the formats supported by the library;</li>
+<li><code>#include&lt;<a class="el" href="algorithms_8h_source.html">vclib/algorithms.h</a>&gt;</code>: includes all the algorithms implemented by the library. Algorithms in VCLib are simple functions that take arguments constrained by concepts. Most of the algorithms work with Meshes, but also some other utility algorithms that work with other entities are included by this header (e.g. distance or intersection functions);</li>
+<li><code>#include&lt;<a class="el" href="views_8h_source.html">vclib/views.h</a>&gt;</code>: includes all the c++20 <a href="https://en.cppreference.com/w/cpp/ranges">Range Views</a> of the library. They allow to iterate easily along all the elements and components contained by the Meshes;</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md6"></a>
 Let's start</h1>
 <p>We can first declare a new Triangle Mesh and load a ply file:</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="meshes_8h.html">vclib/meshes.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="load__save_8h.html">vclib/load_save.h</a>&gt;</span></div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;vclib/meshes.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;vclib/load_save.h&gt;</span></div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_class" href="classvcl_1_1Matrix.html">vcl::TriMesh</a> myTriMesh;</div>
+<div class="line"><a class="code hl_class" href="classvcl_1_1Box.html">vcl::TriMesh</a> myTriMesh;</div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_function" href="group__load.html#ga3db844790e39aca57d8c05410eb25eee">vcl::load</a>(myTriMesh, <span class="stringliteral">&quot;bunny.ply&quot;</span>);</div>
-<div class="ttc" id="aclassvcl_1_1Matrix_html"><div class="ttname"><a href="classvcl_1_1Matrix.html">vcl::Matrix</a></div><div class="ttdef"><b>Definition</b> matrix.h:36</div></div>
+<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:49</div></div>
 <div class="ttc" id="agroup__load_html_ga3db844790e39aca57d8c05410eb25eee"><div class="ttname"><a href="group__load.html#ga3db844790e39aca57d8c05410eb25eee">vcl::load</a></div><div class="ttdeci">void load(MeshType &amp;m, const std::string &amp;filename, MeshInfo &amp;loadedInfo, LogType &amp;log=nullLogger, const LoadSettings &amp;settings=LoadSettings())</div><div class="ttdoc">Loads a mesh from a file with the given filename and stores it in the given mesh object....</div><div class="ttdef"><b>Definition</b> load.h:63</div></div>
-<div class="ttc" id="aload__save_8h_html"><div class="ttname"><a href="load__save_8h.html">load_save.h</a></div></div>
-<div class="ttc" id="ameshes_8h_html"><div class="ttname"><a href="meshes_8h.html">meshes.h</a></div></div>
 </div><!-- fragment --><p>Or:</p>
-<div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Matrix.html">vcl::TriMesh</a> myTriMesh = <a class="code hl_class" href="classvcl_1_1Matrix.html">vcl::load&lt;vcl::TriMesh&gt;</a>(<span class="stringliteral">&quot;bunny.ply&quot;</span>);</div>
+<div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Box.html">vcl::TriMesh</a> myTriMesh = <a class="code hl_class" href="classvcl_1_1Box.html">vcl::load&lt;vcl::TriMesh&gt;</a>(<span class="stringliteral">&quot;bunny.ply&quot;</span>);</div>
 </div><!-- fragment --><p>The TriMesh data structure has containers of Vertices and Faces, plus some other info like Bounding Box, Transform Matrix, ...</p>
 <p>We can, for example, print some statistics and update the bounding box component of the mesh after has been loaded:</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="algorithms_8h.html">vclib/algorithms.h</a>&gt;</span></div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;vclib/algorithms.h&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_function" href="group__update.html#ga8ecd18a495232ac86d4c81913a1ad3f7">vcl::updateBoundingBox</a>(myTriMesh);</div>
 <div class="line"> </div>
-<div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;Min bb: &quot;</span> &lt;&lt; myTriMesh.boundingBox().min() &lt;&lt; <span class="stringliteral">&quot;; &quot;</span></div>
-<div class="line">          &lt;&lt; <span class="stringliteral">&quot;Max bb: &quot;</span> &lt;&lt; myTriMesh.boundingBox().max() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;Min bb: &quot;</span> &lt;&lt; myTriMesh.boundingBox().<a class="code hl_function" href="classvcl_1_1Box.html#a625489e6580ac0f3a5577cf3fe27d48a">min</a>() &lt;&lt; <span class="stringliteral">&quot;; &quot;</span></div>
+<div class="line">          &lt;&lt; <span class="stringliteral">&quot;Max bb: &quot;</span> &lt;&lt; myTriMesh.boundingBox().<a class="code hl_function" href="classvcl_1_1Box.html#a535809db66680a6de48f02fd371c68f7">max</a>() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;Vertex number: &quot;</span> &lt;&lt; myTriMesh.vertexNumber() <span class="stringliteral">&quot;; &quot;</span></div>
 <div class="line">          &lt;&lt; <span class="stringliteral">&quot;Face number: &quot;</span>&lt;&lt; myTriMesh.faceNumber() <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="ttc" id="aalgorithms_8h_html"><div class="ttname"><a href="algorithms_8h.html">algorithms.h</a></div></div>
+<div class="ttc" id="aclassvcl_1_1Box_html_a535809db66680a6de48f02fd371c68f7"><div class="ttname"><a href="classvcl_1_1Box.html#a535809db66680a6de48f02fd371c68f7">vcl::Box::max</a></div><div class="ttdeci">PointT &amp; max()</div><div class="ttdoc">Returns a reference to the maximum point of the box.</div><div class="ttdef"><b>Definition</b> box.h:107</div></div>
+<div class="ttc" id="aclassvcl_1_1Box_html_a625489e6580ac0f3a5577cf3fe27d48a"><div class="ttname"><a href="classvcl_1_1Box.html#a625489e6580ac0f3a5577cf3fe27d48a">vcl::Box::min</a></div><div class="ttdeci">PointT &amp; min()</div><div class="ttdoc">Returns a reference to the minimum point of the box.</div><div class="ttdef"><b>Definition</b> box.h:93</div></div>
 <div class="ttc" id="agroup__update_html_ga8ecd18a495232ac86d4c81913a1ad3f7"><div class="ttname"><a href="group__update.html#ga8ecd18a495232ac86d4c81913a1ad3f7">vcl::updateBoundingBox</a></div><div class="ttdeci">void updateBoundingBox(MeshType &amp;m)</div><div class="ttdoc">Updates the bounding box of the mesh.</div><div class="ttdef"><b>Definition</b> bounding_box.h:41</div></div>
 </div><!-- fragment --><p>We can iterate over Vertices and over Faces of the mesh:</p>
 <div class="fragment"><div class="line"><span class="comment">// compute barycenter of the Mesh</span></div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_class" href="classvcl_1_1Matrix.html">vcl::Point3d</a> bar;</div>
+<div class="line"><a class="code hl_class" href="classvcl_1_1Point.html">vcl::Point3d</a> bar;</div>
 <div class="line">bar.setZero();</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordflow">for</span> (<span class="keyword">const</span> vcl::TriMesh::Vertex&amp; v : myTriMesh.vertices()) {</div>
@@ -153,25 +152,27 @@ Let's start</h1>
 <div class="line"><span class="keywordflow">for</span> (<span class="keyword">const</span> vcl::TriMesh::Face&amp; f : myTriMesh.faces()) {</div>
 <div class="line">    <span class="keywordtype">bool</span> up = <span class="keyword">true</span>;</div>
 <div class="line">    <span class="keywordflow">for</span> (<span class="keyword">const</span> vcl::TriMesh::Vertex* v : f.vertices()) { <span class="comment">// iterate over verts of f</span></div>
-<div class="line">        <span class="keywordflow">if</span> (v-&gt;coord().y() &lt; bar.y())</div>
+<div class="line">        <span class="keywordflow">if</span> (v-&gt;coord().y() &lt; bar.<a class="code hl_function" href="classvcl_1_1Point.html#ac98869b529d121e393888364f565b17f">y</a>())</div>
 <div class="line">            up = <span class="keyword">false</span>;</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">if</span> (up) {</div>
 <div class="line">        std::cout &lt;&lt; myTriMesh.index(f) &lt;&lt; <span class="stringliteral">&quot; is above the y barycenter\n&quot;</span>;</div>
 <div class="line">    }</div>
 <div class="line">}</div>
+<div class="ttc" id="aclassvcl_1_1Point_html"><div class="ttname"><a href="classvcl_1_1Point.html">vcl::Point</a></div><div class="ttdoc">The Point class represents an N-dimensional point containing N scalar values.</div><div class="ttdef"><b>Definition</b> point.h:58</div></div>
+<div class="ttc" id="aclassvcl_1_1Point_html_ac98869b529d121e393888364f565b17f"><div class="ttname"><a href="classvcl_1_1Point.html#ac98869b529d121e393888364f565b17f">vcl::Point::y</a></div><div class="ttdeci">ScalarType &amp; y()</div><div class="ttdoc">Returns a reference to the y-component of the Point object.</div><div class="ttdef"><b>Definition</b> point.h:153</div></div>
 </div><!-- fragment --><p>Note that iterating over the vertices of the faces of the Mesh returns the vertices/faces/elements objects by reference, while iterating over the vertices of the face (or, in general, adjacencies of a specific element) returns the pointer to an element that is stored inside the same Mesh. Note also that this pointer may be <code>nullptr</code>: in this small example we assume that the mesh is consistent meaning that this cannot happen.</p>
 <h1><a class="anchor" id="autotoc_md7"></a>
 Add, set and delete Elements</h1>
 <p>We can create from scratch a mesh:</p>
-<div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Matrix.html">vcl::TriMesh</a> mesh;</div>
+<div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Box.html">vcl::TriMesh</a> mesh;</div>
 <div class="line"> </div>
-<div class="line">mesh.addVertex(<a class="code hl_class" href="classvcl_1_1Matrix.html">vcl::Point3d</a>(0,0,0)); <span class="comment">// add a vertex with pos 0,0,0</span></div>
+<div class="line">mesh.addVertex(<a class="code hl_class" href="classvcl_1_1Point.html">vcl::Point3d</a>(0,0,0)); <span class="comment">// add a vertex with pos 0,0,0</span></div>
 <div class="line">mesh.addVertices(2); <span class="comment">// add another two vertices to the mesh</span></div>
 <div class="line">mesh.vertex(1).coord() = <a class="code hl_typedef" href="group__space__core.html#gabb47c1364fb2fe1464a54417684f011e">vcl::Point3d</a>(1,0,0);</div>
 <div class="line">mesh.vertex(2).coord() = <a class="code hl_typedef" href="group__space__core.html#gabb47c1364fb2fe1464a54417684f011e">vcl::Point3d</a>(0,1,0);</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_class" href="classvcl_1_1Matrix.html">vcl::Point3d</a> p0, p1, p2, p3, p4;</div>
+<div class="line"><a class="code hl_class" href="classvcl_1_1Point.html">vcl::Point3d</a> p0, p1, p2, p3, p4;</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// add other 5 vertices to the mesh:</span></div>
 <div class="line">mesh.addVertices(p0, p1, p2, p3, p4);</div>
@@ -182,7 +183,7 @@ Add, set and delete Elements</h1>
 <div class="line"><span class="comment">// add another face but initialize vertices later:</span></div>
 <div class="line">uint fid = mesh.addFace(); <span class="comment">// each add returns an id telling the first added element</span></div>
 <div class="line">mesh.face(fid).setVertices(&amp;mesh.vertex(2), &amp;mesh.vertex(1), &amp;mesh.vertex(3));</div>
-<div class="ttc" id="agroup__space__core_html_gabb47c1364fb2fe1464a54417684f011e"><div class="ttname"><a href="group__space__core.html#gabb47c1364fb2fe1464a54417684f011e">vcl::Point3d</a></div><div class="ttdeci">Point3&lt; double &gt; Point3d</div><div class="ttdoc">A convenience alias for a 3-dimensional Point with double-precision floating-point components.</div><div class="ttdef"><b>Definition</b> point.h:802</div></div>
+<div class="ttc" id="agroup__space__core_html_gabb47c1364fb2fe1464a54417684f011e"><div class="ttname"><a href="group__space__core.html#gabb47c1364fb2fe1464a54417684f011e">vcl::Point3d</a></div><div class="ttdeci">Point3&lt; double &gt; Point3d</div><div class="ttdoc">A convenience alias for a 3-dimensional Point with double-precision floating-point components.</div><div class="ttdef"><b>Definition</b> point.h:804</div></div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

@@ -1,12 +1,5 @@
 var searchData=
 [
-  ['reference_0',['reference',['../classvcl_1_1PointerVector.html#afb9d79965b696c7a0154f97d8e905b46',1,'vcl::PointerVector::Reference'],['../classvcl_1_1CellIterator.html#acb8f26514d8dc46474ccc76d1cf2f8a5',1,'vcl::CellIterator::reference'],['../classvcl_1_1NodeIterator.html#aa5114d2b4f58d28b47f4c7327a09322b',1,'vcl::NodeIterator::reference'],['../classvcl_1_1ConstPointerIterator.html#ae7667a5eb1bf15652ecfce532655ca8f',1,'vcl::ConstPointerIterator::reference'],['../classvcl_1_1EdgeAdjFaceIterator.html#a0ba940e8c6bf91d9a2d964110acb44ba',1,'vcl::EdgeAdjFaceIterator::reference'],['../classvcl_1_1ElementContainerIterator.html#a1dce10cd61cb1d011c4eb853eb142a4f',1,'vcl::ElementContainerIterator::reference'],['../classvcl_1_1PointerFromIndexIterator.html#a44053b19fece2049a97691ca6da3f07c',1,'vcl::PointerFromIndexIterator::reference'],['../classvcl_1_1IndexFromPointerIterator.html#a6a03db701d3e8ba196db7728efbc606b',1,'vcl::IndexFromPointerIterator::reference'],['../classvcl_1_1CustomComponentVectorHandle_1_1ConstIterator.html#a322340462598cb04dc17f5c9821517fc',1,'vcl::CustomComponentVectorHandle::ConstIterator::reference'],['../classvcl_1_1CustomComponentVectorHandle_1_1Iterator.html#a1b4d5f8ac235d3d4463cecebca95af29',1,'vcl::CustomComponentVectorHandle::Iterator::reference'],['../classvcl_1_1Vector.html#a06a998f447e9998a98bf8bb6bf74a780',1,'vcl::Vector::Reference'],['../classvcl_1_1Array.html#af218def24f6484c9da48e992dcabfd6b',1,'vcl::Array::Reference']]],
-  ['regulargrid2_1',['RegularGrid2',['../namespacevcl.html#acf35775c9f8314906299b1b19f6c5f9b',1,'vcl']]],
-  ['regulargrid3_2',['RegularGrid3',['../namespacevcl.html#a8d7cc878c7f7ccb25c576ebf7ad2df5b',1,'vcl']]],
-  ['removeconstfrompointer_3',['RemoveConstFromPointer',['../group__types.html#gab15612cff0fdd71b4a6b22d62676ffe4',1,'vcl']]],
-  ['removecvrefandpointer_4',['RemoveCVRefAndPointer',['../group__types.html#ga2ec2f45ee6feff2a4aff0f15d6b0b0b0',1,'vcl']]],
-  ['rightnodeiterator_5',['RightNodeIterator',['../classvcl_1_1BipartiteGraph.html#a2eeefc67527959f0570b8c5e4469adfc',1,'vcl::BipartiteGraph']]],
-  ['rightnodetype_6',['RightNodeType',['../classvcl_1_1BipartiteGraph.html#a53298d1ca3eafec626dc2a4c1e93f2c2',1,'vcl::BipartiteGraph']]],
-  ['rightnodeview_7',['RightNodeView',['../classvcl_1_1BipartiteGraph.html#af2662ec69803985f792361d0cac1ba39',1,'vcl::BipartiteGraph']]],
-  ['righttype_8',['RightType',['../classvcl_1_1BipartiteGraph.html#aaf8ecd0409263b50a72e950a9674cfbd',1,'vcl::BipartiteGraph']]]
+  ['wedgecolortype_0',['WedgeColorType',['../classvcl_1_1comp_1_1WedgeColors.html#a0d69a05ae011c55e7dfb2e5d9da986de',1,'vcl::comp::WedgeColors']]],
+  ['wedgetexcoordtype_1',['WedgeTexCoordType',['../classvcl_1_1comp_1_1WedgeTexCoords.html#a98577b38306485a80e52a86823406104',1,'vcl::comp::WedgeTexCoords']]]
 ];

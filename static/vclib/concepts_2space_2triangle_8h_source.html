@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visual Computing Library: include/vclib/concepts/space/triangle.h Source File</title>
+<title>Visual Computing Library: vclib/core/include/vclib/concepts/space/triangle.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -104,11 +104,11 @@ $(document).ready(function(){initNavTree('concepts_2space_2triangle_8h_source.ht
   <div class="headertitle"><div class="title">triangle.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="concepts_2space_2triangle_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2024                                                    *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2025                                                    *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
@@ -129,76 +129,59 @@ $(document).ready(function(){initNavTree('concepts_2space_2triangle_8h_source.ht
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_CONCEPTS_SPACE_TRIANGLE_H</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_CONCEPTS_SPACE_TRIANGLE_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;<a class="code" href="types_8h.html">vclib/types.h</a>&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;point.h&quot;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;vclib/types.h&gt;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="conceptvcl_1_1ConstTriangleConcept.html">   31</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1ConstTriangleConcept.html">ConstTriangleConcept</a> = <span class="keyword">requires</span> (<span class="keyword">const</span> T&amp; co) {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">// clang-format off</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">typename</span> T::ScalarType;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">typename</span> T::PointType;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    co.DIM;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    co.size() == 3;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    { co.point(<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>()) } -&gt; std::same_as&lt;const typename T::PointType&amp;&gt;;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    { co.sideLength(<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>()) } -&gt; std::same_as&lt;typename T::ScalarType&gt;;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    { co.barycenter() } -&gt; std::same_as&lt;typename T::PointType&gt;;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    { co.perimeter() } -&gt; std::same_as&lt;typename T::ScalarType&gt;;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    { co.area() } -&gt; std::same_as&lt;typename T::ScalarType&gt;;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="comment">// clang-format on</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>};</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span>vcl {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="}">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="conceptvcl_1_1TriangleConcept.html">   38</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1TriangleConcept.html">TriangleConcept</a> = <span class="keyword">requires</span> (</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    T&amp;&amp;                               obj,</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::PointType  p,</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::ScalarType s) {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::ScalarType;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::PointType;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    obj.DIM;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    obj.size() == 3;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    RemoveRef&lt;T&gt;(p, p, p);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    { obj.point(uint()) } -&gt; <a class="code hl_concept" href="conceptvcl_1_1PointConcept.html">PointConcept</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    { obj.sideLength(uint()) } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(s)&gt;;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    { obj.barycenter() } -&gt; <a class="code hl_concept" href="conceptvcl_1_1PointConcept.html">PointConcept</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    { obj.perimeter() } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(s)&gt;;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    { obj.area() } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(s)&gt;;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>};</div>
 </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="conceptvcl_1_1TriangleConcept.html">   48</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1TriangleConcept.html">TriangleConcept</a> =</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_concept" href="conceptvcl_1_1ConstTriangleConcept.html">ConstTriangleConcept&lt;T&gt;</a> &amp;&amp; <span class="keyword">requires</span> (T o, <span class="keyword">const</span> T&amp; co) {</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="comment">// clang-format off</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    { o.point(<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>()) } -&gt; std::same_as&lt;typename T::PointType&amp;&gt;;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="comment">// clang-format on</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    };</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="conceptvcl_1_1Triangle2Concept.html">   58</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1Triangle2Concept.html">Triangle2Concept</a> = <a class="code hl_concept" href="conceptvcl_1_1TriangleConcept.html">TriangleConcept&lt;T&gt;</a> &amp;&amp; RemoveRef&lt;T&gt;::DIM == 2;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00061" data-start="{" data-end="}">
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="conceptvcl_1_1Triangle3Concept.html">   61</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1Triangle3Concept.html">Triangle3Concept</a> =</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <a class="code hl_concept" href="conceptvcl_1_1TriangleConcept.html">TriangleConcept&lt;T&gt;</a> &amp;&amp; RemoveRef&lt;T&gt;::DIM == 3 &amp;&amp; <span class="keyword">requires</span> (T&amp;&amp; obj) {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        { obj.normal() } -&gt; <a class="code hl_concept" href="conceptvcl_1_1Point3Concept.html">Point3Concept</a>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    };</div>
 </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="conceptvcl_1_1ConstTriangle2Concept.html">   56</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1ConstTriangle2Concept.html">ConstTriangle2Concept</a> = <a class="code hl_concept" href="conceptvcl_1_1ConstTriangleConcept.html">ConstTriangleConcept&lt;T&gt;</a> &amp;&amp; T::DIM == 2;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="conceptvcl_1_1Triangle2Concept.html">   59</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1Triangle2Concept.html">Triangle2Concept</a> = <a class="code hl_concept" href="conceptvcl_1_1ConstTriangle2Concept.html">ConstTriangle2Concept&lt;T&gt;</a> &amp;&amp; <a class="code hl_concept" href="conceptvcl_1_1TriangleConcept.html">TriangleConcept&lt;T&gt;</a>;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="conceptvcl_1_1ConstTriangle3Concept.html">   62</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1ConstTriangle3Concept.html">ConstTriangle3Concept</a> =</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_concept" href="conceptvcl_1_1ConstTriangleConcept.html">ConstTriangleConcept&lt;T&gt;</a> &amp;&amp; T::DIM == 3 &amp;&amp; <span class="keyword">requires</span> (<span class="keyword">const</span> T&amp; co) {</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="comment">// clang-format off</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    { co.normal() } -&gt; std::same_as&lt;typename T::PointType&gt;;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="comment">// clang-format on</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    };</div>
-</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="conceptvcl_1_1Triangle3Concept.html">   70</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1Triangle3Concept.html">Triangle3Concept</a> = <a class="code hl_concept" href="conceptvcl_1_1ConstTriangle3Concept.html">ConstTriangle3Concept&lt;T&gt;</a> &amp;&amp; <a class="code hl_concept" href="conceptvcl_1_1TriangleConcept.html">TriangleConcept&lt;T&gt;</a>;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">#endif </span><span class="comment">// VCL_CONCEPTS_SPACE_TRIANGLE_H</span></div>
-<div class="ttc" id="aconceptvcl_1_1ConstTriangle2Concept_html"><div class="ttname"><a href="conceptvcl_1_1ConstTriangle2Concept.html">vcl::ConstTriangle2Concept</a></div><div class="ttdef"><b>Definition</b> triangle.h:56</div></div>
-<div class="ttc" id="aconceptvcl_1_1ConstTriangle3Concept_html"><div class="ttname"><a href="conceptvcl_1_1ConstTriangle3Concept.html">vcl::ConstTriangle3Concept</a></div><div class="ttdef"><b>Definition</b> triangle.h:62</div></div>
-<div class="ttc" id="aconceptvcl_1_1ConstTriangleConcept_html"><div class="ttname"><a href="conceptvcl_1_1ConstTriangleConcept.html">vcl::ConstTriangleConcept</a></div><div class="ttdef"><b>Definition</b> triangle.h:31</div></div>
-<div class="ttc" id="aconceptvcl_1_1Triangle2Concept_html"><div class="ttname"><a href="conceptvcl_1_1Triangle2Concept.html">vcl::Triangle2Concept</a></div><div class="ttdef"><b>Definition</b> triangle.h:59</div></div>
-<div class="ttc" id="aconceptvcl_1_1Triangle3Concept_html"><div class="ttname"><a href="conceptvcl_1_1Triangle3Concept.html">vcl::Triangle3Concept</a></div><div class="ttdef"><b>Definition</b> triangle.h:70</div></div>
-<div class="ttc" id="aconceptvcl_1_1TriangleConcept_html"><div class="ttname"><a href="conceptvcl_1_1TriangleConcept.html">vcl::TriangleConcept</a></div><div class="ttdef"><b>Definition</b> triangle.h:48</div></div>
-<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition</b> bounding_box.h:48</div></div>
-<div class="ttc" id="anamespacevcl_html_af74b42dd9d759d565bb701a5b845d05c"><div class="ttname"><a href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">vcl::uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition</b> base.h:34</div></div>
-<div class="ttc" id="atypes_8h_html"><div class="ttname"><a href="types_8h.html">types.h</a></div></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">#endif </span><span class="comment">// VCL_CONCEPTS_SPACE_TRIANGLE_H</span></div>
+<div class="ttc" id="aconceptvcl_1_1Point3Concept_html"><div class="ttname"><a href="conceptvcl_1_1Point3Concept.html">vcl::Point3Concept</a></div><div class="ttdoc">Concept for points in three-dimensional space.</div><div class="ttdef"><b>Definition</b> point.h:130</div></div>
+<div class="ttc" id="aconceptvcl_1_1PointConcept_html"><div class="ttname"><a href="conceptvcl_1_1PointConcept.html">vcl::PointConcept</a></div><div class="ttdoc">Concept for types representing points in Euclidean space.</div><div class="ttdef"><b>Definition</b> point.h:40</div></div>
+<div class="ttc" id="aconceptvcl_1_1Triangle2Concept_html"><div class="ttname"><a href="conceptvcl_1_1Triangle2Concept.html">vcl::Triangle2Concept</a></div><div class="ttdef"><b>Definition</b> triangle.h:58</div></div>
+<div class="ttc" id="aconceptvcl_1_1Triangle3Concept_html"><div class="ttname"><a href="conceptvcl_1_1Triangle3Concept.html">vcl::Triangle3Concept</a></div><div class="ttdef"><b>Definition</b> triangle.h:61</div></div>
+<div class="ttc" id="aconceptvcl_1_1TriangleConcept_html"><div class="ttname"><a href="conceptvcl_1_1TriangleConcept.html">vcl::TriangleConcept</a></div><div class="ttdoc">Concept for types representing triangles in Euclidean space.</div><div class="ttdef"><b>Definition</b> triangle.h:38</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d2fdbf172f8ae9790b339bfcb66b3af7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_d8d31096cdb23314816d0514c2e28657.html">concepts</a></li><li class="navelem"><a class="el" href="dir_10c6edf3c5a4ecaf692bbe67eb2870a0.html">space</a></li><li class="navelem"><a class="el" href="concepts_2space_2triangle_8h.html">triangle.h</a></li>
+    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_dd968cc90108d82a40e31b676831d617.html">concepts</a></li><li class="navelem"><a class="el" href="dir_538ab9b9284e892a6758a2873ac1fcc5.html">space</a></li><li class="navelem"><b>triangle.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

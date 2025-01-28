@@ -101,531 +101,139 @@ $(document).ready(function(){initNavTree('classvcl_1_1RegularGrid.html',''); ini
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classvcl_1_1RegularGrid-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">vcl::RegularGrid&lt; Scalar, N &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p><code>#include &lt;<a class="el" href="regular__grid_8h_source.html">vclib/space/complex/grid/regular_grid.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a07fdfc59f8d241e68a61b38424c68dce" id="r_a07fdfc59f8d241e68a61b38424c68dce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Matrix.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#a07fdfc59f8d241e68a61b38424c68dce">PointType</a> = <a class="el" href="classvcl_1_1Point.html">Point</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;</td></tr>
+<tr class="memitem:a07fdfc59f8d241e68a61b38424c68dce" id="r_a07fdfc59f8d241e68a61b38424c68dce"><td class="memItemLeft" align="right" valign="top"><a id="a07fdfc59f8d241e68a61b38424c68dce" name="a07fdfc59f8d241e68a61b38424c68dce"></a>
+<a class="el" href="classvcl_1_1Box.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><b>PointType</b> = <a class="el" href="classvcl_1_1Point.html">Point</a>&lt; Scalar, N &gt;</td></tr>
 <tr class="separator:a07fdfc59f8d241e68a61b38424c68dce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07756233b2e391a4642f792831cc46ce" id="r_a07756233b2e391a4642f792831cc46ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Matrix.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#a07756233b2e391a4642f792831cc46ce">BBoxType</a> = <a class="el" href="classvcl_1_1Box.html">Box</a>&lt; <a class="el" href="classvcl_1_1RegularGrid.html#a07fdfc59f8d241e68a61b38424c68dce">PointType</a> &gt;</td></tr>
+<tr class="memitem:a07756233b2e391a4642f792831cc46ce" id="r_a07756233b2e391a4642f792831cc46ce"><td class="memItemLeft" align="right" valign="top"><a id="a07756233b2e391a4642f792831cc46ce" name="a07756233b2e391a4642f792831cc46ce"></a>
+<a class="el" href="classvcl_1_1Box.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><b>BBoxType</b> = <a class="el" href="classvcl_1_1Box.html">Box</a>&lt; <a class="el" href="classvcl_1_1Box.html">PointType</a> &gt;</td></tr>
 <tr class="separator:a07756233b2e391a4642f792831cc46ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d71c2b2ad3dee07f1763a57ca15c8f2" id="r_a6d71c2b2ad3dee07f1763a57ca15c8f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Matrix.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#a6d71c2b2ad3dee07f1763a57ca15c8f2">ScalarType</a> = Scalar</td></tr>
+<tr class="memitem:a6d71c2b2ad3dee07f1763a57ca15c8f2" id="r_a6d71c2b2ad3dee07f1763a57ca15c8f2"><td class="memItemLeft" align="right" valign="top"><a id="a6d71c2b2ad3dee07f1763a57ca15c8f2" name="a6d71c2b2ad3dee07f1763a57ca15c8f2"></a>
+<a class="el" href="classvcl_1_1Box.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ScalarType</b> = Scalar</td></tr>
 <tr class="separator:a6d71c2b2ad3dee07f1763a57ca15c8f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3189a6bfa7742b8f9b3697836121f7f" id="r_ad3189a6bfa7742b8f9b3697836121f7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Matrix.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#ad3189a6bfa7742b8f9b3697836121f7f">CellCoord</a> = <a class="el" href="classvcl_1_1Point.html">Point</a>&lt; <a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;</td></tr>
+<tr class="memitem:ad3189a6bfa7742b8f9b3697836121f7f" id="r_ad3189a6bfa7742b8f9b3697836121f7f"><td class="memItemLeft" align="right" valign="top"><a id="ad3189a6bfa7742b8f9b3697836121f7f" name="ad3189a6bfa7742b8f9b3697836121f7f"></a>
+<a class="el" href="classvcl_1_1Box.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><b>CellCoord</b> = <a class="el" href="classvcl_1_1Point.html">Point</a>&lt; uint, N &gt;</td></tr>
 <tr class="separator:ad3189a6bfa7742b8f9b3697836121f7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9479b175d8a75b9ae2079bde3e43a08a" id="r_a9479b175d8a75b9ae2079bde3e43a08a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Matrix.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#a9479b175d8a75b9ae2079bde3e43a08a">CellIterator</a> = <a class="el" href="classvcl_1_1CellIterator.html">vcl::CellIterator</a>&lt; <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;</td></tr>
+<tr class="memitem:a9479b175d8a75b9ae2079bde3e43a08a" id="r_a9479b175d8a75b9ae2079bde3e43a08a"><td class="memItemLeft" align="right" valign="top"><a id="a9479b175d8a75b9ae2079bde3e43a08a" name="a9479b175d8a75b9ae2079bde3e43a08a"></a>
+<a class="el" href="classvcl_1_1Box.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><b>CellIterator</b> = <a class="el" href="classvcl_1_1CellIterator.html">vcl::CellIterator</a>&lt; N &gt;</td></tr>
 <tr class="separator:a9479b175d8a75b9ae2079bde3e43a08a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92b3ec4cc311497f2588034a5f1d13e3" id="r_a92b3ec4cc311497f2588034a5f1d13e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Matrix.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#a92b3ec4cc311497f2588034a5f1d13e3">CellView</a> = <a class="el" href="classvcl_1_1View.html">vcl::View</a>&lt; <a class="el" href="classvcl_1_1RegularGrid.html#a9479b175d8a75b9ae2079bde3e43a08a">CellIterator</a> &gt;</td></tr>
-<tr class="separator:a92b3ec4cc311497f2588034a5f1d13e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae727d7b45d46a975d9843a10a09ee41d" id="r_ae727d7b45d46a975d9843a10a09ee41d"><td class="memItemLeft" align="right" valign="top"><a id="ae727d7b45d46a975d9843a10a09ee41d" name="ae727d7b45d46a975d9843a10a09ee41d"></a>
+<a class="el" href="classvcl_1_1Box.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><b>CellView</b> = <a class="el" href="classvcl_1_1View.html">View</a>&lt; <a class="el" href="classvcl_1_1Box.html">CellIterator</a> &gt;</td></tr>
+<tr class="separator:ae727d7b45d46a975d9843a10a09ee41d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:acda061fcfe30dfaa5d4444435e34a758" id="r_acda061fcfe30dfaa5d4444435e34a758"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#acda061fcfe30dfaa5d4444435e34a758">RegularGrid</a> ()=<a class="el" href="classvcl_1_1Matrix.html">default</a></td></tr>
-<tr class="separator:acda061fcfe30dfaa5d4444435e34a758"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abef9863d2206133238e7ec0d99c48b2c" id="r_abef9863d2206133238e7ec0d99c48b2c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#abef9863d2206133238e7ec0d99c48b2c">RegularGrid</a> (<a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1Point.html">Point</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt; &amp;<a class="el" href="classvcl_1_1RegularGrid.html#a7e37c764fcdd40323fbca8b4e2edfecb">min</a>, <a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1Point.html">Point</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt; &amp;<a class="el" href="classvcl_1_1RegularGrid.html#a80795cb440ee3b38df8c2f052c8d27bd">max</a>, <a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1Point.html">Point</a>&lt; <a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt; &amp;size)</td></tr>
+<tr class="memitem:abef9863d2206133238e7ec0d99c48b2c" id="r_abef9863d2206133238e7ec0d99c48b2c"><td class="memItemLeft" align="right" valign="top"><a id="abef9863d2206133238e7ec0d99c48b2c" name="abef9863d2206133238e7ec0d99c48b2c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>RegularGrid</b> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Point.html">Point</a>&lt; Scalar, N &gt; &amp;min, <a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Point.html">Point</a>&lt; Scalar, N &gt; &amp;max, <a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Point.html">Point</a>&lt; uint, N &gt; &amp;size)</td></tr>
 <tr class="separator:abef9863d2206133238e7ec0d99c48b2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ea22105f94f0940663cf852ad858a2b" id="r_a3ea22105f94f0940663cf852ad858a2b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#a3ea22105f94f0940663cf852ad858a2b">RegularGrid</a> (<a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1Box.html">Box</a>&lt; <a class="el" href="classvcl_1_1Point.html">Point</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt; &gt; &amp;<a class="el" href="classvcl_1_1Matrix.html">bbox</a>, <a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1Point.html">Point</a>&lt; <a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt; &amp;size)</td></tr>
+<tr class="memitem:a3ea22105f94f0940663cf852ad858a2b" id="r_a3ea22105f94f0940663cf852ad858a2b"><td class="memItemLeft" align="right" valign="top"><a id="a3ea22105f94f0940663cf852ad858a2b" name="a3ea22105f94f0940663cf852ad858a2b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>RegularGrid</b> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">Box</a>&lt; <a class="el" href="classvcl_1_1Point.html">Point</a>&lt; Scalar, N &gt; &gt; &amp;<a class="el" href="classvcl_1_1Box.html">bbox</a>, <a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Point.html">Point</a>&lt; uint, N &gt; &amp;size)</td></tr>
 <tr class="separator:a3ea22105f94f0940663cf852ad858a2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e37c764fcdd40323fbca8b4e2edfecb" id="r_a7e37c764fcdd40323fbca8b4e2edfecb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Point.html">Point</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#a7e37c764fcdd40323fbca8b4e2edfecb">min</a> () <a class="el" href="classvcl_1_1Matrix.html">const</a></td></tr>
+<tr class="memitem:a7e37c764fcdd40323fbca8b4e2edfecb" id="r_a7e37c764fcdd40323fbca8b4e2edfecb"><td class="memItemLeft" align="right" valign="top"><a id="a7e37c764fcdd40323fbca8b4e2edfecb" name="a7e37c764fcdd40323fbca8b4e2edfecb"></a>
+<a class="el" href="classvcl_1_1Point.html">Point</a>&lt; Scalar, N &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>min</b> () <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="separator:a7e37c764fcdd40323fbca8b4e2edfecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80795cb440ee3b38df8c2f052c8d27bd" id="r_a80795cb440ee3b38df8c2f052c8d27bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Point.html">Point</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#a80795cb440ee3b38df8c2f052c8d27bd">max</a> () <a class="el" href="classvcl_1_1Matrix.html">const</a></td></tr>
+<tr class="memitem:a80795cb440ee3b38df8c2f052c8d27bd" id="r_a80795cb440ee3b38df8c2f052c8d27bd"><td class="memItemLeft" align="right" valign="top"><a id="a80795cb440ee3b38df8c2f052c8d27bd" name="a80795cb440ee3b38df8c2f052c8d27bd"></a>
+<a class="el" href="classvcl_1_1Point.html">Point</a>&lt; Scalar, N &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>max</b> () <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="separator:a80795cb440ee3b38df8c2f052c8d27bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab092cd53b3b44df43400941469eeb5aa" id="r_ab092cd53b3b44df43400941469eeb5aa"><td class="memItemLeft" align="right" valign="top">Scalar&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#ab092cd53b3b44df43400941469eeb5aa">length</a> (<a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> d) <a class="el" href="classvcl_1_1Matrix.html">const</a></td></tr>
+<tr class="memitem:ab092cd53b3b44df43400941469eeb5aa" id="r_ab092cd53b3b44df43400941469eeb5aa"><td class="memItemLeft" align="right" valign="top">Scalar&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#ab092cd53b3b44df43400941469eeb5aa">length</a> (uint d) <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="memdesc:ab092cd53b3b44df43400941469eeb5aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the edge legth of the bounding box of the grid in the d-th dimension.  <br /></td></tr>
 <tr class="separator:ab092cd53b3b44df43400941469eeb5aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bd2f9526a71677626898c7a4e18c518" id="r_a1bd2f9526a71677626898c7a4e18c518"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Point.html">Point</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#a1bd2f9526a71677626898c7a4e18c518">lengths</a> () <a class="el" href="classvcl_1_1Matrix.html">const</a></td></tr>
+<tr class="memitem:a1bd2f9526a71677626898c7a4e18c518" id="r_a1bd2f9526a71677626898c7a4e18c518"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Point.html">Point</a>&lt; Scalar, N &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#a1bd2f9526a71677626898c7a4e18c518">lengths</a> () <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="memdesc:a1bd2f9526a71677626898c7a4e18c518"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the edge legths of the bounding box of the grid.  <br /></td></tr>
 <tr class="separator:a1bd2f9526a71677626898c7a4e18c518"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba1c70b0aec3938b72dc5125802b26f0" id="r_aba1c70b0aec3938b72dc5125802b26f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#aba1c70b0aec3938b72dc5125802b26f0">cellNumber</a> (<a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> d) <a class="el" href="classvcl_1_1Matrix.html">const</a></td></tr>
+<tr class="memitem:aba1c70b0aec3938b72dc5125802b26f0" id="r_aba1c70b0aec3938b72dc5125802b26f0"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#aba1c70b0aec3938b72dc5125802b26f0">cellNumber</a> (uint d) <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="memdesc:aba1c70b0aec3938b72dc5125802b26f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of cells of the Grid in the d-th dimension.  <br /></td></tr>
 <tr class="separator:aba1c70b0aec3938b72dc5125802b26f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc5b12f67ee3498a03b40563e69332af" id="r_adc5b12f67ee3498a03b40563e69332af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Point.html">Point</a>&lt; <a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#adc5b12f67ee3498a03b40563e69332af">cellNumbers</a> () <a class="el" href="classvcl_1_1Matrix.html">const</a></td></tr>
+<tr class="memitem:adc5b12f67ee3498a03b40563e69332af" id="r_adc5b12f67ee3498a03b40563e69332af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Point.html">Point</a>&lt; uint, N &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#adc5b12f67ee3498a03b40563e69332af">cellNumbers</a> () <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="memdesc:adc5b12f67ee3498a03b40563e69332af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of cells for each dimension of the grid.  <br /></td></tr>
 <tr class="separator:adc5b12f67ee3498a03b40563e69332af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8306463d7730df4109a421bb0f74112e" id="r_a8306463d7730df4109a421bb0f74112e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#a8306463d7730df4109a421bb0f74112e">indexOfCell</a> (<a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1RegularGrid.html#ad3189a6bfa7742b8f9b3697836121f7f">CellCoord</a> &amp;c) <a class="el" href="classvcl_1_1Matrix.html">const</a></td></tr>
+<tr class="memitem:a8306463d7730df4109a421bb0f74112e" id="r_a8306463d7730df4109a421bb0f74112e"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#a8306463d7730df4109a421bb0f74112e">indexOfCell</a> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Point.html">CellCoord</a> &amp;c) <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="memdesc:a8306463d7730df4109a421bb0f74112e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an unique index that can be associated to the given cell coordinate.  <br /></td></tr>
 <tr class="separator:a8306463d7730df4109a421bb0f74112e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affb64a40106ee2cef2cafdc6810a3781" id="r_affb64a40106ee2cef2cafdc6810a3781"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1RegularGrid.html#ad3189a6bfa7742b8f9b3697836121f7f">CellCoord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#affb64a40106ee2cef2cafdc6810a3781">cellOfIndex</a> (<a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> index) <a class="el" href="classvcl_1_1Matrix.html">const</a></td></tr>
+<tr class="memitem:affb64a40106ee2cef2cafdc6810a3781" id="r_affb64a40106ee2cef2cafdc6810a3781"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Point.html">CellCoord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#affb64a40106ee2cef2cafdc6810a3781">cellOfIndex</a> (uint index) <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="memdesc:affb64a40106ee2cef2cafdc6810a3781"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the cell coordinate associated to the given unique index.  <br /></td></tr>
 <tr class="separator:affb64a40106ee2cef2cafdc6810a3781"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab633eefb6b7d4060b6d794ba41fb06d" id="r_aab633eefb6b7d4060b6d794ba41fb06d"><td class="memItemLeft" align="right" valign="top">Scalar&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#aab633eefb6b7d4060b6d794ba41fb06d">cellLength</a> (<a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> d) <a class="el" href="classvcl_1_1Matrix.html">const</a></td></tr>
+<tr class="memitem:aab633eefb6b7d4060b6d794ba41fb06d" id="r_aab633eefb6b7d4060b6d794ba41fb06d"><td class="memItemLeft" align="right" valign="top">Scalar&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#aab633eefb6b7d4060b6d794ba41fb06d">cellLength</a> (uint d) <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="memdesc:aab633eefb6b7d4060b6d794ba41fb06d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the length of a cell of the grid in the d-th dimension.  <br /></td></tr>
 <tr class="separator:aab633eefb6b7d4060b6d794ba41fb06d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4af68a61e7d1863f6aa90e1fc30c101" id="r_ae4af68a61e7d1863f6aa90e1fc30c101"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Point.html">Point</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#ae4af68a61e7d1863f6aa90e1fc30c101">cellLengths</a> () <a class="el" href="classvcl_1_1Matrix.html">const</a></td></tr>
+<tr class="memitem:ae4af68a61e7d1863f6aa90e1fc30c101" id="r_ae4af68a61e7d1863f6aa90e1fc30c101"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Point.html">Point</a>&lt; Scalar, N &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#ae4af68a61e7d1863f6aa90e1fc30c101">cellLengths</a> () <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="memdesc:ae4af68a61e7d1863f6aa90e1fc30c101"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the lengths of a cell of the grid for each dimension.  <br /></td></tr>
 <tr class="separator:ae4af68a61e7d1863f6aa90e1fc30c101"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9fb88289248f57d91a4d8a0ccf130da8" id="r_a9fb88289248f57d91a4d8a0ccf130da8"><td class="memItemLeft" align="right" valign="top">Scalar&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#a9fb88289248f57d91a4d8a0ccf130da8">cellDiagonal</a> () <a class="el" href="classvcl_1_1Matrix.html">const</a></td></tr>
+<tr class="memitem:a9fb88289248f57d91a4d8a0ccf130da8" id="r_a9fb88289248f57d91a4d8a0ccf130da8"><td class="memItemLeft" align="right" valign="top"><a id="a9fb88289248f57d91a4d8a0ccf130da8" name="a9fb88289248f57d91a4d8a0ccf130da8"></a>
+Scalar&#160;</td><td class="memItemRight" valign="bottom"><b>cellDiagonal</b> () <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="separator:a9fb88289248f57d91a4d8a0ccf130da8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53bcd254aab9107472398ada9559a2ad" id="r_a53bcd254aab9107472398ada9559a2ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#a53bcd254aab9107472398ada9559a2ad">cell</a> (<a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> d, <a class="el" href="classvcl_1_1Matrix.html">const</a> Scalar &amp;s) <a class="el" href="classvcl_1_1Matrix.html">const</a></td></tr>
+<tr class="memitem:a53bcd254aab9107472398ada9559a2ad" id="r_a53bcd254aab9107472398ada9559a2ad"><td class="memItemLeft" align="right" valign="top"><a id="a53bcd254aab9107472398ada9559a2ad" name="a53bcd254aab9107472398ada9559a2ad"></a>
+uint&#160;</td><td class="memItemRight" valign="bottom"><b>cell</b> (uint d, <a class="el" href="classvcl_1_1Box.html">const</a> Scalar &amp;s) <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="separator:a53bcd254aab9107472398ada9559a2ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b51ac28cfa582a2a4e099acff4cddec" id="r_a0b51ac28cfa582a2a4e099acff4cddec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1RegularGrid.html#ad3189a6bfa7742b8f9b3697836121f7f">CellCoord</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#a0b51ac28cfa582a2a4e099acff4cddec">cell</a> (<a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1Point.html">Point</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt; &amp;<a class="el" href="classvcl_1_1Matrix.html">p</a>) <a class="el" href="classvcl_1_1Matrix.html">const</a></td></tr>
+<tr class="memitem:a0b51ac28cfa582a2a4e099acff4cddec" id="r_a0b51ac28cfa582a2a4e099acff4cddec"><td class="memItemLeft" align="right" valign="top"><a id="a0b51ac28cfa582a2a4e099acff4cddec" name="a0b51ac28cfa582a2a4e099acff4cddec"></a>
+<a class="el" href="classvcl_1_1Point.html">CellCoord</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cell</b> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Point.html">Point</a>&lt; Scalar, N &gt; &amp;<a class="el" href="classvcl_1_1Box.html">p</a>) <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="separator:a0b51ac28cfa582a2a4e099acff4cddec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf06af54046cc2dedc79e658a3affa4d" id="r_aaf06af54046cc2dedc79e658a3affa4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Point.html">Point</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#aaf06af54046cc2dedc79e658a3affa4d">cellLowerCorner</a> (<a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1RegularGrid.html#ad3189a6bfa7742b8f9b3697836121f7f">CellCoord</a> &amp;c) <a class="el" href="classvcl_1_1Matrix.html">const</a></td></tr>
+<tr class="memitem:aaf06af54046cc2dedc79e658a3affa4d" id="r_aaf06af54046cc2dedc79e658a3affa4d"><td class="memItemLeft" align="right" valign="top"><a id="aaf06af54046cc2dedc79e658a3affa4d" name="aaf06af54046cc2dedc79e658a3affa4d"></a>
+<a class="el" href="classvcl_1_1Point.html">Point</a>&lt; Scalar, N &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>cellLowerCorner</b> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Point.html">CellCoord</a> &amp;c) <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="separator:aaf06af54046cc2dedc79e658a3affa4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d256edb816067099e7c22b58560d086" id="r_a1d256edb816067099e7c22b58560d086"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1RegularGrid.html#a07756233b2e391a4642f792831cc46ce">BBoxType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#a1d256edb816067099e7c22b58560d086">cellBox</a> (<a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1RegularGrid.html#ad3189a6bfa7742b8f9b3697836121f7f">CellCoord</a> &amp;c) <a class="el" href="classvcl_1_1Matrix.html">const</a></td></tr>
+<tr class="memitem:a1d256edb816067099e7c22b58560d086" id="r_a1d256edb816067099e7c22b58560d086"><td class="memItemLeft" align="right" valign="top"><a id="a1d256edb816067099e7c22b58560d086" name="a1d256edb816067099e7c22b58560d086"></a>
+<a class="el" href="classvcl_1_1Box.html">BBoxType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cellBox</b> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Point.html">CellCoord</a> &amp;c) <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="separator:a1d256edb816067099e7c22b58560d086"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a874b2361c4f5616879406458c2d0070b" id="r_a874b2361c4f5616879406458c2d0070b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1RegularGrid.html#a9479b175d8a75b9ae2079bde3e43a08a">CellIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#a874b2361c4f5616879406458c2d0070b">cellBegin</a> () <a class="el" href="classvcl_1_1Matrix.html">const</a></td></tr>
+<tr class="memitem:a874b2361c4f5616879406458c2d0070b" id="r_a874b2361c4f5616879406458c2d0070b"><td class="memItemLeft" align="right" valign="top"><a id="a874b2361c4f5616879406458c2d0070b" name="a874b2361c4f5616879406458c2d0070b"></a>
+<a class="el" href="classvcl_1_1Box.html">CellIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cellBegin</b> () <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="separator:a874b2361c4f5616879406458c2d0070b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4363c9c3aaf4f1cef9ea55faad52392d" id="r_a4363c9c3aaf4f1cef9ea55faad52392d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1RegularGrid.html#a9479b175d8a75b9ae2079bde3e43a08a">CellIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#a4363c9c3aaf4f1cef9ea55faad52392d">cellBegin</a> (<a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1RegularGrid.html#ad3189a6bfa7742b8f9b3697836121f7f">CellCoord</a> &amp;first, <a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1RegularGrid.html#ad3189a6bfa7742b8f9b3697836121f7f">CellCoord</a> &amp;<a class="el" href="classvcl_1_1Matrix.html">last</a>) <a class="el" href="classvcl_1_1Matrix.html">const</a></td></tr>
+<tr class="memitem:a4363c9c3aaf4f1cef9ea55faad52392d" id="r_a4363c9c3aaf4f1cef9ea55faad52392d"><td class="memItemLeft" align="right" valign="top"><a id="a4363c9c3aaf4f1cef9ea55faad52392d" name="a4363c9c3aaf4f1cef9ea55faad52392d"></a>
+<a class="el" href="classvcl_1_1Box.html">CellIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cellBegin</b> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Point.html">CellCoord</a> &amp;first, <a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Point.html">CellCoord</a> &amp;<a class="el" href="classvcl_1_1Box.html">last</a>) <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="separator:a4363c9c3aaf4f1cef9ea55faad52392d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1db5b56c2e5c072ad7cbf7f1e73b878" id="r_ac1db5b56c2e5c072ad7cbf7f1e73b878"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1RegularGrid.html#a9479b175d8a75b9ae2079bde3e43a08a">CellIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#ac1db5b56c2e5c072ad7cbf7f1e73b878">cellEnd</a> () <a class="el" href="classvcl_1_1Matrix.html">const</a></td></tr>
+<tr class="memitem:ac1db5b56c2e5c072ad7cbf7f1e73b878" id="r_ac1db5b56c2e5c072ad7cbf7f1e73b878"><td class="memItemLeft" align="right" valign="top"><a id="ac1db5b56c2e5c072ad7cbf7f1e73b878" name="ac1db5b56c2e5c072ad7cbf7f1e73b878"></a>
+<a class="el" href="classvcl_1_1Box.html">CellIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cellEnd</b> () <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="separator:ac1db5b56c2e5c072ad7cbf7f1e73b878"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb313a614996bcc41db494505f66cc40" id="r_afb313a614996bcc41db494505f66cc40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1RegularGrid.html#a92b3ec4cc311497f2588034a5f1d13e3">CellView</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#afb313a614996bcc41db494505f66cc40">cells</a> () <a class="el" href="classvcl_1_1Matrix.html">const</a></td></tr>
+<tr class="memitem:afb313a614996bcc41db494505f66cc40" id="r_afb313a614996bcc41db494505f66cc40"><td class="memItemLeft" align="right" valign="top"><a id="afb313a614996bcc41db494505f66cc40" name="afb313a614996bcc41db494505f66cc40"></a>
+<a class="el" href="classvcl_1_1Box.html">CellView</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cells</b> () <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="separator:afb313a614996bcc41db494505f66cc40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1db723e78051504667091b20bd9f32f8" id="r_a1db723e78051504667091b20bd9f32f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1RegularGrid.html#a92b3ec4cc311497f2588034a5f1d13e3">CellView</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#a1db723e78051504667091b20bd9f32f8">cells</a> (<a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1RegularGrid.html#ad3189a6bfa7742b8f9b3697836121f7f">CellCoord</a> &amp;first, <a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1RegularGrid.html#ad3189a6bfa7742b8f9b3697836121f7f">CellCoord</a> &amp;<a class="el" href="classvcl_1_1Matrix.html">last</a>) <a class="el" href="classvcl_1_1Matrix.html">const</a></td></tr>
+<tr class="memitem:a1db723e78051504667091b20bd9f32f8" id="r_a1db723e78051504667091b20bd9f32f8"><td class="memItemLeft" align="right" valign="top"><a id="a1db723e78051504667091b20bd9f32f8" name="a1db723e78051504667091b20bd9f32f8"></a>
+<a class="el" href="classvcl_1_1Box.html">CellView</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cells</b> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Point.html">CellCoord</a> &amp;first, <a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Point.html">CellCoord</a> &amp;<a class="el" href="classvcl_1_1Box.html">last</a>) <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="separator:a1db723e78051504667091b20bd9f32f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a551c297e5c3870163207e3962e6c8c9b" id="r_a551c297e5c3870163207e3962e6c8c9b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Matrix.html">static</a> <a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1Matrix.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#a551c297e5c3870163207e3962e6c8c9b">DIM</a> = <a class="el" href="classvcl_1_1Matrix.html">N</a></td></tr>
+<tr class="memitem:a551c297e5c3870163207e3962e6c8c9b" id="r_a551c297e5c3870163207e3962e6c8c9b"><td class="memItemLeft" align="right" valign="top"><a id="a551c297e5c3870163207e3962e6c8c9b" name="a551c297e5c3870163207e3962e6c8c9b"></a>
+<a class="el" href="classvcl_1_1Box.html">static</a> <a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><b>DIM</b> = N</td></tr>
 <tr class="separator:a551c297e5c3870163207e3962e6c8c9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:ae60095734a6b8318146c607b39beb08b" id="r_ae60095734a6b8318146c607b39beb08b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Matrix.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1RegularGrid.html#ae60095734a6b8318146c607b39beb08b">set</a> (<a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1Box.html">Box</a>&lt; <a class="el" href="classvcl_1_1Point.html">Point</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt; &gt; &amp;<a class="el" href="classvcl_1_1Matrix.html">box</a>, <a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1Point.html">Point</a>&lt; <a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt; &amp;size)</td></tr>
+<tr class="memitem:ae60095734a6b8318146c607b39beb08b" id="r_ae60095734a6b8318146c607b39beb08b"><td class="memItemLeft" align="right" valign="top"><a id="ae60095734a6b8318146c607b39beb08b" name="ae60095734a6b8318146c607b39beb08b"></a>
+<a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">Box</a>&lt; <a class="el" href="classvcl_1_1Point.html">Point</a>&lt; Scalar, N &gt; &gt; &amp;<a class="el" href="classvcl_1_1Box.html">box</a>, <a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Point.html">Point</a>&lt; uint, N &gt; &amp;size)</td></tr>
 <tr class="separator:ae60095734a6b8318146c607b39beb08b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a23c8bd4fa01875d02357218e1db4c5d2" id="r_a23c8bd4fa01875d02357218e1db4c5d2"><td class="memItemLeft" align="right" valign="top"><a id="a23c8bd4fa01875d02357218e1db4c5d2" name="a23c8bd4fa01875d02357218e1db4c5d2"></a>
+<a class="el" href="classvcl_1_1Box.html">BBoxType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mBBox</b></td></tr>
+<tr class="separator:a23c8bd4fa01875d02357218e1db4c5d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af001460ff8c93adcf95cb40f3ac73b77" id="r_af001460ff8c93adcf95cb40f3ac73b77"><td class="memItemLeft" align="right" valign="top"><a id="af001460ff8c93adcf95cb40f3ac73b77" name="af001460ff8c93adcf95cb40f3ac73b77"></a>
+<a class="el" href="classvcl_1_1Point.html">Point</a>&lt; uint, N &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mSize</b></td></tr>
+<tr class="separator:af001460ff8c93adcf95cb40f3ac73b77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a07756233b2e391a4642f792831cc46ce" name="a07756233b2e391a4642f792831cc46ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07756233b2e391a4642f792831cc46ce">&#9670;&#160;</a></span>BBoxType</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Matrix.html">int</a> N&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Matrix.html">using</a> <a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;::BBoxType =  <a class="el" href="classvcl_1_1Box.html">Box</a>&lt;<a class="el" href="classvcl_1_1RegularGrid.html#a07fdfc59f8d241e68a61b38424c68dce">PointType</a>&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ad3189a6bfa7742b8f9b3697836121f7f" name="ad3189a6bfa7742b8f9b3697836121f7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3189a6bfa7742b8f9b3697836121f7f">&#9670;&#160;</a></span>CellCoord</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Matrix.html">int</a> N&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Matrix.html">using</a> <a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;::CellCoord =  <a class="el" href="classvcl_1_1Point.html">Point</a>&lt;<a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>, <a class="el" href="classvcl_1_1Matrix.html">N</a>&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9479b175d8a75b9ae2079bde3e43a08a" name="a9479b175d8a75b9ae2079bde3e43a08a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9479b175d8a75b9ae2079bde3e43a08a">&#9670;&#160;</a></span>CellIterator</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Matrix.html">int</a> N&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Matrix.html">using</a> <a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;::CellIterator =  <a class="el" href="classvcl_1_1CellIterator.html">vcl::CellIterator</a>&lt;<a class="el" href="classvcl_1_1Matrix.html">N</a>&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a92b3ec4cc311497f2588034a5f1d13e3" name="a92b3ec4cc311497f2588034a5f1d13e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92b3ec4cc311497f2588034a5f1d13e3">&#9670;&#160;</a></span>CellView</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Matrix.html">int</a> N&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Matrix.html">using</a> <a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;::CellView =  <a class="el" href="classvcl_1_1View.html">vcl::View</a>&lt;<a class="el" href="classvcl_1_1RegularGrid.html#a9479b175d8a75b9ae2079bde3e43a08a">CellIterator</a>&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a07fdfc59f8d241e68a61b38424c68dce" name="a07fdfc59f8d241e68a61b38424c68dce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07fdfc59f8d241e68a61b38424c68dce">&#9670;&#160;</a></span>PointType</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Matrix.html">int</a> N&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Matrix.html">using</a> <a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;::PointType =  <a class="el" href="classvcl_1_1Point.html">Point</a>&lt;Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a>&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a6d71c2b2ad3dee07f1763a57ca15c8f2" name="a6d71c2b2ad3dee07f1763a57ca15c8f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d71c2b2ad3dee07f1763a57ca15c8f2">&#9670;&#160;</a></span>ScalarType</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Matrix.html">int</a> N&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Matrix.html">using</a> <a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;::ScalarType =  Scalar</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="acda061fcfe30dfaa5d4444435e34a758" name="acda061fcfe30dfaa5d4444435e34a758"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acda061fcfe30dfaa5d4444435e34a758">&#9670;&#160;</a></span>RegularGrid() <span class="overload">[1/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Matrix.html">int</a> N&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;::RegularGrid </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="abef9863d2206133238e7ec0d99c48b2c" name="abef9863d2206133238e7ec0d99c48b2c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abef9863d2206133238e7ec0d99c48b2c">&#9670;&#160;</a></span>RegularGrid() <span class="overload">[2/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Matrix.html">int</a> N&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;::RegularGrid </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1Point.html">Point</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>min</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1Point.html">Point</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>max</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1Point.html">Point</a>&lt; <a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a3ea22105f94f0940663cf852ad858a2b" name="a3ea22105f94f0940663cf852ad858a2b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ea22105f94f0940663cf852ad858a2b">&#9670;&#160;</a></span>RegularGrid() <span class="overload">[3/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Matrix.html">int</a> N&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;::RegularGrid </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1Box.html">Box</a>&lt; <a class="el" href="classvcl_1_1Point.html">Point</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt; &gt; &amp;&#160;</td>
-          <td class="paramname"><em>bbox</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1Point.html">Point</a>&lt; <a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a0b51ac28cfa582a2a4e099acff4cddec" name="a0b51ac28cfa582a2a4e099acff4cddec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0b51ac28cfa582a2a4e099acff4cddec">&#9670;&#160;</a></span>cell() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Matrix.html">int</a> N&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1RegularGrid.html#ad3189a6bfa7742b8f9b3697836121f7f">CellCoord</a> <a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;::cell </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1Point.html">Point</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>p</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a53bcd254aab9107472398ada9559a2ad" name="a53bcd254aab9107472398ada9559a2ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53bcd254aab9107472398ada9559a2ad">&#9670;&#160;</a></span>cell() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Matrix.html">int</a> N&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> <a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;::cell </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>&#160;</td>
-          <td class="paramname"><em>d</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Matrix.html">const</a> Scalar &amp;&#160;</td>
-          <td class="paramname"><em>s</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a874b2361c4f5616879406458c2d0070b" name="a874b2361c4f5616879406458c2d0070b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a874b2361c4f5616879406458c2d0070b">&#9670;&#160;</a></span>cellBegin() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Matrix.html">int</a> N&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1RegularGrid.html#a9479b175d8a75b9ae2079bde3e43a08a">CellIterator</a> <a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;::cellBegin </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a4363c9c3aaf4f1cef9ea55faad52392d" name="a4363c9c3aaf4f1cef9ea55faad52392d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4363c9c3aaf4f1cef9ea55faad52392d">&#9670;&#160;</a></span>cellBegin() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Matrix.html">int</a> N&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1RegularGrid.html#a9479b175d8a75b9ae2079bde3e43a08a">CellIterator</a> <a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;::cellBegin </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1RegularGrid.html#ad3189a6bfa7742b8f9b3697836121f7f">CellCoord</a> &amp;&#160;</td>
-          <td class="paramname"><em>first</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1RegularGrid.html#ad3189a6bfa7742b8f9b3697836121f7f">CellCoord</a> &amp;&#160;</td>
-          <td class="paramname"><em>last</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1d256edb816067099e7c22b58560d086" name="a1d256edb816067099e7c22b58560d086"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d256edb816067099e7c22b58560d086">&#9670;&#160;</a></span>cellBox()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Matrix.html">int</a> N&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1RegularGrid.html#a07756233b2e391a4642f792831cc46ce">BBoxType</a> <a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;::cellBox </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1RegularGrid.html#ad3189a6bfa7742b8f9b3697836121f7f">CellCoord</a> &amp;&#160;</td>
-          <td class="paramname"><em>c</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9fb88289248f57d91a4d8a0ccf130da8" name="a9fb88289248f57d91a4d8a0ccf130da8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9fb88289248f57d91a4d8a0ccf130da8">&#9670;&#160;</a></span>cellDiagonal()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Matrix.html">int</a> N&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Scalar <a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;::cellDiagonal </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac1db5b56c2e5c072ad7cbf7f1e73b878" name="ac1db5b56c2e5c072ad7cbf7f1e73b878"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac1db5b56c2e5c072ad7cbf7f1e73b878">&#9670;&#160;</a></span>cellEnd()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Matrix.html">int</a> N&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1RegularGrid.html#a9479b175d8a75b9ae2079bde3e43a08a">CellIterator</a> <a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;::cellEnd </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="aab633eefb6b7d4060b6d794ba41fb06d" name="aab633eefb6b7d4060b6d794ba41fb06d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aab633eefb6b7d4060b6d794ba41fb06d">&#9670;&#160;</a></span>cellLength()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Matrix.html">int</a> N&gt; </div>
+template&lt;<a class="el" href="classvcl_1_1Box.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Box.html">int</a> N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Scalar <a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;::cellLength </td>
+          <td class="memname">Scalar <a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, N &gt;::cellLength </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>&#160;</td>
+          <td class="paramtype">uint&#160;</td>
           <td class="paramname"><em>d</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -654,13 +262,13 @@ template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Matrix.html">int</a> N&gt; </div>
+template&lt;<a class="el" href="classvcl_1_1Box.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Box.html">int</a> N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Point.html">Point</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt; <a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;::cellLengths </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Point.html">Point</a>&lt; Scalar, N &gt; <a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, N &gt;::cellLengths </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -678,49 +286,21 @@ template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <
 
 </div>
 </div>
-<a id="aaf06af54046cc2dedc79e658a3affa4d" name="aaf06af54046cc2dedc79e658a3affa4d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf06af54046cc2dedc79e658a3affa4d">&#9670;&#160;</a></span>cellLowerCorner()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Matrix.html">int</a> N&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Point.html">Point</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt; <a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;::cellLowerCorner </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1RegularGrid.html#ad3189a6bfa7742b8f9b3697836121f7f">CellCoord</a> &amp;&#160;</td>
-          <td class="paramname"><em>c</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="aba1c70b0aec3938b72dc5125802b26f0" name="aba1c70b0aec3938b72dc5125802b26f0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aba1c70b0aec3938b72dc5125802b26f0">&#9670;&#160;</a></span>cellNumber()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Matrix.html">int</a> N&gt; </div>
+template&lt;<a class="el" href="classvcl_1_1Box.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Box.html">int</a> N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> <a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;::cellNumber </td>
+          <td class="memname">uint <a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, N &gt;::cellNumber </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>&#160;</td>
+          <td class="paramtype">uint&#160;</td>
           <td class="paramname"><em>d</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -749,13 +329,13 @@ template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Matrix.html">int</a> N&gt; </div>
+template&lt;<a class="el" href="classvcl_1_1Box.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Box.html">int</a> N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Point.html">Point</a>&lt; <a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt; <a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;::cellNumbers </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Point.html">Point</a>&lt; uint, N &gt; <a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, N &gt;::cellNumbers </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -779,15 +359,15 @@ template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Matrix.html">int</a> N&gt; </div>
+template&lt;<a class="el" href="classvcl_1_1Box.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Box.html">int</a> N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1RegularGrid.html#ad3189a6bfa7742b8f9b3697836121f7f">CellCoord</a> <a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;::cellOfIndex </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Point.html">CellCoord</a> <a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, N &gt;::cellOfIndex </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>&#160;</td>
+          <td class="paramtype">uint&#160;</td>
           <td class="paramname"><em>index</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -810,86 +390,21 @@ template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <
 
 </div>
 </div>
-<a id="afb313a614996bcc41db494505f66cc40" name="afb313a614996bcc41db494505f66cc40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb313a614996bcc41db494505f66cc40">&#9670;&#160;</a></span>cells() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Matrix.html">int</a> N&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1RegularGrid.html#a92b3ec4cc311497f2588034a5f1d13e3">CellView</a> <a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;::cells </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1db723e78051504667091b20bd9f32f8" name="a1db723e78051504667091b20bd9f32f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1db723e78051504667091b20bd9f32f8">&#9670;&#160;</a></span>cells() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Matrix.html">int</a> N&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1RegularGrid.html#a92b3ec4cc311497f2588034a5f1d13e3">CellView</a> <a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;::cells </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1RegularGrid.html#ad3189a6bfa7742b8f9b3697836121f7f">CellCoord</a> &amp;&#160;</td>
-          <td class="paramname"><em>first</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1RegularGrid.html#ad3189a6bfa7742b8f9b3697836121f7f">CellCoord</a> &amp;&#160;</td>
-          <td class="paramname"><em>last</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a8306463d7730df4109a421bb0f74112e" name="a8306463d7730df4109a421bb0f74112e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8306463d7730df4109a421bb0f74112e">&#9670;&#160;</a></span>indexOfCell()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Matrix.html">int</a> N&gt; </div>
+template&lt;<a class="el" href="classvcl_1_1Box.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Box.html">int</a> N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> <a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;::indexOfCell </td>
+          <td class="memname">uint <a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, N &gt;::indexOfCell </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1RegularGrid.html#ad3189a6bfa7742b8f9b3697836121f7f">CellCoord</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Point.html">CellCoord</a> &amp;&#160;</td>
           <td class="paramname"><em>c</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -918,15 +433,15 @@ template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Matrix.html">int</a> N&gt; </div>
+template&lt;<a class="el" href="classvcl_1_1Box.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Box.html">int</a> N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Scalar <a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;::length </td>
+          <td class="memname">Scalar <a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, N &gt;::length </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>&#160;</td>
+          <td class="paramtype">uint&#160;</td>
           <td class="paramname"><em>d</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -949,13 +464,13 @@ template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Matrix.html">int</a> N&gt; </div>
+template&lt;<a class="el" href="classvcl_1_1Box.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Box.html">int</a> N&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Point.html">Point</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt; <a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;::lengths </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Point.html">Point</a>&lt; Scalar, N &gt; <a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, N &gt;::lengths </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -973,132 +488,15 @@ template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <
 
 </div>
 </div>
-<a id="a80795cb440ee3b38df8c2f052c8d27bd" name="a80795cb440ee3b38df8c2f052c8d27bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80795cb440ee3b38df8c2f052c8d27bd">&#9670;&#160;</a></span>max()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Matrix.html">int</a> N&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Point.html">Point</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt; <a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;::max </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7e37c764fcdd40323fbca8b4e2edfecb" name="a7e37c764fcdd40323fbca8b4e2edfecb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e37c764fcdd40323fbca8b4e2edfecb">&#9670;&#160;</a></span>min()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Matrix.html">int</a> N&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Point.html">Point</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt; <a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;::min </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae60095734a6b8318146c607b39beb08b" name="ae60095734a6b8318146c607b39beb08b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae60095734a6b8318146c607b39beb08b">&#9670;&#160;</a></span>set()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Matrix.html">int</a> N&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Matrix.html">void</a> <a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;::set </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1Box.html">Box</a>&lt; <a class="el" href="classvcl_1_1Point.html">Point</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt; &gt; &amp;&#160;</td>
-          <td class="paramname"><em>box</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1Point.html">Point</a>&lt; <a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a551c297e5c3870163207e3962e6c8c9b" name="a551c297e5c3870163207e3962e6c8c9b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a551c297e5c3870163207e3962e6c8c9b">&#9670;&#160;</a></span>DIM</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">typename</a> Scalar , <a class="el" href="classvcl_1_1Matrix.html">int</a> N&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Matrix.html">const</a> <a class="el" href="classvcl_1_1Matrix.html">int</a> <a class="el" href="classvcl_1_1RegularGrid.html">vcl::RegularGrid</a>&lt; Scalar, <a class="el" href="classvcl_1_1Matrix.html">N</a> &gt;::DIM = <a class="el" href="classvcl_1_1Matrix.html">N</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>include/vclib/space/complex/grid/<a class="el" href="regular__grid_8h_source.html">regular_grid.h</a></li>
+<li>vclib/core/include/vclib/space/complex/grid/<a class="el" href="regular__grid_8h_source.html">regular_grid.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespacevcl.html">vcl</a></li><li class="navelem"><a class="el" href="classvcl_1_1RegularGrid.html">RegularGrid</a></li>
+    <li class="navelem"><b>vcl</b></li><li class="navelem"><a class="el" href="classvcl_1_1RegularGrid.html">RegularGrid</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

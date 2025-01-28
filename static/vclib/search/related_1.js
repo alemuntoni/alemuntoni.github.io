@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['edgecontainer_0',['EdgeContainer',['../classvcl_1_1mesh_1_1EdgeContainer.html#a329964657dd625f46489470523e732a2',1,'vcl::mesh::EdgeContainer']]],
-  ['element_1',['Element',['../classvcl_1_1Mesh.html#a5b79073931d7a125aab8f3f6aa45441b',1,'vcl::Mesh']]],
-  ['elementcontainer_2',['ElementContainer',['../classvcl_1_1mesh_1_1ElementContainer.html#a1437007dea1641e4b811531f64d664b1',1,'vcl::mesh::ElementContainer']]]
+  ['swap_0',['swap',['../classvcl_1_1Mesh.html#ad2a9548437838ad185162eec3d0bf1e7',1,'vcl::Mesh::swap'],['../classvcl_1_1PolymorphicObjectVector.html#a43cfa47b41311b558c59cffee87b872d',1,'vcl::PolymorphicObjectVector::swap'],['../classvcl_1_1Vector.html#ae77817bd6feff49bfd5378f2f90e2e0c',1,'vcl::Vector::swap'],['../classvcl_1_1PointerVector.html#ae77817bd6feff49bfd5378f2f90e2e0c',1,'vcl::PointerVector::swap'],['../classvcl_1_1PolymorphicObjectVector.html#ae77817bd6feff49bfd5378f2f90e2e0c',1,'vcl::PolymorphicObjectVector::swap']]]
 ];

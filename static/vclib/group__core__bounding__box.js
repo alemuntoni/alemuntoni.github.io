@@ -7,6 +7,7 @@ var group__core__bounding__box =
     [ "vcl::boundingBox", "group__core__bounding__box.html#ga1ad883eeb58e2a302d15ce6ba179752f", null ],
     [ "vcl::boundingBox", "group__core__bounding__box.html#ga776dc863a78918d5a0f104907ab8a26f", null ],
     [ "vcl::boundingBox", "group__core__bounding__box.html#gab8f4fd4f0f5ffcf56b82e44e7bb6a1dd", null ],
+    [ "vcl::boundingBox", "group__core__bounding__box.html#gad7d986aa8d14fabedf37c5c388d94cef", null ],
     [ "vcl::boundingBox", "group__core__bounding__box.html#ga5394cef99570de3bb2538e6c4dae69f7", null ],
     [ "vcl::boundingBox", "group__core__bounding__box.html#ga65283494a83b003698a6f37d3157384a", null ],
     [ "vcl::boundingBox", "group__core__bounding__box.html#ga6c874831bf64431e53535e966bccb9e9", null ],

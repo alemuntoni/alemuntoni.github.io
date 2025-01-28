@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visual Computing Library: include/vclib/concepts/mesh/containers/element_container.h Source File</title>
+<title>Visual Computing Library: vclib/core/include/vclib/concepts/mesh/containers/element_container.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -104,11 +104,11 @@ $(document).ready(function(){initNavTree('concepts_2mesh_2containers_2element__c
   <div class="headertitle"><div class="title">element_container.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="concepts_2mesh_2containers_2element__container_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2024                                                    *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2025                                                    *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
@@ -129,144 +129,32 @@ $(document).ready(function(){initNavTree('concepts_2mesh_2containers_2element__c
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_CONCEPTS_MESH_CONTAINERS_ELEMENT_CONTAINER_H</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_CONCEPTS_MESH_CONTAINERS_ELEMENT_CONTAINER_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;<a class="code" href="concepts_2mesh_2components_2component_8h.html">vclib/concepts/mesh/components/component.h</a>&gt;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;<a class="code" href="concepts_2mesh_2elements_2element_8h.html">vclib/concepts/mesh/elements/element.h</a>&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;vclib/types/mesh_containers.h&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;vclib/types/pointers.h&gt;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span>mesh {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">namespace </span>detail {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">template</span>&lt;<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> ELEM_ID, <span class="keyword">typename</span>... Containers&gt;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">struct </span>ContainerOfElementPred</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>{</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Cont&gt;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">struct </span>SameElPred</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    {</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> value = Cont::ELEMENT_ID == ELEM_ID;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    };</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="comment">// TypeWrapper of the found container, if any</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">using </span>type =</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keyword">typename</span> <a class="code hl_struct" href="structvcl_1_1FilterTypesByCondition.html">vcl::FilterTypesByCondition</a>&lt;SameElPred, Containers...&gt;::type;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> value = <a class="code hl_variable" href="structvcl_1_1NumberOfTypes.html#a4a9c38fba8d8f7e9e64921846908902b">NumberOfTypes&lt;type&gt;::value</a> == 1;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>};</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">// TypeWrapper specialization</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keyword">template</span>&lt;<a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> ELEM_ID, <span class="keyword">typename</span>... Containers&gt;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keyword">struct </span>ContainerOfElementPred&lt;ELEM_ID, TypeWrapper&lt;Containers...&gt;&gt; :</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keyword">public</span> ContainerOfElementPred&lt;ELEM_ID, Containers...&gt;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>{</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>};</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>} <span class="comment">// namespace detail</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="foldopen" id="foldopen00069" data-start="{" data-end="};">
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classvcl_1_1mesh_1_1ElementContainerTriggerer.html">   69</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1mesh_1_1ElementContainerTriggerer.html">ElementContainerTriggerer</a></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>{</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>};</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span>vcl::mesh {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="conceptvcl_1_1mesh_1_1ElementContainerConcept.html">   36</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1mesh_1_1ElementContainerConcept.html">ElementContainerConcept</a> =</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    IsElementContainerPred&lt;T&gt;::value &amp;&amp; <span class="keyword">requires</span> (T&amp;&amp; obj) {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">typename</span> RemoveRef&lt;T&gt;::ElementType;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keyword">typename</span> RemoveRef&lt;T&gt;::ParentMeshType;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        { obj.ELEMENT_ID } -&gt; std::same_as&lt;const uint&amp;&gt;;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    };</div>
 </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="conceptvcl_1_1mesh_1_1ElementContainerConcept.html">   78</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1mesh_1_1ElementContainerConcept.html">ElementContainerConcept</a> =</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    std::is_base_of&lt;ElementContainerTriggerer, T&gt;::value;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00086" data-start="{" data-end="};">
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="structvcl_1_1mesh_1_1IsElementContainerPred.html">   86</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1mesh_1_1IsElementContainerPred.html">IsElementContainerPred</a></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>{</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="structvcl_1_1mesh_1_1IsElementContainerPred.html#a4c77e1292fb436591abb59169c6a2055">   88</a></span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="structvcl_1_1mesh_1_1IsElementContainerPred.html#a4c77e1292fb436591abb59169c6a2055">value</a> = <a class="code hl_concept" href="conceptvcl_1_1mesh_1_1ElementContainerConcept.html">ElementContainerConcept&lt;T&gt;</a>;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>};</div>
-</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="keyword">template</span>&lt;u<span class="keywordtype">int</span> ELEM_ID, <span class="keyword">typename</span> MeshType&gt;</div>
-<div class="foldopen" id="foldopen00111" data-start="{" data-end="};">
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="structvcl_1_1mesh_1_1ContainerOfElement.html">  111</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1mesh_1_1ContainerOfElement.html">ContainerOfElement</a></div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>{</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="structvcl_1_1mesh_1_1ContainerOfElement.html#a7a48d305e60692499917a863b08a7e93">  114</a></span>    <span class="keyword">using </span><a class="code hl_class" href="classvcl_1_1Matrix.html">type</a> = <a class="code hl_typedef" href="group__types.html#ga38c527736a2d0a3d7af0493e228227e3">FirstTypeT</a>&lt;<span class="keyword">typename</span> detail::ContainerOfElementPred&lt;</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        ELEM_ID,</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="keyword">typename</span> MeshType::Containers&gt;<a class="code hl_typedef" href="structvcl_1_1mesh_1_1ContainerOfElement.html#a7a48d305e60692499917a863b08a7e93">::type</a>&gt;;</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>};</div>
-</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="keyword">template</span>&lt;u<span class="keywordtype">int</span> ELEM_ID, <span class="keyword">typename</span> MeshType&gt;</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="namespacevcl_1_1mesh.html#ae32f1cdce77d69433c110421f4f046b4">  138</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacevcl_1_1mesh.html#ae32f1cdce77d69433c110421f4f046b4">ContainerOfElementType</a> =</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keyword">typename</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">ContainerOfElement&lt;ELEM_ID, MeshType&gt;::type</a>;</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="keyword">template</span>&lt;ElementConcept El, <span class="keyword">typename</span> MeshType&gt;</div>
-<div class="foldopen" id="foldopen00142" data-start="{" data-end="};">
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="structvcl_1_1mesh_1_1HasContainerOfPred.html">  142</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1mesh_1_1HasContainerOfPred.html">HasContainerOfPred</a></div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>{</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="structvcl_1_1mesh_1_1HasContainerOfPred.html#a62e863fcc65294dacb9764a9d46cfa7a">  144</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="structvcl_1_1mesh_1_1HasContainerOfPred.html#a62e863fcc65294dacb9764a9d46cfa7a">value</a> = detail::ContainerOfElementPred&lt;</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        El::ELEMENT_ID,</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        <span class="keyword">typename</span> MeshType::Containers&gt;<a class="code hl_variable" href="structvcl_1_1mesh_1_1HasContainerOfPred.html#a62e863fcc65294dacb9764a9d46cfa7a">::value</a>;</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>};</div>
-</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="keyword">template</span>&lt;u<span class="keywordtype">int</span> ELEM_ID, <span class="keyword">typename</span> MeshType&gt;</div>
-<div class="foldopen" id="foldopen00150" data-start="{" data-end="};">
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="structvcl_1_1mesh_1_1HasContainerOfElementPred.html">  150</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1mesh_1_1HasContainerOfElementPred.html">HasContainerOfElementPred</a></div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>{</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="structvcl_1_1mesh_1_1HasContainerOfElementPred.html#afc7bc58867be8114873cd80cf8e3ac0a">  152</a></span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="structvcl_1_1mesh_1_1HasContainerOfElementPred.html#afc7bc58867be8114873cd80cf8e3ac0a">value</a> = detail::</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        ContainerOfElementPred&lt;ELEM_ID, typename MeshType::Containers&gt;::value;</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>};</div>
-</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType, u<span class="keywordtype">int</span> ELEM_ID&gt;</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="conceptvcl_1_1mesh_1_1HasElementContainer.html">  157</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1mesh_1_1HasElementContainer.html">HasElementContainer</a> =</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <a class="code hl_variable" href="structvcl_1_1mesh_1_1HasContainerOfElementPred.html#afc7bc58867be8114873cd80cf8e3ac0a">HasContainerOfElementPred&lt;ELEM_ID, MeshType&gt;::value</a>;</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType, u<span class="keywordtype">int</span> ELEM_ID, u<span class="keywordtype">int</span> COMP_ID&gt;</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="conceptvcl_1_1mesh_1_1HasPerElementComponent.html">  161</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1mesh_1_1HasPerElementComponent.html">HasPerElementComponent</a> =</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <a class="code hl_concept" href="conceptvcl_1_1mesh_1_1HasElementContainer.html">HasElementContainer&lt;MeshType, ELEM_ID&gt;</a> &amp;&amp;</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasComponentOfType.html">comp::HasComponentOfType</a>&lt;</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        <span class="keyword">typename</span> ContainerOfElementType&lt;ELEM_ID, MeshType&gt;::ElementType,</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        COMP_ID&gt;;</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType, u<span class="keywordtype">int</span> ELEM_ID, u<span class="keywordtype">int</span> COMP_ID&gt;</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="conceptvcl_1_1mesh_1_1HasPerElementOptionalComponent.html">  168</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1mesh_1_1HasPerElementOptionalComponent.html">HasPerElementOptionalComponent</a> =</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <a class="code hl_concept" href="conceptvcl_1_1mesh_1_1HasElementContainer.html">HasElementContainer&lt;MeshType, ELEM_ID&gt;</a> &amp;&amp;</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasOptionalComponentOfType.html">comp::HasOptionalComponentOfType</a>&lt;</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        <span class="keyword">typename</span> ContainerOfElementType&lt;ELEM_ID, MeshType&gt;::ElementType,</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        COMP_ID&gt;;</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>} <span class="comment">// namespace mesh</span></div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="preprocessor">#endif </span><span class="comment">// VCL_CONCEPTS_MESH_CONTAINERS_ELEMENT_CONTAINER_H</span></div>
-<div class="ttc" id="aclassvcl_1_1Matrix_html"><div class="ttname"><a href="classvcl_1_1Matrix.html">vcl::Matrix</a></div><div class="ttdef"><b>Definition</b> matrix.h:36</div></div>
-<div class="ttc" id="aclassvcl_1_1mesh_1_1ElementContainerTriggerer_html"><div class="ttname"><a href="classvcl_1_1mesh_1_1ElementContainerTriggerer.html">vcl::mesh::ElementContainerTriggerer</a></div><div class="ttdef"><b>Definition</b> element_container.h:70</div></div>
-<div class="ttc" id="aconcepts_2mesh_2components_2component_8h_html"><div class="ttname"><a href="concepts_2mesh_2components_2component_8h.html">component.h</a></div></div>
-<div class="ttc" id="aconcepts_2mesh_2elements_2element_8h_html"><div class="ttname"><a href="concepts_2mesh_2elements_2element_8h.html">element.h</a></div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasComponentOfType_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasComponentOfType.html">vcl::comp::HasComponentOfType</a></div><div class="ttdoc">The HasComponentOfType concept checks whether a type T (that may be a Mesh or a MeshElement) has a co...</div><div class="ttdef"><b>Definition</b> component.h:250</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasOptionalComponentOfType_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasOptionalComponentOfType.html">vcl::comp::HasOptionalComponentOfType</a></div><div class="ttdoc">The HasOptionalComponentOfType concept checks whether a type T (that should be a MeshElement) has an ...</div><div class="ttdef"><b>Definition</b> component.h:291</div></div>
-<div class="ttc" id="aconceptvcl_1_1mesh_1_1ElementContainerConcept_html"><div class="ttname"><a href="conceptvcl_1_1mesh_1_1ElementContainerConcept.html">vcl::mesh::ElementContainerConcept</a></div><div class="ttdoc">ElementContainerConcept is a concept satisfied when the type T is an Element Container.</div><div class="ttdef"><b>Definition</b> element_container.h:78</div></div>
-<div class="ttc" id="aconceptvcl_1_1mesh_1_1HasElementContainer_html"><div class="ttname"><a href="conceptvcl_1_1mesh_1_1HasElementContainer.html">vcl::mesh::HasElementContainer</a></div><div class="ttdef"><b>Definition</b> element_container.h:157</div></div>
-<div class="ttc" id="aconceptvcl_1_1mesh_1_1HasPerElementComponent_html"><div class="ttname"><a href="conceptvcl_1_1mesh_1_1HasPerElementComponent.html">vcl::mesh::HasPerElementComponent</a></div><div class="ttdef"><b>Definition</b> element_container.h:161</div></div>
-<div class="ttc" id="aconceptvcl_1_1mesh_1_1HasPerElementOptionalComponent_html"><div class="ttname"><a href="conceptvcl_1_1mesh_1_1HasPerElementOptionalComponent.html">vcl::mesh::HasPerElementOptionalComponent</a></div><div class="ttdef"><b>Definition</b> element_container.h:168</div></div>
-<div class="ttc" id="agroup__types_html_ga38c527736a2d0a3d7af0493e228227e3"><div class="ttname"><a href="group__types.html#ga38c527736a2d0a3d7af0493e228227e3">vcl::FirstTypeT</a></div><div class="ttdeci">typename FirstType&lt; Args... &gt;::type FirstTypeT</div><div class="ttdoc">Alias for the type of the first type in a pack of types.</div><div class="ttdef"><b>Definition</b> variadic_templates.h:87</div></div>
-<div class="ttc" id="anamespacevcl_1_1mesh_html_ae32f1cdce77d69433c110421f4f046b4"><div class="ttname"><a href="namespacevcl_1_1mesh.html#ae32f1cdce77d69433c110421f4f046b4">vcl::mesh::ContainerOfElementType</a></div><div class="ttdeci">typename ContainerOfElement&lt; ELEM_ID, MeshType &gt;::type ContainerOfElementType</div><div class="ttdoc">The ContainerOfElementType structure exposes the type of the container of the given MeshType having E...</div><div class="ttdef"><b>Definition</b> element_container.h:139</div></div>
-<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition</b> bounding_box.h:48</div></div>
-<div class="ttc" id="anamespacevcl_html_af74b42dd9d759d565bb701a5b845d05c"><div class="ttname"><a href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">vcl::uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition</b> base.h:34</div></div>
-<div class="ttc" id="astructvcl_1_1FilterTypesByCondition_html"><div class="ttname"><a href="structvcl_1_1FilterTypesByCondition.html">vcl::FilterTypesByCondition</a></div><div class="ttdoc">Removes all types that do not satisfy a condition, and get them as a tuple.</div><div class="ttdef"><b>Definition</b> variadic_templates.h:249</div></div>
-<div class="ttc" id="astructvcl_1_1NumberOfTypes_html_a4a9c38fba8d8f7e9e64921846908902b"><div class="ttname"><a href="structvcl_1_1NumberOfTypes.html#a4a9c38fba8d8f7e9e64921846908902b">vcl::NumberOfTypes::value</a></div><div class="ttdeci">static constexpr uint value</div><div class="ttdef"><b>Definition</b> variadic_templates.h:169</div></div>
-<div class="ttc" id="astructvcl_1_1mesh_1_1ContainerOfElement_html"><div class="ttname"><a href="structvcl_1_1mesh_1_1ContainerOfElement.html">vcl::mesh::ContainerOfElement</a></div><div class="ttdoc">The ContainerOfElement structure exposes the type of the container of the given MeshType having eleme...</div><div class="ttdef"><b>Definition</b> element_container.h:112</div></div>
-<div class="ttc" id="astructvcl_1_1mesh_1_1ContainerOfElement_html_a7a48d305e60692499917a863b08a7e93"><div class="ttname"><a href="structvcl_1_1mesh_1_1ContainerOfElement.html#a7a48d305e60692499917a863b08a7e93">vcl::mesh::ContainerOfElement::type</a></div><div class="ttdeci">FirstTypeT&lt; typename detail::ContainerOfElementPred&lt; ELEM_ID, typename MeshType::Containers &gt;::type &gt; type</div><div class="ttdef"><b>Definition</b> element_container.h:116</div></div>
-<div class="ttc" id="astructvcl_1_1mesh_1_1HasContainerOfElementPred_html"><div class="ttname"><a href="structvcl_1_1mesh_1_1HasContainerOfElementPred.html">vcl::mesh::HasContainerOfElementPred</a></div><div class="ttdef"><b>Definition</b> element_container.h:151</div></div>
-<div class="ttc" id="astructvcl_1_1mesh_1_1HasContainerOfElementPred_html_afc7bc58867be8114873cd80cf8e3ac0a"><div class="ttname"><a href="structvcl_1_1mesh_1_1HasContainerOfElementPred.html#afc7bc58867be8114873cd80cf8e3ac0a">vcl::mesh::HasContainerOfElementPred::value</a></div><div class="ttdeci">static constexpr bool value</div><div class="ttdef"><b>Definition</b> element_container.h:152</div></div>
-<div class="ttc" id="astructvcl_1_1mesh_1_1HasContainerOfPred_html"><div class="ttname"><a href="structvcl_1_1mesh_1_1HasContainerOfPred.html">vcl::mesh::HasContainerOfPred</a></div><div class="ttdef"><b>Definition</b> element_container.h:143</div></div>
-<div class="ttc" id="astructvcl_1_1mesh_1_1HasContainerOfPred_html_a62e863fcc65294dacb9764a9d46cfa7a"><div class="ttname"><a href="structvcl_1_1mesh_1_1HasContainerOfPred.html#a62e863fcc65294dacb9764a9d46cfa7a">vcl::mesh::HasContainerOfPred::value</a></div><div class="ttdeci">static constexpr bool value</div><div class="ttdef"><b>Definition</b> element_container.h:144</div></div>
-<div class="ttc" id="astructvcl_1_1mesh_1_1IsElementContainerPred_html"><div class="ttname"><a href="structvcl_1_1mesh_1_1IsElementContainerPred.html">vcl::mesh::IsElementContainerPred</a></div><div class="ttdoc">The predicate IsElementContainerPred sets its bool value to true when the type T satisfies the Elemen...</div><div class="ttdef"><b>Definition</b> element_container.h:87</div></div>
-<div class="ttc" id="astructvcl_1_1mesh_1_1IsElementContainerPred_html_a4c77e1292fb436591abb59169c6a2055"><div class="ttname"><a href="structvcl_1_1mesh_1_1IsElementContainerPred.html#a4c77e1292fb436591abb59169c6a2055">vcl::mesh::IsElementContainerPred::value</a></div><div class="ttdeci">static const bool value</div><div class="ttdef"><b>Definition</b> element_container.h:88</div></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>} <span class="comment">// namespace vcl::mesh</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#endif </span><span class="comment">// VCL_CONCEPTS_MESH_CONTAINERS_ELEMENT_CONTAINER_H</span></div>
+<div class="ttc" id="aconceptvcl_1_1mesh_1_1ElementContainerConcept_html"><div class="ttname"><a href="conceptvcl_1_1mesh_1_1ElementContainerConcept.html">vcl::mesh::ElementContainerConcept</a></div><div class="ttdoc">ElementContainerConcept is a concept satisfied when the type T is an Element Container.</div><div class="ttdef"><b>Definition</b> element_container.h:36</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d2fdbf172f8ae9790b339bfcb66b3af7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_d8d31096cdb23314816d0514c2e28657.html">concepts</a></li><li class="navelem"><a class="el" href="dir_50753de5cfa25b667fa931e759fe9caf.html">mesh</a></li><li class="navelem"><a class="el" href="dir_52e0669b5c830663f2fa8f451697e198.html">containers</a></li><li class="navelem"><a class="el" href="concepts_2mesh_2containers_2element__container_8h.html">element_container.h</a></li>
+    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_dd968cc90108d82a40e31b676831d617.html">concepts</a></li><li class="navelem"><a class="el" href="dir_219f652b702ba78d999e101abb8207c2.html">mesh</a></li><li class="navelem"><a class="el" href="dir_1717fcbdc5053ae67f6a641e1ce492f5.html">containers</a></li><li class="navelem"><b>element_container.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

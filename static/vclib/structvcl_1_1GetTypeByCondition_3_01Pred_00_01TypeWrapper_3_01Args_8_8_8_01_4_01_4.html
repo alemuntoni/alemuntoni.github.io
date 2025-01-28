@@ -99,7 +99,7 @@ $(document).ready(function(){initNavTree('structvcl_1_1GetTypeByCondition_3_01Pr
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="structvcl_1_1GetTypeByCondition_3_01Pred_00_01TypeWrapper_3_01Args_8_8_8_01_4_01_4-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">vcl::GetTypeByCondition&lt; Pred, TypeWrapper&lt; Args... &gt; &gt; Struct Template Reference</div></div>
+  <div class="headertitle"><div class="title">vcl::GetTypeByCondition&lt; Pred, TypeWrapper&lt; Args... &gt; &gt; Struct Template Reference<div class="ingroups"><a class="el" href="group__types.html">VCLib Types Module</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -110,43 +110,27 @@ $(document).ready(function(){initNavTree('structvcl_1_1GetTypeByCondition_3_01Pr
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a5709d819a22fa78503a2753437734769" id="r_a5709d819a22fa78503a2753437734769"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Matrix.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvcl_1_1GetTypeByCondition_3_01Pred_00_01TypeWrapper_3_01Args_8_8_8_01_4_01_4.html#a5709d819a22fa78503a2753437734769">type</a> = <a class="el" href="structvcl_1_1GetTypeByCondition.html">GetTypeByCondition</a>&lt; <a class="el" href="classvcl_1_1Matrix.html">Pred</a>, Args... &gt;::type</td></tr>
+<tr class="memitem:a5709d819a22fa78503a2753437734769" id="r_a5709d819a22fa78503a2753437734769"><td class="memItemLeft" align="right" valign="top"><a id="a5709d819a22fa78503a2753437734769" name="a5709d819a22fa78503a2753437734769"></a>
+<a class="el" href="classvcl_1_1Box.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> = <a class="el" href="structvcl_1_1GetTypeByCondition.html">GetTypeByCondition</a>&lt; <a class="el" href="classvcl_1_1Box.html">Pred</a>, Args... &gt;::type</td></tr>
 <tr class="separator:a5709d819a22fa78503a2753437734769"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="classvcl_1_1Matrix.html">template</a>&lt; <a class="el" href="classvcl_1_1Matrix.html">class</a> &gt; <a class="el" href="classvcl_1_1Matrix.html">class</a> Pred, typename... Args&gt;<br />
+<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="classvcl_1_1Box.html">template</a>&lt; <a class="el" href="classvcl_1_1Box.html">class</a> &gt; <a class="el" href="classvcl_1_1Box.html">class</a> Pred, typename... Args&gt;<br />
 struct vcl::GetTypeByCondition&lt; Pred, TypeWrapper&lt; Args... &gt; &gt;</div><p>The the first type of a pack that satisfies the given condition.   </p>
 <p>Usage: </p><div class="fragment"><div class="line"><span class="comment">// the first integral type is char</span></div>
-<div class="line"><span class="keyword">using </span><a class="code hl_class" href="classvcl_1_1Matrix.html">ResType</a> =</div>
-<div class="line">    <a class="code hl_class" href="classvcl_1_1Matrix.html">GetTypeByCondition&lt;std::is_integral, float, double, char, int&gt;::type</a>;</div>
+<div class="line"><span class="keyword">using </span><a class="code hl_class" href="classvcl_1_1Box.html">ResType</a> =</div>
+<div class="line">    <a class="code hl_class" href="classvcl_1_1Box.html">GetTypeByCondition&lt;std::is_integral, float, double, char, int&gt;::type</a>;</div>
 <div class="line"><span class="keyword">static_assert</span>(std::is_same&lt;ResType, char&gt;::value, <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="ttc" id="aclassvcl_1_1Matrix_html"><div class="ttname"><a href="classvcl_1_1Matrix.html">vcl::Matrix</a></div><div class="ttdef"><b>Definition</b> matrix.h:36</div></div>
-</div><!-- fragment -->   </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a5709d819a22fa78503a2753437734769" name="a5709d819a22fa78503a2753437734769"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5709d819a22fa78503a2753437734769">&#9670;&#160;</a></span>type</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Matrix.html">template</a>&lt; <a class="el" href="classvcl_1_1Matrix.html">class</a> &gt; <a class="el" href="classvcl_1_1Matrix.html">class</a> Pred, typename... Args&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Matrix.html">using</a> <a class="el" href="structvcl_1_1GetTypeByCondition.html">vcl::GetTypeByCondition</a>&lt; <a class="el" href="classvcl_1_1Matrix.html">Pred</a>, <a class="el" href="structvcl_1_1TypeWrapper.html">TypeWrapper</a>&lt; Args... &gt; &gt;::type =  <a class="el" href="structvcl_1_1GetTypeByCondition.html">GetTypeByCondition</a>&lt;<a class="el" href="classvcl_1_1Matrix.html">Pred</a>, Args...&gt;::type</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li>include/vclib/types/<a class="el" href="variadic__templates_8h_source.html">variadic_templates.h</a></li>
+<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:49</div></div>
+</div><!-- fragment -->   </div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li>vclib/core/include/vclib/types/<a class="el" href="variadic__templates_8h_source.html">variadic_templates.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespacevcl.html">vcl</a></li><li class="navelem"><a class="el" href="structvcl_1_1GetTypeByCondition_3_01Pred_00_01TypeWrapper_3_01Args_8_8_8_01_4_01_4.html">GetTypeByCondition&lt; Pred, TypeWrapper&lt; Args... &gt; &gt;</a></li>
+    <li class="navelem"><b>vcl</b></li><li class="navelem"><a class="el" href="structvcl_1_1GetTypeByCondition_3_01Pred_00_01TypeWrapper_3_01Args_8_8_8_01_4_01_4.html">GetTypeByCondition&lt; Pred, TypeWrapper&lt; Args... &gt; &gt;</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

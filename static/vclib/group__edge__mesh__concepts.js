@@ -8,5 +8,5 @@ var group__edge__mesh__concepts =
     [ "vcl::HasPerEdgeMark", "conceptvcl_1_1HasPerEdgeMark.html", null ],
     [ "vcl::HasPerEdgeNormal", "conceptvcl_1_1HasPerEdgeNormal.html", null ],
     [ "vcl::HasPerEdgeQuality", "conceptvcl_1_1HasPerEdgeQuality.html", null ],
-    [ "vcl::HasPerEdgeVertexPointers", "conceptvcl_1_1HasPerEdgeVertexPointers.html", null ]
+    [ "vcl::HasPerEdgeVertexReferences", "conceptvcl_1_1HasPerEdgeVertexReferences.html", null ]
 ];

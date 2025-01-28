@@ -1,15 +1,7 @@
 var classvcl_1_1MeshPos =
 [
-    [ "VertexType", "classvcl_1_1MeshPos.html#a677b3518552ad3e50833a95be8868af7", null ],
     [ "MeshPos", "classvcl_1_1MeshPos.html#a17b38bf65a61f08c217c61dc4288d6e7", null ],
-    [ "MeshPos", "classvcl_1_1MeshPos.html#a5d7cd40374cc92cb739d44f708e1e5f9", null ],
-    [ "MeshPos", "classvcl_1_1MeshPos.html#a04a6a8c026538f1cdac8aac6e5498ad0", null ],
     [ "MeshPos", "classvcl_1_1MeshPos.html#a7a23df9703a7e13b806228b2cfa8a7c9", null ],
-    [ "adjEdge", "classvcl_1_1MeshPos.html#a73df97a5726d5fba185e3c8679313d4a", null ],
-    [ "adjFace", "classvcl_1_1MeshPos.html#a6e71672556be3e7328326f5e0ad06289", null ],
-    [ "adjVertex", "classvcl_1_1MeshPos.html#ab389904e23184b10b21f5d9710ca05af", null ],
-    [ "edge", "classvcl_1_1MeshPos.html#a231893ffcfac8b0456f911e77ef3874f", null ],
-    [ "face", "classvcl_1_1MeshPos.html#a5d13fe28270519fafb83daa77123857a", null ],
     [ "flipEdge", "classvcl_1_1MeshPos.html#ae9a33614f6743fe0a2c50a471376540c", null ],
     [ "flipFace", "classvcl_1_1MeshPos.html#ab9317f9b4a13e40d4cc001bb36f6e804", null ],
     [ "flipVertex", "classvcl_1_1MeshPos.html#a6f2f05c4c5e651dd1b50a18f46a2794d", null ],
@@ -20,9 +12,5 @@ var classvcl_1_1MeshPos =
     [ "isValid", "classvcl_1_1MeshPos.html#a7c9527d771756e3bbf520aeb48ee92db", null ],
     [ "nextEdgeAdjacentToV", "classvcl_1_1MeshPos.html#ad8e5d6bc221e80b93d95542b95483c92", null ],
     [ "nextEdgeOnBorderAdjacentToV", "classvcl_1_1MeshPos.html#a8436d8c718a365500e33047297cb6c52", null ],
-    [ "numberOfAdjacentFacesToV", "classvcl_1_1MeshPos.html#a0a4d81e0f37118d2ab24660642752d3f", null ],
-    [ "operator!=", "classvcl_1_1MeshPos.html#a71b467575e66b3777c95c0e362af5ee0", null ],
-    [ "operator<", "classvcl_1_1MeshPos.html#aa13b367e3e5cd4822bf5b7fbd5bcee1a", null ],
-    [ "operator==", "classvcl_1_1MeshPos.html#a09c586838cc7ba5bf8fa99750c1d31f1", null ],
-    [ "vertex", "classvcl_1_1MeshPos.html#a3c143ae8ae5378cb702164601ac6eb6c", null ]
+    [ "numberOfAdjacentFacesToV", "classvcl_1_1MeshPos.html#a0a4d81e0f37118d2ab24660642752d3f", null ]
 ];

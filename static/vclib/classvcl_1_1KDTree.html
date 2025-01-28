@@ -99,120 +99,100 @@ $(document).ready(function(){initNavTree('classvcl_1_1KDTree.html',''); initResi
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classvcl_1_1KDTree-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">vcl::KDTree&lt; PointType &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p><code>#include &lt;<a class="el" href="kd__tree_8h_source.html">vclib/space/complex/kd_tree.h</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvcl_1_1KDTree_1_1Node.html">Node</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvcl_1_1KDTree_1_1QueryNode.html">QueryNode</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a03fda5905ba33c6970267580ddf9585d" id="r_a03fda5905ba33c6970267580ddf9585d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1KDTree.html#a03fda5905ba33c6970267580ddf9585d">KDTree</a> ()</td></tr>
-<tr class="separator:a03fda5905ba33c6970267580ddf9585d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1377b6f12978e350a42158b96bd1f6b" id="r_af1377b6f12978e350a42158b96bd1f6b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1KDTree.html#af1377b6f12978e350a42158b96bd1f6b">KDTree</a> (<a class="el" href="classvcl_1_1Matrix.html">const</a> std::vector&lt; PointType &gt; &amp;<a class="el" href="classvcl_1_1Matrix.html">points</a>, <a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> <a class="el" href="classvcl_1_1Matrix.html">pointsPerCell</a>=16, <a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> <a class="el" href="classvcl_1_1Matrix.html">maxDepth</a>=64, <a class="el" href="classvcl_1_1Matrix.html">bool</a> <a class="el" href="classvcl_1_1Matrix.html">balanced</a>=<a class="el" href="classvcl_1_1Matrix.html">false</a>)</td></tr>
+<tr class="memitem:af1377b6f12978e350a42158b96bd1f6b" id="r_af1377b6f12978e350a42158b96bd1f6b"><td class="memItemLeft" align="right" valign="top"><a id="af1377b6f12978e350a42158b96bd1f6b" name="af1377b6f12978e350a42158b96bd1f6b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>KDTree</b> (<a class="el" href="classvcl_1_1Box.html">const</a> std::vector&lt; PointType &gt; &amp;<a class="el" href="classvcl_1_1Box.html">points</a>, uint <a class="el" href="classvcl_1_1Box.html">pointsPerCell</a>=16, uint <a class="el" href="classvcl_1_1Box.html">maxDepth</a>=64, <a class="el" href="classvcl_1_1Box.html">bool</a> <a class="el" href="classvcl_1_1Box.html">balanced</a>=<a class="el" href="classvcl_1_1Box.html">false</a>)</td></tr>
 <tr class="separator:af1377b6f12978e350a42158b96bd1f6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace912438dc2ca2639fd6775c04765533" id="r_ace912438dc2ca2639fd6775c04765533"><td class="memTemplParams" colspan="2">template&lt;MeshConcept MeshType&gt; <br />
-requires (std::is_same_v&lt; <a class="el" href="classvcl_1_1Matrix.html">typename</a> MeshType::VertexType::CoordType, PointType&gt;)</td></tr>
-<tr class="memitem:ace912438dc2ca2639fd6775c04765533"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1KDTree.html#ace912438dc2ca2639fd6775c04765533">KDTree</a> (<a class="el" href="classvcl_1_1Matrix.html">const</a> MeshType &amp;<a class="el" href="classvcl_1_1Matrix.html">m</a>, <a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> <a class="el" href="classvcl_1_1Matrix.html">pointsPerCell</a>=16, <a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> <a class="el" href="classvcl_1_1Matrix.html">maxDepth</a>=64, <a class="el" href="classvcl_1_1Matrix.html">bool</a> <a class="el" href="classvcl_1_1Matrix.html">balanced</a>=<a class="el" href="classvcl_1_1Matrix.html">false</a>)</td></tr>
+requires (std::is_same_v&lt; <a class="el" href="classvcl_1_1Box.html">typename</a> MeshType::VertexType::CoordType, PointType&gt;)</td></tr>
+<tr class="memitem:ace912438dc2ca2639fd6775c04765533"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1KDTree.html#ace912438dc2ca2639fd6775c04765533">KDTree</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;<a class="el" href="classvcl_1_1Box.html">m</a>, uint <a class="el" href="classvcl_1_1Box.html">pointsPerCell</a>=16, uint <a class="el" href="classvcl_1_1Box.html">maxDepth</a>=64, <a class="el" href="classvcl_1_1Box.html">bool</a> <a class="el" href="classvcl_1_1Box.html">balanced</a>=<a class="el" href="classvcl_1_1Box.html">false</a>)</td></tr>
 <tr class="memdesc:ace912438dc2ca2639fd6775c04765533"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds the <a class="el" href="classvcl_1_1KDTree.html">KDTree</a> starting from the given mesh.  <br /></td></tr>
 <tr class="separator:ace912438dc2ca2639fd6775c04765533"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d49b1479f3423e5bb6db3997e3501ed" id="r_a7d49b1479f3423e5bb6db3997e3501ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1KDTree.html#a7d49b1479f3423e5bb6db3997e3501ed">nearestNeighborIndex</a> (<a class="el" href="classvcl_1_1Matrix.html">const</a> PointType &amp;<a class="el" href="classvcl_1_1Matrix.html">queryPoint</a>, Scalar &amp;dist=dummyScalar) <a class="el" href="classvcl_1_1Matrix.html">const</a></td></tr>
+<tr class="memitem:a7d49b1479f3423e5bb6db3997e3501ed" id="r_a7d49b1479f3423e5bb6db3997e3501ed"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1KDTree.html#a7d49b1479f3423e5bb6db3997e3501ed">nearestNeighborIndex</a> (<a class="el" href="classvcl_1_1Box.html">const</a> PointType &amp;<a class="el" href="classvcl_1_1Box.html">queryPoint</a>, Scalar &amp;dist=dummyScalar) <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="memdesc:a7d49b1479f3423e5bb6db3997e3501ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Searchs the closest point.  <br /></td></tr>
 <tr class="separator:a7d49b1479f3423e5bb6db3997e3501ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc73d12e9eca2d599bc47b252fb342dc" id="r_afc73d12e9eca2d599bc47b252fb342dc"><td class="memItemLeft" align="right" valign="top">PointType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1KDTree.html#afc73d12e9eca2d599bc47b252fb342dc">nearestNeighbor</a> (<a class="el" href="classvcl_1_1Matrix.html">const</a> PointType &amp;<a class="el" href="classvcl_1_1Matrix.html">queryPoint</a>, Scalar &amp;dist=dummyScalar) <a class="el" href="classvcl_1_1Matrix.html">const</a></td></tr>
+<tr class="memitem:afc73d12e9eca2d599bc47b252fb342dc" id="r_afc73d12e9eca2d599bc47b252fb342dc"><td class="memItemLeft" align="right" valign="top"><a id="afc73d12e9eca2d599bc47b252fb342dc" name="afc73d12e9eca2d599bc47b252fb342dc"></a>
+PointType&#160;</td><td class="memItemRight" valign="bottom"><b>nearestNeighbor</b> (<a class="el" href="classvcl_1_1Box.html">const</a> PointType &amp;<a class="el" href="classvcl_1_1Box.html">queryPoint</a>, Scalar &amp;dist=dummyScalar) <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="separator:afc73d12e9eca2d599bc47b252fb342dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae88c09501360c34c3031ab934297d841" id="r_ae88c09501360c34c3031ab934297d841"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1KDTree.html#ae88c09501360c34c3031ab934297d841">kNearestNeighborsIndices</a> (<a class="el" href="classvcl_1_1Matrix.html">const</a> PointType &amp;<a class="el" href="classvcl_1_1Matrix.html">queryPoint</a>, <a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> <a class="el" href="classvcl_1_1Matrix.html">k</a>, std::vector&lt; Scalar &gt; &amp;<a class="el" href="classvcl_1_1Matrix.html">distances</a>=dummyScalars) <a class="el" href="classvcl_1_1Matrix.html">const</a></td></tr>
+<tr class="memitem:ae88c09501360c34c3031ab934297d841" id="r_ae88c09501360c34c3031ab934297d841"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1KDTree.html#ae88c09501360c34c3031ab934297d841">kNearestNeighborsIndices</a> (<a class="el" href="classvcl_1_1Box.html">const</a> PointType &amp;<a class="el" href="classvcl_1_1Box.html">queryPoint</a>, uint <a class="el" href="classvcl_1_1Box.html">k</a>, std::vector&lt; Scalar &gt; &amp;<a class="el" href="classvcl_1_1Box.html">distances</a>=dummyScalars) <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="memdesc:ae88c09501360c34c3031ab934297d841"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs the k nearest neighbour query.  <br /></td></tr>
 <tr class="separator:ae88c09501360c34c3031ab934297d841"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d90dc8400baf45fbb520a6a4b30fced" id="r_a4d90dc8400baf45fbb520a6a4b30fced"><td class="memItemLeft" align="right" valign="top">std::vector&lt; PointType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1KDTree.html#a4d90dc8400baf45fbb520a6a4b30fced">kNearestNeighbors</a> (<a class="el" href="classvcl_1_1Matrix.html">const</a> PointType &amp;<a class="el" href="classvcl_1_1Matrix.html">queryPoint</a>, <a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> <a class="el" href="classvcl_1_1Matrix.html">k</a>, std::vector&lt; Scalar &gt; &amp;<a class="el" href="classvcl_1_1Matrix.html">distances</a>=dummyScalars) <a class="el" href="classvcl_1_1Matrix.html">const</a></td></tr>
+<tr class="memitem:a4d90dc8400baf45fbb520a6a4b30fced" id="r_a4d90dc8400baf45fbb520a6a4b30fced"><td class="memItemLeft" align="right" valign="top"><a id="a4d90dc8400baf45fbb520a6a4b30fced" name="a4d90dc8400baf45fbb520a6a4b30fced"></a>
+std::vector&lt; PointType &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>kNearestNeighbors</b> (<a class="el" href="classvcl_1_1Box.html">const</a> PointType &amp;<a class="el" href="classvcl_1_1Box.html">queryPoint</a>, uint <a class="el" href="classvcl_1_1Box.html">k</a>, std::vector&lt; Scalar &gt; &amp;<a class="el" href="classvcl_1_1Box.html">distances</a>=dummyScalars) <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="separator:a4d90dc8400baf45fbb520a6a4b30fced"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41f6f1de52e19d7452caaf595e44ac0f" id="r_a41f6f1de52e19d7452caaf595e44ac0f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1KDTree.html#a41f6f1de52e19d7452caaf595e44ac0f">neighborsIndicesInDistance</a> (<a class="el" href="classvcl_1_1Matrix.html">const</a> PointType &amp;<a class="el" href="classvcl_1_1Matrix.html">queryPoint</a>, Scalar dist, std::vector&lt; Scalar &gt; &amp;<a class="el" href="classvcl_1_1Matrix.html">distances</a>=dummyScalars) <a class="el" href="classvcl_1_1Matrix.html">const</a></td></tr>
+<tr class="memitem:a41f6f1de52e19d7452caaf595e44ac0f" id="r_a41f6f1de52e19d7452caaf595e44ac0f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1KDTree.html#a41f6f1de52e19d7452caaf595e44ac0f">neighborsIndicesInDistance</a> (<a class="el" href="classvcl_1_1Box.html">const</a> PointType &amp;<a class="el" href="classvcl_1_1Box.html">queryPoint</a>, Scalar dist, std::vector&lt; Scalar &gt; &amp;<a class="el" href="classvcl_1_1Box.html">distances</a>=dummyScalars) <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="memdesc:a41f6f1de52e19d7452caaf595e44ac0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs the distance query.  <br /></td></tr>
 <tr class="separator:a41f6f1de52e19d7452caaf595e44ac0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add0062cc71e74ebb24f9944d03f84268" id="r_add0062cc71e74ebb24f9944d03f84268"><td class="memItemLeft" align="right" valign="top">std::vector&lt; PointType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1KDTree.html#add0062cc71e74ebb24f9944d03f84268">neighborsInDistance</a> (<a class="el" href="classvcl_1_1Matrix.html">const</a> PointType &amp;<a class="el" href="classvcl_1_1Matrix.html">queryPoint</a>, Scalar dist, std::vector&lt; Scalar &gt; &amp;<a class="el" href="classvcl_1_1Matrix.html">distances</a>=dummyScalars) <a class="el" href="classvcl_1_1Matrix.html">const</a></td></tr>
+<tr class="memitem:add0062cc71e74ebb24f9944d03f84268" id="r_add0062cc71e74ebb24f9944d03f84268"><td class="memItemLeft" align="right" valign="top"><a id="add0062cc71e74ebb24f9944d03f84268" name="add0062cc71e74ebb24f9944d03f84268"></a>
+std::vector&lt; PointType &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>neighborsInDistance</b> (<a class="el" href="classvcl_1_1Box.html">const</a> PointType &amp;<a class="el" href="classvcl_1_1Box.html">queryPoint</a>, Scalar dist, std::vector&lt; Scalar &gt; &amp;<a class="el" href="classvcl_1_1Box.html">distances</a>=dummyScalars) <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="separator:add0062cc71e74ebb24f9944d03f84268"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-types" name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:a8cd416a56e41a2851fd21058e8da55eb" id="r_a8cd416a56e41a2851fd21058e8da55eb"><td class="memItemLeft" align="right" valign="top"><a id="a8cd416a56e41a2851fd21058e8da55eb" name="a8cd416a56e41a2851fd21058e8da55eb"></a>
+<a class="el" href="classvcl_1_1Box.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Scalar</b> = PointType::ScalarType</td></tr>
+<tr class="separator:a8cd416a56e41a2851fd21058e8da55eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a99bc3aea4f26e1cbdd98a1d385404ce7" id="r_a99bc3aea4f26e1cbdd98a1d385404ce7"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1KDTree.html#a99bc3aea4f26e1cbdd98a1d385404ce7">createTree</a> (uint nodeId, uint start, uint end, uint <a class="el" href="classvcl_1_1Box.html">level</a>, <a class="el" href="classvcl_1_1Box.html">bool</a> <a class="el" href="classvcl_1_1Box.html">balanced</a>)</td></tr>
+<tr class="memdesc:a99bc3aea4f26e1cbdd98a1d385404ce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rrecursively builds the kdtree.  <br /></td></tr>
+<tr class="separator:a99bc3aea4f26e1cbdd98a1d385404ce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a79e0d114ef946aa2ddd4f505e76f01" id="r_a9a79e0d114ef946aa2ddd4f505e76f01"><td class="memItemLeft" align="right" valign="top"><a id="a9a79e0d114ef946aa2ddd4f505e76f01" name="a9a79e0d114ef946aa2ddd4f505e76f01"></a>
+uint&#160;</td><td class="memItemRight" valign="bottom"><b>split</b> (uint start, uint end, uint dim, Scalar splitValue)</td></tr>
+<tr class="memdesc:a9a79e0d114ef946aa2ddd4f505e76f01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Split the subarray between start and end in two part, one with the elements less than splitValue, the other with the elements greater or equal than splitValue. The elements are compared using the "dim" coordinate [0 = x, 1 = y, 2 = z]. <br /></td></tr>
+<tr class="separator:a9a79e0d114ef946aa2ddd4f505e76f01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a4f460bf630eb5bc26d98518ed0b3564a" id="r_a4f460bf630eb5bc26d98518ed0b3564a"><td class="memItemLeft" align="right" valign="top"><a id="a4f460bf630eb5bc26d98518ed0b3564a" name="a4f460bf630eb5bc26d98518ed0b3564a"></a>
+std::vector&lt; PointType &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mPoints</b></td></tr>
+<tr class="separator:a4f460bf630eb5bc26d98518ed0b3564a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16f8655af6adc1b26b849bbbc57e34da" id="r_a16f8655af6adc1b26b849bbbc57e34da"><td class="memItemLeft" align="right" valign="top"><a id="a16f8655af6adc1b26b849bbbc57e34da" name="a16f8655af6adc1b26b849bbbc57e34da"></a>
+std::vector&lt; uint &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mIndices</b></td></tr>
+<tr class="separator:a16f8655af6adc1b26b849bbbc57e34da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af157f8be36ee16e0b59d66988412f30a" id="r_af157f8be36ee16e0b59d66988412f30a"><td class="memItemLeft" align="right" valign="top"><a id="af157f8be36ee16e0b59d66988412f30a" name="af157f8be36ee16e0b59d66988412f30a"></a>
+std::vector&lt; <a class="el" href="structvcl_1_1KDTree_1_1Node.html">Node</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mNodes</b></td></tr>
+<tr class="separator:af157f8be36ee16e0b59d66988412f30a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61f379dd5f357897559b0bc32da4ca4f" id="r_a61f379dd5f357897559b0bc32da4ca4f"><td class="memItemLeft" align="right" valign="top"><a id="a61f379dd5f357897559b0bc32da4ca4f" name="a61f379dd5f357897559b0bc32da4ca4f"></a>
+uint&#160;</td><td class="memItemRight" valign="bottom"><b>mPointsPerCell</b> = 16</td></tr>
+<tr class="separator:a61f379dd5f357897559b0bc32da4ca4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e9d52c039df177f824a2f4fe15b12eb" id="r_a2e9d52c039df177f824a2f4fe15b12eb"><td class="memItemLeft" align="right" valign="top"><a id="a2e9d52c039df177f824a2f4fe15b12eb" name="a2e9d52c039df177f824a2f4fe15b12eb"></a>
+uint&#160;</td><td class="memItemRight" valign="bottom"><b>mMaxDepth</b> = 64</td></tr>
+<tr class="separator:a2e9d52c039df177f824a2f4fe15b12eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a113c5c6a3cc91a923b71609079acc93c" id="r_a113c5c6a3cc91a923b71609079acc93c"><td class="memItemLeft" align="right" valign="top"><a id="a113c5c6a3cc91a923b71609079acc93c" name="a113c5c6a3cc91a923b71609079acc93c"></a>
+uint&#160;</td><td class="memItemRight" valign="bottom"><b>mDepth</b> = 0</td></tr>
+<tr class="separator:a113c5c6a3cc91a923b71609079acc93c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:afbeca906bc6ca5181bd787797ef89200" id="r_afbeca906bc6ca5181bd787797ef89200"><td class="memItemLeft" align="right" valign="top"><a id="afbeca906bc6ca5181bd787797ef89200" name="afbeca906bc6ca5181bd787797ef89200"></a>
+<a class="el" href="classvcl_1_1Box.html">static</a> Scalar&#160;</td><td class="memItemRight" valign="bottom"><b>dummyScalar</b></td></tr>
+<tr class="separator:afbeca906bc6ca5181bd787797ef89200"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac589225fbcd253335a3ccc8aa7dc2eb4" id="r_ac589225fbcd253335a3ccc8aa7dc2eb4"><td class="memItemLeft" align="right" valign="top"><a id="ac589225fbcd253335a3ccc8aa7dc2eb4" name="ac589225fbcd253335a3ccc8aa7dc2eb4"></a>
+<a class="el" href="classvcl_1_1Box.html">static</a> std::vector&lt; Scalar &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>dummyScalars</b></td></tr>
+<tr class="separator:ac589225fbcd253335a3ccc8aa7dc2eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a03fda5905ba33c6970267580ddf9585d" name="a03fda5905ba33c6970267580ddf9585d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a03fda5905ba33c6970267580ddf9585d">&#9670;&#160;</a></span>KDTree() <span class="overload">[1/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;PointConcept PointType&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1KDTree.html">vcl::KDTree</a>&lt; PointType &gt;::KDTree </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af1377b6f12978e350a42158b96bd1f6b" name="af1377b6f12978e350a42158b96bd1f6b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1377b6f12978e350a42158b96bd1f6b">&#9670;&#160;</a></span>KDTree() <span class="overload">[2/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;PointConcept PointType&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1KDTree.html">vcl::KDTree</a>&lt; PointType &gt;::KDTree </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Matrix.html">const</a> std::vector&lt; PointType &gt; &amp;&#160;</td>
-          <td class="paramname"><em>points</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>&#160;</td>
-          <td class="paramname"><em>pointsPerCell</em> = <code>16</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>&#160;</td>
-          <td class="paramname"><em>maxDepth</em> = <code>64</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Matrix.html">bool</a>&#160;</td>
-          <td class="paramname"><em>balanced</em> = <code><a class="el" href="classvcl_1_1Matrix.html">false</a></code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ace912438dc2ca2639fd6775c04765533" name="ace912438dc2ca2639fd6775c04765533"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace912438dc2ca2639fd6775c04765533">&#9670;&#160;</a></span>KDTree() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ace912438dc2ca2639fd6775c04765533">&#9670;&#160;</a></span>KDTree()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -220,7 +200,7 @@ template&lt;PointConcept PointType&gt; </div>
 template&lt;PointConcept PointType&gt; </div>
 <div class="memtemplate">
 template&lt;MeshConcept MeshType&gt; <br />
-requires (std::is_same_v&lt; <a class="el" href="classvcl_1_1Matrix.html">typename</a> MeshType::VertexType::CoordType, PointType&gt;)</div>
+requires (std::is_same_v&lt; <a class="el" href="classvcl_1_1Box.html">typename</a> MeshType::VertexType::CoordType, PointType&gt;)</div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -228,26 +208,26 @@ requires (std::is_same_v&lt; <a class="el" href="classvcl_1_1Matrix.html">typena
         <tr>
           <td class="memname"><a class="el" href="classvcl_1_1KDTree.html">vcl::KDTree</a>&lt; PointType &gt;::KDTree </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Matrix.html">const</a> MeshType &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;&#160;</td>
           <td class="paramname"><em>m</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>&#160;</td>
+          <td class="paramtype">uint&#160;</td>
           <td class="paramname"><em>pointsPerCell</em> = <code>16</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>&#160;</td>
+          <td class="paramtype">uint&#160;</td>
           <td class="paramname"><em>maxDepth</em> = <code>64</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Matrix.html">bool</a>&#160;</td>
-          <td class="paramname"><em>balanced</em> = <code><a class="el" href="classvcl_1_1Matrix.html">false</a></code>&#160;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">bool</a>&#160;</td>
+          <td class="paramname"><em>balanced</em> = <code><a class="el" href="classvcl_1_1Box.html">false</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -282,8 +262,8 @@ requires (std::is_same_v&lt; <a class="el" href="classvcl_1_1Matrix.html">typena
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a4d90dc8400baf45fbb520a6a4b30fced" name="a4d90dc8400baf45fbb520a6a4b30fced"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d90dc8400baf45fbb520a6a4b30fced">&#9670;&#160;</a></span>kNearestNeighbors()</h2>
+<a id="a99bc3aea4f26e1cbdd98a1d385404ce7" name="a99bc3aea4f26e1cbdd98a1d385404ce7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99bc3aea4f26e1cbdd98a1d385404ce7">&#9670;&#160;</a></span>createTree()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -294,35 +274,55 @@ template&lt;PointConcept PointType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; PointType &gt; <a class="el" href="classvcl_1_1KDTree.html">vcl::KDTree</a>&lt; PointType &gt;::kNearestNeighbors </td>
+          <td class="memname">uint <a class="el" href="classvcl_1_1KDTree.html">vcl::KDTree</a>&lt; PointType &gt;::createTree </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Matrix.html">const</a> PointType &amp;&#160;</td>
-          <td class="paramname"><em>queryPoint</em>, </td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>nodeId</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>&#160;</td>
-          <td class="paramname"><em>k</em>, </td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; Scalar &gt; &amp;&#160;</td>
-          <td class="paramname"><em>distances</em> = <code>dummyScalars</code>&#160;</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">bool</a>&#160;</td>
+          <td class="paramname"><em>balanced</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td> const</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Rrecursively builds the kdtree. </p>
+<p>The heuristic is the following:</p><ul>
+<li>if the number of points in the node is lower than targetCellsize then make a leaf</li>
+<li>else compute the AABB of the points of the node and split it at the middle of the largest AABB dimension.</li>
+</ul>
+<p>This strategy might look not optimal because it does not explicitly prune empty space, unlike more advanced SAH-like techniques used for RT. On the other hand it leads to a shorter tree, faster to traverse and our experience shown that in the special case of kNN queries, this strategy is indeed more efficient (and much faster to build). Moreover, for volume data (e.g., fluid simulation) pruning the empty space is useless.</p>
+<p>Actually, storing at each node the exact AABB (we therefore have a binary BVH) allows to prune only about 10% of the leaves, but the overhead of this pruning (ball/ABBB intersection) is more expensive than the gain it provides and the memory consumption is x4 higher! </p>
 
 </div>
 </div>
@@ -338,15 +338,15 @@ template&lt;PointConcept PointType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; <a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> &gt; <a class="el" href="classvcl_1_1KDTree.html">vcl::KDTree</a>&lt; PointType &gt;::kNearestNeighborsIndices </td>
+          <td class="memname">std::vector&lt; uint &gt; <a class="el" href="classvcl_1_1KDTree.html">vcl::KDTree</a>&lt; PointType &gt;::kNearestNeighborsIndices </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Matrix.html">const</a> PointType &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> PointType &amp;&#160;</td>
           <td class="paramname"><em>queryPoint</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>&#160;</td>
+          <td class="paramtype">uint&#160;</td>
           <td class="paramname"><em>k</em>, </td>
         </tr>
         <tr>
@@ -375,44 +375,6 @@ template&lt;PointConcept PointType&gt; </div>
 
 </div>
 </div>
-<a id="afc73d12e9eca2d599bc47b252fb342dc" name="afc73d12e9eca2d599bc47b252fb342dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc73d12e9eca2d599bc47b252fb342dc">&#9670;&#160;</a></span>nearestNeighbor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;PointConcept PointType&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">PointType <a class="el" href="classvcl_1_1KDTree.html">vcl::KDTree</a>&lt; PointType &gt;::nearestNeighbor </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Matrix.html">const</a> PointType &amp;&#160;</td>
-          <td class="paramname"><em>queryPoint</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Scalar &amp;&#160;</td>
-          <td class="paramname"><em>dist</em> = <code>dummyScalar</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a7d49b1479f3423e5bb6db3997e3501ed" name="a7d49b1479f3423e5bb6db3997e3501ed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7d49b1479f3423e5bb6db3997e3501ed">&#9670;&#160;</a></span>nearestNeighborIndex()</h2>
 
@@ -425,9 +387,9 @@ template&lt;PointConcept PointType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> <a class="el" href="classvcl_1_1KDTree.html">vcl::KDTree</a>&lt; PointType &gt;::nearestNeighborIndex </td>
+          <td class="memname">uint <a class="el" href="classvcl_1_1KDTree.html">vcl::KDTree</a>&lt; PointType &gt;::nearestNeighborIndex </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Matrix.html">const</a> PointType &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> PointType &amp;&#160;</td>
           <td class="paramname"><em>queryPoint</em>, </td>
         </tr>
         <tr>
@@ -466,9 +428,9 @@ template&lt;PointConcept PointType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; <a class="el" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> &gt; <a class="el" href="classvcl_1_1KDTree.html">vcl::KDTree</a>&lt; PointType &gt;::neighborsIndicesInDistance </td>
+          <td class="memname">std::vector&lt; uint &gt; <a class="el" href="classvcl_1_1KDTree.html">vcl::KDTree</a>&lt; PointType &gt;::neighborsIndicesInDistance </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Matrix.html">const</a> PointType &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> PointType &amp;&#160;</td>
           <td class="paramname"><em>queryPoint</em>, </td>
         </tr>
         <tr>
@@ -501,59 +463,15 @@ template&lt;PointConcept PointType&gt; </div>
 
 </div>
 </div>
-<a id="add0062cc71e74ebb24f9944d03f84268" name="add0062cc71e74ebb24f9944d03f84268"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#add0062cc71e74ebb24f9944d03f84268">&#9670;&#160;</a></span>neighborsInDistance()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;PointConcept PointType&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt; PointType &gt; <a class="el" href="classvcl_1_1KDTree.html">vcl::KDTree</a>&lt; PointType &gt;::neighborsInDistance </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Matrix.html">const</a> PointType &amp;&#160;</td>
-          <td class="paramname"><em>queryPoint</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Scalar&#160;</td>
-          <td class="paramname"><em>dist</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::vector&lt; Scalar &gt; &amp;&#160;</td>
-          <td class="paramname"><em>distances</em> = <code>dummyScalars</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>include/vclib/space/complex/<a class="el" href="kd__tree_8h_source.html">kd_tree.h</a></li>
+<li>vclib/core/include/vclib/space/complex/<a class="el" href="kd__tree_8h_source.html">kd_tree.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespacevcl.html">vcl</a></li><li class="navelem"><a class="el" href="classvcl_1_1KDTree.html">KDTree</a></li>
+    <li class="navelem"><b>vcl</b></li><li class="navelem"><a class="el" href="classvcl_1_1KDTree.html">KDTree</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

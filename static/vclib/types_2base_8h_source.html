@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visual Computing Library: include/vclib/types/base.h Source File</title>
+<title>Visual Computing Library: vclib/core/include/vclib/types/base.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -104,11 +104,11 @@ $(document).ready(function(){initNavTree('types_2base_8h_source.html',''); initR
   <div class="headertitle"><div class="title">base.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="types_2base_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2024                                                    *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2025                                                    *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
@@ -130,65 +130,84 @@ $(document).ready(function(){initNavTree('types_2base_8h_source.html',''); initR
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_TYPES_BASE_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;cassert&gt;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;concepts&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;limits&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;numeric&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacevcl.html">vcl</a> {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">// Define some basic types, for convenience</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">   34</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a>   = <span class="keywordtype">unsigned</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">int</a>;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="namespacevcl.html#a5ee777e6ef2036ffa4ea83d39f83663b">   35</a></span><span class="keyword">using </span><a class="code hl_class" href="classvcl_1_1Matrix.html">ushort</a> = <span class="keywordtype">unsigned</span> <a class="code hl_class" href="classvcl_1_1Matrix.html">short</a>;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="group__types.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">   47</a></span><span class="keyword">constexpr</span> <a class="code hl_typedef" href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">uint</a> <a class="code hl_variable" href="group__types.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a> = std::numeric_limits&lt;uint&gt;::max();</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="foldopen" id="foldopen00057" data-start="{" data-end="};">
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="structvcl_1_1PrimitiveType.html">   57</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structvcl_1_1PrimitiveType.html">PrimitiveType</a></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>{</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="structvcl_1_1PrimitiveType.html#af7c35736cf3a350dd3c62ae35fad52c3aa24f269343b4b55c385e43d449b7f6f1">   59</a></span>    <span class="keyword">enum</span> <a class="code hl_enumeration" href="structvcl_1_1PrimitiveType.html#af7c35736cf3a350dd3c62ae35fad52c3">Enum</a> { <a class="code hl_enumvalue" href="structvcl_1_1PrimitiveType.html#af7c35736cf3a350dd3c62ae35fad52c3aa24f269343b4b55c385e43d449b7f6f1">CHAR</a>, <a class="code hl_enumvalue" href="structvcl_1_1PrimitiveType.html#af7c35736cf3a350dd3c62ae35fad52c3af2fd9bf2d3fced33e1d83d4f0c11ab8c">UCHAR</a>, <a class="code hl_enumvalue" href="structvcl_1_1PrimitiveType.html#af7c35736cf3a350dd3c62ae35fad52c3a0fdd1c84f5a0bdc65409a399b71d49af">SHORT</a>, <a class="code hl_enumvalue" href="structvcl_1_1PrimitiveType.html#af7c35736cf3a350dd3c62ae35fad52c3aa12c00a0a460c7289b18ca56fe461189">USHORT</a>, <a class="code hl_enumvalue" href="structvcl_1_1PrimitiveType.html#af7c35736cf3a350dd3c62ae35fad52c3a1176420dd3ece9700bc4c782fbc3e70a">INT</a>, <a class="code hl_enumvalue" href="structvcl_1_1PrimitiveType.html#af7c35736cf3a350dd3c62ae35fad52c3a47c2e4465b8c1db9e4832c9f6e14b0e5">UINT</a>, <a class="code hl_enumvalue" href="structvcl_1_1PrimitiveType.html#af7c35736cf3a350dd3c62ae35fad52c3abd2063c2ced7a351a93a4322a1bcc75c">FLOAT</a>, <a class="code hl_enumvalue" href="structvcl_1_1PrimitiveType.html#af7c35736cf3a350dd3c62ae35fad52c3ad184ef10ed74491464ca6685a06712ee">DOUBLE</a>, <a class="code hl_enumvalue" href="structvcl_1_1PrimitiveType.html#af7c35736cf3a350dd3c62ae35fad52c3afeb57806d76fddb727b36fcadbaa3204">NONE</a> };</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>};</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;type_traits&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">namespace </span>vcl {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">// Define some basic types, for convenience</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">using </span>uint   = uint32_t;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">using </span>ushort = uint16_t;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="group__types.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">   48</a></span><span class="keyword">constexpr</span> uint <a class="code hl_variable" href="group__types.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a> = std::numeric_limits&lt;uint&gt;::max();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="};">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="group__types.html#ga35a36b617de9550e23e0c1426a783464">   58</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="group__types.html#ga35a36b617de9550e23e0c1426a783464">PrimitiveType</a> {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    CHAR,</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    UCHAR,</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    SHORT,</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    USHORT,</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    INT,</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    UINT,</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    FLOAT,</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    DOUBLE,</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    NONE</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>};</div>
 </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
-<div class="foldopen" id="foldopen00071" data-start="{" data-end="};">
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classvcl_1_1FakePointerWithValue.html">   71</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1FakePointerWithValue.html">FakePointerWithValue</a></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>{</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    T mValue;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="classvcl_1_1FakePointerWithValue.html#a4e2161f38867707c92ea5eb9d843123e">   76</a></span>    <a class="code hl_function" href="classvcl_1_1FakePointerWithValue.html#a4e2161f38867707c92ea5eb9d843123e">FakePointerWithValue</a>(<span class="keyword">const</span> T&amp; value) : mValue(value) {}</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="group__types.html#ga16a1bfbea022f6766d2f3ebbf69a3b52">   76</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="group__types.html#ga16a1bfbea022f6766d2f3ebbf69a3b52">MatrixStorageType</a> { ROW_MAJOR, COLUMN_MAJOR };</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classvcl_1_1FakePointerWithValue.html#afcf01b66a9a21cc17d3e2bdab8ad11bf">   78</a></span>    T* <a class="code hl_function" href="classvcl_1_1FakePointerWithValue.html#afcf01b66a9a21cc17d3e2bdab8ad11bf">operator-&gt;</a>() { <span class="keywordflow">return</span> std::addressof(mValue); }</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>};</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">// TODO: from c++23 use fixed width floating-point types</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="keyword">constexpr</span> <span class="keywordtype">int</span> sizeOf(<a class="code hl_enumeration" href="group__types.html#ga35a36b617de9550e23e0c1426a783464">PrimitiveType</a> type) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>{</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordflow">switch</span> (type) {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordflow">case</span> PrimitiveType::CHAR: <span class="keywordflow">return</span> <span class="keyword">sizeof</span>(char);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordflow">case</span> PrimitiveType::UCHAR: <span class="keywordflow">return</span> <span class="keyword">sizeof</span>(<span class="keywordtype">unsigned</span> char);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordflow">case</span> PrimitiveType::SHORT: <span class="keywordflow">return</span> <span class="keyword">sizeof</span>(int16_t);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordflow">case</span> PrimitiveType::USHORT: <span class="keywordflow">return</span> <span class="keyword">sizeof</span>(uint16_t);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordflow">case</span> PrimitiveType::INT: <span class="keywordflow">return</span> <span class="keyword">sizeof</span>(int32_t);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordflow">case</span> PrimitiveType::UINT: <span class="keywordflow">return</span> <span class="keyword">sizeof</span>(uint32_t);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordflow">case</span> PrimitiveType::FLOAT: <span class="keywordflow">return</span> <span class="keyword">sizeof</span>(float);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keywordflow">case</span> PrimitiveType::DOUBLE: <span class="keywordflow">return</span> <span class="keyword">sizeof</span>(double);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordflow">default</span>: <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>}</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="comment">// TODO: remove from c++23 (std::to_underlying)</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> E&gt;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="keyword">constexpr</span> <span class="keyword">typename</span> std::underlying_type&lt;E&gt;::type toUnderlying(E e) <span class="keyword">noexcept</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>{</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>typename std::underlying_type&lt;E&gt;::type<span class="keyword">&gt;</span>(e);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>}</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</div>
+<div class="foldopen" id="foldopen00120" data-start="{" data-end="};">
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="classvcl_1_1FakePointerWithValue.html">  120</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1FakePointerWithValue.html">FakePointerWithValue</a></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>{</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    T mValue;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <a class="code hl_class" href="classvcl_1_1FakePointerWithValue.html">FakePointerWithValue</a>(<span class="keyword">const</span> T&amp; value) : mValue(value) {}</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    T* operator-&gt;() { <span class="keywordflow">return</span> std::addressof(mValue); }</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>};</div>
 </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#endif </span><span class="comment">// VCL_TYPES_BASE_H</span></div>
-<div class="ttc" id="aclassvcl_1_1FakePointerWithValue_html"><div class="ttname"><a href="classvcl_1_1FakePointerWithValue.html">vcl::FakePointerWithValue</a></div><div class="ttdoc">A simple utility class to represent a pointer with a value.</div><div class="ttdef"><b>Definition</b> base.h:72</div></div>
-<div class="ttc" id="aclassvcl_1_1FakePointerWithValue_html_a4e2161f38867707c92ea5eb9d843123e"><div class="ttname"><a href="classvcl_1_1FakePointerWithValue.html#a4e2161f38867707c92ea5eb9d843123e">vcl::FakePointerWithValue::FakePointerWithValue</a></div><div class="ttdeci">FakePointerWithValue(const T &amp;value)</div><div class="ttdef"><b>Definition</b> base.h:76</div></div>
-<div class="ttc" id="aclassvcl_1_1FakePointerWithValue_html_afcf01b66a9a21cc17d3e2bdab8ad11bf"><div class="ttname"><a href="classvcl_1_1FakePointerWithValue.html#afcf01b66a9a21cc17d3e2bdab8ad11bf">vcl::FakePointerWithValue::operator-&gt;</a></div><div class="ttdeci">T * operator-&gt;()</div><div class="ttdef"><b>Definition</b> base.h:78</div></div>
-<div class="ttc" id="aclassvcl_1_1Matrix_html"><div class="ttname"><a href="classvcl_1_1Matrix.html">vcl::Matrix</a></div><div class="ttdef"><b>Definition</b> matrix.h:36</div></div>
-<div class="ttc" id="agroup__types_html_ga9ad8104cd9ccfa9352d33bc7e6ba47e6"><div class="ttname"><a href="group__types.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">vcl::UINT_NULL</a></div><div class="ttdeci">constexpr uint UINT_NULL</div><div class="ttdoc">The UINT_NULL value represent a null value of uint that is the maximum value that can be represented ...</div><div class="ttdef"><b>Definition</b> base.h:47</div></div>
-<div class="ttc" id="anamespacevcl_html"><div class="ttname"><a href="namespacevcl.html">vcl</a></div><div class="ttdef"><b>Definition</b> bounding_box.h:48</div></div>
-<div class="ttc" id="anamespacevcl_html_af74b42dd9d759d565bb701a5b845d05c"><div class="ttname"><a href="namespacevcl.html#af74b42dd9d759d565bb701a5b845d05c">vcl::uint</a></div><div class="ttdeci">unsigned int uint</div><div class="ttdef"><b>Definition</b> base.h:34</div></div>
-<div class="ttc" id="astructvcl_1_1PrimitiveType_html"><div class="ttname"><a href="structvcl_1_1PrimitiveType.html">vcl::PrimitiveType</a></div><div class="ttdoc">A simple type that enumerates the main primitive types.</div><div class="ttdef"><b>Definition</b> base.h:58</div></div>
-<div class="ttc" id="astructvcl_1_1PrimitiveType_html_af7c35736cf3a350dd3c62ae35fad52c3"><div class="ttname"><a href="structvcl_1_1PrimitiveType.html#af7c35736cf3a350dd3c62ae35fad52c3">vcl::PrimitiveType::Enum</a></div><div class="ttdeci">Enum</div><div class="ttdef"><b>Definition</b> base.h:59</div></div>
-<div class="ttc" id="astructvcl_1_1PrimitiveType_html_af7c35736cf3a350dd3c62ae35fad52c3a0fdd1c84f5a0bdc65409a399b71d49af"><div class="ttname"><a href="structvcl_1_1PrimitiveType.html#af7c35736cf3a350dd3c62ae35fad52c3a0fdd1c84f5a0bdc65409a399b71d49af">vcl::PrimitiveType::SHORT</a></div><div class="ttdeci">@ SHORT</div><div class="ttdef"><b>Definition</b> base.h:59</div></div>
-<div class="ttc" id="astructvcl_1_1PrimitiveType_html_af7c35736cf3a350dd3c62ae35fad52c3a1176420dd3ece9700bc4c782fbc3e70a"><div class="ttname"><a href="structvcl_1_1PrimitiveType.html#af7c35736cf3a350dd3c62ae35fad52c3a1176420dd3ece9700bc4c782fbc3e70a">vcl::PrimitiveType::INT</a></div><div class="ttdeci">@ INT</div><div class="ttdef"><b>Definition</b> base.h:59</div></div>
-<div class="ttc" id="astructvcl_1_1PrimitiveType_html_af7c35736cf3a350dd3c62ae35fad52c3a47c2e4465b8c1db9e4832c9f6e14b0e5"><div class="ttname"><a href="structvcl_1_1PrimitiveType.html#af7c35736cf3a350dd3c62ae35fad52c3a47c2e4465b8c1db9e4832c9f6e14b0e5">vcl::PrimitiveType::UINT</a></div><div class="ttdeci">@ UINT</div><div class="ttdef"><b>Definition</b> base.h:59</div></div>
-<div class="ttc" id="astructvcl_1_1PrimitiveType_html_af7c35736cf3a350dd3c62ae35fad52c3aa12c00a0a460c7289b18ca56fe461189"><div class="ttname"><a href="structvcl_1_1PrimitiveType.html#af7c35736cf3a350dd3c62ae35fad52c3aa12c00a0a460c7289b18ca56fe461189">vcl::PrimitiveType::USHORT</a></div><div class="ttdeci">@ USHORT</div><div class="ttdef"><b>Definition</b> base.h:59</div></div>
-<div class="ttc" id="astructvcl_1_1PrimitiveType_html_af7c35736cf3a350dd3c62ae35fad52c3aa24f269343b4b55c385e43d449b7f6f1"><div class="ttname"><a href="structvcl_1_1PrimitiveType.html#af7c35736cf3a350dd3c62ae35fad52c3aa24f269343b4b55c385e43d449b7f6f1">vcl::PrimitiveType::CHAR</a></div><div class="ttdeci">@ CHAR</div><div class="ttdef"><b>Definition</b> base.h:59</div></div>
-<div class="ttc" id="astructvcl_1_1PrimitiveType_html_af7c35736cf3a350dd3c62ae35fad52c3abd2063c2ced7a351a93a4322a1bcc75c"><div class="ttname"><a href="structvcl_1_1PrimitiveType.html#af7c35736cf3a350dd3c62ae35fad52c3abd2063c2ced7a351a93a4322a1bcc75c">vcl::PrimitiveType::FLOAT</a></div><div class="ttdeci">@ FLOAT</div><div class="ttdef"><b>Definition</b> base.h:59</div></div>
-<div class="ttc" id="astructvcl_1_1PrimitiveType_html_af7c35736cf3a350dd3c62ae35fad52c3ad184ef10ed74491464ca6685a06712ee"><div class="ttname"><a href="structvcl_1_1PrimitiveType.html#af7c35736cf3a350dd3c62ae35fad52c3ad184ef10ed74491464ca6685a06712ee">vcl::PrimitiveType::DOUBLE</a></div><div class="ttdeci">@ DOUBLE</div><div class="ttdef"><b>Definition</b> base.h:59</div></div>
-<div class="ttc" id="astructvcl_1_1PrimitiveType_html_af7c35736cf3a350dd3c62ae35fad52c3af2fd9bf2d3fced33e1d83d4f0c11ab8c"><div class="ttname"><a href="structvcl_1_1PrimitiveType.html#af7c35736cf3a350dd3c62ae35fad52c3af2fd9bf2d3fced33e1d83d4f0c11ab8c">vcl::PrimitiveType::UCHAR</a></div><div class="ttdeci">@ UCHAR</div><div class="ttdef"><b>Definition</b> base.h:59</div></div>
-<div class="ttc" id="astructvcl_1_1PrimitiveType_html_af7c35736cf3a350dd3c62ae35fad52c3afeb57806d76fddb727b36fcadbaa3204"><div class="ttname"><a href="structvcl_1_1PrimitiveType.html#af7c35736cf3a350dd3c62ae35fad52c3afeb57806d76fddb727b36fcadbaa3204">vcl::PrimitiveType::NONE</a></div><div class="ttdeci">@ NONE</div><div class="ttdef"><b>Definition</b> base.h:59</div></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="preprocessor">#endif </span><span class="comment">// VCL_TYPES_BASE_H</span></div>
+<div class="ttc" id="aclassvcl_1_1FakePointerWithValue_html"><div class="ttname"><a href="classvcl_1_1FakePointerWithValue.html">vcl::FakePointerWithValue</a></div><div class="ttdoc">A simple utility class to represent a pointer with a value.</div><div class="ttdef"><b>Definition</b> base.h:121</div></div>
+<div class="ttc" id="agroup__types_html_ga16a1bfbea022f6766d2f3ebbf69a3b52"><div class="ttname"><a href="group__types.html#ga16a1bfbea022f6766d2f3ebbf69a3b52">vcl::MatrixStorageType</a></div><div class="ttdeci">MatrixStorageType</div><div class="ttdoc">A simple type that enumerates the main storage types for matrices (row or column major).</div><div class="ttdef"><b>Definition</b> base.h:76</div></div>
+<div class="ttc" id="agroup__types_html_ga35a36b617de9550e23e0c1426a783464"><div class="ttname"><a href="group__types.html#ga35a36b617de9550e23e0c1426a783464">vcl::PrimitiveType</a></div><div class="ttdeci">PrimitiveType</div><div class="ttdoc">A simple type that enumerates the main primitive types.</div><div class="ttdef"><b>Definition</b> base.h:58</div></div>
+<div class="ttc" id="agroup__types_html_ga9ad8104cd9ccfa9352d33bc7e6ba47e6"><div class="ttname"><a href="group__types.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">vcl::UINT_NULL</a></div><div class="ttdeci">constexpr uint UINT_NULL</div><div class="ttdoc">The UINT_NULL value represent a null value of uint that is the maximum value that can be represented ...</div><div class="ttdef"><b>Definition</b> base.h:48</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_d2fdbf172f8ae9790b339bfcb66b3af7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_e102405455576d9ff546bfbc8ea68757.html">types</a></li><li class="navelem"><a class="el" href="types_2base_8h.html">base.h</a></li>
+    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_ae5876ed1a21dfe8c57b4e8d41da885b.html">types</a></li><li class="navelem"><b>base.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
