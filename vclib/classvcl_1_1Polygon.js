@@ -30,6 +30,7 @@ var classvcl_1_1Polygon =
     [ "point", "classvcl_1_1Polygon.html#a937aa2df891580a9021bf93693943c13", null ],
     [ "point", "classvcl_1_1Polygon.html#aa67cb95b60bc9c12173071f4304bdcbe", null ],
     [ "pushBack", "classvcl_1_1Polygon.html#abea34a5356293732aa35b93b168d40f1", null ],
+    [ "pushBack", "classvcl_1_1Polygon.html#ad3535064fce282779a2167f4a8f2acbf", null ],
     [ "reserve", "classvcl_1_1Polygon.html#aae4cfaec3b6c19525e63c5e21d2e0f53", null ],
     [ "resize", "classvcl_1_1Polygon.html#a65e78cf9a1c1f15ba10f26cf029fa88a", null ],
     [ "sideLength", "classvcl_1_1Polygon.html#a6e88391cc973cbfbbb53eb5e508a634b", null ],

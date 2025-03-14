@@ -8,9 +8,8 @@ var searchData=
   ['bitset_5',['BitSet',['../classvcl_1_1BitSet.html',1,'vcl']]],
   ['bitset_3c_20char_20_3e_6',['BitSet&lt; char &gt;',['../classvcl_1_1BitSet.html',1,'vcl']]],
   ['blockereventdrawer_7',['BlockerEventDrawer',['../classvcl_1_1BlockerEventDrawer.html',1,'vcl']]],
-  ['boolparameterrow_8',['BoolParameterRow',['../classvcl_1_1qt_1_1BoolParameterRow.html',1,'vcl::qt']]],
-  ['boundingbox_9',['BoundingBox',['../classvcl_1_1comp_1_1BoundingBox.html',1,'vcl::comp']]],
-  ['box_10',['Box',['../classvcl_1_1Box.html',1,'vcl']]],
-  ['box_3c_20point3d_20_3e_11',['Box&lt; Point3d &gt;',['../classvcl_1_1Box.html',1,'vcl']]],
-  ['box_3c_20pointtype_20_3e_12',['Box&lt; PointType &gt;',['../classvcl_1_1Box.html',1,'vcl']]]
+  ['boundingbox_8',['BoundingBox',['../classvcl_1_1comp_1_1BoundingBox.html',1,'vcl::comp']]],
+  ['box_9',['Box',['../classvcl_1_1Box.html',1,'vcl']]],
+  ['box_3c_20point3d_20_3e_10',['Box&lt; Point3d &gt;',['../classvcl_1_1Box.html',1,'vcl']]],
+  ['box_3c_20pointtype_20_3e_11',['Box&lt; PointType &gt;',['../classvcl_1_1Box.html',1,'vcl']]]
 ];

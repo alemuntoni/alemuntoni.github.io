@@ -23,5 +23,6 @@ var group__util__concepts =
     [ "vcl::IntegralOrEnum", "conceptvcl_1_1IntegralOrEnum.html", null ],
     [ "vcl::NonBoolIntegralOrEnum", "conceptvcl_1_1NonBoolIntegralOrEnum.html", null ],
     [ "vcl::IsClass", "conceptvcl_1_1IsClass.html", null ],
-    [ "vcl::IsNotClass", "conceptvcl_1_1IsNotClass.html", null ]
+    [ "vcl::IsNotClass", "conceptvcl_1_1IsNotClass.html", null ],
+    [ "vcl::IsInstantiable", "conceptvcl_1_1IsInstantiable.html", null ]
 ];

@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['update_0',['update',['../classvcl_1_1TrackBall.html#aee729c3971936637180a771d2fd62750',1,'vcl::TrackBall']]],
-  ['updateboundingbox_1',['updateBoundingBox',['../group__update.html#ga8ecd18a495232ac86d4c81913a1ad3f7',1,'vcl']]],
-  ['updatedragging_2',['updateDragging',['../classvcl_1_1DrawableTrackBall.html#a553e37ba813c94ed7619e085bf0b980e',1,'vcl::DrawableTrackBall']]],
-  ['updateedgeindices_3',['updateEdgeIndices',['../classvcl_1_1mesh_1_1EdgeContainer.html#adb4e3cd37b1e8951c749f808fe677660',1,'vcl::mesh::EdgeContainer']]],
-  ['updateelementindices_4',['updateElementIndices',['../classvcl_1_1mesh_1_1ElementContainer.html#aba92f2240439a6dfbcf313498114afc9',1,'vcl::mesh::ElementContainer']]],
+  ['underlying_0',['underlying',['../classvcl_1_1BitSet.html#ace4fd7908f4cad007500e85880262c2c',1,'vcl::BitSet']]],
+  ['update_1',['update',['../classvcl_1_1DynamicVertexBuffer.html#aad288a00aac1f5d2b446789d20b671b7',1,'vcl::DynamicVertexBuffer::update()'],['../classvcl_1_1MeshRenderData.html#a9ec603e5ddc4ecb7f8fca08a683311a1',1,'vcl::MeshRenderData::update()'],['../classvcl_1_1TrackBall.html#aee729c3971936637180a771d2fd62750',1,'vcl::TrackBall::update()']]],
+  ['updateboundingbox_2',['updateBoundingBox',['../group__update.html#ga8ecd18a495232ac86d4c81913a1ad3f7',1,'vcl']]],
+  ['updatedragging_3',['updateDragging',['../classvcl_1_1DrawableTrackBall.html#a553e37ba813c94ed7619e085bf0b980e',1,'vcl::DrawableTrackBall']]],
+  ['updateedgeindices_4',['updateEdgeIndices',['../classvcl_1_1mesh_1_1EdgeContainer.html#adb4e3cd37b1e8951c749f808fe677660',1,'vcl::mesh::EdgeContainer']]],
   ['updatefaceindices_5',['updateFaceIndices',['../classvcl_1_1mesh_1_1FaceContainer.html#aef0cbf495dc75aea0fddf456965103ce',1,'vcl::mesh::FaceContainer']]],
   ['updateindices_6',['updateIndices',['../classvcl_1_1Mesh.html#a8e35a62e4b468ad6ab9084bb472bc011',1,'vcl::Mesh']]],
   ['updatelight_7',['updateLight',['../classvcl_1_1DirectionalLightUniforms.html#a67b8bb1567c99e5d8f5f4bfcf7fed9ad',1,'vcl::DirectionalLightUniforms']]],

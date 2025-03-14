@@ -20,5 +20,7 @@ var searchData=
   ['drawableobjectvectorframe_17',['DrawableObjectVectorFrame',['../classvcl_1_1qt_1_1DrawableObjectVectorFrame.html',1,'vcl::qt']]],
   ['drawabletrackball_18',['DrawableTrackBall',['../classvcl_1_1DrawableTrackBall.html',1,'vcl']]],
   ['drawabletrackballuniforms_19',['DrawableTrackballUniforms',['../classvcl_1_1DrawableTrackballUniforms.html',1,'vcl']]],
-  ['drw_20',['DRW',['../classvcl_1_1RenderApp_1_1DRW.html',1,'vcl::RenderApp']]]
+  ['drw_20',['DRW',['../classvcl_1_1RenderApp_1_1DRW.html',1,'vcl::RenderApp']]],
+  ['dynamicindexbuffer_21',['DynamicIndexBuffer',['../classvcl_1_1DynamicIndexBuffer.html',1,'vcl']]],
+  ['dynamicvertexbuffer_22',['DynamicVertexBuffer',['../classvcl_1_1DynamicVertexBuffer.html',1,'vcl']]]
 ];

@@ -149,14 +149,18 @@ Modules</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:ga7c1c56b0ef06ef2a6c8fcaabe0da6a65" id="r_ga7c1c56b0ef06ef2a6c8fcaabe0da6a65"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType, Range R, LoggerConcept LogType = NullLogger&gt; <br />
 requires Point3Concept&lt;std::ranges::range_value_t&lt;R&gt;&gt;</td></tr>
-<tr class="memitem:ga7c1c56b0ef06ef2a6c8fcaabe0da6a65"><td class="memTemplItemLeft" align="right" valign="top">MeshType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__algorithms__mesh.html#ga7c1c56b0ef06ef2a6c8fcaabe0da6a65">vcl::convexHull</a> (<a class="el" href="classvcl_1_1Box.html">const</a> R &amp;<a class="el" href="classvcl_1_1Box.html">points</a>, <a class="el" href="classvcl_1_1Box.html">bool</a> <a class="el" href="classvcl_1_1Box.html">deterministic</a>=<a class="el" href="classvcl_1_1Box.html">false</a>, <a class="el" href="classvcl_1_1Box.html">LogType</a> &amp;log=<a class="el" href="group__miscellaneous.html#ga3377e3c875ec245e90ac5a395105ce99">nullLogger</a>)</td></tr>
+<tr class="memitem:ga7c1c56b0ef06ef2a6c8fcaabe0da6a65"><td class="memTemplItemLeft" align="right" valign="top">MeshType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__algorithms__mesh.html#ga7c1c56b0ef06ef2a6c8fcaabe0da6a65">vcl::convexHull</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> R &amp;points, <a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1Segment.html">deterministic</a>=<a class="el" href="classvcl_1_1Segment.html">false</a>, <a class="el" href="classvcl_1_1Segment.html">LogType</a> &amp;log=<a class="el" href="group__miscellaneous.html#ga3377e3c875ec245e90ac5a395105ce99">nullLogger</a>)</td></tr>
 <tr class="memdesc:ga7c1c56b0ef06ef2a6c8fcaabe0da6a65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the convex hull of a set of points.  <br /></td></tr>
 <tr class="separator:ga7c1c56b0ef06ef2a6c8fcaabe0da6a65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6799a920686c8d65f0d9db3caa515d07" id="r_ga6799a920686c8d65f0d9db3caa515d07"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType, Range R, LoggerConcept LogType = NullLogger&gt; <br />
 requires Point3Concept&lt;std::ranges::range_value_t&lt;R&gt;&gt;</td></tr>
-<tr class="memitem:ga6799a920686c8d65f0d9db3caa515d07"><td class="memTemplItemLeft" align="right" valign="top">MeshType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__algorithms__mesh.html#ga6799a920686c8d65f0d9db3caa515d07">vcl::convexHull</a> (<a class="el" href="classvcl_1_1Box.html">const</a> R &amp;<a class="el" href="classvcl_1_1Box.html">points</a>, <a class="el" href="classvcl_1_1Box.html">LogType</a> &amp;log)</td></tr>
+<tr class="memitem:ga6799a920686c8d65f0d9db3caa515d07"><td class="memTemplItemLeft" align="right" valign="top">MeshType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__algorithms__mesh.html#ga6799a920686c8d65f0d9db3caa515d07">vcl::convexHull</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> R &amp;points, <a class="el" href="classvcl_1_1Segment.html">LogType</a> &amp;log)</td></tr>
 <tr class="memdesc:ga6799a920686c8d65f0d9db3caa515d07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the convex hull of a set of points.  <br /></td></tr>
 <tr class="separator:ga6799a920686c8d65f0d9db3caa515d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga69869e18ffd99dbfe36823b9d4a5b1f4" id="r_ga69869e18ffd99dbfe36823b9d4a5b1f4"><td class="memTemplParams" colspan="2">template&lt;MeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga69869e18ffd99dbfe36823b9d4a5b1f4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">constexpr</a> std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__algorithms__mesh.html#ga69869e18ffd99dbfe36823b9d4a5b1f4">vcl::meshTypeName</a> ()</td></tr>
+<tr class="memdesc:ga69869e18ffd99dbfe36823b9d4a5b1f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of the mesh type as a string.  <br /></td></tr>
+<tr class="separator:ga69869e18ffd99dbfe36823b9d4a5b1f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>List of Mesh algorithms. </p>
@@ -175,19 +179,19 @@ requires Point3Concept&lt;std::ranges::range_value_t&lt;R&gt;&gt;</div>
         <tr>
           <td class="memname">MeshType vcl::convexHull </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> R &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">const</a> R &amp;&#160;</td>
           <td class="paramname"><em>points</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">bool</a>&#160;</td>
-          <td class="paramname"><em>deterministic</em> = <code><a class="el" href="classvcl_1_1Box.html">false</a></code>, </td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td>
+          <td class="paramname"><em>deterministic</em> = <code><a class="el" href="classvcl_1_1Segment.html">false</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">LogType</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">LogType</a> &amp;&#160;</td>
           <td class="paramname"><em>log</em> = <code><a class="el" href="group__miscellaneous.html#ga3377e3c875ec245e90ac5a395105ce99">nullLogger</a></code>&#160;</td>
         </tr>
         <tr>
@@ -229,13 +233,13 @@ requires Point3Concept&lt;std::ranges::range_value_t&lt;R&gt;&gt;</div>
         <tr>
           <td class="memname">MeshType vcl::convexHull </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> R &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">const</a> R &amp;&#160;</td>
           <td class="paramname"><em>points</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">LogType</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">LogType</a> &amp;&#160;</td>
           <td class="paramname"><em>log</em>&#160;</td>
         </tr>
         <tr>
@@ -261,6 +265,36 @@ requires Point3Concept&lt;std::ranges::range_value_t&lt;R&gt;&gt;</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The convex hull of the points. </dd></dl>
+
+</div>
+</div>
+<a id="ga69869e18ffd99dbfe36823b9d4a5b1f4" name="ga69869e18ffd99dbfe36823b9d4a5b1f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga69869e18ffd99dbfe36823b9d4a5b1f4">&#9670;&#160;</a></span>meshTypeName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;MeshConcept MeshType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">constexpr</a> std::string vcl::meshTypeName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the name of the mesh type as a string. </p>
+<dl class="section return"><dt>Returns</dt><dd>the name of the mesh type as a string. </dd></dl>
 
 </div>
 </div>

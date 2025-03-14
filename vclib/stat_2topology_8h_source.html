@@ -193,9 +193,9 @@ $(document).ready(function(){initNavTree('stat_2topology_8h_source.html',''); in
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    }</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>};</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="keyword">static</span> <span class="keyword">inline</span> std::list&lt;uint&gt;                             dummyUintList;</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="keyword">static</span> <span class="keyword">inline</span> std::list&lt;std::list&lt;std::pair&lt;uint, uint&gt;&gt;&gt; dummyListOfLists;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="keyword">static</span> <span class="keyword">inline</span> std::vector&lt;std::pair&lt;uint, uint&gt;&gt;          dummyVectorOfPairs;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="keyword">inline</span> std::list&lt;uint&gt;                             dummyUintList;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="keyword">inline</span> std::list&lt;std::list&lt;std::pair&lt;uint, uint&gt;&gt;&gt; dummyListOfLists;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="keyword">inline</span> std::vector&lt;std::pair&lt;uint, uint&gt;&gt;          dummyVectorOfPairs;</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>} <span class="comment">// namespace detail</span></div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
@@ -284,8 +284,8 @@ $(document).ready(function(){initNavTree('stat_2topology_8h_source.html',''); in
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span><span class="keyword">template</span>&lt;FaceMeshConcept MeshType&gt;</div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>uint countVerticesToDuplicateByWedgeTexCoords(</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    <span class="keyword">const</span> MeshType&amp;                    mesh,</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    std::vector&lt;std::pair&lt;uint, uint&gt;&gt; vertWedgeMap =</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    <span class="keyword">const</span> MeshType&amp;                     mesh,</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    std::vector&lt;std::pair&lt;uint, uint&gt;&gt;&amp; vertWedgeMap =</div>
 <div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>        detail::dummyVectorOfPairs,</div>
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    std::list&lt;uint&gt;&amp; vertsToDuplicate = detail::dummyUintList,</div>
 <div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    std::list&lt;std::list&lt;std::pair&lt;uint, uint&gt;&gt;&gt;&amp; facesToReassign =</div>
@@ -313,79 +313,80 @@ $(document).ready(function(){initNavTree('stat_2topology_8h_source.html',''); in
 <div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    std::vector&lt;std::map&lt;WedgeTexCoordsInfo, FaceList&gt;&gt; wedges(</div>
 <div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        mesh.vertexContainerSize());</div>
 <div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span> </div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; f : mesh.<a class="code hl_variable" href="group__views.html#ga33947d4d6db5271a84ac1ae5555d50d7">faces</a>()) {</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        <span class="keywordflow">for</span> (uint i = 0; i &lt; f.vertexNumber(); ++i) {</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>            uint vi = f.vertexIndex(i);</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span> </div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>            <span class="comment">// check if the i-th wedge texcoord of the face already exists</span></div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>            WedgeTexCoordsInfo wi = {f.wedgeTexCoord(i), f.textureIndex()};</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>            <span class="keyword">auto</span>               it = wedges[vi].find(wi);</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>            <span class="keywordflow">if</span> (it == wedges[vi].end()) { <span class="comment">// if it doesn&#39;t exist, add it</span></div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>                <span class="comment">// if there was already a texcoord for the vertex, it means that</span></div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>                <span class="comment">// the vertex will be duplicated</span></div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>                <span class="keywordflow">if</span> (!wedges[vi].empty()) {</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>                    count++;</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>                }</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>                wedges[vi][wi].emplace_back(f.index(), i);</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>            }</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>            <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>                <span class="comment">// if it exists, add the face to the list of faces that</span></div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>                <span class="comment">// reference the texcoord</span></div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>                it-&gt;second.emplace_back(f.index(), i);</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>            }</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>        }</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    }</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span> </div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>    <span class="comment">// for each vertex, check if there are multiple texcoords</span></div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>    <span class="comment">// note: here we will modify the maps for convenience: at the end of this</span></div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    <span class="comment">// loop, the info will be contained in the two lists vertsToDuplicate and</span></div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>    <span class="comment">// facesToReassign (the wedges vector of map will be inconsistent)</span></div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>    <span class="keywordflow">for</span> (uint vi = 0; <span class="keyword">auto</span>&amp; map : wedges) {</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>        <span class="keywordflow">if</span> (map.size() &gt; 1) {</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>            <span class="comment">// there are multiple texcoords for the vertex vi, so it will be</span></div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>            <span class="comment">// duplicated</span></div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span> </div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>            <span class="comment">// remove from the map the element having the higher number of</span></div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>            <span class="comment">// faces referencing the texcoord (we do this to reassign the less</span></div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>            <span class="comment">// number of faces)</span></div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>            <span class="keyword">auto</span> it = std::max_element(</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>                map.begin(), map.end(), [](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; a, <span class="keyword">const</span> <span class="keyword">auto</span>&amp; b) {</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>                    return a.second.size() &lt; b.second.size();</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>                });</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>            <span class="comment">// store the reference of the texcoord to keep (pair face/vertex</span></div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>            <span class="comment">// index in the face)</span></div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>            vertWedgeMap[vi] = it-&gt;second.front();</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>            map.erase(it);</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span> </div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>            <span class="comment">// store the vertex to duplicate, and the faces to reassign</span></div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [wi, fl] : map) {</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>                vertsToDuplicate.push_back(vi);</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>                facesToReassign.push_back(std::move(fl));</div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>            }</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>        }</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>        <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>            <span class="keywordflow">if</span> (map.size() == 1) {</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>                <span class="comment">// there is only one texcoord for the vertex vi, so store its</span></div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>                <span class="comment">// reference (pair face/vertex index in the face)</span></div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>                vertWedgeMap[vi] = map.begin()-&gt;second.front();</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>            }</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>            <span class="keywordflow">else</span> { <span class="comment">// the vertex was unreferenced</span></div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>                vertWedgeMap[vi] = {<a class="code hl_variable" href="group__types.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>, <a class="code hl_variable" href="group__types.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>};</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>            }</div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>        }</div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>        ++vi;</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>    }</div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span> </div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>    assert(vertWedgeMap.size() == mesh.vertexContainerSize());</div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    assert(vertsToDuplicate.size() == count);</div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>    assert(facesToReassign.size() == count);</div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span> </div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>    <span class="keywordflow">return</span> count;</div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>}</div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span> </div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span> </div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span><span class="preprocessor">#endif </span><span class="comment">// VCL_ALGORITHMS_MESH_STAT_TOPOLOGY_H</span></div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    <span class="comment">// TODO: use compacted indices instead of f.index() in this loop</span></div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; f : mesh.<a class="code hl_variable" href="group__views.html#ga33947d4d6db5271a84ac1ae5555d50d7">faces</a>()) {</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        <span class="keywordflow">for</span> (uint i = 0; i &lt; f.vertexNumber(); ++i) {</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>            uint vi = f.vertexIndex(i);</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>            <span class="comment">// check if the i-th wedge texcoord of the face already exists</span></div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>            WedgeTexCoordsInfo wi = {f.wedgeTexCoord(i), f.textureIndex()};</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>            <span class="keyword">auto</span>               it = wedges[vi].find(wi);</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>            <span class="keywordflow">if</span> (it == wedges[vi].end()) { <span class="comment">// if it doesn&#39;t exist, add it</span></div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>                <span class="comment">// if there was already a texcoord for the vertex, it means that</span></div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>                <span class="comment">// the vertex will be duplicated</span></div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>                <span class="keywordflow">if</span> (!wedges[vi].empty()) {</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>                    count++;</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>                }</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>                wedges[vi][wi].emplace_back(f.index(), i);</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>            }</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>            <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>                <span class="comment">// if it exists, add the face to the list of faces that</span></div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>                <span class="comment">// reference the texcoord</span></div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>                it-&gt;second.emplace_back(f.index(), i);</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>            }</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>        }</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    }</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span> </div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>    <span class="comment">// for each vertex, check if there are multiple texcoords</span></div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    <span class="comment">// note: here we will modify the maps for convenience: at the end of this</span></div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>    <span class="comment">// loop, the info will be contained in the two lists vertsToDuplicate and</span></div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>    <span class="comment">// facesToReassign (the wedges vector of map will be inconsistent)</span></div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    <span class="keywordflow">for</span> (uint vi = 0; <span class="keyword">auto</span>&amp; map : wedges) {</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>        <span class="keywordflow">if</span> (map.size() &gt; 1) {</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>            <span class="comment">// there are multiple texcoords for the vertex vi, so it will be</span></div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>            <span class="comment">// duplicated</span></div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span> </div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>            <span class="comment">// remove from the map the element having the higher number of</span></div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>            <span class="comment">// faces referencing the texcoord (we do this to reassign the less</span></div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>            <span class="comment">// number of faces)</span></div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>            <span class="keyword">auto</span> it = std::max_element(</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>                map.begin(), map.end(), [](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; a, <span class="keyword">const</span> <span class="keyword">auto</span>&amp; b) {</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>                    return a.second.size() &lt; b.second.size();</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>                });</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>            <span class="comment">// store the reference of the texcoord to keep (pair face/vertex</span></div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>            <span class="comment">// index in the face)</span></div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>            vertWedgeMap[vi] = it-&gt;second.front();</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>            map.erase(it);</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span> </div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>            <span class="comment">// store the vertex to duplicate, and the faces to reassign</span></div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; [wi, fl] : map) {</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>                vertsToDuplicate.push_back(vi);</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>                facesToReassign.push_back(std::move(fl));</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>            }</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>        }</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>            <span class="keywordflow">if</span> (map.size() == 1) {</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>                <span class="comment">// there is only one texcoord for the vertex vi, so store its</span></div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>                <span class="comment">// reference (pair face/vertex index in the face)</span></div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>                vertWedgeMap[vi] = map.begin()-&gt;second.front();</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>            }</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>            <span class="keywordflow">else</span> { <span class="comment">// the vertex was unreferenced</span></div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>                vertWedgeMap[vi] = {<a class="code hl_variable" href="group__types.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>, <a class="code hl_variable" href="group__types.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>};</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>            }</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>        }</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>        ++vi;</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    }</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span> </div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    assert(vertWedgeMap.size() == mesh.vertexContainerSize());</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>    assert(vertsToDuplicate.size() == count);</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>    assert(facesToReassign.size() == count);</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span> </div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>    <span class="keywordflow">return</span> count;</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>}</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span> </div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span> </div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span><span class="preprocessor">#endif </span><span class="comment">// VCL_ALGORITHMS_MESH_STAT_TOPOLOGY_H</span></div>
 <div class="ttc" id="agroup__face__requirements_html_ga7f262a65d84b84b17a5d41b13fa98329"><div class="ttname"><a href="group__face__requirements.html#ga7f262a65d84b84b17a5d41b13fa98329">vcl::requirePerFaceWedgeTexCoords</a></div><div class="ttdeci">void requirePerFaceWedgeTexCoords(const MeshType &amp;m)</div><div class="ttdoc">This function asserts that a Mesh has a FaceContainer, the Face has a WedgeTexCoords Component,...</div><div class="ttdef"><b>Definition</b> face_requirements.h:947</div></div>
 <div class="ttc" id="agroup__types_html_ga9ad8104cd9ccfa9352d33bc7e6ba47e6"><div class="ttname"><a href="group__types.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">vcl::UINT_NULL</a></div><div class="ttdeci">constexpr uint UINT_NULL</div><div class="ttdoc">The UINT_NULL value represent a null value of uint that is the maximum value that can be represented ...</div><div class="ttdef"><b>Definition</b> base.h:48</div></div>
 <div class="ttc" id="agroup__views_html_ga33947d4d6db5271a84ac1ae5555d50d7"><div class="ttname"><a href="group__views.html#ga33947d4d6db5271a84ac1ae5555d50d7">vcl::views::faces</a></div><div class="ttdeci">constexpr detail::FacesView faces</div><div class="ttdoc">A view that allows to iterate overt the Face elements of an object.</div><div class="ttdef"><b>Definition</b> face.h:52</div></div>

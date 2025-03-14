@@ -121,20 +121,17 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1SphereConcept.html','');
 <div class="line">    RemoveRef&lt;T&gt;(p, s);</div>
 <div class="line"> </div>
 <div class="line">    { obj.center() } -&gt; <a class="code hl_concept" href="conceptvcl_1_1Point3Concept.html">Point3Concept</a>;</div>
-<div class="line">    { <a class="code hl_class" href="classvcl_1_1Box.html">obj</a>.radius() } -&gt; std::convertible_to&lt;<span class="keyword">decltype</span>(s)&gt;;</div>
+<div class="line">    { <a class="code hl_class" href="classvcl_1_1Segment.html">obj</a>.radius() } -&gt; std::convertible_to&lt;<span class="keyword">decltype</span>(s)&gt;;</div>
 <div class="line"> </div>
 <div class="line">    { obj.diameter() } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(s)&gt;;</div>
 <div class="line">    { obj.circumference() } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(s)&gt;;</div>
 <div class="line">    { obj.surfaceArea() } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(s)&gt;;</div>
-<div class="line">    { obj.<a class="code hl_function" href="classvcl_1_1Box.html#ac507f07f90b7cb00c5bf16501357e416">volume</a>() } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(s)&gt;;</div>
+<div class="line">    { obj.volume() } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(s)&gt;;</div>
 <div class="line"> </div>
-<div class="line">    { obj.<a class="code hl_function" href="classvcl_1_1Box.html#a85c9bf310983d70e5beda4e90beecc16">isInside</a>(p) } -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line">    { obj.<a class="code hl_function" href="classvcl_1_1Box.html#a2112e4f51d2f88354009defe73e180bd">intersects</a>(b) } -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line">    { obj.isInside(p) } -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line">    { obj.intersects(b) } -&gt; std::same_as&lt;bool&gt;;</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:49</div></div>
-<div class="ttc" id="aclassvcl_1_1Box_html_a2112e4f51d2f88354009defe73e180bd"><div class="ttname"><a href="classvcl_1_1Box.html#a2112e4f51d2f88354009defe73e180bd">vcl::Box::intersects</a></div><div class="ttdeci">bool intersects(const Box&lt; PointT &gt; &amp;b) const</div><div class="ttdoc">Same as Box::overlap.</div><div class="ttdef"><b>Definition</b> box.h:222</div></div>
-<div class="ttc" id="aclassvcl_1_1Box_html_a85c9bf310983d70e5beda4e90beecc16"><div class="ttname"><a href="classvcl_1_1Box.html#a85c9bf310983d70e5beda4e90beecc16">vcl::Box::isInside</a></div><div class="ttdeci">bool isInside(const PointT &amp;p) const</div><div class="ttdoc">Checks whether a given point is inside the box or not, bounds included.</div><div class="ttdef"><b>Definition</b> box.h:166</div></div>
-<div class="ttc" id="aclassvcl_1_1Box_html_ac507f07f90b7cb00c5bf16501357e416"><div class="ttname"><a href="classvcl_1_1Box.html#ac507f07f90b7cb00c5bf16501357e416">vcl::Box::volume</a></div><div class="ttdeci">auto volume() const</div><div class="ttdoc">Computes the volume of the box.</div><div class="ttdef"><b>Definition</b> box.h:257</div></div>
+<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:43</div></div>
 <div class="ttc" id="aconceptvcl_1_1Point3Concept_html"><div class="ttname"><a href="conceptvcl_1_1Point3Concept.html">vcl::Point3Concept</a></div><div class="ttdoc">Concept for points in three-dimensional space.</div><div class="ttdef"><b>Definition</b> point.h:130</div></div>
 <div class="ttc" id="aconceptvcl_1_1SphereConcept_html"><div class="ttname"><a href="conceptvcl_1_1SphereConcept.html">vcl::SphereConcept</a></div><div class="ttdoc">Concept for types representing spheres in Euclidean space.</div><div class="ttdef"><b>Definition</b> sphere.h:64</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>

@@ -7,7 +7,8 @@ var searchData=
   ['element_20concepts_4',['Element Concepts',['../group__element__concepts.html',1,'']]],
   ['elements_5',['Elements',['../group__elements.html',1,'']]],
   ['exceptions_6',['Exceptions',['../group__exceptions.html',1,'']]],
-  ['export_20mesh_20algorithms_7',['Import/Export Mesh Algorithms',['../group__import__export.html',1,'']]],
-  ['export_20mesh_20to_20buffer_20algorithms_8',['Export Mesh to Buffer Algorithms',['../group__export__buffer.html',1,'']]],
-  ['export_20mesh_20to_20matrix_20algorithms_9',['Export Mesh to Matrix Algorithms',['../group__export__matrix.html',1,'']]]
+  ['existing_7',['Append/Replace Mesh Data to Existing',['../group__append__replace__to__buffer.html',1,'']]],
+  ['export_20mesh_20algorithms_8',['Import/Export Mesh Algorithms',['../group__import__export.html',1,'']]],
+  ['export_20mesh_20to_20buffer_20algorithms_9',['Export Mesh to Buffer Algorithms',['../group__export__buffer.html',1,'']]],
+  ['export_20mesh_20to_20matrix_20algorithms_10',['Export Mesh to Matrix Algorithms',['../group__export__matrix.html',1,'']]]
 ];

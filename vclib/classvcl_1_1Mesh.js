@@ -20,6 +20,7 @@ var classvcl_1_1Mesh =
     [ "clearElements", "classvcl_1_1Mesh.html#a76c5ed8b1ad48ddaaf4cae34311e8ac7", null ],
     [ "compact", "classvcl_1_1Mesh.html#a8c562fba9559c9d29faa4ce027a973ff", null ],
     [ "compactContainer", "classvcl_1_1Mesh.html#a25805dc0ff94342c90ca6b6b42d8dfdb", null ],
+    [ "compactElements", "classvcl_1_1Mesh.html#a2a48bc0c91e77a9f44ac6fcb73ac56e0", null ],
     [ "compactIndices", "classvcl_1_1Mesh.html#a35d701aaf7439004efec34402d4f9877", null ],
     [ "containerSize", "classvcl_1_1Mesh.html#a760b89dceab8a88c03b22ef5b8a0ee56", null ],
     [ "deletedNumber", "classvcl_1_1Mesh.html#a0adb051368df5fc3811fc6f7401a4336", null ],
