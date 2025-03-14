@@ -1,5 +1,6 @@
 var searchData=
 [
   ['algorithms_0',['algorithms',['../group__clean.html',1,'Cleaning and Repairing Algorithms'],['../group__algorithms__core.html',1,'Core Algorithms'],['../group__core__bounding__box.html',1,'Core Bounding Box Algorithms'],['../group__core__box.html',1,'Core Box Algorithms'],['../group__core__box3.html',1,'Core Box3 Algorithms'],['../group__core__distance.html',1,'Core Distance Algorithms'],['../group__core__intersection.html',1,'Core Intersection Algorithms'],['../group__export__buffer.html',1,'Export Mesh to Buffer Algorithms'],['../group__export__matrix.html',1,'Export Mesh to Matrix Algorithms'],['../group__import__matrix.html',1,'Import Mesh from Matrix Algorithms'],['../group__import__export.html',1,'Import/Export Mesh Algorithms'],['../group__algorithms__mesh.html',1,'Mesh Algorithms'],['../group__create.html',1,'Mesh Creation Algorithms'],['../group__intersection__mesh.html',1,'Mesh Intersection Algorithms'],['../group__mesh__stat.html',1,'Mesh Statistic Algorithms'],['../group__point__sampling.html',1,'Point Sampling Algorithms'],['../group__core__polygon.html',1,'Polygon Core Algorithms'],['../group__update.html',1,'Update Mesh Algorithms']]],
-  ['and_20repairing_20algorithms_1',['Cleaning and Repairing Algorithms',['../group__clean.html',1,'']]]
+  ['and_20repairing_20algorithms_1',['Cleaning and Repairing Algorithms',['../group__clean.html',1,'']]],
+  ['append_20replace_20mesh_20data_20to_20existing_2',['Append/Replace Mesh Data to Existing',['../group__append__replace__to__buffer.html',1,'']]]
 ];

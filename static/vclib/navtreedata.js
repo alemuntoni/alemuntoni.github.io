@@ -25,35 +25,40 @@
 var NAVTREE =
 [
   [ "Visual Computing Library", "index.html", [
-    [ "Table of Contents", "index.html#autotoc_md0", null ],
-    [ "Get Started", "get_started_page.html", [
-      [ "Introduction", "get_started_page.html#autotoc_md1", null ],
-      [ "Supported Compilers", "get_started_page.html#autotoc_md2", null ],
-      [ "Dependencies", "get_started_page.html#autotoc_md3", [
-        [ "C++17 Parallel STL", "get_started_page.html#autotoc_md4", null ]
+    [ "Installation", "md_docs_2pages_20__installation.html", [
+      [ "C++", "md_docs_2pages_20__installation.html#autotoc_md2", [
+        [ "CMake", "md_docs_2pages_20__installation.html#autotoc_md3", [
+          [ "Using <em>add_subdirectory</em>", "md_docs_2pages_20__installation.html#autotoc_md4", null ],
+          [ "Using <em>FetchContent</em>", "md_docs_2pages_20__installation.html#autotoc_md5", null ]
+        ] ],
+        [ "Usage with <em>INCLUDE_PATH</em>", "md_docs_2pages_20__installation.html#autotoc_md6", null ],
+        [ "Supported Compilers", "md_docs_2pages_20__installation.html#autotoc_md7", [
+          [ "C++17 Parallel STL", "md_docs_2pages_20__installation.html#autotoc_md8", null ],
+          [ "Dependencies", "md_docs_2pages_20__installation.html#autotoc_md9", null ]
+        ] ]
       ] ],
-      [ "CMake Configuration", "get_started_page.html#cmake_config", null ],
-      [ "Usage with INCLUDE_PATH", "get_started_page.html#autotoc_md5", null ]
+      [ "Python", "md_docs_2pages_20__installation.html#autotoc_md10", null ]
     ] ],
-    [ "Basic Concepts", "basic_concepts_page.html", [
-      [ "Let's start", "basic_concepts_page.html#autotoc_md6", null ],
-      [ "Add, set and delete Elements", "basic_concepts_page.html#autotoc_md7", null ]
-    ] ],
-    [ "VCLib Meshes", "mesh_documentation_page.html", [
-      [ "Overview", "mesh_documentation_page.html#autotoc_md8", [
-        [ "Prebuilt Mesh data structures", "mesh_documentation_page.html#autotoc_md9", null ],
-        [ "Mesh Structure", "mesh_documentation_page.html#autotoc_md10", null ],
-        [ "Components", "mesh_documentation_page.html#autotoc_md11", null ]
+    [ "VCLib Core Module", "md_docs_2pages_21__core.html", [
+      [ "Basic Concepts", "core_basic_concepts.html", [
+        [ "User guide documentation", "md_docs_2pages_21__core.html#autotoc_md12", null ],
+        [ "Let's start", "core_basic_concepts.html#autotoc_md13", null ],
+        [ "Add, set and delete Elements", "core_basic_concepts.html#autotoc_md14", null ]
       ] ],
-      [ "Components", "mesh_components_page.html", null ],
-      [ "Elements", "mesh_elements_page.html", null ],
-      [ "Containers", "mesh_containers_page.html", null ]
+      [ "Spatial and other Data Structures", "core_space.html", [
+        [ "Spatial Data Structures", "core_space.html#autotoc_md15", null ],
+        [ "Utility and Miscellaneous Data Structures", "core_space.html#autotoc_md16", null ]
+      ] ],
+      [ "Built-in Meshes", "core_meshes.html", null ],
+      [ "Load/Save", "core_load_save.html", null ],
+      [ "VCLib Meshes", "core_mesh.html", [
+        [ "Components", "mesh_components_page.html", null ],
+        [ "Elements", "mesh_elements_page.html", null ],
+        [ "Containers", "mesh_containers_page.html", null ]
+      ] ],
+      [ "Organization of the Core Module", "core_organization.html", null ]
     ] ],
-    [ "Spatial and other Data Structures", "space_page.html", [
-      [ "Spatial Data Structures", "space_page.html#autotoc_md12", null ],
-      [ "Utility and Miscellaneous Data Structures", "space_page.html#autotoc_md13", null ]
-    ] ],
-    [ "Load/Save", "load_save_page.html", null ],
+    [ "VCLib Render Module", "md_docs_2pages_22__render.html", null ],
     [ "Todo List", "todo.html", null ],
     [ "Topics", "topics.html", "topics" ],
     [ "Concepts", "concepts.html", "concepts" ],
@@ -79,20 +84,21 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "abstract__drawable__mesh_8h_source.html",
-"classvcl_1_1Color.html#a002e401382a7608e0c68f42c089057bcae99aa4a5f8fa4c580870f617b9ae42d5",
-"classvcl_1_1Logger.html#ad475d7844ed0e338394ae03539724982",
-"classvcl_1_1Point.html#ac4e586c3ccc3f8c973e1cffe0d3f0310",
-"classvcl_1_1TrackBall.html#a5f2aef8862d221fcd420ac70beb1e774",
-"classvcl_1_1comp_1_1AdjacentVertices.html#a9bd85d722e3ce0111830a4bc7a983f5f",
-"classvcl_1_1comp_1_1WedgeColors.html#a5f4c7d5b631538dce8b6fd2fdffad8c7",
-"classvcl_1_1mesh_1_1VertexContainer.html#ad8300e6c81cc1a577d86399933391521",
-"conceptvcl_1_1HasPerVertexQuality.html",
-"conceptvcl_1_1edge_1_1HasOptionalAdjacentEdges.html",
-"core_2include_2vclib_2space_2core_2matrix_2matrix_8h_source.html",
-"group__algorithms__core.html",
-"group__load.html#ga269e46f3e70647a909d8d07d3875fc0a",
-"mesh_2components_2bounding__box_8h_source.html",
-"structvcl_1_1TypesSatisfyCondition.html"
+"classvcl_1_1Color.html#a002e401382a7608e0c68f42c089057bcaa70f19981682325e9f47020f45097ab3",
+"classvcl_1_1Histogram.html#ae3f80f9f5c56dbd7add2a9cb94670af9",
+"classvcl_1_1MeshRenderInfo.html",
+"classvcl_1_1Polygon.html#add10001ada05a465daf633b6aba52f9f",
+"classvcl_1_1TriangleWrapper.html#ac2a0de6ecf0771582c474e0b657f85d5",
+"classvcl_1_1comp_1_1Mark.html#ab23a12b940b41ac479c7707ccab52d9d",
+"classvcl_1_1mesh_1_1EdgeContainer.html#a854cb6aaae40804148236c9734a78503",
+"concepts_2space_2bit__set_8h_source.html",
+"conceptvcl_1_1comp_1_1HasCoordinate.html",
+"conceptvcl_1_1face_1_1HasQuality.html",
+"dir_de81aadd90fb6f94939823d83e4447ab.html",
+"group__core__intersection.html",
+"group__meshes.html#ga744b55b3f2c78601bd20d12b1f36cac3",
+"obj_2load_8h_source.html",
+"warning__io__device_8h_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

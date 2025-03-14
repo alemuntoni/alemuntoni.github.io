@@ -7,13 +7,14 @@ var searchData=
   ['mesh_20components_4',['Mesh Components',['../group__mesh__components.html',1,'']]],
   ['mesh_20concepts_5',['Mesh Concepts',['../group__mesh__concepts.html',1,'']]],
   ['mesh_20creation_20algorithms_6',['Mesh Creation Algorithms',['../group__create.html',1,'']]],
-  ['mesh_20from_20matrix_20algorithms_7',['Import Mesh from Matrix Algorithms',['../group__import__matrix.html',1,'']]],
-  ['mesh_20intersection_20algorithms_8',['Mesh Intersection Algorithms',['../group__intersection__mesh.html',1,'']]],
-  ['mesh_20requirements_9',['Mesh Requirements',['../group__mesh__requirements.html',1,'']]],
-  ['mesh_20statistic_20algorithms_10',['Mesh Statistic Algorithms',['../group__mesh__stat.html',1,'']]],
-  ['mesh_20to_20buffer_20algorithms_11',['Export Mesh to Buffer Algorithms',['../group__export__buffer.html',1,'']]],
-  ['mesh_20to_20matrix_20algorithms_12',['Export Mesh to Matrix Algorithms',['../group__export__matrix.html',1,'']]],
-  ['meshes_13',['Meshes',['../group__meshes.html',1,'']]],
-  ['miscellaneous_14',['Miscellaneous',['../group__miscellaneous.html',1,'']]],
-  ['module_15',['module',['../group__types.html',1,'VCLib Types Module'],['../group__views.html',1,'Views Module']]]
+  ['mesh_20data_20to_20existing_7',['Append/Replace Mesh Data to Existing',['../group__append__replace__to__buffer.html',1,'']]],
+  ['mesh_20from_20matrix_20algorithms_8',['Import Mesh from Matrix Algorithms',['../group__import__matrix.html',1,'']]],
+  ['mesh_20intersection_20algorithms_9',['Mesh Intersection Algorithms',['../group__intersection__mesh.html',1,'']]],
+  ['mesh_20requirements_10',['Mesh Requirements',['../group__mesh__requirements.html',1,'']]],
+  ['mesh_20statistic_20algorithms_11',['Mesh Statistic Algorithms',['../group__mesh__stat.html',1,'']]],
+  ['mesh_20to_20buffer_20algorithms_12',['Export Mesh to Buffer Algorithms',['../group__export__buffer.html',1,'']]],
+  ['mesh_20to_20matrix_20algorithms_13',['Export Mesh to Matrix Algorithms',['../group__export__matrix.html',1,'']]],
+  ['meshes_14',['Meshes',['../group__meshes.html',1,'']]],
+  ['miscellaneous_15',['Miscellaneous',['../group__miscellaneous.html',1,'']]],
+  ['module_16',['module',['../group__types.html',1,'VCLib Types Module'],['../group__views.html',1,'Views Module']]]
 ];

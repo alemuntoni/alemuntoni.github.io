@@ -273,6 +273,7 @@ var concepts =
       [ "NonBoolIntegralOrEnum", "conceptvcl_1_1NonBoolIntegralOrEnum.html", null ],
       [ "IsClass", "conceptvcl_1_1IsClass.html", null ],
       [ "IsNotClass", "conceptvcl_1_1IsNotClass.html", null ],
+      [ "IsInstantiable", "conceptvcl_1_1IsInstantiable.html", null ],
       [ "BlockerEventDrawerConcept", "conceptvcl_1_1BlockerEventDrawerConcept.html", null ],
       [ "CanvasConcept", "conceptvcl_1_1CanvasConcept.html", null ],
       [ "DrawableObjectConcept", "conceptvcl_1_1DrawableObjectConcept.html", null ],

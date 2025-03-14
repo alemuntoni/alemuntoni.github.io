@@ -124,6 +124,7 @@ var group__containers =
       [ "addVertex", "classvcl_1_1mesh_1_1VertexContainer.html#a98f6b97063334e7dcc0a8abb3bcb6c27", null ],
       [ "addVertex", "classvcl_1_1mesh_1_1VertexContainer.html#a36f2757fafafd2cd6ddb0676127a169a", null ],
       [ "addVertices", "classvcl_1_1mesh_1_1VertexContainer.html#a5313b9f5e7858b360c07fe689ea89d06", null ],
+      [ "addVertices", "classvcl_1_1mesh_1_1VertexContainer.html#a07f082b3515679742c1cf13d410cb1eb", null ],
       [ "addVertices", "classvcl_1_1mesh_1_1VertexContainer.html#a9344364538cdfdc22a1db65a53debaf5", null ],
       [ "clearVertices", "classvcl_1_1mesh_1_1VertexContainer.html#a2862b33e9651ea6ba0d5746ed3bc7b78", null ],
       [ "compactVertices", "classvcl_1_1mesh_1_1VertexContainer.html#a617d7d729b96f0c99c82724a9eee7cc1", null ],

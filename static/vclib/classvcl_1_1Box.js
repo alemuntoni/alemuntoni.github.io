@@ -17,6 +17,7 @@ var classvcl_1_1Box =
     [ "isEmpty", "classvcl_1_1Box.html#ab62da3246fc9973f28d3b1417e420eb8", null ],
     [ "isInside", "classvcl_1_1Box.html#a85c9bf310983d70e5beda4e90beecc16", null ],
     [ "isInsideOpenBox", "classvcl_1_1Box.html#a54a9678a04374fcb1e729cfe21ae8916", null ],
+    [ "isInsideStrict", "classvcl_1_1Box.html#a31893219c37ec3f9d232089944074e12", null ],
     [ "isNull", "classvcl_1_1Box.html#aebc51b75b7848edf60155a1976d051a5", null ],
     [ "max", "classvcl_1_1Box.html#a535809db66680a6de48f02fd371c68f7", null ],
     [ "max", "classvcl_1_1Box.html#a15167ab76a2934e1ea55b77582921a40", null ],

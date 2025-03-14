@@ -132,7 +132,32 @@ $(document).ready(function(){initNavTree('core_2include_2vclib_2space_2core_2mat
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;matrix/affine.h&quot;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;matrix/matrix.h&quot;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#endif </span><span class="comment">// VCL_SPACE_CORE_MATRIX_H</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span>vcl {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">template</span>&lt;MatrixConcept MatrixType&gt;</div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="group__space__core.html#gac36aeef3a917a6a94e0b38d8daa23d08">   41</a></span><a class="code hl_enumeration" href="group__types.html#ga16a1bfbea022f6766d2f3ebbf69a3b52">vcl::MatrixStorageType</a> <a class="code hl_function" href="group__space__core.html#gac36aeef3a917a6a94e0b38d8daa23d08">matrixStorageType</a>()</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>{</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_enumeration" href="group__types.html#ga16a1bfbea022f6766d2f3ebbf69a3b52">vcl::MatrixStorageType</a> <a class="code hl_class" href="classvcl_1_1Segment.html">stg</a> = vcl::MatrixStorageType::ROW_MAJOR;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="comment">// Eigen matrices can be column major</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<a class="code hl_concept" href="conceptvcl_1_1EigenMatrixConcept.html">vcl::EigenMatrixConcept&lt;MatrixType&gt;</a>) {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (!MatrixType::IsRowMajor) {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <a class="code hl_class" href="classvcl_1_1Segment.html">stg</a> = vcl::MatrixStorageType::COLUMN_MAJOR;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Segment.html">stg</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}</div>
+</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#endif </span><span class="comment">// VCL_SPACE_CORE_MATRIX_H</span></div>
+<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:43</div></div>
+<div class="ttc" id="aconceptvcl_1_1EigenMatrixConcept_html"><div class="ttname"><a href="conceptvcl_1_1EigenMatrixConcept.html">vcl::EigenMatrixConcept</a></div><div class="ttdoc">Concept for Eigen matrices. It is satisfied when T is an Eigen matrix.</div><div class="ttdef"><b>Definition</b> matrix.h:53</div></div>
+<div class="ttc" id="agroup__space__core_html_gac36aeef3a917a6a94e0b38d8daa23d08"><div class="ttname"><a href="group__space__core.html#gac36aeef3a917a6a94e0b38d8daa23d08">vcl::matrixStorageType</a></div><div class="ttdeci">vcl::MatrixStorageType matrixStorageType()</div><div class="ttdoc">Get the storage type of a matrix.</div><div class="ttdef"><b>Definition</b> matrix.h:41</div></div>
+<div class="ttc" id="agroup__types_html_ga16a1bfbea022f6766d2f3ebbf69a3b52"><div class="ttname"><a href="group__types.html#ga16a1bfbea022f6766d2f3ebbf69a3b52">vcl::MatrixStorageType</a></div><div class="ttdeci">MatrixStorageType</div><div class="ttdoc">A simple type that enumerates the main storage types for matrices (row or column major).</div><div class="ttdef"><b>Definition</b> base.h:76</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
