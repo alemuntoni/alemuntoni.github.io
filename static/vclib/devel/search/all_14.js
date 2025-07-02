@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['uint_5fnull_0',['UINT_NULL',['../group__types.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6',1,'vcl']]],
+  ['underlying_1',['underlying',['../classvcl_1_1BitSet.html#ace4fd7908f4cad007500e85880262c2c',1,'vcl::BitSet']]],
+  ['undirectednode_2',['UndirectedNode',['../classvcl_1_1UndirectedNode.html',1,'vcl']]],
+  ['uniform_3',['Uniform',['../classvcl_1_1Uniform.html',1,'vcl']]],
+  ['unknownfileformatexception_4',['UnknownFileFormatException',['../classvcl_1_1UnknownFileFormatException.html',1,'vcl']]],
+  ['unorderedpaircomparator_5',['UnorderedPairComparator',['../structvcl_1_1UnorderedPairComparator.html',1,'vcl']]],
+  ['update_6',['update',['../classvcl_1_1DynamicVertexBuffer.html#aad288a00aac1f5d2b446789d20b671b7',1,'vcl::DynamicVertexBuffer::update()'],['../classvcl_1_1MeshRenderData.html#a9ec603e5ddc4ecb7f8fca08a683311a1',1,'vcl::MeshRenderData::update()'],['../classvcl_1_1TrackBall.html#aee729c3971936637180a771d2fd62750',1,'vcl::TrackBall::update()']]],
+  ['update_20mesh_20algorithms_7',['Update Mesh Algorithms',['../group__update.html',1,'']]],
+  ['updateboundingbox_8',['updateBoundingBox',['../group__update.html#ga8ecd18a495232ac86d4c81913a1ad3f7',1,'vcl']]],
+  ['updatedragging_9',['updateDragging',['../classvcl_1_1DrawableTrackBall.html#a553e37ba813c94ed7619e085bf0b980e',1,'vcl::DrawableTrackBall']]],
+  ['updateedgeindices_10',['updateEdgeIndices',['../classvcl_1_1mesh_1_1EdgeContainer.html#adb4e3cd37b1e8951c749f808fe677660',1,'vcl::mesh::EdgeContainer']]],
+  ['updatefaceindices_11',['updateFaceIndices',['../classvcl_1_1mesh_1_1FaceContainer.html#aef0cbf495dc75aea0fddf456965103ce',1,'vcl::mesh::FaceContainer']]],
+  ['updateindices_12',['updateIndices',['../classvcl_1_1Mesh.html#a8e35a62e4b468ad6ab9084bb472bc011',1,'vcl::Mesh']]],
+  ['updatelight_13',['updateLight',['../classvcl_1_1DirectionalLightUniforms.html#a67b8bb1567c99e5d8f5f4bfcf7fed9ad',1,'vcl::DirectionalLightUniforms']]],
+  ['updatereferencesofcontainertype_14',['updateReferencesOfContainerType',['../classvcl_1_1Mesh.html#ab1cd159efd657519f13c687daab58273',1,'vcl::Mesh']]],
+  ['updatevertexindices_15',['updateVertexIndices',['../classvcl_1_1mesh_1_1VertexContainer.html#a0c89260e14b61963b1dc5ff35217a3da',1,'vcl::mesh::VertexContainer']]],
+  ['user_5fbits_5fnumber_16',['user_bits_number',['../classvcl_1_1comp_1_1BitFlags.html#ac8c4ec5fa8498235e9f3871368e21336',1,'vcl::comp::BitFlags::USER_BITS_NUMBER'],['../classvcl_1_1comp_1_1TriangleBitFlags.html#a901c859f4008b29bd1e42094eff9c46a',1,'vcl::comp::TriangleBitFlags::USER_BITS_NUMBER'],['../classvcl_1_1comp_1_1PolygonBitFlags.html#a9d491d1fc85b927718332b45ae05aa4e',1,'vcl::comp::PolygonBitFlags::USER_BITS_NUMBER']]],
+  ['userbit_17',['userbit',['../classvcl_1_1comp_1_1BitFlags.html#a412cec578d6a1bf03b82b4a0187519e8',1,'vcl::comp::BitFlags::userBit()'],['../classvcl_1_1comp_1_1PolygonBitFlags.html#ae71e2818d661b6a4d6a24f0540f3ee41',1,'vcl::comp::PolygonBitFlags::userBit(uint bit) const'],['../classvcl_1_1comp_1_1PolygonBitFlags.html#ac6af3163418456adc01b413668b6561f',1,'vcl::comp::PolygonBitFlags::userBit(uint bit)'],['../classvcl_1_1comp_1_1TriangleBitFlags.html#a5e8d068ef8dbf29bbd6867f4221e989c',1,'vcl::comp::TriangleBitFlags::userBit(uint bit) const'],['../classvcl_1_1comp_1_1TriangleBitFlags.html#aca7e20bd8aa9ebc5d06d2181cc465faa',1,'vcl::comp::TriangleBitFlags::userBit(uint bit)'],['../classvcl_1_1comp_1_1BitFlags.html#ae55649843e53b875b3e2e4014bc5de38',1,'vcl::comp::BitFlags::userBit()']]],
+  ['using_20add_5fsubdirectory_18',['Using add_subdirectory',['../md_docs_2pages_20__installation.html#autotoc_md5',1,'']]],
+  ['using_20fetchcontent_19',['Using FetchContent',['../md_docs_2pages_20__installation.html#autotoc_md4',1,'']]],
+  ['utility_20and_20miscellaneous_20data_20structures_20',['Utility and Miscellaneous Data Structures',['../core_space.html#autotoc_md17',1,'']]],
+  ['utility_20concepts_21',['Utility Concepts',['../group__util__concepts.html',1,'']]]
+];
