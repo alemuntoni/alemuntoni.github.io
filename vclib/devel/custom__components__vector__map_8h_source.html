@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visual Computing Library: vclib/core/include/vclib/mesh/containers/custom_components_vector_map.h Source File</title>
+<title>Visual Computing Library: vclib/core/include/vclib/mesh/containers/detail/custom_components_vector_map.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -135,289 +135,241 @@ $(document).ready(function(){initNavTree('custom__components__vector__map_8h_sou
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> * (https://www.mozilla.org/en-US/MPL/2.0/) for more details.                *</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> ****************************************************************************/</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_MESH_CONTAINERS_CUSTOM_COMPONENTS_VECTOR_MAP_H</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_MESH_CONTAINERS_CUSTOM_COMPONENTS_VECTOR_MAP_H</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_MESH_CONTAINERS_DETAIL_CUSTOM_COMPONENTS_VECTOR_MAP_H</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_MESH_CONTAINERS_DETAIL_CUSTOM_COMPONENTS_VECTOR_MAP_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;vclib/exceptions/mesh.h&gt;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;vclib/misc/compactness.h&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;vclib/serialization.h&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;vclib/types.h&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;any&gt;</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;typeindex&gt;</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">namespace </span>vcl::mesh {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keyword">template</span>&lt;<span class="keywordtype">bool</span> HasCustomComponent&gt;</div>
-<div class="foldopen" id="foldopen00066" data-start="{" data-end="};">
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap.html">   66</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap.html">CustomComponentsVectorMap</a></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>{</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>};</div>
-</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keyword">template</span>&lt;&gt;</div>
-<div class="foldopen" id="foldopen00071" data-start="{" data-end="};">
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html">   71</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap.html">CustomComponentsVectorMap</a>&lt;<a class="code hl_class" href="classvcl_1_1Segment.html">true</a>&gt;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>{</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="comment">// the actual map containing, for each name of a custom component, the</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="comment">// vector of values (a value for each element(vertex/face...) of the mesh)</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    std::unordered_map&lt;std::string, std::vector&lt;std::any&gt;&gt; mMap;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="comment">// map that stores if some custom components need to be initialized.</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="comment">// this happens when we resize the container of an element: we need to</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="comment">// resize also the vectors of the custom components, but we cannot</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="comment">// initialize them with the right type (because we don&#39;t know it in resize</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="comment">// phase). The initialization will be made when the type is known (get of</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="comment">// the custom component vector).</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keyword">mutable</span> std::unordered_map&lt;std::string, bool&gt; mNeedToInitialize;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="comment">// types used for each custom component</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    std::unordered_map&lt;std::string, std::type_index&gt; mCompType;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="keyword">public</span>:</div>
-<div class="foldopen" id="foldopen00090" data-start="{" data-end="}">
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#a7ae8e71c894ca7d5d7e013cf00aee7db">   90</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#a7ae8e71c894ca7d5d7e013cf00aee7db">clear</a>()</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    {</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        mMap.clear();</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        mNeedToInitialize.clear();</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        mCompType.clear();</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    }</div>
-</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
-<div class="foldopen" id="foldopen00101" data-start="{" data-end="}">
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#aaaaeba8e7dda7790a3daa4357d106d7c">  101</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#aaaaeba8e7dda7790a3daa4357d106d7c">reserve</a>(<a class="code hl_class" href="classvcl_1_1Segment.html">uint</a> size)</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    {</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">p</a> : mMap) {</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            <a class="code hl_class" href="classvcl_1_1Segment.html">p</a>.second.reserve(size);</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        }</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    }</div>
-</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
-<div class="foldopen" id="foldopen00113" data-start="{" data-end="}">
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#ab353f61c68838649153f546cb0d9cfed">  113</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#ab353f61c68838649153f546cb0d9cfed">resize</a>(<a class="code hl_class" href="classvcl_1_1Segment.html">uint</a> size)</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    {</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">p</a> : mMap) {</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            <span class="comment">// At this call, we don&#39;t know statically the types of each custom</span></div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            <span class="comment">// component, therefore we cannot initialize them (std::any of each</span></div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            <span class="comment">// vector will be in an invalid state). Therefore, we mark all the</span></div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            <span class="comment">// resized custom components as &#39;needToInitialize&#39;. Initiaization</span></div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            <span class="comment">// will be made just on the uninitialized values of the vectors at</span></div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            <span class="comment">// the first access of each custom component.</span></div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classvcl_1_1Segment.html">p</a>.second.size() &lt; size)</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                mNeedToInitialize.at(<a class="code hl_class" href="classvcl_1_1Segment.html">p</a>.first) = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            <a class="code hl_class" href="classvcl_1_1Segment.html">p</a>.second.resize(size);</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        }</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    }</div>
-</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
-<div class="foldopen" id="foldopen00140" data-start="{" data-end="}">
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#a458b0c61b6e0e674b75bd5ea956548a9">  140</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#a458b0c61b6e0e674b75bd5ea956548a9">compact</a>(<span class="keyword">const</span> std::vector&lt;uint&gt;&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">newIndices</a>)</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    {</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">p</a> : mMap) {</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            compactVector(<a class="code hl_class" href="classvcl_1_1Segment.html">p</a>.second, <a class="code hl_class" href="classvcl_1_1Segment.html">newIndices</a>);</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        }</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    }</div>
-</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> CompType&gt;</div>
-<div class="foldopen" id="foldopen00161" data-start="{" data-end="}">
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#a9e89fb6e57bcfe1ca0554ed164dd155a">  161</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#a9e89fb6e57bcfe1ca0554ed164dd155a">addNewComponent</a>(<span class="keyword">const</span> std::string&amp; name, <a class="code hl_class" href="classvcl_1_1Segment.html">uint</a> size)</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    {</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        std::vector&lt;std::any&gt;&amp; v = mMap[name];</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        v.resize(size, <a class="code hl_class" href="classvcl_1_1Segment.html">CompType</a>());</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        mNeedToInitialize[name] = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        mCompType.emplace(name, <span class="keyword">typeid</span>(<a class="code hl_class" href="classvcl_1_1Segment.html">CompType</a>));</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    }</div>
-</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
-<div class="foldopen" id="foldopen00174" data-start="{" data-end="}">
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno"><a class="line" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#a298e5dc5d404e46f181f7c53167a2b3f">  174</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#a298e5dc5d404e46f181f7c53167a2b3f">deleteComponent</a>(<span class="keyword">const</span> std::string&amp; name)</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    {</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        mMap.erase(name);</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        mNeedToInitialize.erase(name);</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        mCompType.erase(name);</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    }</div>
-</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
-<div class="foldopen" id="foldopen00186" data-start="{" data-end="}">
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno"><a class="line" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#ab1895a80d7571ef09d6f3f880a6c33e6">  186</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#ab1895a80d7571ef09d6f3f880a6c33e6">assertComponentExists</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">compName</a>)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        (<a class="code hl_class" href="classvcl_1_1Segment.html">void</a>) (<a class="code hl_class" href="classvcl_1_1Segment.html">compName</a>);</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        <a class="code hl_class" href="classvcl_1_1Segment.html">assert</a>(mMap.find(<a class="code hl_class" href="classvcl_1_1Segment.html">compName</a>) != mMap.end());</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    }</div>
-</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
-<div class="foldopen" id="foldopen00197" data-start="{" data-end="}">
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno"><a class="line" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#a97c9248b436d8899c7e418efbc610303">  197</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#a97c9248b436d8899c7e418efbc610303">componentExists</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">compName</a>)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        <span class="keywordflow">return</span> (mMap.find(<a class="code hl_class" href="classvcl_1_1Segment.html">compName</a>) != mMap.end());</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    }</div>
-</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
-<div class="foldopen" id="foldopen00207" data-start="{" data-end="}">
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno"><a class="line" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#a27118fe650e3677cdc3efdd930c45422">  207</a></span>    std::vector&lt;std::string&gt; <a class="code hl_function" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#a27118fe650e3677cdc3efdd930c45422">allComponentNames</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        std::vector&lt;std::string&gt; <a class="code hl_class" href="classvcl_1_1Segment.html">names</a>;</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        <a class="code hl_class" href="classvcl_1_1Segment.html">names</a>.reserve(mMap.size());</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">p</a> : mMap)</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>            <a class="code hl_class" href="classvcl_1_1Segment.html">names</a>.push_back(<a class="code hl_class" href="classvcl_1_1Segment.html">p</a>.first);</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Segment.html">names</a>;</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    }</div>
-</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> CompType&gt;</div>
-<div class="foldopen" id="foldopen00226" data-start="{" data-end="}">
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno"><a class="line" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#a2ad7d538e6e86d4243319bf9965fbe8b">  226</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#a2ad7d538e6e86d4243319bf9965fbe8b">isComponentOfType</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">compName</a>)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        std::type_index t(<span class="keyword">typeid</span>(<a class="code hl_class" href="classvcl_1_1Segment.html">CompType</a>));</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        <span class="keywordflow">return</span> t == mCompType.at(<a class="code hl_class" href="classvcl_1_1Segment.html">compName</a>);</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    }</div>
-</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
-<div class="foldopen" id="foldopen00242" data-start="{" data-end="}">
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno"><a class="line" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#ab2d7a4df1cceeaef6287ee6b0c298828">  242</a></span>    std::type_index <a class="code hl_function" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#ab2d7a4df1cceeaef6287ee6b0c298828">componentType</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">compName</a>)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>        <span class="keywordflow">return</span> mCompType.at(<a class="code hl_class" href="classvcl_1_1Segment.html">compName</a>);</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    }</div>
-</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> CompType&gt;</div>
-<div class="foldopen" id="foldopen00256" data-start="{" data-end="}">
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno"><a class="line" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#a273ce59550b125bf31bad25131c246ba">  256</a></span>    std::vector&lt;std::string&gt; <a class="code hl_function" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#a273ce59550b125bf31bad25131c246ba">allComponentNamesOfType</a>()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>        std::vector&lt;std::string&gt; <a class="code hl_class" href="classvcl_1_1Segment.html">names</a>;</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        std::type_index          t(<span class="keyword">typeid</span>(<a class="code hl_class" href="classvcl_1_1Segment.html">CompType</a>));</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">p</a> : mCompType) {</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classvcl_1_1Segment.html">p</a>.second == t)</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>                <a class="code hl_class" href="classvcl_1_1Segment.html">names</a>.push_back(<a class="code hl_class" href="classvcl_1_1Segment.html">p</a>.first);</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        }</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Segment.html">names</a>;</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    }</div>
-</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> CompType&gt;</div>
-<div class="foldopen" id="foldopen00280" data-start="{" data-end="}">
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno"><a class="line" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#a259879d745f57ccdedfd98defc745780">  280</a></span>    <span class="keyword">const</span> std::vector&lt;std::any&gt;&amp; <a class="code hl_function" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#a259879d745f57ccdedfd98defc745780">componentVector</a>(</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>        <span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">compName</a>)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        <a class="code hl_class" href="classvcl_1_1Segment.html">checkComponentType&lt;CompType&gt;</a>(<a class="code hl_class" href="classvcl_1_1Segment.html">compName</a>);</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>        std::vector&lt;std::any&gt;&amp; v =</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>            <span class="keyword">const_cast&lt;</span>std::vector&lt;std::any&gt;&amp;<span class="keyword">&gt;</span>(mMap.at(<a class="code hl_class" href="classvcl_1_1Segment.html">compName</a>));</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        <span class="comment">// if the component needs to be initialized (e.g. we made a resize)</span></div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        <span class="keywordflow">if</span> (mNeedToInitialize.at(<a class="code hl_class" href="classvcl_1_1Segment.html">compName</a>)) {</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>            <span class="keywordflow">for</span> (std::any&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">a</a> : v) {</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>                <span class="keywordflow">if</span> (!<a class="code hl_class" href="classvcl_1_1Segment.html">a</a>.has_value())</div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>                    <a class="code hl_class" href="classvcl_1_1Segment.html">a</a> = <a class="code hl_class" href="classvcl_1_1Segment.html">CompType</a>();</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>            }</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>            mNeedToInitialize.at(<a class="code hl_class" href="classvcl_1_1Segment.html">compName</a>) = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>        }</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>        <span class="keywordflow">return</span> v;</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    }</div>
-</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span> </div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> CompType&gt;</div>
-<div class="foldopen" id="foldopen00313" data-start="{" data-end="}">
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno"><a class="line" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#a83192d5dad9fadeb099d7163fe5debdc">  313</a></span>    std::vector&lt;std::any&gt;&amp; <a class="code hl_function" href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#a83192d5dad9fadeb099d7163fe5debdc">componentVector</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">compName</a>)</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    {</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>        <a class="code hl_class" href="classvcl_1_1Segment.html">checkComponentType&lt;CompType&gt;</a>(<a class="code hl_class" href="classvcl_1_1Segment.html">compName</a>);</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>        std::vector&lt;std::any&gt;&amp; v = mMap.at(<a class="code hl_class" href="classvcl_1_1Segment.html">compName</a>);</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>        <span class="comment">// if the component needs to be initialized (e.g. we made a resize)</span></div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>        <span class="keywordflow">if</span> (mNeedToInitialize.at(<a class="code hl_class" href="classvcl_1_1Segment.html">compName</a>)) {</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>            <span class="keywordflow">for</span> (std::any&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">a</a> : v) {</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>                <span class="keywordflow">if</span> (!<a class="code hl_class" href="classvcl_1_1Segment.html">a</a>.has_value())</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>                    <a class="code hl_class" href="classvcl_1_1Segment.html">a</a> = <a class="code hl_class" href="classvcl_1_1Segment.html">CompType</a>();</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>            }</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>            mNeedToInitialize.at(<a class="code hl_class" href="classvcl_1_1Segment.html">compName</a>) = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>        }</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>        <span class="keywordflow">return</span> v;</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>    }</div>
-</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span> </div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    <span class="keywordtype">void</span> importSameCustomComponentFrom(</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>        <a class="code hl_class" href="classvcl_1_1Segment.html">uint</a>                                   <a class="code hl_class" href="classvcl_1_1Segment.html">thisPos</a>,</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>        <a class="code hl_class" href="classvcl_1_1Segment.html">uint</a>                                   <a class="code hl_class" href="classvcl_1_1Segment.html">otherPos</a>,</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>        <span class="keyword">const</span> std::string&amp;                     <a class="code hl_class" href="classvcl_1_1Segment.html">compName</a>,</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>        <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Segment.html">CustomComponentsVectorMap&lt;true&gt;</a>&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">other</a>)</div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>    {</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classvcl_1_1Segment.html">other</a>.componentExists(<a class="code hl_class" href="classvcl_1_1Segment.html">compName</a>) &amp;&amp; componentExists(<a class="code hl_class" href="classvcl_1_1Segment.html">compName</a>)) {</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classvcl_1_1Segment.html">other</a>.componentType(<a class="code hl_class" href="classvcl_1_1Segment.html">compName</a>) == componentType(<a class="code hl_class" href="classvcl_1_1Segment.html">compName</a>)) {</div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>                mMap.at(<a class="code hl_class" href="classvcl_1_1Segment.html">compName</a>)[<a class="code hl_class" href="classvcl_1_1Segment.html">thisPos</a>] = <a class="code hl_class" href="classvcl_1_1Segment.html">other</a>.mMap.at(<a class="code hl_class" href="classvcl_1_1Segment.html">compName</a>)[<a class="code hl_class" href="classvcl_1_1Segment.html">otherPos</a>];</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>            }</div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>        }</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>    }</div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span> </div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> CompType&gt;</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    <span class="keywordtype">void</span> serializeCustomComponentsOfType(std::ostream&amp; os)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>        std::vector&lt;std::string&gt; compNames =</div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>            allComponentNamesOfType&lt;CompType&gt;();</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>        vcl::serialize(os, compNames);</div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; name : compNames) {</div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>            <span class="keywordtype">bool</span> b = mNeedToInitialize.at(name);</div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>            vcl::serialize(os, b);</div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>            <span class="keyword">const</span> std::vector&lt;std::any&gt;&amp; v = componentVector&lt;CompType&gt;(name);</div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>            <a class="code hl_class" href="classvcl_1_1Segment.html">vcl::serialize&lt;CompType&gt;</a>(os, v);</div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>        }</div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>    }</div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span> </div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> CompType&gt;</div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>    <span class="keywordtype">void</span> deserializeCustomComponentsOfType(std::istream&amp; is)</div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>    {</div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>        std::vector&lt;std::string&gt; compNames;</div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>        vcl::deserialize(is, compNames);</div>
-<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; name : compNames) {</div>
-<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>            <span class="keywordtype">bool</span> b;</div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>            vcl::deserialize(is, b);</div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>            std::vector&lt;std::any&gt; v;</div>
-<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>            <a class="code hl_class" href="classvcl_1_1Segment.html">vcl::deserialize&lt;CompType&gt;</a>(is, v);</div>
-<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>            mMap[name]              = v;</div>
-<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>            mNeedToInitialize[name] = b;</div>
-<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>            mCompType.emplace(name, <span class="keyword">typeid</span>(CompType));</div>
-<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>        }</div>
-<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>    }</div>
-<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span> </div>
-<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> CompType&gt;</div>
-<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>    <span class="keywordtype">void</span> checkComponentType(<span class="keyword">const</span> std::string&amp; compName)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>        std::type_index t(<span class="keyword">typeid</span>(CompType));</div>
-<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>        <span class="keywordflow">if</span> (t != mCompType.at(compName)) {</div>
-<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>            <span class="keywordflow">throw</span> BadCustomComponentTypeException(</div>
-<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>                <span class="stringliteral">&quot;Expected type &quot;</span> + std::string(mCompType.at(compName).name()) +</div>
-<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>                <span class="stringliteral">&quot; for &quot;</span> + compName + <span class="stringliteral">&quot;, but was &quot;</span> + std::string(t.name()) +</div>
-<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>                <span class="stringliteral">&quot;.&quot;</span>);</div>
-<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>        }</div>
-<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>    }</div>
-<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>};</div>
-</div>
-<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span> </div>
-<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>} <span class="comment">// namespace vcl::mesh</span></div>
-<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span> </div>
-<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span><span class="preprocessor">#endif </span><span class="comment">// VCL_MESH_CONTAINERS_CUSTOM_COMPONENTS_VECTOR_MAP_H</span></div>
-<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:43</div></div>
-<div class="ttc" id="aclassvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4_html_a259879d745f57ccdedfd98defc745780"><div class="ttname"><a href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#a259879d745f57ccdedfd98defc745780">vcl::mesh::CustomComponentsVectorMap&lt; true &gt;::componentVector</a></div><div class="ttdeci">const std::vector&lt; std::any &gt; &amp; componentVector(const std::string &amp;compName) const</div><div class="ttdoc">Returns a const reference of std::vector&lt;std::any&gt; of the custom component with the given name and th...</div><div class="ttdef"><b>Definition</b> custom_components_vector_map.h:280</div></div>
-<div class="ttc" id="aclassvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4_html_a27118fe650e3677cdc3efdd930c45422"><div class="ttname"><a href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#a27118fe650e3677cdc3efdd930c45422">vcl::mesh::CustomComponentsVectorMap&lt; true &gt;::allComponentNames</a></div><div class="ttdeci">std::vector&lt; std::string &gt; allComponentNames() const</div><div class="ttdoc">Returns a vector of std::string containing all the custom components, regardless the types of the cus...</div><div class="ttdef"><b>Definition</b> custom_components_vector_map.h:207</div></div>
-<div class="ttc" id="aclassvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4_html_a273ce59550b125bf31bad25131c246ba"><div class="ttname"><a href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#a273ce59550b125bf31bad25131c246ba">vcl::mesh::CustomComponentsVectorMap&lt; true &gt;::allComponentNamesOfType</a></div><div class="ttdeci">std::vector&lt; std::string &gt; allComponentNamesOfType() const</div><div class="ttdoc">Returns a vector of strings of all the custom components having as type the given template argument C...</div><div class="ttdef"><b>Definition</b> custom_components_vector_map.h:256</div></div>
-<div class="ttc" id="aclassvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4_html_a298e5dc5d404e46f181f7c53167a2b3f"><div class="ttname"><a href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#a298e5dc5d404e46f181f7c53167a2b3f">vcl::mesh::CustomComponentsVectorMap&lt; true &gt;::deleteComponent</a></div><div class="ttdeci">void deleteComponent(const std::string &amp;name)</div><div class="ttdoc">Deletes the custom component vector with the given name. It does nothing if the element does not exis...</div><div class="ttdef"><b>Definition</b> custom_components_vector_map.h:174</div></div>
-<div class="ttc" id="aclassvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4_html_a2ad7d538e6e86d4243319bf9965fbe8b"><div class="ttname"><a href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#a2ad7d538e6e86d4243319bf9965fbe8b">vcl::mesh::CustomComponentsVectorMap&lt; true &gt;::isComponentOfType</a></div><div class="ttdeci">bool isComponentOfType(const std::string &amp;compName) const</div><div class="ttdoc">Returns true if the type associated to the compName custom component is the same of the given templat...</div><div class="ttdef"><b>Definition</b> custom_components_vector_map.h:226</div></div>
-<div class="ttc" id="aclassvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4_html_a458b0c61b6e0e674b75bd5ea956548a9"><div class="ttname"><a href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#a458b0c61b6e0e674b75bd5ea956548a9">vcl::mesh::CustomComponentsVectorMap&lt; true &gt;::compact</a></div><div class="ttdeci">void compact(const std::vector&lt; uint &gt; &amp;newIndices)</div><div class="ttdoc">Compacts each custom component vector according to the given indices.</div><div class="ttdef"><b>Definition</b> custom_components_vector_map.h:140</div></div>
-<div class="ttc" id="aclassvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4_html_a7ae8e71c894ca7d5d7e013cf00aee7db"><div class="ttname"><a href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#a7ae8e71c894ca7d5d7e013cf00aee7db">vcl::mesh::CustomComponentsVectorMap&lt; true &gt;::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">Removes all the custom component vectors stored in the mMap.</div><div class="ttdef"><b>Definition</b> custom_components_vector_map.h:90</div></div>
-<div class="ttc" id="aclassvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4_html_a83192d5dad9fadeb099d7163fe5debdc"><div class="ttname"><a href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#a83192d5dad9fadeb099d7163fe5debdc">vcl::mesh::CustomComponentsVectorMap&lt; true &gt;::componentVector</a></div><div class="ttdeci">std::vector&lt; std::any &gt; &amp; componentVector(const std::string &amp;compName)</div><div class="ttdoc">Returns a reference of std::vector&lt;std::any&gt; of the custom component with the given name and the give...</div><div class="ttdef"><b>Definition</b> custom_components_vector_map.h:313</div></div>
-<div class="ttc" id="aclassvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4_html_a97c9248b436d8899c7e418efbc610303"><div class="ttname"><a href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#a97c9248b436d8899c7e418efbc610303">vcl::mesh::CustomComponentsVectorMap&lt; true &gt;::componentExists</a></div><div class="ttdeci">bool componentExists(const std::string &amp;compName) const</div><div class="ttdoc">Returns true if the compName exists.</div><div class="ttdef"><b>Definition</b> custom_components_vector_map.h:197</div></div>
-<div class="ttc" id="aclassvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4_html_a9e89fb6e57bcfe1ca0554ed164dd155a"><div class="ttname"><a href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#a9e89fb6e57bcfe1ca0554ed164dd155a">vcl::mesh::CustomComponentsVectorMap&lt; true &gt;::addNewComponent</a></div><div class="ttdeci">void addNewComponent(const std::string &amp;name, uint size)</div><div class="ttdoc">Adds a new vector of custom components having the given size, the given name and with the template ar...</div><div class="ttdef"><b>Definition</b> custom_components_vector_map.h:161</div></div>
-<div class="ttc" id="aclassvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4_html_aaaaeba8e7dda7790a3daa4357d106d7c"><div class="ttname"><a href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#aaaaeba8e7dda7790a3daa4357d106d7c">vcl::mesh::CustomComponentsVectorMap&lt; true &gt;::reserve</a></div><div class="ttdeci">void reserve(uint size)</div><div class="ttdoc">For each custom component vector, it reserves the given size.</div><div class="ttdef"><b>Definition</b> custom_components_vector_map.h:101</div></div>
-<div class="ttc" id="aclassvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4_html_ab1895a80d7571ef09d6f3f880a6c33e6"><div class="ttname"><a href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#ab1895a80d7571ef09d6f3f880a6c33e6">vcl::mesh::CustomComponentsVectorMap&lt; true &gt;::assertComponentExists</a></div><div class="ttdeci">void assertComponentExists(const std::string &amp;compName) const</div><div class="ttdoc">Asserts that the compName component exists.</div><div class="ttdef"><b>Definition</b> custom_components_vector_map.h:186</div></div>
-<div class="ttc" id="aclassvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4_html_ab2d7a4df1cceeaef6287ee6b0c298828"><div class="ttname"><a href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#ab2d7a4df1cceeaef6287ee6b0c298828">vcl::mesh::CustomComponentsVectorMap&lt; true &gt;::componentType</a></div><div class="ttdeci">std::type_index componentType(const std::string &amp;compName) const</div><div class="ttdoc">Returns the std::type_index of the type of the CustomComponent having the input name.</div><div class="ttdef"><b>Definition</b> custom_components_vector_map.h:242</div></div>
-<div class="ttc" id="aclassvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4_html_ab353f61c68838649153f546cb0d9cfed"><div class="ttname"><a href="classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html#ab353f61c68838649153f546cb0d9cfed">vcl::mesh::CustomComponentsVectorMap&lt; true &gt;::resize</a></div><div class="ttdeci">void resize(uint size)</div><div class="ttdoc">For each custom component vector, it resizes the vector to the given size.</div><div class="ttdef"><b>Definition</b> custom_components_vector_map.h:113</div></div>
-<div class="ttc" id="aclassvcl_1_1mesh_1_1CustomComponentsVectorMap_html"><div class="ttname"><a href="classvcl_1_1mesh_1_1CustomComponentsVectorMap.html">vcl::mesh::CustomComponentsVectorMap</a></div><div class="ttdoc">The CustomComponentsVectorMap class stores a map of vectors of custom components.</div><div class="ttdef"><b>Definition</b> custom_components_vector_map.h:67</div></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;vclib/mesh/exceptions.h&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;vclib/base.h&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;any&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;typeindex&gt;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">namespace </span>vcl::mesh::detail {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keyword">template</span>&lt;<span class="keywordtype">bool</span> HasCustomComponent&gt;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keyword">class </span>CustomComponentsVectorMap</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>{</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>};</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keyword">template</span>&lt;&gt;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keyword">class </span>CustomComponentsVectorMap&lt;true&gt;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>{</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="comment">// the actual map containing, for each name of a custom component, the</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="comment">// vector of values (a value for each element(vertex/face...) of the mesh)</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    std::unordered_map&lt;std::string, std::vector&lt;std::any&gt;&gt; mMap;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="comment">// map that stores if some custom components need to be initialized.</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="comment">// this happens when we resize the container of an element: we need to</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="comment">// resize also the vectors of the custom components, but we cannot</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="comment">// initialize them with the right type (because we don&#39;t know it in resize</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="comment">// phase). The initialization will be made when the type is known (get of</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="comment">// the custom component vector).</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keyword">mutable</span> std::unordered_map&lt;std::string, bool&gt; mNeedToInitialize;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="comment">// types used for each custom component</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    std::unordered_map&lt;std::string, std::type_index&gt; mCompType;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordtype">void</span> clear()</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        mMap.clear();</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        mNeedToInitialize.clear();</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        mCompType.clear();</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    }</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordtype">void</span> reserve(uint size)</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; p : mMap) {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            p.second.reserve(size);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    }</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordtype">void</span> resize(uint size)</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    {</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; p : mMap) {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            <span class="comment">// At this call, we don&#39;t know statically the types of each custom</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            <span class="comment">// component, therefore we cannot initialize them (std::any of each</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            <span class="comment">// vector will be in an invalid state). Therefore, we mark all the</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            <span class="comment">// resized custom components as &#39;needToInitialize&#39;. Initiaization</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            <span class="comment">// will be made just on the uninitialized values of the vectors at</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            <span class="comment">// the first access of each custom component.</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            <span class="keywordflow">if</span> (p.second.size() &lt; size)</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                mNeedToInitialize.at(p.first) = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            p.second.resize(size);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        }</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    }</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keywordtype">void</span> compact(<span class="keyword">const</span> std::vector&lt;uint&gt;&amp; newIndices)</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    {</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; p : mMap) {</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>            compactVector(p.second, newIndices);</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        }</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    }</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> CompType&gt;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <span class="keywordtype">void</span> addNewComponent(<span class="keyword">const</span> std::string&amp; name, uint size)</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    {</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        std::vector&lt;std::any&gt;&amp; v = mMap[name];</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        v.resize(size, CompType());</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        mNeedToInitialize[name] = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        mCompType.emplace(name, <span class="keyword">typeid</span>(CompType));</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    }</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <span class="keywordtype">void</span> deleteComponent(<span class="keyword">const</span> std::string&amp; name)</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    {</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        mMap.erase(name);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        mNeedToInitialize.erase(name);</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        mCompType.erase(name);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    }</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <span class="keywordtype">void</span> assertComponentExists(<span class="keyword">const</span> std::string&amp; compName)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        (void) (compName);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        assert(mMap.find(compName) != mMap.end());</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    }</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <span class="keywordtype">bool</span> componentExists(<span class="keyword">const</span> std::string&amp; compName)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        <span class="keywordflow">return</span> (mMap.find(compName) != mMap.end());</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    }</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    std::vector&lt;std::string&gt; allComponentNames()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        std::vector&lt;std::string&gt; names;</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        names.reserve(mMap.size());</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; p : mMap)</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>            names.push_back(p.first);</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        <span class="keywordflow">return</span> names;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    }</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> CompType&gt;</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    <span class="keywordtype">bool</span> isComponentOfType(<span class="keyword">const</span> std::string&amp; compName)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        std::type_index t(<span class="keyword">typeid</span>(CompType));</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        <span class="keywordflow">return</span> t == mCompType.at(compName);</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    }</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    std::type_index componentType(<span class="keyword">const</span> std::string&amp; compName)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        <span class="keywordflow">return</span> mCompType.at(compName);</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    }</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> CompType&gt;</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    std::vector&lt;std::string&gt; allComponentNamesOfType()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        std::vector&lt;std::string&gt; names;</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>        std::type_index          t(<span class="keyword">typeid</span>(CompType));</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; p : mCompType) {</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>            <span class="keywordflow">if</span> (p.second == t)</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>                names.push_back(p.first);</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        }</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        <span class="keywordflow">return</span> names;</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    }</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> </div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> CompType&gt;</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    <span class="keyword">const</span> std::vector&lt;std::any&gt;&amp; componentVector(</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>        <span class="keyword">const</span> std::string&amp; compName)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>        checkComponentType&lt;CompType&gt;(compName);</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        std::vector&lt;std::any&gt;&amp; v =</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>            <span class="keyword">const_cast&lt;</span>std::vector&lt;std::any&gt;&amp;<span class="keyword">&gt;</span>(mMap.at(compName));</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>        <span class="comment">// if the component needs to be initialized (e.g. we made a resize)</span></div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        <span class="keywordflow">if</span> (mNeedToInitialize.at(compName)) {</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>            <span class="keywordflow">for</span> (std::any&amp; a : v) {</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>                <span class="keywordflow">if</span> (!a.has_value())</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>                    a = CompType();</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>            }</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>            mNeedToInitialize.at(compName) = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>        }</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>        <span class="keywordflow">return</span> v;</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    }</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span> </div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> CompType&gt;</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>    std::vector&lt;std::any&gt;&amp; componentVector(<span class="keyword">const</span> std::string&amp; compName)</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    {</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>        checkComponentType&lt;CompType&gt;(compName);</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>        std::vector&lt;std::any&gt;&amp; v = mMap.at(compName);</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>        <span class="comment">// if the component needs to be initialized (e.g. we made a resize)</span></div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>        <span class="keywordflow">if</span> (mNeedToInitialize.at(compName)) {</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>            <span class="keywordflow">for</span> (std::any&amp; a : v) {</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>                <span class="keywordflow">if</span> (!a.has_value())</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>                    a = CompType();</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>            }</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>            mNeedToInitialize.at(compName) = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>        }</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>        <span class="keywordflow">return</span> v;</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    }</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span> </div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>    <span class="keywordtype">void</span> importSameCustomComponentFrom(</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>        uint                                   thisPos,</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>        uint                                   otherPos,</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>        <span class="keyword">const</span> std::string&amp;                     compName,</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>        <span class="keyword">const</span> CustomComponentsVectorMap&lt;true&gt;&amp; other)</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    {</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>        <span class="keywordflow">if</span> (other.componentExists(compName) &amp;&amp; componentExists(compName)) {</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>            <span class="keywordflow">if</span> (other.componentType(compName) == componentType(compName)) {</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>                mMap.at(compName)[thisPos] = other.mMap.at(compName)[otherPos];</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>            }</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>        }</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    }</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span> </div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> CompType&gt;</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>    <span class="keywordtype">void</span> serializeCustomComponentsOfType(std::ostream&amp; os)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>        std::vector&lt;std::string&gt; compNames =</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>            allComponentNamesOfType&lt;CompType&gt;();</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>        vcl::serialize(os, compNames);</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; name : compNames) {</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>            <span class="keywordtype">bool</span> b = mNeedToInitialize.at(name);</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>            vcl::serialize(os, b);</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>            <span class="keyword">const</span> std::vector&lt;std::any&gt;&amp; v = componentVector&lt;CompType&gt;(name);</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>            <a class="code hl_class" href="classvcl_1_1Box.html">vcl::serialize&lt;CompType&gt;</a>(os, v);</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>        }</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>    }</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span> </div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> CompType&gt;</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>    <span class="keywordtype">void</span> deserializeCustomComponentsOfType(std::istream&amp; is)</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>    {</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>        std::vector&lt;std::string&gt; compNames;</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>        vcl::deserialize(is, compNames);</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; name : compNames) {</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>            <span class="keywordtype">bool</span> b;</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>            vcl::deserialize(is, b);</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>            std::vector&lt;std::any&gt; v;</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>            <a class="code hl_class" href="classvcl_1_1Box.html">vcl::deserialize&lt;CompType&gt;</a>(is, v);</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>            mMap[name]              = v;</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>            mNeedToInitialize[name] = b;</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>            mCompType.emplace(name, <span class="keyword">typeid</span>(CompType));</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>        }</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>    }</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span> </div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> CompType&gt;</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>    <span class="keywordtype">void</span> checkComponentType(<span class="keyword">const</span> std::string&amp; compName)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>        std::type_index t(<span class="keyword">typeid</span>(CompType));</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>        <span class="keywordflow">if</span> (t != mCompType.at(compName)) {</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>            <span class="keywordflow">throw</span> BadCustomComponentTypeException(</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>                <span class="stringliteral">&quot;Expected type &quot;</span> + std::string(mCompType.at(compName).name()) +</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>                <span class="stringliteral">&quot; for &quot;</span> + compName + <span class="stringliteral">&quot;, but was &quot;</span> + std::string(t.name()) +</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>                <span class="stringliteral">&quot;.&quot;</span>);</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>        }</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>    }</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>};</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span> </div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>} <span class="comment">// namespace vcl::mesh::detail</span></div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span> </div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span><span class="preprocessor">#endif </span><span class="comment">// VCL_MESH_CONTAINERS_DETAIL_CUSTOM_COMPONENTS_VECTOR_MAP_H</span></div>
+<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:46</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_57e9d4f65bede1d20512a0464756b99f.html">mesh</a></li><li class="navelem"><a class="el" href="dir_b337be6f12f27a49647d4c5c0414a54d.html">containers</a></li><li class="navelem"><b>custom_components_vector_map.h</b></li>
+    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_57e9d4f65bede1d20512a0464756b99f.html">mesh</a></li><li class="navelem"><a class="el" href="dir_b337be6f12f27a49647d4c5c0414a54d.html">containers</a></li><li class="navelem"><a class="el" href="dir_af5c9ee7c0d68dd43e01927de470d571.html">detail</a></li><li class="navelem"><b>custom_components_vector_map.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

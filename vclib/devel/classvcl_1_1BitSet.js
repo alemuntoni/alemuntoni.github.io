@@ -1,5 +1,6 @@
 var classvcl_1_1BitSet =
 [
+    [ "UnderlyingType", "classvcl_1_1BitSet.html#ac4537a9762ad5933b9f40d167076cd88", null ],
     [ "BitSet", "classvcl_1_1BitSet.html#affd94bccf22eb78574d7562776c31bb6", null ],
     [ "BitSet", "classvcl_1_1BitSet.html#a80dc0d495905cb68339f7c43275ff10d", null ],
     [ "BitSet", "classvcl_1_1BitSet.html#af4daa7e1472db8eaeb5764e5e78c6b30", null ],

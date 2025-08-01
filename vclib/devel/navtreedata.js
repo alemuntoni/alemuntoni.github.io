@@ -47,8 +47,7 @@ var NAVTREE =
         [ "Components", "core_basic_concepts.html#autotoc_md15", null ]
       ] ],
       [ "Spatial and other Data Structures", "core_space.html", [
-        [ "Spatial Data Structures", "core_space.html#autotoc_md16", null ],
-        [ "Utility and Miscellaneous Data Structures", "core_space.html#autotoc_md17", null ]
+        [ "Spatial Data Structures", "core_space.html#autotoc_md16", null ]
       ] ],
       [ "Built-in Meshes", "core_meshes.html", null ],
       [ "Load/Save", "core_load_save.html", null ],
@@ -85,21 +84,20 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "abstract__drawable__mesh_8h_source.html",
-"classvcl_1_1Color.html#a002e401382a7608e0c68f42c089057bca933a633d2d20cec2e05a97a403dcd1d4",
-"classvcl_1_1Histogram.html#aa80dc00f1bd081cb0b9c241a18ff6a63",
-"classvcl_1_1MeshRenderData.html#abc79ab9db3a7a3e1dc687d2b7c30d107",
-"classvcl_1_1Polygon.html#a937aa2df891580a9021bf93693943c13",
-"classvcl_1_1Triangle.html#ad300341524e76ecd4d8169400e0e8f45",
-"classvcl_1_1comp_1_1Color.html#a4c23632c25c051e0975ae7dc83d88882",
-"classvcl_1_1mesh_1_1EdgeContainer.html#a04bde7297eb0887bb90b9a737d356978",
-"concepts_2logger_8h_source.html",
-"conceptvcl_1_1TexCoordIndexedConcept.html",
-"conceptvcl_1_1face_1_1HasOptionalAdjacentFaces.html",
-"dir_511dade49ceae8e45a0459596e9beac8.html",
-"group__algorithms__core.html#ga5396bbb99432d258d9330d681f1461db",
-"group__face__requirements.html#gaf2bc7d8c340f922fda76e1d01588433c",
-"hexahedron_8h_source.html",
-"structvcl_1_1FileType.html#a17dc92339dc721742b670dd129089269"
+"classvcl_1_1CanvasOpenGL2.html#ad8581b008848df2530d01e2eee2e194d",
+"classvcl_1_1GenericBuffer.html#abc7ee65f855f1a2b9f9b410df309a19e",
+"classvcl_1_1MeshRenderData.html#a283a9bd7cf83149f046f36b6040d08ce",
+"classvcl_1_1PolyMeshT.html",
+"classvcl_1_1Triangle.html#a0170ec5bd9c19bca717743e7617f05e4",
+"classvcl_1_1comp_1_1AdjacentVertices.html#affcd46474390138c87847707a2e213f8",
+"classvcl_1_1glfw_1_1WindowManager.html#a12f61cf800bf7eafbca61bd524ebd838",
+"concepts.html",
+"conceptvcl_1_1comp_1_1HasWedgeColors.html",
+"core_basic_concepts.html#autotoc_md13",
+"functions_func_e.html",
+"group__create.html#ga455a7abda2f207c424dd5946c30c48c6",
+"group__update.html#ga4d6af40f651b5569a2f24ddb3050c936",
+"structvcl_1_1AbstractGrid_1_1IterComparator.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

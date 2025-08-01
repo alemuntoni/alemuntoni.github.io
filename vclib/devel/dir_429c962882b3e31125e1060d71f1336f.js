@@ -6,7 +6,8 @@ var dir_429c962882b3e31125e1060d71f1336f =
     [ "ply", "dir_0417bd89107f859ee549640a1b8271c1.html", "dir_0417bd89107f859ee549640a1b8271c1" ],
     [ "stl", "dir_d3b19aa3b30f86e4246b9464429ff680.html", "dir_d3b19aa3b30f86e4246b9464429ff680" ],
     [ "capability.h", "capability_8h_source.html", null ],
-    [ "load.h", "mesh_2load_8h_source.html", null ],
-    [ "save.h", "mesh_2save_8h_source.html", null ],
+    [ "load_mesh.h", "load__mesh_8h_source.html", null ],
+    [ "load_meshes.h", "load__meshes_8h_source.html", null ],
+    [ "save_mesh.h", "save__mesh_8h_source.html", null ],
     [ "settings.h", "settings_8h_source.html", null ]
 ];

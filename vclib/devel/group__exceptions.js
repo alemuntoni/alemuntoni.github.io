@@ -10,7 +10,6 @@ var group__exceptions =
     [ "vcl::MissingPreconditionException", "classvcl_1_1MissingPreconditionException.html", null ],
     [ "vcl::MissingQuadRequirementException", "classvcl_1_1MissingQuadRequirementException.html", null ],
     [ "vcl::MissingTriangularRequirementException", "classvcl_1_1MissingTriangularRequirementException.html", null ],
-    [ "vcl::NoIntersectionException", "classvcl_1_1NoIntersectionException.html", null ],
     [ "vcl::UnknownFileFormatException", "classvcl_1_1UnknownFileFormatException.html", null ],
     [ "vcl::WrongSizeException", "classvcl_1_1WrongSizeException.html", null ]
 ];

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visual Computing Library: vclib/core/include/vclib/math/min_max.h Source File</title>
+<title>Visual Computing Library: vclib/core/include/vclib/base/min_max.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -135,86 +135,59 @@ $(document).ready(function(){initNavTree('min__max_8h_source.html',''); initResi
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> * (https://www.mozilla.org/en-US/MPL/2.0/) for more details.                *</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> ****************************************************************************/</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_MATH_MIN_MAX_H</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_MATH_MIN_MAX_H</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_BASE_MIN_MAX_H</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_BASE_MIN_MAX_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;vclib/concepts/space/point.h&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;algorithm&gt;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">namespace </span>vcl {</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span>vcl {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="group__math.html#gae6c5f005182de34972bb2430132acb8f">   42</a></span><span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="group__math.html#gae6c5f005182de34972bb2430132acb8f">min</a>(<span class="keyword">const</span> T&amp; p1, <span class="keyword">const</span> T&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">p2</a>)</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>{</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordflow">return</span> std::min(p1, <a class="code hl_class" href="classvcl_1_1Segment.html">p2</a>);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>}</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="group__base.html#gae6c5f005182de34972bb2430132acb8f">   40</a></span><span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="group__base.html#gae6c5f005182de34972bb2430132acb8f">min</a>(<span class="keyword">const</span> T&amp; p1, <span class="keyword">const</span> T&amp; <a class="code hl_class" href="classvcl_1_1Box.html">p2</a>)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>{</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordflow">return</span> std::min(p1, <a class="code hl_class" href="classvcl_1_1Box.html">p2</a>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
 </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> Head, <span class="keyword">typename</span>... Tail&gt;</div>
-<div class="foldopen" id="foldopen00067" data-start="{" data-end="}">
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="group__math.html#ga9c1835cef3addd7dbae2b21a43523f3a">   67</a></span><span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="group__math.html#gae6c5f005182de34972bb2430132acb8f">min</a>(<span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Segment.html">Head</a>&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">head0</a>, <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Segment.html">Head</a>&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">head1</a>, <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Segment.html">Tail</a>&amp;... <a class="code hl_class" href="classvcl_1_1Segment.html">tail</a>)</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keyword">requires</span> (<span class="keyword">sizeof</span>...(tail) &gt; 0)</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>{</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="group__math.html#gae6c5f005182de34972bb2430132acb8f">min</a>(<a class="code hl_function" href="group__math.html#gae6c5f005182de34972bb2430132acb8f">min</a>(<a class="code hl_class" href="classvcl_1_1Segment.html">head0</a>, <a class="code hl_class" href="classvcl_1_1Segment.html">head1</a>), <a class="code hl_class" href="classvcl_1_1Segment.html">tail</a>...);</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>}</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> Head, <span class="keyword">typename</span>... Tail&gt;</div>
+<div class="foldopen" id="foldopen00065" data-start="{" data-end="}">
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="group__base.html#ga9c1835cef3addd7dbae2b21a43523f3a">   65</a></span><span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="group__base.html#gae6c5f005182de34972bb2430132acb8f">min</a>(<span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Box.html">Head</a>&amp; <a class="code hl_class" href="classvcl_1_1Box.html">head0</a>, <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Box.html">Head</a>&amp; <a class="code hl_class" href="classvcl_1_1Box.html">head1</a>, <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Box.html">Tail</a>&amp;... <a class="code hl_class" href="classvcl_1_1Box.html">tail</a>)</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keyword">requires</span> (<span class="keyword">sizeof</span>...(tail) &gt; 0)</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>{</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="group__base.html#gae6c5f005182de34972bb2430132acb8f">min</a>(<a class="code hl_function" href="group__base.html#gae6c5f005182de34972bb2430132acb8f">min</a>(<a class="code hl_class" href="classvcl_1_1Box.html">head0</a>, <a class="code hl_class" href="classvcl_1_1Box.html">head1</a>), <a class="code hl_class" href="classvcl_1_1Box.html">tail</a>...);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>}</div>
 </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00083" data-start="{" data-end="}">
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="group__math.html#ga45d99c06ee2cb1cd9434fd0e86a1a413">   83</a></span><span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="group__math.html#ga45d99c06ee2cb1cd9434fd0e86a1a413">max</a>(<span class="keyword">const</span> T&amp; p1, <span class="keyword">const</span> T&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">p2</a>)</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>{</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordflow">return</span> std::max(p1, <a class="code hl_class" href="classvcl_1_1Segment.html">p2</a>);</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>}</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="group__base.html#ga45d99c06ee2cb1cd9434fd0e86a1a413">   81</a></span><span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="group__base.html#ga45d99c06ee2cb1cd9434fd0e86a1a413">max</a>(<span class="keyword">const</span> T&amp; p1, <span class="keyword">const</span> T&amp; <a class="code hl_class" href="classvcl_1_1Box.html">p2</a>)</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>{</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordflow">return</span> std::max(p1, <a class="code hl_class" href="classvcl_1_1Box.html">p2</a>);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>}</div>
 </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> Head, <span class="keyword">typename</span>... Tail&gt;</div>
-<div class="foldopen" id="foldopen00108" data-start="{" data-end="}">
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="group__math.html#ga212fbf643d263ad106507f7aa462cf46">  108</a></span><span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="group__math.html#ga45d99c06ee2cb1cd9434fd0e86a1a413">max</a>(<span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Segment.html">Head</a>&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">head0</a>, <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Segment.html">Head</a>&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">head1</a>, <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Segment.html">Tail</a>&amp;... <a class="code hl_class" href="classvcl_1_1Segment.html">tail</a>)</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keyword">requires</span> (<span class="keyword">sizeof</span>...(tail) &gt; 0)</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>{</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="group__math.html#ga45d99c06ee2cb1cd9434fd0e86a1a413">max</a>(<a class="code hl_function" href="group__math.html#ga45d99c06ee2cb1cd9434fd0e86a1a413">max</a>(<a class="code hl_class" href="classvcl_1_1Segment.html">head0</a>, <a class="code hl_class" href="classvcl_1_1Segment.html">head1</a>), <a class="code hl_class" href="classvcl_1_1Segment.html">tail</a>...);</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>}</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> Head, <span class="keyword">typename</span>... Tail&gt;</div>
+<div class="foldopen" id="foldopen00106" data-start="{" data-end="}">
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="group__base.html#ga212fbf643d263ad106507f7aa462cf46">  106</a></span><span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="group__base.html#ga45d99c06ee2cb1cd9434fd0e86a1a413">max</a>(<span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Box.html">Head</a>&amp; <a class="code hl_class" href="classvcl_1_1Box.html">head0</a>, <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Box.html">Head</a>&amp; <a class="code hl_class" href="classvcl_1_1Box.html">head1</a>, <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Box.html">Tail</a>&amp;... <a class="code hl_class" href="classvcl_1_1Box.html">tail</a>)</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keyword">requires</span> (<span class="keyword">sizeof</span>...(tail) &gt; 0)</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>{</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="group__base.html#ga45d99c06ee2cb1cd9434fd0e86a1a413">max</a>(<a class="code hl_function" href="group__base.html#ga45d99c06ee2cb1cd9434fd0e86a1a413">max</a>(<a class="code hl_class" href="classvcl_1_1Box.html">head0</a>, <a class="code hl_class" href="classvcl_1_1Box.html">head1</a>), <a class="code hl_class" href="classvcl_1_1Box.html">tail</a>...);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>}</div>
 </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>} <span class="comment">// namespace vcl</span></div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="keyword">template</span>&lt;Po<span class="keywordtype">int</span>Concept Po<span class="keywordtype">int</span>Type&gt;</div>
-<div class="foldopen" id="foldopen00127" data-start="{" data-end="}">
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="group__math.html#gac11460526cb6d79733a8dfe0e15614f4">  127</a></span><span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="group__math.html#gae6c5f005182de34972bb2430132acb8f">min</a>(<span class="keyword">const</span> PointType&amp; p1, <span class="keyword">const</span> PointType&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">p2</a>)</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>{</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    PointType <a class="code hl_class" href="classvcl_1_1Segment.html">p</a>;</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code hl_class" href="classvcl_1_1Segment.html">i</a> = 0; <a class="code hl_class" href="classvcl_1_1Segment.html">i</a> &lt; <a class="code hl_class" href="classvcl_1_1Segment.html">p</a>.<a class="code hl_variable" href="classvcl_1_1Segment.html#a4c80fae0394ec95f6abb35b82f6bb93f">DIM</a>; <a class="code hl_class" href="classvcl_1_1Segment.html">i</a>++) {</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <a class="code hl_class" href="classvcl_1_1Segment.html">p</a>[<a class="code hl_class" href="classvcl_1_1Segment.html">i</a>] = std::min(p1[<a class="code hl_class" href="classvcl_1_1Segment.html">i</a>], <a class="code hl_class" href="classvcl_1_1Segment.html">p2</a>[<a class="code hl_class" href="classvcl_1_1Segment.html">i</a>]);</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    }</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Segment.html">p</a>;</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>}</div>
-</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="keyword">template</span>&lt;Po<span class="keywordtype">int</span>Concept Po<span class="keywordtype">int</span>Type&gt;</div>
-<div class="foldopen" id="foldopen00149" data-start="{" data-end="}">
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="group__math.html#ga49a9bdba85989ec5842081c5c84d4fc7">  149</a></span><span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="group__math.html#ga45d99c06ee2cb1cd9434fd0e86a1a413">max</a>(<span class="keyword">const</span> PointType&amp; p1, <span class="keyword">const</span> PointType&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">p2</a>)</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>{</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    PointType <a class="code hl_class" href="classvcl_1_1Segment.html">p</a>;</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code hl_class" href="classvcl_1_1Segment.html">i</a> = 0; <a class="code hl_class" href="classvcl_1_1Segment.html">i</a> &lt; <a class="code hl_class" href="classvcl_1_1Segment.html">p</a>.<a class="code hl_variable" href="classvcl_1_1Segment.html#a4c80fae0394ec95f6abb35b82f6bb93f">DIM</a>; <a class="code hl_class" href="classvcl_1_1Segment.html">i</a>++) {</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <a class="code hl_class" href="classvcl_1_1Segment.html">p</a>[<a class="code hl_class" href="classvcl_1_1Segment.html">i</a>] = std::max(p1[<a class="code hl_class" href="classvcl_1_1Segment.html">i</a>], <a class="code hl_class" href="classvcl_1_1Segment.html">p2</a>[<a class="code hl_class" href="classvcl_1_1Segment.html">i</a>]);</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    }</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Segment.html">p</a>;</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>}</div>
-</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="preprocessor">#endif </span><span class="comment">// VCL_MATH_MIN_MAX_H</span></div>
-<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:43</div></div>
-<div class="ttc" id="aclassvcl_1_1Segment_html_a4c80fae0394ec95f6abb35b82f6bb93f"><div class="ttname"><a href="classvcl_1_1Segment.html#a4c80fae0394ec95f6abb35b82f6bb93f">vcl::Segment::DIM</a></div><div class="ttdeci">static const uint DIM</div><div class="ttdoc">The dimensionality of the segment.</div><div class="ttdef"><b>Definition</b> segment.h:62</div></div>
-<div class="ttc" id="agroup__math_html_ga45d99c06ee2cb1cd9434fd0e86a1a413"><div class="ttname"><a href="group__math.html#ga45d99c06ee2cb1cd9434fd0e86a1a413">vcl::max</a></div><div class="ttdeci">constexpr auto max(const T &amp;p1, const T &amp;p2)</div><div class="ttdoc">Returns the maximum between the two parameters.</div><div class="ttdef"><b>Definition</b> min_max.h:83</div></div>
-<div class="ttc" id="agroup__math_html_gae6c5f005182de34972bb2430132acb8f"><div class="ttname"><a href="group__math.html#gae6c5f005182de34972bb2430132acb8f">vcl::min</a></div><div class="ttdeci">constexpr auto min(const T &amp;p1, const T &amp;p2)</div><div class="ttdoc">Returns the minimum between the two parameters.</div><div class="ttdef"><b>Definition</b> min_max.h:42</div></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="preprocessor">#endif </span><span class="comment">// VCL_BASE_MIN_MAX_H</span></div>
+<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:46</div></div>
+<div class="ttc" id="agroup__base_html_ga45d99c06ee2cb1cd9434fd0e86a1a413"><div class="ttname"><a href="group__base.html#ga45d99c06ee2cb1cd9434fd0e86a1a413">vcl::max</a></div><div class="ttdeci">constexpr auto max(const T &amp;p1, const T &amp;p2)</div><div class="ttdoc">Returns the maximum between the two parameters.</div><div class="ttdef"><b>Definition</b> min_max.h:81</div></div>
+<div class="ttc" id="agroup__base_html_gae6c5f005182de34972bb2430132acb8f"><div class="ttname"><a href="group__base.html#gae6c5f005182de34972bb2430132acb8f">vcl::min</a></div><div class="ttdeci">constexpr auto min(const T &amp;p1, const T &amp;p2)</div><div class="ttdoc">Returns the minimum between the two parameters.</div><div class="ttdef"><b>Definition</b> min_max.h:40</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_12f8cf7631d468da4ffabaf60eecbdd7.html">math</a></li><li class="navelem"><b>min_max.h</b></li>
+    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_e330a725a80990495f6734bd3c618028.html">base</a></li><li class="navelem"><b>min_max.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

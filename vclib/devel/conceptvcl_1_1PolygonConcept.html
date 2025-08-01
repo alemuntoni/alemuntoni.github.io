@@ -105,59 +105,30 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1PolygonConcept.html','')
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">vcl::PolygonConcept Concept Reference</div></div>
+  <div class="headertitle"><div class="title">vcl::PolygonConcept Concept Reference<div class="ingroups"><a class="el" href="group__space__core.html">Core Data Structures</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A concept representing a Polygon.  
+<a href="conceptvcl_1_1PolygonConcept.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="space_2core_2polygon_8h_source.html">vclib/space/core/polygon.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1PolygonConcept.html">vcl::PolygonConcept</a> =  <span class="keyword">requires</span> (</div>
-<div class="line">    T&amp;&amp;                                            obj,</div>
-<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::PointType               p,</div>
-<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::PointType&amp;              pR,</div>
-<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::ScalarType              s,</div>
-<div class="line">    std::vector&lt;typename RemoveRef&lt;T&gt;::PointType&gt;  vecP,</div>
-<div class="line">    std::vector&lt;typename RemoveRef&lt;T&gt;::ScalarType&gt; vecS) {</div>
-<div class="line">    </div>
-<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::ScalarType;</div>
-<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::PointType;</div>
-<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::Iterator;</div>
-<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::ConstIterator;</div>
-<div class="line"> </div>
-<div class="line">    obj.DIM;</div>
-<div class="line"> </div>
-<div class="line">    </div>
-<div class="line">    RemoveRef&lt;T&gt;();</div>
-<div class="line">    RemoveRef&lt;T&gt;(vecP.begin(), vecP.end());</div>
-<div class="line">    RemoveRef&lt;T&gt;(vecP);</div>
-<div class="line"> </div>
-<div class="line">    { obj.size() } -&gt; std::same_as&lt;uint&gt;;</div>
-<div class="line">    { <a class="code hl_class" href="classvcl_1_1Segment.html">obj</a>.point(uint()) } -&gt; PointConcept;</div>
-<div class="line">    { obj.sideLength(uint()) } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(s)&gt;;</div>
-<div class="line">    { obj.barycenter() } -&gt; PointConcept;</div>
-<div class="line">    { obj.weightedBarycenter(vecS) } -&gt; PointConcept;</div>
-<div class="line">    { obj.perimeter() } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(s)&gt;;</div>
-<div class="line">    { obj.area() } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(s)&gt;;</div>
-<div class="line">    { obj.begin() } -&gt; InputIterator&lt;<span class="keyword">decltype</span>(p)&gt;;</div>
-<div class="line">    { obj.end() } -&gt; InputIterator&lt;<span class="keyword">decltype</span>(p)&gt;;</div>
-<div class="line"> </div>
-<div class="line">    <span class="keyword">requires</span> InputRange&lt;T, <span class="keyword">decltype</span>(p)&gt;;</div>
-<div class="line"> </div>
-<div class="line">    </div>
-<div class="line">    <span class="keyword">requires</span> IsConst&lt;T&gt; || <span class="keyword">requires</span> {</div>
-<div class="line">        { obj.resize(uint()) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">        { obj.reserve(uint()) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">        { obj.clear() } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">        { obj.pushBack(p) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">        { obj.point(uint()) } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(pR)&gt;;</div>
-<div class="line">        { obj.begin() } -&gt; OutputIterator&lt;<span class="keyword">decltype</span>(p)&gt;;</div>
-<div class="line">        { obj.end() } -&gt; OutputIterator&lt;<span class="keyword">decltype</span>(p)&gt;;</div>
-<div class="line"> </div>
-<div class="line">        <span class="keyword">requires</span> OutputRange&lt;T, <span class="keyword">decltype</span>(p)&gt;;</div>
-<div class="line">    };</div>
-<div class="line">}</div>
-<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:43</div></div>
-<div class="ttc" id="aconceptvcl_1_1PolygonConcept_html"><div class="ttname"><a href="conceptvcl_1_1PolygonConcept.html">vcl::PolygonConcept</a></div><div class="ttdef"><b>Definition</b> polygon.h:35</div></div>
-</div><!-- fragment --></div><!-- contents -->
+<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1PolygonConcept.html">vcl::PolygonConcept</a> =  std::derived_from&lt; </div>
+<div class="line">    std::remove_cvref_t&lt;T&gt;,</div>
+<div class="line">    Polygon&lt;typename RemoveRef&lt;T&gt;::PointType&gt;&gt;</div>
+<div class="ttc" id="aconceptvcl_1_1PolygonConcept_html"><div class="ttname"><a href="conceptvcl_1_1PolygonConcept.html">vcl::PolygonConcept</a></div><div class="ttdoc">A concept representing a Polygon.</div><div class="ttdef"><b>Definition</b> polygon.h:596</div></div>
+</div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A concept representing a Polygon. </p>
+<p>The concept is satisfied when <code>T</code> is a class that instantiates or derives from a Polygon class having any Point type.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type to be tested for conformity to the PolygonConcept. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

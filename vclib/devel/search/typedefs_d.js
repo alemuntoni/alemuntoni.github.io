@@ -19,5 +19,5 @@ var searchData=
   ['trimeshf_16',['TriMeshf',['../group__meshes.html#ga68fbff34c0d6b5dcf7c47dec84c424e3',1,'vcl']]],
   ['trimeshindexed_17',['TriMeshIndexed',['../group__meshes.html#ga625a9701299ece12bf4d3aa94a6a08d6',1,'vcl']]],
   ['trimeshindexedf_18',['TriMeshIndexedf',['../group__meshes.html#ga744b55b3f2c78601bd20d12b1f36cac3',1,'vcl']]],
-  ['typeatt_19',['TypeAtT',['../group__types.html#ga7532e3b30b940e66f546f75ea246acfa',1,'vcl']]]
+  ['typeatt_19',['TypeAtT',['../group__base.html#ga7532e3b30b940e66f546f75ea246acfa',1,'vcl']]]
 ];

@@ -126,9 +126,22 @@ Collaboration diagram for Mesh Statistic Algorithms:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga2aa52bf969238c1f809e218722e63ccf" id="r_ga2aa52bf969238c1f809e218722e63ccf"><td class="memTemplParams" colspan="2">template&lt;MeshConcept MeshType&gt; </td></tr>
-<tr class="memitem:ga2aa52bf969238c1f809e218722e63ccf"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">auto</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__mesh__stat.html#ga2aa52bf969238c1f809e218722e63ccf">vcl::boundingBox</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> MeshType &amp;<a class="el" href="classvcl_1_1Segment.html">m</a>)</td></tr>
+<tr class="memitem:ga2aa52bf969238c1f809e218722e63ccf"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">auto</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__mesh__stat.html#ga2aa52bf969238c1f809e218722e63ccf">vcl::boundingBox</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;<a class="el" href="classvcl_1_1Box.html">m</a>)</td></tr>
 <tr class="memdesc:ga2aa52bf969238c1f809e218722e63ccf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the bounding box of a mesh.  <br /></td></tr>
 <tr class="separator:ga2aa52bf969238c1f809e218722e63ccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacec0e59c497f366749699b60787ce0f1" id="r_gacec0e59c497f366749699b60787ce0f1"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mesh__stat.html#gacec0e59c497f366749699b60787ce0f1">vcl::countPerFaceVertexReferences</a> (<a class="el" href="classvcl_1_1Box.html">const</a> FaceMeshConcept <a class="el" href="classvcl_1_1Box.html">auto</a> &amp;mesh)</td></tr>
+<tr class="memdesc:gacec0e59c497f366749699b60787ce0f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Count the number of references to vertices in the mesh faces.  <br /></td></tr>
+<tr class="separator:gacec0e59c497f366749699b60787ce0f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf3eee47cce6b1cc41a7a6af6c7d5d39c" id="r_gaf3eee47cce6b1cc41a7a6af6c7d5d39c"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mesh__stat.html#gaf3eee47cce6b1cc41a7a6af6c7d5d39c">vcl::countTriangulatedTriangles</a> (<a class="el" href="classvcl_1_1Box.html">const</a> FaceMeshConcept <a class="el" href="classvcl_1_1Box.html">auto</a> &amp;mesh)</td></tr>
+<tr class="memdesc:gaf3eee47cce6b1cc41a7a6af6c7d5d39c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counts the number of resulting triangles if the input mesh would be triangulated by splitting each face into triangles.  <br /></td></tr>
+<tr class="separator:gaf3eee47cce6b1cc41a7a6af6c7d5d39c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0c437072ca99bee3a747a0859e870fde" id="r_ga0c437072ca99bee3a747a0859e870fde"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga0c437072ca99bee3a747a0859e870fde"><td class="memTemplItemLeft" align="right" valign="top">uint&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__mesh__stat.html#ga0c437072ca99bee3a747a0859e870fde">vcl::countVerticesToDuplicateByWedgeTexCoords</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;mesh, std::vector&lt; std::pair&lt; uint, uint &gt; &gt; &amp;<a class="el" href="classvcl_1_1Box.html">vertWedgeMap</a>=detail::dummyVectorOfPairs, std::list&lt; uint &gt; &amp;<a class="el" href="classvcl_1_1Box.html">vertsToDuplicate</a>=detail::dummyUintList, std::list&lt; std::list&lt; std::pair&lt; uint, uint &gt; &gt; &gt; &amp;<a class="el" href="classvcl_1_1Box.html">facesToReassign</a>=detail::dummyListOfLists)</td></tr>
+<tr class="memdesc:ga0c437072ca99bee3a747a0859e870fde"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function counts the number of vertices that must be duplicated in a mesh to have a unique texcoord per vertex, by checking the texcoords of the wedges of the mesh faces.  <br /></td></tr>
+<tr class="separator:ga0c437072ca99bee3a747a0859e870fde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad5656feacf649e99e4d3113855f20249" id="r_gad5656feacf649e99e4d3113855f20249"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mesh__stat.html#gad5656feacf649e99e4d3113855f20249">vcl::largestFaceSize</a> (<a class="el" href="classvcl_1_1Box.html">const</a> FaceMeshConcept <a class="el" href="classvcl_1_1Box.html">auto</a> &amp;mesh)</td></tr>
+<tr class="memdesc:gad5656feacf649e99e4d3113855f20249"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the largest face size in the mesh.  <br /></td></tr>
+<tr class="separator:gad5656feacf649e99e4d3113855f20249"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>TODO. </p>
@@ -142,9 +155,9 @@ Functions</h2></td></tr>
 template&lt;MeshConcept MeshType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">auto</a> vcl::boundingBox </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">auto</a> vcl::boundingBox </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">const</a> MeshType &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;&#160;</td>
           <td class="paramname"><em>m</em></td><td>)</td>
           <td></td>
         </tr>
@@ -166,6 +179,144 @@ template&lt;MeshConcept MeshType&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The bounding box of the input mesh </dd></dl>
+
+</div>
+</div>
+<a id="gacec0e59c497f366749699b60787ce0f1" name="gacec0e59c497f366749699b60787ce0f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacec0e59c497f366749699b60787ce0f1">&#9670;&#160;</a></span>countPerFaceVertexReferences()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint vcl::countPerFaceVertexReferences </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> FaceMeshConcept <a class="el" href="classvcl_1_1Box.html">auto</a> &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Count the number of references to vertices in the mesh faces. </p>
+<p>If the mesh is a TriangleMesh, the number of references is equal to the number of faces times 3. Otherwise, the function counts the number of references to vertices in each face of the mesh.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>The input mesh. It must satisfy the MeshConcept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of references to vertices in the mesh faces. </dd></dl>
+
+</div>
+</div>
+<a id="gaf3eee47cce6b1cc41a7a6af6c7d5d39c" name="gaf3eee47cce6b1cc41a7a6af6c7d5d39c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf3eee47cce6b1cc41a7a6af6c7d5d39c">&#9670;&#160;</a></span>countTriangulatedTriangles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint vcl::countTriangulatedTriangles </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> FaceMeshConcept <a class="el" href="classvcl_1_1Box.html">auto</a> &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Counts the number of resulting triangles if the input mesh would be triangulated by splitting each face into triangles. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>The input mesh. It must satisfy the MeshConcept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of resulting triangles if the input mesh would be triangulated by splitting each face into triangles. </dd></dl>
+
+</div>
+</div>
+<a id="ga0c437072ca99bee3a747a0859e870fde" name="ga0c437072ca99bee3a747a0859e870fde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0c437072ca99bee3a747a0859e870fde">&#9670;&#160;</a></span>countVerticesToDuplicateByWedgeTexCoords()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;FaceMeshConcept MeshType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">uint vcl::countVerticesToDuplicateByWedgeTexCoords </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::pair&lt; uint, uint &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vertWedgeMap</em> = <code>detail::dummyVectorOfPairs</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::list&lt; uint &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vertsToDuplicate</em> = <code>detail::dummyUintList</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::list&lt; std::list&lt; std::pair&lt; uint, uint &gt; &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>facesToReassign</em> = <code>detail::dummyListOfLists</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function counts the number of vertices that must be duplicated in a mesh to have a unique texcoord per vertex, by checking the texcoords of the wedges of the mesh faces. </p>
+<p>The function returns the number of vertices that must be duplicated (i.e., added to the mesh) to have a unique texcoord per vertex. The function also returns a vector that tells, for each vertex, the pair face/wedge index in the face that must be kept for the vertex, the list of vertices to duplicate, and the list of faces that must be reassigned to the duplicated vertices.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>The input mesh. It must satisfy the FaceMeshConcept and must have per-face wedge texcoords. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">vertWedgeMap</td><td>A vector that tells, for each vertex, the pair face/wedge index in the face that must be kept for the vertex (it allows to index the texcoords of the vertex). </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">vertsToDuplicate</td><td>a list of vertices that must be duplicated (each element of the list is the index of the vertex to duplicate). </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">facesToReassign</td><td>a list of lists of pairs face/wedge index in the face that must be reassigned to the duplicated vertices (each list of pairs is the list of faces that must be reassigned to the corresponding duplicated vertex). The list contains a list for each vertex to duplicate. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of vertices that must be duplicated. </dd></dl>
+
+</div>
+</div>
+<a id="gad5656feacf649e99e4d3113855f20249" name="gad5656feacf649e99e4d3113855f20249"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad5656feacf649e99e4d3113855f20249">&#9670;&#160;</a></span>largestFaceSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint vcl::largestFaceSize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> FaceMeshConcept <a class="el" href="classvcl_1_1Box.html">auto</a> &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the largest face size in the mesh. </p>
+<p>If the mesh is a TriangleMesh, the function returns 3. Otherwise, the function returns the size of the largest face in the mesh.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>The input mesh. It must satisfy the MeshConcept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The largest face size in the mesh. </dd></dl>
 
 </div>
 </div>

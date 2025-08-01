@@ -112,7 +112,7 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1VertexPointerRangeConcep
 <p>The VertexPointerRangeConcept evaluates to true if Rng is a valid Range on Vertex Pointers.  
 <a href="conceptvcl_1_1VertexPointerRangeConcept.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="vertex__range_8h_source.html">vclib/concepts/ranges/mesh/vertex_range.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="mesh_2views_2elements_2vertex_8h_source.html">vclib/mesh/views/elements/vertex.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> Rng&gt;</div>
 <div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1VertexPointerRangeConcept.html">vcl::VertexPointerRangeConcept</a> = </div>
@@ -120,10 +120,10 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1VertexPointerRangeConcep
 <div class="line">    <a class="code hl_concept" href="conceptvcl_1_1IsPointer.html">IsPointer&lt;typename std::ranges::iterator_t&lt;Rng&gt;::value_type</a>&gt; &amp;&amp;</div>
 <div class="line">    <a class="code hl_concept" href="conceptvcl_1_1VertexConcept.html">VertexConcept</a>&lt;<span class="keyword">typename</span> std::decay_t&lt;</div>
 <div class="line">        RemovePtr&lt;typename std::ranges::iterator_t&lt;Rng&gt;::value_type&gt;&gt;&gt;</div>
-<div class="ttc" id="aconceptvcl_1_1IsPointer_html"><div class="ttname"><a href="conceptvcl_1_1IsPointer.html">vcl::IsPointer</a></div><div class="ttdoc">The IsPointer concept is satisfied if T is a Pointer, even if the type T is a reference to a pointer.</div><div class="ttdef"><b>Definition</b> pointers.h:53</div></div>
+<div class="ttc" id="aconceptvcl_1_1IsPointer_html"><div class="ttname"><a href="conceptvcl_1_1IsPointer.html">vcl::IsPointer</a></div><div class="ttdoc">The IsPointer concept is satisfied if T is a Pointer, even if the type T is a reference to a pointer.</div><div class="ttdef"><b>Definition</b> pointers.h:54</div></div>
 <div class="ttc" id="aconceptvcl_1_1Range_html"><div class="ttname"><a href="conceptvcl_1_1Range.html">vcl::Range</a></div><div class="ttdoc">Utility concept that is evaluated true if T is a range, e.g. if has a begin and an end.</div><div class="ttdef"><b>Definition</b> range.h:39</div></div>
-<div class="ttc" id="aconceptvcl_1_1VertexConcept_html"><div class="ttname"><a href="conceptvcl_1_1VertexConcept.html">vcl::VertexConcept</a></div><div class="ttdoc">The VertexConcept describes how a Vertex element that can be used for a VertexContainer should be org...</div><div class="ttdef"><b>Definition</b> vertex.h:106</div></div>
-<div class="ttc" id="aconceptvcl_1_1VertexPointerRangeConcept_html"><div class="ttname"><a href="conceptvcl_1_1VertexPointerRangeConcept.html">vcl::VertexPointerRangeConcept</a></div><div class="ttdoc">The VertexPointerRangeConcept evaluates to true if Rng is a valid Range on Vertex Pointers.</div><div class="ttdef"><b>Definition</b> vertex_range.h:56</div></div>
+<div class="ttc" id="aconceptvcl_1_1VertexConcept_html"><div class="ttname"><a href="conceptvcl_1_1VertexConcept.html">vcl::VertexConcept</a></div><div class="ttdoc">A concept that checks whether a class has (inherits from) a Vertex class.</div><div class="ttdef"><b>Definition</b> vertex.h:80</div></div>
+<div class="ttc" id="aconceptvcl_1_1VertexPointerRangeConcept_html"><div class="ttname"><a href="conceptvcl_1_1VertexPointerRangeConcept.html">vcl::VertexPointerRangeConcept</a></div><div class="ttdoc">The VertexPointerRangeConcept evaluates to true if Rng is a valid Range on Vertex Pointers.</div><div class="ttdef"><b>Definition</b> vertex.h:54</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The VertexPointerRangeConcept evaluates to true if Rng is a valid Range on Vertex Pointers. </p>
 <p>This means that Rng must be a Range of pointers to a type that satisfy the VertexConcept. </p>

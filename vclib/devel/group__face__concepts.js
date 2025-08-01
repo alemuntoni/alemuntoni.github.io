@@ -1,8 +1,8 @@
 var group__face__concepts =
 [
-    [ "vcl::face::HasAdjacentEdges", "conceptvcl_1_1face_1_1HasAdjacentEdges.html", null ],
     [ "vcl::FaceConcept", "conceptvcl_1_1FaceConcept.html", null ],
     [ "vcl::PolygonFaceConcept", "conceptvcl_1_1PolygonFaceConcept.html", null ],
+    [ "vcl::face::HasAdjacentEdges", "conceptvcl_1_1face_1_1HasAdjacentEdges.html", null ],
     [ "vcl::FaceRangeConcept", "conceptvcl_1_1FaceRangeConcept.html", null ],
     [ "vcl::FacePointerRangeConcept", "conceptvcl_1_1FacePointerRangeConcept.html", null ],
     [ "vcl::face::HasOptionalAdjacentEdges", "conceptvcl_1_1face_1_1HasOptionalAdjacentEdges.html", null ],

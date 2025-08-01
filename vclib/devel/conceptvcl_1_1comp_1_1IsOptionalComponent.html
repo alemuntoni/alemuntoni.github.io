@@ -105,22 +105,22 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1comp_1_1IsOptionalCompon
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">vcl::comp::IsOptionalComponent Concept Reference<div class="ingroups"><a class="el" href="group__concepts.html">Concepts</a> &raquo; <a class="el" href="group__lib__concepts.html">Library Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__concepts.html">Mesh Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__components.html">Components</a> &raquo; <a class="el" href="group__components__concepts.html">Components Concepts</a></div></div></div>
+  <div class="headertitle"><div class="title">vcl::comp::IsOptionalComponent Concept Reference<div class="ingroups"><a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__requirements.html">Mesh Requirements</a> &raquo; <a class="el" href="group__mesh__concepts.html">Mesh Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__components.html">Components</a> &raquo; <a class="el" href="group__components__concepts.html">Components Concepts</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>Evaluates to true if the type <code>T</code> is a component that is stored vertically in its element container, and it is optional.  
 <a href="conceptvcl_1_1comp_1_1IsOptionalComponent.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="concepts_2mesh_2components_2component_8h_source.html">vclib/concepts/mesh/components/component.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="concepts_2component_8h_source.html">vclib/mesh/components/concepts/component.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1IsOptionalComponent.html">vcl::comp::IsOptionalComponent</a> = </div>
 <div class="line">    <a class="code hl_concept" href="conceptvcl_1_1comp_1_1IsVerticalComponent.html">IsVerticalComponent&lt;T&gt;</a> &amp;&amp; RemoveRef&lt;T&gt;::IS_OPTIONAL == <span class="keyword">true</span> &amp;&amp; <span class="keyword">requires</span> {</div>
 <div class="line">        { RemoveRef&lt;T&gt;::IS_OPTIONAL } -&gt; std::same_as&lt;const bool&amp;&gt;;</div>
 <div class="line">    }</div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1IsOptionalComponent_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1IsOptionalComponent.html">vcl::comp::IsOptionalComponent</a></div><div class="ttdoc">Evaluates to true if the type T is a component that is stored vertically in its element container,...</div><div class="ttdef"><b>Definition</b> component.h:72</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1IsVerticalComponent_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1IsVerticalComponent.html">vcl::comp::IsVerticalComponent</a></div><div class="ttdoc">Evaluates to true if the type T is a component that is stored vertically in its element container.</div><div class="ttdef"><b>Definition</b> component.h:57</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1IsOptionalComponent_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1IsOptionalComponent.html">vcl::comp::IsOptionalComponent</a></div><div class="ttdoc">Evaluates to true if the type T is a component that is stored vertically in its element container,...</div><div class="ttdef"><b>Definition</b> component.h:74</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1IsVerticalComponent_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1IsVerticalComponent.html">vcl::comp::IsVerticalComponent</a></div><div class="ttdoc">Evaluates to true if the type T is a component that is stored vertically in its element container.</div><div class="ttdef"><b>Definition</b> component.h:59</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Evaluates to true if the type <code>T</code> is a component that is stored vertically in its element container, and it is optional. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>

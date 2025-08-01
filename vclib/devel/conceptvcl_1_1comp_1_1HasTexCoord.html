@@ -105,25 +105,28 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1comp_1_1HasTexCoord.html
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">vcl::comp::HasTexCoord Concept Reference<div class="ingroups"><a class="el" href="group__concepts.html">Concepts</a> &raquo; <a class="el" href="group__lib__concepts.html">Library Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__concepts.html">Mesh Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__components.html">Components</a> &raquo; <a class="el" href="group__components__concepts.html">Components Concepts</a></div></div></div>
+  <div class="headertitle"><div class="title">vcl::comp::HasTexCoord Concept Reference<div class="ingroups"><a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__requirements.html">Mesh Requirements</a> &raquo; <a class="el" href="group__mesh__concepts.html">Mesh Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__components.html">Components</a> &raquo; <a class="el" href="group__components__concepts.html">Components Concepts</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>HasTexCoord concept is satisfied only if a Element class provides the types and member functions specified in this concept. These types and member functions allow to access to a <a class="el" href="classvcl_1_1comp_1_1TexCoord.html">vcl::comp::TexCoord</a> component of a given element.  
+<p>A concept that checks whether a type T (that should be a Element) has the TexCoord component (inherits from it).  
 <a href="conceptvcl_1_1comp_1_1HasTexCoord.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="concepts_2mesh_2components_2tex__coord_8h_source.html">vclib/concepts/mesh/components/tex_coord.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="mesh_2components_2tex__coord_8h_source.html">vclib/mesh/components/tex_coord.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasTexCoord.html">vcl::comp::HasTexCoord</a> =  <span class="keyword">requires</span> (T&amp;&amp; obj) {</div>
-<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::TexCoordType;</div>
-<div class="line">    { obj.texCoord() } -&gt; <a class="code hl_concept" href="conceptvcl_1_1TexCoordConcept.html">TexCoordConcept</a>;</div>
-<div class="line">}</div>
-<div class="ttc" id="aconceptvcl_1_1TexCoordConcept_html"><div class="ttname"><a href="conceptvcl_1_1TexCoordConcept.html">vcl::TexCoordConcept</a></div><div class="ttdoc">A concept representing a Texture Coordinate.</div><div class="ttdef"><b>Definition</b> tex_coord.h:37</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasTexCoord_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasTexCoord.html">vcl::comp::HasTexCoord</a></div><div class="ttdoc">HasTexCoord concept is satisfied only if a Element class provides the types and member functions spec...</div><div class="ttdef"><b>Definition</b> tex_coord.h:47</div></div>
+<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasTexCoord.html">vcl::comp::HasTexCoord</a> =  TTB::IsDerivedFromSpecializationOfV&lt;T, TexCoord&gt;</div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasTexCoord_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasTexCoord.html">vcl::comp::HasTexCoord</a></div><div class="ttdoc">A concept that checks whether a type T (that should be a Element) has the TexCoord component (inherit...</div><div class="ttdef"><b>Definition</b> tex_coord.h:132</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>HasTexCoord concept is satisfied only if a Element class provides the types and member functions specified in this concept. These types and member functions allow to access to a <a class="el" href="classvcl_1_1comp_1_1TexCoord.html">vcl::comp::TexCoord</a> component of a given element. </p>
-<p>Note that this concept does not discriminate between the Horizontal TexCoord component and the vertical OptionalTexCoord component, therefore it does not guarantee that a template Element type that satisfies this concept provides TexCoord component at runtime (it is guaranteed only that the proper member functions are available at compile time). </p>
+<div class="textblock"><p>A concept that checks whether a type T (that should be a Element) has the TexCoord component (inherits from it). </p>
+<p>The concept is satisfied if T is a class that inherits from <a class="el" href="classvcl_1_1comp_1_1TexCoord.html" title="The TexCoord class represents a component that stores a texture coordinate.">vcl::comp::TexCoord</a>, with any template arguments.</p>
+<p>Note that this concept does not discriminate between the Horizontal TexCoord component and the vertical OptionalTexCoord component, therefore it does not guarantee that a template Element type that satisfies this concept provides TexCoord component at runtime (it is guaranteed only that the proper member functions are available at compile time).</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type to be tested for conformity to the HasTexCoord. </td></tr>
+  </table>
+  </dd>
+</dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

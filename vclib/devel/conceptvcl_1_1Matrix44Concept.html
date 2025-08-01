@@ -105,21 +105,21 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1Matrix44Concept.html',''
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">vcl::Matrix44Concept Concept Reference<div class="ingroups"><a class="el" href="group__concepts.html">Concepts</a> &raquo; <a class="el" href="group__lib__concepts.html">Library Concepts</a> &raquo; <a class="el" href="group__space__concepts.html">Space Concepts</a></div></div></div>
+  <div class="headertitle"><div class="title">vcl::Matrix44Concept Concept Reference<div class="ingroups"><a class="el" href="group__space__core.html">Core Data Structures</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>Concept for 4x4 matrices.  
 <a href="conceptvcl_1_1Matrix44Concept.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="core_2include_2vclib_2concepts_2space_2matrix_8h_source.html">vclib/concepts/space/matrix.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="core_2include_2vclib_2space_2core_2matrix_8h_source.html">vclib/space/core/matrix.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1Matrix44Concept.html">vcl::Matrix44Concept</a> = </div>
 <div class="line">    <a class="code hl_concept" href="conceptvcl_1_1EigenMatrixConcept.html">EigenMatrixConcept&lt;T&gt;</a> &amp;&amp; (RemoveRef&lt;T&gt;::RowsAtCompileTime == 4) &amp;&amp;</div>
 <div class="line">    (RemoveRef&lt;T&gt;::ColsAtCompileTime == 4)</div>
-<div class="ttc" id="aconceptvcl_1_1EigenMatrixConcept_html"><div class="ttname"><a href="conceptvcl_1_1EigenMatrixConcept.html">vcl::EigenMatrixConcept</a></div><div class="ttdoc">Concept for Eigen matrices. It is satisfied when T is an Eigen matrix.</div><div class="ttdef"><b>Definition</b> matrix.h:55</div></div>
-<div class="ttc" id="aconceptvcl_1_1Matrix44Concept_html"><div class="ttname"><a href="conceptvcl_1_1Matrix44Concept.html">vcl::Matrix44Concept</a></div><div class="ttdoc">Concept for 4x4 matrices.</div><div class="ttdef"><b>Definition</b> matrix.h:104</div></div>
+<div class="ttc" id="aconceptvcl_1_1EigenMatrixConcept_html"><div class="ttname"><a href="conceptvcl_1_1EigenMatrixConcept.html">vcl::EigenMatrixConcept</a></div><div class="ttdoc">A concept representing an Eigen Matrix.</div><div class="ttdef"><b>Definition</b> matrix.h:102</div></div>
+<div class="ttc" id="aconceptvcl_1_1Matrix44Concept_html"><div class="ttname"><a href="conceptvcl_1_1Matrix44Concept.html">vcl::Matrix44Concept</a></div><div class="ttdoc">Concept for 4x4 matrices.</div><div class="ttdef"><b>Definition</b> matrix.h:62</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Concept for 4x4 matrices. </p>
 </div></div><!-- contents -->

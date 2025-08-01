@@ -105,22 +105,23 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1ElementOrMeshConcept.htm
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">vcl::ElementOrMeshConcept Concept Reference<div class="ingroups"><a class="el" href="group__concepts.html">Concepts</a> &raquo; <a class="el" href="group__lib__concepts.html">Library Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__concepts.html">Mesh Concepts</a></div></div></div>
+  <div class="headertitle"><div class="title">vcl::ElementOrMeshConcept Concept Reference<div class="ingroups"><a class="el" href="group__mesh.html">Mesh</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__requirements.html">Mesh Requirements</a> &raquo; <a class="el" href="group__mesh__concepts.html">Mesh Concepts</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>the ElementOrMesh Concept is evaluated to true when the type is either a Mesh or an Element.  
+<p>A concept that checks whether a class is a Mesh or an Element.  
 <a href="conceptvcl_1_1ElementOrMeshConcept.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="mesh__concept_8h_source.html">vclib/concepts/mesh/mesh_concept.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="mesh_2mesh_8h_source.html">vclib/mesh/mesh.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1ElementOrMeshConcept.html">vcl::ElementOrMeshConcept</a> =  <a class="code hl_concept" href="conceptvcl_1_1MeshConcept.html">MeshConcept&lt;T&gt;</a> || <a class="code hl_concept" href="conceptvcl_1_1ElementConcept.html">ElementConcept&lt;T&gt;</a></div>
-<div class="ttc" id="aconceptvcl_1_1ElementConcept_html"><div class="ttname"><a href="conceptvcl_1_1ElementConcept.html">vcl::ElementConcept</a></div><div class="ttdef"><b>Definition</b> element.h:31</div></div>
-<div class="ttc" id="aconceptvcl_1_1ElementOrMeshConcept_html"><div class="ttname"><a href="conceptvcl_1_1ElementOrMeshConcept.html">vcl::ElementOrMeshConcept</a></div><div class="ttdoc">the ElementOrMesh Concept is evaluated to true when the type is either a Mesh or an Element.</div><div class="ttdef"><b>Definition</b> mesh_concept.h:199</div></div>
-<div class="ttc" id="aconceptvcl_1_1MeshConcept_html"><div class="ttname"><a href="conceptvcl_1_1MeshConcept.html">vcl::MeshConcept</a></div><div class="ttdoc">The Mesh Concept is evaluated to true when the type is a Mesh.</div><div class="ttdef"><b>Definition</b> mesh_concept.h:77</div></div>
+<div class="ttc" id="aconceptvcl_1_1ElementConcept_html"><div class="ttname"><a href="conceptvcl_1_1ElementConcept.html">vcl::ElementConcept</a></div><div class="ttdef"><b>Definition</b> element.h:54</div></div>
+<div class="ttc" id="aconceptvcl_1_1ElementOrMeshConcept_html"><div class="ttname"><a href="conceptvcl_1_1ElementOrMeshConcept.html">vcl::ElementOrMeshConcept</a></div><div class="ttdoc">A concept that checks whether a class is a Mesh or an Element.</div><div class="ttdef"><b>Definition</b> mesh.h:2180</div></div>
+<div class="ttc" id="aconceptvcl_1_1MeshConcept_html"><div class="ttname"><a href="conceptvcl_1_1MeshConcept.html">vcl::MeshConcept</a></div><div class="ttdoc">A concept that checks whether a class is (inherits from) a Mesh class.</div><div class="ttdef"><b>Definition</b> mesh.h:2167</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>the ElementOrMesh Concept is evaluated to true when the type is either a Mesh or an Element. </p>
+<div class="textblock"><p>A concept that checks whether a class is a Mesh or an Element. </p>
+<p>The concept is satisfied when <code>T</code> is a class that satisfies the MeshConcept or the ElementConcept. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

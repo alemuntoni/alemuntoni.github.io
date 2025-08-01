@@ -105,28 +105,25 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1Point3Concept.html','');
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">vcl::Point3Concept Concept Reference<div class="ingroups"><a class="el" href="group__concepts.html">Concepts</a> &raquo; <a class="el" href="group__lib__concepts.html">Library Concepts</a> &raquo; <a class="el" href="group__space__concepts.html">Space Concepts</a></div></div></div>
+  <div class="headertitle"><div class="title">vcl::Point3Concept Concept Reference<div class="ingroups"><a class="el" href="group__space__core.html">Core Data Structures</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Concept for points in three-dimensional space.  
+<p>A concept representing a 3D Point.  
 <a href="conceptvcl_1_1Point3Concept.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="concepts_2space_2point_8h_source.html">vclib/concepts/space/point.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="point_8h_source.html">vclib/space/core/point.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1Point3Concept.html">vcl::Point3Concept</a> = </div>
-<div class="line">    <a class="code hl_concept" href="conceptvcl_1_1PointConcept.html">PointConcept&lt;T&gt;</a> &amp;&amp; RemoveRef&lt;T&gt;::DIM == 3 &amp;&amp; <span class="keyword">requires</span> (T&amp;&amp; obj) {</div>
-<div class="line">        { obj.cross(obj) } -&gt; std::convertible_to&lt;RemoveRef&lt;T&gt;&gt;;</div>
-<div class="line">    }</div>
-<div class="ttc" id="aconceptvcl_1_1Point3Concept_html"><div class="ttname"><a href="conceptvcl_1_1Point3Concept.html">vcl::Point3Concept</a></div><div class="ttdoc">Concept for points in three-dimensional space.</div><div class="ttdef"><b>Definition</b> point.h:130</div></div>
-<div class="ttc" id="aconceptvcl_1_1PointConcept_html"><div class="ttname"><a href="conceptvcl_1_1PointConcept.html">vcl::PointConcept</a></div><div class="ttdoc">Concept for types representing points in Euclidean space.</div><div class="ttdef"><b>Definition</b> point.h:40</div></div>
+<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1Point3Concept.html">vcl::Point3Concept</a> =  <a class="code hl_concept" href="conceptvcl_1_1PointConcept.html">PointConcept&lt;T&gt;</a> &amp;&amp; RemoveRef&lt;T&gt;::DIM == 3</div>
+<div class="ttc" id="aconceptvcl_1_1Point3Concept_html"><div class="ttname"><a href="conceptvcl_1_1Point3Concept.html">vcl::Point3Concept</a></div><div class="ttdoc">A concept representing a 3D Point.</div><div class="ttdef"><b>Definition</b> point.h:871</div></div>
+<div class="ttc" id="aconceptvcl_1_1PointConcept_html"><div class="ttname"><a href="conceptvcl_1_1PointConcept.html">vcl::PointConcept</a></div><div class="ttdoc">A concept representing a Point.</div><div class="ttdef"><b>Definition</b> point.h:843</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Concept for points in three-dimensional space. </p>
-<p>A type satisfies this concept if it satisfies the <a class="el" href="conceptvcl_1_1PointConcept.html" title="Concept for types representing points in Euclidean space.">vcl::PointConcept</a> and if the <code>DIM</code> value of the point type is 3.</p>
+<div class="textblock"><p>A concept representing a 3D Point. </p>
+<p>The concept is satisfied when <code>T</code> is a class that instantiates or derives from a Point class having any scalar type and dimension 3.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>The type to be tested for conformity to the Point3Concept. </td></tr>
+    <tr><td class="paramname">T</td><td>The type to be tested for conformity to the Point4Concept. </td></tr>
   </table>
   </dd>
 </dl>

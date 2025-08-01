@@ -105,39 +105,33 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1TriangleConcept.html',''
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">vcl::TriangleConcept Concept Reference<div class="ingroups"><a class="el" href="group__concepts.html">Concepts</a> &raquo; <a class="el" href="group__lib__concepts.html">Library Concepts</a> &raquo; <a class="el" href="group__space__concepts.html">Space Concepts</a></div></div></div>
+  <div class="headertitle"><div class="title">vcl::TriangleConcept Concept Reference<div class="ingroups"><a class="el" href="group__space__core.html">Core Data Structures</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Concept for types representing triangles in Euclidean space.  
+<p>A concept representing a Triangle.  
 <a href="conceptvcl_1_1TriangleConcept.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="concepts_2space_2triangle_8h_source.html">vclib/concepts/space/triangle.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="triangle__wrapper_8h_source.html">vclib/space/core/triangle_wrapper.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1TriangleConcept.html">vcl::TriangleConcept</a> =  <span class="keyword">requires</span> (</div>
-<div class="line">    T&amp;&amp;                               obj,</div>
-<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::PointType  p,</div>
-<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::ScalarType s) {</div>
-<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::ScalarType;</div>
-<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::PointType;</div>
-<div class="line"> </div>
-<div class="line">    obj.DIM;</div>
-<div class="line">    obj.size() == 3;</div>
-<div class="line"> </div>
-<div class="line">    RemoveRef&lt;T&gt;(p, p, p);</div>
-<div class="line"> </div>
-<div class="line">    { obj.point(uint()) } -&gt; <a class="code hl_concept" href="conceptvcl_1_1PointConcept.html">PointConcept</a>;</div>
-<div class="line">    { <a class="code hl_class" href="classvcl_1_1Segment.html">obj</a>.sideLength(uint()) } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(s)&gt;;</div>
-<div class="line">    { obj.barycenter() } -&gt; PointConcept;</div>
-<div class="line">    { obj.perimeter() } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(s)&gt;;</div>
-<div class="line">    { obj.area() } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(s)&gt;;</div>
-<div class="line">}</div>
-<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:43</div></div>
-<div class="ttc" id="aconceptvcl_1_1PointConcept_html"><div class="ttname"><a href="conceptvcl_1_1PointConcept.html">vcl::PointConcept</a></div><div class="ttdoc">Concept for types representing points in Euclidean space.</div><div class="ttdef"><b>Definition</b> point.h:40</div></div>
-<div class="ttc" id="aconceptvcl_1_1TriangleConcept_html"><div class="ttname"><a href="conceptvcl_1_1TriangleConcept.html">vcl::TriangleConcept</a></div><div class="ttdoc">Concept for types representing triangles in Euclidean space.</div><div class="ttdef"><b>Definition</b> triangle.h:38</div></div>
+<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1TriangleConcept.html">vcl::TriangleConcept</a> = </div>
+<div class="line">    std::derived_from&lt; </div>
+<div class="line">        std::remove_cvref_t&lt;T&gt;,</div>
+<div class="line">        Triangle&lt;typename RemoveRef&lt;T&gt;::PointType&gt;&gt; ||</div>
+<div class="line">    std::derived_from&lt; </div>
+<div class="line">        std::remove_cvref_t&lt;T&gt;,</div>
+<div class="line">        TriangleWrapper&lt;typename RemoveRef&lt;T&gt;::PointType&gt;&gt;</div>
+<div class="ttc" id="aconceptvcl_1_1TriangleConcept_html"><div class="ttname"><a href="conceptvcl_1_1TriangleConcept.html">vcl::TriangleConcept</a></div><div class="ttdoc">A concept representing a Triangle.</div><div class="ttdef"><b>Definition</b> triangle_wrapper.h:272</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Concept for types representing triangles in Euclidean space. </p>
+<div class="textblock"><p>A concept representing a Triangle. </p>
+<p>The concept is satisfied when <code>T</code> is a class that instantiates or derives from a Triangle class having any Point type.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type to be tested for conformity to the TriangleConcept. </td></tr>
+  </table>
+  </dd>
+</dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

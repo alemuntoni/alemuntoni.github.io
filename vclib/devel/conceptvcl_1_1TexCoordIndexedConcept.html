@@ -105,42 +105,23 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1TexCoordIndexedConcept.h
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">vcl::TexCoordIndexedConcept Concept Reference</div></div>
+  <div class="headertitle"><div class="title">vcl::TexCoordIndexedConcept Concept Reference<div class="ingroups"><a class="el" href="group__space__core.html">Core Data Structures</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>A concept representing a Texture Coordinate with an index.  
+<p>A concept representing a TexCoordIndexed.  
 <a href="conceptvcl_1_1TexCoordIndexedConcept.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="concepts_2space_2tex__coord__indexed_8h_source.html">vclib/concepts/space/tex_coord_indexed.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="tex__coord__indexed_8h_source.html">vclib/space/core/tex_coord_indexed.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1TexCoordIndexedConcept.html">vcl::TexCoordIndexedConcept</a> = </div>
-<div class="line">    <a class="code hl_concept" href="conceptvcl_1_1TexCoordConcept.html">TexCoordConcept&lt;T&gt;</a> &amp;&amp; <span class="keyword">requires</span> (</div>
-<div class="line">                              T&amp;&amp;                               obj,</div>
-<div class="line">                              ushort                            u,</div>
-<div class="line">                              ushort&amp;                           uR,</div>
-<div class="line">                              <span class="keyword">typename</span> RemoveRef&lt;T&gt;::ScalarType s) {</div>
-<div class="line">        <span class="keyword">typename</span> RemoveRef&lt;T&gt;::ScalarType;</div>
-<div class="line"> </div>
-<div class="line">        RemoveRef&lt;T&gt;();</div>
-<div class="line">        RemoveRef&lt;T&gt;(s, s, u);</div>
-<div class="line"> </div>
-<div class="line">        { obj.index() } -&gt; std::convertible_to&lt;<span class="keyword">decltype</span>(u)&gt;;</div>
-<div class="line"> </div>
-<div class="line">        { <a class="code hl_class" href="classvcl_1_1Segment.html">obj &lt;=&gt;</a> <a class="code hl_class" href="classvcl_1_1Segment.html">obj</a> } -&gt; std::convertible_to&lt;std::partial_ordering&gt;;</div>
-<div class="line"> </div>
-<div class="line">        </div>
-<div class="line">        <span class="keyword">requires</span> IsConst&lt;T&gt; || <span class="keyword">requires</span> {</div>
-<div class="line">            { obj.index() } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(uR)&gt;;</div>
-<div class="line">            { obj.set(s, s, u) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">        };</div>
-<div class="line">    }</div>
-<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:43</div></div>
-<div class="ttc" id="aconceptvcl_1_1TexCoordConcept_html"><div class="ttname"><a href="conceptvcl_1_1TexCoordConcept.html">vcl::TexCoordConcept</a></div><div class="ttdoc">A concept representing a Texture Coordinate.</div><div class="ttdef"><b>Definition</b> tex_coord.h:37</div></div>
-<div class="ttc" id="aconceptvcl_1_1TexCoordIndexedConcept_html"><div class="ttname"><a href="conceptvcl_1_1TexCoordIndexedConcept.html">vcl::TexCoordIndexedConcept</a></div><div class="ttdoc">A concept representing a Texture Coordinate with an index.</div><div class="ttdef"><b>Definition</b> tex_coord_indexed.h:37</div></div>
+<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1TexCoordIndexedConcept.html">vcl::TexCoordIndexedConcept</a> =  std::derived_from&lt; </div>
+<div class="line">    std::remove_cvref_t&lt;T&gt;,</div>
+<div class="line">    TexCoordIndexed&lt;typename RemoveRef&lt;T&gt;::ScalarType&gt;&gt;</div>
+<div class="ttc" id="aconceptvcl_1_1TexCoordIndexedConcept_html"><div class="ttname"><a href="conceptvcl_1_1TexCoordIndexedConcept.html">vcl::TexCoordIndexedConcept</a></div><div class="ttdoc">A concept representing a TexCoordIndexed.</div><div class="ttdef"><b>Definition</b> tex_coord_indexed.h:134</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A concept representing a Texture Coordinate with an index. </p>
+<div class="textblock"><p>A concept representing a TexCoordIndexed. </p>
+<p>The concept is satisfied when <code>T</code> is a class that instantiates or derives from a TexCoordIndexed class of any scalar type.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The type to be tested for conformity to the TexCoordIndexedConcept. </td></tr>

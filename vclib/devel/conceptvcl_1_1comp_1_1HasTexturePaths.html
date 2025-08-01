@@ -105,48 +105,30 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1comp_1_1HasTexturePaths.
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">vcl::comp::HasTexturePaths Concept Reference<div class="ingroups"><a class="el" href="group__concepts.html">Concepts</a> &raquo; <a class="el" href="group__lib__concepts.html">Library Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__concepts.html">Mesh Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__components.html">Components</a> &raquo; <a class="el" href="group__components__concepts.html">Components Concepts</a></div></div></div>
+  <div class="headertitle"><div class="title">vcl::comp::HasTexturePaths Concept Reference<div class="ingroups"><a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__requirements.html">Mesh Requirements</a> &raquo; <a class="el" href="group__mesh__concepts.html">Mesh Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__components.html">Components</a> &raquo; <a class="el" href="group__components__concepts.html">Components Concepts</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>HasTexturePaths concept is satisfied only if a Mesh class provides the member functions specified in this concept. These member functions allows to access to a <a class="el" href="classvcl_1_1comp_1_1TexturePaths.html">vcl::comp::TexturePaths</a> component of a given mesh.  
+<p>A concept that checks whether a type T (that should be a Mesh) has the TexturePaths or TextureImages component (inherits from it).  
 <a href="conceptvcl_1_1comp_1_1HasTexturePaths.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="concepts_2mesh_2components_2texture__paths_8h_source.html">vclib/concepts/mesh/components/texture_paths.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="textures_8h_source.html">vclib/mesh/components/concepts/textures.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasTexturePaths.html">vcl::comp::HasTexturePaths</a> =  <span class="keyword">requires</span> (T&amp;&amp; obj) {</div>
-<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::TexFileNamesIterator;</div>
-<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::ConstTexFileNamesIterator;</div>
-<div class="line"> </div>
-<div class="line">    { obj.textureNumber() } -&gt; std::same_as&lt;uint&gt;;</div>
-<div class="line">    { <a class="code hl_class" href="classvcl_1_1Segment.html">obj</a>.texturePath(<a class="code hl_class" href="classvcl_1_1Segment.html">uint</a>()) } -&gt; std::convertible_to&lt;std::string&gt;;</div>
-<div class="line"> </div>
-<div class="line">    { <a class="code hl_class" href="classvcl_1_1Segment.html">obj</a>.meshBasePath() } -&gt; std::convertible_to&lt;std::string&gt;;</div>
-<div class="line">    { obj.indexOfTexturePath(std::string()) } -&gt; std::same_as&lt;uint&gt;;</div>
-<div class="line"> </div>
-<div class="line">    { obj.texturePathBegin() } -&gt; InputIterator&lt;std::string&gt;;</div>
-<div class="line">    { obj.texturePathEnd() } -&gt; InputIterator&lt;std::string&gt;;</div>
-<div class="line">    { obj.texturePaths() } -&gt; InputRange&lt;std::string&gt;;</div>
-<div class="line"> </div>
-<div class="line">    </div>
-<div class="line">    <span class="keyword">requires</span> IsConst&lt;T&gt; || <span class="keyword">requires</span> {</div>
-<div class="line">        { obj.texturePath(uint()) } -&gt; std::same_as&lt;std::string&amp;&gt;;</div>
-<div class="line">        { obj.meshBasePath() } -&gt; std::same_as&lt;std::string&amp;&gt;;</div>
-<div class="line"> </div>
-<div class="line">        { obj.clearTexturePaths() } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">        { obj.pushTexturePath(std::string()) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line"> </div>
-<div class="line">        { obj.texturePathBegin() } -&gt; OutputIterator&lt;std::string&gt;;</div>
-<div class="line">        { obj.texturePathEnd() } -&gt; OutputIterator&lt;std::string&gt;;</div>
-<div class="line">        { obj.texturePaths() } -&gt; OutputRange&lt;std::string&gt;;</div>
-<div class="line">    };</div>
-<div class="line">}</div>
-<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:43</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasTexturePaths_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasTexturePaths.html">vcl::comp::HasTexturePaths</a></div><div class="ttdoc">HasTexturePaths concept is satisfied only if a Mesh class provides the member functions specified in ...</div><div class="ttdef"><b>Definition</b> texture_paths.h:47</div></div>
+<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasTexturePaths.html">vcl::comp::HasTexturePaths</a> = </div>
+<div class="line">    <a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasTextureImages.html">HasTextureImages&lt;T&gt;</a> ||</div>
+<div class="line">    std::derived_from&lt;std::remove_cvref_t&lt;T&gt;, TexturePaths&gt;</div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasTextureImages_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasTextureImages.html">vcl::comp::HasTextureImages</a></div><div class="ttdoc">A concept that checks whether a type T (that should be a Mesh) has the TextureImages component (inher...</div><div class="ttdef"><b>Definition</b> textures.h:45</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasTexturePaths_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasTexturePaths.html">vcl::comp::HasTexturePaths</a></div><div class="ttdoc">A concept that checks whether a type T (that should be a Mesh) has the TexturePaths or TextureImages ...</div><div class="ttdef"><b>Definition</b> textures.h:61</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>HasTexturePaths concept is satisfied only if a Mesh class provides the member functions specified in this concept. These member functions allows to access to a <a class="el" href="classvcl_1_1comp_1_1TexturePaths.html">vcl::comp::TexturePaths</a> component of a given mesh. </p>
-<dl class="section note"><dt>Note</dt><dd>This concept is satisfied also if a Mesh provides the <a class="el" href="classvcl_1_1comp_1_1TextureImages.html">vcl::comp::TextureImages</a> component, since the texture paths are stored along with the textures. </dd></dl>
+<div class="textblock"><p>A concept that checks whether a type T (that should be a Mesh) has the TexturePaths or TextureImages component (inherits from it). </p>
+<p>The concept is satisfied if T is a class that inherits from <a class="el" href="classvcl_1_1comp_1_1TexturePaths.html" title="The TexturePaths class represents a component that stores the paths of the textures used by a mesh....">vcl::comp::TexturePaths</a> or <a class="el" href="classvcl_1_1comp_1_1TextureImages.html" title="The TextureImages class represents a component that stores the textures used by a mesh....">vcl::comp::TextureImages</a>, with any template arguments.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type to be tested for conformity to the HasTexturePaths. </td></tr>
+  </table>
+  </dd>
+</dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -154,7 +154,7 @@ $(document).ready(function(){initNavTree('text__manager_8h_source.html',''); ini
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    bgfx::TextBufferHandle   mStaticText;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    bgfx::TextBufferHandle   mTransientText;</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    bgfx::FontHandle mCurrentFont = <a class="code hl_class" href="classvcl_1_1Segment.html">BGFX_INVALID_HANDLE</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    bgfx::FontHandle mCurrentFont = <a class="code hl_class" href="classvcl_1_1Box.html">BGFX_INVALID_HANDLE</a>;</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <a class="code hl_class" href="classvcl_1_1TextManager.html">TextManager</a>();</div>
@@ -162,21 +162,21 @@ $(document).ready(function(){initNavTree('text__manager_8h_source.html',''); ini
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">void</span> init();</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">void</span> loadFont(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">filePath</a>, <span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">fontName</a>);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">void</span> loadFont(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Box.html">filePath</a>, <span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Box.html">fontName</a>);</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">void</span> clear();</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">void</span> setCurrentFont(VclFont::Enum <a class="code hl_class" href="classvcl_1_1Segment.html">font</a>, <a class="code hl_class" href="classvcl_1_1Segment.html">uint16_t</a> <a class="code hl_class" href="classvcl_1_1Segment.html">fontSize</a>);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">void</span> setCurrentFont(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">fontName</a>, <a class="code hl_class" href="classvcl_1_1Segment.html">uint16_t</a> <a class="code hl_class" href="classvcl_1_1Segment.html">fontSize</a>);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">void</span> setCurrentFont(VclFont::Enum <a class="code hl_class" href="classvcl_1_1Box.html">font</a>, <a class="code hl_class" href="classvcl_1_1Box.html">uint16_t</a> <a class="code hl_class" href="classvcl_1_1Box.html">fontSize</a>);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">void</span> setCurrentFont(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Box.html">fontName</a>, <a class="code hl_class" href="classvcl_1_1Box.html">uint16_t</a> <a class="code hl_class" href="classvcl_1_1Box.html">fontSize</a>);</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">void</span> appendTransientText(</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Point.html">vcl::Point2f</a>&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">pos</a>,</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keyword">const</span> std::string&amp;  <a class="code hl_class" href="classvcl_1_1Segment.html">text</a>,</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Point.html">vcl::Point2f</a>&amp; <a class="code hl_class" href="classvcl_1_1Box.html">pos</a>,</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keyword">const</span> std::string&amp;  <a class="code hl_class" href="classvcl_1_1Box.html">text</a>,</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Color.html">vcl::Color</a>&amp;   color = vcl::Color::Black);</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">void</span> appendStaticText(</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Point.html">vcl::Point2f</a>&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">pos</a>,</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keyword">const</span> std::string&amp;  <a class="code hl_class" href="classvcl_1_1Segment.html">text</a>,</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Point.html">vcl::Point2f</a>&amp; <a class="code hl_class" href="classvcl_1_1Box.html">pos</a>,</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keyword">const</span> std::string&amp;  <a class="code hl_class" href="classvcl_1_1Box.html">text</a>,</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Color.html">vcl::Color</a>&amp;   color = vcl::Color::Black);</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">void</span> submit(uint viewId);</div>
@@ -186,9 +186,9 @@ $(document).ready(function(){initNavTree('text__manager_8h_source.html',''); ini
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>} <span class="comment">// namespace vcl</span></div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#endif </span><span class="comment">// VCL_BGFX_TEXT_TEXT_MANAGER_H</span></div>
+<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:46</div></div>
 <div class="ttc" id="aclassvcl_1_1Color_html"><div class="ttname"><a href="classvcl_1_1Color.html">vcl::Color</a></div><div class="ttdoc">The Color class represents a 32 bit color.</div><div class="ttdef"><b>Definition</b> color.h:48</div></div>
-<div class="ttc" id="aclassvcl_1_1Point_html"><div class="ttname"><a href="classvcl_1_1Point.html">vcl::Point</a></div><div class="ttdoc">The Point class represents an N-dimensional point containing N scalar values.</div><div class="ttdef"><b>Definition</b> point.h:58</div></div>
-<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:43</div></div>
+<div class="ttc" id="aclassvcl_1_1Point_html"><div class="ttname"><a href="classvcl_1_1Point.html">vcl::Point</a></div><div class="ttdoc">The Point class represents an N-dimensional point containing N scalar values.</div><div class="ttdef"><b>Definition</b> point.h:55</div></div>
 <div class="ttc" id="aclassvcl_1_1TextManager_html"><div class="ttname"><a href="classvcl_1_1TextManager.html">vcl::TextManager</a></div><div class="ttdef"><b>Definition</b> text_manager.h:36</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

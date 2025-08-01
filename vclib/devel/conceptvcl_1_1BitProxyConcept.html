@@ -105,27 +105,29 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1BitProxyConcept.html',''
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">vcl::BitProxyConcept Concept Reference<div class="ingroups"><a class="el" href="group__concepts.html">Concepts</a> &raquo; <a class="el" href="group__lib__concepts.html">Library Concepts</a> &raquo; <a class="el" href="group__space__concepts.html">Space Concepts</a></div></div></div>
+  <div class="headertitle"><div class="title">vcl::BitProxyConcept Concept Reference<div class="ingroups"><a class="el" href="group__space__core.html">Core Data Structures</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>BitProxyConcept is satisfied only if a class provides the member functions specified in this concept. These member functions allows to access to a bool reference from a bit saved in a mask, and then allow assignment.  
+<p>A concept representing a BitProxy.  
 <a href="conceptvcl_1_1BitProxyConcept.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="concepts_2space_2bit__set_8h_source.html">vclib/concepts/space/bit_set.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="bit__proxy_8h_source.html">vclib/space/core/bit_set/bit_proxy.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1BitProxyConcept.html">vcl::BitProxyConcept</a> =  <span class="keyword">requires</span> (T&amp;&amp; obj) {</div>
-<div class="line">    <span class="keyword">requires</span> std::convertible_to&lt;T, bool&gt;;</div>
-<div class="line"> </div>
-<div class="line">    obj = bool();</div>
-<div class="line">    obj |= bool();</div>
-<div class="line">    obj &amp;= bool();</div>
-<div class="line">    obj /= bool();</div>
-<div class="line">}</div>
-<div class="ttc" id="aconceptvcl_1_1BitProxyConcept_html"><div class="ttname"><a href="conceptvcl_1_1BitProxyConcept.html">vcl::BitProxyConcept</a></div><div class="ttdoc">BitProxyConcept is satisfied only if a class provides the member functions specified in this concept....</div><div class="ttdef"><b>Definition</b> bit_set.h:40</div></div>
+<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1BitProxyConcept.html">vcl::BitProxyConcept</a> =  std::derived_from&lt; </div>
+<div class="line">    std::remove_cvref_t&lt;T&gt;,</div>
+<div class="line">    BitProxy&lt;typename RemoveRef&lt;T&gt;::UnderlyingType&gt;&gt;</div>
+<div class="ttc" id="aconceptvcl_1_1BitProxyConcept_html"><div class="ttname"><a href="conceptvcl_1_1BitProxyConcept.html">vcl::BitProxyConcept</a></div><div class="ttdoc">A concept representing a BitProxy.</div><div class="ttdef"><b>Definition</b> bit_proxy.h:99</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>BitProxyConcept is satisfied only if a class provides the member functions specified in this concept. These member functions allows to access to a bool reference from a bit saved in a mask, and then allow assignment. </p>
+<div class="textblock"><p>A concept representing a BitProxy. </p>
+<p>The concept is satisfied when <code>T</code> is a class that instantiates or derives from a BitProxy class having any integral type as a template parameter.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type to be tested for conformity to the BitProxyConcept. </td></tr>
+  </table>
+  </dd>
+</dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

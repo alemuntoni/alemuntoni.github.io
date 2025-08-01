@@ -1,5 +1,6 @@
 var classvcl_1_1Logger =
 [
+    [ "ProgressStatus", "structvcl_1_1Logger_1_1ProgressStatus.html", null ],
     [ "endProgress", "classvcl_1_1Logger.html#af6593831ec05c1ad3fcfe6604d09ee22", null ],
     [ "levelStream", "classvcl_1_1Logger.html#ac80eccad63dcb6610040c9356f53dfc8", null ],
     [ "log", "classvcl_1_1Logger.html#a1f83ec99f568a538ffd57dd68f549dc8", null ],

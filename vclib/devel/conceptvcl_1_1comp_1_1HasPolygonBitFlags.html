@@ -105,23 +105,28 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1comp_1_1HasPolygonBitFla
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">vcl::comp::HasPolygonBitFlags Concept Reference<div class="ingroups"><a class="el" href="group__concepts.html">Concepts</a> &raquo; <a class="el" href="group__lib__concepts.html">Library Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__concepts.html">Mesh Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__components.html">Components</a> &raquo; <a class="el" href="group__components__concepts.html">Components Concepts</a></div></div></div>
+  <div class="headertitle"><div class="title">vcl::comp::HasPolygonBitFlags Concept Reference<div class="ingroups"><a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__requirements.html">Mesh Requirements</a> &raquo; <a class="el" href="group__mesh__concepts.html">Mesh Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__components.html">Components</a> &raquo; <a class="el" href="group__components__concepts.html">Components Concepts</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>HasPolygonBitFlags concept is satisfied only if a Element class (that should be a Face) provides the member functions specified in this concept. These member functions allows to access to <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html">vcl::comp::PolygonBitFlags</a> component of a given element.  
+<p>A concept that checks whether a type T (that should be a Face Element) has the PolygonBitFlags component (inherits from it).  
 <a href="conceptvcl_1_1comp_1_1HasPolygonBitFlags.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="concepts_2mesh_2components_2bit__flags_8h_source.html">vclib/concepts/mesh/components/bit_flags.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="concepts_2bit__flags_8h_source.html">vclib/mesh/components/concepts/bit_flags.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasPolygonBitFlags.html">vcl::comp::HasPolygonBitFlags</a> = </div>
-<div class="line">    detail::FaceBitFlagsConcept&lt;T&gt; &amp;&amp; <span class="keyword">requires</span> (T&amp;&amp; obj) {</div>
-<div class="line">        { obj.__polygonBitFlags() } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">    }</div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasPolygonBitFlags_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasPolygonBitFlags.html">vcl::comp::HasPolygonBitFlags</a></div><div class="ttdoc">HasPolygonBitFlags concept is satisfied only if a Element class (that should be a Face) provides the ...</div><div class="ttdef"><b>Definition</b> bit_flags.h:96</div></div>
+<div class="line">    ITB::IsDerivedFromSpecializationOfV&lt;T, PolygonBitFlags&gt;</div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasPolygonBitFlags_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasPolygonBitFlags.html">vcl::comp::HasPolygonBitFlags</a></div><div class="ttdoc">A concept that checks whether a type T (that should be a Face Element) has the PolygonBitFlags compon...</div><div class="ttdef"><b>Definition</b> bit_flags.h:54</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>HasPolygonBitFlags concept is satisfied only if a Element class (that should be a Face) provides the member functions specified in this concept. These member functions allows to access to <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html">vcl::comp::PolygonBitFlags</a> component of a given element. </p>
+<div class="textblock"><p>A concept that checks whether a type T (that should be a Face Element) has the PolygonBitFlags component (inherits from it). </p>
+<p>The concept is satisfied if T is a class that inherits from <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html" title="The PolygonBitFlags class represents a collection of 8 bits plus 8 bits for each edge that will be pa...">vcl::comp::PolygonBitFlags</a>, with any template arguments.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type to be tested for conformity to the HasPolygonBitFlags. </td></tr>
+  </table>
+  </dd>
+</dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

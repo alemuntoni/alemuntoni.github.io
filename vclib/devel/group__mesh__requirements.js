@@ -2,6 +2,7 @@ var group__mesh__requirements =
 [
     [ "Edge Requirements", "group__edge__requirements.html", "group__edge__requirements" ],
     [ "Face Requirements", "group__face__requirements.html", "group__face__requirements" ],
+    [ "Mesh Concepts", "group__mesh__concepts.html", "group__mesh__concepts" ],
     [ "Vertex Requirements", "group__vertex__requirements.html", "group__vertex__requirements" ],
     [ "vcl::enableIfPerElementComponentOptional", "group__mesh__requirements.html#gac6ccafe282dfd418a16426fb85c5c416", null ],
     [ "vcl::isCompact", "group__mesh__requirements.html#gacb9fbe7647f2b656ab871e2bb20b8c33", null ],

@@ -10,6 +10,6 @@ var dir_e43535145e3c7fa83df4e11b330f5346 =
     [ "mesh_inertia.h", "mesh__inertia_8h_source.html", null ],
     [ "mesh_info.h", "mesh__info_8h_source.html", null ],
     [ "mesh_pos.h", "mesh__pos_8h_source.html", null ],
-    [ "sampler.h", "space_2complex_2sampler_8h_source.html", null ],
+    [ "sampler.h", "sampler_8h_source.html", null ],
     [ "tri_poly_index_bimap.h", "tri__poly__index__bimap_8h_source.html", null ]
 ];

@@ -15,6 +15,7 @@ var classvcl_1_1MeshRenderInfo =
       [ "VISIBLE", "classvcl_1_1MeshRenderInfo.html#afc5bb9722de2309dcabb91e790b63dada510222cdd4bc0b765486ba35b2775e54", null ],
       [ "SHAPE_PIXEL", "classvcl_1_1MeshRenderInfo.html#afc5bb9722de2309dcabb91e790b63dada5f88ac3d87bc9d9d5f0f53889c48b321", null ],
       [ "SHAPE_CIRCLE", "classvcl_1_1MeshRenderInfo.html#afc5bb9722de2309dcabb91e790b63dada010cbb70aa8fcbcda921b065e88b3bdb", null ],
+      [ "SHAPE_SPHERE", "classvcl_1_1MeshRenderInfo.html#afc5bb9722de2309dcabb91e790b63dada88cfc06a43187d58103fb75541e8e221", null ],
       [ "SHADING_NONE", "classvcl_1_1MeshRenderInfo.html#afc5bb9722de2309dcabb91e790b63dadaa3f899683a9e12c66db1632115a576c6", null ],
       [ "SHADING_VERT", "classvcl_1_1MeshRenderInfo.html#afc5bb9722de2309dcabb91e790b63dadae27c5b9efa6a9ceeb0d7ffb97b73f079", null ],
       [ "COLOR_VERTEX", "classvcl_1_1MeshRenderInfo.html#afc5bb9722de2309dcabb91e790b63dada1f613e122379b766e5e0172f6bb0cb6b", null ],

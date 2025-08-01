@@ -105,24 +105,27 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1comp_1_1HasPosition.html
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">vcl::comp::HasPosition Concept Reference<div class="ingroups"><a class="el" href="group__concepts.html">Concepts</a> &raquo; <a class="el" href="group__lib__concepts.html">Library Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__concepts.html">Mesh Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__components.html">Components</a> &raquo; <a class="el" href="group__components__concepts.html">Components Concepts</a></div></div></div>
+  <div class="headertitle"><div class="title">vcl::comp::HasPosition Concept Reference<div class="ingroups"><a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__requirements.html">Mesh Requirements</a> &raquo; <a class="el" href="group__mesh__concepts.html">Mesh Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__components.html">Components</a> &raquo; <a class="el" href="group__components__concepts.html">Components Concepts</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>HasPosition concept is satisfied only if a Element class provides the types and member functions specified in this concept. These types and member functions allow to access to a <a class="el" href="classvcl_1_1comp_1_1Position.html">vcl::comp::Position</a> component of a given element.  
+<p>A concept that checks whether a type T (that should be a Element) has the Position component (inherits from it).  
 <a href="conceptvcl_1_1comp_1_1HasPosition.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="concepts_2mesh_2components_2position_8h_source.html">vclib/concepts/mesh/components/position.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="position_8h_source.html">vclib/mesh/components/position.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasPosition.html">vcl::comp::HasPosition</a> =  <span class="keyword">requires</span> (T&amp;&amp; obj) {</div>
-<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::PositionType;</div>
-<div class="line">    { obj.position() } -&gt; <a class="code hl_concept" href="conceptvcl_1_1PointConcept.html">PointConcept</a>;</div>
-<div class="line">}</div>
-<div class="ttc" id="aconceptvcl_1_1PointConcept_html"><div class="ttname"><a href="conceptvcl_1_1PointConcept.html">vcl::PointConcept</a></div><div class="ttdoc">Concept for types representing points in Euclidean space.</div><div class="ttdef"><b>Definition</b> point.h:40</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasPosition_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasPosition.html">vcl::comp::HasPosition</a></div><div class="ttdoc">HasPosition concept is satisfied only if a Element class provides the types and member functions spec...</div><div class="ttdef"><b>Definition</b> position.h:39</div></div>
+<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasPosition.html">vcl::comp::HasPosition</a> =  TTB::IsDerivedFromSpecializationOfV&lt;T, Position&gt;</div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasPosition_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasPosition.html">vcl::comp::HasPosition</a></div><div class="ttdoc">A concept that checks whether a type T (that should be a Element) has the Position component (inherit...</div><div class="ttdef"><b>Definition</b> position.h:127</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>HasPosition concept is satisfied only if a Element class provides the types and member functions specified in this concept. These types and member functions allow to access to a <a class="el" href="classvcl_1_1comp_1_1Position.html">vcl::comp::Position</a> component of a given element. </p>
+<div class="textblock"><p>A concept that checks whether a type T (that should be a Element) has the Position component (inherits from it). </p>
+<p>The concept is satisfied if T is a class that inherits from <a class="el" href="classvcl_1_1comp_1_1Position.html" title="The Position class represents a N-Dimensional point that will be part of an Element (e....">vcl::comp::Position</a>, with any template arguments.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type to be tested for conformity to the HasPosition. </td></tr>
+  </table>
+  </dd>
+</dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

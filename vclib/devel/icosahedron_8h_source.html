@@ -138,13 +138,13 @@ $(document).ready(function(){initNavTree('icosahedron_8h_source.html',''); initR
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_ALGORITHMS_MESH_CREATE_ICOSAHEDRON_H</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_ALGORITHMS_MESH_CREATE_ICOSAHEDRON_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;vclib/mesh/requirements.h&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;vclib/mesh.h&gt;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">namespace </span>vcl {</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">template</span>&lt;FaceMeshConcept MeshType&gt;</div>
 <div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="group__create.html#ga6cf9b8ea5cd197d17f2a1bcf68c89050">   42</a></span>MeshType <a class="code hl_function" href="group__create.html#ga6cf9b8ea5cd197d17f2a1bcf68c89050">createIcosahedron</a>(<span class="keywordtype">bool</span> <a class="code hl_class" href="classvcl_1_1Segment.html">normalizeVertices</a> = <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="group__create.html#ga6cf9b8ea5cd197d17f2a1bcf68c89050">   42</a></span>MeshType <a class="code hl_function" href="group__create.html#ga6cf9b8ea5cd197d17f2a1bcf68c89050">createIcosahedron</a>(<span class="keywordtype">bool</span> <a class="code hl_class" href="classvcl_1_1Box.html">normalizeVertices</a> = <span class="keyword">false</span>)</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>{</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">using </span>VertexType   = MeshType::VertexType;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">using </span>PositionType = VertexType::PositionType;</div>
@@ -167,7 +167,7 @@ $(document).ready(function(){initNavTree('icosahedron_8h_source.html',''); initR
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    mesh.addVertex(PositionType(-t, 0.0, -1.0));</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    mesh.addVertex(PositionType(-t, 0.0, 1.0));</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordflow">if</span> (<a class="code hl_class" href="classvcl_1_1Segment.html">normalizeVertices</a>) {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordflow">if</span> (<a class="code hl_class" href="classvcl_1_1Box.html">normalizeVertices</a>) {</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">for</span> (VertexType&amp; v : mesh.vertices())</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            v.position().normalize();</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    }</div>
@@ -201,7 +201,7 @@ $(document).ready(function(){initNavTree('icosahedron_8h_source.html',''); initR
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>} <span class="comment">// namespace vcl</span></div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">#endif </span><span class="comment">// VCL_ALGORITHMS_MESH_CREATE_ICOSAHEDRON_H</span></div>
-<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:43</div></div>
+<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:46</div></div>
 <div class="ttc" id="agroup__create_html_ga6cf9b8ea5cd197d17f2a1bcf68c89050"><div class="ttname"><a href="group__create.html#ga6cf9b8ea5cd197d17f2a1bcf68c89050">vcl::createIcosahedron</a></div><div class="ttdeci">MeshType createIcosahedron(bool normalizeVertices=false)</div><div class="ttdoc">Creates and returns an icosahedron mesh.</div><div class="ttdef"><b>Definition</b> icosahedron.h:42</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

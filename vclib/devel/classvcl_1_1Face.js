@@ -6,7 +6,7 @@ var classvcl_1_1Face =
     [ "insertTTVNComponent", "classvcl_1_1Face.html#a9696f85d405cd8668f18cafa499b8fc3", null ],
     [ "pushBackTTVNComponent", "classvcl_1_1Face.html#a694521898541ed97c1e5193ca1c21e58", null ],
     [ "resizeTTVNComponent", "classvcl_1_1Face.html#ac93c99db540c03e19b126daccd7e794b", null ],
-    [ "resizeVertices", "classvcl_1_1Face.html#afc1ed049550a79e7f9272aacb0f28103", null ],
+    [ "resizeVertices", "classvcl_1_1Face.html#a184c3c35846d617ec54620457c57374d", null ],
     [ "setVertices", "classvcl_1_1Face.html#a2ff09cba47db7a6c5b2e42036cfa86c8", null ],
     [ "setVertices", "classvcl_1_1Face.html#ab9b8bb5b12300ca4edcbd8325a36887e", null ]
 ];

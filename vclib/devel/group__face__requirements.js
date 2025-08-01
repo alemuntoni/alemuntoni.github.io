@@ -1,5 +1,6 @@
 var group__face__requirements =
 [
+    [ "FaceMesh Concepts", "group__face__mesh__concepts.html", "group__face__mesh__concepts" ],
     [ "vcl::enableIfPerFaceAdjacentEdgesOptional", "group__face__requirements.html#gab711bf0021a9256445957b3ccc2e0502", null ],
     [ "vcl::enableIfPerFaceAdjacentFacesOptional", "group__face__requirements.html#gacb30f645e6cc1b2c1d8655f445bf1843", null ],
     [ "vcl::enableIfPerFaceColorOptional", "group__face__requirements.html#gaf3262073d55561ee24b5cfcc22250ee1", null ],

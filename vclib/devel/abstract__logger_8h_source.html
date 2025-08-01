@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visual Computing Library: vclib/core/include/vclib/misc/logger/abstract_logger.h Source File</title>
+<title>Visual Computing Library: vclib/core/include/vclib/base/logger/abstract_logger.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -135,95 +135,101 @@ $(document).ready(function(){initNavTree('abstract__logger_8h_source.html',''); 
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> * (https://www.mozilla.org/en-US/MPL/2.0/) for more details.                *</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> ****************************************************************************/</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_MISC_LOGGER_ABSTRACT_LOGGER_H</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_MISC_LOGGER_ABSTRACT_LOGGER_H</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_BASE_LOGGER_ABSTRACT_LOGGER_H</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_BASE_LOGGER_ABSTRACT_LOGGER_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;vclib/concepts/logger.h&gt;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span>vcl {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="foldopen" id="foldopen00038" data-start="{" data-end="};">
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classvcl_1_1AbstractLogger.html">   38</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1AbstractLogger.html">AbstractLogger</a></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>{</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="comment">// note: these constants have the _LOG suffix to avoid conflicts with some</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="comment">// macros defined in windows.h headers</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">enum</span> LogLevel {</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        ERROR_LOG = 0,</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        WARNING_LOG,</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        MESSAGE_LOG,</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        PROGRESS_LOG,</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        DEBUG_LOG</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    };</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <a class="code hl_class" href="classvcl_1_1AbstractLogger.html">AbstractLogger</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> enableIndentation() = 0;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> disableIndentation() = 0;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> enablePrintPercentage() = 0;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> disablePrintPercentage() = 0;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classvcl_1_1AbstractLogger.html#a72c280cc748bfefcc2e5888a18741b4c">   73</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1AbstractLogger.html#a72c280cc748bfefcc2e5888a18741b4c">setPrintLevel</a>(LogLevel <a class="code hl_class" href="classvcl_1_1Segment.html">level</a>) = 0;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> enablePrintMessageDuringProgress() = 0;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> disablePrintMessageDuringProgress() = 0;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> enablePrintTimer() = 0;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> disablePrintTimer() = 0;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> reset() = 0;</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setMaxLineWidth(uint width) = 0;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> startTimer() = 0;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> stopTimer() = 0;</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="classvcl_1_1AbstractLogger.html#a30c2861e818f319933b3b60cbdd92584">   98</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code hl_function" href="classvcl_1_1AbstractLogger.html#a30c2861e818f319933b3b60cbdd92584">time</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> startNewTask(</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="keywordtype">double</span>             <a class="code hl_class" href="classvcl_1_1Segment.html">fromPerc</a>,</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keywordtype">double</span>             <a class="code hl_class" href="classvcl_1_1Segment.html">toPerc</a>,</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">action</a>) = 0;</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> endTask(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">action</a>) = 0;</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keyword">virtual</span> <span class="keywordtype">double</span> percentage() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setPercentage(uint <a class="code hl_class" href="classvcl_1_1Segment.html">newPerc</a>) = 0;</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="classvcl_1_1AbstractLogger.html#a2cbae5a3d36ba543e70984b42ba100f0">  117</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1AbstractLogger.html#a2cbae5a3d36ba543e70984b42ba100f0">log</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">msg</a>) <span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="classvcl_1_1AbstractLogger.html#a78adcd14f588e6dc42008809a734e63b">  126</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1AbstractLogger.html#a78adcd14f588e6dc42008809a734e63b">log</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">msg</a>, LogLevel <a class="code hl_class" href="classvcl_1_1Segment.html">lvl</a>) <span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="classvcl_1_1AbstractLogger.html#ad2a35d9110821cb6246980bbe49754a7">  135</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1AbstractLogger.html#ad2a35d9110821cb6246980bbe49754a7">log</a>(uint <a class="code hl_class" href="classvcl_1_1Segment.html">perc</a>, <span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">msg</a>) = 0;</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="classvcl_1_1AbstractLogger.html#a7a45c0c8b69e11aa5f78905d238ccb01">  145</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1AbstractLogger.html#a7a45c0c8b69e11aa5f78905d238ccb01">log</a>(uint <a class="code hl_class" href="classvcl_1_1Segment.html">perc</a>, <span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">msg</a>, LogLevel <a class="code hl_class" href="classvcl_1_1Segment.html">lvl</a>) = 0;</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="classvcl_1_1AbstractLogger.html#a5b511f0b50d8a54633a6feb77c0dc693">  179</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1AbstractLogger.html#a5b511f0b50d8a54633a6feb77c0dc693">startProgress</a>(</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        <span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">msg</a>,</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        uint               <a class="code hl_class" href="classvcl_1_1Segment.html">progressSize</a>,</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        uint               <a class="code hl_class" href="classvcl_1_1Segment.html">percPrintProgress</a> = 10,</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        uint               <a class="code hl_class" href="classvcl_1_1Segment.html">startPerc</a>         = 0,</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        uint               <a class="code hl_class" href="classvcl_1_1Segment.html">endPerc</a>           = 100) = 0;</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno"><a class="line" href="classvcl_1_1AbstractLogger.html#a48b36ced6e0e7637fc130aa53e1c0f27">  209</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1AbstractLogger.html#a48b36ced6e0e7637fc130aa53e1c0f27">endProgress</a>() = 0;</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno"><a class="line" href="classvcl_1_1AbstractLogger.html#a78b100ace1f6f9538eac6a1c32e69d21">  240</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1AbstractLogger.html#a78b100ace1f6f9538eac6a1c32e69d21">progress</a>(uint <a class="code hl_class" href="classvcl_1_1Segment.html">n</a>) = 0;</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>};</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;vclib/base/base.h&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;vclib/base/pointers.h&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span>vcl {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="};">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classvcl_1_1AbstractLogger.html">   39</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1AbstractLogger.html">AbstractLogger</a></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>{</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="comment">// note: these constants have the _LOG suffix to avoid conflicts with some</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="comment">// macros defined in windows.h headers</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">enum</span> LogLevel {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        ERROR_LOG = 0,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        WARNING_LOG,</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        MESSAGE_LOG,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        PROGRESS_LOG,</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        DEBUG_LOG</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    };</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <a class="code hl_class" href="classvcl_1_1AbstractLogger.html">AbstractLogger</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> enableIndentation() = 0;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> disableIndentation() = 0;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> enablePrintPercentage() = 0;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> disablePrintPercentage() = 0;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="classvcl_1_1AbstractLogger.html#a72c280cc748bfefcc2e5888a18741b4c">   74</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1AbstractLogger.html#a72c280cc748bfefcc2e5888a18741b4c">setPrintLevel</a>(LogLevel <a class="code hl_class" href="classvcl_1_1Box.html">level</a>) = 0;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> enablePrintMessageDuringProgress() = 0;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> disablePrintMessageDuringProgress() = 0;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> enablePrintTimer() = 0;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> disablePrintTimer() = 0;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> reset() = 0;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setMaxLineWidth(uint width) = 0;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> startTimer() = 0;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> stopTimer() = 0;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="classvcl_1_1AbstractLogger.html#a30c2861e818f319933b3b60cbdd92584">   99</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code hl_function" href="classvcl_1_1AbstractLogger.html#a30c2861e818f319933b3b60cbdd92584">time</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> startNewTask(</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keywordtype">double</span>             <a class="code hl_class" href="classvcl_1_1Box.html">fromPerc</a>,</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keywordtype">double</span>             <a class="code hl_class" href="classvcl_1_1Box.html">toPerc</a>,</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Box.html">action</a>) = 0;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> endTask(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Box.html">action</a>) = 0;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keyword">virtual</span> <span class="keywordtype">double</span> percentage() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setPercentage(uint <a class="code hl_class" href="classvcl_1_1Box.html">newPerc</a>) = 0;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="classvcl_1_1AbstractLogger.html#a2cbae5a3d36ba543e70984b42ba100f0">  118</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1AbstractLogger.html#a2cbae5a3d36ba543e70984b42ba100f0">log</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Box.html">msg</a>) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="classvcl_1_1AbstractLogger.html#a78adcd14f588e6dc42008809a734e63b">  127</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1AbstractLogger.html#a78adcd14f588e6dc42008809a734e63b">log</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Box.html">msg</a>, LogLevel <a class="code hl_class" href="classvcl_1_1Box.html">lvl</a>) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="classvcl_1_1AbstractLogger.html#ad2a35d9110821cb6246980bbe49754a7">  136</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1AbstractLogger.html#ad2a35d9110821cb6246980bbe49754a7">log</a>(uint perc, <span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Box.html">msg</a>) = 0;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="classvcl_1_1AbstractLogger.html#a7a45c0c8b69e11aa5f78905d238ccb01">  146</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1AbstractLogger.html#a7a45c0c8b69e11aa5f78905d238ccb01">log</a>(uint perc, <span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Box.html">msg</a>, LogLevel <a class="code hl_class" href="classvcl_1_1Box.html">lvl</a>) = 0;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="classvcl_1_1AbstractLogger.html#a5b511f0b50d8a54633a6feb77c0dc693">  180</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1AbstractLogger.html#a5b511f0b50d8a54633a6feb77c0dc693">startProgress</a>(</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        <span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Box.html">msg</a>,</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        uint               <a class="code hl_class" href="classvcl_1_1Box.html">progressSize</a>,</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        uint               <a class="code hl_class" href="classvcl_1_1Box.html">percPrintProgress</a> = 10,</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        uint               <a class="code hl_class" href="classvcl_1_1Box.html">startPerc</a>         = 0,</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        uint               <a class="code hl_class" href="classvcl_1_1Box.html">endPerc</a>           = 100) = 0;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno"><a class="line" href="classvcl_1_1AbstractLogger.html#a48b36ced6e0e7637fc130aa53e1c0f27">  210</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1AbstractLogger.html#a48b36ced6e0e7637fc130aa53e1c0f27">endProgress</a>() = 0;</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno"><a class="line" href="classvcl_1_1AbstractLogger.html#a78b100ace1f6f9538eac6a1c32e69d21">  241</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1AbstractLogger.html#a78b100ace1f6f9538eac6a1c32e69d21">progress</a>(uint <a class="code hl_class" href="classvcl_1_1Box.html">n</a>) = 0;</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>};</div>
 </div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span><span class="preprocessor">#endif </span><span class="comment">// VCL_MISC_LOGGER_ABSTRACT_LOGGER_H</span></div>
-<div class="ttc" id="aclassvcl_1_1AbstractLogger_html"><div class="ttname"><a href="classvcl_1_1AbstractLogger.html">vcl::AbstractLogger</a></div><div class="ttdoc">The AbstractLogger class is used as common ancestor class for all the logger types in the library.</div><div class="ttdef"><b>Definition</b> abstract_logger.h:39</div></div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span> </div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span><span class="comment">/* Concepts */</span></div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno"><a class="line" href="conceptvcl_1_1LoggerConcept.html">  259</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1LoggerConcept.html">LoggerConcept</a> = std::derived_from&lt;RemoveRef&lt;T&gt;, AbstractLogger&gt;;</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span> </div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span> </div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span><span class="preprocessor">#endif </span><span class="comment">// VCL_BASE_LOGGER_ABSTRACT_LOGGER_H</span></div>
+<div class="ttc" id="aclassvcl_1_1AbstractLogger_html"><div class="ttname"><a href="classvcl_1_1AbstractLogger.html">vcl::AbstractLogger</a></div><div class="ttdoc">The AbstractLogger class is used as common ancestor class for all the logger types in the library.</div><div class="ttdef"><b>Definition</b> abstract_logger.h:40</div></div>
 <div class="ttc" id="aclassvcl_1_1AbstractLogger_html_a2cbae5a3d36ba543e70984b42ba100f0"><div class="ttname"><a href="classvcl_1_1AbstractLogger.html#a2cbae5a3d36ba543e70984b42ba100f0">vcl::AbstractLogger::log</a></div><div class="ttdeci">virtual void log(const std::string &amp;msg) const =0</div><div class="ttdoc">Prints a message to the logger, with level LogLevel::PROGRESS and without modifying the current perce...</div></div>
 <div class="ttc" id="aclassvcl_1_1AbstractLogger_html_a30c2861e818f319933b3b60cbdd92584"><div class="ttname"><a href="classvcl_1_1AbstractLogger.html#a30c2861e818f319933b3b60cbdd92584">vcl::AbstractLogger::time</a></div><div class="ttdeci">virtual double time() const =0</div><div class="ttdoc">Returns the time passed since the last call to startTimer member function, or the time passed between...</div></div>
 <div class="ttc" id="aclassvcl_1_1AbstractLogger_html_a48b36ced6e0e7637fc130aa53e1c0f27"><div class="ttname"><a href="classvcl_1_1AbstractLogger.html#a48b36ced6e0e7637fc130aa53e1c0f27">vcl::AbstractLogger::endProgress</a></div><div class="ttdeci">virtual void endProgress()=0</div><div class="ttdoc">Allows to easily manage progresses with the logger, along with the startProgress and progress member ...</div></div>
@@ -233,13 +239,14 @@ $(document).ready(function(){initNavTree('abstract__logger_8h_source.html',''); 
 <div class="ttc" id="aclassvcl_1_1AbstractLogger_html_a78b100ace1f6f9538eac6a1c32e69d21"><div class="ttname"><a href="classvcl_1_1AbstractLogger.html#a78b100ace1f6f9538eac6a1c32e69d21">vcl::AbstractLogger::progress</a></div><div class="ttdeci">virtual void progress(uint n)=0</div><div class="ttdoc">Allows to easily manage progresses with the logger, along with the startProgress and endProgress memb...</div></div>
 <div class="ttc" id="aclassvcl_1_1AbstractLogger_html_a7a45c0c8b69e11aa5f78905d238ccb01"><div class="ttname"><a href="classvcl_1_1AbstractLogger.html#a7a45c0c8b69e11aa5f78905d238ccb01">vcl::AbstractLogger::log</a></div><div class="ttdeci">virtual void log(uint perc, const std::string &amp;msg, LogLevel lvl)=0</div><div class="ttdoc">Prints a message to the logger, with the given level and with the given percentage.</div></div>
 <div class="ttc" id="aclassvcl_1_1AbstractLogger_html_ad2a35d9110821cb6246980bbe49754a7"><div class="ttname"><a href="classvcl_1_1AbstractLogger.html#ad2a35d9110821cb6246980bbe49754a7">vcl::AbstractLogger::log</a></div><div class="ttdeci">virtual void log(uint perc, const std::string &amp;msg)=0</div><div class="ttdoc">Prints a message to the logger, with the level LogLevel::PROGRESS and with the given percentage.</div></div>
-<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:43</div></div>
+<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:46</div></div>
+<div class="ttc" id="aconceptvcl_1_1LoggerConcept_html"><div class="ttname"><a href="conceptvcl_1_1LoggerConcept.html">vcl::LoggerConcept</a></div><div class="ttdoc">The LoggerConcept is satisfied if the type T is a valid Logger type.</div><div class="ttdef"><b>Definition</b> abstract_logger.h:259</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_7c92f5c95a7eb1889f78d1875330f054.html">misc</a></li><li class="navelem"><a class="el" href="dir_9763aada66278c71250e7320bb9a0987.html">logger</a></li><li class="navelem"><b>abstract_logger.h</b></li>
+    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_e330a725a80990495f6734bd3c618028.html">base</a></li><li class="navelem"><a class="el" href="dir_01c02a8cb29e470904ba2725b635cf04.html">logger</a></li><li class="navelem"><b>abstract_logger.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

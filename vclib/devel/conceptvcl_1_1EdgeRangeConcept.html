@@ -105,21 +105,21 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1EdgeRangeConcept.html','
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">vcl::EdgeRangeConcept Concept Reference<div class="ingroups"><a class="el" href="group__concepts.html">Concepts</a> &raquo; <a class="el" href="group__lib__concepts.html">Library Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__concepts.html">Mesh Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__elements.html">Elements</a> &raquo; <a class="el" href="group__element__concepts.html">Element Concepts</a> &raquo; <a class="el" href="group__edge__concepts.html">Edge Concepts</a></div></div></div>
+  <div class="headertitle"><div class="title">vcl::EdgeRangeConcept Concept Reference<div class="ingroups"><a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__requirements.html">Mesh Requirements</a> &raquo; <a class="el" href="group__mesh__concepts.html">Mesh Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__elements.html">Elements</a> &raquo; <a class="el" href="group__element__concepts.html">Element Concepts</a> &raquo; <a class="el" href="group__edge__concepts.html">Edge Concepts</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>The EdgeRangeConcept evaluates to true if Rng is a valid Range on Edges.  
 <a href="conceptvcl_1_1EdgeRangeConcept.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="edge__range_8h_source.html">vclib/concepts/ranges/mesh/edge_range.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="mesh_2views_2elements_2edge_8h_source.html">vclib/mesh/views/elements/edge.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> Rng&gt;</div>
 <div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1EdgeRangeConcept.html">vcl::EdgeRangeConcept</a> = </div>
 <div class="line">    <a class="code hl_concept" href="conceptvcl_1_1Range.html">Range&lt;Rng&gt;</a> &amp;&amp;</div>
 <div class="line">    <a class="code hl_concept" href="conceptvcl_1_1EdgeConcept.html">EdgeConcept&lt;typename std::ranges::iterator_t&lt;Rng&gt;::value_type</a>&gt;</div>
-<div class="ttc" id="aconceptvcl_1_1EdgeConcept_html"><div class="ttname"><a href="conceptvcl_1_1EdgeConcept.html">vcl::EdgeConcept</a></div><div class="ttdoc">The EdgeConcept describes how a Edge element that can be used for a EdgeContainer should be organized...</div><div class="ttdef"><b>Definition</b> edge.h:95</div></div>
-<div class="ttc" id="aconceptvcl_1_1EdgeRangeConcept_html"><div class="ttname"><a href="conceptvcl_1_1EdgeRangeConcept.html">vcl::EdgeRangeConcept</a></div><div class="ttdoc">The EdgeRangeConcept evaluates to true if Rng is a valid Range on Edges.</div><div class="ttdef"><b>Definition</b> edge_range.h:42</div></div>
+<div class="ttc" id="aconceptvcl_1_1EdgeConcept_html"><div class="ttname"><a href="conceptvcl_1_1EdgeConcept.html">vcl::EdgeConcept</a></div><div class="ttdoc">A concept that checks whether a class has (inherits from) an Edge class.</div><div class="ttdef"><b>Definition</b> edge.h:111</div></div>
+<div class="ttc" id="aconceptvcl_1_1EdgeRangeConcept_html"><div class="ttname"><a href="conceptvcl_1_1EdgeRangeConcept.html">vcl::EdgeRangeConcept</a></div><div class="ttdoc">The EdgeRangeConcept evaluates to true if Rng is a valid Range on Edges.</div><div class="ttdef"><b>Definition</b> edge.h:40</div></div>
 <div class="ttc" id="aconceptvcl_1_1Range_html"><div class="ttname"><a href="conceptvcl_1_1Range.html">vcl::Range</a></div><div class="ttdoc">Utility concept that is evaluated true if T is a range, e.g. if has a begin and an end.</div><div class="ttdef"><b>Definition</b> range.h:39</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The EdgeRangeConcept evaluates to true if Rng is a valid Range on Edges. </p>

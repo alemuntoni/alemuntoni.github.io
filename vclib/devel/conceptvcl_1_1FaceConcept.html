@@ -105,44 +105,47 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1FaceConcept.html',''); i
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">vcl::FaceConcept Concept Reference<div class="ingroups"><a class="el" href="group__concepts.html">Concepts</a> &raquo; <a class="el" href="group__lib__concepts.html">Library Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__concepts.html">Mesh Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__elements.html">Elements</a> &raquo; <a class="el" href="group__element__concepts.html">Element Concepts</a> &raquo; <a class="el" href="group__face__concepts.html">Face Concepts</a></div></div></div>
+  <div class="headertitle"><div class="title">vcl::FaceConcept Concept Reference<div class="ingroups"><a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__requirements.html">Mesh Requirements</a> &raquo; <a class="el" href="group__mesh__concepts.html">Mesh Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__elements.html">Elements</a> &raquo; <a class="el" href="group__element__concepts.html">Element Concepts</a> &raquo; <a class="el" href="group__face__concepts.html">Face Concepts</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>The FaceConcept describes how a Face element that can be used for a FaceContainer should be organized.  
+<p>A concept that checks whether a class has (inherits from) an Face class.  
 <a href="conceptvcl_1_1FaceConcept.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="concepts_2mesh_2elements_2face_8h_source.html">vclib/concepts/mesh/elements/face.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="mesh_2elements_2face_8h_source.html">vclib/mesh/elements/face.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1FaceConcept.html">vcl::FaceConcept</a> = </div>
-<div class="line">    <a class="code hl_concept" href="conceptvcl_1_1ElementConcept.html">ElementConcept&lt;T&gt;</a> &amp;&amp; RemoveRef&lt;T&gt;::ELEMENT_ID == ElemId::FACE &amp;&amp;</div>
-<div class="line">    <a class="code hl_concept" href="conceptvcl_1_1face_1_1HasBitFlags.html">face::HasBitFlags&lt;T&gt;</a> &amp;&amp; <a class="code hl_concept" href="conceptvcl_1_1face_1_1HasVertexReferences.html">face::HasVertexReferences&lt;T&gt;</a> &amp;&amp;</div>
+<div class="line">    IsDerivedFromSpecializationOfV&lt;T, Face&gt; &amp;&amp;</div>
+<div class="line">    RemoveRef&lt;T&gt;::ELEMENT_ID == ElemId::FACE &amp;&amp; <a class="code hl_concept" href="conceptvcl_1_1face_1_1HasBitFlags.html">face::HasBitFlags&lt;T&gt;</a> &amp;&amp;</div>
+<div class="line">    <a class="code hl_concept" href="conceptvcl_1_1face_1_1HasVertexReferences.html">face::HasVertexReferences&lt;T&gt;</a> &amp;&amp;</div>
 <div class="line">    (RemoveRef&lt;T&gt;::VERTEX_NUMBER &lt; 0 || RemoveRef&lt;T&gt;::VERTEX_NUMBER &gt;= 3) &amp;&amp;</div>
 <div class="line">    (!<a class="code hl_concept" href="conceptvcl_1_1face_1_1HasTriangleBitFlags.html">face::HasTriangleBitFlags&lt;T&gt;</a> || RemoveRef&lt;T&gt;::VERTEX_NUMBER == 3) &amp;&amp;</div>
 <div class="line">    <a class="code hl_concept" href="conceptvcl_1_1comp_1_1SanityCheckAdjacentEdges.html">comp::SanityCheckAdjacentEdges&lt;T&gt;</a> &amp;&amp; <a class="code hl_concept" href="conceptvcl_1_1comp_1_1SanityCheckAdjacentFaces.html">comp::SanityCheckAdjacentFaces&lt;T&gt;</a> &amp;&amp;</div>
 <div class="line">    <a class="code hl_concept" href="conceptvcl_1_1comp_1_1SanityCheckWedgeColors.html">comp::SanityCheckWedgeColors&lt;T&gt;</a> &amp;&amp; <a class="code hl_concept" href="conceptvcl_1_1comp_1_1SanityCheckWedgeTexCoords.html">comp::SanityCheckWedgeTexCoords&lt;T&gt;</a></div>
-<div class="ttc" id="aconceptvcl_1_1ElementConcept_html"><div class="ttname"><a href="conceptvcl_1_1ElementConcept.html">vcl::ElementConcept</a></div><div class="ttdef"><b>Definition</b> element.h:31</div></div>
-<div class="ttc" id="aconceptvcl_1_1FaceConcept_html"><div class="ttname"><a href="conceptvcl_1_1FaceConcept.html">vcl::FaceConcept</a></div><div class="ttdoc">The FaceConcept describes how a Face element that can be used for a FaceContainer should be organized...</div><div class="ttdef"><b>Definition</b> face.h:124</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1SanityCheckAdjacentEdges_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1SanityCheckAdjacentEdges.html">vcl::comp::SanityCheckAdjacentEdges</a></div><div class="ttdoc">SanityCheckAdjacentEdges concept.</div><div class="ttdef"><b>Definition</b> adjacent_edges.h:158</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1SanityCheckAdjacentFaces_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1SanityCheckAdjacentFaces.html">vcl::comp::SanityCheckAdjacentFaces</a></div><div class="ttdoc">SanityCheckAdjacentFaces concept.</div><div class="ttdef"><b>Definition</b> adjacent_faces.h:158</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1SanityCheckWedgeColors_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1SanityCheckWedgeColors.html">vcl::comp::SanityCheckWedgeColors</a></div><div class="ttdoc">SanityCheckWedgeColors concept.</div><div class="ttdef"><b>Definition</b> wedge_colors.h:118</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1SanityCheckWedgeTexCoords_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1SanityCheckWedgeTexCoords.html">vcl::comp::SanityCheckWedgeTexCoords</a></div><div class="ttdoc">SanityCheckWedgeTexCoords concept.</div><div class="ttdef"><b>Definition</b> wedge_tex_coords.h:124</div></div>
-<div class="ttc" id="aconceptvcl_1_1face_1_1HasBitFlags_html"><div class="ttname"><a href="conceptvcl_1_1face_1_1HasBitFlags.html">vcl::face::HasBitFlags</a></div><div class="ttdef"><b>Definition</b> face.h:56</div></div>
-<div class="ttc" id="aconceptvcl_1_1face_1_1HasTriangleBitFlags_html"><div class="ttname"><a href="conceptvcl_1_1face_1_1HasTriangleBitFlags.html">vcl::face::HasTriangleBitFlags</a></div><div class="ttdef"><b>Definition</b> face.h:84</div></div>
-<div class="ttc" id="aconceptvcl_1_1face_1_1HasVertexReferences_html"><div class="ttname"><a href="conceptvcl_1_1face_1_1HasVertexReferences.html">vcl::face::HasVertexReferences</a></div><div class="ttdef"><b>Definition</b> face.h:86</div></div>
+<div class="ttc" id="aconceptvcl_1_1FaceConcept_html"><div class="ttname"><a href="conceptvcl_1_1FaceConcept.html">vcl::FaceConcept</a></div><div class="ttdoc">A concept that checks whether a class has (inherits from) an Face class.</div><div class="ttdef"><b>Definition</b> face.h:295</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1SanityCheckAdjacentEdges_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1SanityCheckAdjacentEdges.html">vcl::comp::SanityCheckAdjacentEdges</a></div><div class="ttdoc">SanityCheckAdjacentEdges concept.</div><div class="ttdef"><b>Definition</b> adjacent_edges.h:715</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1SanityCheckAdjacentFaces_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1SanityCheckAdjacentFaces.html">vcl::comp::SanityCheckAdjacentFaces</a></div><div class="ttdoc">SanityCheckAdjacentFaces concept.</div><div class="ttdef"><b>Definition</b> adjacent_faces.h:719</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1SanityCheckWedgeColors_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1SanityCheckWedgeColors.html">vcl::comp::SanityCheckWedgeColors</a></div><div class="ttdoc">SanityCheckWedgeColors concept.</div><div class="ttdef"><b>Definition</b> wedge_colors.h:380</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1SanityCheckWedgeTexCoords_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1SanityCheckWedgeTexCoords.html">vcl::comp::SanityCheckWedgeTexCoords</a></div><div class="ttdoc">SanityCheckWedgeTexCoords concept.</div><div class="ttdef"><b>Definition</b> wedge_tex_coords.h:444</div></div>
+<div class="ttc" id="aconceptvcl_1_1face_1_1HasBitFlags_html"><div class="ttname"><a href="conceptvcl_1_1face_1_1HasBitFlags.html">vcl::face::HasBitFlags</a></div><div class="ttdef"><b>Definition</b> face_components.h:76</div></div>
+<div class="ttc" id="aconceptvcl_1_1face_1_1HasTriangleBitFlags_html"><div class="ttname"><a href="conceptvcl_1_1face_1_1HasTriangleBitFlags.html">vcl::face::HasTriangleBitFlags</a></div><div class="ttdef"><b>Definition</b> face_components.h:104</div></div>
+<div class="ttc" id="aconceptvcl_1_1face_1_1HasVertexReferences_html"><div class="ttname"><a href="conceptvcl_1_1face_1_1HasVertexReferences.html">vcl::face::HasVertexReferences</a></div><div class="ttdef"><b>Definition</b> face_components.h:106</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The FaceConcept describes how a Face element that can be used for a FaceContainer should be organized. </p>
-<p>The Face concept is satisfied for a class F if ALL the following sentences are true:</p><ul>
-<li>The class F has the BitFlags component (or a derivate);</li>
-<li>The class F has either VertexPointers or VertexIndices components;</li>
-<li>The number of vertices of the VertexPointers/VertexIndices is -1 (dynamic size) or at least 3 (static size)</li>
-<li>If the class F has the TriangleBitFlags component (or a derivate), the number of vertices must be 3 (static)</li>
-<li>If the class F has the AdjacentEdges component (or a derivate), its size must be the same of the vertices;</li>
-<li>If the class F has the AdjacentFaces component (or a derivate), its size must be the same of the vertices;</li>
-<li>If the class F has the WedgeColors component (or a derivate), its size must be the same of the vertices;</li>
-<li>If the class F has the WedgeTexCoords component (or a derivate), its size must be the same of the vertices; </li>
+<div class="textblock"><p>A concept that checks whether a class has (inherits from) an Face class. </p>
+<p>The concept is satisfied when <code>T</code> is a class that instantiates or derives from a Face class having any ParentMesh type and any Component types. The concept checks also that the Face has:</p><ul>
+<li>a BitFlags component;</li>
+<li>VertexPointers or VertexIndices components</li>
+<li>the number of vertices is less than 0 (dynamic size) or at least 3 (static size);</li>
+<li>if the Face has the TriangleBitFlags component, the number of vertices must be 3 (static size);</li>
+<li>all the components tied to the vertex number of the Face are consistent with the number of vertices;</li>
 </ul>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type to be tested for conformity to the EdgeConcept. </td></tr>
+  </table>
+  </dd>
+</dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

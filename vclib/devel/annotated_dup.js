@@ -41,8 +41,6 @@ var annotated_dup =
       ] ],
       [ "mesh", null, [
         [ "ContainerOfElement", "structvcl_1_1mesh_1_1ContainerOfElement.html", null ],
-        [ "CustomComponentsVectorMap", "classvcl_1_1mesh_1_1CustomComponentsVectorMap.html", null ],
-        [ "CustomComponentsVectorMap< true >", "classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html", "classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4" ],
         [ "EdgeContainer", "classvcl_1_1mesh_1_1EdgeContainer.html", "classvcl_1_1mesh_1_1EdgeContainer" ],
         [ "ElementContainer", "classvcl_1_1mesh_1_1ElementContainer.html", null ],
         [ "ElementContainerTriggerer", "classvcl_1_1mesh_1_1ElementContainerTriggerer.html", null ],
@@ -50,9 +48,7 @@ var annotated_dup =
         [ "HasContainerOfElementPred", "structvcl_1_1mesh_1_1HasContainerOfElementPred.html", null ],
         [ "HasContainerOfPred", "structvcl_1_1mesh_1_1HasContainerOfPred.html", null ],
         [ "IsElementContainerPred", "structvcl_1_1mesh_1_1IsElementContainerPred.html", null ],
-        [ "VertexContainer", "classvcl_1_1mesh_1_1VertexContainer.html", "classvcl_1_1mesh_1_1VertexContainer" ],
-        [ "VerticalComponentsVectorTuple", "classvcl_1_1mesh_1_1VerticalComponentsVectorTuple.html", null ],
-        [ "VerticalComponentsVectorTuple< TypeWrapper< Comp... > >", "classvcl_1_1mesh_1_1VerticalComponentsVectorTuple_3_01TypeWrapper_3_01Comp_8_8_8_01_4_01_4.html", null ]
+        [ "VertexContainer", "classvcl_1_1mesh_1_1VertexContainer.html", "classvcl_1_1mesh_1_1VertexContainer" ]
       ] ],
       [ "pointcloud", null, [
         [ "Vertex", "classvcl_1_1pointcloud_1_1Vertex.html", null ]
@@ -190,6 +186,9 @@ var annotated_dup =
       [ "IndexInTypes", "structvcl_1_1IndexInTypes.html", null ],
       [ "IndexInTypes< T, TypeWrapper< Us... > >", "structvcl_1_1IndexInTypes_3_01T_00_01TypeWrapper_3_01Us_8_8_8_01_4_01_4.html", null ],
       [ "IndirectBuffer", "classvcl_1_1IndirectBuffer.html", "classvcl_1_1IndirectBuffer" ],
+      [ "IsDerivedFromSpecializationOf", "structvcl_1_1IsDerivedFromSpecializationOf.html", null ],
+      [ "IsSpecializationOf", "structvcl_1_1IsSpecializationOf.html", null ],
+      [ "IsSpecializationOf< Template< Args... >, Template >", "structvcl_1_1IsSpecializationOf_3_01Template_3_01Args_8_8_8_01_4_00_01Template_01_4.html", null ],
       [ "KDTree", "classvcl_1_1KDTree.html", "classvcl_1_1KDTree" ],
       [ "Key", "structvcl_1_1Key.html", null ],
       [ "KeyModifier", "structvcl_1_1KeyModifier.html", null ],
@@ -222,7 +221,6 @@ var annotated_dup =
       [ "NestedInitializerListsProcessor", "classvcl_1_1NestedInitializerListsProcessor.html", "classvcl_1_1NestedInitializerListsProcessor" ],
       [ "NestedInitializerListsProcessor< T, 1 >", "classvcl_1_1NestedInitializerListsProcessor_3_01T_00_011_01_4.html", null ],
       [ "NodeIterator", "classvcl_1_1NodeIterator.html", null ],
-      [ "NoIntersectionException", "classvcl_1_1NoIntersectionException.html", null ],
       [ "NullLogger", "classvcl_1_1NullLogger.html", "classvcl_1_1NullLogger" ],
       [ "NumberOfTypes", "structvcl_1_1NumberOfTypes.html", null ],
       [ "NumberOfTypes< TypeWrapper< Args... > >", "structvcl_1_1NumberOfTypes_3_01TypeWrapper_3_01Args_8_8_8_01_4_01_4.html", null ],
@@ -282,8 +280,8 @@ var annotated_dup =
       [ "UnorderedPairComparator", "structvcl_1_1UnorderedPairComparator.html", null ],
       [ "VclFont", "structvcl_1_1VclFont.html", null ],
       [ "Vector", "classvcl_1_1Vector.html", "classvcl_1_1Vector" ],
-      [ "Vertex", "classvcl_1_1Vertex.html", null ],
-      [ "Vertex< MeshType, TypeWrapper< Comps... > >", "classvcl_1_1Vertex_3_01MeshType_00_01TypeWrapper_3_01Comps_8_8_8_01_4_01_4.html", "classvcl_1_1Vertex_3_01MeshType_00_01TypeWrapper_3_01Comps_8_8_8_01_4_01_4" ],
+      [ "Vertex", "classvcl_1_1Vertex.html", "classvcl_1_1Vertex" ],
+      [ "Vertex< MeshType, TypeWrapper< Comps... > >", "classvcl_1_1Vertex_3_01MeshType_00_01TypeWrapper_3_01Comps_8_8_8_01_4_01_4.html", null ],
       [ "VertexBuffer", "classvcl_1_1VertexBuffer.html", "classvcl_1_1VertexBuffer" ],
       [ "VertexSampler", "classvcl_1_1VertexSampler.html", null ],
       [ "VertFragLoader", "structvcl_1_1VertFragLoader.html", null ],

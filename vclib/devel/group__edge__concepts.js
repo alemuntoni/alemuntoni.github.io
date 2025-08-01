@@ -1,7 +1,7 @@
 var group__edge__concepts =
 [
-    [ "vcl::edge::HasAdjacentEdges", "conceptvcl_1_1edge_1_1HasAdjacentEdges.html", null ],
     [ "vcl::EdgeConcept", "conceptvcl_1_1EdgeConcept.html", null ],
+    [ "vcl::edge::HasAdjacentEdges", "conceptvcl_1_1edge_1_1HasAdjacentEdges.html", null ],
     [ "vcl::EdgeRangeConcept", "conceptvcl_1_1EdgeRangeConcept.html", null ],
     [ "vcl::EdgePointerRangeConcept", "conceptvcl_1_1EdgePointerRangeConcept.html", null ],
     [ "vcl::edge::HasOptionalAdjacentEdges", "conceptvcl_1_1edge_1_1HasOptionalAdjacentEdges.html", null ],

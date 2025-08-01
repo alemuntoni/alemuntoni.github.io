@@ -114,13 +114,13 @@ Let's start</h1>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;vclib/meshes.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;vclib/load_save.h&gt;</span></div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">vcl::TriMesh</a> myTriMesh;</div>
+<div class="line"><a class="code hl_class" href="classvcl_1_1Box.html">vcl::TriMesh</a> myTriMesh;</div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_function" href="group__load__mesh.html#ga3db844790e39aca57d8c05410eb25eee">vcl::load</a>(myTriMesh, <span class="stringliteral">&quot;bunny.ply&quot;</span>);</div>
-<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:43</div></div>
-<div class="ttc" id="agroup__load__mesh_html_ga3db844790e39aca57d8c05410eb25eee"><div class="ttname"><a href="group__load__mesh.html#ga3db844790e39aca57d8c05410eb25eee">vcl::load</a></div><div class="ttdeci">void load(MeshType &amp;m, const std::string &amp;filename, MeshInfo &amp;loadedInfo, LogType &amp;log=nullLogger, const LoadSettings &amp;settings=LoadSettings())</div><div class="ttdoc">Loads a mesh from a file with the given filename and stores it in the given mesh object....</div><div class="ttdef"><b>Definition</b> load.h:95</div></div>
+<div class="line"><a class="code hl_function" href="group__load__mesh.html#gae21495ee10c361e020eab171bd4dd48d">vcl::loadMesh</a>(myTriMesh, <span class="stringliteral">&quot;bunny.ply&quot;</span>);</div>
+<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:46</div></div>
+<div class="ttc" id="agroup__load__mesh_html_gae21495ee10c361e020eab171bd4dd48d"><div class="ttname"><a href="group__load__mesh.html#gae21495ee10c361e020eab171bd4dd48d">vcl::loadMesh</a></div><div class="ttdeci">void loadMesh(MeshType &amp;m, const std::string &amp;filename, MeshInfo &amp;loadedInfo, const LoadSettings &amp;settings, LogType &amp;log=nullLogger)</div><div class="ttdoc">Loads a mesh from a file with the given filename and stores it in the given mesh object....</div><div class="ttdef"><b>Definition</b> load_mesh.h:95</div></div>
 </div><!-- fragment --><p>Or:</p>
-<div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">vcl::TriMesh</a> myTriMesh = <a class="code hl_class" href="classvcl_1_1Segment.html">vcl::load&lt;vcl::TriMesh&gt;</a>(<span class="stringliteral">&quot;bunny.ply&quot;</span>);</div>
+<div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Box.html">vcl::TriMesh</a> myTriMesh = <a class="code hl_class" href="classvcl_1_1Box.html">vcl::loadMesh&lt;vcl::TriMesh&gt;</a>(<span class="stringliteral">&quot;bunny.ply&quot;</span>);</div>
 </div><!-- fragment --><p>The TriMesh data structure has containers of Vertices and Faces, plus some other info like Bounding Box, Transform Matrix, ...</p>
 <p>You can find more info about the TriMesh class and other built-in classes in the <a class="el" href="core_meshes.html">Built-in Meshes</a> page and the list of them in the <a class="el" href="group__meshes.html">Meshes</a> group.</p>
 <p>We can, for example, print some statistics and update the bounding box component of the mesh after that it has been loaded:</p>
@@ -128,17 +128,19 @@ Let's start</h1>
 <div class="line"> </div>
 <div class="line"><a class="code hl_function" href="group__update.html#ga8ecd18a495232ac86d4c81913a1ad3f7">vcl::updateBoundingBox</a>(myTriMesh);</div>
 <div class="line"> </div>
-<div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;Min bb: &quot;</span> &lt;&lt; myTriMesh.boundingBox().min() &lt;&lt; <span class="stringliteral">&quot;; &quot;</span></div>
-<div class="line">          &lt;&lt; <span class="stringliteral">&quot;Max bb: &quot;</span> &lt;&lt; myTriMesh.boundingBox().max() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;Min bb: &quot;</span> &lt;&lt; myTriMesh.boundingBox().<a class="code hl_function" href="classvcl_1_1Box.html#a625489e6580ac0f3a5577cf3fe27d48a">min</a>() &lt;&lt; <span class="stringliteral">&quot;; &quot;</span></div>
+<div class="line">          &lt;&lt; <span class="stringliteral">&quot;Max bb: &quot;</span> &lt;&lt; myTriMesh.boundingBox().<a class="code hl_function" href="classvcl_1_1Box.html#a535809db66680a6de48f02fd371c68f7">max</a>() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
 <div class="line">std::cout &lt;&lt; <span class="stringliteral">&quot;Vertex number: &quot;</span> &lt;&lt; myTriMesh.vertexNumber() <span class="stringliteral">&quot;; &quot;</span></div>
 <div class="line">          &lt;&lt; <span class="stringliteral">&quot;Face number: &quot;</span>&lt;&lt; myTriMesh.faceNumber() <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="ttc" id="aclassvcl_1_1Box_html_a535809db66680a6de48f02fd371c68f7"><div class="ttname"><a href="classvcl_1_1Box.html#a535809db66680a6de48f02fd371c68f7">vcl::Box::max</a></div><div class="ttdeci">PointT &amp; max()</div><div class="ttdoc">Returns a reference to the maximum point of the box.</div><div class="ttdef"><b>Definition</b> box.h:104</div></div>
+<div class="ttc" id="aclassvcl_1_1Box_html_a625489e6580ac0f3a5577cf3fe27d48a"><div class="ttname"><a href="classvcl_1_1Box.html#a625489e6580ac0f3a5577cf3fe27d48a">vcl::Box::min</a></div><div class="ttdeci">PointT &amp; min()</div><div class="ttdoc">Returns a reference to the minimum point of the box.</div><div class="ttdef"><b>Definition</b> box.h:90</div></div>
 <div class="ttc" id="agroup__update_html_ga8ecd18a495232ac86d4c81913a1ad3f7"><div class="ttname"><a href="group__update.html#ga8ecd18a495232ac86d4c81913a1ad3f7">vcl::updateBoundingBox</a></div><div class="ttdeci">void updateBoundingBox(MeshType &amp;m)</div><div class="ttdoc">Updates the bounding box of the mesh.</div><div class="ttdef"><b>Definition</b> bounding_box.h:41</div></div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md13"></a>
 Access Elements</h1>
 <p>We can access to the elements (Vertices, Faces, ...) of the mesh by index:</p>
 <div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Point.html">vcl::Point3d</a> p = myTriMesh.vertex(0).position();</div>
 <div class="line"><a class="code hl_class" href="classvcl_1_1Point.html">vcl::Point3d</a> p1 = myTriMesh.face(0).vertex(1)-&gt;position();</div>
-<div class="ttc" id="aclassvcl_1_1Point_html"><div class="ttname"><a href="classvcl_1_1Point.html">vcl::Point</a></div><div class="ttdoc">The Point class represents an N-dimensional point containing N scalar values.</div><div class="ttdef"><b>Definition</b> point.h:58</div></div>
+<div class="ttc" id="aclassvcl_1_1Point_html"><div class="ttname"><a href="classvcl_1_1Point.html">vcl::Point</a></div><div class="ttdoc">The Point class represents an N-dimensional point containing N scalar values.</div><div class="ttdef"><b>Definition</b> point.h:55</div></div>
 </div><!-- fragment --><p>We can also iterate over Vertices and over Faces of the mesh:</p>
 <div class="fragment"><div class="line"><span class="comment">// compute barycenter of the Mesh</span></div>
 <div class="line"> </div>
@@ -162,12 +164,12 @@ Access Elements</h1>
 <div class="line">        std::cout &lt;&lt; f.index() &lt;&lt; <span class="stringliteral">&quot; is above the y barycenter\n&quot;</span>;</div>
 <div class="line">    }</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassvcl_1_1Point_html_ac98869b529d121e393888364f565b17f"><div class="ttname"><a href="classvcl_1_1Point.html#ac98869b529d121e393888364f565b17f">vcl::Point::y</a></div><div class="ttdeci">ScalarType &amp; y()</div><div class="ttdoc">Returns a reference to the y-component of the Point object.</div><div class="ttdef"><b>Definition</b> point.h:153</div></div>
+<div class="ttc" id="aclassvcl_1_1Point_html_ac98869b529d121e393888364f565b17f"><div class="ttname"><a href="classvcl_1_1Point.html#ac98869b529d121e393888364f565b17f">vcl::Point::y</a></div><div class="ttdeci">ScalarType &amp; y()</div><div class="ttdoc">Returns a reference to the y-component of the Point object.</div><div class="ttdef"><b>Definition</b> point.h:150</div></div>
 </div><!-- fragment --><p>Note that iterating over the vertices of the faces of the Mesh returns the vertices/faces/elements objects by reference, while iterating over the vertices of the face (or, in general, adjacencies of a specific element) returns the pointer to an element that is stored inside the same Mesh. Note also that this pointer may be <code>nullptr</code>: in this small example we assume that the mesh is consistent meaning that this cannot happen.</p>
 <h1><a class="anchor" id="autotoc_md14"></a>
 Add, set and delete Elements</h1>
 <p>We can create from scratch a mesh:</p>
-<div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">vcl::TriMesh</a> mesh;</div>
+<div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Box.html">vcl::TriMesh</a> mesh;</div>
 <div class="line"> </div>
 <div class="line">mesh.addVertex(<a class="code hl_class" href="classvcl_1_1Point.html">vcl::Point3d</a>(0,0,0)); <span class="comment">// add a vertex with pos 0,0,0</span></div>
 <div class="line">mesh.addVertices(2); <span class="comment">// add another two vertices to the mesh</span></div>
@@ -185,7 +187,7 @@ Add, set and delete Elements</h1>
 <div class="line"><span class="comment">// add another face but initialize vertices later:</span></div>
 <div class="line">uint fid = mesh.addFace(); <span class="comment">// each add returns an id telling the first added element</span></div>
 <div class="line">mesh.face(fid).setVertices(&amp;mesh.vertex(2), &amp;mesh.vertex(1), &amp;mesh.vertex(3));</div>
-<div class="ttc" id="agroup__space__core_html_gabb47c1364fb2fe1464a54417684f011e"><div class="ttname"><a href="group__space__core.html#gabb47c1364fb2fe1464a54417684f011e">vcl::Point3d</a></div><div class="ttdeci">Point3&lt; double &gt; Point3d</div><div class="ttdoc">A convenience alias for a 3-dimensional Point with double-precision floating-point components.</div><div class="ttdef"><b>Definition</b> point.h:804</div></div>
+<div class="ttc" id="agroup__space__core_html_gabb47c1364fb2fe1464a54417684f011e"><div class="ttname"><a href="group__space__core.html#gabb47c1364fb2fe1464a54417684f011e">vcl::Point3d</a></div><div class="ttdeci">Point3&lt; double &gt; Point3d</div><div class="ttdoc">A convenience alias for a 3-dimensional Point with double-precision floating-point components.</div><div class="ttdef"><b>Definition</b> point.h:779</div></div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md15"></a>
 Components</h1>
 <p>Each data that is stored in a mesh or in a element is called "component". For example, the position of a vertex is a component, the normal of a face is a component, the color of a vertex is a component, and so on.</p>

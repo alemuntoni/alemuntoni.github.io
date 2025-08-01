@@ -1,26 +1,15 @@
 var dir_bb22984f5fff73c7985df20e8a12e7e7 =
 [
     [ "algorithms", "dir_1c404f8c53fcd1daf12bfcf3dbca1d20.html", "dir_1c404f8c53fcd1daf12bfcf3dbca1d20" ],
-    [ "concepts", "dir_dd968cc90108d82a40e31b676831d617.html", "dir_dd968cc90108d82a40e31b676831d617" ],
-    [ "exceptions", "dir_213721054bd7777fbdb8608854e63df7.html", "dir_213721054bd7777fbdb8608854e63df7" ],
+    [ "base", "dir_e330a725a80990495f6734bd3c618028.html", "dir_e330a725a80990495f6734bd3c618028" ],
     [ "io", "dir_24c160c9fc07f81548f146fa9a84e4df.html", "dir_24c160c9fc07f81548f146fa9a84e4df" ],
-    [ "math", "dir_12f8cf7631d468da4ffabaf60eecbdd7.html", "dir_12f8cf7631d468da4ffabaf60eecbdd7" ],
     [ "mesh", "dir_57e9d4f65bede1d20512a0464756b99f.html", "dir_57e9d4f65bede1d20512a0464756b99f" ],
     [ "meshes", "dir_31c3613212bfcef401f78e196e5128e7.html", "dir_31c3613212bfcef401f78e196e5128e7" ],
-    [ "misc", "dir_7c92f5c95a7eb1889f78d1875330f054.html", "dir_7c92f5c95a7eb1889f78d1875330f054" ],
-    [ "serialization", "dir_740765cca19b92d463c3cceb64e74df1.html", "dir_740765cca19b92d463c3cceb64e74df1" ],
     [ "space", "dir_876bb933d26b04599d60b1bdfe1a5bc5.html", "dir_876bb933d26b04599d60b1bdfe1a5bc5" ],
-    [ "types", "dir_ae5876ed1a21dfe8c57b4e8d41da885b.html", "dir_ae5876ed1a21dfe8c57b4e8d41da885b" ],
-    [ "views", "dir_460061cea23d80798652b97fd90318f4.html", "dir_460061cea23d80798652b97fd90318f4" ],
     [ "algorithms.h", "algorithms_8h_source.html", null ],
-    [ "concepts.h", "core_2include_2vclib_2concepts_8h_source.html", null ],
-    [ "exceptions.h", "exceptions_8h_source.html", null ],
+    [ "base.h", "base_8h_source.html", null ],
     [ "io.h", "io_8h_source.html", null ],
-    [ "math.h", "math_8h_source.html", null ],
+    [ "mesh.h", "mesh_8h_source.html", null ],
     [ "meshes.h", "meshes_8h_source.html", null ],
-    [ "miscellaneous.h", "miscellaneous_8h_source.html", null ],
-    [ "serialization.h", "serialization_8h_source.html", null ],
-    [ "space.h", "space_8h_source.html", null ],
-    [ "types.h", "types_8h_source.html", null ],
-    [ "views.h", "views_8h_source.html", null ]
+    [ "space.h", "space_8h_source.html", null ]
 ];

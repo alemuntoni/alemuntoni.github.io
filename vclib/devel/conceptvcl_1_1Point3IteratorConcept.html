@@ -105,24 +105,24 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1Point3IteratorConcept.ht
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">vcl::Point3IteratorConcept Concept Reference<div class="ingroups"><a class="el" href="group__concepts.html">Concepts</a> &raquo; <a class="el" href="group__lib__concepts.html">Library Concepts</a> &raquo; <a class="el" href="group__space__concepts.html">Space Concepts</a></div></div></div>
+  <div class="headertitle"><div class="title">vcl::Point3IteratorConcept Concept Reference<div class="ingroups"><a class="el" href="group__space__core.html">Core Data Structures</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Concept for iterators that iterate over 3D Points (class that satisfies the <a class="el" href="conceptvcl_1_1Point3Concept.html" title="Concept for points in three-dimensional space.">vcl::Point3Concept</a>).  
+<p>A concept representing an iterator that iterates over 3D Points (specifically, a class that satisfies the Point3Concept).  
 <a href="conceptvcl_1_1Point3IteratorConcept.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="concepts_2space_2point_8h_source.html">vclib/concepts/space/point.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="point_8h_source.html">vclib/space/core/point.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> It&gt;</div>
 <div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1Point3IteratorConcept.html">vcl::Point3IteratorConcept</a> = </div>
 <div class="line">    <a class="code hl_concept" href="conceptvcl_1_1IteratorConcept.html">IteratorConcept&lt;It&gt;</a> &amp;&amp; <a class="code hl_concept" href="conceptvcl_1_1Point3Concept.html">Point3Concept&lt;typename It::value_type&gt;</a></div>
 <div class="ttc" id="aconceptvcl_1_1IteratorConcept_html"><div class="ttname"><a href="conceptvcl_1_1IteratorConcept.html">vcl::IteratorConcept</a></div><div class="ttdoc">The IteratorConcept is satisfied if T is an input or output iterator.</div><div class="ttdef"><b>Definition</b> iterators.h:37</div></div>
-<div class="ttc" id="aconceptvcl_1_1Point3Concept_html"><div class="ttname"><a href="conceptvcl_1_1Point3Concept.html">vcl::Point3Concept</a></div><div class="ttdoc">Concept for points in three-dimensional space.</div><div class="ttdef"><b>Definition</b> point.h:130</div></div>
-<div class="ttc" id="aconceptvcl_1_1Point3IteratorConcept_html"><div class="ttname"><a href="conceptvcl_1_1Point3IteratorConcept.html">vcl::Point3IteratorConcept</a></div><div class="ttdoc">Concept for iterators that iterate over 3D Points (class that satisfies the vcl::Point3Concept).</div><div class="ttdef"><b>Definition</b> point.h:192</div></div>
+<div class="ttc" id="aconceptvcl_1_1Point3Concept_html"><div class="ttname"><a href="conceptvcl_1_1Point3Concept.html">vcl::Point3Concept</a></div><div class="ttdoc">A concept representing a 3D Point.</div><div class="ttdef"><b>Definition</b> point.h:871</div></div>
+<div class="ttc" id="aconceptvcl_1_1Point3IteratorConcept_html"><div class="ttname"><a href="conceptvcl_1_1Point3IteratorConcept.html">vcl::Point3IteratorConcept</a></div><div class="ttdoc">A concept representing an iterator that iterates over 3D Points (specifically, a class that satisfies...</div><div class="ttdef"><b>Definition</b> point.h:930</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Concept for iterators that iterate over 3D Points (class that satisfies the <a class="el" href="conceptvcl_1_1Point3Concept.html" title="Concept for points in three-dimensional space.">vcl::Point3Concept</a>). </p>
-<p>A type satisfies this concept if it is an iterator having its <code>value_type</code> that satisfies the <a class="el" href="conceptvcl_1_1Point3Concept.html" title="Concept for points in three-dimensional space.">vcl::Point3Concept</a>.</p>
+<div class="textblock"><p>A concept representing an iterator that iterates over 3D Points (specifically, a class that satisfies the Point3Concept). </p>
+<p>The concept is satisfied when <code>T</code> is an iterator having its <code>value_type</code> that satisfies the <a class="el" href="conceptvcl_1_1Point3Concept.html" title="A concept representing a 3D Point.">vcl::Point3Concept</a>.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">It</td><td>The type to be tested for conformity to the Point3IteratorConcept. </td></tr>

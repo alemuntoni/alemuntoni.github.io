@@ -35,5 +35,6 @@ var searchData=
   ['polymorphicobjectvector_3c_20drawableobject_20_3e_32',['PolymorphicObjectVector&lt; DrawableObject &gt;',['../classvcl_1_1PolymorphicObjectVector.html',1,'vcl']]],
   ['position_33',['Position',['../classvcl_1_1comp_1_1Position.html',1,'vcl::comp']]],
   ['principalcurvature_34',['principalcurvature',['../classvcl_1_1comp_1_1PrincipalCurvature.html',1,'vcl::comp::PrincipalCurvature&lt; Scalar, ParentElemType, OPT &gt;'],['../classvcl_1_1PrincipalCurvature.html',1,'vcl::PrincipalCurvature&lt; Scalar &gt;']]],
-  ['programmanager_35',['ProgramManager',['../classvcl_1_1ProgramManager.html',1,'vcl']]]
+  ['programmanager_35',['ProgramManager',['../classvcl_1_1ProgramManager.html',1,'vcl']]],
+  ['progressstatus_36',['ProgressStatus',['../structvcl_1_1Logger_1_1ProgressStatus.html',1,'vcl::Logger']]]
 ];

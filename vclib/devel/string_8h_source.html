@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visual Computing Library: vclib/core/include/vclib/misc/string.h Source File</title>
+<title>Visual Computing Library: vclib/core/include/vclib/base/string.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -135,10 +135,10 @@ $(document).ready(function(){initNavTree('string_8h_source.html',''); initResiza
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> * (https://www.mozilla.org/en-US/MPL/2.0/) for more details.                *</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> ****************************************************************************/</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_MISC_STRING_H</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_MISC_STRING_H</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_BASE_STRING_H</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_BASE_STRING_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;vclib/math/min_max.h&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;vclib/base/min_max.h&gt;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;algorithm&gt;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;cctype&gt;</span></div>
@@ -243,29 +243,29 @@ $(document).ready(function(){initNavTree('string_8h_source.html',''); initResiza
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>            uint insertion    = d[i][j - 1] + 1;</div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>            uint substitution = d[i - 1][j - 1] + cost;</div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>            d[i][j] = <a class="code hl_function" href="group__math.html#gae6c5f005182de34972bb2430132acb8f">vcl::min</a>(deletion, insertion, substitution);</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>            d[i][j] = <a class="code hl_function" href="group__base.html#gae6c5f005182de34972bb2430132acb8f">vcl::min</a>(deletion, insertion, substitution);</div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        }</div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    }</div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <span class="keywordflow">return</span> d[str1.size()][str2.size()];</div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>}</div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="keyword">inline</span> uint <a class="code hl_function" href="group__core__distance.html#gaf11b799fdba1888fb91d10cdfbb073e2">distance</a>(<span class="keyword">const</span> std::string&amp; str1, <span class="keyword">const</span> std::string&amp; str2)</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="keyword">inline</span> uint <a class="code hl_function" href="group__core__distance.html#ga3ab7db4e1073112e5de09a8be722dc93">distance</a>(<span class="keyword">const</span> std::string&amp; str1, <span class="keyword">const</span> std::string&amp; str2)</div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>{</div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <span class="keywordflow">return</span> levenshteinDist(str1, str2);</div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>}</div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>} <span class="comment">// namespace vcl</span></div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="preprocessor">#endif </span><span class="comment">// VCL_MISC_STRING_H</span></div>
-<div class="ttc" id="agroup__core__distance_html_gaf11b799fdba1888fb91d10cdfbb073e2"><div class="ttname"><a href="group__core__distance.html#gaf11b799fdba1888fb91d10cdfbb073e2">vcl::distance</a></div><div class="ttdeci">auto distance(const VertexType &amp;v, const PointType &amp;p)</div><div class="ttdoc">Computes the distance between a Vertex and a 3D point.</div><div class="ttdef"><b>Definition</b> element.h:50</div></div>
-<div class="ttc" id="agroup__math_html_gae6c5f005182de34972bb2430132acb8f"><div class="ttname"><a href="group__math.html#gae6c5f005182de34972bb2430132acb8f">vcl::min</a></div><div class="ttdeci">constexpr auto min(const T &amp;p1, const T &amp;p2)</div><div class="ttdoc">Returns the minimum between the two parameters.</div><div class="ttdef"><b>Definition</b> min_max.h:42</div></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="preprocessor">#endif </span><span class="comment">// VCL_BASE_STRING_H</span></div>
+<div class="ttc" id="agroup__base_html_gae6c5f005182de34972bb2430132acb8f"><div class="ttname"><a href="group__base.html#gae6c5f005182de34972bb2430132acb8f">vcl::min</a></div><div class="ttdeci">constexpr auto min(const T &amp;p1, const T &amp;p2)</div><div class="ttdoc">Returns the minimum between the two parameters.</div><div class="ttdef"><b>Definition</b> min_max.h:40</div></div>
+<div class="ttc" id="agroup__core__distance_html_ga3ab7db4e1073112e5de09a8be722dc93"><div class="ttname"><a href="group__core__distance.html#ga3ab7db4e1073112e5de09a8be722dc93">vcl::distance</a></div><div class="ttdeci">auto distance(const PointType &amp;point0, const PointType &amp;point1)</div><div class="ttdoc">Compute the distance between two Points of any dimension.</div><div class="ttdef"><b>Definition</b> distance.h:45</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_7c92f5c95a7eb1889f78d1875330f054.html">misc</a></li><li class="navelem"><b>string.h</b></li>
+    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_e330a725a80990495f6734bd3c618028.html">base</a></li><li class="navelem"><b>string.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
