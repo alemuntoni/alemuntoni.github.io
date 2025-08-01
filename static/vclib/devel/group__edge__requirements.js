@@ -1,5 +1,6 @@
 var group__edge__requirements =
 [
+    [ "EdgeMesh Concepts", "group__edge__mesh__concepts.html", "group__edge__mesh__concepts" ],
     [ "vcl::enableIfPerEdgeAdjacentEdgesOptional", "group__edge__requirements.html#ga55a6207dd62fdf1e146a42119f65ee7d", null ],
     [ "vcl::enableIfPerEdgeAdjacentFacesOptional", "group__edge__requirements.html#gab587d17dd049174b67e95fd1bdce9fc5", null ],
     [ "vcl::enableIfPerEdgeColorOptional", "group__edge__requirements.html#ga7b5846c10685de9e77115bcc0695dee4", null ],

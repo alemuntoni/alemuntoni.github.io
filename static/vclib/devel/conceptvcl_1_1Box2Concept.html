@@ -105,22 +105,22 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1Box2Concept.html',''); i
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">vcl::Box2Concept Concept Reference</div></div>
+  <div class="headertitle"><div class="title">vcl::Box2Concept Concept Reference<div class="ingroups"><a class="el" href="group__space__core.html">Core Data Structures</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>A concept that requires a type to satisfy the BoxConcept and have a dimension of 2.  
+<p>A concept representing a 2D Box.  
 <a href="conceptvcl_1_1Box2Concept.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="concepts_2space_2box_8h_source.html">vclib/concepts/space/box.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="space_2core_2box_8h_source.html">vclib/space/core/box.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1Box2Concept.html">vcl::Box2Concept</a> =  <a class="code hl_concept" href="conceptvcl_1_1BoxConcept.html">BoxConcept&lt;T&gt;</a> &amp;&amp; RemoveRef&lt;T&gt;::DIM == 2</div>
-<div class="ttc" id="aconceptvcl_1_1Box2Concept_html"><div class="ttname"><a href="conceptvcl_1_1Box2Concept.html">vcl::Box2Concept</a></div><div class="ttdoc">A concept that requires a type to satisfy the BoxConcept and have a dimension of 2.</div><div class="ttdef"><b>Definition</b> box.h:113</div></div>
-<div class="ttc" id="aconceptvcl_1_1BoxConcept_html"><div class="ttname"><a href="conceptvcl_1_1BoxConcept.html">vcl::BoxConcept</a></div><div class="ttdoc">A concept representing a N-Dimensional Box.</div><div class="ttdef"><b>Definition</b> box.h:43</div></div>
+<div class="ttc" id="aconceptvcl_1_1Box2Concept_html"><div class="ttname"><a href="conceptvcl_1_1Box2Concept.html">vcl::Box2Concept</a></div><div class="ttdoc">A concept representing a 2D Box.</div><div class="ttdef"><b>Definition</b> box.h:546</div></div>
+<div class="ttc" id="aconceptvcl_1_1BoxConcept_html"><div class="ttname"><a href="conceptvcl_1_1BoxConcept.html">vcl::BoxConcept</a></div><div class="ttdoc">A concept representing a Box.</div><div class="ttdef"><b>Definition</b> box.h:531</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A concept that requires a type to satisfy the BoxConcept and have a dimension of 2. </p>
-<p>The Box2Concept concept requires that the given type satisfies the BoxConcept concept and that its dimension is equal to 2. This can be used to constrain template parameters of functions or classes that require a 2D box.</p>
+<div class="textblock"><p>A concept representing a 2D Box. </p>
+<p>The concept is satisfied when <code>T</code> is a class that instantiates or derives from a Box class having a Point type with dimension 2.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The type to be tested for conformity to the Box2Concept. </td></tr>

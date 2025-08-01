@@ -105,24 +105,27 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1comp_1_1HasBoundingBox.h
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">vcl::comp::HasBoundingBox Concept Reference<div class="ingroups"><a class="el" href="group__concepts.html">Concepts</a> &raquo; <a class="el" href="group__lib__concepts.html">Library Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__concepts.html">Mesh Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__components.html">Components</a> &raquo; <a class="el" href="group__components__concepts.html">Components Concepts</a></div></div></div>
+  <div class="headertitle"><div class="title">vcl::comp::HasBoundingBox Concept Reference<div class="ingroups"><a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__requirements.html">Mesh Requirements</a> &raquo; <a class="el" href="group__mesh__concepts.html">Mesh Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__components.html">Components</a> &raquo; <a class="el" href="group__components__concepts.html">Components Concepts</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>HasBoundingBox concept is satisfied only if a Element or Mesh class provides the member functions specified in this concept. These member functions allows to access to a <a class="el" href="classvcl_1_1comp_1_1BoundingBox.html">vcl::comp::BoundingBox</a> component of a given element/mesh.  
+<p>A concept that checks whether a type T (that should be a Mesh) has the BoundingBox component (inherits from it).  
 <a href="conceptvcl_1_1comp_1_1HasBoundingBox.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="concepts_2mesh_2components_2bounding__box_8h_source.html">vclib/concepts/mesh/components/bounding_box.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="mesh_2components_2bounding__box_8h_source.html">vclib/mesh/components/bounding_box.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasBoundingBox.html">vcl::comp::HasBoundingBox</a> =  <span class="keyword">requires</span> (T&amp;&amp; obj) {</div>
-<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::BoundingBoxType;</div>
-<div class="line">    { obj.boundingBox() } -&gt; <a class="code hl_concept" href="conceptvcl_1_1Box3Concept.html">Box3Concept</a>;</div>
-<div class="line">}</div>
-<div class="ttc" id="aconceptvcl_1_1Box3Concept_html"><div class="ttname"><a href="conceptvcl_1_1Box3Concept.html">vcl::Box3Concept</a></div><div class="ttdoc">A concept that requires a type to satisfy the BoxConcept and have a dimension of 3.</div><div class="ttdef"><b>Definition</b> box.h:126</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasBoundingBox_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasBoundingBox.html">vcl::comp::HasBoundingBox</a></div><div class="ttdoc">HasBoundingBox concept is satisfied only if a Element or Mesh class provides the member functions spe...</div><div class="ttdef"><b>Definition</b> bounding_box.h:39</div></div>
+<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasBoundingBox.html">vcl::comp::HasBoundingBox</a> =  TTB::IsDerivedFromSpecializationOfV&lt;T, BoundingBox&gt;</div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasBoundingBox_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasBoundingBox.html">vcl::comp::HasBoundingBox</a></div><div class="ttdoc">A concept that checks whether a type T (that should be a Mesh) has the BoundingBox component (inherit...</div><div class="ttdef"><b>Definition</b> bounding_box.h:132</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>HasBoundingBox concept is satisfied only if a Element or Mesh class provides the member functions specified in this concept. These member functions allows to access to a <a class="el" href="classvcl_1_1comp_1_1BoundingBox.html">vcl::comp::BoundingBox</a> component of a given element/mesh. </p>
+<div class="textblock"><p>A concept that checks whether a type T (that should be a Mesh) has the BoundingBox component (inherits from it). </p>
+<p>The concept is satisfied if T is a class that inherits from <a class="el" href="classvcl_1_1comp_1_1BoundingBox.html" title="The BoundingBox component class represents an axis aligned bounding box. This class is usually used a...">vcl::comp::BoundingBox</a>, with any template arguments.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type to be tested for conformity to the HasBoundingBox. </td></tr>
+  </table>
+  </dd>
+</dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

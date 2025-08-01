@@ -27,7 +27,5 @@ var searchData=
   ['createsphereargs_24',['CreateSphereArgs',['../structvcl_1_1CreateSphereArgs.html',1,'vcl']]],
   ['customcomponent_25',['CustomComponent',['../structvcl_1_1MeshInfo_1_1CustomComponent.html',1,'vcl::MeshInfo']]],
   ['customcomponents_26',['CustomComponents',['../classvcl_1_1comp_1_1CustomComponents.html',1,'vcl::comp']]],
-  ['customcomponentsvectormap_27',['CustomComponentsVectorMap',['../classvcl_1_1mesh_1_1CustomComponentsVectorMap.html',1,'vcl::mesh']]],
-  ['customcomponentsvectormap_3c_20true_20_3e_28',['CustomComponentsVectorMap&lt; true &gt;',['../classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html',1,'vcl::mesh']]],
-  ['customcomponentvectorhandle_29',['CustomComponentVectorHandle',['../classvcl_1_1CustomComponentVectorHandle.html',1,'vcl']]]
+  ['customcomponentvectorhandle_27',['CustomComponentVectorHandle',['../classvcl_1_1CustomComponentVectorHandle.html',1,'vcl']]]
 ];

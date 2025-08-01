@@ -1,5 +1,6 @@
 var group__vert__components =
 [
+    [ "Vertex Concepts", "group__vert__concepts.html", "group__vert__concepts" ],
     [ "vcl::vert::HasAdjacentEdges", "conceptvcl_1_1vert_1_1HasAdjacentEdges.html", null ],
     [ "vcl::vert::HasOptionalAdjacentEdges", "conceptvcl_1_1vert_1_1HasOptionalAdjacentEdges.html", null ],
     [ "vcl::vert::HasAdjacentFaces", "conceptvcl_1_1vert_1_1HasAdjacentFaces.html", null ],

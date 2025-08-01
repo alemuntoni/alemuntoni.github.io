@@ -145,22 +145,22 @@ $(document).ready(function(){initNavTree('dynamic__index__buffer_8h_source.html'
 <div class="foldopen" id="foldopen00046" data-start="{" data-end="};">
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classvcl_1_1DynamicIndexBuffer.html">   46</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1DynamicIndexBuffer.html">DynamicIndexBuffer</a> : <span class="keyword">public</span> <a class="code hl_class" href="classvcl_1_1GenericBuffer.html">GenericBuffer</a>&lt;bgfx::DynamicIndexBufferHandle&gt;</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>{</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">using </span><a class="code hl_class" href="classvcl_1_1GenericBuffer.html">Base</a> = <a class="code hl_class" href="classvcl_1_1Segment.html">GenericBuffer&lt;bgfx::DynamicIndexBufferHandle&gt;</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">using </span><a class="code hl_class" href="classvcl_1_1GenericBuffer.html">Base</a> = <a class="code hl_class" href="classvcl_1_1Box.html">GenericBuffer&lt;bgfx::DynamicIndexBufferHandle&gt;</a>;</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classvcl_1_1DynamicIndexBuffer.html#afdca73fbda5f60f8055d56c650b7e7e5">   56</a></span>    <a class="code hl_function" href="classvcl_1_1DynamicIndexBuffer.html#afdca73fbda5f60f8055d56c650b7e7e5">DynamicIndexBuffer</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> create(<a class="code hl_class" href="classvcl_1_1Segment.html">uint</a> size, <a class="code hl_class" href="classvcl_1_1Segment.html">ushort</a> flags = <a class="code hl_class" href="classvcl_1_1Segment.html">BGFX_BUFFER_NONE</a>)</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> create(<a class="code hl_class" href="classvcl_1_1Box.html">uint</a> size, <a class="code hl_class" href="classvcl_1_1Box.html">ushort</a> flags = <a class="code hl_class" href="classvcl_1_1Box.html">BGFX_BUFFER_NONE</a>)</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    {</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <a class="code hl_function" href="classvcl_1_1GenericBuffer.html#a43ce8a561af6d950b6f9cd089848b474">destroy</a>();</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordflow">if</span> (size != 0)</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            mHandle = bgfx::createDynamicIndexBuffer(size, flags);</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">void</span> update(uint <a class="code hl_class" href="classvcl_1_1Segment.html">startIndex</a>, <span class="keyword">const</span> bgfx::Memory* data)</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">void</span> update(uint <a class="code hl_class" href="classvcl_1_1Box.html">startIndex</a>, <span class="keyword">const</span> bgfx::Memory* data)</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    {</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordflow">if</span> (bgfx::isValid(mHandle)) {</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            bgfx::update(mHandle, <a class="code hl_class" href="classvcl_1_1Segment.html">startIndex</a>, data);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            bgfx::update(mHandle, <a class="code hl_class" href="classvcl_1_1Box.html">startIndex</a>, data);</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        }</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
@@ -178,12 +178,12 @@ $(document).ready(function(){initNavTree('dynamic__index__buffer_8h_source.html'
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>} <span class="comment">// namespace vcl</span></div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">#endif </span><span class="comment">// VCL_BGFX_BUFFERS_DYNAMIC_INDEX_BUFFER_H</span></div>
+<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:46</div></div>
 <div class="ttc" id="aclassvcl_1_1DynamicIndexBuffer_html"><div class="ttname"><a href="classvcl_1_1DynamicIndexBuffer.html">vcl::DynamicIndexBuffer</a></div><div class="ttdoc">The DynamicIndexBuffer manages the lifetime of a bgfx::DynamicIndexBufferHandle.</div><div class="ttdef"><b>Definition</b> dynamic_index_buffer.h:47</div></div>
 <div class="ttc" id="aclassvcl_1_1DynamicIndexBuffer_html_a922f1ed51e9ca73aa96d5e9e24eae53c"><div class="ttname"><a href="classvcl_1_1DynamicIndexBuffer.html#a922f1ed51e9ca73aa96d5e9e24eae53c">vcl::DynamicIndexBuffer::bind</a></div><div class="ttdeci">void bind() const</div><div class="ttdoc">Bind the dynamic index buffer to the rendering pipeline.</div><div class="ttdef"><b>Definition</b> dynamic_index_buffer.h:75</div></div>
 <div class="ttc" id="aclassvcl_1_1DynamicIndexBuffer_html_afdca73fbda5f60f8055d56c650b7e7e5"><div class="ttname"><a href="classvcl_1_1DynamicIndexBuffer.html#afdca73fbda5f60f8055d56c650b7e7e5">vcl::DynamicIndexBuffer::DynamicIndexBuffer</a></div><div class="ttdeci">DynamicIndexBuffer()=default</div><div class="ttdoc">Empty constructor.</div></div>
 <div class="ttc" id="aclassvcl_1_1GenericBuffer_html"><div class="ttname"><a href="classvcl_1_1GenericBuffer.html">vcl::GenericBuffer</a></div><div class="ttdoc">The GenericBuffer manages the lifetime of a bgfx BufferHandle.</div><div class="ttdef"><b>Definition</b> generic_buffer.h:44</div></div>
 <div class="ttc" id="aclassvcl_1_1GenericBuffer_html_a43ce8a561af6d950b6f9cd089848b474"><div class="ttname"><a href="classvcl_1_1GenericBuffer.html#a43ce8a561af6d950b6f9cd089848b474">vcl::GenericBuffer&lt; bgfx::DynamicIndexBufferHandle &gt;::destroy</a></div><div class="ttdeci">void destroy()</div><div class="ttdef"><b>Definition</b> generic_buffer.h:59</div></div>
-<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:43</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

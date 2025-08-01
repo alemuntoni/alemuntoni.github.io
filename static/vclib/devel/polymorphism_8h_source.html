@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visual Computing Library: vclib/core/include/vclib/concepts/polymorphism.h Source File</title>
+<title>Visual Computing Library: vclib/core/include/vclib/base/concepts/polymorphism.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -135,58 +135,56 @@ $(document).ready(function(){initNavTree('polymorphism_8h_source.html',''); init
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> * (https://www.mozilla.org/en-US/MPL/2.0/) for more details.                *</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> ****************************************************************************/</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_CONCEPTS_POLYMORPHISM_H</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_CONCEPTS_POLYMORPHISM_H</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_BASE_CONCEPTS_POLYMORPHISM_H</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_BASE_CONCEPTS_POLYMORPHISM_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;const_correctness.h&quot;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;concepts&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;concepts&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span>vcl {</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span>vcl {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00053" data-start="{" data-end="}">
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="conceptvcl_1_1Cloneable.html">   53</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1Cloneable.html">Cloneable</a> = <span class="keyword">requires</span> (T&amp;&amp; obj) {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="comment">// TODO: Right now, this concept can be used only with a base class that has</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="comment">// a clone method, because the concept requires that the return type of the</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="comment">// clone method is a shared pointer to the same class as the object. This is</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">// not always the case, especially when the clone method is overridden in</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="comment">// derived classes. We need to find a way to make this concept work with</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="comment">// overridden clone methods.</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="comment">//</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="comment">// However, we should also consider the consequences of this change for the</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="comment">// class vcl::PolymorphicObjectVector, which relies on this concept to</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="comment">// determine if an object can be cloned, and stores objects of the Base</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="comment">// class in a vector.</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="comment">//</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="comment">// Example:</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="comment">// class Base {</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="comment">// public:</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="comment">//     virtual std::shared_ptr&lt;Base&gt; clone() const = 0;</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="comment">// };</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="comment">//</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="comment">// class Derived : public Base {</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="comment">// public:</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="comment">//     std::shared_ptr&lt;Derived&gt; clone() const { ... }</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="comment">// };</span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="comment">//</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="comment">// static_assert(vcl::Cloneable&lt;Base&gt;, &quot;&quot;); // OK</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="comment">// static_assert(vcl::Cloneable&lt;Derived&gt;, &quot;&quot;); // Error, but should work</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    { obj.clone() } -&gt; std::same_as&lt;std::shared_ptr&lt;std::remove_cvref_t&lt;T&gt;&gt;&gt;;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>};</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00051" data-start="{" data-end="}">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="conceptvcl_1_1Cloneable.html">   51</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1Cloneable.html">Cloneable</a> = <span class="keyword">requires</span> (T&amp;&amp; obj) {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="comment">// TODO: Right now, this concept can be used only with a base class that has</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="comment">// a clone method, because the concept requires that the return type of the</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="comment">// clone method is a shared pointer to the same class as the object. This is</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="comment">// not always the case, especially when the clone method is overridden in</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="comment">// derived classes. We need to find a way to make this concept work with</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">// overridden clone methods.</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="comment">//</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="comment">// However, we should also consider the consequences of this change for the</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="comment">// class vcl::PolymorphicObjectVector, which relies on this concept to</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="comment">// determine if an object can be cloned, and stores objects of the Base</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="comment">// class in a vector.</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="comment">//</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="comment">// Example:</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="comment">// class Base {</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="comment">// public:</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="comment">//     virtual std::shared_ptr&lt;Base&gt; clone() const = 0;</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="comment">// };</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="comment">//</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="comment">// class Derived : public Base {</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="comment">// public:</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="comment">//     std::shared_ptr&lt;Derived&gt; clone() const { ... }</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="comment">// };</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="comment">//</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="comment">// static_assert(vcl::Cloneable&lt;Base&gt;, &quot;&quot;); // OK</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="comment">// static_assert(vcl::Cloneable&lt;Derived&gt;, &quot;&quot;); // Error, but should work</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    { obj.clone() } -&gt; std::same_as&lt;std::shared_ptr&lt;std::remove_cvref_t&lt;T&gt;&gt;&gt;;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>};</div>
 </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>} <span class="comment">// namespace vcl</span></div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">#endif </span><span class="comment">// VCL_CONCEPTS_POLYMORPHISM_H</span></div>
-<div class="ttc" id="aconceptvcl_1_1Cloneable_html"><div class="ttname"><a href="conceptvcl_1_1Cloneable.html">vcl::Cloneable</a></div><div class="ttdoc">Concept that is evaluated true if T is a cloneable object.</div><div class="ttdef"><b>Definition</b> polymorphism.h:53</div></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">#endif </span><span class="comment">// VCL_BASE_CONCEPTS_POLYMORPHISM_H</span></div>
+<div class="ttc" id="aconceptvcl_1_1Cloneable_html"><div class="ttname"><a href="conceptvcl_1_1Cloneable.html">vcl::Cloneable</a></div><div class="ttdoc">Concept that is evaluated true if T is a cloneable object.</div><div class="ttdef"><b>Definition</b> polymorphism.h:51</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_dd968cc90108d82a40e31b676831d617.html">concepts</a></li><li class="navelem"><b>polymorphism.h</b></li>
+    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_e330a725a80990495f6734bd3c618028.html">base</a></li><li class="navelem"><a class="el" href="dir_baf6116701a59b08a0d101f0e2e70089.html">concepts</a></li><li class="navelem"><b>polymorphism.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

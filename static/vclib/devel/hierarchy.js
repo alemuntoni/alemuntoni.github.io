@@ -373,8 +373,6 @@ var hierarchy =
       [ "vcl::trimesh::Face< Scalar, I >", "classvcl_1_1trimesh_1_1Face.html", null ],
       [ "vcl::trimesh::Vertex< Scalar, I >", "classvcl_1_1trimesh_1_1Vertex.html", null ]
     ] ],
-    [ "vcl::mesh::CustomComponentsVectorMap< HasCustomComponent >", "classvcl_1_1mesh_1_1CustomComponentsVectorMap.html", null ],
-    [ "vcl::mesh::CustomComponentsVectorMap< true >", "classvcl_1_1mesh_1_1CustomComponentsVectorMap_3_01true_01_4.html", null ],
     [ "vcl::CustomComponentVectorHandle< T >", "classvcl_1_1CustomComponentVectorHandle.html", null ],
     [ "vcl::DirectionalLight< Scalar >", "classvcl_1_1DirectionalLight.html", null ],
     [ "vcl::DirectionalLightUniforms", "classvcl_1_1DirectionalLightUniforms.html", null ],
@@ -451,12 +449,14 @@ var hierarchy =
         [ "vcl::MissingPreconditionException", "classvcl_1_1MissingPreconditionException.html", null ],
         [ "vcl::MissingQuadRequirementException", "classvcl_1_1MissingQuadRequirementException.html", null ],
         [ "vcl::MissingTriangularRequirementException", "classvcl_1_1MissingTriangularRequirementException.html", null ],
-        [ "vcl::NoIntersectionException", "classvcl_1_1NoIntersectionException.html", null ],
         [ "vcl::UnknownFileFormatException", "classvcl_1_1UnknownFileFormatException.html", null ],
         [ "vcl::WrongSizeException", "classvcl_1_1WrongSizeException.html", null ]
       ] ]
     ] ],
     [ "vcl::FakePointerWithValue< T >", "classvcl_1_1FakePointerWithValue.html", null ],
+    [ "std::false_type", null, [
+      [ "vcl::IsSpecializationOf< T, Template >", "structvcl_1_1IsSpecializationOf.html", null ]
+    ] ],
     [ "vcl::FileFormat", "classvcl_1_1FileFormat.html", null ],
     [ "vcl::FileInfo", "classvcl_1_1FileInfo.html", null ],
     [ "vcl::FileType", "structvcl_1_1FileType.html", null ],
@@ -517,6 +517,7 @@ var hierarchy =
     [ "vcl::IndexFromPointerIterator< Iterator >", "classvcl_1_1IndexFromPointerIterator.html", null ],
     [ "vcl::IndexInTypes< T, Us >", "structvcl_1_1IndexInTypes.html", null ],
     [ "vcl::IndexInTypes< T, TypeWrapper< Us... > >", "structvcl_1_1IndexInTypes_3_01T_00_01TypeWrapper_3_01Us_8_8_8_01_4_01_4.html", null ],
+    [ "vcl::IsDerivedFromSpecializationOf< T, Template >", "structvcl_1_1IsDerivedFromSpecializationOf.html", null ],
     [ "vcl::mesh::IsElementContainerPred< T >", "structvcl_1_1mesh_1_1IsElementContainerPred.html", null ],
     [ "Iterator", null, [
       [ "vcl::NodeIterator< Iterator >", "classvcl_1_1NodeIterator.html", null ]
@@ -626,6 +627,7 @@ var hierarchy =
     [ "vcl::Polygon< PointT >", "classvcl_1_1Polygon.html", null ],
     [ "vcl::PrincipalCurvature< Scalar >", "classvcl_1_1PrincipalCurvature.html", null ],
     [ "vcl::ProgramManager", "classvcl_1_1ProgramManager.html", null ],
+    [ "vcl::Logger< Stream >::ProgressStatus", "structvcl_1_1Logger_1_1ProgressStatus.html", null ],
     [ "QFileDialog", null, [
       [ "vcl::qt::ScreenShotDialog", "classvcl_1_1qt_1_1ScreenShotDialog.html", null ]
     ] ],
@@ -738,6 +740,9 @@ var hierarchy =
     [ "vcl::Triangle< PointT >", "classvcl_1_1Triangle.html", null ],
     [ "vcl::TriangleWrapper< PointT >", "classvcl_1_1TriangleWrapper.html", null ],
     [ "vcl::TriPolyIndexBiMap", "classvcl_1_1TriPolyIndexBiMap.html", null ],
+    [ "std::true_type", null, [
+      [ "vcl::IsSpecializationOf< Template< Args... >, Template >", "structvcl_1_1IsSpecializationOf_3_01Template_3_01Args_8_8_8_01_4_00_01Template_01_4.html", null ]
+    ] ],
     [ "vcl::TypeAt< I, T >", "structvcl_1_1TypeAt.html", null ],
     [ "vcl::TypeAt< I, TypeWrapper< T... > >", "structvcl_1_1TypeAt_3_01I_00_01TypeWrapper_3_01T_8_8_8_01_4_01_4.html", null ],
     [ "vcl::vc::TypeMapping< T >", "structvcl_1_1vc_1_1TypeMapping.html", null ],
@@ -817,10 +822,6 @@ var hierarchy =
     [ "vcl::VertFragLoader< VertFragProgram::FONT_DISTANCE_FIELD_OUTLINE_DROP_SHADOW_IMAGE >", "structvcl_1_1VertFragLoader_3_01VertFragProgram_1_1FONT__DISTANCE__FIELD__OUTLINE__DROP__SHADOW__IMAGE_01_4.html", null ],
     [ "vcl::VertFragLoader< VertFragProgram::FONT_DISTANCE_FIELD_OUTLINE_IMAGE >", "structvcl_1_1VertFragLoader_3_01VertFragProgram_1_1FONT__DISTANCE__FIELD__OUTLINE__IMAGE_01_4.html", null ],
     [ "vcl::VertFragLoader< VertFragProgram::FONT_DISTANCE_FIELD_SUBPIXEL >", "structvcl_1_1VertFragLoader_3_01VertFragProgram_1_1FONT__DISTANCE__FIELD__SUBPIXEL_01_4.html", null ],
-    [ "vcl::mesh::VerticalComponentsVectorTuple< Comp >", "classvcl_1_1mesh_1_1VerticalComponentsVectorTuple.html", null ],
-    [ "vcl::mesh::VerticalComponentsVectorTuple< Comp... >", "classvcl_1_1mesh_1_1VerticalComponentsVectorTuple.html", [
-      [ "vcl::mesh::VerticalComponentsVectorTuple< TypeWrapper< Comp... > >", "classvcl_1_1mesh_1_1VerticalComponentsVectorTuple_3_01TypeWrapper_3_01Comp_8_8_8_01_4_01_4.html", null ]
-    ] ],
     [ "std::ranges::view_interface", null, [
       [ "vcl::View< It >", "classvcl_1_1View.html", null ]
     ] ],

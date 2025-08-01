@@ -140,196 +140,198 @@ $(document).ready(function(){initNavTree('file__info_8h_source.html',''); initRe
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;file_format.h&quot;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;vclib/exceptions/io.h&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;vclib/types.h&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;filesystem&gt;</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;fstream&gt;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">namespace </span>vcl {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="foldopen" id="foldopen00038" data-start="{" data-end="};">
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classvcl_1_1FileInfo.html">   38</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1FileInfo.html">FileInfo</a></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>{</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    std::string mFilename;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_class" href="classvcl_1_1FileInfo.html">FileInfo</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_class" href="classvcl_1_1FileInfo.html">FileInfo</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">filename</a>) : mFilename(<a class="code hl_class" href="classvcl_1_1Segment.html">filename</a>) {}</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">bool</span> exists()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> exists(mFilename); }</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    std::size_t fileSize()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> fileSize(mFilename); }</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">bool</span> isFileBinary()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> isFileBinary(mFilename); }</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="comment">/* Static member functions */</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="comment">// file stat</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="foldopen" id="foldopen00063" data-start="{" data-end="}">
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="classvcl_1_1FileInfo.html#a64c0e452c7f050d747c82fb4074e3296">   63</a></span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classvcl_1_1FileInfo.html#a64c0e452c7f050d747c82fb4074e3296">exists</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">filename</a>)</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    {</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordflow">return</span> std::filesystem::exists(<a class="code hl_class" href="classvcl_1_1Segment.html">filename</a>);</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    }</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;vclib/io/exceptions.h&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;vclib/base.h&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;filesystem&gt;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">namespace </span>vcl {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="};">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classvcl_1_1FileInfo.html">   39</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1FileInfo.html">FileInfo</a></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>{</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    std::string mFilename;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <a class="code hl_class" href="classvcl_1_1FileInfo.html">FileInfo</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_class" href="classvcl_1_1FileInfo.html">FileInfo</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Box.html">filename</a>) : mFilename(<a class="code hl_class" href="classvcl_1_1Box.html">filename</a>) {}</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">bool</span> exists()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> exists(mFilename); }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    std::size_t fileSize()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> fileSize(mFilename); }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">bool</span> isFileBinary()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> isFileBinary(mFilename); }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="comment">/* Static member functions */</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="comment">// file stat</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classvcl_1_1FileInfo.html#a64c0e452c7f050d747c82fb4074e3296">   64</a></span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classvcl_1_1FileInfo.html#a64c0e452c7f050d747c82fb4074e3296">exists</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Box.html">filename</a>)</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">return</span> std::filesystem::exists(<a class="code hl_class" href="classvcl_1_1Box.html">filename</a>);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
 </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="foldopen" id="foldopen00074" data-start="{" data-end="}">
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="classvcl_1_1FileInfo.html#a039122813bcaa1e2739d501b4135ef9e">   74</a></span>    <span class="keyword">static</span> std::size_t <a class="code hl_function" href="classvcl_1_1FileInfo.html#a039122813bcaa1e2739d501b4135ef9e">fileSize</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">filename</a>)</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    {</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        std::ifstream <a class="code hl_class" href="classvcl_1_1Segment.html">file</a>(<a class="code hl_class" href="classvcl_1_1Segment.html">filename</a>, std::ios::binary | std::ios::ate);</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Segment.html">file</a>.tellg();</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="foldopen" id="foldopen00075" data-start="{" data-end="}">
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classvcl_1_1FileInfo.html#a039122813bcaa1e2739d501b4135ef9e">   75</a></span>    <span class="keyword">static</span> std::size_t <a class="code hl_function" href="classvcl_1_1FileInfo.html#a039122813bcaa1e2739d501b4135ef9e">fileSize</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Box.html">filename</a>)</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        std::ifstream <a class="code hl_class" href="classvcl_1_1Box.html">file</a>(<a class="code hl_class" href="classvcl_1_1Box.html">filename</a>, std::ios::binary | std::ios::ate);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Box.html">file</a>.tellg();</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
 </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="foldopen" id="foldopen00091" data-start="{" data-end="}">
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="classvcl_1_1FileInfo.html#a95ade661eff463651d6f0ff43ad064d3">   91</a></span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classvcl_1_1FileInfo.html#a95ade661eff463651d6f0ff43ad064d3">isFileBinary</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">filename</a>)</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    {</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keyword">const</span> std::size_t <a class="code hl_class" href="classvcl_1_1Segment.html">CHECK_BUFF_SIZE</a> = 1000;</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        std::ifstream <a class="code hl_class" href="classvcl_1_1Segment.html">file</a>(<a class="code hl_class" href="classvcl_1_1Segment.html">filename</a>, std::ios::binary | std::ios::ate);</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        std::size_t   <a class="code hl_class" href="classvcl_1_1Segment.html">fsize</a> = <a class="code hl_class" href="classvcl_1_1Segment.html">file</a>.tellg();</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        std::size_t   size  = std::min(<a class="code hl_class" href="classvcl_1_1Segment.html">fsize</a>, <a class="code hl_class" href="classvcl_1_1Segment.html">CHECK_BUFF_SIZE</a>);</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <a class="code hl_class" href="classvcl_1_1Segment.html">file</a>.seekg(0, std::ios::beg);</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        std::vector&lt;unsigned char&gt; buffer(size);</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classvcl_1_1Segment.html">file</a>.read((<span class="keywordtype">char</span>*) buffer.data(), size)) {</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            <span class="keywordflow">for</span> (<a class="code hl_class" href="classvcl_1_1Segment.html">uint</a> <a class="code hl_class" href="classvcl_1_1Segment.html">i</a> = 0; <a class="code hl_class" href="classvcl_1_1Segment.html">i</a> &lt; buffer.size(); ++<a class="code hl_class" href="classvcl_1_1Segment.html">i</a>) {</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                <span class="keywordflow">if</span> (buffer[<a class="code hl_class" href="classvcl_1_1Segment.html">i</a>] &gt; 127)</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            }</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        }</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="classvcl_1_1MalformedFileException.html">MalformedFileException</a>(<span class="stringliteral">&quot;Cannot read data from file.&quot;</span>);</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        }</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="foldopen" id="foldopen00092" data-start="{" data-end="}">
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="classvcl_1_1FileInfo.html#a95ade661eff463651d6f0ff43ad064d3">   92</a></span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classvcl_1_1FileInfo.html#a95ade661eff463651d6f0ff43ad064d3">isFileBinary</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Box.html">filename</a>)</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keyword">const</span> std::size_t <a class="code hl_class" href="classvcl_1_1Box.html">CHECK_BUFF_SIZE</a> = 1000;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        std::ifstream <a class="code hl_class" href="classvcl_1_1Box.html">file</a>(<a class="code hl_class" href="classvcl_1_1Box.html">filename</a>, std::ios::binary | std::ios::ate);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        std::size_t   <a class="code hl_class" href="classvcl_1_1Box.html">fsize</a> = <a class="code hl_class" href="classvcl_1_1Box.html">file</a>.tellg();</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        std::size_t   size  = std::min(<a class="code hl_class" href="classvcl_1_1Box.html">fsize</a>, <a class="code hl_class" href="classvcl_1_1Box.html">CHECK_BUFF_SIZE</a>);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <a class="code hl_class" href="classvcl_1_1Box.html">file</a>.seekg(0, std::ios::beg);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        std::vector&lt;unsigned char&gt; buffer(size);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classvcl_1_1Box.html">file</a>.read((<span class="keywordtype">char</span>*) buffer.data(), size)) {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            <span class="keywordflow">for</span> (<a class="code hl_class" href="classvcl_1_1Box.html">uint</a> <a class="code hl_class" href="classvcl_1_1Box.html">i</a> = 0; <a class="code hl_class" href="classvcl_1_1Box.html">i</a> &lt; buffer.<a class="code hl_function" href="classvcl_1_1Box.html#ad4dd21aaa7669f0ccbba075764c77664">size</a>(); ++<a class="code hl_class" href="classvcl_1_1Box.html">i</a>) {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                <span class="keywordflow">if</span> (buffer[<a class="code hl_class" href="classvcl_1_1Box.html">i</a>] &gt; 127)</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            }</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        }</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            <span class="keywordflow">throw</span> <a class="code hl_class" href="classvcl_1_1MalformedFileException.html">MalformedFileException</a>(<span class="stringliteral">&quot;Cannot read data from file.&quot;</span>);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        }</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    }</div>
 </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="comment">// name and extension management</span></div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="foldopen" id="foldopen00136" data-start="{" data-end="}">
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="classvcl_1_1FileInfo.html#ad20cbf5576db0474da3472f3ec2d0526">  136</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1FileInfo.html#ad20cbf5576db0474da3472f3ec2d0526">separateExtensionFromFileName</a>(</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        <span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">fullname</a>,</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        std::string&amp;       <a class="code hl_class" href="classvcl_1_1Segment.html">rawName</a>,</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        std::string&amp;       <a class="code hl_function" href="classvcl_1_1FileInfo.html#a69736e79c8f22b59fffd3a70eef4e6b1">extension</a>)</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    {</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        <span class="comment">// https://stackoverflow.com/questions/6417817</span></div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        <span class="keywordtype">size_t</span> <a class="code hl_class" href="classvcl_1_1Segment.html">lastIndex</a> = <a class="code hl_class" href="classvcl_1_1Segment.html">fullname</a>.find_last_of(<span class="stringliteral">&quot;.&quot;</span>);</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classvcl_1_1Segment.html">lastIndex</a> != std::string::npos) {</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            <a class="code hl_class" href="classvcl_1_1Segment.html">rawName</a>   = <a class="code hl_class" href="classvcl_1_1Segment.html">fullname</a>.substr(0, <a class="code hl_class" href="classvcl_1_1Segment.html">lastIndex</a>);</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            <a class="code hl_function" href="classvcl_1_1FileInfo.html#a69736e79c8f22b59fffd3a70eef4e6b1">extension</a> = <a class="code hl_class" href="classvcl_1_1Segment.html">fullname</a>.substr(<a class="code hl_class" href="classvcl_1_1Segment.html">lastIndex</a>, <a class="code hl_class" href="classvcl_1_1Segment.html">fullname</a>.size());</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        }</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>            <a class="code hl_class" href="classvcl_1_1Segment.html">rawName</a> = <a class="code hl_class" href="classvcl_1_1Segment.html">fullname</a>;</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        }</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    }</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="comment">// name and extension management</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="foldopen" id="foldopen00137" data-start="{" data-end="}">
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="classvcl_1_1FileInfo.html#ad20cbf5576db0474da3472f3ec2d0526">  137</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1FileInfo.html#ad20cbf5576db0474da3472f3ec2d0526">separateExtensionFromFileName</a>(</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        <span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Box.html">fullname</a>,</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        std::string&amp;       <a class="code hl_class" href="classvcl_1_1Box.html">rawName</a>,</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        std::string&amp;       <a class="code hl_function" href="classvcl_1_1FileInfo.html#a69736e79c8f22b59fffd3a70eef4e6b1">extension</a>)</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    {</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        <span class="comment">// https://stackoverflow.com/questions/6417817</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <span class="keywordtype">size_t</span> <a class="code hl_class" href="classvcl_1_1Box.html">lastIndex</a> = <a class="code hl_class" href="classvcl_1_1Box.html">fullname</a>.find_last_of(<span class="stringliteral">&quot;.&quot;</span>);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classvcl_1_1Box.html">lastIndex</a> != std::string::npos) {</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            <a class="code hl_class" href="classvcl_1_1Box.html">rawName</a>   = <a class="code hl_class" href="classvcl_1_1Box.html">fullname</a>.substr(0, <a class="code hl_class" href="classvcl_1_1Box.html">lastIndex</a>);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>            <a class="code hl_function" href="classvcl_1_1FileInfo.html#a69736e79c8f22b59fffd3a70eef4e6b1">extension</a> = <a class="code hl_class" href="classvcl_1_1Box.html">fullname</a>.substr(<a class="code hl_class" href="classvcl_1_1Box.html">lastIndex</a>, <a class="code hl_class" href="classvcl_1_1Box.html">fullname</a>.<a class="code hl_function" href="classvcl_1_1Box.html#ad4dd21aaa7669f0ccbba075764c77664">size</a>());</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        }</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>            <a class="code hl_class" href="classvcl_1_1Box.html">rawName</a> = <a class="code hl_class" href="classvcl_1_1Box.html">fullname</a>;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        }</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    }</div>
 </div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
-<div class="foldopen" id="foldopen00171" data-start="{" data-end="}">
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="classvcl_1_1FileInfo.html#a5ee19e218382261c5f80a7e8ba7605d4">  171</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1FileInfo.html#a5ee19e218382261c5f80a7e8ba7605d4">separateFileNameFromPath</a>(</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        <span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">fullpath</a>,</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        std::string&amp;       path,</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        std::string&amp;       <a class="code hl_class" href="classvcl_1_1Segment.html">filename</a>)</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    {</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        <span class="keywordtype">size_t</span> <a class="code hl_class" href="classvcl_1_1Segment.html">lastIndex</a> = <a class="code hl_class" href="classvcl_1_1Segment.html">fullpath</a>.find_last_of(<span class="stringliteral">&quot;/&quot;</span>);</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classvcl_1_1Segment.html">lastIndex</a> != std::string::npos) {</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>            path     = <a class="code hl_class" href="classvcl_1_1Segment.html">fullpath</a>.substr(0, <a class="code hl_class" href="classvcl_1_1Segment.html">lastIndex</a> + 1);</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>            <a class="code hl_class" href="classvcl_1_1Segment.html">filename</a> = <a class="code hl_class" href="classvcl_1_1Segment.html">fullpath</a>.substr(<a class="code hl_class" href="classvcl_1_1Segment.html">lastIndex</a> + 1, <a class="code hl_class" href="classvcl_1_1Segment.html">fullpath</a>.size());</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        }</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>            <a class="code hl_class" href="classvcl_1_1Segment.html">filename</a> = <a class="code hl_class" href="classvcl_1_1Segment.html">fullpath</a>;</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        }</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    }</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="foldopen" id="foldopen00172" data-start="{" data-end="}">
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno"><a class="line" href="classvcl_1_1FileInfo.html#a5ee19e218382261c5f80a7e8ba7605d4">  172</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1FileInfo.html#a5ee19e218382261c5f80a7e8ba7605d4">separateFileNameFromPath</a>(</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        <span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Box.html">fullpath</a>,</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        std::string&amp;       path,</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        std::string&amp;       <a class="code hl_class" href="classvcl_1_1Box.html">filename</a>)</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    {</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        <span class="keywordtype">size_t</span> <a class="code hl_class" href="classvcl_1_1Box.html">lastIndex</a> = <a class="code hl_class" href="classvcl_1_1Box.html">fullpath</a>.find_last_of(<span class="stringliteral">&quot;/&quot;</span>);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classvcl_1_1Box.html">lastIndex</a> != std::string::npos) {</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>            path     = <a class="code hl_class" href="classvcl_1_1Box.html">fullpath</a>.substr(0, <a class="code hl_class" href="classvcl_1_1Box.html">lastIndex</a> + 1);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>            <a class="code hl_class" href="classvcl_1_1Box.html">filename</a> = <a class="code hl_class" href="classvcl_1_1Box.html">fullpath</a>.substr(<a class="code hl_class" href="classvcl_1_1Box.html">lastIndex</a> + 1, <a class="code hl_class" href="classvcl_1_1Box.html">fullpath</a>.<a class="code hl_function" href="classvcl_1_1Box.html#ad4dd21aaa7669f0ccbba075764c77664">size</a>());</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        }</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>            <a class="code hl_class" href="classvcl_1_1Box.html">filename</a> = <a class="code hl_class" href="classvcl_1_1Box.html">fullpath</a>;</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        }</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    }</div>
 </div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
-<div class="foldopen" id="foldopen00199" data-start="{" data-end="}">
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno"><a class="line" href="classvcl_1_1FileInfo.html#adc809fa8f7602e71e6eb59efaaba890f">  199</a></span>    <span class="keyword">static</span> std::string <a class="code hl_function" href="classvcl_1_1FileInfo.html#adc809fa8f7602e71e6eb59efaaba890f">pathWithoutFileName</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">fullpath</a>)</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    {</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        std::string path, <a class="code hl_class" href="classvcl_1_1Segment.html">filename</a>;</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        <a class="code hl_function" href="classvcl_1_1FileInfo.html#a5ee19e218382261c5f80a7e8ba7605d4">separateFileNameFromPath</a>(<a class="code hl_class" href="classvcl_1_1Segment.html">fullpath</a>, path, <a class="code hl_class" href="classvcl_1_1Segment.html">filename</a>);</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        <span class="keywordflow">return</span> path;</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    }</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="foldopen" id="foldopen00200" data-start="{" data-end="}">
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno"><a class="line" href="classvcl_1_1FileInfo.html#adc809fa8f7602e71e6eb59efaaba890f">  200</a></span>    <span class="keyword">static</span> std::string <a class="code hl_function" href="classvcl_1_1FileInfo.html#adc809fa8f7602e71e6eb59efaaba890f">pathWithoutFileName</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Box.html">fullpath</a>)</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    {</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        std::string path, <a class="code hl_class" href="classvcl_1_1Box.html">filename</a>;</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        <a class="code hl_function" href="classvcl_1_1FileInfo.html#a5ee19e218382261c5f80a7e8ba7605d4">separateFileNameFromPath</a>(<a class="code hl_class" href="classvcl_1_1Box.html">fullpath</a>, path, <a class="code hl_class" href="classvcl_1_1Box.html">filename</a>);</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        <span class="keywordflow">return</span> path;</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    }</div>
 </div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
-<div class="foldopen" id="foldopen00219" data-start="{" data-end="}">
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno"><a class="line" href="classvcl_1_1FileInfo.html#a5ab66e247bf6f47354cf6fd869e1920a">  219</a></span>    <span class="keyword">static</span> std::string <a class="code hl_function" href="classvcl_1_1FileInfo.html#a5ab66e247bf6f47354cf6fd869e1920a">fileNameWithoutExtension</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">fullpath</a>)</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    {</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        std::string <a class="code hl_class" href="classvcl_1_1Segment.html">filename</a> = <a class="code hl_function" href="classvcl_1_1FileInfo.html#a109bce11d4eedbb7316b258e77460684">fileNameWithExtension</a>(<a class="code hl_class" href="classvcl_1_1Segment.html">fullpath</a>), <a class="code hl_class" href="classvcl_1_1Segment.html">ext</a>;</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        <a class="code hl_function" href="classvcl_1_1FileInfo.html#ad20cbf5576db0474da3472f3ec2d0526">separateExtensionFromFileName</a>(<a class="code hl_class" href="classvcl_1_1Segment.html">filename</a>, <a class="code hl_class" href="classvcl_1_1Segment.html">filename</a>, <a class="code hl_class" href="classvcl_1_1Segment.html">ext</a>);</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Segment.html">filename</a>;</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    }</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="foldopen" id="foldopen00220" data-start="{" data-end="}">
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno"><a class="line" href="classvcl_1_1FileInfo.html#a5ab66e247bf6f47354cf6fd869e1920a">  220</a></span>    <span class="keyword">static</span> std::string <a class="code hl_function" href="classvcl_1_1FileInfo.html#a5ab66e247bf6f47354cf6fd869e1920a">fileNameWithoutExtension</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Box.html">fullpath</a>)</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    {</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        std::string <a class="code hl_class" href="classvcl_1_1Box.html">filename</a> = <a class="code hl_function" href="classvcl_1_1FileInfo.html#a109bce11d4eedbb7316b258e77460684">fileNameWithExtension</a>(<a class="code hl_class" href="classvcl_1_1Box.html">fullpath</a>), <a class="code hl_class" href="classvcl_1_1Box.html">ext</a>;</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        <a class="code hl_function" href="classvcl_1_1FileInfo.html#ad20cbf5576db0474da3472f3ec2d0526">separateExtensionFromFileName</a>(<a class="code hl_class" href="classvcl_1_1Box.html">filename</a>, <a class="code hl_class" href="classvcl_1_1Box.html">filename</a>, <a class="code hl_class" href="classvcl_1_1Box.html">ext</a>);</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Box.html">filename</a>;</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    }</div>
 </div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
-<div class="foldopen" id="foldopen00239" data-start="{" data-end="}">
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno"><a class="line" href="classvcl_1_1FileInfo.html#a109bce11d4eedbb7316b258e77460684">  239</a></span>    <span class="keyword">static</span> std::string <a class="code hl_function" href="classvcl_1_1FileInfo.html#a109bce11d4eedbb7316b258e77460684">fileNameWithExtension</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">fullpath</a>)</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    {</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>        std::string <a class="code hl_class" href="classvcl_1_1Segment.html">filename</a>, path, <a class="code hl_class" href="classvcl_1_1Segment.html">ext</a>;</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        <a class="code hl_function" href="classvcl_1_1FileInfo.html#a5ee19e218382261c5f80a7e8ba7605d4">separateFileNameFromPath</a>(<a class="code hl_class" href="classvcl_1_1Segment.html">fullpath</a>, path, <a class="code hl_class" href="classvcl_1_1Segment.html">filename</a>);</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Segment.html">filename</a>;</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    }</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
+<div class="foldopen" id="foldopen00240" data-start="{" data-end="}">
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno"><a class="line" href="classvcl_1_1FileInfo.html#a109bce11d4eedbb7316b258e77460684">  240</a></span>    <span class="keyword">static</span> std::string <a class="code hl_function" href="classvcl_1_1FileInfo.html#a109bce11d4eedbb7316b258e77460684">fileNameWithExtension</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Box.html">fullpath</a>)</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    {</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        std::string <a class="code hl_class" href="classvcl_1_1Box.html">filename</a>, path, <a class="code hl_class" href="classvcl_1_1Box.html">ext</a>;</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        <a class="code hl_function" href="classvcl_1_1FileInfo.html#a5ee19e218382261c5f80a7e8ba7605d4">separateFileNameFromPath</a>(<a class="code hl_class" href="classvcl_1_1Box.html">fullpath</a>, path, <a class="code hl_class" href="classvcl_1_1Box.html">filename</a>);</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Box.html">filename</a>;</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    }</div>
 </div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
-<div class="foldopen" id="foldopen00259" data-start="{" data-end="}">
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno"><a class="line" href="classvcl_1_1FileInfo.html#a69736e79c8f22b59fffd3a70eef4e6b1">  259</a></span>    <span class="keyword">static</span> std::string <a class="code hl_function" href="classvcl_1_1FileInfo.html#a69736e79c8f22b59fffd3a70eef4e6b1">extension</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">filename</a>)</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    {</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        std::string <a class="code hl_class" href="classvcl_1_1Segment.html">fn</a>, <a class="code hl_class" href="classvcl_1_1Segment.html">ext</a>;</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        <a class="code hl_function" href="classvcl_1_1FileInfo.html#ad20cbf5576db0474da3472f3ec2d0526">separateExtensionFromFileName</a>(<a class="code hl_class" href="classvcl_1_1Segment.html">filename</a>, <a class="code hl_class" href="classvcl_1_1Segment.html">fn</a>, <a class="code hl_class" href="classvcl_1_1Segment.html">ext</a>);</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Segment.html">ext</a>;</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    }</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
+<div class="foldopen" id="foldopen00260" data-start="{" data-end="}">
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno"><a class="line" href="classvcl_1_1FileInfo.html#a69736e79c8f22b59fffd3a70eef4e6b1">  260</a></span>    <span class="keyword">static</span> std::string <a class="code hl_function" href="classvcl_1_1FileInfo.html#a69736e79c8f22b59fffd3a70eef4e6b1">extension</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Box.html">filename</a>)</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    {</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        std::string <a class="code hl_class" href="classvcl_1_1Box.html">fn</a>, <a class="code hl_class" href="classvcl_1_1Box.html">ext</a>;</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        <a class="code hl_function" href="classvcl_1_1FileInfo.html#ad20cbf5576db0474da3472f3ec2d0526">separateExtensionFromFileName</a>(<a class="code hl_class" href="classvcl_1_1Box.html">filename</a>, <a class="code hl_class" href="classvcl_1_1Box.html">fn</a>, <a class="code hl_class" href="classvcl_1_1Box.html">ext</a>);</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Box.html">ext</a>;</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    }</div>
 </div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> </div>
-<div class="foldopen" id="foldopen00279" data-start="{" data-end="}">
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno"><a class="line" href="classvcl_1_1FileInfo.html#ab20f76708e0c001d3ed14d284531c6e2">  279</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="classvcl_1_1FileFormat.html">FileFormat</a> <a class="code hl_function" href="classvcl_1_1FileInfo.html#ab20f76708e0c001d3ed14d284531c6e2">fileFormat</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">filename</a>)</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    {</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1FileFormat.html">FileFormat</a>(<a class="code hl_function" href="classvcl_1_1FileInfo.html#a69736e79c8f22b59fffd3a70eef4e6b1">extension</a>(<a class="code hl_class" href="classvcl_1_1Segment.html">filename</a>));</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    }</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
+<div class="foldopen" id="foldopen00280" data-start="{" data-end="}">
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno"><a class="line" href="classvcl_1_1FileInfo.html#ab20f76708e0c001d3ed14d284531c6e2">  280</a></span>    <span class="keyword">static</span> <a class="code hl_class" href="classvcl_1_1FileFormat.html">FileFormat</a> <a class="code hl_function" href="classvcl_1_1FileInfo.html#ab20f76708e0c001d3ed14d284531c6e2">fileFormat</a>(<span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Box.html">filename</a>)</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    {</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1FileFormat.html">FileFormat</a>(<a class="code hl_function" href="classvcl_1_1FileInfo.html#a69736e79c8f22b59fffd3a70eef4e6b1">extension</a>(<a class="code hl_class" href="classvcl_1_1Box.html">filename</a>));</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    }</div>
 </div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span> </div>
-<div class="foldopen" id="foldopen00291" data-start="{" data-end="}">
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno"><a class="line" href="classvcl_1_1FileInfo.html#a03caaa9f0ef75fe3ed8d04facf0539e4">  291</a></span>    <span class="keyword">static</span> std::string <a class="code hl_function" href="classvcl_1_1FileInfo.html#a03caaa9f0ef75fe3ed8d04facf0539e4">addExtensionIfNeeded</a>(</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>        <span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">filename</a>,</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>        <span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">ext</a>)</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    {</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>        std::string <a class="code hl_class" href="classvcl_1_1Segment.html">actualFileName</a>;</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>        <span class="keywordtype">size_t</span>      <a class="code hl_class" href="classvcl_1_1Segment.html">lastIndex</a> = <a class="code hl_class" href="classvcl_1_1Segment.html">filename</a>.find_last_of(<span class="stringliteral">&quot;.&quot;</span>);</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classvcl_1_1Segment.html">lastIndex</a> != std::string::npos) {</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>            std::string e = <a class="code hl_class" href="classvcl_1_1Segment.html">filename</a>.substr(<a class="code hl_class" href="classvcl_1_1Segment.html">lastIndex</a> + 1, <a class="code hl_class" href="classvcl_1_1Segment.html">filename</a>.size());</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>            <span class="keywordflow">if</span> (e == <a class="code hl_class" href="classvcl_1_1Segment.html">ext</a>)</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>                <a class="code hl_class" href="classvcl_1_1Segment.html">actualFileName</a> = <a class="code hl_class" href="classvcl_1_1Segment.html">filename</a>;</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>            <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>                <a class="code hl_class" href="classvcl_1_1Segment.html">actualFileName</a> = <a class="code hl_class" href="classvcl_1_1Segment.html">filename</a> + <span class="stringliteral">&quot;.&quot;</span> + <a class="code hl_class" href="classvcl_1_1Segment.html">ext</a>;</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>        }</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>            <a class="code hl_class" href="classvcl_1_1Segment.html">actualFileName</a> = <a class="code hl_class" href="classvcl_1_1Segment.html">filename</a> + <span class="stringliteral">&quot;.&quot;</span> + <a class="code hl_class" href="classvcl_1_1Segment.html">ext</a>;</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Segment.html">actualFileName</a>;</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    }</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span> </div>
+<div class="foldopen" id="foldopen00292" data-start="{" data-end="}">
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno"><a class="line" href="classvcl_1_1FileInfo.html#a03caaa9f0ef75fe3ed8d04facf0539e4">  292</a></span>    <span class="keyword">static</span> std::string <a class="code hl_function" href="classvcl_1_1FileInfo.html#a03caaa9f0ef75fe3ed8d04facf0539e4">addExtensionIfNeeded</a>(</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>        <span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Box.html">filename</a>,</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>        <span class="keyword">const</span> std::string&amp; <a class="code hl_class" href="classvcl_1_1Box.html">ext</a>)</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    {</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>        std::string <a class="code hl_class" href="classvcl_1_1Box.html">actualFileName</a>;</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>        <span class="keywordtype">size_t</span>      <a class="code hl_class" href="classvcl_1_1Box.html">lastIndex</a> = <a class="code hl_class" href="classvcl_1_1Box.html">filename</a>.find_last_of(<span class="stringliteral">&quot;.&quot;</span>);</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classvcl_1_1Box.html">lastIndex</a> != std::string::npos) {</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>            std::string e = <a class="code hl_class" href="classvcl_1_1Box.html">filename</a>.substr(<a class="code hl_class" href="classvcl_1_1Box.html">lastIndex</a> + 1, <a class="code hl_class" href="classvcl_1_1Box.html">filename</a>.<a class="code hl_function" href="classvcl_1_1Box.html#ad4dd21aaa7669f0ccbba075764c77664">size</a>());</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>            <span class="keywordflow">if</span> (e == <a class="code hl_class" href="classvcl_1_1Box.html">ext</a>)</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>                <a class="code hl_class" href="classvcl_1_1Box.html">actualFileName</a> = <a class="code hl_class" href="classvcl_1_1Box.html">filename</a>;</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>                <a class="code hl_class" href="classvcl_1_1Box.html">actualFileName</a> = <a class="code hl_class" href="classvcl_1_1Box.html">filename</a> + <span class="stringliteral">&quot;.&quot;</span> + <a class="code hl_class" href="classvcl_1_1Box.html">ext</a>;</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>        }</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>            <a class="code hl_class" href="classvcl_1_1Box.html">actualFileName</a> = <a class="code hl_class" href="classvcl_1_1Box.html">filename</a> + <span class="stringliteral">&quot;.&quot;</span> + <a class="code hl_class" href="classvcl_1_1Box.html">ext</a>;</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Box.html">actualFileName</a>;</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>    }</div>
 </div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>};</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>};</div>
 </div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span> </div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span> </div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span><span class="preprocessor">#endif </span><span class="comment">// VCL_IO_FILE_INFO_H</span></div>
-<div class="ttc" id="aclassvcl_1_1FileFormat_html"><div class="ttname"><a href="classvcl_1_1FileFormat.html">vcl::FileFormat</a></div><div class="ttdoc">The FileFormat class represents a file format.</div><div class="ttdef"><b>Definition</b> file_format.h:41</div></div>
-<div class="ttc" id="aclassvcl_1_1FileInfo_html"><div class="ttname"><a href="classvcl_1_1FileInfo.html">vcl::FileInfo</a></div><div class="ttdef"><b>Definition</b> file_info.h:39</div></div>
-<div class="ttc" id="aclassvcl_1_1FileInfo_html_a039122813bcaa1e2739d501b4135ef9e"><div class="ttname"><a href="classvcl_1_1FileInfo.html#a039122813bcaa1e2739d501b4135ef9e">vcl::FileInfo::fileSize</a></div><div class="ttdeci">static std::size_t fileSize(const std::string &amp;filename)</div><div class="ttdoc">Get the size of a file.</div><div class="ttdef"><b>Definition</b> file_info.h:74</div></div>
-<div class="ttc" id="aclassvcl_1_1FileInfo_html_a03caaa9f0ef75fe3ed8d04facf0539e4"><div class="ttname"><a href="classvcl_1_1FileInfo.html#a03caaa9f0ef75fe3ed8d04facf0539e4">vcl::FileInfo::addExtensionIfNeeded</a></div><div class="ttdeci">static std::string addExtensionIfNeeded(const std::string &amp;filename, const std::string &amp;ext)</div><div class="ttdoc">Adds an extension to a file name if it doesn't already have it.</div><div class="ttdef"><b>Definition</b> file_info.h:291</div></div>
-<div class="ttc" id="aclassvcl_1_1FileInfo_html_a109bce11d4eedbb7316b258e77460684"><div class="ttname"><a href="classvcl_1_1FileInfo.html#a109bce11d4eedbb7316b258e77460684">vcl::FileInfo::fileNameWithExtension</a></div><div class="ttdeci">static std::string fileNameWithExtension(const std::string &amp;fullpath)</div><div class="ttdoc">Get the filename with extension of a file.</div><div class="ttdef"><b>Definition</b> file_info.h:239</div></div>
-<div class="ttc" id="aclassvcl_1_1FileInfo_html_a5ab66e247bf6f47354cf6fd869e1920a"><div class="ttname"><a href="classvcl_1_1FileInfo.html#a5ab66e247bf6f47354cf6fd869e1920a">vcl::FileInfo::fileNameWithoutExtension</a></div><div class="ttdeci">static std::string fileNameWithoutExtension(const std::string &amp;fullpath)</div><div class="ttdoc">Get the file name without extension of a file.</div><div class="ttdef"><b>Definition</b> file_info.h:219</div></div>
-<div class="ttc" id="aclassvcl_1_1FileInfo_html_a5ee19e218382261c5f80a7e8ba7605d4"><div class="ttname"><a href="classvcl_1_1FileInfo.html#a5ee19e218382261c5f80a7e8ba7605d4">vcl::FileInfo::separateFileNameFromPath</a></div><div class="ttdeci">static void separateFileNameFromPath(const std::string &amp;fullpath, std::string &amp;path, std::string &amp;filename)</div><div class="ttdoc">Extracts the filename (extension included) of a string that contains a fullpath.</div><div class="ttdef"><b>Definition</b> file_info.h:171</div></div>
-<div class="ttc" id="aclassvcl_1_1FileInfo_html_a64c0e452c7f050d747c82fb4074e3296"><div class="ttname"><a href="classvcl_1_1FileInfo.html#a64c0e452c7f050d747c82fb4074e3296">vcl::FileInfo::exists</a></div><div class="ttdeci">static bool exists(const std::string &amp;filename)</div><div class="ttdoc">Check if a file exists.</div><div class="ttdef"><b>Definition</b> file_info.h:63</div></div>
-<div class="ttc" id="aclassvcl_1_1FileInfo_html_a69736e79c8f22b59fffd3a70eef4e6b1"><div class="ttname"><a href="classvcl_1_1FileInfo.html#a69736e79c8f22b59fffd3a70eef4e6b1">vcl::FileInfo::extension</a></div><div class="ttdeci">static std::string extension(const std::string &amp;filename)</div><div class="ttdoc">Get the extension of a file.</div><div class="ttdef"><b>Definition</b> file_info.h:259</div></div>
-<div class="ttc" id="aclassvcl_1_1FileInfo_html_a95ade661eff463651d6f0ff43ad064d3"><div class="ttname"><a href="classvcl_1_1FileInfo.html#a95ade661eff463651d6f0ff43ad064d3">vcl::FileInfo::isFileBinary</a></div><div class="ttdeci">static bool isFileBinary(const std::string &amp;filename)</div><div class="ttdoc">Check if a file is binary.</div><div class="ttdef"><b>Definition</b> file_info.h:91</div></div>
-<div class="ttc" id="aclassvcl_1_1FileInfo_html_ab20f76708e0c001d3ed14d284531c6e2"><div class="ttname"><a href="classvcl_1_1FileInfo.html#ab20f76708e0c001d3ed14d284531c6e2">vcl::FileInfo::fileFormat</a></div><div class="ttdeci">static FileFormat fileFormat(const std::string &amp;filename)</div><div class="ttdoc">Get the file format of a file from its filename.</div><div class="ttdef"><b>Definition</b> file_info.h:279</div></div>
-<div class="ttc" id="aclassvcl_1_1FileInfo_html_ad20cbf5576db0474da3472f3ec2d0526"><div class="ttname"><a href="classvcl_1_1FileInfo.html#ad20cbf5576db0474da3472f3ec2d0526">vcl::FileInfo::separateExtensionFromFileName</a></div><div class="ttdeci">static void separateExtensionFromFileName(const std::string &amp;fullname, std::string &amp;rawName, std::string &amp;extension)</div><div class="ttdoc">Extracts the extension of a string that contains a filename.</div><div class="ttdef"><b>Definition</b> file_info.h:136</div></div>
-<div class="ttc" id="aclassvcl_1_1FileInfo_html_adc809fa8f7602e71e6eb59efaaba890f"><div class="ttname"><a href="classvcl_1_1FileInfo.html#adc809fa8f7602e71e6eb59efaaba890f">vcl::FileInfo::pathWithoutFileName</a></div><div class="ttdeci">static std::string pathWithoutFileName(const std::string &amp;fullpath)</div><div class="ttdoc">Get the path of a file.</div><div class="ttdef"><b>Definition</b> file_info.h:199</div></div>
-<div class="ttc" id="aclassvcl_1_1MalformedFileException_html"><div class="ttname"><a href="classvcl_1_1MalformedFileException.html">vcl::MalformedFileException</a></div><div class="ttdoc">Exception thrown when the file is malformed.</div><div class="ttdef"><b>Definition</b> io.h:76</div></div>
-<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:43</div></div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span> </div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span> </div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span><span class="preprocessor">#endif </span><span class="comment">// VCL_IO_FILE_INFO_H</span></div>
+<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:46</div></div>
+<div class="ttc" id="aclassvcl_1_1Box_html_ad4dd21aaa7669f0ccbba075764c77664"><div class="ttname"><a href="classvcl_1_1Box.html#ad4dd21aaa7669f0ccbba075764c77664">vcl::Box::size</a></div><div class="ttdeci">PointT size() const</div><div class="ttdoc">Computes the size of the box.</div><div class="ttdef"><b>Definition</b> box.h:267</div></div>
+<div class="ttc" id="aclassvcl_1_1FileFormat_html"><div class="ttname"><a href="classvcl_1_1FileFormat.html">vcl::FileFormat</a></div><div class="ttdoc">The FileFormat class represents a file format.</div><div class="ttdef"><b>Definition</b> file_format.h:40</div></div>
+<div class="ttc" id="aclassvcl_1_1FileInfo_html"><div class="ttname"><a href="classvcl_1_1FileInfo.html">vcl::FileInfo</a></div><div class="ttdef"><b>Definition</b> file_info.h:40</div></div>
+<div class="ttc" id="aclassvcl_1_1FileInfo_html_a039122813bcaa1e2739d501b4135ef9e"><div class="ttname"><a href="classvcl_1_1FileInfo.html#a039122813bcaa1e2739d501b4135ef9e">vcl::FileInfo::fileSize</a></div><div class="ttdeci">static std::size_t fileSize(const std::string &amp;filename)</div><div class="ttdoc">Get the size of a file.</div><div class="ttdef"><b>Definition</b> file_info.h:75</div></div>
+<div class="ttc" id="aclassvcl_1_1FileInfo_html_a03caaa9f0ef75fe3ed8d04facf0539e4"><div class="ttname"><a href="classvcl_1_1FileInfo.html#a03caaa9f0ef75fe3ed8d04facf0539e4">vcl::FileInfo::addExtensionIfNeeded</a></div><div class="ttdeci">static std::string addExtensionIfNeeded(const std::string &amp;filename, const std::string &amp;ext)</div><div class="ttdoc">Adds an extension to a file name if it doesn't already have it.</div><div class="ttdef"><b>Definition</b> file_info.h:292</div></div>
+<div class="ttc" id="aclassvcl_1_1FileInfo_html_a109bce11d4eedbb7316b258e77460684"><div class="ttname"><a href="classvcl_1_1FileInfo.html#a109bce11d4eedbb7316b258e77460684">vcl::FileInfo::fileNameWithExtension</a></div><div class="ttdeci">static std::string fileNameWithExtension(const std::string &amp;fullpath)</div><div class="ttdoc">Get the filename with extension of a file.</div><div class="ttdef"><b>Definition</b> file_info.h:240</div></div>
+<div class="ttc" id="aclassvcl_1_1FileInfo_html_a5ab66e247bf6f47354cf6fd869e1920a"><div class="ttname"><a href="classvcl_1_1FileInfo.html#a5ab66e247bf6f47354cf6fd869e1920a">vcl::FileInfo::fileNameWithoutExtension</a></div><div class="ttdeci">static std::string fileNameWithoutExtension(const std::string &amp;fullpath)</div><div class="ttdoc">Get the file name without extension of a file.</div><div class="ttdef"><b>Definition</b> file_info.h:220</div></div>
+<div class="ttc" id="aclassvcl_1_1FileInfo_html_a5ee19e218382261c5f80a7e8ba7605d4"><div class="ttname"><a href="classvcl_1_1FileInfo.html#a5ee19e218382261c5f80a7e8ba7605d4">vcl::FileInfo::separateFileNameFromPath</a></div><div class="ttdeci">static void separateFileNameFromPath(const std::string &amp;fullpath, std::string &amp;path, std::string &amp;filename)</div><div class="ttdoc">Extracts the filename (extension included) of a string that contains a fullpath.</div><div class="ttdef"><b>Definition</b> file_info.h:172</div></div>
+<div class="ttc" id="aclassvcl_1_1FileInfo_html_a64c0e452c7f050d747c82fb4074e3296"><div class="ttname"><a href="classvcl_1_1FileInfo.html#a64c0e452c7f050d747c82fb4074e3296">vcl::FileInfo::exists</a></div><div class="ttdeci">static bool exists(const std::string &amp;filename)</div><div class="ttdoc">Check if a file exists.</div><div class="ttdef"><b>Definition</b> file_info.h:64</div></div>
+<div class="ttc" id="aclassvcl_1_1FileInfo_html_a69736e79c8f22b59fffd3a70eef4e6b1"><div class="ttname"><a href="classvcl_1_1FileInfo.html#a69736e79c8f22b59fffd3a70eef4e6b1">vcl::FileInfo::extension</a></div><div class="ttdeci">static std::string extension(const std::string &amp;filename)</div><div class="ttdoc">Get the extension of a file.</div><div class="ttdef"><b>Definition</b> file_info.h:260</div></div>
+<div class="ttc" id="aclassvcl_1_1FileInfo_html_a95ade661eff463651d6f0ff43ad064d3"><div class="ttname"><a href="classvcl_1_1FileInfo.html#a95ade661eff463651d6f0ff43ad064d3">vcl::FileInfo::isFileBinary</a></div><div class="ttdeci">static bool isFileBinary(const std::string &amp;filename)</div><div class="ttdoc">Check if a file is binary.</div><div class="ttdef"><b>Definition</b> file_info.h:92</div></div>
+<div class="ttc" id="aclassvcl_1_1FileInfo_html_ab20f76708e0c001d3ed14d284531c6e2"><div class="ttname"><a href="classvcl_1_1FileInfo.html#ab20f76708e0c001d3ed14d284531c6e2">vcl::FileInfo::fileFormat</a></div><div class="ttdeci">static FileFormat fileFormat(const std::string &amp;filename)</div><div class="ttdoc">Get the file format of a file from its filename.</div><div class="ttdef"><b>Definition</b> file_info.h:280</div></div>
+<div class="ttc" id="aclassvcl_1_1FileInfo_html_ad20cbf5576db0474da3472f3ec2d0526"><div class="ttname"><a href="classvcl_1_1FileInfo.html#ad20cbf5576db0474da3472f3ec2d0526">vcl::FileInfo::separateExtensionFromFileName</a></div><div class="ttdeci">static void separateExtensionFromFileName(const std::string &amp;fullname, std::string &amp;rawName, std::string &amp;extension)</div><div class="ttdoc">Extracts the extension of a string that contains a filename.</div><div class="ttdef"><b>Definition</b> file_info.h:137</div></div>
+<div class="ttc" id="aclassvcl_1_1FileInfo_html_adc809fa8f7602e71e6eb59efaaba890f"><div class="ttname"><a href="classvcl_1_1FileInfo.html#adc809fa8f7602e71e6eb59efaaba890f">vcl::FileInfo::pathWithoutFileName</a></div><div class="ttdeci">static std::string pathWithoutFileName(const std::string &amp;fullpath)</div><div class="ttdoc">Get the path of a file.</div><div class="ttdef"><b>Definition</b> file_info.h:200</div></div>
+<div class="ttc" id="aclassvcl_1_1MalformedFileException_html"><div class="ttname"><a href="classvcl_1_1MalformedFileException.html">vcl::MalformedFileException</a></div><div class="ttdoc">Exception thrown when the file is malformed.</div><div class="ttdef"><b>Definition</b> exceptions.h:76</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

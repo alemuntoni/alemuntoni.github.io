@@ -1,11 +1,7 @@
 var group__mesh__concepts =
 [
-    [ "Element Concepts", "group__element__concepts.html", "group__element__concepts" ],
     [ "Components Concepts", "group__components__concepts.html", "group__components__concepts" ],
-    [ "Containers Concepts", "group__containers__concepts.html", "group__containers__concepts" ],
-    [ "EdgeMesh Concepts", "group__edge__mesh__concepts.html", "group__edge__mesh__concepts" ],
-    [ "FaceMesh Concepts", "group__face__mesh__concepts.html", "group__face__mesh__concepts" ],
-    [ "VertexMesh Concepts", "group__vertex__mesh__concepts.html", "group__vertex__mesh__concepts" ],
+    [ "Element Concepts", "group__element__concepts.html", "group__element__concepts" ],
     [ "vcl::MeshConcept", "conceptvcl_1_1MeshConcept.html", null ],
     [ "vcl::ElementOrMeshConcept", "conceptvcl_1_1ElementOrMeshConcept.html", null ],
     [ "vcl::EdgeMeshConcept", "conceptvcl_1_1EdgeMeshConcept.html", null ],

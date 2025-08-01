@@ -1,10 +1,14 @@
 var group__mesh =
 [
-    [ "Mesh Concepts", "group__mesh__concepts.html", "group__mesh__concepts" ],
     [ "Elements", "group__elements.html", "group__elements" ],
     [ "Components", "group__components.html", "group__components" ],
     [ "Containers", "group__containers.html", "group__containers" ],
     [ "Mesh Requirements", "group__mesh__requirements.html", "group__mesh__requirements" ],
+    [ "vcl::MeshConcept", "conceptvcl_1_1MeshConcept.html", null ],
+    [ "vcl::ElementOrMeshConcept", "conceptvcl_1_1ElementOrMeshConcept.html", null ],
+    [ "vcl::BadCustomComponentTypeException", "classvcl_1_1BadCustomComponentTypeException.html", null ],
+    [ "vcl::BadVertexIndexException", "classvcl_1_1BadVertexIndexException.html", null ],
+    [ "vcl::InconsistentMeshException", "classvcl_1_1InconsistentMeshException.html", null ],
     [ "vcl::Mesh< Args >", "classvcl_1_1Mesh.html", [
       [ "ContainerOf", "structvcl_1_1Mesh_1_1ContainerOf.html", null ],
       [ "ContainerOfElement", "structvcl_1_1Mesh_1_1ContainerOfElement.html", null ],
@@ -77,5 +81,10 @@ var group__mesh =
       [ "updateIndices", "classvcl_1_1Mesh.html#a8e35a62e4b468ad6ab9084bb472bc011", null ],
       [ "updateReferencesOfContainerType", "classvcl_1_1Mesh.html#ab1cd159efd657519f13c687daab58273", null ],
       [ "swap", "classvcl_1_1Mesh.html#ad2a9548437838ad185162eec3d0bf1e7", null ]
-    ] ]
+    ] ],
+    [ "vcl::MissingCompactnessException", "classvcl_1_1MissingCompactnessException.html", null ],
+    [ "vcl::MissingComponentException", "classvcl_1_1MissingComponentException.html", null ],
+    [ "vcl::MissingPreconditionException", "classvcl_1_1MissingPreconditionException.html", null ],
+    [ "vcl::MissingQuadRequirementException", "classvcl_1_1MissingQuadRequirementException.html", null ],
+    [ "vcl::MissingTriangularRequirementException", "classvcl_1_1MissingTriangularRequirementException.html", null ]
 ];

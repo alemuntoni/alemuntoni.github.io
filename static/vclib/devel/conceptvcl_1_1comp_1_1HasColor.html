@@ -105,25 +105,28 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1comp_1_1HasColor.html','
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">vcl::comp::HasColor Concept Reference<div class="ingroups"><a class="el" href="group__concepts.html">Concepts</a> &raquo; <a class="el" href="group__lib__concepts.html">Library Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__concepts.html">Mesh Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__components.html">Components</a> &raquo; <a class="el" href="group__components__concepts.html">Components Concepts</a></div></div></div>
+  <div class="headertitle"><div class="title">vcl::comp::HasColor Concept Reference<div class="ingroups"><a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__requirements.html">Mesh Requirements</a> &raquo; <a class="el" href="group__mesh__concepts.html">Mesh Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__components.html">Components</a> &raquo; <a class="el" href="group__components__concepts.html">Components Concepts</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>HasColor concept is satisfied only if a Element/Mesh class provides the types and member functions specified in this concept. These types and member functions allow to access to a <a class="el" href="classvcl_1_1comp_1_1Color.html">vcl::comp::Color</a> component of a given element/mesh.  
+<p>A concept that checks whether a type T (that should be a Element or a Mesh) has the Color component (inherits from it).  
 <a href="conceptvcl_1_1comp_1_1HasColor.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="concepts_2mesh_2components_2color_8h_source.html">vclib/concepts/mesh/components/color.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="mesh_2components_2color_8h_source.html">vclib/mesh/components/color.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasColor.html">vcl::comp::HasColor</a> =  <span class="keyword">requires</span> (T&amp;&amp; obj) {</div>
-<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::ColorType;</div>
-<div class="line">    { obj.color() } -&gt; <a class="code hl_concept" href="conceptvcl_1_1ColorConcept.html">ColorConcept</a>;</div>
-<div class="line">}</div>
-<div class="ttc" id="aconceptvcl_1_1ColorConcept_html"><div class="ttname"><a href="conceptvcl_1_1ColorConcept.html">vcl::ColorConcept</a></div><div class="ttdoc">ColorConcept is satisfied only if a class provides the member functions specified in this concept....</div><div class="ttdef"><b>Definition</b> color.h:41</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasColor_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasColor.html">vcl::comp::HasColor</a></div><div class="ttdoc">HasColor concept is satisfied only if a Element/Mesh class provides the types and member functions sp...</div><div class="ttdef"><b>Definition</b> color.h:47</div></div>
+<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasColor.html">vcl::comp::HasColor</a> =  TB::IsDerivedFromSpecializationOfV&lt;T, Color&gt;</div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasColor_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasColor.html">vcl::comp::HasColor</a></div><div class="ttdoc">A concept that checks whether a type T (that should be a Element or a Mesh) has the Color component (...</div><div class="ttdef"><b>Definition</b> color.h:132</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>HasColor concept is satisfied only if a Element/Mesh class provides the types and member functions specified in this concept. These types and member functions allow to access to a <a class="el" href="classvcl_1_1comp_1_1Color.html">vcl::comp::Color</a> component of a given element/mesh. </p>
-<p>Note that this concept does not discriminate between the Horizontal Color component and the vertical OptionalColor component, therefore it does not guarantee that a template Element type that satisfies this concept provides Color component at runtime (it is guaranteed only that the proper member functions are available at compile time). </p>
+<div class="textblock"><p>A concept that checks whether a type T (that should be a Element or a Mesh) has the Color component (inherits from it). </p>
+<p>The concept is satisfied if T is a class that inherits from <a class="el" href="classvcl_1_1comp_1_1Color.html" title="The Color class represents a RGBA color that will be part of an Element (e.g. Vertex,...">vcl::comp::Color</a>, with any template arguments.</p>
+<p>Note that this concept does not discriminate between the Horizontal Color component and the vertical OptionalColor component, therefore it does not guarantee that a template Element type that satisfies this concept provides Color component at runtime (it is guaranteed only that the proper member functions are available at compile time).</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type to be tested for conformity to the HasColor. </td></tr>
+  </table>
+  </dd>
+</dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

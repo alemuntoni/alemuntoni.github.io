@@ -129,7 +129,7 @@ A Vertex Element</div></div>
     <p>In this case, the Vertex Element has for example the Position, Flags, Normal and Color components, each one of them stores its data and expose it trough appropriate member functions.</p>
 <p>To understand how these entities are organized and implemented, we suggest to take a look at the <a class="el" href="mesh_components_page.html">Components</a>, <a class="el" href="mesh_elements_page.html">Elements</a> and <a class="el" href="mesh_containers_page.html">Containers</a> pages.</p>
 <p>The next sections will introduce some concepts that you should know before using the VCLib Meshes.</p>
-<h2><a class="anchor" id="autotoc_md18"></a>
+<h2><a class="anchor" id="autotoc_md17"></a>
 Components</h2>
 <p>As you may have already noticed, components can be part of both Elements and Meshes. In fact, Components in VCLib are implemented as generic as possible, in such a way that can be used in different contexts (the main reason behind this choice is to avoid code duplication).</p>
 <p>For example, the <a class="el" href="classvcl_1_1comp_1_1Color.html" title="The Color class represents a RGBA color that will be part of an Element (e.g. Vertex,...">vcl::comp::Color</a> component can be used by Elements, but also by the Mesh (it may be useful sometimes to assign a uniform color to the Mesh). The color component exposes the member functions <code>color()</code> and <code>color() const</code>, meaning that it will be possible to call these functions from all the Elements/Meshes that will have that component:</p>

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visual Computing Library: vclib/core/include/vclib/serialization/deserialize.h Source File</title>
+<title>Visual Computing Library: vclib/core/include/vclib/base/serialization/deserialize.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -135,13 +135,13 @@ $(document).ready(function(){initNavTree('deserialize_8h_source.html',''); initR
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> * (https://www.mozilla.org/en-US/MPL/2.0/) for more details.                *</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> ****************************************************************************/</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_SERIALIZATION_DESERIALIZE_H</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_SERIALIZATION_DESERIALIZE_H</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_BASE_SERIALIZATION_DESERIALIZE_H</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_BASE_SERIALIZATION_DESERIALIZE_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;endian.h&quot;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;vclib/concepts/serialization.h&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;vclib/concepts/types.h&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;vclib/base/concepts/serialization.h&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;vclib/base/concepts/types.h&gt;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;bit&gt;</span></div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;istream&gt;</span></div>
@@ -173,7 +173,7 @@ $(document).ready(function(){initNavTree('deserialize_8h_source.html',''); initR
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="keywordtype">void</span> deserialize(std::istream&amp; is, T&amp; data, Others&amp;... others)</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>{</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (Serializable&lt;T&gt;) {</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        data.deserialize(is);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        data.<a class="code hl_function" href="classvcl_1_1Box.html#a355a889437820f80fbf89143e3da6259">deserialize</a>(is);</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    }</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        deserialize(is, data, std::endian::little);</div>
@@ -185,13 +185,14 @@ $(document).ready(function(){initNavTree('deserialize_8h_source.html',''); initR
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>} <span class="comment">// namespace vcl</span></div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="preprocessor">#endif </span><span class="comment">// VCL_SERIALIZATION_DESERIALIZE_H</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="preprocessor">#endif </span><span class="comment">// VCL_BASE_SERIALIZATION_DESERIALIZE_H</span></div>
+<div class="ttc" id="aclassvcl_1_1Box_html_a355a889437820f80fbf89143e3da6259"><div class="ttname"><a href="classvcl_1_1Box.html#a355a889437820f80fbf89143e3da6259">vcl::Box::deserialize</a></div><div class="ttdeci">void deserialize(std::istream &amp;is)</div><div class="ttdoc">Deserializes the box from the given input stream.</div><div class="ttdef"><b>Definition</b> box.h:476</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_740765cca19b92d463c3cceb64e74df1.html">serialization</a></li><li class="navelem"><b>deserialize.h</b></li>
+    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_e330a725a80990495f6734bd3c618028.html">base</a></li><li class="navelem"><a class="el" href="dir_3e90a2da2132fd1d002c424267b90186.html">serialization</a></li><li class="navelem"><b>deserialize.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

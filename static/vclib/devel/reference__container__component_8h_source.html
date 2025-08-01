@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visual Computing Library: vclib/core/include/vclib/mesh/components/bases/reference_container_component.h Source File</title>
+<title>Visual Computing Library: vclib/core/include/vclib/mesh/components/base/reference_container_component.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -135,8 +135,8 @@ $(document).ready(function(){initNavTree('reference__container__component_8h_sou
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> * (https://www.mozilla.org/en-US/MPL/2.0/) for more details.                *</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> ****************************************************************************/</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_MESH_COMPONENTS_BASES_REFERENCE_CONTAINER_COMPONENT_H</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_MESH_COMPONENTS_BASES_REFERENCE_CONTAINER_COMPONENT_H</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_MESH_COMPONENTS_BASE_REFERENCE_CONTAINER_COMPONENT_H</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_MESH_COMPONENTS_BASE_REFERENCE_CONTAINER_COMPONENT_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;index_container_component.h&quot;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;pointer_container_component.h&quot;</span></div>
@@ -198,7 +198,7 @@ $(document).ready(function(){initNavTree('reference__container__component_8h_sou
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            OPT,</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            TTVN&gt;&gt;;</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    uint size()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> Base::container().size(); }</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    uint size()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> Base::container().<a class="code hl_function" href="classvcl_1_1Box.html#ad4dd21aaa7669f0ccbba075764c77664">size</a>(); }</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    Elem* element(uint i)</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    {</div>
@@ -478,7 +478,7 @@ $(document).ready(function(){initNavTree('reference__container__component_8h_sou
 <div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>    uint indexFromPointer(<span class="keyword">const</span> Elem* v)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span><span class="keyword">    </span>{</div>
 <div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>        <span class="keywordflow">if</span> (v == <span class="keyword">nullptr</span>) [[unlikely]]</div>
-<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="group__types.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>;</div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>;</div>
 <div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>        <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>            <span class="keywordflow">return</span> v-&gt;index();</div>
 <div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>    }</div>
@@ -507,14 +507,15 @@ $(document).ready(function(){initNavTree('reference__container__component_8h_sou
 <div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span> </div>
 <div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>} <span class="comment">// namespace vcl::comp</span></div>
 <div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span> </div>
-<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span><span class="preprocessor">#endif </span><span class="comment">// VCL_MESH_COMPONENTS_BASES_REFERENCE_CONTAINER_COMPONENT_H</span></div>
-<div class="ttc" id="agroup__types_html_ga9ad8104cd9ccfa9352d33bc7e6ba47e6"><div class="ttname"><a href="group__types.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">vcl::UINT_NULL</a></div><div class="ttdeci">constexpr uint UINT_NULL</div><div class="ttdoc">The UINT_NULL value represent a null value of uint that is the maximum value that can be represented ...</div><div class="ttdef"><b>Definition</b> base.h:48</div></div>
+<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span><span class="preprocessor">#endif </span><span class="comment">// VCL_MESH_COMPONENTS_BASE_REFERENCE_CONTAINER_COMPONENT_H</span></div>
+<div class="ttc" id="aclassvcl_1_1Box_html_ad4dd21aaa7669f0ccbba075764c77664"><div class="ttname"><a href="classvcl_1_1Box.html#ad4dd21aaa7669f0ccbba075764c77664">vcl::Box::size</a></div><div class="ttdeci">PointT size() const</div><div class="ttdoc">Computes the size of the box.</div><div class="ttdef"><b>Definition</b> box.h:267</div></div>
+<div class="ttc" id="agroup__base_html_ga9ad8104cd9ccfa9352d33bc7e6ba47e6"><div class="ttname"><a href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">vcl::UINT_NULL</a></div><div class="ttdeci">constexpr uint UINT_NULL</div><div class="ttdoc">The UINT_NULL value represent a null value of uint that is the maximum value that can be represented ...</div><div class="ttdef"><b>Definition</b> base.h:48</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_57e9d4f65bede1d20512a0464756b99f.html">mesh</a></li><li class="navelem"><a class="el" href="dir_7d8eefb3020a6ad35dbc8d18926b9c77.html">components</a></li><li class="navelem"><a class="el" href="dir_d8fd8f06fa29eac18e0901da131b1081.html">bases</a></li><li class="navelem"><b>reference_container_component.h</b></li>
+    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_57e9d4f65bede1d20512a0464756b99f.html">mesh</a></li><li class="navelem"><a class="el" href="dir_7d8eefb3020a6ad35dbc8d18926b9c77.html">components</a></li><li class="navelem"><a class="el" href="dir_adf091642dbec205bf405f0ed4e816a6.html">base</a></li><li class="navelem"><b>reference_container_component.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

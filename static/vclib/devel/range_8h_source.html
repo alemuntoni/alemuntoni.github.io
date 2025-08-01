@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visual Computing Library: vclib/core/include/vclib/concepts/range.h Source File</title>
+<title>Visual Computing Library: vclib/core/include/vclib/base/concepts/range.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -135,19 +135,40 @@ $(document).ready(function(){initNavTree('range_8h_source.html',''); initResizab
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> * (https://www.mozilla.org/en-US/MPL/2.0/) for more details.                *</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> ****************************************************************************/</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_CONCEPTS_RANGE_H</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_CONCEPTS_RANGE_H</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_BASE_CONCEPTS_RANGE_H</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_BASE_CONCEPTS_RANGE_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;ranges/mesh.h&quot;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;ranges/range.h&quot;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#endif </span><span class="comment">// VCL_CONCEPTS_RANGE_H</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;ranges&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">namespace </span>vcl {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="conceptvcl_1_1Range.html">   39</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1Range.html">Range</a> = std::ranges::range&lt;T&gt;;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="conceptvcl_1_1RangeOf.html">   66</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1RangeOf.html">RangeOf</a> = <a class="code hl_concept" href="conceptvcl_1_1Range.html">Range&lt;R&gt;</a> &amp;&amp; std::same_as&lt;std::ranges::range_value_t&lt;R&gt;, T&gt;;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="conceptvcl_1_1InputRange.html">   89</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1InputRange.html">InputRange</a> =</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <a class="code hl_concept" href="conceptvcl_1_1Range.html">Range&lt;R&gt;</a> &amp;&amp; std::convertible_to&lt;std::ranges::range_value_t&lt;R&gt;, T&gt;;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="conceptvcl_1_1OutputRange.html">  113</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1OutputRange.html">OutputRange</a> = <a class="code hl_concept" href="conceptvcl_1_1Range.html">Range&lt;R&gt;</a> &amp;&amp; std::ranges::output_range&lt;R, T&gt; &amp;&amp;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                      std::same_as&lt;std::ranges::range_value_t&lt;R&gt;, T&gt;;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="preprocessor">#endif </span><span class="comment">// VCL_BASE_CONCEPTS_RANGE_H</span></div>
+<div class="ttc" id="aconceptvcl_1_1InputRange_html"><div class="ttname"><a href="conceptvcl_1_1InputRange.html">vcl::InputRange</a></div><div class="ttdoc">Utility concept that is evaluated true the Range R is an Input Range and has a value_type that is con...</div><div class="ttdef"><b>Definition</b> range.h:89</div></div>
+<div class="ttc" id="aconceptvcl_1_1OutputRange_html"><div class="ttname"><a href="conceptvcl_1_1OutputRange.html">vcl::OutputRange</a></div><div class="ttdoc">Utility concept that is evaluated true the Range R is an Output Range and has a value_type that is T.</div><div class="ttdef"><b>Definition</b> range.h:113</div></div>
+<div class="ttc" id="aconceptvcl_1_1RangeOf_html"><div class="ttname"><a href="conceptvcl_1_1RangeOf.html">vcl::RangeOf</a></div><div class="ttdoc">Utility concept that is evaluated true the Range R has a value_type that is exactly T.</div><div class="ttdef"><b>Definition</b> range.h:66</div></div>
+<div class="ttc" id="aconceptvcl_1_1Range_html"><div class="ttname"><a href="conceptvcl_1_1Range.html">vcl::Range</a></div><div class="ttdoc">Utility concept that is evaluated true if T is a range, e.g. if has a begin and an end.</div><div class="ttdef"><b>Definition</b> range.h:39</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_dd968cc90108d82a40e31b676831d617.html">concepts</a></li><li class="navelem"><b>range.h</b></li>
+    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_e330a725a80990495f6734bd3c618028.html">base</a></li><li class="navelem"><a class="el" href="dir_baf6116701a59b08a0d101f0e2e70089.html">concepts</a></li><li class="navelem"><b>range.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

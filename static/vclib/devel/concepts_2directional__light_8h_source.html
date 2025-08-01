@@ -138,40 +138,39 @@ $(document).ready(function(){initNavTree('concepts_2directional__light_8h_source
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_RENDER_CONCEPTS_DIRECTIONAL_LIGHT_H</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_RENDER_CONCEPTS_DIRECTIONAL_LIGHT_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;vclib/concepts.h&gt;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;vclib/space/core/color.h&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span>vcl {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="conceptvcl_1_1DirectionalLightConcept.html">   32</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1DirectionalLightConcept.html">DirectionalLightConcept</a> =</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">requires</span> (T&amp;&amp; obj, RemoveRef&lt;T&gt;::PointType p, <a class="code hl_class" href="classvcl_1_1Color.html">vcl::Color</a> c) {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="comment">// types</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keyword">typename</span> RemoveRef&lt;T&gt;::PointType;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="comment">// constructors</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        RemoveRef&lt;T&gt;();</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        RemoveRef&lt;T&gt;(p, c);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        { obj.direction() } -&gt; <a class="code hl_concept" href="conceptvcl_1_1Point3Concept.html">Point3Concept</a>;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        { obj.color() } -&gt; <a class="code hl_concept" href="conceptvcl_1_1ColorConcept.html">ColorConcept</a>;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="comment">// non const requirements</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">requires</span> <a class="code hl_concept" href="conceptvcl_1_1IsConst.html">IsConst&lt;T&gt;</a> || <span class="keyword">requires</span> {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            { obj.reset() } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        };</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    };</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;vclib/space/core.h&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">namespace </span>vcl {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="conceptvcl_1_1DirectionalLightConcept.html">   31</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1DirectionalLightConcept.html">DirectionalLightConcept</a> =</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">requires</span> (T&amp;&amp; obj, RemoveRef&lt;T&gt;::PointType p, <a class="code hl_class" href="classvcl_1_1Color.html">vcl::Color</a> c) {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="comment">// types</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keyword">typename</span> RemoveRef&lt;T&gt;::PointType;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="comment">// constructors</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        RemoveRef&lt;T&gt;();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        RemoveRef&lt;T&gt;(p, c);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        { obj.direction() } -&gt; <a class="code hl_concept" href="conceptvcl_1_1Point3Concept.html">Point3Concept</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        { obj.color() } -&gt; <a class="code hl_concept" href="conceptvcl_1_1ColorConcept.html">ColorConcept</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="comment">// non const requirements</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keyword">requires</span> <a class="code hl_concept" href="conceptvcl_1_1IsConst.html">IsConst&lt;T&gt;</a> || <span class="keyword">requires</span> {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            { obj.reset() } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        };</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    };</div>
 </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#endif </span><span class="comment">// VCL_RENDER_CONCEPTS_DIRECTIONAL_LIGHT_H</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#endif </span><span class="comment">// VCL_RENDER_CONCEPTS_DIRECTIONAL_LIGHT_H</span></div>
 <div class="ttc" id="aclassvcl_1_1Color_html"><div class="ttname"><a href="classvcl_1_1Color.html">vcl::Color</a></div><div class="ttdoc">The Color class represents a 32 bit color.</div><div class="ttdef"><b>Definition</b> color.h:48</div></div>
-<div class="ttc" id="aconceptvcl_1_1ColorConcept_html"><div class="ttname"><a href="conceptvcl_1_1ColorConcept.html">vcl::ColorConcept</a></div><div class="ttdoc">ColorConcept is satisfied only if a class provides the member functions specified in this concept....</div><div class="ttdef"><b>Definition</b> color.h:41</div></div>
-<div class="ttc" id="aconceptvcl_1_1DirectionalLightConcept_html"><div class="ttname"><a href="conceptvcl_1_1DirectionalLightConcept.html">vcl::DirectionalLightConcept</a></div><div class="ttdef"><b>Definition</b> directional_light.h:32</div></div>
+<div class="ttc" id="aconceptvcl_1_1ColorConcept_html"><div class="ttname"><a href="conceptvcl_1_1ColorConcept.html">vcl::ColorConcept</a></div><div class="ttdoc">A concept representing a Color.</div><div class="ttdef"><b>Definition</b> color.h:655</div></div>
+<div class="ttc" id="aconceptvcl_1_1DirectionalLightConcept_html"><div class="ttname"><a href="conceptvcl_1_1DirectionalLightConcept.html">vcl::DirectionalLightConcept</a></div><div class="ttdef"><b>Definition</b> directional_light.h:31</div></div>
 <div class="ttc" id="aconceptvcl_1_1IsConst_html"><div class="ttname"><a href="conceptvcl_1_1IsConst.html">vcl::IsConst</a></div><div class="ttdoc">The IsConst concept is satisfied if T satisfies one of the following conditions:</div><div class="ttdef"><b>Definition</b> const_correctness.h:43</div></div>
-<div class="ttc" id="aconceptvcl_1_1Point3Concept_html"><div class="ttname"><a href="conceptvcl_1_1Point3Concept.html">vcl::Point3Concept</a></div><div class="ttdoc">Concept for points in three-dimensional space.</div><div class="ttdef"><b>Definition</b> point.h:130</div></div>
+<div class="ttc" id="aconceptvcl_1_1Point3Concept_html"><div class="ttname"><a href="conceptvcl_1_1Point3Concept.html">vcl::Point3Concept</a></div><div class="ttdoc">A concept representing a 3D Point.</div><div class="ttdef"><b>Definition</b> point.h:871</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

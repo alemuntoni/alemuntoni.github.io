@@ -7,11 +7,14 @@ var dir_3478d26f6ad956b0a5f2f133678959a7 =
     [ "bounding_box.h", "algorithms_2core_2bounding__box_8h_source.html", null ],
     [ "box.h", "algorithms_2core_2box_8h_source.html", null ],
     [ "create.h", "core_2create_8h_source.html", null ],
-    [ "distance.h", "core_2distance_8h_source.html", null ],
+    [ "distance.h", "algorithms_2core_2distance_8h_source.html", null ],
+    [ "fibonacci.h", "fibonacci_8h_source.html", null ],
     [ "fitting.h", "fitting_8h_source.html", null ],
-    [ "intersection.h", "core_2intersection_8h_source.html", null ],
+    [ "intersection.h", "algorithms_2core_2intersection_8h_source.html", null ],
+    [ "perlin_noise.h", "perlin__noise_8h_source.html", null ],
     [ "polygon.h", "algorithms_2core_2polygon_8h_source.html", null ],
+    [ "random.h", "algorithms_2core_2random_8h_source.html", null ],
     [ "stat.h", "core_2stat_8h_source.html", null ],
-    [ "transform.h", "algorithms_2core_2transform_8h_source.html", null ],
-    [ "visibility.h", "visibility_8h_source.html", null ]
+    [ "transform.h", "core_2transform_8h_source.html", null ],
+    [ "visibility.h", "algorithms_2core_2visibility_8h_source.html", null ]
 ];

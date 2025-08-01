@@ -105,22 +105,22 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1HasPerVertexMark.html','
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">vcl::HasPerVertexMark Concept Reference<div class="ingroups"><a class="el" href="group__concepts.html">Concepts</a> &raquo; <a class="el" href="group__lib__concepts.html">Library Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__concepts.html">Mesh Concepts</a> &raquo; <a class="el" href="group__vertex__mesh__concepts.html">VertexMesh Concepts</a></div></div></div>
+  <div class="headertitle"><div class="title">vcl::HasPerVertexMark Concept Reference<div class="ingroups"><a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__requirements.html">Mesh Requirements</a> &raquo; <a class="el" href="group__vertex__requirements.html">Vertex Requirements</a> &raquo; <a class="el" href="group__vertex__mesh__concepts.html">VertexMesh Concepts</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>Concept that checks if a Mesh has the per Vertex Mark component.  
 <a href="conceptvcl_1_1HasPerVertexMark.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="per__vertex_8h_source.html">vclib/concepts/mesh/per_vertex.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="vertex__requirements_8h_source.html">vclib/mesh/requirements/vertex_requirements.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType&gt;</div>
 <div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1HasPerVertexMark.html">vcl::HasPerVertexMark</a> = </div>
 <div class="line">    <a class="code hl_concept" href="conceptvcl_1_1HasVertices.html">HasVertices&lt;MeshType&gt;</a> &amp;&amp;</div>
 <div class="line">    <a class="code hl_concept" href="conceptvcl_1_1vert_1_1HasMark.html">vert::HasMark&lt;typename RemoveRef&lt;MeshType&gt;::VertexType</a>&gt;</div>
-<div class="ttc" id="aconceptvcl_1_1HasPerVertexMark_html"><div class="ttname"><a href="conceptvcl_1_1HasPerVertexMark.html">vcl::HasPerVertexMark</a></div><div class="ttdoc">Concept that checks if a Mesh has the per Vertex Mark component.</div><div class="ttdef"><b>Definition</b> per_vertex.h:113</div></div>
-<div class="ttc" id="aconceptvcl_1_1HasVertices_html"><div class="ttname"><a href="conceptvcl_1_1HasVertices.html">vcl::HasVertices</a></div><div class="ttdoc">HasVertices concepts is satisfied when at least one of its types is (or inherits from) a vcl::mesh::V...</div><div class="ttdef"><b>Definition</b> vertex_container.h:130</div></div>
-<div class="ttc" id="aconceptvcl_1_1vert_1_1HasMark_html"><div class="ttname"><a href="conceptvcl_1_1vert_1_1HasMark.html">vcl::vert::HasMark</a></div><div class="ttdef"><b>Definition</b> vertex.h:70</div></div>
+<div class="ttc" id="aconceptvcl_1_1HasPerVertexMark_html"><div class="ttname"><a href="conceptvcl_1_1HasPerVertexMark.html">vcl::HasPerVertexMark</a></div><div class="ttdoc">Concept that checks if a Mesh has the per Vertex Mark component.</div><div class="ttdef"><b>Definition</b> vertex_requirements.h:125</div></div>
+<div class="ttc" id="aconceptvcl_1_1HasVertices_html"><div class="ttname"><a href="conceptvcl_1_1HasVertices.html">vcl::HasVertices</a></div><div class="ttdoc">HasVertices concepts is satisfied when at least one of its types is (or inherits from) a vcl::mesh::V...</div><div class="ttdef"><b>Definition</b> vertex_container.h:1267</div></div>
+<div class="ttc" id="aconceptvcl_1_1vert_1_1HasMark_html"><div class="ttname"><a href="conceptvcl_1_1vert_1_1HasMark.html">vcl::vert::HasMark</a></div><div class="ttdef"><b>Definition</b> vertex_components.h:89</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Concept that checks if a Mesh has the per Vertex Mark component. </p>
 <p>Evaluates to true if Mark is part of the Vertex element, whether it is horizontal, vertical or optional.</p>

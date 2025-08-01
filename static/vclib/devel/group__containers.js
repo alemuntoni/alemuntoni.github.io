@@ -1,6 +1,9 @@
 var group__containers =
 [
-    [ "Containers Concepts", "group__containers__concepts.html", "group__containers__concepts" ],
+    [ "vcl::mesh::HasEdgeContainer", "conceptvcl_1_1mesh_1_1HasEdgeContainer.html", null ],
+    [ "vcl::mesh::HasFaceContainer", "conceptvcl_1_1mesh_1_1HasFaceContainer.html", null ],
+    [ "vcl::mesh::HasVertexContainer", "conceptvcl_1_1mesh_1_1HasVertexContainer.html", null ],
+    [ "vcl::HasVertices", "conceptvcl_1_1HasVertices.html", null ],
     [ "vcl::mesh::EdgeContainer< T >", "classvcl_1_1mesh_1_1EdgeContainer.html", [
       [ "EdgeContainer", "classvcl_1_1mesh_1_1EdgeContainer.html#af3b240aead0971b940928a2b028fd51c", null ],
       [ "addEdge", "classvcl_1_1mesh_1_1EdgeContainer.html#a1676f6f206bcb59a7ab0101cc4f29765", null ],

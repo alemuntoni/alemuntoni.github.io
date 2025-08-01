@@ -105,29 +105,31 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1VertexConcept.html','');
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">vcl::VertexConcept Concept Reference<div class="ingroups"><a class="el" href="group__concepts.html">Concepts</a> &raquo; <a class="el" href="group__lib__concepts.html">Library Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__concepts.html">Mesh Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__elements.html">Elements</a> &raquo; <a class="el" href="group__element__concepts.html">Element Concepts</a> &raquo; <a class="el" href="group__vert__concepts.html">Vertex Concepts</a></div></div></div>
+  <div class="headertitle"><div class="title">vcl::VertexConcept Concept Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>The VertexConcept describes how a Vertex element that can be used for a VertexContainer should be organized.  
+<p>A concept that checks whether a class has (inherits from) a Vertex class.  
 <a href="conceptvcl_1_1VertexConcept.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="concepts_2mesh_2elements_2vertex_8h_source.html">vclib/concepts/mesh/elements/vertex.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="mesh_2elements_2vertex_8h_source.html">vclib/mesh/elements/vertex.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1VertexConcept.html">vcl::VertexConcept</a> = </div>
-<div class="line">    <a class="code hl_concept" href="conceptvcl_1_1ElementConcept.html">ElementConcept&lt;T&gt;</a> &amp;&amp; RemoveRef&lt;T&gt;::ELEMENT_ID == ElemId::VERTEX &amp;&amp;</div>
-<div class="line">    <a class="code hl_concept" href="conceptvcl_1_1vert_1_1HasBitFlags.html">vert::HasBitFlags&lt;T&gt;</a> &amp;&amp; <a class="code hl_concept" href="conceptvcl_1_1vert_1_1HasPosition.html">vert::HasPosition&lt;T&gt;</a></div>
-<div class="ttc" id="aconceptvcl_1_1ElementConcept_html"><div class="ttname"><a href="conceptvcl_1_1ElementConcept.html">vcl::ElementConcept</a></div><div class="ttdef"><b>Definition</b> element.h:31</div></div>
-<div class="ttc" id="aconceptvcl_1_1VertexConcept_html"><div class="ttname"><a href="conceptvcl_1_1VertexConcept.html">vcl::VertexConcept</a></div><div class="ttdoc">The VertexConcept describes how a Vertex element that can be used for a VertexContainer should be org...</div><div class="ttdef"><b>Definition</b> vertex.h:106</div></div>
-<div class="ttc" id="aconceptvcl_1_1vert_1_1HasBitFlags_html"><div class="ttname"><a href="conceptvcl_1_1vert_1_1HasBitFlags.html">vcl::vert::HasBitFlags</a></div><div class="ttdef"><b>Definition</b> vertex.h:60</div></div>
-<div class="ttc" id="aconceptvcl_1_1vert_1_1HasPosition_html"><div class="ttname"><a href="conceptvcl_1_1vert_1_1HasPosition.html">vcl::vert::HasPosition</a></div><div class="ttdef"><b>Definition</b> vertex.h:68</div></div>
+<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1VertexConcept.html">vcl::VertexConcept</a> =  IsDerivedFromSpecializationOfV&lt;T, Vertex&gt; &amp;&amp;</div>
+<div class="line">                        RemoveRef&lt;T&gt;::ELEMENT_ID == ElemId::VERTEX &amp;&amp;</div>
+<div class="line">                        <a class="code hl_concept" href="conceptvcl_1_1vert_1_1HasBitFlags.html">vert::HasBitFlags&lt;T&gt;</a> &amp;&amp; <a class="code hl_concept" href="conceptvcl_1_1vert_1_1HasPosition.html">vert::HasPosition&lt;T&gt;</a></div>
+<div class="ttc" id="aconceptvcl_1_1VertexConcept_html"><div class="ttname"><a href="conceptvcl_1_1VertexConcept.html">vcl::VertexConcept</a></div><div class="ttdoc">A concept that checks whether a class has (inherits from) a Vertex class.</div><div class="ttdef"><b>Definition</b> vertex.h:80</div></div>
+<div class="ttc" id="aconceptvcl_1_1vert_1_1HasBitFlags_html"><div class="ttname"><a href="conceptvcl_1_1vert_1_1HasBitFlags.html">vcl::vert::HasBitFlags</a></div><div class="ttdef"><b>Definition</b> vertex_components.h:79</div></div>
+<div class="ttc" id="aconceptvcl_1_1vert_1_1HasPosition_html"><div class="ttname"><a href="conceptvcl_1_1vert_1_1HasPosition.html">vcl::vert::HasPosition</a></div><div class="ttdef"><b>Definition</b> vertex_components.h:87</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The VertexConcept describes how a Vertex element that can be used for a VertexContainer should be organized. </p>
-<p>The Vertex concept is satisfied for a class V if ALL the following sentences are true:</p><ul>
-<li>The class V has the BitFlags component (or a derivate);</li>
-<li>The class V has the Position component (or a derivate); </li>
-</ul>
+<div class="textblock"><p>A concept that checks whether a class has (inherits from) a Vertex class. </p>
+<p>The concept is satisfied when <code>T</code> is a class that instantiates or derives from a Vertex class having any ParentMesh type and any Component types. The concept checks also that the Vertex has a BitFlags component and a Position component.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type to be tested for conformity to the VertexConcept. </td></tr>
+  </table>
+  </dd>
+</dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

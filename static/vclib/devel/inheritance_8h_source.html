@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visual Computing Library: vclib/core/include/vclib/types/inheritance.h Source File</title>
+<title>Visual Computing Library: vclib/core/include/vclib/base/inheritance.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -135,8 +135,8 @@ $(document).ready(function(){initNavTree('inheritance_8h_source.html',''); initR
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> * (https://www.mozilla.org/en-US/MPL/2.0/) for more details.                *</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> ****************************************************************************/</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_TYPES_INHERITANCE_H</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_TYPES_INHERITANCE_H</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_BASE_INHERITANCE_H</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_BASE_INHERITANCE_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;type_traits&gt;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
@@ -159,20 +159,20 @@ $(document).ready(function(){initNavTree('inheritance_8h_source.html',''); initR
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">// https://stackoverflow.com/questions/25845536#comment40451928_25846080</span></div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">// http://coliru.stacked-crooked.com/a/9feadc62e7594eb2</span></div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> derived, <span class="keyword">template</span>&lt;<span class="keyword">typename</span>...&gt; <span class="keyword">class </span>base&gt;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="group__types.html#ga8a37fc3ccf3b54b062d37fe46900e112">   67</a></span><span class="keyword">using </span><a class="code hl_typedef" href="group__types.html#ga8a37fc3ccf3b54b062d37fe46900e112">IsDerivedFromTemplateSpecialization</a> = std::invoke_result&lt;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="group__base.html#ga8a37fc3ccf3b54b062d37fe46900e112">   67</a></span><span class="keyword">using </span><a class="code hl_typedef" href="group__base.html#ga8a37fc3ccf3b54b062d37fe46900e112">IsDerivedFromTemplateSpecialization</a> = std::invoke_result&lt;</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    detail::IsDerivedFromImplementation&lt;base&gt;,</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keyword">typename</span> std::remove_cv&lt;derived&gt;::type*&gt;::type;</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>} <span class="comment">// namespace vcl</span></div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">#endif </span><span class="comment">// VCL_TYPES_INHERITANCE_H</span></div>
-<div class="ttc" id="agroup__types_html_ga8a37fc3ccf3b54b062d37fe46900e112"><div class="ttname"><a href="group__types.html#ga8a37fc3ccf3b54b062d37fe46900e112">vcl::IsDerivedFromTemplateSpecialization</a></div><div class="ttdeci">std::invoke_result&lt; detail::IsDerivedFromImplementation&lt; base &gt;, typename std::remove_cv&lt; derived &gt;::type * &gt;::type IsDerivedFromTemplateSpecialization</div><div class="ttdoc">Utility class that allows to check if given class 'Derived' is derived from a specialization of a tem...</div><div class="ttdef"><b>Definition</b> inheritance.h:69</div></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">#endif </span><span class="comment">// VCL_BASE_INHERITANCE_H</span></div>
+<div class="ttc" id="agroup__base_html_ga8a37fc3ccf3b54b062d37fe46900e112"><div class="ttname"><a href="group__base.html#ga8a37fc3ccf3b54b062d37fe46900e112">vcl::IsDerivedFromTemplateSpecialization</a></div><div class="ttdeci">std::invoke_result&lt; detail::IsDerivedFromImplementation&lt; base &gt;, typename std::remove_cv&lt; derived &gt;::type * &gt;::type IsDerivedFromTemplateSpecialization</div><div class="ttdoc">Utility class that allows to check if given class 'Derived' is derived from a specialization of a tem...</div><div class="ttdef"><b>Definition</b> inheritance.h:69</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_ae5876ed1a21dfe8c57b4e8d41da885b.html">types</a></li><li class="navelem"><b>inheritance.h</b></li>
+    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_e330a725a80990495f6734bd3c618028.html">base</a></li><li class="navelem"><b>inheritance.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

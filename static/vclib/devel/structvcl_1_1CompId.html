@@ -108,14 +108,14 @@ $(document).ready(function(){initNavTree('structvcl_1_1CompId.html',''); initRes
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="structvcl_1_1CompId-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">vcl::CompId Struct Reference<div class="ingroups"><a class="el" href="group__types.html">Types</a></div></div></div>
+  <div class="headertitle"><div class="title">vcl::CompId Struct Reference<div class="ingroups"><a class="el" href="group__base.html">Base</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>The <a class="el" href="structvcl_1_1CompId.html" title="The CompId struct enumerates the components that can compose a element or a mesh.">CompId</a> struct enumerates the components that can compose a element or a mesh.  
  <a href="structvcl_1_1CompId.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="types_2mesh__components_8h_source.html">vclib/types/mesh_components.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="mesh_2components_2base_2base_8h_source.html">vclib/mesh/components/base/base.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -153,11 +153,11 @@ Public Types</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="structvcl_1_1CompId.html" title="The CompId struct enumerates the components that can compose a element or a mesh.">CompId</a> struct enumerates the components that can compose a element or a mesh. </p>
 <p>The components are identified by an unsigned integer value, that can be used to access the component of the element or mesh through a template parameter, without having to know the actual type of the component.</p>
-<p>For example, you can access the position component of an element with the following code: </p><div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">MyElement</a> e;</div>
-<div class="line"><span class="keyword">auto</span>&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">p</a> = e.template <a class="code hl_class" href="classvcl_1_1Segment.html">component&lt;CompId::POSITION&gt;</a>();</div>
-<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:43</div></div>
+<p>For example, you can access the position component of an element with the following code: </p><div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Box.html">MyElement</a> e;</div>
+<div class="line"><span class="keyword">auto</span>&amp; <a class="code hl_class" href="classvcl_1_1Box.html">p</a> = e.template <a class="code hl_class" href="classvcl_1_1Box.html">component&lt;CompId::POSITION&gt;</a>();</div>
+<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:46</div></div>
 </div><!-- fragment --> </div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>vclib/core/include/vclib/types/<a class="el" href="types_2mesh__components_8h_source.html">mesh_components.h</a></li>
+<li>vclib/core/include/vclib/mesh/components/base/<a class="el" href="mesh_2components_2base_2base_8h_source.html">base.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

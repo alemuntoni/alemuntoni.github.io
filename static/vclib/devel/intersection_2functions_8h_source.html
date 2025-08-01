@@ -138,31 +138,28 @@ $(document).ready(function(){initNavTree('intersection_2functions_8h_source.html
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_ALGORITHMS_CORE_INTERSECTION_FUNCTIONS_H</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_ALGORITHMS_CORE_INTERSECTION_FUNCTIONS_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;element.h&quot;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;misc.h&quot;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;vclib/concepts/mesh.h&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span>vcl {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> Obj1, <span class="keyword">typename</span> Obj2&gt;</div>
-<div class="foldopen" id="foldopen00063" data-start="{" data-end="}">
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="group__core__intersection.html#ga70dad48ffd4a840c11d422b0c3121393">   63</a></span><span class="keyword">auto</span> <a class="code hl_function" href="group__core__intersection.html#ga70dad48ffd4a840c11d422b0c3121393">intersectFunction</a>()</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>{</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">auto</span> f = [](<span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Segment.html">Obj1</a>&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">o1</a>, <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Segment.html">Obj2</a>&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">o2</a>) {</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="group__core__intersection.html#gaaf0a29bd6619438c285eef54d19ab78c">intersect</a>(<a class="code hl_class" href="classvcl_1_1Segment.html">o1</a>, <a class="code hl_class" href="classvcl_1_1Segment.html">o2</a>);</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    };</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordflow">return</span> f;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>}</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;intersect.h&quot;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">namespace </span>vcl {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> Obj1, <span class="keyword">typename</span> Obj2&gt;</div>
+<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="group__core__intersection.html#ga70dad48ffd4a840c11d422b0c3121393">   60</a></span><span class="keyword">auto</span> <a class="code hl_function" href="group__core__intersection.html#ga70dad48ffd4a840c11d422b0c3121393">intersectFunction</a>()</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>{</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keyword">auto</span> f = [](<span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Box.html">Obj1</a>&amp; <a class="code hl_class" href="classvcl_1_1Box.html">o1</a>, <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Box.html">Obj2</a>&amp; <a class="code hl_class" href="classvcl_1_1Box.html">o2</a>) {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="group__core__intersection.html#ga96a9fcaca279cd7327556634aa931a47">intersect</a>(<a class="code hl_class" href="classvcl_1_1Box.html">o1</a>, <a class="code hl_class" href="classvcl_1_1Box.html">o2</a>);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    };</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">return</span> f;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}</div>
 </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">#endif </span><span class="comment">// VCL_ALGORITHMS_CORE_INTERSECTION_FUNCTIONS_H</span></div>
-<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:43</div></div>
-<div class="ttc" id="agroup__core__intersection_html_ga70dad48ffd4a840c11d422b0c3121393"><div class="ttname"><a href="group__core__intersection.html#ga70dad48ffd4a840c11d422b0c3121393">vcl::intersectFunction</a></div><div class="ttdeci">auto intersectFunction()</div><div class="ttdoc">Return a proper intersect function between a Obj1 object and an Obj2 object.</div><div class="ttdef"><b>Definition</b> functions.h:63</div></div>
-<div class="ttc" id="agroup__core__intersection_html_gaaf0a29bd6619438c285eef54d19ab78c"><div class="ttname"><a href="group__core__intersection.html#gaaf0a29bd6619438c285eef54d19ab78c">vcl::intersect</a></div><div class="ttdeci">bool intersect(const FaceType &amp;f, const Box&lt; PointType &gt; &amp;box)</div><div class="ttdoc">Checks if a face intersects a box.</div><div class="ttdef"><b>Definition</b> element.h:57</div></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#endif </span><span class="comment">// VCL_ALGORITHMS_CORE_INTERSECTION_FUNCTIONS_H</span></div>
+<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:46</div></div>
+<div class="ttc" id="agroup__core__intersection_html_ga70dad48ffd4a840c11d422b0c3121393"><div class="ttname"><a href="group__core__intersection.html#ga70dad48ffd4a840c11d422b0c3121393">vcl::intersectFunction</a></div><div class="ttdeci">auto intersectFunction()</div><div class="ttdoc">Return a proper intersect function between a Obj1 object and an Obj2 object.</div><div class="ttdef"><b>Definition</b> functions.h:60</div></div>
+<div class="ttc" id="agroup__core__intersection_html_ga96a9fcaca279cd7327556634aa931a47"><div class="ttname"><a href="group__core__intersection.html#ga96a9fcaca279cd7327556634aa931a47">vcl::intersect</a></div><div class="ttdeci">bool intersect(const PlaneType &amp;plane, const BoxType &amp;box)</div><div class="ttdoc">Checks if a plane intersects with a box.</div><div class="ttdef"><b>Definition</b> intersect.h:258</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

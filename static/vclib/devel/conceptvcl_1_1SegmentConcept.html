@@ -105,63 +105,23 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1SegmentConcept.html','')
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">vcl::SegmentConcept Concept Reference</div></div>
+  <div class="headertitle"><div class="title">vcl::SegmentConcept Concept Reference<div class="ingroups"><a class="el" href="group__space__core.html">Core Data Structures</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Concept for types representing line segments in Euclidean space.  
+<p>A concept representing a Segment.  
 <a href="conceptvcl_1_1SegmentConcept.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="concepts_2space_2segment_8h_source.html">vclib/concepts/space/segment.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="segment_8h_source.html">vclib/space/core/segment.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1SegmentConcept.html">vcl::SegmentConcept</a> =  <span class="keyword">requires</span> (</div>
-<div class="line">    T&amp;&amp;                               obj,</div>
-<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::PointType  p,</div>
-<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::ScalarType s) {</div>
-<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::PointType;</div>
-<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::ScalarType;</div>
-<div class="line"> </div>
-<div class="line">    obj.DIM;</div>
-<div class="line"> </div>
-<div class="line">    RemoveRef&lt;T&gt;();</div>
-<div class="line">    RemoveRef&lt;T&gt;(p, p);</div>
-<div class="line"> </div>
-<div class="line">    { obj.p0() } -&gt; <a class="code hl_concept" href="conceptvcl_1_1PointConcept.html">PointConcept</a>;</div>
-<div class="line">    { <a class="code hl_class" href="classvcl_1_1Segment.html">obj</a>.<a class="code hl_function" href="classvcl_1_1Segment.html#a92614b7312e60c624ef7e108d4432ce0">p1</a>() } -&gt; PointConcept;</div>
-<div class="line"> </div>
-<div class="line">    { obj.midPoint() } -&gt; PointConcept;</div>
-<div class="line">    { obj.direction() } -&gt; PointConcept;</div>
-<div class="line">    { obj.normalizedDirection() } -&gt; PointConcept;</div>
-<div class="line">    { obj.length() } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(s)&gt;;</div>
-<div class="line">    { obj.squaredLength() } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(s)&gt;;</div>
-<div class="line"> </div>
-<div class="line">    { obj == obj } -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line">    { obj != obj } -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line"> </div>
-<div class="line">    { obj + obj } -&gt; std::convertible_to&lt;RemoveRef&lt;T&gt;&gt;;</div>
-<div class="line">    { obj - obj } -&gt; std::convertible_to&lt;RemoveRef&lt;T&gt;&gt;;</div>
-<div class="line">    { obj* s } -&gt; std::convertible_to&lt;RemoveRef&lt;T&gt;&gt;;</div>
-<div class="line">    { obj / s } -&gt; std::convertible_to&lt;RemoveRef&lt;T&gt;&gt;;</div>
-<div class="line"> </div>
-<div class="line">    </div>
-<div class="line">    <span class="keyword">requires</span> IsConst&lt;T&gt; || <span class="keyword">requires</span> {</div>
-<div class="line">        { obj.flip() } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line"> </div>
-<div class="line">        { obj = obj } -&gt; std::same_as&lt;T&amp;&gt;;</div>
-<div class="line"> </div>
-<div class="line">        { obj += obj } -&gt; std::same_as&lt;T&amp;&gt;;</div>
-<div class="line">        { obj -= obj } -&gt; std::same_as&lt;T&amp;&gt;;</div>
-<div class="line">        { obj *= s } -&gt; std::same_as&lt;T&amp;&gt;;</div>
-<div class="line">        { obj /= s } -&gt; std::same_as&lt;T&amp;&gt;;</div>
-<div class="line">    };</div>
-<div class="line">}</div>
-<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:43</div></div>
-<div class="ttc" id="aclassvcl_1_1Segment_html_a92614b7312e60c624ef7e108d4432ce0"><div class="ttname"><a href="classvcl_1_1Segment.html#a92614b7312e60c624ef7e108d4432ce0">vcl::Segment::p1</a></div><div class="ttdeci">PointT &amp; p1()</div><div class="ttdoc">Returns the second endpoint of the segment.</div><div class="ttdef"><b>Definition</b> segment.h:97</div></div>
-<div class="ttc" id="aconceptvcl_1_1PointConcept_html"><div class="ttname"><a href="conceptvcl_1_1PointConcept.html">vcl::PointConcept</a></div><div class="ttdoc">Concept for types representing points in Euclidean space.</div><div class="ttdef"><b>Definition</b> point.h:40</div></div>
-<div class="ttc" id="aconceptvcl_1_1SegmentConcept_html"><div class="ttname"><a href="conceptvcl_1_1SegmentConcept.html">vcl::SegmentConcept</a></div><div class="ttdoc">Concept for types representing line segments in Euclidean space.</div><div class="ttdef"><b>Definition</b> segment.h:36</div></div>
+<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1SegmentConcept.html">vcl::SegmentConcept</a> =  std::derived_from&lt; </div>
+<div class="line">    std::remove_cvref_t&lt;T&gt;,</div>
+<div class="line">    Segment&lt;typename RemoveRef&lt;T&gt;::PointType&gt;&gt;</div>
+<div class="ttc" id="aconceptvcl_1_1SegmentConcept_html"><div class="ttname"><a href="conceptvcl_1_1SegmentConcept.html">vcl::SegmentConcept</a></div><div class="ttdoc">A concept representing a Segment.</div><div class="ttdef"><b>Definition</b> segment.h:201</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Concept for types representing line segments in Euclidean space. </p>
+<div class="textblock"><p>A concept representing a Segment. </p>
+<p>The concept is satisfied when <code>T</code> is a class that instantiates or derives from a Segment class having any Point type.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The type to be tested for conformity to the SegmentConcept. </td></tr>

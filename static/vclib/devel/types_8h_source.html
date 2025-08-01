@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visual Computing Library: vclib/core/include/vclib/types.h Source File</title>
+<title>Visual Computing Library: vclib/core/include/vclib/base/concepts/types.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -135,28 +135,42 @@ $(document).ready(function(){initNavTree('types_8h_source.html',''); initResizab
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> * (https://www.mozilla.org/en-US/MPL/2.0/) for more details.                *</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> ****************************************************************************/</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_TYPES_H</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_TYPES_H</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_BASE_CONCEPTS_TYPES_H</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_BASE_CONCEPTS_TYPES_H</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;types/const_correctness.h&quot;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;types/filter_types.h&quot;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;types/inheritance.h&quot;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &quot;types/mesh_components.h&quot;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &quot;types/mesh_containers.h&quot;</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &quot;types/mesh_elements.h&quot;</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;types/pointers.h&quot;</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &quot;types/templated_type_wrapper.h&quot;</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &quot;types/type_wrapper.h&quot;</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &quot;types/variadic_templates.h&quot;</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &quot;types/view.h&quot;</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#endif </span><span class="comment">// VCL_TYPES_H</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;concepts&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">namespace </span>vcl {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="conceptvcl_1_1IntegralOrEnum.html">   38</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1IntegralOrEnum.html">IntegralOrEnum</a> = std::integral&lt;T&gt; || std::is_enum_v&lt;T&gt;;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="conceptvcl_1_1NonBoolIntegralOrEnum.html">   46</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1NonBoolIntegralOrEnum.html">NonBoolIntegralOrEnum</a> = <a class="code hl_concept" href="conceptvcl_1_1IntegralOrEnum.html">IntegralOrEnum&lt;T&gt;</a> &amp;&amp; !std::same_as&lt;T, bool&gt;;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="conceptvcl_1_1IsClass.html">   54</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1IsClass.html">IsClass</a> = std::is_class_v&lt;T&gt;;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="conceptvcl_1_1IsNotClass.html">   62</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1IsNotClass.html">IsNotClass</a> = !<a class="code hl_concept" href="conceptvcl_1_1IsClass.html">IsClass&lt;T&gt;</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="keyword">template</span>&lt;<span class="keyword">template</span>&lt;<span class="keyword">typename</span>&gt; <span class="keyword">typename</span> C, <span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="conceptvcl_1_1IsInstantiable.html">   79</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1IsInstantiable.html">IsInstantiable</a> = <span class="keyword">requires</span> { <span class="keyword">typename</span> C&lt;T&gt;; };</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#endif </span><span class="comment">// VCL_BASE_CONCEPTS_TYPES_H</span></div>
+<div class="ttc" id="aconceptvcl_1_1IntegralOrEnum_html"><div class="ttname"><a href="conceptvcl_1_1IntegralOrEnum.html">vcl::IntegralOrEnum</a></div><div class="ttdoc">Concept for types that can be used as indices.</div><div class="ttdef"><b>Definition</b> types.h:38</div></div>
+<div class="ttc" id="aconceptvcl_1_1IsClass_html"><div class="ttname"><a href="conceptvcl_1_1IsClass.html">vcl::IsClass</a></div><div class="ttdoc">Concept that is evaluated true if T is a class.</div><div class="ttdef"><b>Definition</b> types.h:54</div></div>
+<div class="ttc" id="aconceptvcl_1_1IsInstantiable_html"><div class="ttname"><a href="conceptvcl_1_1IsInstantiable.html">vcl::IsInstantiable</a></div><div class="ttdoc">Concept that is evaluated true if the templated type C is instantiable with type T,...</div><div class="ttdef"><b>Definition</b> types.h:79</div></div>
+<div class="ttc" id="aconceptvcl_1_1IsNotClass_html"><div class="ttname"><a href="conceptvcl_1_1IsNotClass.html">vcl::IsNotClass</a></div><div class="ttdoc">Concept that is evaluated true if T is not a class.</div><div class="ttdef"><b>Definition</b> types.h:62</div></div>
+<div class="ttc" id="aconceptvcl_1_1NonBoolIntegralOrEnum_html"><div class="ttname"><a href="conceptvcl_1_1NonBoolIntegralOrEnum.html">vcl::NonBoolIntegralOrEnum</a></div><div class="ttdoc">Concept for types that can be used as indices, excluding bool.</div><div class="ttdef"><b>Definition</b> types.h:46</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><b>types.h</b></li>
+    <li class="navelem"><a class="el" href="dir_9f71d74594f2ad0a1fe5bb0afa8400c6.html">vclib</a></li><li class="navelem"><a class="el" href="dir_81e76ea52d45096175cc6058ddf2a39b.html">core</a></li><li class="navelem"><a class="el" href="dir_b81b6824a9fe7e6a36a419e471dc152c.html">include</a></li><li class="navelem"><a class="el" href="dir_bb22984f5fff73c7985df20e8a12e7e7.html">vclib</a></li><li class="navelem"><a class="el" href="dir_e330a725a80990495f6734bd3c618028.html">base</a></li><li class="navelem"><a class="el" href="dir_baf6116701a59b08a0d101f0e2e70089.html">concepts</a></li><li class="navelem"><b>types.h</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

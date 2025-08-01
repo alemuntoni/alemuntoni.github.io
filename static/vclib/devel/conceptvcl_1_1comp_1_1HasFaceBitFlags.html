@@ -105,22 +105,29 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1comp_1_1HasFaceBitFlags.
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">vcl::comp::HasFaceBitFlags Concept Reference<div class="ingroups"><a class="el" href="group__concepts.html">Concepts</a> &raquo; <a class="el" href="group__lib__concepts.html">Library Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__concepts.html">Mesh Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__components.html">Components</a> &raquo; <a class="el" href="group__components__concepts.html">Components Concepts</a></div></div></div>
+  <div class="headertitle"><div class="title">vcl::comp::HasFaceBitFlags Concept Reference<div class="ingroups"><a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__requirements.html">Mesh Requirements</a> &raquo; <a class="el" href="group__mesh__concepts.html">Mesh Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__components.html">Components</a> &raquo; <a class="el" href="group__components__concepts.html">Components Concepts</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>HasFaceBitFlags concept is satisfied if one between <a class="el" href="conceptvcl_1_1comp_1_1HasPolygonBitFlags.html">vcl::comp::HasPolygonBitFlags</a> and <a class="el" href="conceptvcl_1_1comp_1_1HasTriangleBitFlags.html">vcl::comp::HasTriangleBitFlags</a> concept is satisfied. This concept allows to make sure that a Face element has proper FaceBitFlags (Triangle or Polygon).  
+<p>A concept that checks whether a type T (that should be a Face Element) has either the PolygonBitFlags or the TriangleBitFlags component (inherits from one of them).  
 <a href="conceptvcl_1_1comp_1_1HasFaceBitFlags.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="concepts_2mesh_2components_2bit__flags_8h_source.html">vclib/concepts/mesh/components/bit_flags.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="concepts_2bit__flags_8h_source.html">vclib/mesh/components/concepts/bit_flags.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasFaceBitFlags.html">vcl::comp::HasFaceBitFlags</a> =  <a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasPolygonBitFlags.html">HasPolygonBitFlags&lt;T&gt;</a> || <a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasTriangleBitFlags.html">HasTriangleBitFlags&lt;T&gt;</a></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasFaceBitFlags_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasFaceBitFlags.html">vcl::comp::HasFaceBitFlags</a></div><div class="ttdoc">HasFaceBitFlags concept is satisfied if one between vcl::comp::HasPolygonBitFlags and vcl::comp::HasT...</div><div class="ttdef"><b>Definition</b> bit_flags.h:124</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasPolygonBitFlags_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasPolygonBitFlags.html">vcl::comp::HasPolygonBitFlags</a></div><div class="ttdoc">HasPolygonBitFlags concept is satisfied only if a Element class (that should be a Face) provides the ...</div><div class="ttdef"><b>Definition</b> bit_flags.h:96</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasTriangleBitFlags_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasTriangleBitFlags.html">vcl::comp::HasTriangleBitFlags</a></div><div class="ttdoc">HasTriangleBitFlags concept is satisfied only if a Element class (that should be a Face) provides the...</div><div class="ttdef"><b>Definition</b> bit_flags.h:110</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasFaceBitFlags_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasFaceBitFlags.html">vcl::comp::HasFaceBitFlags</a></div><div class="ttdoc">A concept that checks whether a type T (that should be a Face Element) has either the PolygonBitFlags...</div><div class="ttdef"><b>Definition</b> bit_flags.h:86</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasPolygonBitFlags_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasPolygonBitFlags.html">vcl::comp::HasPolygonBitFlags</a></div><div class="ttdoc">A concept that checks whether a type T (that should be a Face Element) has the PolygonBitFlags compon...</div><div class="ttdef"><b>Definition</b> bit_flags.h:54</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasTriangleBitFlags_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasTriangleBitFlags.html">vcl::comp::HasTriangleBitFlags</a></div><div class="ttdoc">A concept that checks whether a type T (that should be a Face Element) has the TriangleBitFlags compo...</div><div class="ttdef"><b>Definition</b> bit_flags.h:69</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>HasFaceBitFlags concept is satisfied if one between <a class="el" href="conceptvcl_1_1comp_1_1HasPolygonBitFlags.html">vcl::comp::HasPolygonBitFlags</a> and <a class="el" href="conceptvcl_1_1comp_1_1HasTriangleBitFlags.html">vcl::comp::HasTriangleBitFlags</a> concept is satisfied. This concept allows to make sure that a Face element has proper FaceBitFlags (Triangle or Polygon). </p>
+<div class="textblock"><p>A concept that checks whether a type T (that should be a Face Element) has either the PolygonBitFlags or the TriangleBitFlags component (inherits from one of them). </p>
+<p>The concept is satisfied if T is a class that inherits from <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html" title="The PolygonBitFlags class represents a collection of 8 bits plus 8 bits for each edge that will be pa...">vcl::comp::PolygonBitFlags</a> or <a class="el" href="classvcl_1_1comp_1_1TriangleBitFlags.html" title="The TriangleBitFlags class represents a collection of 16 bits that will be part of a Triangle of a Me...">vcl::comp::TriangleBitFlags</a>, with any template arguments.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type to be tested for conformity to the HasFaceBitFlags. </td></tr>
+  </table>
+  </dd>
+</dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

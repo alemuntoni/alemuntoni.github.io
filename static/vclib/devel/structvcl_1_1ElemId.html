@@ -108,14 +108,14 @@ $(document).ready(function(){initNavTree('structvcl_1_1ElemId.html',''); initRes
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="structvcl_1_1ElemId-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">vcl::ElemId Struct Reference<div class="ingroups"><a class="el" href="group__types.html">Types</a></div></div></div>
+  <div class="headertitle"><div class="title">vcl::ElemId Struct Reference<div class="ingroups"><a class="el" href="group__base.html">Base</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>The <a class="el" href="structvcl_1_1ElemId.html" title="The ElemId struct enumerates the elements that can compose a mesh.">ElemId</a> struct enumerates the elements that can compose a mesh.  
  <a href="structvcl_1_1ElemId.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="mesh__elements_8h_source.html">vclib/types/mesh_elements.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="mesh_2elements_2base_2base_8h_source.html">vclib/mesh/elements/base/base.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -130,14 +130,14 @@ Public Types</h2></td></tr>
 <div class="textblock"><p>The <a class="el" href="structvcl_1_1ElemId.html" title="The ElemId struct enumerates the elements that can compose a mesh.">ElemId</a> struct enumerates the elements that can compose a mesh. </p>
 <p>The elements are identified by an unsigned integer value, that can be used to access the element of the mesh through a template parameter, without having to know the actual type of the element.</p>
 <p>This is very useful when you want to write generic code that can work with different types of elements.</p>
-<p>For example, you can iterate the vertices of a mesh with the following code: </p><div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">MyMesh</a> <a class="code hl_class" href="classvcl_1_1Segment.html">m</a>;</div>
-<div class="line"><span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; v : <a class="code hl_class" href="classvcl_1_1Segment.html">m</a>.<a class="code hl_class" href="classvcl_1_1Segment.html">template</a> elements&lt;<a class="code hl_struct" href="structvcl_1_1ElemId.html">ElemId</a>::VERTEX&gt;()) {</div>
+<p>For example, you can iterate the vertices of a mesh with the following code: </p><div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Box.html">MyMesh</a> <a class="code hl_class" href="classvcl_1_1Box.html">m</a>;</div>
+<div class="line"><span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; v : <a class="code hl_class" href="classvcl_1_1Box.html">m</a>.<a class="code hl_class" href="classvcl_1_1Box.html">template</a> elements&lt;<a class="code hl_struct" href="structvcl_1_1ElemId.html">ElemId</a>::VERTEX&gt;()) {</div>
 <div class="line">   <span class="comment">// do something with the vertex v</span></div>
 <div class="line">}</div>
-<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:43</div></div>
-<div class="ttc" id="astructvcl_1_1ElemId_html"><div class="ttname"><a href="structvcl_1_1ElemId.html">vcl::ElemId</a></div><div class="ttdoc">The ElemId struct enumerates the elements that can compose a mesh.</div><div class="ttdef"><b>Definition</b> mesh_elements.h:54</div></div>
+<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:46</div></div>
+<div class="ttc" id="astructvcl_1_1ElemId_html"><div class="ttname"><a href="structvcl_1_1ElemId.html">vcl::ElemId</a></div><div class="ttdoc">The ElemId struct enumerates the elements that can compose a mesh.</div><div class="ttdef"><b>Definition</b> base.h:54</div></div>
 </div><!-- fragment --> </div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>vclib/core/include/vclib/types/<a class="el" href="mesh__elements_8h_source.html">mesh_elements.h</a></li>
+<li>vclib/core/include/vclib/mesh/elements/base/<a class="el" href="mesh_2elements_2base_2base_8h_source.html">base.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

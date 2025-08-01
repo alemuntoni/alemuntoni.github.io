@@ -105,20 +105,20 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1comp_1_1ComponentConcept
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">vcl::comp::ComponentConcept Concept Reference<div class="ingroups"><a class="el" href="group__concepts.html">Concepts</a> &raquo; <a class="el" href="group__lib__concepts.html">Library Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__concepts.html">Mesh Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__components.html">Components</a> &raquo; <a class="el" href="group__components__concepts.html">Components Concepts</a></div></div></div>
+  <div class="headertitle"><div class="title">vcl::comp::ComponentConcept Concept Reference<div class="ingroups"><a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__requirements.html">Mesh Requirements</a> &raquo; <a class="el" href="group__mesh__concepts.html">Mesh Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__components.html">Components</a> &raquo; <a class="el" href="group__components__concepts.html">Components Concepts</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>The ComponentConcept is evaluated to true whenever the type <code>T</code> is a valid component, i.e., it has a static constexpr member <code>COMPONENT_ID</code> of type <code>unsigned int</code>.  
 <a href="conceptvcl_1_1comp_1_1ComponentConcept.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="concepts_2mesh_2components_2component_8h_source.html">vclib/concepts/mesh/components/component.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="concepts_2component_8h_source.html">vclib/mesh/components/concepts/component.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1ComponentConcept.html">vcl::comp::ComponentConcept</a> =  <span class="keyword">requires</span> {</div>
 <div class="line">    { RemoveRef&lt;T&gt;::COMPONENT_ID } -&gt; std::same_as&lt;const uint&amp;&gt;;</div>
 <div class="line">}</div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1ComponentConcept_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1ComponentConcept.html">vcl::comp::ComponentConcept</a></div><div class="ttdoc">The ComponentConcept is evaluated to true whenever the type T is a valid component,...</div><div class="ttdef"><b>Definition</b> component.h:44</div></div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1ComponentConcept_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1ComponentConcept.html">vcl::comp::ComponentConcept</a></div><div class="ttdoc">The ComponentConcept is evaluated to true whenever the type T is a valid component,...</div><div class="ttdef"><b>Definition</b> component.h:46</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The ComponentConcept is evaluated to true whenever the type <code>T</code> is a valid component, i.e., it has a static constexpr member <code>COMPONENT_ID</code> of type <code>unsigned int</code>. </p>
 <p>The <code>COMPONENT_ID</code> is used to identify the component type in the mesh or in the mesh element. Its value should be one of the values defined in the <a class="el" href="structvcl_1_1CompId.html">vcl::CompId</a> enum.</p>

@@ -105,85 +105,29 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1comp_1_1HasAdjacentVerti
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">vcl::comp::HasAdjacentVertices Concept Reference<div class="ingroups"><a class="el" href="group__concepts.html">Concepts</a> &raquo; <a class="el" href="group__lib__concepts.html">Library Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__concepts.html">Mesh Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__components.html">Components</a> &raquo; <a class="el" href="group__components__concepts.html">Components Concepts</a></div></div></div>
+  <div class="headertitle"><div class="title">vcl::comp::HasAdjacentVertices Concept Reference<div class="ingroups"><a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__requirements.html">Mesh Requirements</a> &raquo; <a class="el" href="group__mesh__concepts.html">Mesh Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__components.html">Components</a> &raquo; <a class="el" href="group__components__concepts.html">Components Concepts</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>HasAdjacentVertices concept is satisfied only if a Element class provides the types and member functions specified in this concept. These types and member functions allow to access to an <a class="el" href="classvcl_1_1comp_1_1AdjacentVertices.html">vcl::comp::AdjacentVertices</a> component of a given element.  
+<p>A concept that checks whether a type T (that should be a Element) has the AdjacentVertices component (inherits from it).  
 <a href="conceptvcl_1_1comp_1_1HasAdjacentVertices.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="concepts_2mesh_2components_2adjacent__vertices_8h_source.html">vclib/concepts/mesh/components/adjacent_vertices.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="adjacent__vertices_8h_source.html">vclib/mesh/components/adjacent_vertices.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasAdjacentVertices.html">vcl::comp::HasAdjacentVertices</a> =  <span class="keyword">requires</span> (</div>
-<div class="line">    T&amp;&amp;                                                     obj,</div>
-<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::AdjacentVertexType               v,</div>
-<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::AdjacentVertexIterator           it,</div>
-<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::ConstAdjacentVertexIterator      cIt,</div>
-<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::ConstAdjacentVertexIndexIterator cIIt,</div>
-<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::AdjacentVertexType*              vP,</div>
-<div class="line">    <span class="keyword">const</span> <span class="keyword">typename</span> RemoveRef&lt;T&gt;::AdjacentVertexType*        cVP,</div>
-<div class="line">    std::vector&lt;typename RemoveRef&lt;T&gt;::AdjacentVertexType*&gt; vec) {</div>
-<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::AdjacentVertexType;</div>
-<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::AdjacentVertexIterator;</div>
-<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::ConstAdjacentVertexIterator;</div>
-<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::ConstAdjacentVertexIndexIterator;</div>
-<div class="line"> </div>
-<div class="line">    { obj.adjVerticesNumber() } -&gt; std::same_as&lt;uint&gt;;</div>
-<div class="line"> </div>
-<div class="line">    { <a class="code hl_class" href="classvcl_1_1Segment.html">obj</a>.adjVertex(<a class="code hl_class" href="classvcl_1_1Segment.html">uint</a>()) } -&gt; std::convertible_to&lt;<span class="keyword">decltype</span>(<a class="code hl_class" href="classvcl_1_1Segment.html">cVP</a>)&gt;;</div>
-<div class="line">    { <a class="code hl_class" href="classvcl_1_1Segment.html">obj</a>.adjVertexIndex(uint()) } -&gt; std::same_as&lt;uint&gt;;</div>
-<div class="line">    { obj.adjVertexMod(<span class="keywordtype">int</span>()) } -&gt; std::convertible_to&lt;<span class="keyword">decltype</span>(cVP)&gt;;</div>
-<div class="line">    { obj.adjVertexIndexMod(uint()) } -&gt; std::same_as&lt;uint&gt;;</div>
-<div class="line"> </div>
-<div class="line">    { obj.containsAdjVertex(&amp;v) } -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line">    { obj.containsAdjVertex(uint()) } -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line">    { obj.indexOfAdjVertex(&amp;v) } -&gt; std::same_as&lt;uint&gt;;</div>
-<div class="line">    { obj.indexOfAdjVertex(uint()) } -&gt; std::same_as&lt;uint&gt;;</div>
-<div class="line"> </div>
-<div class="line">    { obj.adjVertexBegin() } -&gt; InputIterator&lt;<span class="keyword">decltype</span>(cVP)&gt;;</div>
-<div class="line">    { obj.adjVertexEnd() } -&gt; InputIterator&lt;<span class="keyword">decltype</span>(cVP)&gt;;</div>
-<div class="line"> </div>
-<div class="line">    { obj.adjVertexIndexBegin() } -&gt; InputIterator&lt;uint&gt;;</div>
-<div class="line">    { obj.adjVertexIndexEnd() } -&gt; InputIterator&lt;uint&gt;;</div>
-<div class="line"> </div>
-<div class="line">    { obj.adjVertices() } -&gt; InputRange&lt;<span class="keyword">decltype</span>(cVP)&gt;;</div>
-<div class="line">    { obj.adjVertexIndices() } -&gt; InputRange&lt;uint&gt;;</div>
-<div class="line"> </div>
-<div class="line">    </div>
-<div class="line">    <span class="keyword">requires</span> IsConst&lt;T&gt; || <span class="keyword">requires</span> {</div>
-<div class="line">        { obj.adjVertex(uint()) } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(vP)&gt;;</div>
-<div class="line">        { obj.adjVertexMod(<span class="keywordtype">int</span>()) } -&gt; std::same_as&lt;<span class="keyword">decltype</span>(vP)&gt;;</div>
-<div class="line"> </div>
-<div class="line">        { obj.setAdjVertex(uint(), &amp;v) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">        { obj.setAdjVertex(uint(), uint()) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">        { obj.setAdjVertex(it, &amp;v) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">        { obj.setAdjVertex(it, uint()) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">        { obj.setAdjVertex(cIt, &amp;v) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">        { obj.setAdjVertex(cIt, uint()) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">        { obj.setAdjVertex(cIIt, &amp;v) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">        { obj.setAdjVertex(cIIt, uint()) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">        { obj.setAdjVertexMod(<span class="keywordtype">int</span>(), &amp;v) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">        { obj.setAdjVertexMod(<span class="keywordtype">int</span>(), uint()) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">        { obj.setAdjVertices(vec) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line"> </div>
-<div class="line">        </div>
-<div class="line">        </div>
-<div class="line">        </div>
-<div class="line">        </div>
-<div class="line">        </div>
-<div class="line">        </div>
-<div class="line">        { obj.adjVertexBegin() } -&gt; InputIterator&lt;<span class="keyword">decltype</span>(vP)&gt;;</div>
-<div class="line">        { obj.adjVertexEnd() } -&gt; InputIterator&lt;<span class="keyword">decltype</span>(vP)&gt;;</div>
-<div class="line"> </div>
-<div class="line">        { obj.adjVertices() } -&gt; InputRange&lt;<span class="keyword">decltype</span>(vP)&gt;;</div>
-<div class="line">    };</div>
-<div class="line">}</div>
-<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:43</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasAdjacentVertices_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasAdjacentVertices.html">vcl::comp::HasAdjacentVertices</a></div><div class="ttdoc">HasAdjacentVertices concept is satisfied only if a Element class provides the types and member functi...</div><div class="ttdef"><b>Definition</b> adjacent_vertices.h:52</div></div>
+<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasAdjacentVertices.html">vcl::comp::HasAdjacentVertices</a> = </div>
+<div class="line">    BTTBB::IsDerivedFromSpecializationOfV&lt;T, AdjacentVertices&gt;</div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasAdjacentVertices_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasAdjacentVertices.html">vcl::comp::HasAdjacentVertices</a></div><div class="ttdoc">A concept that checks whether a type T (that should be a Element) has the AdjacentVertices component ...</div><div class="ttdef"><b>Definition</b> adjacent_vertices.h:655</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>HasAdjacentVertices concept is satisfied only if a Element class provides the types and member functions specified in this concept. These types and member functions allow to access to an <a class="el" href="classvcl_1_1comp_1_1AdjacentVertices.html">vcl::comp::AdjacentVertices</a> component of a given element. </p>
-<p>Note that this concept does not discriminate between the Horizontal AdjacentVertices component and the vertical OptionalAdjacentVertices component, therefore it does not guarantee that a template Element type that satisfies this concept provides AdjacentVertices component at runtime (it is guaranteed only that the proper member functions are available at compile time). </p>
+<div class="textblock"><p>A concept that checks whether a type T (that should be a Element) has the AdjacentVertices component (inherits from it). </p>
+<p>The concept is satisfied if T is a class that inherits from <a class="el" href="classvcl_1_1comp_1_1AdjacentVertices.html" title="The AdjacentVertices class is a container of Vertex indices or pointers. It is a component that makes...">vcl::comp::AdjacentVertices</a>, with any template arguments.</p>
+<p>Note that this concept does not discriminate between the Horizontal AdjacentVertices component and the vertical OptionalAdjacentVertices component, therefore it does not guarantee that a template Element type that satisfies this concept provides AdjacentVertices component at runtime (it is guaranteed only that the proper member functions are available at compile time).</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type to be tested for conformity to the HasAdjacentVertices. </td></tr>
+  </table>
+  </dd>
+</dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

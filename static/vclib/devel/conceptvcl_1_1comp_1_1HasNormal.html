@@ -105,25 +105,28 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1comp_1_1HasNormal.html',
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">vcl::comp::HasNormal Concept Reference<div class="ingroups"><a class="el" href="group__concepts.html">Concepts</a> &raquo; <a class="el" href="group__lib__concepts.html">Library Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__concepts.html">Mesh Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__components.html">Components</a> &raquo; <a class="el" href="group__components__concepts.html">Components Concepts</a></div></div></div>
+  <div class="headertitle"><div class="title">vcl::comp::HasNormal Concept Reference<div class="ingroups"><a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__requirements.html">Mesh Requirements</a> &raquo; <a class="el" href="group__mesh__concepts.html">Mesh Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__components.html">Components</a> &raquo; <a class="el" href="group__components__concepts.html">Components Concepts</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>HasNormal concept is satisfied only if a Element class provides the types and member functions specified in this concept. These types and member functions allow to access to a <a class="el" href="classvcl_1_1comp_1_1Normal.html">vcl::comp::Normal</a> component of a given element.  
+<p>A concept that checks whether a type T (that should be a Element) has the Normal component (inherits from it).  
 <a href="conceptvcl_1_1comp_1_1HasNormal.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="concepts_2mesh_2components_2normal_8h_source.html">vclib/concepts/mesh/components/normal.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="mesh_2components_2normal_8h_source.html">vclib/mesh/components/normal.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasNormal.html">vcl::comp::HasNormal</a> =  <span class="keyword">requires</span> (T&amp;&amp; obj) {</div>
-<div class="line">    <span class="keyword">typename</span> RemoveRef&lt;T&gt;::NormalType;</div>
-<div class="line">    { obj.normal() } -&gt; <a class="code hl_concept" href="conceptvcl_1_1PointConcept.html">PointConcept</a>;</div>
-<div class="line">}</div>
-<div class="ttc" id="aconceptvcl_1_1PointConcept_html"><div class="ttname"><a href="conceptvcl_1_1PointConcept.html">vcl::PointConcept</a></div><div class="ttdoc">Concept for types representing points in Euclidean space.</div><div class="ttdef"><b>Definition</b> point.h:40</div></div>
-<div class="ttc" id="aconceptvcl_1_1comp_1_1HasNormal_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasNormal.html">vcl::comp::HasNormal</a></div><div class="ttdoc">HasNormal concept is satisfied only if a Element class provides the types and member functions specif...</div><div class="ttdef"><b>Definition</b> normal.h:47</div></div>
+<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasNormal.html">vcl::comp::HasNormal</a> =  TTB::IsDerivedFromSpecializationOfV&lt;T, Normal&gt;</div>
+<div class="ttc" id="aconceptvcl_1_1comp_1_1HasNormal_html"><div class="ttname"><a href="conceptvcl_1_1comp_1_1HasNormal.html">vcl::comp::HasNormal</a></div><div class="ttdoc">A concept that checks whether a type T (that should be a Element) has the Normal component (inherits ...</div><div class="ttdef"><b>Definition</b> normal.h:133</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>HasNormal concept is satisfied only if a Element class provides the types and member functions specified in this concept. These types and member functions allow to access to a <a class="el" href="classvcl_1_1comp_1_1Normal.html">vcl::comp::Normal</a> component of a given element. </p>
-<p>Note that this concept does not discriminate between the Horizontal Normal component and the vertical OptionalNormal component, therefore it does not guarantee that a template Element type that satisfies this concept provides Normal component at runtime (it is guaranteed only that the proper member functions are available at compile time). </p>
+<div class="textblock"><p>A concept that checks whether a type T (that should be a Element) has the Normal component (inherits from it). </p>
+<p>The concept is satisfied if T is a class that inherits from <a class="el" href="classvcl_1_1comp_1_1Normal.html" title="The Normal class represents a N-Dimensional normal vector that will be part of an Element (e....">vcl::comp::Normal</a>, with any template arguments.</p>
+<p>Note that this concept does not discriminate between the Horizontal Normal component and the vertical OptionalNormal component, therefore it does not guarantee that a template Element type that satisfies this concept provides Normal component at runtime (it is guaranteed only that the proper member functions are available at compile time).</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type to be tested for conformity to the HasNormal. </td></tr>
+  </table>
+  </dd>
+</dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

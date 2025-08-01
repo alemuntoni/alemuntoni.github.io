@@ -105,22 +105,22 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1HasPerEdgeAdjacentEdges.
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">vcl::HasPerEdgeAdjacentEdges Concept Reference<div class="ingroups"><a class="el" href="group__concepts.html">Concepts</a> &raquo; <a class="el" href="group__lib__concepts.html">Library Concepts</a> &#124; <a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__concepts.html">Mesh Concepts</a> &raquo; <a class="el" href="group__edge__mesh__concepts.html">EdgeMesh Concepts</a></div></div></div>
+  <div class="headertitle"><div class="title">vcl::HasPerEdgeAdjacentEdges Concept Reference<div class="ingroups"><a class="el" href="group__mesh.html">Mesh</a> &raquo; <a class="el" href="group__mesh__requirements.html">Mesh Requirements</a> &raquo; <a class="el" href="group__edge__requirements.html">Edge Requirements</a> &raquo; <a class="el" href="group__edge__mesh__concepts.html">EdgeMesh Concepts</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>Concept that checks if a Mesh has the per Edge AdjacentEdges component.  
 <a href="conceptvcl_1_1HasPerEdgeAdjacentEdges.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="per__edge_8h_source.html">vclib/concepts/mesh/per_edge.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="edge__requirements_8h_source.html">vclib/mesh/requirements/edge_requirements.h</a>&gt;</code></p>
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> MeshType&gt;</div>
 <div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1HasPerEdgeAdjacentEdges.html">vcl::HasPerEdgeAdjacentEdges</a> = </div>
 <div class="line">    <a class="code hl_concept" href="conceptvcl_1_1HasEdges.html">HasEdges&lt;MeshType&gt;</a> &amp;&amp;</div>
 <div class="line">    <a class="code hl_concept" href="conceptvcl_1_1edge_1_1HasAdjacentEdges.html">edge::HasAdjacentEdges&lt;typename RemoveRef&lt;MeshType&gt;::EdgeType</a>&gt;</div>
-<div class="ttc" id="aconceptvcl_1_1HasEdges_html"><div class="ttname"><a href="conceptvcl_1_1HasEdges.html">vcl::HasEdges</a></div><div class="ttdoc">HasEdges concepts is satisfied when at least one of its template types is (or inherits from) a vcl::m...</div><div class="ttdef"><b>Definition</b> edge_container.h:131</div></div>
-<div class="ttc" id="aconceptvcl_1_1HasPerEdgeAdjacentEdges_html"><div class="ttname"><a href="conceptvcl_1_1HasPerEdgeAdjacentEdges.html">vcl::HasPerEdgeAdjacentEdges</a></div><div class="ttdoc">Concept that checks if a Mesh has the per Edge AdjacentEdges component.</div><div class="ttdef"><b>Definition</b> per_edge.h:51</div></div>
-<div class="ttc" id="aconceptvcl_1_1edge_1_1HasAdjacentEdges_html"><div class="ttname"><a href="conceptvcl_1_1edge_1_1HasAdjacentEdges.html">vcl::edge::HasAdjacentEdges</a></div><div class="ttdef"><b>Definition</b> edge.h:48</div></div>
+<div class="ttc" id="aconceptvcl_1_1HasEdges_html"><div class="ttname"><a href="conceptvcl_1_1HasEdges.html">vcl::HasEdges</a></div><div class="ttdoc">HasEdges concepts is satisfied when at least one of its template types is (or inherits from) a vcl::m...</div><div class="ttdef"><b>Definition</b> edge_container.h:1064</div></div>
+<div class="ttc" id="aconceptvcl_1_1HasPerEdgeAdjacentEdges_html"><div class="ttname"><a href="conceptvcl_1_1HasPerEdgeAdjacentEdges.html">vcl::HasPerEdgeAdjacentEdges</a></div><div class="ttdoc">Concept that checks if a Mesh has the per Edge AdjacentEdges component.</div><div class="ttdef"><b>Definition</b> edge_requirements.h:72</div></div>
+<div class="ttc" id="aconceptvcl_1_1edge_1_1HasAdjacentEdges_html"><div class="ttname"><a href="conceptvcl_1_1edge_1_1HasAdjacentEdges.html">vcl::edge::HasAdjacentEdges</a></div><div class="ttdef"><b>Definition</b> edge_components.h:63</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Concept that checks if a Mesh has the per Edge AdjacentEdges component. </p>
 <p>Evaluates to true if AdjacentEdges is part of the Edge element, whether it is horizontal, vertical or optional.</p>
