@@ -110,6 +110,7 @@ $(document).ready(function(){initNavTree('classvcl_1_1MeshRenderBuffers.html',''
 <a href="#pri-types">Private Types</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classvcl_1_1MeshRenderBuffers-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">vcl::MeshRenderBuffers&lt; Mesh &gt; Class Template Reference</div></div>
@@ -128,12 +129,15 @@ Inheritance diagram for vcl::MeshRenderBuffers&lt; Mesh &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aedfaeeac2f3c69e83a4425982b8eeeeb" id="r_aedfaeeac2f3c69e83a4425982b8eeeeb"><td class="memItemLeft" align="right" valign="top"><a id="aedfaeeac2f3c69e83a4425982b8eeeeb" name="aedfaeeac2f3c69e83a4425982b8eeeeb"></a>
-<a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>bindIndexBuffers</b> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1MeshRenderSettings.html">MeshRenderSettings</a> &amp;<a class="el" href="classvcl_1_1Box.html">mrs</a>, MRI::Buffers <a class="el" href="classvcl_1_1Box.html">indexBufferToBind</a>=MRI::Buffers::TRIANGLES) <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
-<tr class="separator:aedfaeeac2f3c69e83a4425982b8eeeeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c6af4d7e1989f08f6c579ab3e670467" id="r_a9c6af4d7e1989f08f6c579ab3e670467"><td class="memItemLeft" align="right" valign="top"><a id="a9c6af4d7e1989f08f6c579ab3e670467" name="a9c6af4d7e1989f08f6c579ab3e670467"></a>
-<a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>bindTextures</b> () <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
-<tr class="separator:a9c6af4d7e1989f08f6c579ab3e670467"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae95017611869f645f066f8d4651ccc7a" id="r_ae95017611869f645f066f8d4651ccc7a"><td class="memItemLeft" align="right" valign="top"><a id="ae95017611869f645f066f8d4651ccc7a" name="ae95017611869f645f066f8d4651ccc7a"></a>
+<a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>bindIndexBuffers</b> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1MeshRenderSettings.html">MeshRenderSettings</a> &amp;<a class="el" href="classvcl_1_1Box.html">mrs</a>, uint <a class="el" href="classvcl_1_1Box.html">chunkToBind</a>=<a class="el" href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>) <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
+<tr class="separator:ae95017611869f645f066f8d4651ccc7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4fdfc139823f0343eb1c507f5a5cafb" id="r_ad4fdfc139823f0343eb1c507f5a5cafb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">uint64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshRenderBuffers.html#ad4fdfc139823f0343eb1c507f5a5cafb">bindMaterials</a> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1MeshRenderSettings.html">MeshRenderSettings</a> &amp;<a class="el" href="classvcl_1_1Box.html">mrs</a>, uint <a class="el" href="classvcl_1_1Box.html">chunkNumber</a>, <a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Mesh.html">MeshType</a> &amp;<a class="el" href="classvcl_1_1Box.html">m</a>) <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
+<tr class="memdesc:ad4fdfc139823f0343eb1c507f5a5cafb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets and binds the material uniforms for the given triangle chunk, and returns the render state associated to the material that must be set for the draw call.  <br /></td></tr>
+<tr class="separator:ad4fdfc139823f0343eb1c507f5a5cafb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4aede91ecdcc498cb057a82e7b9182dd" id="r_a4aede91ecdcc498cb057a82e7b9182dd"><td class="memItemLeft" align="right" valign="top"><a id="a4aede91ecdcc498cb057a82e7b9182dd" name="a4aede91ecdcc498cb057a82e7b9182dd"></a>
+<a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>bindTextures</b> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1MeshRenderSettings.html">MeshRenderSettings</a> &amp;<a class="el" href="classvcl_1_1Box.html">mrs</a>, uint <a class="el" href="classvcl_1_1Box.html">chunkNumber</a>, <a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Mesh.html">MeshType</a> &amp;<a class="el" href="classvcl_1_1Box.html">m</a>) <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
+<tr class="separator:a4aede91ecdcc498cb057a82e7b9182dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae75db01436a1a92a189edcfd04a66f8a" id="r_ae75db01436a1a92a189edcfd04a66f8a"><td class="memItemLeft" align="right" valign="top"><a id="ae75db01436a1a92a189edcfd04a66f8a" name="ae75db01436a1a92a189edcfd04a66f8a"></a>
 <a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>bindUniforms</b> () <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="separator:ae75db01436a1a92a189edcfd04a66f8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -146,6 +150,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2820ab051672801f668c7c318e4339b4" id="r_a2820ab051672801f668c7c318e4339b4"><td class="memItemLeft" align="right" valign="top"><a id="a2820ab051672801f668c7c318e4339b4" name="a2820ab051672801f668c7c318e4339b4"></a>
 <a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>computeQuadVertexBuffers</b> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Mesh.html">MeshType</a> &amp;mesh, <a class="el" href="classvcl_1_1Box.html">const</a> bgfx::ViewId viewId) <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="separator:a2820ab051672801f668c7c318e4339b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abea882520b66adc925e674077267d03e" id="r_abea882520b66adc925e674077267d03e"><td class="memItemLeft" align="right" valign="top"><a id="abea882520b66adc925e674077267d03e" name="abea882520b66adc925e674077267d03e"></a>
+<a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>drawEdgeLines</b> (uint viewId) <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
+<tr class="separator:abea882520b66adc925e674077267d03e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83677d2e7d4f69a9e8b5544e5473c895" id="r_a83677d2e7d4f69a9e8b5544e5473c895"><td class="memItemLeft" align="right" valign="top"><a id="a83677d2e7d4f69a9e8b5544e5473c895" name="a83677d2e7d4f69a9e8b5544e5473c895"></a>
+<a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>drawWireframeLines</b> (uint viewId) <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
+<tr class="separator:a83677d2e7d4f69a9e8b5544e5473c895"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e75e9962c7633c2da0e3414ec2565a1" id="r_a0e75e9962c7633c2da0e3414ec2565a1"><td class="memItemLeft" align="right" valign="top"><a id="a0e75e9962c7633c2da0e3414ec2565a1" name="a0e75e9962c7633c2da0e3414ec2565a1"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>MeshRenderBuffers</b> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1MeshRenderBuffers.html">MeshRenderBuffers</a> &amp;<a class="el" href="classvcl_1_1Box.html">other</a>)=<a class="el" href="classvcl_1_1Box.html">delete</a></td></tr>
 <tr class="separator:a0e75e9962c7633c2da0e3414ec2565a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,6 +174,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a800afca033100fe5b08fdc381284150e" id="r_a800afca033100fe5b08fdc381284150e"><td class="memItemLeft" align="right" valign="top"><a id="a800afca033100fe5b08fdc381284150e" name="a800afca033100fe5b08fdc381284150e"></a>
 <a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>swap</b> (<a class="el" href="classvcl_1_1MeshRenderBuffers.html">MeshRenderBuffers</a> &amp;<a class="el" href="classvcl_1_1Box.html">other</a>)</td></tr>
 <tr class="separator:a800afca033100fe5b08fdc381284150e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab4a0e3cae1e7e18a18a7ff73ebdda75" id="r_aab4a0e3cae1e7e18a18a7ff73ebdda75"><td class="memItemLeft" align="right" valign="top"><a id="aab4a0e3cae1e7e18a18a7ff73ebdda75" name="aab4a0e3cae1e7e18a18a7ff73ebdda75"></a>
+uint&#160;</td><td class="memItemRight" valign="bottom"><b>triangleChunksNumber</b> () <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
+<tr class="separator:aab4a0e3cae1e7e18a18a7ff73ebdda75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51f64489f1836dbe35b773f4f0001b8c" id="r_a51f64489f1836dbe35b773f4f0001b8c"><td class="memItemLeft" align="right" valign="top"><a id="a51f64489f1836dbe35b773f4f0001b8c" name="a51f64489f1836dbe35b773f4f0001b8c"></a>
+<a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>updateEdgeSettings</b> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1MeshRenderSettings.html">MeshRenderSettings</a> &amp;<a class="el" href="classvcl_1_1Box.html">mrs</a>)</td></tr>
+<tr class="separator:a51f64489f1836dbe35b773f4f0001b8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52860b7a0f68f62e2c0d42c97ee3e8b4" id="r_a52860b7a0f68f62e2c0d42c97ee3e8b4"><td class="memItemLeft" align="right" valign="top"><a id="a52860b7a0f68f62e2c0d42c97ee3e8b4" name="a52860b7a0f68f62e2c0d42c97ee3e8b4"></a>
+<a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>updateWireframeSettings</b> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1MeshRenderSettings.html">MeshRenderSettings</a> &amp;<a class="el" href="classvcl_1_1Box.html">mrs</a>)</td></tr>
+<tr class="separator:a52860b7a0f68f62e2c0d42c97ee3e8b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classvcl_1_1MeshRenderData"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classvcl_1_1MeshRenderData')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classvcl_1_1MeshRenderData.html">vcl::MeshRenderData&lt; MeshRenderBuffers&lt; Mesh &gt; &gt;</a></td></tr>
 <tr class="memitem:a9ec603e5ddc4ecb7f8fca08a683311a1 inherit pub_methods_classvcl_1_1MeshRenderData" id="r_a9ec603e5ddc4ecb7f8fca08a683311a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshRenderData.html#a9ec603e5ddc4ecb7f8fca08a683311a1">update</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshConcept <a class="el" href="classvcl_1_1Box.html">auto</a> &amp;mesh, <a class="el" href="classvcl_1_1BitSet.html">MRI::BuffersBitSet</a> <a class="el" href="classvcl_1_1Box.html">buffersToUpdate</a>=MRI::BUFFERS_ALL)</td></tr>
 <tr class="memdesc:a9ec603e5ddc4ecb7f8fca08a683311a1 inherit pub_methods_classvcl_1_1MeshRenderData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the buffers used to render the mesh.  <br /></td></tr>
@@ -183,25 +202,28 @@ Private Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
+<tr class="memitem:a6a1557191caddd9a155c23c0e3d43f60" id="r_a6a1557191caddd9a155c23c0e3d43f60"><td class="memItemLeft" align="right" valign="top"><a id="a6a1557191caddd9a155c23c0e3d43f60" name="a6a1557191caddd9a155c23c0e3d43f60"></a>
+<a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>computeEdgeLines</b> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Mesh.html">MeshType</a> &amp;mesh)</td></tr>
+<tr class="separator:a6a1557191caddd9a155c23c0e3d43f60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65788052a6703f741556b111f4f1ffa9" id="r_a65788052a6703f741556b111f4f1ffa9"><td class="memItemLeft" align="right" valign="top"><a id="a65788052a6703f741556b111f4f1ffa9" name="a65788052a6703f741556b111f4f1ffa9"></a>
+<a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>computeWireframeLines</b> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Mesh.html">MeshType</a> &amp;mesh)</td></tr>
+<tr class="separator:a65788052a6703f741556b111f4f1ffa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee848070cef3af11c736fafdf81a49cd" id="r_aee848070cef3af11c736fafdf81a49cd"><td class="memItemLeft" align="right" valign="top"><a id="aee848070cef3af11c736fafdf81a49cd" name="aee848070cef3af11c736fafdf81a49cd"></a>
+<a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>createTextureSamplerUniforms</b> ()</td></tr>
+<tr class="separator:aee848070cef3af11c736fafdf81a49cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7df51096d8fc2420b57b1b78be519d59" id="r_a7df51096d8fc2420b57b1b78be519d59"><td class="memTemplParams" colspan="2"><a id="a7df51096d8fc2420b57b1b78be519d59" name="a7df51096d8fc2420b57b1b78be519d59"></a>
 template&lt;<a class="el" href="classvcl_1_1Box.html">typename</a> T &gt; </td></tr>
-<tr class="memitem:a7df51096d8fc2420b57b1b78be519d59"><td class="memTemplItemLeft" align="right" valign="top">std::pair&lt; T *, bgfx::ReleaseFn &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getAllocatedBufferAndReleaseFn</b> (<a class="el" href="classvcl_1_1Box.html">uint</a> size)</td></tr>
+<tr class="memitem:a7df51096d8fc2420b57b1b78be519d59"><td class="memTemplItemLeft" align="right" valign="top">std::pair&lt; T *, bgfx::ReleaseFn &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getAllocatedBufferAndReleaseFn</b> (uint size)</td></tr>
 <tr class="separator:a7df51096d8fc2420b57b1b78be519d59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83367ecb826a7bbe5ab9acff2b1280ab" id="r_a83367ecb826a7bbe5ab9acff2b1280ab"><td class="memItemLeft" align="right" valign="top"><a id="a83367ecb826a7bbe5ab9acff2b1280ab" name="a83367ecb826a7bbe5ab9acff2b1280ab"></a>
-<a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setEdgeColorsBuffer</b> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Mesh.html">MeshType</a> &amp;mesh)</td></tr>
-<tr class="separator:a83367ecb826a7bbe5ab9acff2b1280ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2242286d46e89df6e7099f91c6e9d7e" id="r_ad2242286d46e89df6e7099f91c6e9d7e"><td class="memItemLeft" align="right" valign="top"><a id="ad2242286d46e89df6e7099f91c6e9d7e" name="ad2242286d46e89df6e7099f91c6e9d7e"></a>
 <a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setEdgeIndicesBuffer</b> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Mesh.html">MeshType</a> &amp;mesh)</td></tr>
 <tr class="separator:ad2242286d46e89df6e7099f91c6e9d7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41ea71e1e1afb34b6ba5d194db4a1cb9" id="r_a41ea71e1e1afb34b6ba5d194db4a1cb9"><td class="memItemLeft" align="right" valign="top"><a id="a41ea71e1e1afb34b6ba5d194db4a1cb9" name="a41ea71e1e1afb34b6ba5d194db4a1cb9"></a>
-<a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setEdgeNormalsBuffer</b> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Mesh.html">MeshType</a> &amp;mesh)</td></tr>
-<tr class="separator:a41ea71e1e1afb34b6ba5d194db4a1cb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94735e185b01da5f1956e38bbc263c0d" id="r_a94735e185b01da5f1956e38bbc263c0d"><td class="memItemLeft" align="right" valign="top"><a id="a94735e185b01da5f1956e38bbc263c0d" name="a94735e185b01da5f1956e38bbc263c0d"></a>
 <a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setMeshUniforms</b> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Mesh.html">MeshType</a> &amp;mesh)</td></tr>
 <tr class="separator:a94735e185b01da5f1956e38bbc263c0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a396f37f93895a07c505f22e93c1d3b4c" id="r_a396f37f93895a07c505f22e93c1d3b4c"><td class="memItemLeft" align="right" valign="top"><a id="a396f37f93895a07c505f22e93c1d3b4c" name="a396f37f93895a07c505f22e93c1d3b4c"></a>
-<a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setTextureUnits</b> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Mesh.html">MeshType</a> &amp;mesh)</td></tr>
-<tr class="separator:a396f37f93895a07c505f22e93c1d3b4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad005998b0c518a31ab89b969c1f0b639" id="r_ad005998b0c518a31ab89b969c1f0b639"><td class="memItemLeft" align="right" valign="top"><a id="ad005998b0c518a31ab89b969c1f0b639" name="ad005998b0c518a31ab89b969c1f0b639"></a>
+<a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setTextures</b> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Mesh.html">MeshType</a> &amp;mesh)</td></tr>
+<tr class="separator:ad005998b0c518a31ab89b969c1f0b639"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4bdd59f0da083ed010f8e51f95282cc3" id="r_a4bdd59f0da083ed010f8e51f95282cc3"><td class="memItemLeft" align="right" valign="top"><a id="a4bdd59f0da083ed010f8e51f95282cc3" name="a4bdd59f0da083ed010f8e51f95282cc3"></a>
 <a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setTriangleColorsBuffer</b> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Mesh.html">MeshType</a> &amp;mesh)</td></tr>
 <tr class="separator:a4bdd59f0da083ed010f8e51f95282cc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -223,18 +245,15 @@ template&lt;<a class="el" href="classvcl_1_1Box.html">typename</a> T &gt; </td><
 <tr class="memitem:a65a1e282066966e43f002fbba25e5085" id="r_a65a1e282066966e43f002fbba25e5085"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshRenderBuffers.html#a65a1e282066966e43f002fbba25e5085">setVertexQuadIndexBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Mesh.html">MeshType</a> &amp;mesh)</td></tr>
 <tr class="memdesc:a65a1e282066966e43f002fbba25e5085"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function allocates and fills a GPU index buffer to render a quad for each vertex of the mesh.  <br /></td></tr>
 <tr class="separator:a65a1e282066966e43f002fbba25e5085"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a482dfa62dafc8716236adfa93ff1d324" id="r_a482dfa62dafc8716236adfa93ff1d324"><td class="memItemLeft" align="right" valign="top"><a id="a482dfa62dafc8716236adfa93ff1d324" name="a482dfa62dafc8716236adfa93ff1d324"></a>
+<a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setVertexTangentsBuffer</b> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Mesh.html">MeshType</a> &amp;mesh)</td></tr>
+<tr class="separator:a482dfa62dafc8716236adfa93ff1d324"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb9489457d1d925849ae8c78d6d959b6" id="r_acb9489457d1d925849ae8c78d6d959b6"><td class="memItemLeft" align="right" valign="top"><a id="acb9489457d1d925849ae8c78d6d959b6" name="acb9489457d1d925849ae8c78d6d959b6"></a>
 <a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setVertexTexCoordsBuffer</b> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Mesh.html">MeshType</a> &amp;mesh)</td></tr>
 <tr class="separator:acb9489457d1d925849ae8c78d6d959b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf7344263d476e4b14eaa341624c3a08" id="r_adf7344263d476e4b14eaa341624c3a08"><td class="memItemLeft" align="right" valign="top"><a id="adf7344263d476e4b14eaa341624c3a08" name="adf7344263d476e4b14eaa341624c3a08"></a>
-<a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setVertexTextureIndicesBuffer</b> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Mesh.html">MeshType</a> &amp;mesh)</td></tr>
-<tr class="separator:adf7344263d476e4b14eaa341624c3a08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68933efdc9bf39ea342cfa501002a31a" id="r_a68933efdc9bf39ea342cfa501002a31a"><td class="memItemLeft" align="right" valign="top"><a id="a68933efdc9bf39ea342cfa501002a31a" name="a68933efdc9bf39ea342cfa501002a31a"></a>
 <a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setWedgeTexCoordsBuffer</b> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Mesh.html">MeshType</a> &amp;mesh)</td></tr>
 <tr class="separator:a68933efdc9bf39ea342cfa501002a31a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1973f97f9c88384648d100030784e994" id="r_a1973f97f9c88384648d100030784e994"><td class="memItemLeft" align="right" valign="top"><a id="a1973f97f9c88384648d100030784e994" name="a1973f97f9c88384648d100030784e994"></a>
-<a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setWedgeTextureIndicesBuffer</b> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Mesh.html">MeshType</a> &amp;mesh)</td></tr>
-<tr class="separator:a1973f97f9c88384648d100030784e994"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadfa35a32a9eaf820fc9f31a02cf1029" id="r_aadfa35a32a9eaf820fc9f31a02cf1029"><td class="memItemLeft" align="right" valign="top"><a id="aadfa35a32a9eaf820fc9f31a02cf1029" name="aadfa35a32a9eaf820fc9f31a02cf1029"></a>
 <a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setWireframeIndicesBuffer</b> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Mesh.html">MeshType</a> &amp;mesh)</td></tr>
 <tr class="separator:aadfa35a32a9eaf820fc9f31a02cf1029"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -244,21 +263,24 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:ae2b15aaada8a5d04761693ba5c88b4c2" id="r_ae2b15aaada8a5d04761693ba5c88b4c2"><td class="memItemLeft" align="right" valign="top"><a id="ae2b15aaada8a5d04761693ba5c88b4c2" name="ae2b15aaada8a5d04761693ba5c88b4c2"></a>
 <a class="el" href="classvcl_1_1Box.html">friend</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Base</b></td></tr>
 <tr class="separator:ae2b15aaada8a5d04761693ba5c88b4c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60c29f0a278e446303359d624dee8429" id="r_a60c29f0a278e446303359d624dee8429"><td class="memItemLeft" align="right" valign="top"><a id="a60c29f0a278e446303359d624dee8429" name="a60c29f0a278e446303359d624dee8429"></a>
-<a class="el" href="classvcl_1_1IndexBuffer.html">IndexBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mEdgeColorBuffer</b></td></tr>
-<tr class="separator:a60c29f0a278e446303359d624dee8429"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea56adccdffc7782a0de8f9c9ed751c7" id="r_aea56adccdffc7782a0de8f9c9ed751c7"><td class="memItemLeft" align="right" valign="top"><a id="aea56adccdffc7782a0de8f9c9ed751c7" name="aea56adccdffc7782a0de8f9c9ed751c7"></a>
-<a class="el" href="classvcl_1_1IndexBuffer.html">IndexBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mEdgeIndexBuffer</b></td></tr>
-<tr class="separator:aea56adccdffc7782a0de8f9c9ed751c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b85ad96d616633d1584174645231bce" id="r_a8b85ad96d616633d1584174645231bce"><td class="memItemLeft" align="right" valign="top"><a id="a8b85ad96d616633d1584174645231bce" name="a8b85ad96d616633d1584174645231bce"></a>
-<a class="el" href="classvcl_1_1IndexBuffer.html">IndexBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mEdgeNormalBuffer</b></td></tr>
-<tr class="separator:a8b85ad96d616633d1584174645231bce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cb17d8fdd5bc5c4cb60b27be18e4562" id="r_a5cb17d8fdd5bc5c4cb60b27be18e4562"><td class="memItemLeft" align="right" valign="top"><a id="a5cb17d8fdd5bc5c4cb60b27be18e4562" name="a5cb17d8fdd5bc5c4cb60b27be18e4562"></a>
+<a class="el" href="classvcl_1_1Lines.html">Lines</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mEdgeLines</b></td></tr>
+<tr class="separator:a5cb17d8fdd5bc5c4cb60b27be18e4562"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a758e59ea844dddd88910f0219ea9b420" id="r_a758e59ea844dddd88910f0219ea9b420"><td class="memItemLeft" align="right" valign="top"><a id="a758e59ea844dddd88910f0219ea9b420" name="a758e59ea844dddd88910f0219ea9b420"></a>
+std::map&lt; std::string, <a class="el" href="classvcl_1_1Texture.html">Texture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mMaterialTextures</b></td></tr>
+<tr class="separator:a758e59ea844dddd88910f0219ea9b420"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f9ae7d600c46a62a02b1e54336541fc" id="r_a5f9ae7d600c46a62a02b1e54336541fc"><td class="memItemLeft" align="right" valign="top"><a id="a5f9ae7d600c46a62a02b1e54336541fc" name="a5f9ae7d600c46a62a02b1e54336541fc"></a>
+<a class="el" href="classvcl_1_1MaterialUniforms.html">MaterialUniforms</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mMaterialUniforms</b></td></tr>
+<tr class="separator:a5f9ae7d600c46a62a02b1e54336541fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88af4efd45e2e5e4adfae81ef63cfcc3" id="r_a88af4efd45e2e5e4adfae81ef63cfcc3"><td class="memItemLeft" align="right" valign="top"><a id="a88af4efd45e2e5e4adfae81ef63cfcc3" name="a88af4efd45e2e5e4adfae81ef63cfcc3"></a>
+<a class="el" href="classvcl_1_1Color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mMeshColor</b></td></tr>
+<tr class="separator:a88af4efd45e2e5e4adfae81ef63cfcc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea93931b1da1e291e1ad6c7c0529f7f2" id="r_aea93931b1da1e291e1ad6c7c0529f7f2"><td class="memItemLeft" align="right" valign="top"><a id="aea93931b1da1e291e1ad6c7c0529f7f2" name="aea93931b1da1e291e1ad6c7c0529f7f2"></a>
 <a class="el" href="classvcl_1_1DrawableMeshUniforms.html">DrawableMeshUniforms</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mMeshUniforms</b></td></tr>
 <tr class="separator:aea93931b1da1e291e1ad6c7c0529f7f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35ccc6eeec746687362819293c90587c" id="r_a35ccc6eeec746687362819293c90587c"><td class="memItemLeft" align="right" valign="top"><a id="a35ccc6eeec746687362819293c90587c" name="a35ccc6eeec746687362819293c90587c"></a>
-std::vector&lt; std::unique_ptr&lt; <a class="el" href="classvcl_1_1TextureUnit.html">TextureUnit</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mTextureUnits</b></td></tr>
-<tr class="separator:a35ccc6eeec746687362819293c90587c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a149ef62fcf629d0ac0968b2ea089210c" id="r_a149ef62fcf629d0ac0968b2ea089210c"><td class="memItemLeft" align="right" valign="top"><a id="a149ef62fcf629d0ac0968b2ea089210c" name="a149ef62fcf629d0ac0968b2ea089210c"></a>
+std::array&lt; <a class="el" href="classvcl_1_1Uniform.html">Uniform</a>, N_TEXTURE_TYPES &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mTextureSamplerUniforms</b></td></tr>
+<tr class="separator:a149ef62fcf629d0ac0968b2ea089210c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c83f785144122f3d9a38e7bbc0dd405" id="r_a6c83f785144122f3d9a38e7bbc0dd405"><td class="memItemLeft" align="right" valign="top"><a id="a6c83f785144122f3d9a38e7bbc0dd405" name="a6c83f785144122f3d9a38e7bbc0dd405"></a>
 <a class="el" href="classvcl_1_1IndexBuffer.html">IndexBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mTriangleColorBuffer</b></td></tr>
 <tr class="separator:a6c83f785144122f3d9a38e7bbc0dd405"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -286,21 +308,23 @@ std::vector&lt; std::unique_ptr&lt; <a class="el" href="classvcl_1_1TextureUnit.
 <tr class="memitem:a9e4a6cb8f2c59b620ae08d61f8a24a23" id="r_a9e4a6cb8f2c59b620ae08d61f8a24a23"><td class="memItemLeft" align="right" valign="top"><a id="a9e4a6cb8f2c59b620ae08d61f8a24a23" name="a9e4a6cb8f2c59b620ae08d61f8a24a23"></a>
 <a class="el" href="classvcl_1_1IndexBuffer.html">IndexBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mVertexQuadIndexBuffer</b></td></tr>
 <tr class="separator:a9e4a6cb8f2c59b620ae08d61f8a24a23"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4f8fae2c51ef12c59272474de29b657" id="r_ad4f8fae2c51ef12c59272474de29b657"><td class="memItemLeft" align="right" valign="top"><a id="ad4f8fae2c51ef12c59272474de29b657" name="ad4f8fae2c51ef12c59272474de29b657"></a>
-<a class="el" href="classvcl_1_1IndexBuffer.html">IndexBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mVertexTextureIndexBuffer</b></td></tr>
-<tr class="separator:ad4f8fae2c51ef12c59272474de29b657"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63a5bec9001942e2d56ca95ac71194f3" id="r_a63a5bec9001942e2d56ca95ac71194f3"><td class="memItemLeft" align="right" valign="top"><a id="a63a5bec9001942e2d56ca95ac71194f3" name="a63a5bec9001942e2d56ca95ac71194f3"></a>
+<a class="el" href="classvcl_1_1VertexBuffer.html">VertexBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mVertexTangentsBuffer</b></td></tr>
+<tr class="separator:a63a5bec9001942e2d56ca95ac71194f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4efaf814c2ea25ab5ec22af805d2424a" id="r_a4efaf814c2ea25ab5ec22af805d2424a"><td class="memItemLeft" align="right" valign="top"><a id="a4efaf814c2ea25ab5ec22af805d2424a" name="a4efaf814c2ea25ab5ec22af805d2424a"></a>
 <a class="el" href="classvcl_1_1VertexBuffer.html">VertexBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mVertexUVBuffer</b></td></tr>
 <tr class="separator:a4efaf814c2ea25ab5ec22af805d2424a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a583a662e98f73d9f1da81de443ff38cc" id="r_a583a662e98f73d9f1da81de443ff38cc"><td class="memItemLeft" align="right" valign="top"><a id="a583a662e98f73d9f1da81de443ff38cc" name="a583a662e98f73d9f1da81de443ff38cc"></a>
 <a class="el" href="classvcl_1_1VertexBuffer.html">VertexBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mVertexWedgeUVBuffer</b></td></tr>
 <tr class="separator:a583a662e98f73d9f1da81de443ff38cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a712a54719be69e841133d210569b6a98" id="r_a712a54719be69e841133d210569b6a98"><td class="memItemLeft" align="right" valign="top"><a id="a712a54719be69e841133d210569b6a98" name="a712a54719be69e841133d210569b6a98"></a>
-<a class="el" href="classvcl_1_1IndexBuffer.html">IndexBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mWedgeTextureIndexBuffer</b></td></tr>
-<tr class="separator:a712a54719be69e841133d210569b6a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29571746f27d7a80a0b2452b2d85728d" id="r_a29571746f27d7a80a0b2452b2d85728d"><td class="memItemLeft" align="right" valign="top"><a id="a29571746f27d7a80a0b2452b2d85728d" name="a29571746f27d7a80a0b2452b2d85728d"></a>
-<a class="el" href="classvcl_1_1IndexBuffer.html">IndexBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mWireframeIndexBuffer</b></td></tr>
-<tr class="separator:a29571746f27d7a80a0b2452b2d85728d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae904db21d6a91b528c1935cfd79a5ae1" id="r_ae904db21d6a91b528c1935cfd79a5ae1"><td class="memItemLeft" align="right" valign="top"><a id="ae904db21d6a91b528c1935cfd79a5ae1" name="ae904db21d6a91b528c1935cfd79a5ae1"></a>
+<a class="el" href="classvcl_1_1Lines.html">Lines</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mWireframeLines</b></td></tr>
+<tr class="separator:ae904db21d6a91b528c1935cfd79a5ae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a104a0d2f2fd44edc855f2e87e4717542" id="r_a104a0d2f2fd44edc855f2e87e4717542"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">static</a> <a class="el" href="classvcl_1_1Box.html">const</a> uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshRenderBuffers.html#a104a0d2f2fd44edc855f2e87e4717542">N_TEXTURE_TYPES</a></td></tr>
+<tr class="separator:a104a0d2f2fd44edc855f2e87e4717542"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
@@ -320,6 +344,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a6b25b3e300dbd69027c3e4d928198178 inherit pro_methods_classvcl_1_1MeshRenderData" id="r_a6b25b3e300dbd69027c3e4d928198178"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshRenderData.html#a6b25b3e300dbd69027c3e4d928198178">fillEdgeNormals</a> (<a class="el" href="classvcl_1_1Box.html">const</a> EdgeMeshConcept <a class="el" href="classvcl_1_1Box.html">auto</a> &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer)</td></tr>
 <tr class="memdesc:a6b25b3e300dbd69027c3e4d928198178 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the mesh and a pointer to a buffer, fills the buffer with the edge normals of the mesh.  <br /></td></tr>
 <tr class="separator:a6b25b3e300dbd69027c3e4d928198178 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f178f4504c40068a96ecb4915c129c0 inherit pro_methods_classvcl_1_1MeshRenderData" id="r_a0f178f4504c40068a96ecb4915c129c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshRenderData.html#a0f178f4504c40068a96ecb4915c129c0">fillFaceMaterialIndices</a> (<a class="el" href="classvcl_1_1Box.html">const</a> FaceMeshConcept <a class="el" href="classvcl_1_1Box.html">auto</a> &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer)</td></tr>
+<tr class="memdesc:a0f178f4504c40068a96ecb4915c129c0 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the mesh and a pointer to a buffer, fills the buffer with the wedge texture indices of the mesh.  <br /></td></tr>
+<tr class="separator:a0f178f4504c40068a96ecb4915c129c0 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a706b95978985d251249ef7627127c56a inherit pro_methods_classvcl_1_1MeshRenderData" id="r_a706b95978985d251249ef7627127c56a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshRenderData.html#a706b95978985d251249ef7627127c56a">fillTriangleColors</a> (<a class="el" href="classvcl_1_1Box.html">const</a> FaceMeshConcept <a class="el" href="classvcl_1_1Box.html">auto</a> &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer, <a class="el" href="classvcl_1_1Color.html#a51d1c2a5b8ce06d43362026194a14523">Color::Format</a> <a class="el" href="classvcl_1_1Box.html">fmt</a>)</td></tr>
 <tr class="memdesc:a706b95978985d251249ef7627127c56a inherit pro_methods_classvcl_1_1MeshRenderData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the mesh and a pointer to a buffer, fills the buffer with the triangle colors of the mesh (each color is packed in a single uint).  <br /></td></tr>
 <tr class="separator:a706b95978985d251249ef7627127c56a inherit pro_methods_classvcl_1_1MeshRenderData"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -332,6 +359,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:af221d48c907511538704e1e084957218 inherit pro_methods_classvcl_1_1MeshRenderData" id="r_af221d48c907511538704e1e084957218"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshRenderData.html#af221d48c907511538704e1e084957218">fillVertexColors</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshConcept <a class="el" href="classvcl_1_1Box.html">auto</a> &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer, <a class="el" href="classvcl_1_1Color.html#a51d1c2a5b8ce06d43362026194a14523">Color::Format</a> <a class="el" href="classvcl_1_1Box.html">fmt</a>)</td></tr>
 <tr class="memdesc:af221d48c907511538704e1e084957218 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the mesh and a pointer to a buffer, fills the buffer with the vertex colors of the mesh (each color is packed in a single uint).  <br /></td></tr>
 <tr class="separator:af221d48c907511538704e1e084957218 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a699e340fb4904a2b7dcb07899e2ca980 inherit pro_methods_classvcl_1_1MeshRenderData" id="r_a699e340fb4904a2b7dcb07899e2ca980"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshRenderData.html#a699e340fb4904a2b7dcb07899e2ca980">fillVertexMaterialIndices</a> (<a class="el" href="classvcl_1_1Box.html">const</a> FaceMeshConcept <a class="el" href="classvcl_1_1Box.html">auto</a> &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer)</td></tr>
+<tr class="memdesc:a699e340fb4904a2b7dcb07899e2ca980 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the mesh and a pointer to a buffer, fills the buffer with the vertex material indices of the mesh.  <br /></td></tr>
+<tr class="separator:a699e340fb4904a2b7dcb07899e2ca980 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1090f2682e391a1fc068fd59df316a2 inherit pro_methods_classvcl_1_1MeshRenderData" id="r_ae1090f2682e391a1fc068fd59df316a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshRenderData.html#ae1090f2682e391a1fc068fd59df316a2">fillVertexNormals</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshConcept <a class="el" href="classvcl_1_1Box.html">auto</a> &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer)</td></tr>
 <tr class="memdesc:ae1090f2682e391a1fc068fd59df316a2 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the mesh and a pointer to a buffer, fills the buffer with the vertex normals of the mesh.  <br /></td></tr>
 <tr class="separator:ae1090f2682e391a1fc068fd59df316a2 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -341,21 +371,21 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:aae6487a286c932b2e09346631f248184 inherit pro_methods_classvcl_1_1MeshRenderData" id="r_aae6487a286c932b2e09346631f248184"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshRenderData.html#aae6487a286c932b2e09346631f248184">fillVertexQuadIndices</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshConcept <a class="el" href="classvcl_1_1Box.html">auto</a> &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer)</td></tr>
 <tr class="memdesc:aae6487a286c932b2e09346631f248184 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the mesh and a pointer to a buffer, fills the buffer with the vertex quad indices of the mesh (6 indices per vertex, 2 triangles per quad).  <br /></td></tr>
 <tr class="separator:aae6487a286c932b2e09346631f248184 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba1dc65c79c7504c391a8c65080dcbe0 inherit pro_methods_classvcl_1_1MeshRenderData" id="r_aba1dc65c79c7504c391a8c65080dcbe0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshRenderData.html#aba1dc65c79c7504c391a8c65080dcbe0">fillVertexTangents</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshConcept <a class="el" href="classvcl_1_1Box.html">auto</a> &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer)</td></tr>
+<tr class="memdesc:aba1dc65c79c7504c391a8c65080dcbe0 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the mesh and a pointer to a buffer, fills the buffer with the vertex tangent of the mesh.  <br /></td></tr>
+<tr class="separator:aba1dc65c79c7504c391a8c65080dcbe0 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9d42839aabf5c0a4ef24813f68ddfbb inherit pro_methods_classvcl_1_1MeshRenderData" id="r_aa9d42839aabf5c0a4ef24813f68ddfbb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshRenderData.html#aa9d42839aabf5c0a4ef24813f68ddfbb">fillVertexTexCoords</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshConcept <a class="el" href="classvcl_1_1Box.html">auto</a> &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer)</td></tr>
 <tr class="memdesc:aa9d42839aabf5c0a4ef24813f68ddfbb inherit pro_methods_classvcl_1_1MeshRenderData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the mesh and a pointer to a buffer, fills the buffer with the vertex texcoords of the mesh.  <br /></td></tr>
 <tr class="separator:aa9d42839aabf5c0a4ef24813f68ddfbb inherit pro_methods_classvcl_1_1MeshRenderData"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc0cbbcb6489fcd14334a684cdb6d7bd inherit pro_methods_classvcl_1_1MeshRenderData" id="r_afc0cbbcb6489fcd14334a684cdb6d7bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshRenderData.html#afc0cbbcb6489fcd14334a684cdb6d7bd">fillVertexTextureIndices</a> (<a class="el" href="classvcl_1_1Box.html">const</a> FaceMeshConcept <a class="el" href="classvcl_1_1Box.html">auto</a> &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer)</td></tr>
-<tr class="memdesc:afc0cbbcb6489fcd14334a684cdb6d7bd inherit pro_methods_classvcl_1_1MeshRenderData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the mesh and a pointer to a buffer, fills the buffer with the vertex texture indices of the mesh.  <br /></td></tr>
-<tr class="separator:afc0cbbcb6489fcd14334a684cdb6d7bd inherit pro_methods_classvcl_1_1MeshRenderData"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4fa6c5bddba2409a085d47f5ab40bd9 inherit pro_methods_classvcl_1_1MeshRenderData" id="r_ae4fa6c5bddba2409a085d47f5ab40bd9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshRenderData.html#ae4fa6c5bddba2409a085d47f5ab40bd9">fillWedgeTexCoords</a> (<a class="el" href="classvcl_1_1Box.html">const</a> FaceMeshConcept <a class="el" href="classvcl_1_1Box.html">auto</a> &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer)</td></tr>
 <tr class="memdesc:ae4fa6c5bddba2409a085d47f5ab40bd9 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the mesh and a pointer to a buffer, fills the buffer with the wedge texcoors of the mesh.  <br /></td></tr>
 <tr class="separator:ae4fa6c5bddba2409a085d47f5ab40bd9 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3456c3f61be64ffa507e23a3271beb35 inherit pro_methods_classvcl_1_1MeshRenderData" id="r_a3456c3f61be64ffa507e23a3271beb35"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshRenderData.html#a3456c3f61be64ffa507e23a3271beb35">fillWedgeTextureIndices</a> (<a class="el" href="classvcl_1_1Box.html">const</a> FaceMeshConcept <a class="el" href="classvcl_1_1Box.html">auto</a> &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer)</td></tr>
-<tr class="memdesc:a3456c3f61be64ffa507e23a3271beb35 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the mesh and a pointer to a buffer, fills the buffer with the wedge texture indices of the mesh.  <br /></td></tr>
-<tr class="separator:a3456c3f61be64ffa507e23a3271beb35 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ef9c51d3e2c10878f6909742ac0993e inherit pro_methods_classvcl_1_1MeshRenderData" id="r_a4ef9c51d3e2c10878f6909742ac0993e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshRenderData.html#a4ef9c51d3e2c10878f6909742ac0993e">fillWireframeIndices</a> (<a class="el" href="classvcl_1_1Box.html">const</a> FaceMeshConcept <a class="el" href="classvcl_1_1Box.html">auto</a> &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer)</td></tr>
 <tr class="memdesc:a4ef9c51d3e2c10878f6909742ac0993e inherit pro_methods_classvcl_1_1MeshRenderData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the mesh and a pointer to a buffer, fills the buffer with the wireframe indices of the mesh.  <br /></td></tr>
 <tr class="separator:a4ef9c51d3e2c10878f6909742ac0993e inherit pro_methods_classvcl_1_1MeshRenderData"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e1d51fda0c17c1a1ee55fca7de42f84 inherit pro_methods_classvcl_1_1MeshRenderData" id="r_a0e1d51fda0c17c1a1ee55fca7de42f84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">uint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshRenderData.html#a0e1d51fda0c17c1a1ee55fca7de42f84">materialIndex</a> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1MeshRenderSettings.html">MeshRenderSettings</a> &amp;<a class="el" href="classvcl_1_1Box.html">mrs</a>, <a class="el" href="classvcl_1_1Box.html">uint</a> <a class="el" href="classvcl_1_1Box.html">chunkNumber</a>) <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
+<tr class="memdesc:a0e1d51fda0c17c1a1ee55fca7de42f84 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the material index for the given triangle chunk, according to the current render settings.  <br /></td></tr>
+<tr class="separator:a0e1d51fda0c17c1a1ee55fca7de42f84 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab45693ef513eacc97b6ef889e875d8b7 inherit pro_methods_classvcl_1_1MeshRenderData" id="r_ab45693ef513eacc97b6ef889e875d8b7"><td class="memItemLeft" align="right" valign="top">
 &#160;</td><td class="memItemRight" valign="bottom"><b>MeshRenderData</b> (<a class="el" href="classvcl_1_1BitSet.html">MRI::BuffersBitSet</a> <a class="el" href="classvcl_1_1Box.html">buffersToFill</a>)</td></tr>
 <tr class="separator:ab45693ef513eacc97b6ef889e875d8b7 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -380,12 +410,15 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a283a9bd7cf83149f046f36b6040d08ce inherit pro_methods_classvcl_1_1MeshRenderData" id="r_a283a9bd7cf83149f046f36b6040d08ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshRenderData.html#a283a9bd7cf83149f046f36b6040d08ce">setEdgeNormalsBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> EdgeMeshConcept <a class="el" href="classvcl_1_1Box.html">auto</a> &amp;)</td></tr>
 <tr class="memdesc:a283a9bd7cf83149f046f36b6040d08ce inherit pro_methods_classvcl_1_1MeshRenderData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that sets the content of edge normals buffer and sends the data to the GPU.  <br /></td></tr>
 <tr class="separator:a283a9bd7cf83149f046f36b6040d08ce inherit pro_methods_classvcl_1_1MeshRenderData"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afba7b91b46b2f3dfefae253ad3d72f09 inherit pro_methods_classvcl_1_1MeshRenderData" id="r_afba7b91b46b2f3dfefae253ad3d72f09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshRenderData.html#afba7b91b46b2f3dfefae253ad3d72f09">setFaceMaterialIndicesBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> FaceMeshConcept <a class="el" href="classvcl_1_1Box.html">auto</a> &amp;)</td></tr>
+<tr class="memdesc:afba7b91b46b2f3dfefae253ad3d72f09 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that sets the content of face material indices buffer and sends the data to the GPU.  <br /></td></tr>
+<tr class="separator:afba7b91b46b2f3dfefae253ad3d72f09 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef0e2b438a12ecec4584154f86e7cd42 inherit pro_methods_classvcl_1_1MeshRenderData" id="r_aef0e2b438a12ecec4584154f86e7cd42"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshRenderData.html#aef0e2b438a12ecec4584154f86e7cd42">setMeshUniforms</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshConcept <a class="el" href="classvcl_1_1Box.html">auto</a> &amp;)</td></tr>
 <tr class="memdesc:aef0e2b438a12ecec4584154f86e7cd42 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that sets the mesh uniforms from the mesh.  <br /></td></tr>
 <tr class="separator:aef0e2b438a12ecec4584154f86e7cd42 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a8474399c7f4cdb2fba7be72427ac54 inherit pro_methods_classvcl_1_1MeshRenderData" id="r_a3a8474399c7f4cdb2fba7be72427ac54"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshRenderData.html#a3a8474399c7f4cdb2fba7be72427ac54">setTextureUnits</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshConcept <a class="el" href="classvcl_1_1Box.html">auto</a> &amp;)</td></tr>
-<tr class="memdesc:a3a8474399c7f4cdb2fba7be72427ac54 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that sets the texture units from the mesh and sends the data to the GPU.  <br /></td></tr>
-<tr class="separator:a3a8474399c7f4cdb2fba7be72427ac54 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3090e2ece19ae9b0538976265a38da7d inherit pro_methods_classvcl_1_1MeshRenderData" id="r_a3090e2ece19ae9b0538976265a38da7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshRenderData.html#a3090e2ece19ae9b0538976265a38da7d">setTextures</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshConcept <a class="el" href="classvcl_1_1Box.html">auto</a> &amp;)</td></tr>
+<tr class="memdesc:a3090e2ece19ae9b0538976265a38da7d inherit pro_methods_classvcl_1_1MeshRenderData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that sets the textures from the mesh and sends the data to the GPU.  <br /></td></tr>
+<tr class="separator:a3090e2ece19ae9b0538976265a38da7d inherit pro_methods_classvcl_1_1MeshRenderData"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc79ab9db3a7a3e1dc687d2b7c30d107 inherit pro_methods_classvcl_1_1MeshRenderData" id="r_abc79ab9db3a7a3e1dc687d2b7c30d107"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshRenderData.html#abc79ab9db3a7a3e1dc687d2b7c30d107">setTriangleColorsBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> FaceMeshConcept <a class="el" href="classvcl_1_1Box.html">auto</a> &amp;)</td></tr>
 <tr class="memdesc:abc79ab9db3a7a3e1dc687d2b7c30d107 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that sets the content of triangle colors buffer and sends the data to the GPU.  <br /></td></tr>
 <tr class="separator:abc79ab9db3a7a3e1dc687d2b7c30d107 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -398,32 +431,91 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a27c475c2e2465bf70fba2594be834acd inherit pro_methods_classvcl_1_1MeshRenderData" id="r_a27c475c2e2465bf70fba2594be834acd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshRenderData.html#a27c475c2e2465bf70fba2594be834acd">setVertexColorsBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshConcept <a class="el" href="classvcl_1_1Box.html">auto</a> &amp;)</td></tr>
 <tr class="memdesc:a27c475c2e2465bf70fba2594be834acd inherit pro_methods_classvcl_1_1MeshRenderData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that sets the content of vertex colors buffer and sends the data to the GPU.  <br /></td></tr>
 <tr class="separator:a27c475c2e2465bf70fba2594be834acd inherit pro_methods_classvcl_1_1MeshRenderData"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a876279396f4729bc223641c5fe65351d inherit pro_methods_classvcl_1_1MeshRenderData" id="r_a876279396f4729bc223641c5fe65351d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshRenderData.html#a876279396f4729bc223641c5fe65351d">setVertexMaterialIndicesBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> FaceMeshConcept <a class="el" href="classvcl_1_1Box.html">auto</a> &amp;)</td></tr>
+<tr class="memdesc:a876279396f4729bc223641c5fe65351d inherit pro_methods_classvcl_1_1MeshRenderData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that sets the content of vertex material indices buffer and sends the data to the GPU.  <br /></td></tr>
+<tr class="separator:a876279396f4729bc223641c5fe65351d inherit pro_methods_classvcl_1_1MeshRenderData"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9c0e5867db771925f02f992b9a0b20d inherit pro_methods_classvcl_1_1MeshRenderData" id="r_ac9c0e5867db771925f02f992b9a0b20d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshRenderData.html#ac9c0e5867db771925f02f992b9a0b20d">setVertexNormalsBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshConcept <a class="el" href="classvcl_1_1Box.html">auto</a> &amp;)</td></tr>
 <tr class="memdesc:ac9c0e5867db771925f02f992b9a0b20d inherit pro_methods_classvcl_1_1MeshRenderData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that sets the content of vertex normals buffer and sends the data to the GPU.  <br /></td></tr>
 <tr class="separator:ac9c0e5867db771925f02f992b9a0b20d inherit pro_methods_classvcl_1_1MeshRenderData"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc582a7f89437c093d9d145b6743bb73 inherit pro_methods_classvcl_1_1MeshRenderData" id="r_acc582a7f89437c093d9d145b6743bb73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshRenderData.html#acc582a7f89437c093d9d145b6743bb73">setVertexPositionsBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshConcept <a class="el" href="classvcl_1_1Box.html">auto</a> &amp;)</td></tr>
 <tr class="memdesc:acc582a7f89437c093d9d145b6743bb73 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that sets the content of vertex positions buffer and sends the data to the GPU.  <br /></td></tr>
 <tr class="separator:acc582a7f89437c093d9d145b6743bb73 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd70ae41e3974436a45ff5c84066315c inherit pro_methods_classvcl_1_1MeshRenderData" id="r_acd70ae41e3974436a45ff5c84066315c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshRenderData.html#acd70ae41e3974436a45ff5c84066315c">setVertexTangentsBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshConcept <a class="el" href="classvcl_1_1Box.html">auto</a> &amp;)</td></tr>
+<tr class="memdesc:acd70ae41e3974436a45ff5c84066315c inherit pro_methods_classvcl_1_1MeshRenderData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that sets the content of vertex tangent buffer and sends the data to the GPU.  <br /></td></tr>
+<tr class="separator:acd70ae41e3974436a45ff5c84066315c inherit pro_methods_classvcl_1_1MeshRenderData"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a983d97ed4534c6a81383ca828d8c92a9 inherit pro_methods_classvcl_1_1MeshRenderData" id="r_a983d97ed4534c6a81383ca828d8c92a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshRenderData.html#a983d97ed4534c6a81383ca828d8c92a9">setVertexTexCoordsBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshConcept <a class="el" href="classvcl_1_1Box.html">auto</a> &amp;)</td></tr>
 <tr class="memdesc:a983d97ed4534c6a81383ca828d8c92a9 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that sets the content of vertex texture coordinates buffer and sends the data to the GPU.  <br /></td></tr>
 <tr class="separator:a983d97ed4534c6a81383ca828d8c92a9 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc90f8586a06ebf7d9c0d2358dce6ac8 inherit pro_methods_classvcl_1_1MeshRenderData" id="r_abc90f8586a06ebf7d9c0d2358dce6ac8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshRenderData.html#abc90f8586a06ebf7d9c0d2358dce6ac8">setVertexTextureIndicesBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> FaceMeshConcept <a class="el" href="classvcl_1_1Box.html">auto</a> &amp;)</td></tr>
-<tr class="memdesc:abc90f8586a06ebf7d9c0d2358dce6ac8 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that sets the content of vertex texture indices buffer and sends the data to the GPU.  <br /></td></tr>
-<tr class="separator:abc90f8586a06ebf7d9c0d2358dce6ac8 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af108c2784d786a37bb4485c0f4557595 inherit pro_methods_classvcl_1_1MeshRenderData" id="r_af108c2784d786a37bb4485c0f4557595"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshRenderData.html#af108c2784d786a37bb4485c0f4557595">setWedgeTexCoordsBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshConcept <a class="el" href="classvcl_1_1Box.html">auto</a> &amp;)</td></tr>
 <tr class="memdesc:af108c2784d786a37bb4485c0f4557595 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that sets the content of wedge texture coordinates buffer and sends the data to the GPU.  <br /></td></tr>
 <tr class="separator:af108c2784d786a37bb4485c0f4557595 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45c7793eaad07bfc5f17ea0b82290e30 inherit pro_methods_classvcl_1_1MeshRenderData" id="r_a45c7793eaad07bfc5f17ea0b82290e30"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshRenderData.html#a45c7793eaad07bfc5f17ea0b82290e30">setWedgeTextureIndicesBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> FaceMeshConcept <a class="el" href="classvcl_1_1Box.html">auto</a> &amp;)</td></tr>
-<tr class="memdesc:a45c7793eaad07bfc5f17ea0b82290e30 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that sets the content of wedge texture indices buffer and sends the data to the GPU.  <br /></td></tr>
-<tr class="separator:a45c7793eaad07bfc5f17ea0b82290e30 inherit pro_methods_classvcl_1_1MeshRenderData"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9a346a363ded46832c192f7075c289f inherit pro_methods_classvcl_1_1MeshRenderData" id="r_ad9a346a363ded46832c192f7075c289f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshRenderData.html#ad9a346a363ded46832c192f7075c289f">setWireframeIndicesBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> FaceMeshConcept <a class="el" href="classvcl_1_1Box.html">auto</a> &amp;)</td></tr>
 <tr class="memdesc:ad9a346a363ded46832c192f7075c289f inherit pro_methods_classvcl_1_1MeshRenderData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that sets the content of wireframe indices buffer and sends the data to the GPU.  <br /></td></tr>
 <tr class="separator:ad9a346a363ded46832c192f7075c289f inherit pro_methods_classvcl_1_1MeshRenderData"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d96ff23601a83bd90cc8060de4c2fbb inherit pro_methods_classvcl_1_1MeshRenderData" id="r_a9d96ff23601a83bd90cc8060de4c2fbb"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>swap</b> (<a class="el" href="classvcl_1_1MeshRenderData.html">MeshRenderData</a> &amp;<a class="el" href="classvcl_1_1Box.html">other</a>)</td></tr>
 <tr class="separator:a9d96ff23601a83bd90cc8060de4c2fbb inherit pro_methods_classvcl_1_1MeshRenderData"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classvcl_1_1MeshRenderData"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classvcl_1_1MeshRenderData')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classvcl_1_1MeshRenderData.html">vcl::MeshRenderData&lt; MeshRenderBuffers&lt; Mesh &gt; &gt;</a></td></tr>
+<tr class="memitem:a15a32c6de9208d43322a61c330964c20 inherit pro_attribs_classvcl_1_1MeshRenderData" id="r_a15a32c6de9208d43322a61c330964c20"><td class="memItemLeft" align="right" valign="top">
+std::vector&lt; TriangleMaterialChunk &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mMaterialChunks</b></td></tr>
+<tr class="separator:a15a32c6de9208d43322a61c330964c20 inherit pro_attribs_classvcl_1_1MeshRenderData"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad4fdfc139823f0343eb1c507f5a5cafb" name="ad4fdfc139823f0343eb1c507f5a5cafb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4fdfc139823f0343eb1c507f5a5cafb">&#9670;&#160;</a></span>bindMaterials()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;MeshConcept Mesh&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">uint64_t</a> <a class="el" href="classvcl_1_1MeshRenderBuffers.html">vcl::MeshRenderBuffers</a>&lt; <a class="el" href="classvcl_1_1Mesh.html">Mesh</a> &gt;::bindMaterials </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1MeshRenderSettings.html">MeshRenderSettings</a> &amp;&#160;</td>
+          <td class="paramname"><em>mrs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>chunkNumber</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Mesh.html">MeshType</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets and binds the material uniforms for the given triangle chunk, and returns the render state associated to the material that must be set for the draw call. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mrs</td><td></td></tr>
+    <tr><td class="paramname">chunkNumber</td><td></td></tr>
+    <tr><td class="paramname">m</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the render state associated to the material </dd></dl>
+
+</div>
+</div>
 <a id="a65a1e282066966e43f002fbba25e5085" name="a65a1e282066966e43f002fbba25e5085"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a65a1e282066966e43f002fbba25e5085">&#9670;&#160;</a></span>setVertexQuadIndexBuffer()</h2>
 
@@ -458,6 +550,34 @@ template&lt;MeshConcept Mesh&gt; </div>
   </dd>
 </dl>
 
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a104a0d2f2fd44edc855f2e87e4717542" name="a104a0d2f2fd44edc855f2e87e4717542"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a104a0d2f2fd44edc855f2e87e4717542">&#9670;&#160;</a></span>N_TEXTURE_TYPES</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;MeshConcept Mesh&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">const</a> uint <a class="el" href="classvcl_1_1MeshRenderBuffers.html">vcl::MeshRenderBuffers</a>&lt; <a class="el" href="classvcl_1_1Mesh.html">Mesh</a> &gt;::N_TEXTURE_TYPES</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">        toUnderlying(<a class="code hl_enumvalue" href="classvcl_1_1Material.html#a12db78645943e2a62e14e6e6a350c622a4905ac9d6a22bdfc1ae096094ce6248d">Material::TextureType::COUNT</a>)</div>
+<div class="ttc" id="aclassvcl_1_1Material_html_a12db78645943e2a62e14e6e6a350c622a4905ac9d6a22bdfc1ae096094ce6248d"><div class="ttname"><a href="classvcl_1_1Material.html#a12db78645943e2a62e14e6e6a350c622a4905ac9d6a22bdfc1ae096094ce6248d">vcl::Material::TextureType::COUNT</a></div><div class="ttdeci">@ COUNT</div><div class="ttdoc">Utility value to get the number of texture types.</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

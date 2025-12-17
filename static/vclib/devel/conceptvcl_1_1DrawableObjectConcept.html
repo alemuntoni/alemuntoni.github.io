@@ -110,24 +110,25 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1DrawableObjectConcept.ht
 <div class="contents">
 <h2 class="groupheader">Concept definition</h2>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1DrawableObjectConcept.html">vcl::DrawableObjectConcept</a> =  <span class="keyword">requires</span> (T&amp;&amp; obj, uint u) {</div>
-<div class="line">    { obj.draw(u) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">    { <a class="code hl_class" href="classvcl_1_1Box.html">obj</a>.boundingBox() } -&gt; Box3Concept;</div>
-<div class="line">    obj.clone();</div>
-<div class="line">    { obj.isVisible() } -&gt; std::same_as&lt;bool&gt;;</div>
-<div class="line">    { obj.name() } -&gt; std::convertible_to&lt;std::string&gt;;</div>
-<div class="line">    { obj.info() } -&gt; std::convertible_to&lt;std::string&gt;;</div>
+<div class="line"><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1DrawableObjectConcept.html">vcl::DrawableObjectConcept</a> = </div>
+<div class="line">    <span class="keyword">requires</span> (T&amp;&amp; obj, uint u, DrawObjectSettings s) {</div>
+<div class="line">        { obj.draw(s) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">        { <a class="code hl_class" href="classvcl_1_1Box.html">obj</a>.boundingBox() } -&gt; Box3Concept;</div>
+<div class="line">        obj.clone();</div>
+<div class="line">        { obj.isVisible() } -&gt; std::same_as&lt;bool&gt;;</div>
+<div class="line">        { obj.name() } -&gt; std::convertible_to&lt;std::string&gt;;</div>
+<div class="line">        { obj.info() } -&gt; std::convertible_to&lt;std::string&gt;;</div>
 <div class="line"> </div>
-<div class="line">    </div>
-<div class="line">    <span class="keyword">requires</span> IsConst&lt;T&gt; || <span class="keyword">requires</span> {</div>
-<div class="line">        { obj.init() } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">        { obj.setVisibility(<span class="keywordtype">bool</span>()) } -&gt; std::same_as&lt;void&gt;;</div>
-<div class="line">        { obj.name() } -&gt; std::same_as&lt;std::string&amp;&gt;;</div>
-<div class="line">        { obj.info() } -&gt; std::same_as&lt;std::string&amp;&gt;;</div>
-<div class="line">    };</div>
-<div class="line">}</div>
+<div class="line">        </div>
+<div class="line">        <span class="keyword">requires</span> IsConst&lt;T&gt; || <span class="keyword">requires</span> {</div>
+<div class="line">            { obj.init() } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">            { obj.setVisibility(<span class="keywordtype">bool</span>()) } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line">            { obj.name() } -&gt; std::same_as&lt;std::string&amp;&gt;;</div>
+<div class="line">            { obj.info() } -&gt; std::same_as&lt;std::string&amp;&gt;;</div>
+<div class="line">        };</div>
+<div class="line">    }</div>
 <div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:46</div></div>
-<div class="ttc" id="aconceptvcl_1_1DrawableObjectConcept_html"><div class="ttname"><a href="conceptvcl_1_1DrawableObjectConcept.html">vcl::DrawableObjectConcept</a></div><div class="ttdef"><b>Definition</b> drawable_object.h:31</div></div>
+<div class="ttc" id="aconceptvcl_1_1DrawableObjectConcept_html"><div class="ttname"><a href="conceptvcl_1_1DrawableObjectConcept.html">vcl::DrawableObjectConcept</a></div><div class="ttdef"><b>Definition</b> drawable_object.h:32</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

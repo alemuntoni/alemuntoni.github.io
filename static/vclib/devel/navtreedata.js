@@ -84,20 +84,22 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "abstract__drawable__mesh_8h_source.html",
-"classvcl_1_1CanvasOpenGL2.html#ad8581b008848df2530d01e2eee2e194d",
-"classvcl_1_1GenericBuffer.html#abc7ee65f855f1a2b9f9b410df309a19e",
-"classvcl_1_1MeshRenderData.html#a283a9bd7cf83149f046f36b6040d08ce",
-"classvcl_1_1PolyMeshT.html",
-"classvcl_1_1Triangle.html#a0170ec5bd9c19bca717743e7617f05e4",
-"classvcl_1_1comp_1_1AdjacentVertices.html#affcd46474390138c87847707a2e213f8",
-"classvcl_1_1glfw_1_1WindowManager.html#a12f61cf800bf7eafbca61bd524ebd838",
-"concepts.html",
-"conceptvcl_1_1comp_1_1HasWedgeColors.html",
-"core_basic_concepts.html#autotoc_md13",
-"functions_func_e.html",
-"group__create.html#ga455a7abda2f207c424dd5946c30c48c6",
-"group__update.html#ga4d6af40f651b5569a2f24ddb3050c936",
-"structvcl_1_1AbstractGrid_1_1IterComparator.html"
+"classvcl_1_1CanvasOpenGL2.html#a7ca4e6334fdab3ed43ba9fb72f7eacbf",
+"classvcl_1_1FileInfo.html#a95ade661eff463651d6f0ff43ad064d3",
+"classvcl_1_1MeshInfo.html#a3816cab30d019e0d9b862af5580ca0cea42e1d1858fefd8212c2033dccbd27ac2",
+"classvcl_1_1ParallelVectorTuple.html#a6bb39edf8dc85339461c428bb82ac997",
+"classvcl_1_1RenderApp_1_1CNV.html",
+"classvcl_1_1Vector.html#a6bdd00a109907b839105a97b8349a9a1",
+"classvcl_1_1comp_1_1Normal.html#a277021441995a217d5ce0f9d329c23ce",
+"classvcl_1_1mesh_1_1FaceContainer.html#a5e5583a07296d28613db41decdb98cae",
+"conceptvcl_1_1HasPerFaceTriangleBitFlags.html",
+"conceptvcl_1_1face_1_1HasColor.html",
+"dir_29505756228b064adccf4374ac0f42d9.html",
+"functions_k.html",
+"group__edge__requirements.html#ga4033fc59330b356991232c063afb6bc1",
+"group__meshes.html#gaf4f68485f255ed1995a5affba651d5f4",
+"pointers_8h_source.html",
+"update_8h_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

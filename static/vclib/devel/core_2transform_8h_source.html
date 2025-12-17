@@ -368,9 +368,26 @@ $(document).ready(function(){initNavTree('core_2transform_8h_source.html',''); i
 <div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>    multiplyNormalsByMatrix(normals, m33, <a class="code hl_function" href="group__algorithms__core.html#ga5396bbb99432d258d9330d681f1461db">removeScalingFromMatrix</a>);</div>
 <div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>}</div>
 <div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span> </div>
-<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span> </div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span><span class="preprocessor">#endif </span><span class="comment">// VCL_ALGORITHMS_CORE_TRANSFORM_H</span></div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span><span class="keyword">template</span>&lt;Box3Concept BoxType, Matrix44Concept MatrixType&gt;</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>BoxType transformBox(<span class="keyword">const</span> BoxType&amp; box, <span class="keyword">const</span> MatrixType&amp; mat)</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>{</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>    <span class="keyword">using </span>PointType  = <span class="keyword">typename</span> BoxType::PointType;</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>    <span class="keyword">using </span>ScalarType = <span class="keyword">typename</span> PointType::ScalarType;</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span> </div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>    Matrix44&lt;ScalarType&gt; m44 = mat.template cast&lt;ScalarType&gt;();</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span> </div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>    BoxType result;</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>    <span class="keywordflow">for</span> (uint i = 0; i &lt; 8; ++i) {</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>        PointType corner = <a class="code hl_function" href="group__core__box3.html#ga13a8da076c8ee532f5f1fd55a761256a">boxVertex</a>(box, i);</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>        corner *= m44;</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>        result.add(corner);</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>    }</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>}</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span> </div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span> </div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span><span class="preprocessor">#endif </span><span class="comment">// VCL_ALGORITHMS_CORE_TRANSFORM_H</span></div>
 <div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:46</div></div>
 <div class="ttc" id="agroup__algorithms__core_html_ga0826e434e7d549a512181349756bbe21"><div class="ttname"><a href="group__algorithms__core.html#ga0826e434e7d549a512181349756bbe21">vcl::removeScalingFromMatrixInPlace</a></div><div class="ttdeci">void removeScalingFromMatrixInPlace(MatrixType &amp;matrix)</div><div class="ttdoc">Removes the scaling factors from the matrix in place.</div><div class="ttdef"><b>Definition</b> transform.h:238</div></div>
 <div class="ttc" id="agroup__algorithms__core_html_ga24901186f1a77f31a23d64f30f0b0dc3"><div class="ttname"><a href="group__algorithms__core.html#ga24901186f1a77f31a23d64f30f0b0dc3">vcl::setTransformMatrixRotation</a></div><div class="ttdeci">void setTransformMatrixRotation(MatrixType &amp;matrix, PointType axis, const ScalarType &amp;angleRad)</div><div class="ttdoc">Given an 3D axis and an angle expressed in radiants, fills the given matrix with a transform matrix t...</div><div class="ttdef"><b>Definition</b> transform.h:48</div></div>
@@ -379,6 +396,7 @@ $(document).ready(function(){initNavTree('core_2transform_8h_source.html',''); i
 <div class="ttc" id="agroup__algorithms__core_html_gabd5d95d87600e42a0da835735e35ea99"><div class="ttname"><a href="group__algorithms__core.html#gabd5d95d87600e42a0da835735e35ea99">vcl::setTransformMatrixRotationDeg</a></div><div class="ttdeci">void setTransformMatrixRotationDeg(MatrixType &amp;matrix, PointType axis, const ScalarType &amp;angleDeg)</div><div class="ttdoc">Given an 3D axis and an angle expressed in degrees, fills the given matrix with a transform matrix th...</div><div class="ttdef"><b>Definition</b> transform.h:84</div></div>
 <div class="ttc" id="agroup__algorithms__core_html_gaefa0051d67bdf4a551140929a2cc0b2f"><div class="ttname"><a href="group__algorithms__core.html#gaefa0051d67bdf4a551140929a2cc0b2f">vcl::rotationMatrix</a></div><div class="ttdeci">MatrixType rotationMatrix(const PointType &amp;axis, const ScalarType &amp;angleRad)</div><div class="ttdoc">Given an 3D axis and an angle expressed in radiants, returns a transform matrix that represents the r...</div><div class="ttdef"><b>Definition</b> transform.h:167</div></div>
 <div class="ttc" id="agroup__base_html_ga47c44328e5dfdb6c7e872aaa04fd2eba"><div class="ttname"><a href="group__base.html#ga47c44328e5dfdb6c7e872aaa04fd2eba">vcl::toRad</a></div><div class="ttdeci">Scalar toRad(const Scalar &amp;deg)</div><div class="ttdoc">Converts an angle in degrees to radians.</div><div class="ttdef"><b>Definition</b> math.h:81</div></div>
+<div class="ttc" id="agroup__core__box3_html_ga13a8da076c8ee532f5f1fd55a761256a"><div class="ttname"><a href="group__core__box3.html#ga13a8da076c8ee532f5f1fd55a761256a">vcl::boxVertex</a></div><div class="ttdeci">auto boxVertex(const BoxType &amp;box, uint i) -&gt; BoxType::PointType</div><div class="ttdoc">Returns the ith vertex of a 3D box.</div><div class="ttdef"><b>Definition</b> box3.h:104</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

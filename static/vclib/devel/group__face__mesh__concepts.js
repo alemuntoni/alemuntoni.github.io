@@ -6,6 +6,7 @@ var group__face__mesh__concepts =
     [ "vcl::HasPerFaceColor", "conceptvcl_1_1HasPerFaceColor.html", null ],
     [ "vcl::HasPerFaceCustomComponents", "conceptvcl_1_1HasPerFaceCustomComponents.html", null ],
     [ "vcl::HasPerFaceMark", "conceptvcl_1_1HasPerFaceMark.html", null ],
+    [ "vcl::HasPerFaceMaterialIndex", "conceptvcl_1_1HasPerFaceMaterialIndex.html", null ],
     [ "vcl::HasPerFaceNormal", "conceptvcl_1_1HasPerFaceNormal.html", null ],
     [ "vcl::HasPerFacePolygonBitFlags", "conceptvcl_1_1HasPerFacePolygonBitFlags.html", null ],
     [ "vcl::HasPerFacePrincipalCurvature", "conceptvcl_1_1HasPerFacePrincipalCurvature.html", null ],

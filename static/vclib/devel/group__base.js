@@ -95,5 +95,6 @@ var group__base =
     [ "vcl::IsDerivedFromSpecializationOfV", "group__base.html#ga6856c5b5bb830c6061cbb56eeed8a9ea", null ],
     [ "vcl::IsSpecializationOfV", "group__base.html#ga905ec16eb62a94008bcd859a22a92481", null ],
     [ "vcl::nullLogger", "group__base.html#ga3377e3c875ec245e90ac5a395105ce99", null ],
-    [ "vcl::UINT_NULL", "group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6", null ]
+    [ "vcl::UINT_NULL", "group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6", null ],
+    [ "vcl::USHORT_NULL", "group__base.html#gaef8d9ec663b370d435ff71c9f2f738aa", null ]
 ];

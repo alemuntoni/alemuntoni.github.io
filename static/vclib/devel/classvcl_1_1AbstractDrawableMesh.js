@@ -1,5 +1,6 @@
 var classvcl_1_1AbstractDrawableMesh =
 [
-    [ "isVisible", "classvcl_1_1AbstractDrawableMesh.html#a3cb2cc1477d6f29794edfa4a9141f695", null ],
-    [ "setVisibility", "classvcl_1_1AbstractDrawableMesh.html#a1c20a0960a675c50863c12f6b69d3f70", null ]
+    [ "boundingBox", "classvcl_1_1AbstractDrawableMesh.html#a7d1790c2f80aac31af3e3e9a7a910d04", null ],
+    [ "isVisible", "classvcl_1_1AbstractDrawableMesh.html#afb960e991898d562d737cb5b953819aa", null ],
+    [ "setVisibility", "classvcl_1_1AbstractDrawableMesh.html#ad804fd258839c410bfb099e8cc8aa597", null ]
 ];

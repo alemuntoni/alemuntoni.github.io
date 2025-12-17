@@ -11,6 +11,8 @@ var group__face__components =
     [ "vcl::face::HasFaceBitFlags", "conceptvcl_1_1face_1_1HasFaceBitFlags.html", null ],
     [ "vcl::face::HasMark", "conceptvcl_1_1face_1_1HasMark.html", null ],
     [ "vcl::face::HasOptionalMark", "conceptvcl_1_1face_1_1HasOptionalMark.html", null ],
+    [ "vcl::face::HasMaterialIndex", "conceptvcl_1_1face_1_1HasMaterialIndex.html", null ],
+    [ "vcl::face::HasOptionalMaterialIndex", "conceptvcl_1_1face_1_1HasOptionalMaterialIndex.html", null ],
     [ "vcl::face::HasNormal", "conceptvcl_1_1face_1_1HasNormal.html", null ],
     [ "vcl::face::HasOptionalNormal", "conceptvcl_1_1face_1_1HasOptionalNormal.html", null ],
     [ "vcl::face::HasPolygonBitFlags", "conceptvcl_1_1face_1_1HasPolygonBitFlags.html", null ],

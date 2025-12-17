@@ -125,38 +125,76 @@ Collaboration diagram for Export Mesh to Buffer Algorithms:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga27fd7ce009bc6cd16cd2beff90d533f7" id="r_ga27fd7ce009bc6cd16cd2beff90d533f7"><td class="memTemplParams" colspan="2">template&lt;EdgeMeshConcept MeshType&gt; </td></tr>
-<tr class="memitem:ga27fd7ce009bc6cd16cd2beff90d533f7"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__export__buffer.html#ga27fd7ce009bc6cd16cd2beff90d533f7">vcl::edgeIndicesToBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer, <a class="el" href="group__base.html#ga16a1bfbea022f6766d2f3ebbf69a3b52">MatrixStorageType</a> <a class="el" href="classvcl_1_1Box.html">storage</a>=MatrixStorageType::ROW_MAJOR, <a class="el" href="classvcl_1_1Box.html">bool</a> <a class="el" href="classvcl_1_1Box.html">getIndicesAsIfContainerCompact</a>=<a class="el" href="classvcl_1_1Box.html">true</a>, uint <a class="el" href="classvcl_1_1Box.html">rowNumber</a>=<a class="el" href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>)</td></tr>
-<tr class="memdesc:ga27fd7ce009bc6cd16cd2beff90d533f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export into a buffer the vertex indices for each edge of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>.  <br /></td></tr>
-<tr class="separator:ga27fd7ce009bc6cd16cd2beff90d533f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4d8d20f3cc27e22f326932cd22843fa5" id="r_ga4d8d20f3cc27e22f326932cd22843fa5"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
-<tr class="memitem:ga4d8d20f3cc27e22f326932cd22843fa5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__export__buffer.html#ga4d8d20f3cc27e22f326932cd22843fa5">vcl::faceIndicesToBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer, <a class="el" href="classvcl_1_1Box.html">bool</a> <a class="el" href="classvcl_1_1Box.html">getIndicesAsIfContainerCompact</a>=<a class="el" href="classvcl_1_1Box.html">true</a>)</td></tr>
-<tr class="memdesc:ga4d8d20f3cc27e22f326932cd22843fa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export into a buffer the vertex indices for each face of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. Faces can be polygons.  <br /></td></tr>
-<tr class="separator:ga4d8d20f3cc27e22f326932cd22843fa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga42a18d1937c793c2a800b3d3143a881b" id="r_ga42a18d1937c793c2a800b3d3143a881b"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
-<tr class="memitem:ga42a18d1937c793c2a800b3d3143a881b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__export__buffer.html#ga42a18d1937c793c2a800b3d3143a881b">vcl::faceIndicesToBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer, uint <a class="el" href="group__mesh__stat.html#gad5656feacf649e99e4d3113855f20249">largestFaceSize</a>, <a class="el" href="group__base.html#ga16a1bfbea022f6766d2f3ebbf69a3b52">MatrixStorageType</a> <a class="el" href="classvcl_1_1Box.html">storage</a>=MatrixStorageType::ROW_MAJOR, <a class="el" href="classvcl_1_1Box.html">bool</a> <a class="el" href="classvcl_1_1Box.html">getIndicesAsIfContainerCompact</a>=<a class="el" href="classvcl_1_1Box.html">true</a>, uint <a class="el" href="classvcl_1_1Box.html">rowNumber</a>=<a class="el" href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>)</td></tr>
-<tr class="memdesc:ga42a18d1937c793c2a800b3d3143a881b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export into a buffer the vertex indices for each face of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. Faces can be polygons, and the number of output columns can be set by the user with the <code>largestFaceSize</code> parameter.  <br /></td></tr>
-<tr class="separator:ga42a18d1937c793c2a800b3d3143a881b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga957e15c91b27be41fd7efddcc472fd54" id="r_ga957e15c91b27be41fd7efddcc472fd54"><td class="memTemplParams" colspan="2">template&lt;EdgeMeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga957e15c91b27be41fd7efddcc472fd54"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__export__buffer.html#ga957e15c91b27be41fd7efddcc472fd54">vcl::edgeAdjacentEdgesToBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer, uint <a class="el" href="classvcl_1_1Box.html">largestAdjacentEdgesSize</a>, <a class="el" href="group__base.html#ga16a1bfbea022f6766d2f3ebbf69a3b52">MatrixStorageType</a> <a class="el" href="classvcl_1_1Box.html">storage</a>=MatrixStorageType::ROW_MAJOR, uint <a class="el" href="classvcl_1_1Box.html">rowNumber</a>=<a class="el" href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>)</td></tr>
+<tr class="memdesc:ga957e15c91b27be41fd7efddcc472fd54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export into a buffer the adjacent edges indices for each edge of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. The number of adjacent edges for each edge can be different, so the user must provide the size of the largest adjacency list with the <code>largestAdjacentEdgesSize</code> parameter. For elements that have less adjacent edges than <code>largestAdjacentEdgesSize</code>, the remaining entries are filled with <code>UINT_NULL</code>.  <br /></td></tr>
+<tr class="separator:ga957e15c91b27be41fd7efddcc472fd54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6d14a19b99a181df9ad557ed8d6f06c5" id="r_ga6d14a19b99a181df9ad557ed8d6f06c5"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; <br />
+requires (EdgeMeshConcept&lt;MeshType&gt;)</td></tr>
+<tr class="memitem:ga6d14a19b99a181df9ad557ed8d6f06c5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__export__buffer.html#ga6d14a19b99a181df9ad557ed8d6f06c5">vcl::edgeAdjacentFacesToBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer, uint <a class="el" href="classvcl_1_1Box.html">largestAdjacentFacesSize</a>, <a class="el" href="group__base.html#ga16a1bfbea022f6766d2f3ebbf69a3b52">MatrixStorageType</a> <a class="el" href="classvcl_1_1Box.html">storage</a>=MatrixStorageType::ROW_MAJOR, uint <a class="el" href="classvcl_1_1Box.html">rowNumber</a>=<a class="el" href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>)</td></tr>
+<tr class="memdesc:ga6d14a19b99a181df9ad557ed8d6f06c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export into a buffer the adjacent faces indices for each edge of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. The number of adjacent faces for each edge can be different, so the user must provide the size of the largest adjacency list with the <code>largestAdjacentFacesSize</code> parameter. For elements that have less adjacent faces than <code>largestAdjacentFacesSize</code>, the remaining entries are filled with <code>UINT_NULL</code>.  <br /></td></tr>
+<tr class="separator:ga6d14a19b99a181df9ad557ed8d6f06c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1e3a8919dcf172add3646b00e7ae37cc" id="r_ga1e3a8919dcf172add3646b00e7ae37cc"><td class="memTemplParams" colspan="2">template&lt;EdgeMeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga1e3a8919dcf172add3646b00e7ae37cc"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__export__buffer.html#ga1e3a8919dcf172add3646b00e7ae37cc">vcl::edgeVertexIndicesToBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer, <a class="el" href="group__base.html#ga16a1bfbea022f6766d2f3ebbf69a3b52">MatrixStorageType</a> <a class="el" href="classvcl_1_1Box.html">storage</a>=MatrixStorageType::ROW_MAJOR, <a class="el" href="classvcl_1_1Box.html">bool</a> <a class="el" href="classvcl_1_1Box.html">getIndicesAsIfContainerCompact</a>=<a class="el" href="classvcl_1_1Box.html">true</a>, uint <a class="el" href="classvcl_1_1Box.html">rowNumber</a>=<a class="el" href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>)</td></tr>
+<tr class="memdesc:ga1e3a8919dcf172add3646b00e7ae37cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export into a buffer the vertex indices for each edge of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>.  <br /></td></tr>
+<tr class="separator:ga1e3a8919dcf172add3646b00e7ae37cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5bbb94e443633f469eb95a2ec7b85fb7" id="r_ga5bbb94e443633f469eb95a2ec7b85fb7"><td class="memTemplParams" colspan="2">template&lt;uint ELEM_ID, EdgeMeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga5bbb94e443633f469eb95a2ec7b85fb7"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__export__buffer.html#ga5bbb94e443633f469eb95a2ec7b85fb7">vcl::elementAdjacentEdgesToBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer, uint <a class="el" href="classvcl_1_1Box.html">largestAdjacentEdgesSize</a>, <a class="el" href="group__base.html#ga16a1bfbea022f6766d2f3ebbf69a3b52">MatrixStorageType</a> <a class="el" href="classvcl_1_1Box.html">storage</a>=MatrixStorageType::ROW_MAJOR, uint <a class="el" href="classvcl_1_1Box.html">rowNumber</a>=<a class="el" href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>)</td></tr>
+<tr class="memdesc:ga5bbb94e443633f469eb95a2ec7b85fb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export into a buffer the adjacent edges indices for each ELEM_ID element of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. The number of adjacent edges for each ELEM_ID can be different, so the user must provide the size of the largest adjacency list with the <code>largestAdjacentEdgesSize</code> parameter. For elements that have less adjacent faces than <code>largestAdjacentEdgesSize</code>, the remaining entries are filled with <code>UINT_NULL</code>.  <br /></td></tr>
+<tr class="separator:ga5bbb94e443633f469eb95a2ec7b85fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaee6f990fc6f23dcc98bdf2eb4129c557" id="r_gaee6f990fc6f23dcc98bdf2eb4129c557"><td class="memTemplParams" colspan="2">template&lt;uint ELEM_ID, FaceMeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:gaee6f990fc6f23dcc98bdf2eb4129c557"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__export__buffer.html#gaee6f990fc6f23dcc98bdf2eb4129c557">vcl::elementAdjacentFacesToBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer, uint <a class="el" href="classvcl_1_1Box.html">largestAdjacentFacesSize</a>, <a class="el" href="group__base.html#ga16a1bfbea022f6766d2f3ebbf69a3b52">MatrixStorageType</a> <a class="el" href="classvcl_1_1Box.html">storage</a>=MatrixStorageType::ROW_MAJOR, uint <a class="el" href="classvcl_1_1Box.html">rowNumber</a>=<a class="el" href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>)</td></tr>
+<tr class="memdesc:gaee6f990fc6f23dcc98bdf2eb4129c557"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export into a buffer the adjacent faces indices for each ELEM_ID element of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. The number of adjacent faces for each ELEM_ID can be different, so the user must provide the size of the largest adjacency list with the <code>largestAdjacentFacesSize</code> parameter. For elements that have less adjacent faces than <code>largestAdjacentFacesSize</code>, the remaining entries are filled with <code>UINT_NULL</code>.  <br /></td></tr>
+<tr class="separator:gaee6f990fc6f23dcc98bdf2eb4129c557"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga40e8cdc0761d2f1ad45114f111bf192e" id="r_ga40e8cdc0761d2f1ad45114f111bf192e"><td class="memTemplParams" colspan="2">template&lt;EdgeMeshConcept MeshType&gt; <br />
+requires (FaceMeshConcept&lt;MeshType&gt;)</td></tr>
+<tr class="memitem:ga40e8cdc0761d2f1ad45114f111bf192e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__export__buffer.html#ga40e8cdc0761d2f1ad45114f111bf192e">vcl::faceAdjacentEdgesToBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer, uint <a class="el" href="classvcl_1_1Box.html">largestAdjacentEdgesSize</a>, <a class="el" href="group__base.html#ga16a1bfbea022f6766d2f3ebbf69a3b52">MatrixStorageType</a> <a class="el" href="classvcl_1_1Box.html">storage</a>=MatrixStorageType::ROW_MAJOR, uint <a class="el" href="classvcl_1_1Box.html">rowNumber</a>=<a class="el" href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>)</td></tr>
+<tr class="memdesc:ga40e8cdc0761d2f1ad45114f111bf192e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export into a buffer the adjacent edges indices for each face of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. The number of adjacent edges for each face can be different, so the user must provide the size of the largest adjacency list with the <code>largestAdjacentEdgesSize</code> parameter. For elements that have less adjacent edges than <code>largestAdjacentEdgesSize</code>, the remaining entries are filled with <code>UINT_NULL</code>.  <br /></td></tr>
+<tr class="separator:ga40e8cdc0761d2f1ad45114f111bf192e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga62871ec6c69aa1e0209ffbf00d374ced" id="r_ga62871ec6c69aa1e0209ffbf00d374ced"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga62871ec6c69aa1e0209ffbf00d374ced"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__export__buffer.html#ga62871ec6c69aa1e0209ffbf00d374ced">vcl::faceAdjacentFacesToBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer, uint <a class="el" href="classvcl_1_1Box.html">largestFacesSize</a>, <a class="el" href="group__base.html#ga16a1bfbea022f6766d2f3ebbf69a3b52">MatrixStorageType</a> <a class="el" href="classvcl_1_1Box.html">storage</a>=MatrixStorageType::ROW_MAJOR, uint <a class="el" href="classvcl_1_1Box.html">rowNumber</a>=<a class="el" href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>)</td></tr>
+<tr class="memdesc:ga62871ec6c69aa1e0209ffbf00d374ced"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export into a buffer the adjacent faces indices for each face of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. The number of adjacent faces for each face is expected to be equal to the largestFaceSize (see <a class="el" href="group__mesh__stat.html#gad5656feacf649e99e4d3113855f20249">vcl::largestFaceSize</a>).  <br /></td></tr>
+<tr class="separator:ga62871ec6c69aa1e0209ffbf00d374ced"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafc7d9ba74289dbd5a7ed0bf8ccfa1e21" id="r_gafc7d9ba74289dbd5a7ed0bf8ccfa1e21"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:gafc7d9ba74289dbd5a7ed0bf8ccfa1e21"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__export__buffer.html#gafc7d9ba74289dbd5a7ed0bf8ccfa1e21">vcl::faceMaterialIndicesToBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer)</td></tr>
+<tr class="memdesc:gafc7d9ba74289dbd5a7ed0bf8ccfa1e21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export into a buffer the per face material indices of a mesh.  <br /></td></tr>
+<tr class="separator:gafc7d9ba74289dbd5a7ed0bf8ccfa1e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad458d46401c443ee325a7bc9200a578a" id="r_gad458d46401c443ee325a7bc9200a578a"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
 <tr class="memitem:gad458d46401c443ee325a7bc9200a578a"><td class="memTemplItemLeft" align="right" valign="top">uint&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__export__buffer.html#gad458d46401c443ee325a7bc9200a578a">vcl::faceSizesToBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer)</td></tr>
 <tr class="memdesc:gad458d46401c443ee325a7bc9200a578a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export into a buffer the sizes of the faces of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>, and return the sum of the sizes.  <br /></td></tr>
 <tr class="separator:gad458d46401c443ee325a7bc9200a578a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga733bf9300bb3024c9239999b7b05e220" id="r_ga733bf9300bb3024c9239999b7b05e220"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
-<tr class="memitem:ga733bf9300bb3024c9239999b7b05e220"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__export__buffer.html#ga733bf9300bb3024c9239999b7b05e220">vcl::faceWedgeTexCoordIndicesToBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer)</td></tr>
-<tr class="memdesc:ga733bf9300bb3024c9239999b7b05e220"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export into a buffer the per face wedge texture indices of a mesh.  <br /></td></tr>
-<tr class="separator:ga733bf9300bb3024c9239999b7b05e220"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga838119428d9b86ff03988eee038d5654" id="r_ga838119428d9b86ff03988eee038d5654"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga838119428d9b86ff03988eee038d5654"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__export__buffer.html#ga838119428d9b86ff03988eee038d5654">vcl::faceVertexIndicesToBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer, <a class="el" href="classvcl_1_1Box.html">bool</a> <a class="el" href="classvcl_1_1Box.html">getIndicesAsIfContainerCompact</a>=<a class="el" href="classvcl_1_1Box.html">true</a>)</td></tr>
+<tr class="memdesc:ga838119428d9b86ff03988eee038d5654"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export into a buffer the vertex indices for each face of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. Faces can be polygons.  <br /></td></tr>
+<tr class="separator:ga838119428d9b86ff03988eee038d5654"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga48080f61737b62cc18841ff1e8690a2a" id="r_ga48080f61737b62cc18841ff1e8690a2a"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga48080f61737b62cc18841ff1e8690a2a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__export__buffer.html#ga48080f61737b62cc18841ff1e8690a2a">vcl::faceVertexIndicesToBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer, uint <a class="el" href="group__mesh__stat.html#gad5656feacf649e99e4d3113855f20249">largestFaceSize</a>, <a class="el" href="group__base.html#ga16a1bfbea022f6766d2f3ebbf69a3b52">MatrixStorageType</a> <a class="el" href="classvcl_1_1Box.html">storage</a>=MatrixStorageType::ROW_MAJOR, <a class="el" href="classvcl_1_1Box.html">bool</a> <a class="el" href="classvcl_1_1Box.html">getIndicesAsIfContainerCompact</a>=<a class="el" href="classvcl_1_1Box.html">true</a>, uint <a class="el" href="classvcl_1_1Box.html">rowNumber</a>=<a class="el" href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>)</td></tr>
+<tr class="memdesc:ga48080f61737b62cc18841ff1e8690a2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export into a buffer the vertex indices for each face of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. Faces can be polygons, and the number of output columns can be set by the user with the <code>largestFaceSize</code> parameter.  <br /></td></tr>
+<tr class="separator:ga48080f61737b62cc18841ff1e8690a2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab947d0481928e5eb3417d0bfee8f4b33" id="r_gab947d0481928e5eb3417d0bfee8f4b33"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
 <tr class="memitem:gab947d0481928e5eb3417d0bfee8f4b33"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__export__buffer.html#gab947d0481928e5eb3417d0bfee8f4b33">vcl::faceWedgeTexCoordsToBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer, uint <a class="el" href="group__mesh__stat.html#gad5656feacf649e99e4d3113855f20249">largestFaceSize</a>=3, <a class="el" href="group__base.html#ga16a1bfbea022f6766d2f3ebbf69a3b52">MatrixStorageType</a> <a class="el" href="classvcl_1_1Box.html">storage</a>=MatrixStorageType::ROW_MAJOR, uint <a class="el" href="classvcl_1_1Box.html">rowNumber</a>=<a class="el" href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>)</td></tr>
 <tr class="memdesc:gab947d0481928e5eb3417d0bfee8f4b33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export the selection status of the elements identified by <code>ELEM_ID</code> of a mesh to a buffer.  <br /></td></tr>
 <tr class="separator:gab947d0481928e5eb3417d0bfee8f4b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1536428adc2a72c8eb60d3e92b0fce32" id="r_ga1536428adc2a72c8eb60d3e92b0fce32"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
-<tr class="memitem:ga1536428adc2a72c8eb60d3e92b0fce32"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__export__buffer.html#ga1536428adc2a72c8eb60d3e92b0fce32">vcl::triangulatedFaceIndicesToBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer, <a class="el" href="classvcl_1_1TriPolyIndexBiMap.html">TriPolyIndexBiMap</a> &amp;indexMap=detail::indexMap, <a class="el" href="group__base.html#ga16a1bfbea022f6766d2f3ebbf69a3b52">MatrixStorageType</a> <a class="el" href="classvcl_1_1Box.html">storage</a>=MatrixStorageType::ROW_MAJOR, uint <a class="el" href="classvcl_1_1Box.html">numTriangles</a>=<a class="el" href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>, <a class="el" href="classvcl_1_1Box.html">bool</a> <a class="el" href="classvcl_1_1Box.html">getIndicesAsIfContainerCompact</a>=<a class="el" href="classvcl_1_1Box.html">true</a>)</td></tr>
-<tr class="memdesc:ga1536428adc2a72c8eb60d3e92b0fce32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export into a buffer the vertex indices for each triangle computed by triangulating the faces of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>.  <br /></td></tr>
-<tr class="separator:ga1536428adc2a72c8eb60d3e92b0fce32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga154f129f7c4072e73340c56f06669593" id="r_ga154f129f7c4072e73340c56f06669593"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
-<tr class="memitem:ga154f129f7c4072e73340c56f06669593"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__export__buffer.html#ga154f129f7c4072e73340c56f06669593">vcl::triangulatedFaceWedgeTexCoordIndicesToBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer, <a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1TriPolyIndexBiMap.html">TriPolyIndexBiMap</a> &amp;indexMap)</td></tr>
-<tr class="memdesc:ga154f129f7c4072e73340c56f06669593"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export into a buffer the per triangle wedge texture indices of a mesh. Triangles are computed by triangulating the faces of the mesh.  <br /></td></tr>
-<tr class="separator:ga154f129f7c4072e73340c56f06669593"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7d6d7feffe49d2925572cce1877ee472" id="r_ga7d6d7feffe49d2925572cce1877ee472"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga7d6d7feffe49d2925572cce1877ee472"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__export__buffer.html#ga7d6d7feffe49d2925572cce1877ee472">vcl::triangulatedFaceMaterialIndicesToBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer, <a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1TriPolyIndexBiMap.html">TriPolyIndexBiMap</a> &amp;indexMap)</td></tr>
+<tr class="memdesc:ga7d6d7feffe49d2925572cce1877ee472"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export into a buffer the per triangle material indices of a mesh. Triangles are computed by triangulating the faces of the mesh.  <br /></td></tr>
+<tr class="separator:ga7d6d7feffe49d2925572cce1877ee472"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga22430633156d0c20912fdbba06cdf122" id="r_ga22430633156d0c20912fdbba06cdf122"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga22430633156d0c20912fdbba06cdf122"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__export__buffer.html#ga22430633156d0c20912fdbba06cdf122">vcl::triangulatedFaceVertexIndicesToBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer, <a class="el" href="classvcl_1_1TriPolyIndexBiMap.html">TriPolyIndexBiMap</a> &amp;indexMap=detail::indexMap, <a class="el" href="group__base.html#ga16a1bfbea022f6766d2f3ebbf69a3b52">MatrixStorageType</a> <a class="el" href="classvcl_1_1Box.html">storage</a>=MatrixStorageType::ROW_MAJOR, uint <a class="el" href="classvcl_1_1Box.html">numTriangles</a>=<a class="el" href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>, <a class="el" href="classvcl_1_1Box.html">bool</a> <a class="el" href="classvcl_1_1Box.html">getIndicesAsIfContainerCompact</a>=<a class="el" href="classvcl_1_1Box.html">true</a>)</td></tr>
+<tr class="memdesc:ga22430633156d0c20912fdbba06cdf122"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export into a buffer the vertex indices for each triangle computed by triangulating the faces of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>.  <br /></td></tr>
+<tr class="separator:ga22430633156d0c20912fdbba06cdf122"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga29467971d86fb4dd5145498e7c4fb6c4" id="r_ga29467971d86fb4dd5145498e7c4fb6c4"><td class="memTemplParams" colspan="2">template&lt;EdgeMeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga29467971d86fb4dd5145498e7c4fb6c4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__export__buffer.html#ga29467971d86fb4dd5145498e7c4fb6c4">vcl::vertexAdjacentEdgesToBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer, uint <a class="el" href="classvcl_1_1Box.html">largestAdjacentEdgesSize</a>, <a class="el" href="group__base.html#ga16a1bfbea022f6766d2f3ebbf69a3b52">MatrixStorageType</a> <a class="el" href="classvcl_1_1Box.html">storage</a>=MatrixStorageType::ROW_MAJOR, uint <a class="el" href="classvcl_1_1Box.html">rowNumber</a>=<a class="el" href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>)</td></tr>
+<tr class="memdesc:ga29467971d86fb4dd5145498e7c4fb6c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export into a buffer the adjacent edges indices for each vertex of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. The number of adjacent edges for each vertex can be different, so the user must provide the size of the largest adjacency list with the <code>largestAdjacentEdgesSize</code> parameter. For elements that have less adjacent edges than <code>largestAdjacentEdgesSize</code>, the remaining entries are filled with <code>UINT_NULL</code>.  <br /></td></tr>
+<tr class="separator:ga29467971d86fb4dd5145498e7c4fb6c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7d2d0a80521d5d5c434a78492e86aa0e" id="r_ga7d2d0a80521d5d5c434a78492e86aa0e"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga7d2d0a80521d5d5c434a78492e86aa0e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__export__buffer.html#ga7d2d0a80521d5d5c434a78492e86aa0e">vcl::vertexAdjacentFacesToBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer, uint <a class="el" href="classvcl_1_1Box.html">largestAdjacentFacesSize</a>, <a class="el" href="group__base.html#ga16a1bfbea022f6766d2f3ebbf69a3b52">MatrixStorageType</a> <a class="el" href="classvcl_1_1Box.html">storage</a>=MatrixStorageType::ROW_MAJOR, uint <a class="el" href="classvcl_1_1Box.html">rowNumber</a>=<a class="el" href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>)</td></tr>
+<tr class="memdesc:ga7d2d0a80521d5d5c434a78492e86aa0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export into a buffer the adjacent faces indices for each vertex of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. The number of adjacent faces for each vertex can be different, so the user must provide the size of the largest adjacency list with the <code>largestAdjacentFacesSize</code> parameter. For elements that have less adjacent faces than <code>largestAdjacentFacesSize</code>, the remaining entries are filled with <code>UINT_NULL</code>.  <br /></td></tr>
+<tr class="separator:ga7d2d0a80521d5d5c434a78492e86aa0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5fde3a63b78c34081b3a12e2cffc97fd" id="r_ga5fde3a63b78c34081b3a12e2cffc97fd"><td class="memTemplParams" colspan="2">template&lt;MeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga5fde3a63b78c34081b3a12e2cffc97fd"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__export__buffer.html#ga5fde3a63b78c34081b3a12e2cffc97fd">vcl::vertexAdjacentVerticesToBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer, uint <a class="el" href="classvcl_1_1Box.html">largestAdjacentVerticesSize</a>, <a class="el" href="group__base.html#ga16a1bfbea022f6766d2f3ebbf69a3b52">MatrixStorageType</a> <a class="el" href="classvcl_1_1Box.html">storage</a>=MatrixStorageType::ROW_MAJOR, uint <a class="el" href="classvcl_1_1Box.html">rowNumber</a>=<a class="el" href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>)</td></tr>
+<tr class="memdesc:ga5fde3a63b78c34081b3a12e2cffc97fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export into a buffer the adjacent vertex indices for each vertex of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. The number of adjacent vertices for each vertex can be different, so the user must provide the size of the largest adjacency list with the <code>largestAdjacentVerticesSize</code> parameter. For vertices that have less adjacent vertices than <code>largestAdjacentVerticesSize</code>, the remaining entries are filled with <code>UINT_NULL</code>.  <br /></td></tr>
+<tr class="separator:ga5fde3a63b78c34081b3a12e2cffc97fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga00bdd954d4901a1650ec870bfd33bae1" id="r_ga00bdd954d4901a1650ec870bfd33bae1"><td class="memTemplParams" colspan="2">template&lt;MeshConcept MeshType&gt; </td></tr>
 <tr class="memitem:ga00bdd954d4901a1650ec870bfd33bae1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__export__buffer.html#ga00bdd954d4901a1650ec870bfd33bae1">vcl::vertexPositionsToBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer, <a class="el" href="group__base.html#ga16a1bfbea022f6766d2f3ebbf69a3b52">MatrixStorageType</a> <a class="el" href="classvcl_1_1Box.html">storage</a>=MatrixStorageType::ROW_MAJOR, uint <a class="el" href="classvcl_1_1Box.html">rowNumber</a>=<a class="el" href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>)</td></tr>
 <tr class="memdesc:ga00bdd954d4901a1650ec870bfd33bae1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export the vertex positions of a mesh to a buffer.  <br /></td></tr>
@@ -165,18 +203,17 @@ Functions</h2></td></tr>
 <tr class="memitem:gac6c298ccd6e5b102b2621c6dcdb10e70"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__export__buffer.html#gac6c298ccd6e5b102b2621c6dcdb10e70">vcl::vertexQuadIndicesToBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer)</td></tr>
 <tr class="memdesc:gac6c298ccd6e5b102b2621c6dcdb10e70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export the indices of a quad per vertex to a buffer.  <br /></td></tr>
 <tr class="separator:gac6c298ccd6e5b102b2621c6dcdb10e70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafa5d8ff626de2fa25ddfafe8684bc100" id="r_gafa5d8ff626de2fa25ddfafe8684bc100"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
-<tr class="memitem:gafa5d8ff626de2fa25ddfafe8684bc100"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__export__buffer.html#gafa5d8ff626de2fa25ddfafe8684bc100">vcl::wireframeIndicesToBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer, <a class="el" href="group__base.html#ga16a1bfbea022f6766d2f3ebbf69a3b52">MatrixStorageType</a> <a class="el" href="classvcl_1_1Box.html">storage</a>=MatrixStorageType::ROW_MAJOR, <a class="el" href="classvcl_1_1Box.html">bool</a> <a class="el" href="classvcl_1_1Box.html">getIndicesAsIfContainerCompact</a>=<a class="el" href="classvcl_1_1Box.html">true</a>, uint <a class="el" href="classvcl_1_1Box.html">rowNumber</a>=<a class="el" href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>)</td></tr>
-<tr class="memdesc:gafa5d8ff626de2fa25ddfafe8684bc100"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export into a buffer the vertex indices for each edge that composes the wireframe of the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> (i.e., the edges of the faces).  <br /></td></tr>
-<tr class="separator:gafa5d8ff626de2fa25ddfafe8684bc100"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2014a35f7d8d3d9202eb8edfb95133d3" id="r_ga2014a35f7d8d3d9202eb8edfb95133d3"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:ga2014a35f7d8d3d9202eb8edfb95133d3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__export__buffer.html#ga2014a35f7d8d3d9202eb8edfb95133d3">vcl::wireframeVertexIndicesToBuffer</a> (<a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">auto</a> *buffer, <a class="el" href="group__base.html#ga16a1bfbea022f6766d2f3ebbf69a3b52">MatrixStorageType</a> <a class="el" href="classvcl_1_1Box.html">storage</a>=MatrixStorageType::ROW_MAJOR, <a class="el" href="classvcl_1_1Box.html">bool</a> <a class="el" href="classvcl_1_1Box.html">getIndicesAsIfContainerCompact</a>=<a class="el" href="classvcl_1_1Box.html">true</a>, uint <a class="el" href="classvcl_1_1Box.html">rowNumber</a>=<a class="el" href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>)</td></tr>
+<tr class="memdesc:ga2014a35f7d8d3d9202eb8edfb95133d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Export into a buffer the vertex indices for each edge that composes the wireframe of the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> (i.e., the edges of the faces).  <br /></td></tr>
+<tr class="separator:ga2014a35f7d8d3d9202eb8edfb95133d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>List Export Mesh to Buffer algorithms. </p>
-<p>They allow to export mesh data to pre-allocated buffers.</p>
-<p>You can access these algorithms by including <code>#include &lt;<a class="el" href="import__export_8h_source.html">vclib/algorithms/mesh/import_export.h</a>&gt;</code> </p>
+<p>They allow to export mesh data to pre-allocated buffers. </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga27fd7ce009bc6cd16cd2beff90d533f7" name="ga27fd7ce009bc6cd16cd2beff90d533f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga27fd7ce009bc6cd16cd2beff90d533f7">&#9670;&#160;</a></span>edgeIndicesToBuffer()</h2>
+<a id="ga957e15c91b27be41fd7efddcc472fd54" name="ga957e15c91b27be41fd7efddcc472fd54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga957e15c91b27be41fd7efddcc472fd54">&#9670;&#160;</a></span>edgeAdjacentEdgesToBuffer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -184,7 +221,143 @@ Functions</h2></td></tr>
 template&lt;EdgeMeshConcept MeshType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::edgeIndicesToBuffer </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::edgeAdjacentEdgesToBuffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">auto</a> *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>largestAdjacentEdgesSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__base.html#ga16a1bfbea022f6766d2f3ebbf69a3b52">MatrixStorageType</a>&#160;</td>
+          <td class="paramname"><em>storage</em> = <code>MatrixStorageType::ROW_MAJOR</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>rowNumber</em> = <code><a class="el" href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Export into a buffer the adjacent edges indices for each edge of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. The number of adjacent edges for each edge can be different, so the user must provide the size of the largest adjacency list with the <code>largestAdjacentEdgesSize</code> parameter. For elements that have less adjacent edges than <code>largestAdjacentEdgesSize</code>, the remaining entries are filled with <code>UINT_NULL</code>. </p>
+<p>You can use the function <a class="el" href="group__mesh__stat.html#gaf5f38898d12b04799ab38cb5c3edb4fb">vcl::largestPerEdgeAdjacentEdgesNumber</a> to get the largest adjacency size and allocate the buffer accordingly:</p>
+<div class="fragment"><div class="line">uint <a class="code hl_class" href="classvcl_1_1Box.html">lva</a> = <a class="code hl_function" href="group__mesh__stat.html#gaf5f38898d12b04799ab38cb5c3edb4fb">vcl::largestPerEdgeAdjacentEdgesNumber</a>(<a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>);</div>
+<div class="line">Eigen::MatrixXi <a class="code hl_class" href="classvcl_1_1Box.html">edgeAdj</a>(<a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>.vertexNumber(), <a class="code hl_class" href="classvcl_1_1Box.html">lva</a>);</div>
+<div class="line"><a class="code hl_function" href="group__export__buffer.html#ga957e15c91b27be41fd7efddcc472fd54">vcl::edgeAdjacentEdgesToBuffer</a>(</div>
+<div class="line">   <a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>, <a class="code hl_class" href="classvcl_1_1Box.html">edgeAdj</a>.data(), <a class="code hl_class" href="classvcl_1_1Box.html">lva</a>, MatrixStorageType::COLUMN_MAJOR);</div>
+<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:46</div></div>
+<div class="ttc" id="agroup__export__buffer_html_ga957e15c91b27be41fd7efddcc472fd54"><div class="ttname"><a href="group__export__buffer.html#ga957e15c91b27be41fd7efddcc472fd54">vcl::edgeAdjacentEdgesToBuffer</a></div><div class="ttdeci">void edgeAdjacentEdgesToBuffer(const MeshType &amp;mesh, auto *buffer, uint largestAdjacentEdgesSize, MatrixStorageType storage=MatrixStorageType::ROW_MAJOR, uint rowNumber=UINT_NULL)</div><div class="ttdoc">Export into a buffer the adjacent edges indices for each edge of a Mesh. The number of adjacent edges...</div><div class="ttdef"><b>Definition</b> export_buffer.h:2275</div></div>
+<div class="ttc" id="agroup__mesh__stat_html_gaf5f38898d12b04799ab38cb5c3edb4fb"><div class="ttname"><a href="group__mesh__stat.html#gaf5f38898d12b04799ab38cb5c3edb4fb">vcl::largestPerEdgeAdjacentEdgesNumber</a></div><div class="ttdeci">uint largestPerEdgeAdjacentEdgesNumber(const EdgeMeshConcept auto &amp;mesh)</div><div class="ttdoc">Returns the largest number of per-edge adjacent edges in the mesh.</div><div class="ttdef"><b>Definition</b> topology.h:439</div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>input mesh </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">buffer</td><td>preallocated buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">largestAdjacentEdgesSize</td><td>size of the largest per-edge edge adjacency list </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">storage</td><td>storage type of the matrix (row or column major) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rowNumber</td><td>number of rows of the matrix (if different from the number of edges in the mesh) - used only when storage is column major </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga6d14a19b99a181df9ad557ed8d6f06c5" name="ga6d14a19b99a181df9ad557ed8d6f06c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6d14a19b99a181df9ad557ed8d6f06c5">&#9670;&#160;</a></span>edgeAdjacentFacesToBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;FaceMeshConcept MeshType&gt; <br />
+requires (EdgeMeshConcept&lt;MeshType&gt;)</div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::edgeAdjacentFacesToBuffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">auto</a> *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>largestAdjacentFacesSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__base.html#ga16a1bfbea022f6766d2f3ebbf69a3b52">MatrixStorageType</a>&#160;</td>
+          <td class="paramname"><em>storage</em> = <code>MatrixStorageType::ROW_MAJOR</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>rowNumber</em> = <code><a class="el" href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Export into a buffer the adjacent faces indices for each edge of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. The number of adjacent faces for each edge can be different, so the user must provide the size of the largest adjacency list with the <code>largestAdjacentFacesSize</code> parameter. For elements that have less adjacent faces than <code>largestAdjacentFacesSize</code>, the remaining entries are filled with <code>UINT_NULL</code>. </p>
+<p>You can use the function <a class="el" href="group__mesh__stat.html#ga5368be363cf9c53553e08e1acf9dbe1b">vcl::largestPerEdgeAdjacentFacesNumber</a> to get the largest adjacency size and allocate the buffer accordingly:</p>
+<div class="fragment"><div class="line">uint <a class="code hl_class" href="classvcl_1_1Box.html">lva</a> = <a class="code hl_function" href="group__mesh__stat.html#ga5368be363cf9c53553e08e1acf9dbe1b">vcl::largestPerEdgeAdjacentFacesNumber</a>(<a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>);</div>
+<div class="line">Eigen::MatrixXi <a class="code hl_class" href="classvcl_1_1Box.html">faceAdj</a>(<a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>.edgeNumber(), <a class="code hl_class" href="classvcl_1_1Box.html">lva</a>);</div>
+<div class="line"><a class="code hl_function" href="group__export__buffer.html#ga6d14a19b99a181df9ad557ed8d6f06c5">vcl::edgeAdjacentFacesToBuffer</a>(</div>
+<div class="line">   <a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>, <a class="code hl_class" href="classvcl_1_1Box.html">faceAdj</a>.data(), <a class="code hl_class" href="classvcl_1_1Box.html">lva</a>, MatrixStorageType::COLUMN_MAJOR);</div>
+<div class="ttc" id="agroup__export__buffer_html_ga6d14a19b99a181df9ad557ed8d6f06c5"><div class="ttname"><a href="group__export__buffer.html#ga6d14a19b99a181df9ad557ed8d6f06c5">vcl::edgeAdjacentFacesToBuffer</a></div><div class="ttdeci">void edgeAdjacentFacesToBuffer(const MeshType &amp;mesh, auto *buffer, uint largestAdjacentFacesSize, MatrixStorageType storage=MatrixStorageType::ROW_MAJOR, uint rowNumber=UINT_NULL)</div><div class="ttdoc">Export into a buffer the adjacent faces indices for each edge of a Mesh. The number of adjacent faces...</div><div class="ttdef"><b>Definition</b> export_buffer.h:2094</div></div>
+<div class="ttc" id="agroup__mesh__stat_html_ga5368be363cf9c53553e08e1acf9dbe1b"><div class="ttname"><a href="group__mesh__stat.html#ga5368be363cf9c53553e08e1acf9dbe1b">vcl::largestPerEdgeAdjacentFacesNumber</a></div><div class="ttdeci">uint largestPerEdgeAdjacentFacesNumber(const FaceMeshConcept auto &amp;mesh)</div><div class="ttdoc">Returns the largest number of per-edge adjacent faces in the mesh.</div><div class="ttdef"><b>Definition</b> topology.h:347</div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>input mesh </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">buffer</td><td>preallocated buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">largestAdjacentFacesSize</td><td>size of the largest per-edge face adjacency list </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">storage</td><td>storage type of the matrix (row or column major) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rowNumber</td><td>number of rows of the matrix (if different from the number of edges in the mesh) - used only when storage is column major </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga1e3a8919dcf172add3646b00e7ae37cc" name="ga1e3a8919dcf172add3646b00e7ae37cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1e3a8919dcf172add3646b00e7ae37cc">&#9670;&#160;</a></span>edgeVertexIndicesToBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;EdgeMeshConcept MeshType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::edgeVertexIndicesToBuffer </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;&#160;</td>
           <td class="paramname"><em>mesh</em>, </td>
@@ -239,85 +412,16 @@ This function does not guarantee that the rows of the matrix correspond to the e
 
 </div>
 </div>
-<a id="ga4d8d20f3cc27e22f326932cd22843fa5" name="ga4d8d20f3cc27e22f326932cd22843fa5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4d8d20f3cc27e22f326932cd22843fa5">&#9670;&#160;</a></span>faceIndicesToBuffer() <span class="overload">[1/2]</span></h2>
+<a id="ga5bbb94e443633f469eb95a2ec7b85fb7" name="ga5bbb94e443633f469eb95a2ec7b85fb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5bbb94e443633f469eb95a2ec7b85fb7">&#9670;&#160;</a></span>elementAdjacentEdgesToBuffer()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;FaceMeshConcept MeshType&gt; </div>
+template&lt;uint ELEM_ID, EdgeMeshConcept MeshType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::faceIndicesToBuffer </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;&#160;</td>
-          <td class="paramname"><em>mesh</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">auto</a> *&#160;</td>
-          <td class="paramname"><em>buffer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">bool</a>&#160;</td>
-          <td class="paramname"><em>getIndicesAsIfContainerCompact</em> = <code><a class="el" href="classvcl_1_1Box.html">true</a></code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Export into a buffer the vertex indices for each face of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. Faces can be polygons. </p>
-<p>This function exports the vertex indices of the polygonal faces of a mesh to a buffer. Indices are stored consecutively in the buffer, following the order the faces appear in the mesh. The buffer must be preallocated with the correct size (sum of the sizes of the faces).</p>
-<p>You can use the function <a class="el" href="group__export__buffer.html#gad458d46401c443ee325a7bc9200a578a">vcl::faceSizesToBuffer</a> to get the sizes of the faces and allocate the buffer accordingly:</p>
-<div class="fragment"><div class="line">std::vector&lt;uint&gt; <a class="code hl_class" href="classvcl_1_1Box.html">faceSizes</a>(<a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>.faceNumber());</div>
-<div class="line">uint sum = <a class="code hl_function" href="group__export__buffer.html#gad458d46401c443ee325a7bc9200a578a">vcl::faceSizesToBuffer</a>(<a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>, <a class="code hl_class" href="classvcl_1_1Box.html">sizes</a>.data());</div>
-<div class="line">std::vector&lt;uint&gt; <a class="code hl_class" href="classvcl_1_1Box.html">faceIndices</a>(sum);</div>
-<div class="line"><a class="code hl_function" href="group__export__buffer.html#ga4d8d20f3cc27e22f326932cd22843fa5">vcl::faceIndicesToBuffer</a>(<a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>, <a class="code hl_class" href="classvcl_1_1Box.html">faceIndices</a>.data());</div>
-<div class="line"> </div>
-<div class="line"><span class="comment">// read indices for each face</span></div>
-<div class="line">uint offset = 0;</div>
-<div class="line"><span class="keywordflow">for</span> (uint <a class="code hl_class" href="classvcl_1_1Box.html">i</a> = 0; <a class="code hl_class" href="classvcl_1_1Box.html">i</a> &lt; <a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>.faceNumber(); ++<a class="code hl_class" href="classvcl_1_1Box.html">i</a>) {</div>
-<div class="line">    uint size = <a class="code hl_class" href="classvcl_1_1Box.html">faceSizes</a>[<a class="code hl_class" href="classvcl_1_1Box.html">i</a>];</div>
-<div class="line">    <span class="keywordflow">for</span> (uint <a class="code hl_class" href="classvcl_1_1Box.html">j</a> = 0; <a class="code hl_class" href="classvcl_1_1Box.html">j</a> &lt; size; ++<a class="code hl_class" href="classvcl_1_1Box.html">j</a>) {</div>
-<div class="line">        uint <a class="code hl_class" href="classvcl_1_1Box.html">vIdx</a> = <a class="code hl_class" href="classvcl_1_1Box.html">faceIndices</a>[offset + <a class="code hl_class" href="classvcl_1_1Box.html">j</a>];</div>
-<div class="line">        <span class="comment">// do something with the vertex index</span></div>
-<div class="line">    }</div>
-<div class="line">    offset += size;</div>
-<div class="line">}</div>
-<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:46</div></div>
-<div class="ttc" id="agroup__export__buffer_html_ga4d8d20f3cc27e22f326932cd22843fa5"><div class="ttname"><a href="group__export__buffer.html#ga4d8d20f3cc27e22f326932cd22843fa5">vcl::faceIndicesToBuffer</a></div><div class="ttdeci">void faceIndicesToBuffer(const MeshType &amp;mesh, auto *buffer, bool getIndicesAsIfContainerCompact=true)</div><div class="ttdoc">Export into a buffer the vertex indices for each face of a Mesh. Faces can be polygons.</div><div class="ttdef"><b>Definition</b> export_buffer.h:257</div></div>
-<div class="ttc" id="agroup__export__buffer_html_gad458d46401c443ee325a7bc9200a578a"><div class="ttname"><a href="group__export__buffer.html#gad458d46401c443ee325a7bc9200a578a">vcl::faceSizesToBuffer</a></div><div class="ttdeci">uint faceSizesToBuffer(const MeshType &amp;mesh, auto *buffer)</div><div class="ttdoc">Export into a buffer the sizes of the faces of a Mesh, and return the sum of the sizes.</div><div class="ttdef"><b>Definition</b> export_buffer.h:195</div></div>
-</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>As a default behaviour (<code>getIndicesAsIfContainerCompact == true</code>) the function stores the vertex indices as if the vertex container of the mesh is compact. This means that, if the mesh has deleted vertices, the vertex indices stored in the buffer may not correspond to the vertex indices of the mesh. If you want to store the actual vertex indices in the input mesh, set <code>getIndicesAsIfContainerCompact</code> to false.</dd>
-<dd>
-This function does not guarantee that the rows of the matrix correspond to the face indices of the mesh. This scenario is possible when the mesh has deleted faces. To be sure to have a direct correspondence, compact the face container before calling this function.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>input mesh </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">buffer</td><td>preallocated buffer </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">getIndicesAsIfContainerCompact</td><td>if true, the function will store the vertex indices as if the vertex container of the mesh is compact. If false, the actual vertex indices in the input mesh will be stored. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ga42a18d1937c793c2a800b3d3143a881b" name="ga42a18d1937c793c2a800b3d3143a881b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga42a18d1937c793c2a800b3d3143a881b">&#9670;&#160;</a></span>faceIndicesToBuffer() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;FaceMeshConcept MeshType&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::faceIndicesToBuffer </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::elementAdjacentEdgesToBuffer </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;&#160;</td>
           <td class="paramname"><em>mesh</em>, </td>
@@ -332,19 +436,13 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint&#160;</td>
-          <td class="paramname"><em>largestFaceSize</em>, </td>
+          <td class="paramname"><em>largestAdjacentEdgesSize</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="group__base.html#ga16a1bfbea022f6766d2f3ebbf69a3b52">MatrixStorageType</a>&#160;</td>
           <td class="paramname"><em>storage</em> = <code>MatrixStorageType::ROW_MAJOR</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">bool</a>&#160;</td>
-          <td class="paramname"><em>getIndicesAsIfContainerCompact</em> = <code><a class="el" href="classvcl_1_1Box.html">true</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -360,25 +458,259 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Export into a buffer the vertex indices for each face of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. Faces can be polygons, and the number of output columns can be set by the user with the <code>largestFaceSize</code> parameter. </p>
-<p>This function exports the vertex indices of the polygonal faces of a mesh to a buffer. Indices are stored following the order the faces appear in the mesh. The buffer must be preallocated with the correct size (number of faces times <code>largestFaceSize</code>). For each face that has less vertices than the largest face size, the remaining indices are set to -1.</p>
-<p>For triangle meshes, you can set <code>largestFaceSize</code> to 3. For polygonal meshes, you can use the function <a class="el" href="group__mesh__stat.html#gad5656feacf649e99e4d3113855f20249">vcl::largestFaceSize</a> to get the largest face size and allocate the buffer accordingly:</p>
+<p>Export into a buffer the adjacent edges indices for each ELEM_ID element of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. The number of adjacent edges for each ELEM_ID can be different, so the user must provide the size of the largest adjacency list with the <code>largestAdjacentEdgesSize</code> parameter. For elements that have less adjacent faces than <code>largestAdjacentEdgesSize</code>, the remaining entries are filled with <code>UINT_NULL</code>. </p>
+<p>You can use the function <a class="el" href="group__mesh__stat.html#gafbda576740272ea1043565c6daaa9f75">vcl::largestPerElementAdjacentEdgesNumber</a> to get the largest adjacency size and allocate the buffer accordingly:</p>
+<div class="fragment"><div class="line">uint <a class="code hl_class" href="classvcl_1_1Box.html">lva</a> = <a class="code hl_class" href="classvcl_1_1Box.html">vcl::largestPerElementAdjacentEdgesNumber&lt;ELEM_ID&gt;</a>(<a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>);</div>
+<div class="line">Eigen::MatrixXi <a class="code hl_class" href="classvcl_1_1Box.html">edgeAdj</a>(<a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>.number&lt;ELEM_ID&gt;(), <a class="code hl_class" href="classvcl_1_1Box.html">lva</a>);</div>
+<div class="line"><a class="code hl_class" href="classvcl_1_1Box.html">vcl::elementAdjacentEdgesToBuffer&lt;ELEM_ID&gt;</a>(</div>
+<div class="line">   <a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>, <a class="code hl_class" href="classvcl_1_1Box.html">edgeAdj</a>.data(), <a class="code hl_class" href="classvcl_1_1Box.html">lva</a>, MatrixStorageType::COLUMN_MAJOR);</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>input mesh </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">buffer</td><td>preallocated buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">largestAdjacentEdgesSize</td><td>size of the largest per-element edge adjacency list </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">storage</td><td>storage type of the matrix (row or column major) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rowNumber</td><td>number of rows of the matrix (if different from the number of elements in the mesh) - used only when storage is column major </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaee6f990fc6f23dcc98bdf2eb4129c557" name="gaee6f990fc6f23dcc98bdf2eb4129c557"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaee6f990fc6f23dcc98bdf2eb4129c557">&#9670;&#160;</a></span>elementAdjacentFacesToBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;uint ELEM_ID, FaceMeshConcept MeshType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::elementAdjacentFacesToBuffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">auto</a> *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>largestAdjacentFacesSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__base.html#ga16a1bfbea022f6766d2f3ebbf69a3b52">MatrixStorageType</a>&#160;</td>
+          <td class="paramname"><em>storage</em> = <code>MatrixStorageType::ROW_MAJOR</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>rowNumber</em> = <code><a class="el" href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Export into a buffer the adjacent faces indices for each ELEM_ID element of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. The number of adjacent faces for each ELEM_ID can be different, so the user must provide the size of the largest adjacency list with the <code>largestAdjacentFacesSize</code> parameter. For elements that have less adjacent faces than <code>largestAdjacentFacesSize</code>, the remaining entries are filled with <code>UINT_NULL</code>. </p>
+<p>You can use the function <a class="el" href="group__mesh__stat.html#ga0a20eba4f6d79ac8fcc11af7e29fccc6">vcl::largestPerElementAdjacentFacesNumber</a> to get the largest adjacency size and allocate the buffer accordingly:</p>
+<div class="fragment"><div class="line">uint <a class="code hl_class" href="classvcl_1_1Box.html">lva</a> = <a class="code hl_class" href="classvcl_1_1Box.html">vcl::largestPerElementAdjacentFacesNumber&lt;ELEM_ID&gt;</a>(<a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>);</div>
+<div class="line">Eigen::MatrixXi <a class="code hl_class" href="classvcl_1_1Box.html">faceAdj</a>(<a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>.number&lt;ELEM_ID&gt;(), <a class="code hl_class" href="classvcl_1_1Box.html">lva</a>);</div>
+<div class="line"><a class="code hl_class" href="classvcl_1_1Box.html">vcl::elementAdjacentFacesToBuffer&lt;ELEM_ID&gt;</a>(</div>
+<div class="line">   <a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>, <a class="code hl_class" href="classvcl_1_1Box.html">faceAdj</a>.data(), <a class="code hl_class" href="classvcl_1_1Box.html">lva</a>, MatrixStorageType::COLUMN_MAJOR);</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>input mesh </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">buffer</td><td>preallocated buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">largestAdjacentFacesSize</td><td>size of the largest per-element face adjacency list </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">storage</td><td>storage type of the matrix (row or column major) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rowNumber</td><td>number of rows of the matrix (if different from the number of elements in the mesh) - used only when storage is column major </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga40e8cdc0761d2f1ad45114f111bf192e" name="ga40e8cdc0761d2f1ad45114f111bf192e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga40e8cdc0761d2f1ad45114f111bf192e">&#9670;&#160;</a></span>faceAdjacentEdgesToBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;EdgeMeshConcept MeshType&gt; <br />
+requires (FaceMeshConcept&lt;MeshType&gt;)</div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::faceAdjacentEdgesToBuffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">auto</a> *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>largestAdjacentEdgesSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__base.html#ga16a1bfbea022f6766d2f3ebbf69a3b52">MatrixStorageType</a>&#160;</td>
+          <td class="paramname"><em>storage</em> = <code>MatrixStorageType::ROW_MAJOR</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>rowNumber</em> = <code><a class="el" href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Export into a buffer the adjacent edges indices for each face of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. The number of adjacent edges for each face can be different, so the user must provide the size of the largest adjacency list with the <code>largestAdjacentEdgesSize</code> parameter. For elements that have less adjacent edges than <code>largestAdjacentEdgesSize</code>, the remaining entries are filled with <code>UINT_NULL</code>. </p>
+<p>You can use the function <a class="el" href="group__mesh__stat.html#ga503f56f1113ee20ac21c9dc15de2b032">vcl::largestPerFaceAdjacentEdgesNumber</a> to get the largest adjacency size and allocate the buffer accordingly:</p>
+<div class="fragment"><div class="line">uint <a class="code hl_class" href="classvcl_1_1Box.html">lva</a> = <a class="code hl_function" href="group__mesh__stat.html#ga503f56f1113ee20ac21c9dc15de2b032">vcl::largestPerFaceAdjacentEdgesNumber</a>(<a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>);</div>
+<div class="line">Eigen::MatrixXi <a class="code hl_class" href="classvcl_1_1Box.html">edgeAdj</a>(<a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>.vertexNumber(), <a class="code hl_class" href="classvcl_1_1Box.html">lva</a>);</div>
+<div class="line"><a class="code hl_function" href="group__export__buffer.html#ga40e8cdc0761d2f1ad45114f111bf192e">vcl::faceAdjacentEdgesToBuffer</a>(</div>
+<div class="line">   <a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>, <a class="code hl_class" href="classvcl_1_1Box.html">edgeAdj</a>.data(), <a class="code hl_class" href="classvcl_1_1Box.html">lva</a>, MatrixStorageType::COLUMN_MAJOR);</div>
+<div class="ttc" id="agroup__export__buffer_html_ga40e8cdc0761d2f1ad45114f111bf192e"><div class="ttname"><a href="group__export__buffer.html#ga40e8cdc0761d2f1ad45114f111bf192e">vcl::faceAdjacentEdgesToBuffer</a></div><div class="ttdeci">void faceAdjacentEdgesToBuffer(const MeshType &amp;mesh, auto *buffer, uint largestAdjacentEdgesSize, MatrixStorageType storage=MatrixStorageType::ROW_MAJOR, uint rowNumber=UINT_NULL)</div><div class="ttdoc">Export into a buffer the adjacent edges indices for each face of a Mesh. The number of adjacent edges...</div><div class="ttdef"><b>Definition</b> export_buffer.h:2235</div></div>
+<div class="ttc" id="agroup__mesh__stat_html_ga503f56f1113ee20ac21c9dc15de2b032"><div class="ttname"><a href="group__mesh__stat.html#ga503f56f1113ee20ac21c9dc15de2b032">vcl::largestPerFaceAdjacentEdgesNumber</a></div><div class="ttdeci">uint largestPerFaceAdjacentEdgesNumber(const EdgeMeshConcept auto &amp;mesh)</div><div class="ttdoc">Returns the largest number of per-face adjacent edges in the mesh.</div><div class="ttdef"><b>Definition</b> topology.h:419</div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>input mesh </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">buffer</td><td>preallocated buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">largestAdjacentEdgesSize</td><td>size of the largest per-face edge adjacency list </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">storage</td><td>storage type of the matrix (row or column major) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rowNumber</td><td>number of rows of the matrix (if different from the number of faces in the mesh) - used only when storage is column major </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga62871ec6c69aa1e0209ffbf00d374ced" name="ga62871ec6c69aa1e0209ffbf00d374ced"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga62871ec6c69aa1e0209ffbf00d374ced">&#9670;&#160;</a></span>faceAdjacentFacesToBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;FaceMeshConcept MeshType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::faceAdjacentFacesToBuffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">auto</a> *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>largestFacesSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__base.html#ga16a1bfbea022f6766d2f3ebbf69a3b52">MatrixStorageType</a>&#160;</td>
+          <td class="paramname"><em>storage</em> = <code>MatrixStorageType::ROW_MAJOR</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>rowNumber</em> = <code><a class="el" href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Export into a buffer the adjacent faces indices for each face of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. The number of adjacent faces for each face is expected to be equal to the largestFaceSize (see <a class="el" href="group__mesh__stat.html#gad5656feacf649e99e4d3113855f20249">vcl::largestFaceSize</a>). </p>
 <div class="fragment"><div class="line">uint <a class="code hl_class" href="classvcl_1_1Box.html">lfs</a> = <a class="code hl_function" href="group__mesh__stat.html#gad5656feacf649e99e4d3113855f20249">vcl::largestFaceSize</a>(<a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>);</div>
-<div class="line">Eigen::MatrixXi <a class="code hl_class" href="classvcl_1_1Box.html">faceIndices</a>(<a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>.faceNumber(), <a class="code hl_class" href="classvcl_1_1Box.html">lfs</a>);</div>
-<div class="line"><a class="code hl_function" href="group__export__buffer.html#ga4d8d20f3cc27e22f326932cd22843fa5">vcl::faceIndicesToBuffer</a>(</div>
-<div class="line">    <a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>, <a class="code hl_class" href="classvcl_1_1Box.html">faceIndices</a>.data(), <a class="code hl_class" href="classvcl_1_1Box.html">lfs</a>, MatrixStorageType::COLUMN_MAJOR);</div>
-<div class="ttc" id="agroup__mesh__stat_html_gad5656feacf649e99e4d3113855f20249"><div class="ttname"><a href="group__mesh__stat.html#gad5656feacf649e99e4d3113855f20249">vcl::largestFaceSize</a></div><div class="ttdeci">uint largestFaceSize(const FaceMeshConcept auto &amp;mesh)</div><div class="ttdoc">Returns the largest face size in the mesh.</div><div class="ttdef"><b>Definition</b> topology.h:211</div></div>
-</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>As a default behaviour (<code>getIndicesAsIfContainerCompact == true</code>) the function stores the vertex indices as if the vertex container of the mesh is compact. This means that, if the mesh has deleted vertices, the vertex indices stored in the buffer may not correspond to the vertex indices of the mesh. If you want to store the actual vertex indices in the input mesh, set <code>getIndicesAsIfContainerCompact</code> to false.</dd>
-<dd>
-This function does not guarantee that the rows of the matrix correspond to the face indices of the mesh. This scenario is possible when the mesh has deleted faces. To be sure to have a direct correspondence, compact the face container before calling this function.</dd></dl>
+<div class="line">Eigen::MatrixXi <a class="code hl_class" href="classvcl_1_1Box.html">faceAdj</a>(<a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>.faceNumber(), <a class="code hl_class" href="classvcl_1_1Box.html">lfs</a>);</div>
+<div class="line"><a class="code hl_function" href="group__export__buffer.html#ga62871ec6c69aa1e0209ffbf00d374ced">vcl::faceAdjacentFacesToBuffer</a>(</div>
+<div class="line">   <a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>, <a class="code hl_class" href="classvcl_1_1Box.html">faceAdj</a>.data(), <a class="code hl_class" href="classvcl_1_1Box.html">lfs</a>, MatrixStorageType::COLUMN_MAJOR);</div>
+<div class="ttc" id="agroup__export__buffer_html_ga62871ec6c69aa1e0209ffbf00d374ced"><div class="ttname"><a href="group__export__buffer.html#ga62871ec6c69aa1e0209ffbf00d374ced">vcl::faceAdjacentFacesToBuffer</a></div><div class="ttdeci">void faceAdjacentFacesToBuffer(const MeshType &amp;mesh, auto *buffer, uint largestFacesSize, MatrixStorageType storage=MatrixStorageType::ROW_MAJOR, uint rowNumber=UINT_NULL)</div><div class="ttdoc">Export into a buffer the adjacent faces indices for each face of a Mesh. The number of adjacent faces...</div><div class="ttdef"><b>Definition</b> export_buffer.h:2054</div></div>
+<div class="ttc" id="agroup__mesh__stat_html_gad5656feacf649e99e4d3113855f20249"><div class="ttname"><a href="group__mesh__stat.html#gad5656feacf649e99e4d3113855f20249">vcl::largestFaceSize</a></div><div class="ttdeci">uint largestFaceSize(const FaceMeshConcept auto &amp;mesh)</div><div class="ttdoc">Returns the largest face size in the mesh.</div><div class="ttdef"><b>Definition</b> topology.h:212</div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>input mesh </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">buffer</td><td>preallocated buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">largestFacesSize</td><td>size of the largest face in the mesh </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">storage</td><td>storage type of the matrix (row or column major) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rowNumber</td><td>number of rows of the matrix (if different from the number of faces in the mesh) - used only when storage is column major </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gafc7d9ba74289dbd5a7ed0bf8ccfa1e21" name="gafc7d9ba74289dbd5a7ed0bf8ccfa1e21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafc7d9ba74289dbd5a7ed0bf8ccfa1e21">&#9670;&#160;</a></span>faceMaterialIndicesToBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;FaceMeshConcept MeshType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::faceMaterialIndicesToBuffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">auto</a> *&#160;</td>
+          <td class="paramname"><em>buffer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Export into a buffer the per face material indices of a mesh. </p>
+<p>This function exports the per face material indices of a mesh to a buffer. <a class="el" href="classvcl_1_1Material.html" title="Represents a Physically-Based Rendering (PBR) material.">Material</a> indices are stored in the buffer following the order the faces appear in the mesh. The buffer must be preallocated with the correct size (number of faces).</p>
+<dl class="section note"><dt>Note</dt><dd>This function does not guarantee that the rows of the buffer correspond to the face indices of the mesh. This scenario is possible when the mesh has deleted faces. To be sure to have a direct correspondence, compact the face container before calling this function.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>input mesh </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">buffer</td><td>preallocated buffer </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">largestFaceSize</td><td>size of the largest face in the mesh </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">storage</td><td>storage type of the matrix (row or column major) </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">getIndicesAsIfContainerCompact</td><td>if true, the function will store the vertex indices as if the vertex container of the mesh is compact. If false, the actual vertex indices in the input mesh will be stored. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">rowNumber</td><td>number of rows of the matrix (if different from the number of faces in the mesh) - used only when storage is column major </td></tr>
   </table>
   </dd>
 </dl>
@@ -428,8 +760,8 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
 
 </div>
 </div>
-<a id="ga733bf9300bb3024c9239999b7b05e220" name="ga733bf9300bb3024c9239999b7b05e220"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga733bf9300bb3024c9239999b7b05e220">&#9670;&#160;</a></span>faceWedgeTexCoordIndicesToBuffer()</h2>
+<a id="ga838119428d9b86ff03988eee038d5654" name="ga838119428d9b86ff03988eee038d5654"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga838119428d9b86ff03988eee038d5654">&#9670;&#160;</a></span>faceVertexIndicesToBuffer() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -437,7 +769,7 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
 template&lt;FaceMeshConcept MeshType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::faceWedgeTexCoordIndicesToBuffer </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::faceVertexIndicesToBuffer </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;&#160;</td>
           <td class="paramname"><em>mesh</em>, </td>
@@ -446,7 +778,13 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">auto</a> *&#160;</td>
-          <td class="paramname"><em>buffer</em>&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">bool</a>&#160;</td>
+          <td class="paramname"><em>getIndicesAsIfContainerCompact</em> = <code><a class="el" href="classvcl_1_1Box.html">true</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -456,13 +794,110 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Export into a buffer the per face wedge texture indices of a mesh. </p>
-<p>This function exports the per face wedge texture coordinate indices of a mesh to a buffer. <a class="el" href="classvcl_1_1Texture.html">Texture</a> coordinate indices are stored in the buffer following the order the faces appear in the mesh. The buffer must be preallocated with the correct size (number of faces).</p>
-<dl class="section note"><dt>Note</dt><dd>This function does not guarantee that the rows of the buffer correspond to the face indices of the mesh. This scenario is possible when the mesh has deleted faces. To be sure to have a direct correspondence, compact the face container before calling this function.</dd></dl>
+<p>Export into a buffer the vertex indices for each face of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. Faces can be polygons. </p>
+<p>This function exports the vertex indices of the polygonal faces of a mesh to a buffer. Indices are stored consecutively in the buffer, following the order the faces appear in the mesh. The buffer must be preallocated with the correct size (sum of the sizes of the faces).</p>
+<p>You can use the function <a class="el" href="group__export__buffer.html#gad458d46401c443ee325a7bc9200a578a">vcl::faceSizesToBuffer</a> to get the sizes of the faces and allocate the buffer accordingly:</p>
+<div class="fragment"><div class="line">std::vector&lt;uint&gt; <a class="code hl_class" href="classvcl_1_1Box.html">faceSizes</a>(<a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>.faceNumber());</div>
+<div class="line">uint sum = <a class="code hl_function" href="group__export__buffer.html#gad458d46401c443ee325a7bc9200a578a">vcl::faceSizesToBuffer</a>(<a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>, <a class="code hl_class" href="classvcl_1_1Box.html">sizes</a>.data());</div>
+<div class="line">std::vector&lt;uint&gt; <a class="code hl_class" href="classvcl_1_1Box.html">faceIndices</a>(sum);</div>
+<div class="line"><a class="code hl_function" href="group__export__buffer.html#ga838119428d9b86ff03988eee038d5654">vcl::faceVertexIndicesToBuffer</a>(<a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>, <a class="code hl_class" href="classvcl_1_1Box.html">faceIndices</a>.data());</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// read indices for each face</span></div>
+<div class="line">uint offset = 0;</div>
+<div class="line"><span class="keywordflow">for</span> (uint <a class="code hl_class" href="classvcl_1_1Box.html">i</a> = 0; <a class="code hl_class" href="classvcl_1_1Box.html">i</a> &lt; <a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>.faceNumber(); ++<a class="code hl_class" href="classvcl_1_1Box.html">i</a>) {</div>
+<div class="line">    uint size = <a class="code hl_class" href="classvcl_1_1Box.html">faceSizes</a>[<a class="code hl_class" href="classvcl_1_1Box.html">i</a>];</div>
+<div class="line">    <span class="keywordflow">for</span> (uint <a class="code hl_class" href="classvcl_1_1Box.html">j</a> = 0; <a class="code hl_class" href="classvcl_1_1Box.html">j</a> &lt; size; ++<a class="code hl_class" href="classvcl_1_1Box.html">j</a>) {</div>
+<div class="line">        uint <a class="code hl_class" href="classvcl_1_1Box.html">vIdx</a> = <a class="code hl_class" href="classvcl_1_1Box.html">faceIndices</a>[offset + <a class="code hl_class" href="classvcl_1_1Box.html">j</a>];</div>
+<div class="line">        <span class="comment">// do something with the vertex index</span></div>
+<div class="line">    }</div>
+<div class="line">    offset += size;</div>
+<div class="line">}</div>
+<div class="ttc" id="agroup__export__buffer_html_ga838119428d9b86ff03988eee038d5654"><div class="ttname"><a href="group__export__buffer.html#ga838119428d9b86ff03988eee038d5654">vcl::faceVertexIndicesToBuffer</a></div><div class="ttdeci">void faceVertexIndicesToBuffer(const MeshType &amp;mesh, auto *buffer, bool getIndicesAsIfContainerCompact=true)</div><div class="ttdoc">Export into a buffer the vertex indices for each face of a Mesh. Faces can be polygons.</div><div class="ttdef"><b>Definition</b> export_buffer.h:226</div></div>
+<div class="ttc" id="agroup__export__buffer_html_gad458d46401c443ee325a7bc9200a578a"><div class="ttname"><a href="group__export__buffer.html#gad458d46401c443ee325a7bc9200a578a">vcl::faceSizesToBuffer</a></div><div class="ttdeci">uint faceSizesToBuffer(const MeshType &amp;mesh, auto *buffer)</div><div class="ttdoc">Export into a buffer the sizes of the faces of a Mesh, and return the sum of the sizes.</div><div class="ttdef"><b>Definition</b> export_buffer.h:164</div></div>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>As a default behaviour (<code>getIndicesAsIfContainerCompact == true</code>) the function stores the vertex indices as if the vertex container of the mesh is compact. This means that, if the mesh has deleted vertices, the vertex indices stored in the buffer may not correspond to the vertex indices of the mesh. If you want to store the actual vertex indices in the input mesh, set <code>getIndicesAsIfContainerCompact</code> to false.</dd>
+<dd>
+This function does not guarantee that the rows of the matrix correspond to the face indices of the mesh. This scenario is possible when the mesh has deleted faces. To be sure to have a direct correspondence, compact the face container before calling this function.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>input mesh </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">buffer</td><td>preallocated buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">getIndicesAsIfContainerCompact</td><td>if true, the function will store the vertex indices as if the vertex container of the mesh is compact. If false, the actual vertex indices in the input mesh will be stored. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga48080f61737b62cc18841ff1e8690a2a" name="ga48080f61737b62cc18841ff1e8690a2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga48080f61737b62cc18841ff1e8690a2a">&#9670;&#160;</a></span>faceVertexIndicesToBuffer() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;FaceMeshConcept MeshType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::faceVertexIndicesToBuffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">auto</a> *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>largestFaceSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__base.html#ga16a1bfbea022f6766d2f3ebbf69a3b52">MatrixStorageType</a>&#160;</td>
+          <td class="paramname"><em>storage</em> = <code>MatrixStorageType::ROW_MAJOR</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">bool</a>&#160;</td>
+          <td class="paramname"><em>getIndicesAsIfContainerCompact</em> = <code><a class="el" href="classvcl_1_1Box.html">true</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>rowNumber</em> = <code><a class="el" href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Export into a buffer the vertex indices for each face of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. Faces can be polygons, and the number of output columns can be set by the user with the <code>largestFaceSize</code> parameter. </p>
+<p>This function exports the vertex indices of the polygonal faces of a mesh to a buffer. Indices are stored following the order the faces appear in the mesh. The buffer must be preallocated with the correct size (number of faces times <code>largestFaceSize</code>). For each face that has less vertices than the largest face size, the remaining indices are set to -1.</p>
+<p>For triangle meshes, you can set <code>largestFaceSize</code> to 3. For polygonal meshes, you can use the function <a class="el" href="group__mesh__stat.html#gad5656feacf649e99e4d3113855f20249">vcl::largestFaceSize</a> to get the largest face size and allocate the buffer accordingly:</p>
+<div class="fragment"><div class="line">uint <a class="code hl_class" href="classvcl_1_1Box.html">lfs</a> = <a class="code hl_function" href="group__mesh__stat.html#gad5656feacf649e99e4d3113855f20249">vcl::largestFaceSize</a>(<a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>);</div>
+<div class="line">Eigen::MatrixXi <a class="code hl_class" href="classvcl_1_1Box.html">faceIndices</a>(<a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>.faceNumber(), <a class="code hl_class" href="classvcl_1_1Box.html">lfs</a>);</div>
+<div class="line"><a class="code hl_function" href="group__export__buffer.html#ga838119428d9b86ff03988eee038d5654">vcl::faceVertexIndicesToBuffer</a>(</div>
+<div class="line">    <a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>, <a class="code hl_class" href="classvcl_1_1Box.html">faceIndices</a>.data(), <a class="code hl_class" href="classvcl_1_1Box.html">lfs</a>, MatrixStorageType::COLUMN_MAJOR);</div>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>As a default behaviour (<code>getIndicesAsIfContainerCompact == true</code>) the function stores the vertex indices as if the vertex container of the mesh is compact. This means that, if the mesh has deleted vertices, the vertex indices stored in the buffer may not correspond to the vertex indices of the mesh. If you want to store the actual vertex indices in the input mesh, set <code>getIndicesAsIfContainerCompact</code> to false.</dd>
+<dd>
+This function does not guarantee that the rows of the matrix correspond to the face indices of the mesh. This scenario is possible when the mesh has deleted faces. To be sure to have a direct correspondence, compact the face container before calling this function.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>input mesh </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">buffer</td><td>preallocated buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">largestFaceSize</td><td>size of the largest face in the mesh </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">storage</td><td>storage type of the matrix (row or column major) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">getIndicesAsIfContainerCompact</td><td>if true, the function will store the vertex indices as if the vertex container of the mesh is compact. If false, the actual vertex indices in the input mesh will be stored. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rowNumber</td><td>number of rows of the matrix (if different from the number of faces in the mesh) - used only when storage is column major </td></tr>
   </table>
   </dd>
 </dl>
@@ -556,8 +991,8 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
 
 </div>
 </div>
-<a id="ga1536428adc2a72c8eb60d3e92b0fce32" name="ga1536428adc2a72c8eb60d3e92b0fce32"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1536428adc2a72c8eb60d3e92b0fce32">&#9670;&#160;</a></span>triangulatedFaceIndicesToBuffer()</h2>
+<a id="ga7d6d7feffe49d2925572cce1877ee472" name="ga7d6d7feffe49d2925572cce1877ee472"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7d6d7feffe49d2925572cce1877ee472">&#9670;&#160;</a></span>triangulatedFaceMaterialIndicesToBuffer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -565,7 +1000,55 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
 template&lt;FaceMeshConcept MeshType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::triangulatedFaceIndicesToBuffer </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::triangulatedFaceMaterialIndicesToBuffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">auto</a> *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1TriPolyIndexBiMap.html">TriPolyIndexBiMap</a> &amp;&#160;</td>
+          <td class="paramname"><em>indexMap</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Export into a buffer the per triangle material indices of a mesh. Triangles are computed by triangulating the faces of the mesh. </p>
+<p>This function exports the per triangle material indices of a mesh to a buffer. <a class="el" href="classvcl_1_1Material.html" title="Represents a Physically-Based Rendering (PBR) material.">Material</a> indices are stored in the buffer following the order the faces appear in the mesh. The buffer must be preallocated with the correct size (number of triangles).</p>
+<p>The function requires an already computed index map, which maps each triangle to the face index and vice versa. You can use the vcl::triangulatedFaceIndicesToBuffer function to get the index map. You can use the function <a class="el" href="group__mesh__stat.html#gaf3eee47cce6b1cc41a7a6af6c7d5d39c">vcl::countTriangulatedTriangles</a> to get the number of resulting triangles and allocate the buffer accordingly.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>input mesh </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">buffer</td><td>preallocated buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">indexMap</td><td>map from triangle index to face index </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga22430633156d0c20912fdbba06cdf122" name="ga22430633156d0c20912fdbba06cdf122"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga22430633156d0c20912fdbba06cdf122">&#9670;&#160;</a></span>triangulatedFaceVertexIndicesToBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;FaceMeshConcept MeshType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::triangulatedFaceVertexIndicesToBuffer </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;&#160;</td>
           <td class="paramname"><em>mesh</em>, </td>
@@ -614,12 +1097,12 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
 <div class="fragment"><div class="line">uint numTris = <a class="code hl_function" href="group__mesh__stat.html#gaf3eee47cce6b1cc41a7a6af6c7d5d39c">vcl::countTriangulatedTriangles</a>(<a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>);</div>
 <div class="line">Eigen::MatrixXi <a class="code hl_class" href="classvcl_1_1Box.html">triIndices</a>(numTris, 3);</div>
 <div class="line"><a class="code hl_class" href="classvcl_1_1TriPolyIndexBiMap.html">vcl::TriPolyIndexBiMap</a> indexMap;</div>
-<div class="line"><a class="code hl_function" href="group__export__buffer.html#ga1536428adc2a72c8eb60d3e92b0fce32">vcl::triangulatedFaceIndicesToBuffer</a>(</div>
+<div class="line"><a class="code hl_function" href="group__export__buffer.html#ga22430633156d0c20912fdbba06cdf122">vcl::triangulatedFaceVertexIndicesToBuffer</a>(</div>
 <div class="line">    <a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>, <a class="code hl_class" href="classvcl_1_1Box.html">triIndices</a>.data(), indexMap, MatrixStorageType::COLUMN_MAJOR,</div>
 <div class="line">    numTris);</div>
 <div class="ttc" id="aclassvcl_1_1TriPolyIndexBiMap_html"><div class="ttname"><a href="classvcl_1_1TriPolyIndexBiMap.html">vcl::TriPolyIndexBiMap</a></div><div class="ttdoc">The TriPolyIndexBiMap class allows to store a bidirectional mapping between a Polygon Mesh and a Tria...</div><div class="ttdef"><b>Definition</b> tri_poly_index_bimap.h:50</div></div>
-<div class="ttc" id="agroup__export__buffer_html_ga1536428adc2a72c8eb60d3e92b0fce32"><div class="ttname"><a href="group__export__buffer.html#ga1536428adc2a72c8eb60d3e92b0fce32">vcl::triangulatedFaceIndicesToBuffer</a></div><div class="ttdeci">void triangulatedFaceIndicesToBuffer(const MeshType &amp;mesh, auto *buffer, TriPolyIndexBiMap &amp;indexMap=detail::indexMap, MatrixStorageType storage=MatrixStorageType::ROW_MAJOR, uint numTriangles=UINT_NULL, bool getIndicesAsIfContainerCompact=true)</div><div class="ttdoc">Export into a buffer the vertex indices for each triangle computed by triangulating the faces of a Me...</div><div class="ttdef"><b>Definition</b> export_buffer.h:403</div></div>
-<div class="ttc" id="agroup__mesh__stat_html_gaf3eee47cce6b1cc41a7a6af6c7d5d39c"><div class="ttname"><a href="group__mesh__stat.html#gaf3eee47cce6b1cc41a7a6af6c7d5d39c">vcl::countTriangulatedTriangles</a></div><div class="ttdeci">uint countTriangulatedTriangles(const FaceMeshConcept auto &amp;mesh)</div><div class="ttdoc">Counts the number of resulting triangles if the input mesh would be triangulated by splitting each fa...</div><div class="ttdef"><b>Definition</b> topology.h:239</div></div>
+<div class="ttc" id="agroup__export__buffer_html_ga22430633156d0c20912fdbba06cdf122"><div class="ttname"><a href="group__export__buffer.html#ga22430633156d0c20912fdbba06cdf122">vcl::triangulatedFaceVertexIndicesToBuffer</a></div><div class="ttdeci">void triangulatedFaceVertexIndicesToBuffer(const MeshType &amp;mesh, auto *buffer, TriPolyIndexBiMap &amp;indexMap=detail::indexMap, MatrixStorageType storage=MatrixStorageType::ROW_MAJOR, uint numTriangles=UINT_NULL, bool getIndicesAsIfContainerCompact=true)</div><div class="ttdoc">Export into a buffer the vertex indices for each triangle computed by triangulating the faces of a Me...</div><div class="ttdef"><b>Definition</b> export_buffer.h:366</div></div>
+<div class="ttc" id="agroup__mesh__stat_html_gaf3eee47cce6b1cc41a7a6af6c7d5d39c"><div class="ttname"><a href="group__mesh__stat.html#gaf3eee47cce6b1cc41a7a6af6c7d5d39c">vcl::countTriangulatedTriangles</a></div><div class="ttdeci">uint countTriangulatedTriangles(const FaceMeshConcept auto &amp;mesh)</div><div class="ttdoc">Counts the number of resulting triangles if the input mesh would be triangulated by splitting each fa...</div><div class="ttdef"><b>Definition</b> topology.h:240</div></div>
 </div><!-- fragment --><p>The input indexMap is used to map each triangle to the face index. If the storage of the buffer is column major, the number of resulting triangles (that should be known when calling this function) should be given as input. If the number of resulting triangles is not given, the function will compute it again.</p>
 <dl class="section note"><dt>Note</dt><dd>As a default behaviour (<code>getIndicesAsIfContainerCompact == true</code>) the function stores the vertex indices as if the vertex container of the mesh is compact. This means that, if the mesh has deleted vertices, the vertex indices stored in the buffer may not correspond to the vertex indices of the mesh. If you want to store the actual vertex indices in the input mesh, set <code>getIndicesAsIfContainerCompact</code> to false.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -636,16 +1119,16 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
 
 </div>
 </div>
-<a id="ga154f129f7c4072e73340c56f06669593" name="ga154f129f7c4072e73340c56f06669593"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga154f129f7c4072e73340c56f06669593">&#9670;&#160;</a></span>triangulatedFaceWedgeTexCoordIndicesToBuffer()</h2>
+<a id="ga29467971d86fb4dd5145498e7c4fb6c4" name="ga29467971d86fb4dd5145498e7c4fb6c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga29467971d86fb4dd5145498e7c4fb6c4">&#9670;&#160;</a></span>vertexAdjacentEdgesToBuffer()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;FaceMeshConcept MeshType&gt; </div>
+template&lt;EdgeMeshConcept MeshType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::triangulatedFaceWedgeTexCoordIndicesToBuffer </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::vertexAdjacentEdgesToBuffer </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;&#160;</td>
           <td class="paramname"><em>mesh</em>, </td>
@@ -659,8 +1142,20 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1TriPolyIndexBiMap.html">TriPolyIndexBiMap</a> &amp;&#160;</td>
-          <td class="paramname"><em>indexMap</em>&#160;</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>largestAdjacentEdgesSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__base.html#ga16a1bfbea022f6766d2f3ebbf69a3b52">MatrixStorageType</a>&#160;</td>
+          <td class="paramname"><em>storage</em> = <code>MatrixStorageType::ROW_MAJOR</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>rowNumber</em> = <code><a class="el" href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -670,14 +1165,155 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Export into a buffer the per triangle wedge texture indices of a mesh. Triangles are computed by triangulating the faces of the mesh. </p>
-<p>This function exports the per triangle wedge texture coordinate indices of a mesh to a buffer. <a class="el" href="classvcl_1_1Texture.html">Texture</a> coordinate indices are stored in the buffer following the order the faces appear in the mesh. The buffer must be preallocated with the correct size (number of triangles).</p>
-<p>The function requires an already computed index map, which maps each triangle to the face index and vice versa. You can use the <a class="el" href="group__export__buffer.html#ga1536428adc2a72c8eb60d3e92b0fce32">vcl::triangulatedFaceIndicesToBuffer</a> function to get the index map. You can use the function <a class="el" href="group__mesh__stat.html#gaf3eee47cce6b1cc41a7a6af6c7d5d39c">vcl::countTriangulatedTriangles</a> to get the number of resulting triangles and allocate the buffer accordingly.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Export into a buffer the adjacent edges indices for each vertex of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. The number of adjacent edges for each vertex can be different, so the user must provide the size of the largest adjacency list with the <code>largestAdjacentEdgesSize</code> parameter. For elements that have less adjacent edges than <code>largestAdjacentEdgesSize</code>, the remaining entries are filled with <code>UINT_NULL</code>. </p>
+<p>You can use the function <a class="el" href="group__mesh__stat.html#gad05d557171beaad8d0a87126bc2a6efa">vcl::largestPerVertexAdjacentEdgesNumber</a> to get the largest adjacency size and allocate the buffer accordingly:</p>
+<div class="fragment"><div class="line">uint <a class="code hl_class" href="classvcl_1_1Box.html">lva</a> = <a class="code hl_function" href="group__mesh__stat.html#gad05d557171beaad8d0a87126bc2a6efa">vcl::largestPerVertexAdjacentEdgesNumber</a>(<a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>);</div>
+<div class="line">Eigen::MatrixXi <a class="code hl_class" href="classvcl_1_1Box.html">edgeAdj</a>(<a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>.vertexNumber(), <a class="code hl_class" href="classvcl_1_1Box.html">lva</a>);</div>
+<div class="line"><a class="code hl_function" href="group__export__buffer.html#ga29467971d86fb4dd5145498e7c4fb6c4">vcl::vertexAdjacentEdgesToBuffer</a>(</div>
+<div class="line">   <a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>, <a class="code hl_class" href="classvcl_1_1Box.html">edgeAdj</a>.data(), <a class="code hl_class" href="classvcl_1_1Box.html">lva</a>, MatrixStorageType::COLUMN_MAJOR);</div>
+<div class="ttc" id="agroup__export__buffer_html_ga29467971d86fb4dd5145498e7c4fb6c4"><div class="ttname"><a href="group__export__buffer.html#ga29467971d86fb4dd5145498e7c4fb6c4">vcl::vertexAdjacentEdgesToBuffer</a></div><div class="ttdeci">void vertexAdjacentEdgesToBuffer(const MeshType &amp;mesh, auto *buffer, uint largestAdjacentEdgesSize, MatrixStorageType storage=MatrixStorageType::ROW_MAJOR, uint rowNumber=UINT_NULL)</div><div class="ttdoc">Export into a buffer the adjacent edges indices for each vertex of a Mesh. The number of adjacent edg...</div><div class="ttdef"><b>Definition</b> export_buffer.h:2195</div></div>
+<div class="ttc" id="agroup__mesh__stat_html_gad05d557171beaad8d0a87126bc2a6efa"><div class="ttname"><a href="group__mesh__stat.html#gad05d557171beaad8d0a87126bc2a6efa">vcl::largestPerVertexAdjacentEdgesNumber</a></div><div class="ttdeci">uint largestPerVertexAdjacentEdgesNumber(const EdgeMeshConcept auto &amp;mesh)</div><div class="ttdoc">Returns the largest number of per-vertex adjacent edges in the mesh.</div><div class="ttdef"><b>Definition</b> topology.h:399</div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>input mesh </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">buffer</td><td>preallocated buffer </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">indexMap</td><td>map from triangle index to face index </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">largestAdjacentEdgesSize</td><td>size of the largest per-vertex edge adjacency list </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">storage</td><td>storage type of the matrix (row or column major) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rowNumber</td><td>number of rows of the matrix (if different from the number of vertices in the mesh) - used only when storage is column major </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga7d2d0a80521d5d5c434a78492e86aa0e" name="ga7d2d0a80521d5d5c434a78492e86aa0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7d2d0a80521d5d5c434a78492e86aa0e">&#9670;&#160;</a></span>vertexAdjacentFacesToBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;FaceMeshConcept MeshType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::vertexAdjacentFacesToBuffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">auto</a> *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>largestAdjacentFacesSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__base.html#ga16a1bfbea022f6766d2f3ebbf69a3b52">MatrixStorageType</a>&#160;</td>
+          <td class="paramname"><em>storage</em> = <code>MatrixStorageType::ROW_MAJOR</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>rowNumber</em> = <code><a class="el" href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Export into a buffer the adjacent faces indices for each vertex of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. The number of adjacent faces for each vertex can be different, so the user must provide the size of the largest adjacency list with the <code>largestAdjacentFacesSize</code> parameter. For elements that have less adjacent faces than <code>largestAdjacentFacesSize</code>, the remaining entries are filled with <code>UINT_NULL</code>. </p>
+<p>You can use the function <a class="el" href="group__mesh__stat.html#ga5f81b259f90a0b6252a7464cea7888db">vcl::largestPerVertexAdjacentFacesNumber</a> to get the largest adjacency size and allocate the buffer accordingly:</p>
+<div class="fragment"><div class="line">uint <a class="code hl_class" href="classvcl_1_1Box.html">lva</a> = <a class="code hl_function" href="group__mesh__stat.html#ga5f81b259f90a0b6252a7464cea7888db">vcl::largestPerVertexAdjacentFacesNumber</a>(<a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>);</div>
+<div class="line">Eigen::MatrixXi <a class="code hl_class" href="classvcl_1_1Box.html">faceAdj</a>(<a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>.vertexNumber(), <a class="code hl_class" href="classvcl_1_1Box.html">lva</a>);</div>
+<div class="line"><a class="code hl_function" href="group__export__buffer.html#ga7d2d0a80521d5d5c434a78492e86aa0e">vcl::vertexAdjacentFacesToBuffer</a>(</div>
+<div class="line">   <a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>, <a class="code hl_class" href="classvcl_1_1Box.html">faceAdj</a>.data(), <a class="code hl_class" href="classvcl_1_1Box.html">lva</a>, MatrixStorageType::COLUMN_MAJOR);</div>
+<div class="ttc" id="agroup__export__buffer_html_ga7d2d0a80521d5d5c434a78492e86aa0e"><div class="ttname"><a href="group__export__buffer.html#ga7d2d0a80521d5d5c434a78492e86aa0e">vcl::vertexAdjacentFacesToBuffer</a></div><div class="ttdeci">void vertexAdjacentFacesToBuffer(const MeshType &amp;mesh, auto *buffer, uint largestAdjacentFacesSize, MatrixStorageType storage=MatrixStorageType::ROW_MAJOR, uint rowNumber=UINT_NULL)</div><div class="ttdoc">Export into a buffer the adjacent faces indices for each vertex of a Mesh. The number of adjacent fac...</div><div class="ttdef"><b>Definition</b> export_buffer.h:2021</div></div>
+<div class="ttc" id="agroup__mesh__stat_html_ga5f81b259f90a0b6252a7464cea7888db"><div class="ttname"><a href="group__mesh__stat.html#ga5f81b259f90a0b6252a7464cea7888db">vcl::largestPerVertexAdjacentFacesNumber</a></div><div class="ttdeci">uint largestPerVertexAdjacentFacesNumber(const FaceMeshConcept auto &amp;mesh)</div><div class="ttdoc">Returns the largest number of per-vertex adjacent faces in the mesh.</div><div class="ttdef"><b>Definition</b> topology.h:327</div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>input mesh </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">buffer</td><td>preallocated buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">largestAdjacentFacesSize</td><td>size of the largest per-vertex face adjacency list </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">storage</td><td>storage type of the matrix (row or column major) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rowNumber</td><td>number of rows of the matrix (if different from the number of vertices in the mesh) - used only when storage is column major </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga5fde3a63b78c34081b3a12e2cffc97fd" name="ga5fde3a63b78c34081b3a12e2cffc97fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5fde3a63b78c34081b3a12e2cffc97fd">&#9670;&#160;</a></span>vertexAdjacentVerticesToBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;MeshConcept MeshType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::vertexAdjacentVerticesToBuffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">auto</a> *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>largestAdjacentVerticesSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__base.html#ga16a1bfbea022f6766d2f3ebbf69a3b52">MatrixStorageType</a>&#160;</td>
+          <td class="paramname"><em>storage</em> = <code>MatrixStorageType::ROW_MAJOR</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>rowNumber</em> = <code><a class="el" href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Export into a buffer the adjacent vertex indices for each vertex of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. The number of adjacent vertices for each vertex can be different, so the user must provide the size of the largest adjacency list with the <code>largestAdjacentVerticesSize</code> parameter. For vertices that have less adjacent vertices than <code>largestAdjacentVerticesSize</code>, the remaining entries are filled with <code>UINT_NULL</code>. </p>
+<p>You can use the function <a class="el" href="group__mesh__stat.html#ga61d067d3a2a5462d2b2a1e5179c85c78">vcl::largestPerVertexAdjacentVerticesNumber</a> to get the largest adjacency size and allocate the buffer accordingly:</p>
+<div class="fragment"><div class="line">uint <a class="code hl_class" href="classvcl_1_1Box.html">lva</a> = <a class="code hl_function" href="group__mesh__stat.html#ga61d067d3a2a5462d2b2a1e5179c85c78">vcl::largestPerVertexAdjacentVerticesNumber</a>(<a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>);</div>
+<div class="line">Eigen::MatrixXi <a class="code hl_class" href="classvcl_1_1Box.html">vertexAdj</a>(<a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>.vertexNumber(), <a class="code hl_class" href="classvcl_1_1Box.html">lva</a>);</div>
+<div class="line"><a class="code hl_function" href="group__export__buffer.html#ga5fde3a63b78c34081b3a12e2cffc97fd">vcl::vertexAdjacentVerticesToBuffer</a>(</div>
+<div class="line">   <a class="code hl_class" href="classvcl_1_1Box.html">myMesh</a>, <a class="code hl_class" href="classvcl_1_1Box.html">vertexAdj</a>.data(), <a class="code hl_class" href="classvcl_1_1Box.html">lva</a>, MatrixStorageType::COLUMN_MAJOR);</div>
+<div class="ttc" id="agroup__export__buffer_html_ga5fde3a63b78c34081b3a12e2cffc97fd"><div class="ttname"><a href="group__export__buffer.html#ga5fde3a63b78c34081b3a12e2cffc97fd">vcl::vertexAdjacentVerticesToBuffer</a></div><div class="ttdeci">void vertexAdjacentVerticesToBuffer(const MeshType &amp;mesh, auto *buffer, uint largestAdjacentVerticesSize, MatrixStorageType storage=MatrixStorageType::ROW_MAJOR, uint rowNumber=UINT_NULL)</div><div class="ttdoc">Export into a buffer the adjacent vertex indices for each vertex of a Mesh. The number of adjacent ve...</div><div class="ttdef"><b>Definition</b> export_buffer.h:1899</div></div>
+<div class="ttc" id="agroup__mesh__stat_html_ga61d067d3a2a5462d2b2a1e5179c85c78"><div class="ttname"><a href="group__mesh__stat.html#ga61d067d3a2a5462d2b2a1e5179c85c78">vcl::largestPerVertexAdjacentVerticesNumber</a></div><div class="ttdeci">uint largestPerVertexAdjacentVerticesNumber(const MeshConcept auto &amp;mesh)</div><div class="ttdoc">Returns the largest number of per-vertex adjacent vertices in the mesh.</div><div class="ttdef"><b>Definition</b> topology.h:268</div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mesh</td><td>input mesh </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">buffer</td><td>preallocated buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">largestAdjacentVerticesSize</td><td>size of the largest per-vertex vertex adjacency list </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">storage</td><td>storage type of the matrix (row or column major) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rowNumber</td><td>number of rows of the matrix (if different from the number of vertices in the mesh) - used only when storage is column major </td></tr>
   </table>
   </dd>
 </dl>
@@ -781,8 +1417,8 @@ template&lt;MeshConcept MeshType&gt; </div>
 
 </div>
 </div>
-<a id="gafa5d8ff626de2fa25ddfafe8684bc100" name="gafa5d8ff626de2fa25ddfafe8684bc100"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gafa5d8ff626de2fa25ddfafe8684bc100">&#9670;&#160;</a></span>wireframeIndicesToBuffer()</h2>
+<a id="ga2014a35f7d8d3d9202eb8edfb95133d3" name="ga2014a35f7d8d3d9202eb8edfb95133d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2014a35f7d8d3d9202eb8edfb95133d3">&#9670;&#160;</a></span>wireframeVertexIndicesToBuffer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -790,7 +1426,7 @@ template&lt;MeshConcept MeshType&gt; </div>
 template&lt;FaceMeshConcept MeshType&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::wireframeIndicesToBuffer </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::wireframeVertexIndicesToBuffer </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> MeshType &amp;&#160;</td>
           <td class="paramname"><em>mesh</em>, </td>

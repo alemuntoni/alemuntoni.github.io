@@ -6,6 +6,7 @@ var group__algorithms__core =
     [ "Core Distance Algorithms", "group__core__distance.html", "group__core__distance" ],
     [ "Core Intersection Algorithms", "group__core__intersection.html", "group__core__intersection" ],
     [ "Polygon Core Algorithms", "group__core__polygon.html", "group__core__polygon" ],
+    [ "vcl::arePointsCollinear", "group__algorithms__core.html#ga062fbbe344a75667421c8e9dea0261c6", null ],
     [ "vcl::arePointsCoplanar", "group__algorithms__core.html#ga75d73f827d48cf0ff2554aebfbf36682", null ],
     [ "vcl::facePointVisibility", "group__algorithms__core.html#ga3e71eff214deaf0c9f9e33f828326a89", null ],
     [ "vcl::halfSpaceDeterminant", "group__algorithms__core.html#ga258c61f730c08e6d3cfc4f6c93af1588", null ],

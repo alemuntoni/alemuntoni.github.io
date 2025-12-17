@@ -152,6 +152,10 @@ Modules</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ga062fbbe344a75667421c8e9dea0261c6" id="r_ga062fbbe344a75667421c8e9dea0261c6"><td class="memTemplParams" colspan="2">template&lt;Point3Concept PointType&gt; </td></tr>
+<tr class="memitem:ga062fbbe344a75667421c8e9dea0261c6"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">bool</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__algorithms__core.html#ga062fbbe344a75667421c8e9dea0261c6">vcl::arePointsCollinear</a> (<a class="el" href="classvcl_1_1Box.html">const</a> PointType &amp;p0, <a class="el" href="classvcl_1_1Box.html">const</a> PointType &amp;p1, <a class="el" href="classvcl_1_1Box.html">const</a> PointType &amp;<a class="el" href="classvcl_1_1Box.html">p2</a>)</td></tr>
+<tr class="memdesc:ga062fbbe344a75667421c8e9dea0261c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if 3 points are collinear.  <br /></td></tr>
+<tr class="separator:ga062fbbe344a75667421c8e9dea0261c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga75d73f827d48cf0ff2554aebfbf36682" id="r_ga75d73f827d48cf0ff2554aebfbf36682"><td class="memTemplParams" colspan="2">template&lt;Point3Concept PointType&gt; </td></tr>
 <tr class="memitem:ga75d73f827d48cf0ff2554aebfbf36682"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">bool</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__algorithms__core.html#ga75d73f827d48cf0ff2554aebfbf36682">vcl::arePointsCoplanar</a> (<a class="el" href="classvcl_1_1Box.html">const</a> PointType &amp;p0, <a class="el" href="classvcl_1_1Box.html">const</a> PointType &amp;p1, <a class="el" href="classvcl_1_1Box.html">const</a> PointType &amp;<a class="el" href="classvcl_1_1Box.html">p2</a>, <a class="el" href="classvcl_1_1Box.html">const</a> PointType &amp;<a class="el" href="classvcl_1_1Box.html">p3</a>)</td></tr>
 <tr class="memdesc:ga75d73f827d48cf0ff2554aebfbf36682"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if 4 points are coplanar.  <br /></td></tr>
@@ -229,6 +233,59 @@ Functions</h2></td></tr>
 <p>In this module, you can find the core algorithms of VCLib, that generally involve simple geometric primitives, like points, vectors, and matrices.</p>
 <p>You can access these algorithms by including <code>#include &lt;<a class="el" href="algorithms_2core_8h_source.html">vclib/algorithms/core.h</a>&gt;</code> </p>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ga062fbbe344a75667421c8e9dea0261c6" name="ga062fbbe344a75667421c8e9dea0261c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga062fbbe344a75667421c8e9dea0261c6">&#9670;&#160;</a></span>arePointsCollinear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Point3Concept PointType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">bool</a> vcl::arePointsCollinear </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> PointType &amp;&#160;</td>
+          <td class="paramname"><em>p0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> PointType &amp;&#160;</td>
+          <td class="paramname"><em>p1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> PointType &amp;&#160;</td>
+          <td class="paramname"><em>p2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if 3 points are collinear. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">PointType</td><td>The type of the points. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p0</td><td>First point to test. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p1</td><td>Second point to test. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p2</td><td>Third point to test. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the points are collinear, false otherwise. </dd></dl>
+
+</div>
+</div>
 <a id="ga75d73f827d48cf0ff2554aebfbf36682" name="ga75d73f827d48cf0ff2554aebfbf36682"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga75d73f827d48cf0ff2554aebfbf36682">&#9670;&#160;</a></span>arePointsCoplanar()</h2>
 

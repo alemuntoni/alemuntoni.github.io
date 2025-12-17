@@ -10,8 +10,7 @@ var group__mesh__concepts =
     [ "vcl::HasColor", "conceptvcl_1_1HasColor.html", null ],
     [ "vcl::HasCustomComponents", "conceptvcl_1_1HasCustomComponents.html", null ],
     [ "vcl::HasMark", "conceptvcl_1_1HasMark.html", null ],
+    [ "vcl::HasMaterials", "conceptvcl_1_1HasMaterials.html", null ],
     [ "vcl::HasName", "conceptvcl_1_1HasName.html", null ],
-    [ "vcl::HasTextureImages", "conceptvcl_1_1HasTextureImages.html", null ],
-    [ "vcl::HasTexturePaths", "conceptvcl_1_1HasTexturePaths.html", null ],
     [ "vcl::HasTransformMatrix", "conceptvcl_1_1HasTransformMatrix.html", null ]
 ];

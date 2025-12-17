@@ -1,0 +1,47 @@
+var classvcl_1_1Material =
+[
+    [ "AlphaMode", "classvcl_1_1Material.html#a8e48508274998d89e7ae12cdfb63d363", [
+      [ "ALPHA_OPAQUE", "classvcl_1_1Material.html#a8e48508274998d89e7ae12cdfb63d363ad2f6661c6db70025ee406b4f7607da71", null ],
+      [ "ALPHA_MASK", "classvcl_1_1Material.html#a8e48508274998d89e7ae12cdfb63d363a91db5d8bf2ac5b3cb2430ae8370daf9a", null ],
+      [ "ALPHA_BLEND", "classvcl_1_1Material.html#a8e48508274998d89e7ae12cdfb63d363a1a95fd52e8c2f5bdefe02bfd023703de", null ]
+    ] ],
+    [ "TextureType", "classvcl_1_1Material.html#a12db78645943e2a62e14e6e6a350c622", [
+      [ "BASE_COLOR", "classvcl_1_1Material.html#a12db78645943e2a62e14e6e6a350c622a61fa4cdee6a9e02176b474fdfeaa3aa7", null ],
+      [ "METALLIC_ROUGHNESS", "classvcl_1_1Material.html#a12db78645943e2a62e14e6e6a350c622a9d3d58825f3b7225ff1fa4cf2609fea5", null ],
+      [ "NORMAL", "classvcl_1_1Material.html#a12db78645943e2a62e14e6e6a350c622a1e23852820b9154316c7c06e2b7ba051", null ],
+      [ "OCCLUSION", "classvcl_1_1Material.html#a12db78645943e2a62e14e6e6a350c622a8307d318a3a8fd7a3acd8eb50fc95701", null ],
+      [ "EMISSIVE", "classvcl_1_1Material.html#a12db78645943e2a62e14e6e6a350c622a91520e2b2b496ddf92e7ed320df5027b", null ],
+      [ "COUNT", "classvcl_1_1Material.html#a12db78645943e2a62e14e6e6a350c622a4905ac9d6a22bdfc1ae096094ce6248d", null ]
+    ] ],
+    [ "Material", "classvcl_1_1Material.html#a4e850d168c00afd306219f44919024cd", null ],
+    [ "alphaCutoff", "classvcl_1_1Material.html#a2ffc4c8bd36c52de1ef809ebb3adf0f2", null ],
+    [ "alphaCutoff", "classvcl_1_1Material.html#a87c1c3a6214d19a6b49251e4c745d65b", null ],
+    [ "alphaMode", "classvcl_1_1Material.html#a4500b841939dbc8892c962466d28b212", null ],
+    [ "alphaMode", "classvcl_1_1Material.html#abea689b30ba1705078545269672962bc", null ],
+    [ "baseColor", "classvcl_1_1Material.html#a6c8affc21ba10b21fff8c8e7886208fa", null ],
+    [ "baseColor", "classvcl_1_1Material.html#ad0a2fe98408c4a87b3d107e092077056", null ],
+    [ "baseColorTextureDescriptor", "classvcl_1_1Material.html#aaa190c316b59d8a16de1afe60970c32d", null ],
+    [ "baseColorTextureDescriptor", "classvcl_1_1Material.html#a10b40341e72ed538a2033898dc614734", null ],
+    [ "deserialize", "classvcl_1_1Material.html#a02500078110900d510b245bd64730609", null ],
+    [ "doubleSided", "classvcl_1_1Material.html#a2452dbedfe713a58757d8030f4390bb3", null ],
+    [ "doubleSided", "classvcl_1_1Material.html#ae8b5a5b296fc1a1e41c3b4426873d267", null ],
+    [ "emissiveColor", "classvcl_1_1Material.html#a31d8e4b285a5d9ec8c20fdf39dc12fe4", null ],
+    [ "emissiveColor", "classvcl_1_1Material.html#a3bcd41b27b037fe7c4c6766d66ac9b5d", null ],
+    [ "metallic", "classvcl_1_1Material.html#a70ef6a86c85e07b6a3f7972607b87eb6", null ],
+    [ "metallic", "classvcl_1_1Material.html#a5479c1fedefc3738708f40c79ea2c404", null ],
+    [ "name", "classvcl_1_1Material.html#a0573519b22ded807eb2515ddd22b1ad8", null ],
+    [ "name", "classvcl_1_1Material.html#a1e542974752048a12c0ee25d385b7bb4", null ],
+    [ "normalScale", "classvcl_1_1Material.html#aba58c96499a72484c8749e521d119160", null ],
+    [ "normalScale", "classvcl_1_1Material.html#a9585db3563cdb71272abd6084721c2d3", null ],
+    [ "occlusionStrength", "classvcl_1_1Material.html#a8cd3354930c6b2b9ed387e558b7f4bcf", null ],
+    [ "occlusionStrength", "classvcl_1_1Material.html#a7db5fcf9ad307ee815e57604cd10ee33", null ],
+    [ "operator==", "classvcl_1_1Material.html#a006726c6d75f87d4526933de16ef3cf1", null ],
+    [ "roughness", "classvcl_1_1Material.html#a052c19d608b42639717452dad706eb4c", null ],
+    [ "roughness", "classvcl_1_1Material.html#ae18cdb8d08d9f84eaab1f8e4ac20efc1", null ],
+    [ "serialize", "classvcl_1_1Material.html#a404810ab6833e7c297523a9aa24925a4", null ],
+    [ "textureDescriptor", "classvcl_1_1Material.html#a01a85ea68a83c2ab028040bb1c205f5a", null ],
+    [ "textureDescriptor", "classvcl_1_1Material.html#a2759ad9b3b44c1c59ff19ae92aec8099", null ],
+    [ "textureDescriptor", "classvcl_1_1Material.html#ab8a4d2b4b1dfec6f3d1672295807bc50", null ],
+    [ "textureDescriptor", "classvcl_1_1Material.html#a19c4e87187ccd76476683ac9d18ef7dc", null ],
+    [ "textureTypeToColorSpace", "classvcl_1_1Material.html#a476a5b85d4246a7eb0e354c16a01ec29", null ]
+];

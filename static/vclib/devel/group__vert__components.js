@@ -14,12 +14,16 @@ var group__vert__components =
     [ "vcl::vert::HasPosition", "conceptvcl_1_1vert_1_1HasPosition.html", null ],
     [ "vcl::vert::HasMark", "conceptvcl_1_1vert_1_1HasMark.html", null ],
     [ "vcl::vert::HasOptionalMark", "conceptvcl_1_1vert_1_1HasOptionalMark.html", null ],
+    [ "vcl::vert::HasMaterialIndex", "conceptvcl_1_1vert_1_1HasMaterialIndex.html", null ],
+    [ "vcl::vert::HasOptionalMaterialIndex", "conceptvcl_1_1vert_1_1HasOptionalMaterialIndex.html", null ],
     [ "vcl::vert::HasNormal", "conceptvcl_1_1vert_1_1HasNormal.html", null ],
     [ "vcl::vert::HasOptionalNormal", "conceptvcl_1_1vert_1_1HasOptionalNormal.html", null ],
     [ "vcl::vert::HasPrincipalCurvature", "conceptvcl_1_1vert_1_1HasPrincipalCurvature.html", null ],
     [ "vcl::vert::HasOptionalPrincipalCurvature", "conceptvcl_1_1vert_1_1HasOptionalPrincipalCurvature.html", null ],
     [ "vcl::vert::HasQuality", "conceptvcl_1_1vert_1_1HasQuality.html", null ],
     [ "vcl::vert::HasOptionalQuality", "conceptvcl_1_1vert_1_1HasOptionalQuality.html", null ],
+    [ "vcl::vert::HasTangent", "conceptvcl_1_1vert_1_1HasTangent.html", null ],
+    [ "vcl::vert::HasOptionalTangent", "conceptvcl_1_1vert_1_1HasOptionalTangent.html", null ],
     [ "vcl::vert::HasTexCoord", "conceptvcl_1_1vert_1_1HasTexCoord.html", null ],
     [ "vcl::vert::HasOptionalTexCoord", "conceptvcl_1_1vert_1_1HasOptionalTexCoord.html", null ]
 ];
