@@ -5,9 +5,11 @@ var group__vertex__mesh__concepts =
     [ "vcl::HasPerVertexAdjacentVertices", "conceptvcl_1_1HasPerVertexAdjacentVertices.html", null ],
     [ "vcl::HasPerVertexColor", "conceptvcl_1_1HasPerVertexColor.html", null ],
     [ "vcl::HasPerVertexMark", "conceptvcl_1_1HasPerVertexMark.html", null ],
+    [ "vcl::HasPerVertexMaterialIndex", "conceptvcl_1_1HasPerVertexMaterialIndex.html", null ],
     [ "vcl::HasPerVertexNormal", "conceptvcl_1_1HasPerVertexNormal.html", null ],
     [ "vcl::HasPerVertexPrincipalCurvature", "conceptvcl_1_1HasPerVertexPrincipalCurvature.html", null ],
     [ "vcl::HasPerVertexQuality", "conceptvcl_1_1HasPerVertexQuality.html", null ],
+    [ "vcl::HasPerVertexTangent", "conceptvcl_1_1HasPerVertexTangent.html", null ],
     [ "vcl::HasPerVertexTexCoord", "conceptvcl_1_1HasPerVertexTexCoord.html", null ],
     [ "vcl::HasPerVertexCustomComponents", "conceptvcl_1_1HasPerVertexCustomComponents.html", null ]
 ];

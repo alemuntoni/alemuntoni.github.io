@@ -16,6 +16,7 @@ var classvcl_1_1mesh_1_1FaceContainer =
     [ "disablePerFaceAdjacentFaces", "classvcl_1_1mesh_1_1FaceContainer.html#a2314a6f2bf02b64b5bc94667c4f665fc", null ],
     [ "disablePerFaceColor", "classvcl_1_1mesh_1_1FaceContainer.html#ab6bd1337413edba60c300cd44e4bfefd", null ],
     [ "disablePerFaceMark", "classvcl_1_1mesh_1_1FaceContainer.html#aa2c72789c920390c0d2dc4deef755fe0", null ],
+    [ "disablePerFaceMaterialIndex", "classvcl_1_1mesh_1_1FaceContainer.html#ae7e020c1fcc871e3a22ab82a2f091bfc", null ],
     [ "disablePerFaceNormal", "classvcl_1_1mesh_1_1FaceContainer.html#ac5c44d6333705351036599c11052e191", null ],
     [ "disablePerFacePrincipalCurvature", "classvcl_1_1mesh_1_1FaceContainer.html#a05fd45d2832fee45a514d0f0a7aacc96", null ],
     [ "disablePerFaceQuality", "classvcl_1_1mesh_1_1FaceContainer.html#a3a4fb5ae5cfceb9c442be562582ea149", null ],
@@ -26,6 +27,7 @@ var classvcl_1_1mesh_1_1FaceContainer =
     [ "enablePerFaceAdjacentFaces", "classvcl_1_1mesh_1_1FaceContainer.html#ad52f08d01f69074b12b99d01787f8f4f", null ],
     [ "enablePerFaceColor", "classvcl_1_1mesh_1_1FaceContainer.html#a6f1596a574e2432b8be5ac731ca0fce6", null ],
     [ "enablePerFaceMark", "classvcl_1_1mesh_1_1FaceContainer.html#aed62c202eaa91e75b0afbc32e2bd9524", null ],
+    [ "enablePerFaceMaterialIndex", "classvcl_1_1mesh_1_1FaceContainer.html#a9440d40f228bdf59c762b836ef38a8e6", null ],
     [ "enablePerFaceNormal", "classvcl_1_1mesh_1_1FaceContainer.html#abe2c7a9ab8c083682197f22d5347b9ca", null ],
     [ "enablePerFacePrincipalCurvature", "classvcl_1_1mesh_1_1FaceContainer.html#a3eee44009d63365ed7af3f205f8c7f12", null ],
     [ "enablePerFaceQuality", "classvcl_1_1mesh_1_1FaceContainer.html#a10216b809c740aa712ccef4fa3c0d12d", null ],
@@ -51,6 +53,7 @@ var classvcl_1_1mesh_1_1FaceContainer =
     [ "isPerFaceColorEnabled", "classvcl_1_1mesh_1_1FaceContainer.html#af2397b0ab5988b7f61c3e61fafc3255f", null ],
     [ "isPerFaceCustomComponentOfType", "classvcl_1_1mesh_1_1FaceContainer.html#aba04f5d902aefec06d7f6a9006b8abc0", null ],
     [ "isPerFaceMarkEnabled", "classvcl_1_1mesh_1_1FaceContainer.html#a1dc4bfb887c921fb446878a052318262", null ],
+    [ "isPerFaceMaterialIndexEnabled", "classvcl_1_1mesh_1_1FaceContainer.html#adb8d0837c39aa7a2bd5982978ba0700a", null ],
     [ "isPerFaceNormalEnabled", "classvcl_1_1mesh_1_1FaceContainer.html#aa72791afab7305c19e70c5c4831a840d", null ],
     [ "isPerFacePrincipalCurvatureEnabled", "classvcl_1_1mesh_1_1FaceContainer.html#a45bdfacc585f7b6d548c5a3562704931", null ],
     [ "isPerFaceQualityEnabled", "classvcl_1_1mesh_1_1FaceContainer.html#a9a7a8a6b90efa75fdfedd5033479604f", null ],
@@ -65,5 +68,5 @@ var classvcl_1_1mesh_1_1FaceContainer =
     [ "reserveFaces", "classvcl_1_1mesh_1_1FaceContainer.html#aaf6308ed0895cf92980d0549c2dabaf5", null ],
     [ "resizeFaces", "classvcl_1_1mesh_1_1FaceContainer.html#afb30c7554f37dc934fab1e5a9c26e97e", null ],
     [ "serializePerFaceCustomComponentsOfType", "classvcl_1_1mesh_1_1FaceContainer.html#af7e38e3937f8f7bd4e3c19aa0e8f18a6", null ],
-    [ "updateFaceIndices", "classvcl_1_1mesh_1_1FaceContainer.html#aef0cbf495dc75aea0fddf456965103ce", null ]
+    [ "updateFaceReferences", "classvcl_1_1mesh_1_1FaceContainer.html#aa557609d944da0ae063e6d3df0171f79", null ]
 ];

@@ -105,12 +105,14 @@ $(document).ready(function(){initNavTree('group__import__matrix.html',''); initR
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">Import Mesh from Matrix Algorithms<div class="ingroups"><a class="el" href="group__algorithms__mesh.html">Mesh Algorithms</a> &raquo; <a class="el" href="group__import__export.html">Import/Export Mesh Algorithms</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>List Import Mesh from Matrix algorithms.  
-</p>
+<a href="#details">More...</a></p>
 <div class="dynheader">
 Collaboration diagram for Import Mesh from Matrix Algorithms:</div>
 <div class="dyncontent">
@@ -120,9 +122,1635 @@ Collaboration diagram for Import Mesh from Matrix Algorithms:</div>
 <area shape="rect" title="List Import Mesh from Matrix algorithms." alt="" coords="204,5,389,45"/>
 </map>
 </div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga5f29d866e30e198c0ed22f8ed9de0ba0" id="r_ga5f29d866e30e198c0ed22f8ed9de0ba0"><td class="memTemplParams" colspan="2">template&lt;EdgeMeshConcept MeshType, MatrixConcept ECMatrix&gt; </td></tr>
+<tr class="memitem:ga5f29d866e30e198c0ed22f8ed9de0ba0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__import__matrix.html#ga5f29d866e30e198c0ed22f8ed9de0ba0">vcl::edgeColorsFromMatrix</a> (MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">ECMatrix</a> &amp;<a class="el" href="classvcl_1_1Box.html">edgeColors</a>)</td></tr>
+<tr class="memdesc:ga5f29d866e30e198c0ed22f8ed9de0ba0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the edge colors of the given input <code>mesh</code> from the input edge colors matrix.  <br /></td></tr>
+<tr class="separator:ga5f29d866e30e198c0ed22f8ed9de0ba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga09d49d27b169434f13e74ff20b970779" id="r_ga09d49d27b169434f13e74ff20b970779"><td class="memTemplParams" colspan="2">template&lt;EdgeMeshConcept MeshType, Range R&gt; </td></tr>
+<tr class="memitem:ga09d49d27b169434f13e74ff20b970779"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__import__matrix.html#ga09d49d27b169434f13e74ff20b970779">vcl::edgeColorsFromRange</a> (MeshType &amp;mesh, R &amp;&amp;colors, <a class="el" href="classvcl_1_1Color.html#a51d1c2a5b8ce06d43362026194a14523">Color::Format</a> <a class="el" href="classvcl_1_1Box.html">colorFormat</a>)</td></tr>
+<tr class="memdesc:ga09d49d27b169434f13e74ff20b970779"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the edge colors of the given input <code>mesh</code> from the input color range (that could be anything that satisfies the Range concept: e.g. std::vector&lt;double&gt;, std::array&lt;double, N&gt;, Eigen::VectorXd, etc.).  <br /></td></tr>
+<tr class="separator:ga09d49d27b169434f13e74ff20b970779"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga29c7bde92d34ac5f04ea25faf5b4b694" id="r_ga29c7bde92d34ac5f04ea25faf5b4b694"><td class="memTemplParams" colspan="2">template&lt;EdgeMeshConcept MeshType, MatrixConcept EMatrix&gt; </td></tr>
+<tr class="memitem:ga29c7bde92d34ac5f04ea25faf5b4b694"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__import__matrix.html#ga29c7bde92d34ac5f04ea25faf5b4b694">vcl::edgeIndicesFromMatrix</a> (MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">EMatrix</a> &amp;edges, <a class="el" href="classvcl_1_1Box.html">bool</a> <a class="el" href="classvcl_1_1Box.html">clearBeforeSet</a>=<a class="el" href="classvcl_1_1Box.html">true</a>)</td></tr>
+<tr class="memdesc:ga29c7bde92d34ac5f04ea25faf5b4b694"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the edge indices of the given input <code>mesh</code> from the input edge matrix.  <br /></td></tr>
+<tr class="separator:ga29c7bde92d34ac5f04ea25faf5b4b694"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga84194b81c33e87f19369b404464af31b" id="r_ga84194b81c33e87f19369b404464af31b"><td class="memTemplParams" colspan="2">template&lt;EdgeMeshConcept MeshType, MatrixConcept ENMatrix&gt; </td></tr>
+<tr class="memitem:ga84194b81c33e87f19369b404464af31b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__import__matrix.html#ga84194b81c33e87f19369b404464af31b">vcl::edgeNormalsFromMatrix</a> (MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">ENMatrix</a> &amp;<a class="el" href="classvcl_1_1Box.html">edgeNormals</a>)</td></tr>
+<tr class="memdesc:ga84194b81c33e87f19369b404464af31b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the edge normals of the given input <code>mesh</code> from the input edge normals matrix.  <br /></td></tr>
+<tr class="separator:ga84194b81c33e87f19369b404464af31b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3f6e1c123da58d1d87877cc4a15831d6" id="r_ga3f6e1c123da58d1d87877cc4a15831d6"><td class="memTemplParams" colspan="2">template&lt;EdgeMeshConcept MeshType, Range R&gt; </td></tr>
+<tr class="memitem:ga3f6e1c123da58d1d87877cc4a15831d6"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__import__matrix.html#ga3f6e1c123da58d1d87877cc4a15831d6">vcl::edgeQualityFromRange</a> (MeshType &amp;mesh, R &amp;&amp;quality)</td></tr>
+<tr class="memdesc:ga3f6e1c123da58d1d87877cc4a15831d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the edge quality of the given input <code>mesh</code> from the input quality range (that could be anything that satisfies the Range concept: e.g. std::vector&lt;double&gt;, std::array&lt;double, N&gt;, Eigen::VectorXd, etc.).  <br /></td></tr>
+<tr class="separator:ga3f6e1c123da58d1d87877cc4a15831d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga52332d4ac9d7b044f55eae43f5090493" id="r_ga52332d4ac9d7b044f55eae43f5090493"><td class="memTemplParams" colspan="2">template&lt;EdgeMeshConcept MeshType, Range R&gt; </td></tr>
+<tr class="memitem:ga52332d4ac9d7b044f55eae43f5090493"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__import__matrix.html#ga52332d4ac9d7b044f55eae43f5090493">vcl::edgeSelectionFromRange</a> (MeshType &amp;mesh, R &amp;&amp;selection)</td></tr>
+<tr class="memdesc:ga52332d4ac9d7b044f55eae43f5090493"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the edge selection of the given input <code>mesh</code> from the input selection range (that could be anything that satisfies the Range concept: e.g. std::vector&lt;bool&gt;, std::array&lt;bool, N&gt;, Eigen::VectorXi, etc.).  <br /></td></tr>
+<tr class="separator:ga52332d4ac9d7b044f55eae43f5090493"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaac5905390da0a1d9c133cae58ed3ed79" id="r_gaac5905390da0a1d9c133cae58ed3ed79"><td class="memTemplParams" colspan="2">template&lt;uint ELEM_ID, MeshConcept MeshType, MatrixConcept CMatrix&gt; </td></tr>
+<tr class="memitem:gaac5905390da0a1d9c133cae58ed3ed79"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__import__matrix.html#gaac5905390da0a1d9c133cae58ed3ed79">vcl::elementColorsFromMatrix</a> (MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">CMatrix</a> &amp;colors)</td></tr>
+<tr class="memdesc:gaac5905390da0a1d9c133cae58ed3ed79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the element identified by <code>ELEM_ID</code> colors of the given input <code>mesh</code> from the input colors matrix.  <br /></td></tr>
+<tr class="separator:gaac5905390da0a1d9c133cae58ed3ed79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5ef668aa9cd9ecbf77bc21361e3e1b29" id="r_ga5ef668aa9cd9ecbf77bc21361e3e1b29"><td class="memTemplParams" colspan="2">template&lt;uint ELEM_ID, MeshConcept MeshType, Range R&gt; </td></tr>
+<tr class="memitem:ga5ef668aa9cd9ecbf77bc21361e3e1b29"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__import__matrix.html#ga5ef668aa9cd9ecbf77bc21361e3e1b29">vcl::elementColorsFromRange</a> (MeshType &amp;mesh, R &amp;&amp;colors, <a class="el" href="classvcl_1_1Color.html#a51d1c2a5b8ce06d43362026194a14523">Color::Format</a> <a class="el" href="classvcl_1_1Box.html">colorFormat</a>)</td></tr>
+<tr class="memdesc:ga5ef668aa9cd9ecbf77bc21361e3e1b29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the element identified by <code>ELEM_ID</code> colors of the given input <code>mesh</code> from the input color range (that could be anything that satisfies the Range concept: e.g. std::vector&lt;double&gt;, std::array&lt;double, N&gt;, Eigen::VectorXd, etc.).  <br /></td></tr>
+<tr class="separator:ga5ef668aa9cd9ecbf77bc21361e3e1b29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga152bf2ac35d5c6333005762dd21ef787" id="r_ga152bf2ac35d5c6333005762dd21ef787"><td class="memTemplParams" colspan="2">template&lt;uint ELEM_ID, MeshConcept MeshType, MatrixConcept NMatrix&gt; </td></tr>
+<tr class="memitem:ga152bf2ac35d5c6333005762dd21ef787"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__import__matrix.html#ga152bf2ac35d5c6333005762dd21ef787">vcl::elementNormalsFromMatrix</a> (MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">NMatrix</a> &amp;normals)</td></tr>
+<tr class="memdesc:ga152bf2ac35d5c6333005762dd21ef787"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the element identified by <code>ELEM_ID</code> normals of the given input <code>mesh</code> from the input normals matrix.  <br /></td></tr>
+<tr class="separator:ga152bf2ac35d5c6333005762dd21ef787"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8b03619cbb0313736e6f084aae863059" id="r_ga8b03619cbb0313736e6f084aae863059"><td class="memTemplParams" colspan="2">template&lt;uint ELEM_ID, MeshConcept MeshType, Range R&gt; </td></tr>
+<tr class="memitem:ga8b03619cbb0313736e6f084aae863059"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__import__matrix.html#ga8b03619cbb0313736e6f084aae863059">vcl::elementQualityFromRange</a> (MeshType &amp;mesh, R &amp;&amp;quality)</td></tr>
+<tr class="memdesc:ga8b03619cbb0313736e6f084aae863059"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the element identified by <code>ELEM_ID</code> quality of the given input <code>mesh</code> from the input quality range (that could be anything that satisfies the Range concept: e.g. std::vector&lt;double&gt;, std::array&lt;double, N&gt;, Eigen::VectorXd, etc.).  <br /></td></tr>
+<tr class="separator:ga8b03619cbb0313736e6f084aae863059"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2793a268224feb7835291c0ceae0b60f" id="r_ga2793a268224feb7835291c0ceae0b60f"><td class="memTemplParams" colspan="2">template&lt;uint ELEM_ID, MeshConcept MeshType, Range R&gt; </td></tr>
+<tr class="memitem:ga2793a268224feb7835291c0ceae0b60f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__import__matrix.html#ga2793a268224feb7835291c0ceae0b60f">vcl::elementSelectionFromRange</a> (MeshType &amp;mesh, R &amp;&amp;selection)</td></tr>
+<tr class="memdesc:ga2793a268224feb7835291c0ceae0b60f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the element identified by <code>ELEM_ID</code> selection of the given input <code>mesh</code> from the input selection range (that could be anything that satisfies the Range concept: e.g. std::vector&lt;bool&gt;, std::array&lt;bool, N&gt;, Eigen::VectorXi, etc.).  <br /></td></tr>
+<tr class="separator:ga2793a268224feb7835291c0ceae0b60f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga10a934a6e23cb98ffb7e85394ef213b3" id="r_ga10a934a6e23cb98ffb7e85394ef213b3"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType, MatrixConcept FCMatrix&gt; </td></tr>
+<tr class="memitem:ga10a934a6e23cb98ffb7e85394ef213b3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__import__matrix.html#ga10a934a6e23cb98ffb7e85394ef213b3">vcl::faceColorsFromMatrix</a> (MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">FCMatrix</a> &amp;<a class="el" href="classvcl_1_1Box.html">faceColors</a>)</td></tr>
+<tr class="memdesc:ga10a934a6e23cb98ffb7e85394ef213b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the face colors of the given input <code>mesh</code> from the input face colors matrix.  <br /></td></tr>
+<tr class="separator:ga10a934a6e23cb98ffb7e85394ef213b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7c87ab88b2a96665c1b2b748512bbd08" id="r_ga7c87ab88b2a96665c1b2b748512bbd08"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType, Range R&gt; </td></tr>
+<tr class="memitem:ga7c87ab88b2a96665c1b2b748512bbd08"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__import__matrix.html#ga7c87ab88b2a96665c1b2b748512bbd08">vcl::faceColorsFromRange</a> (MeshType &amp;mesh, R &amp;&amp;colors, <a class="el" href="classvcl_1_1Color.html#a51d1c2a5b8ce06d43362026194a14523">Color::Format</a> <a class="el" href="classvcl_1_1Box.html">colorFormat</a>)</td></tr>
+<tr class="memdesc:ga7c87ab88b2a96665c1b2b748512bbd08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the face colors of the given input <code>mesh</code> from the input color range (that could be anything that satisfies the Range concept: e.g. std::vector&lt;double&gt;, std::array&lt;double, N&gt;, Eigen::VectorXd, etc.).  <br /></td></tr>
+<tr class="separator:ga7c87ab88b2a96665c1b2b748512bbd08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae6f090aa8553f5ce74b4aebdbf0d4dfd" id="r_gae6f090aa8553f5ce74b4aebdbf0d4dfd"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType, MatrixConcept FMatrix&gt; </td></tr>
+<tr class="memitem:gae6f090aa8553f5ce74b4aebdbf0d4dfd"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__import__matrix.html#gae6f090aa8553f5ce74b4aebdbf0d4dfd">vcl::faceIndicesFromMatrix</a> (MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">FMatrix</a> &amp;faces, <a class="el" href="classvcl_1_1Box.html">bool</a> <a class="el" href="classvcl_1_1Box.html">clearBeforeSet</a>=<a class="el" href="classvcl_1_1Box.html">true</a>)</td></tr>
+<tr class="memdesc:gae6f090aa8553f5ce74b4aebdbf0d4dfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the face indices of the given input <code>mesh</code> from the input face matrix.  <br /></td></tr>
+<tr class="separator:gae6f090aa8553f5ce74b4aebdbf0d4dfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2f54389cd09841feea90c7479f32b8e0" id="r_ga2f54389cd09841feea90c7479f32b8e0"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType, Range R&gt; </td></tr>
+<tr class="memitem:ga2f54389cd09841feea90c7479f32b8e0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__import__matrix.html#ga2f54389cd09841feea90c7479f32b8e0">vcl::faceMaterialIndicesFromRange</a> (MeshType &amp;mesh, R &amp;&amp;<a class="el" href="classvcl_1_1Box.html">texCoordIndices</a>)</td></tr>
+<tr class="memdesc:ga2f54389cd09841feea90c7479f32b8e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the face material indices of the given input <code>mesh</code> from the input material indices range (that could be anything that satisfies the Range concept: e.g. std::vector&lt;uint&gt;, std::array&lt;uint, N&gt;, Eigen::VectorXi, etc.).  <br /></td></tr>
+<tr class="separator:ga2f54389cd09841feea90c7479f32b8e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaec421ff04aff7e2f1099697219e37ab3" id="r_gaec421ff04aff7e2f1099697219e37ab3"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType, MatrixConcept FNMatrix&gt; </td></tr>
+<tr class="memitem:gaec421ff04aff7e2f1099697219e37ab3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__import__matrix.html#gaec421ff04aff7e2f1099697219e37ab3">vcl::faceNormalsFromMatrix</a> (MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">FNMatrix</a> &amp;<a class="el" href="classvcl_1_1Box.html">faceNormals</a>)</td></tr>
+<tr class="memdesc:gaec421ff04aff7e2f1099697219e37ab3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the face normals of the given input <code>mesh</code> from the input face normals matrix.  <br /></td></tr>
+<tr class="separator:gaec421ff04aff7e2f1099697219e37ab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3af44fd9a60a88e7b586f346800e10ff" id="r_ga3af44fd9a60a88e7b586f346800e10ff"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType, Range R&gt; </td></tr>
+<tr class="memitem:ga3af44fd9a60a88e7b586f346800e10ff"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__import__matrix.html#ga3af44fd9a60a88e7b586f346800e10ff">vcl::faceQualityFromRange</a> (MeshType &amp;mesh, R &amp;&amp;quality)</td></tr>
+<tr class="memdesc:ga3af44fd9a60a88e7b586f346800e10ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the face quality of the given input <code>mesh</code> from the input quality range (that could be anything that satisfies the Range concept: e.g. std::vector&lt;double&gt;, std::array&lt;double, N&gt;, Eigen::VectorXd, etc.).  <br /></td></tr>
+<tr class="separator:ga3af44fd9a60a88e7b586f346800e10ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7d6372966261dc0f444280f42762882e" id="r_ga7d6372966261dc0f444280f42762882e"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType, Range R&gt; </td></tr>
+<tr class="memitem:ga7d6372966261dc0f444280f42762882e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__import__matrix.html#ga7d6372966261dc0f444280f42762882e">vcl::faceSelectionFromRange</a> (MeshType &amp;mesh, R &amp;&amp;selection)</td></tr>
+<tr class="memdesc:ga7d6372966261dc0f444280f42762882e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the face selection of the given input <code>mesh</code> from the input selection range (that could be anything that satisfies the Range concept: e.g. std::vector&lt;bool&gt;, std::array&lt;bool, N&gt;, Eigen::VectorXi, etc.).  <br /></td></tr>
+<tr class="separator:ga7d6372966261dc0f444280f42762882e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga60a2ae45291f7c09e5e560886b5e49e0" id="r_ga60a2ae45291f7c09e5e560886b5e49e0"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType, MatrixConcept FTMatrix&gt; </td></tr>
+<tr class="memitem:ga60a2ae45291f7c09e5e560886b5e49e0"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__import__matrix.html#ga60a2ae45291f7c09e5e560886b5e49e0">vcl::faceWedgeTexCoordsFromMatrix</a> (MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">FTMatrix</a> &amp;<a class="el" href="classvcl_1_1Box.html">faceWedgeTexCoords</a>)</td></tr>
+<tr class="memdesc:ga60a2ae45291f7c09e5e560886b5e49e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the face wedge texcoords of the given input <code>mesh</code> from the input face wedge texcoords matrix.  <br /></td></tr>
+<tr class="separator:ga60a2ae45291f7c09e5e560886b5e49e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga205bb6964074e38d85e85f91e305917a" id="r_ga205bb6964074e38d85e85f91e305917a"><td class="memTemplParams" colspan="2">template&lt;MeshConcept MeshType, MatrixConcept VMatrix, MatrixConcept FMatrix = Eigen::MatrixX3i, MatrixConcept EMatrix = Eigen::MatrixX2i&gt; </td></tr>
+<tr class="memitem:ga205bb6964074e38d85e85f91e305917a"><td class="memTemplItemLeft" align="right" valign="top">MeshType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__import__matrix.html#ga205bb6964074e38d85e85f91e305917a">vcl::meshFromMatrices</a> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">VMatrix</a> &amp;vertices, <a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">FMatrix</a> &amp;faces=<a class="el" href="classvcl_1_1Box.html">FMatrix</a>(), <a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">EMatrix</a> &amp;edges=<a class="el" href="classvcl_1_1Box.html">EMatrix</a>())</td></tr>
+<tr class="memdesc:ga205bb6964074e38d85e85f91e305917a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and returns a new mesh from the input matrices that are given as arguments.  <br /></td></tr>
+<tr class="separator:ga205bb6964074e38d85e85f91e305917a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2d5e7a8c28709d44a8bd8c9e703f5af2" id="r_ga2d5e7a8c28709d44a8bd8c9e703f5af2"><td class="memTemplParams" colspan="2">template&lt;MeshConcept MeshType, MatrixConcept VMatrix, MatrixConcept FMatrix = Eigen::MatrixX3i, MatrixConcept EMatrix = Eigen::MatrixX2i&gt; </td></tr>
+<tr class="memitem:ga2d5e7a8c28709d44a8bd8c9e703f5af2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__import__matrix.html#ga2d5e7a8c28709d44a8bd8c9e703f5af2">vcl::meshFromMatrices</a> (MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">VMatrix</a> &amp;vertices, <a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">FMatrix</a> &amp;faces=<a class="el" href="classvcl_1_1Box.html">FMatrix</a>(), <a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">EMatrix</a> &amp;edges=<a class="el" href="classvcl_1_1Box.html">EMatrix</a>())</td></tr>
+<tr class="memdesc:ga2d5e7a8c28709d44a8bd8c9e703f5af2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the given input <code>mesh</code> from the input matrices that are given as arguments.  <br /></td></tr>
+<tr class="separator:ga2d5e7a8c28709d44a8bd8c9e703f5af2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaadd94a4338500fc3af8c74feda3ed0c1" id="r_gaadd94a4338500fc3af8c74feda3ed0c1"><td class="memTemplParams" colspan="2">template&lt;MeshConcept MeshType, MatrixConcept VCMatrix&gt; </td></tr>
+<tr class="memitem:gaadd94a4338500fc3af8c74feda3ed0c1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__import__matrix.html#gaadd94a4338500fc3af8c74feda3ed0c1">vcl::vertexColorsFromMatrix</a> (MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">VCMatrix</a> &amp;<a class="el" href="classvcl_1_1Box.html">vertexColors</a>)</td></tr>
+<tr class="memdesc:gaadd94a4338500fc3af8c74feda3ed0c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the vertex colors of the given input <code>mesh</code> from the input vertex colors matrix.  <br /></td></tr>
+<tr class="separator:gaadd94a4338500fc3af8c74feda3ed0c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0ea6eab037c30b0f56586371be8b4fe6" id="r_ga0ea6eab037c30b0f56586371be8b4fe6"><td class="memTemplParams" colspan="2">template&lt;MeshConcept MeshType, Range R&gt; </td></tr>
+<tr class="memitem:ga0ea6eab037c30b0f56586371be8b4fe6"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__import__matrix.html#ga0ea6eab037c30b0f56586371be8b4fe6">vcl::vertexColorsFromRange</a> (MeshType &amp;mesh, R &amp;&amp;colors, <a class="el" href="classvcl_1_1Color.html#a51d1c2a5b8ce06d43362026194a14523">Color::Format</a> <a class="el" href="classvcl_1_1Box.html">colorFormat</a>)</td></tr>
+<tr class="memdesc:ga0ea6eab037c30b0f56586371be8b4fe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the vertex colors of the given input <code>mesh</code> from the input color range (that could be anything that satisfies the Range concept: e.g. std::vector&lt;double&gt;, std::array&lt;double, N&gt;, Eigen::VectorXd, etc.).  <br /></td></tr>
+<tr class="separator:ga0ea6eab037c30b0f56586371be8b4fe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga235d335019947591c0c29c9c3371d829" id="r_ga235d335019947591c0c29c9c3371d829"><td class="memTemplParams" colspan="2">template&lt;MeshConcept MeshType, Range R&gt; </td></tr>
+<tr class="memitem:ga235d335019947591c0c29c9c3371d829"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__import__matrix.html#ga235d335019947591c0c29c9c3371d829">vcl::vertexMaterialIndicesFromRange</a> (MeshType &amp;mesh, R &amp;&amp;<a class="el" href="classvcl_1_1Box.html">materialIndices</a>)</td></tr>
+<tr class="memdesc:ga235d335019947591c0c29c9c3371d829"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the vertex material indices of the given input <code>mesh</code> from the input material indices range (that could be anything that satisfies the Range concept: e.g. std::vector&lt;uint&gt;, std::array&lt;uint, N&gt;, Eigen::VectorXi, etc.).  <br /></td></tr>
+<tr class="separator:ga235d335019947591c0c29c9c3371d829"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga80a1a648e000c8c20db6de810b7d7c49" id="r_ga80a1a648e000c8c20db6de810b7d7c49"><td class="memTemplParams" colspan="2">template&lt;MeshConcept MeshType, MatrixConcept VNMatrix&gt; </td></tr>
+<tr class="memitem:ga80a1a648e000c8c20db6de810b7d7c49"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__import__matrix.html#ga80a1a648e000c8c20db6de810b7d7c49">vcl::vertexNormalsFromMatrix</a> (MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">VNMatrix</a> &amp;<a class="el" href="classvcl_1_1Box.html">vertexNormals</a>)</td></tr>
+<tr class="memdesc:ga80a1a648e000c8c20db6de810b7d7c49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the vertex normals of the given input <code>mesh</code> from the input vertex normals matrix.  <br /></td></tr>
+<tr class="separator:ga80a1a648e000c8c20db6de810b7d7c49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7b807e93cc9d4c4f3f3220d592b4eb11" id="r_ga7b807e93cc9d4c4f3f3220d592b4eb11"><td class="memTemplParams" colspan="2">template&lt;MeshConcept MeshType, MatrixConcept VMatrix&gt; </td></tr>
+<tr class="memitem:ga7b807e93cc9d4c4f3f3220d592b4eb11"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__import__matrix.html#ga7b807e93cc9d4c4f3f3220d592b4eb11">vcl::vertexPositionsFromMatrix</a> (MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">VMatrix</a> &amp;vertices, <a class="el" href="classvcl_1_1Box.html">bool</a> <a class="el" href="classvcl_1_1Box.html">clearBeforeSet</a>=<a class="el" href="classvcl_1_1Box.html">true</a>)</td></tr>
+<tr class="memdesc:ga7b807e93cc9d4c4f3f3220d592b4eb11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the vertex positions of the given input <code>mesh</code> from the input vertex matrix.  <br /></td></tr>
+<tr class="separator:ga7b807e93cc9d4c4f3f3220d592b4eb11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabb20a0a8065820b07542f84521531893" id="r_gabb20a0a8065820b07542f84521531893"><td class="memTemplParams" colspan="2">template&lt;MeshConcept MeshType, Range R&gt; </td></tr>
+<tr class="memitem:gabb20a0a8065820b07542f84521531893"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__import__matrix.html#gabb20a0a8065820b07542f84521531893">vcl::vertexQualityFromRange</a> (MeshType &amp;mesh, R &amp;&amp;quality)</td></tr>
+<tr class="memdesc:gabb20a0a8065820b07542f84521531893"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the vertex quality of the given input <code>mesh</code> from the input quality range (that could be anything that satisfies the Range concept: e.g. std::vector&lt;double&gt;, std::array&lt;double, N&gt;, Eigen::VectorXd, etc.).  <br /></td></tr>
+<tr class="separator:gabb20a0a8065820b07542f84521531893"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa8cfe66ccb082cfa4d9a27e8dfb2a6db" id="r_gaa8cfe66ccb082cfa4d9a27e8dfb2a6db"><td class="memTemplParams" colspan="2">template&lt;MeshConcept MeshType, Range R&gt; </td></tr>
+<tr class="memitem:gaa8cfe66ccb082cfa4d9a27e8dfb2a6db"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__import__matrix.html#gaa8cfe66ccb082cfa4d9a27e8dfb2a6db">vcl::vertexSelectionFromRange</a> (MeshType &amp;mesh, R &amp;&amp;selection)</td></tr>
+<tr class="memdesc:gaa8cfe66ccb082cfa4d9a27e8dfb2a6db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the vertex selection of the given input <code>mesh</code> from the input selection range (that could be anything that satisfies the Range concept: e.g. std::vector&lt;bool&gt;, std::array&lt;bool, N&gt;, Eigen::VectorXi, etc.).  <br /></td></tr>
+<tr class="separator:gaa8cfe66ccb082cfa4d9a27e8dfb2a6db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3a74effc29b91f2091446c2460785462" id="r_ga3a74effc29b91f2091446c2460785462"><td class="memTemplParams" colspan="2">template&lt;MeshConcept MeshType, MatrixConcept VTMatrix&gt; </td></tr>
+<tr class="memitem:ga3a74effc29b91f2091446c2460785462"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__import__matrix.html#ga3a74effc29b91f2091446c2460785462">vcl::vertexTexCoordsFromMatrix</a> (MeshType &amp;mesh, <a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">VTMatrix</a> &amp;<a class="el" href="classvcl_1_1Box.html">vertexTexCoords</a>)</td></tr>
+<tr class="memdesc:ga3a74effc29b91f2091446c2460785462"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the vertex texcoords of the given input <code>mesh</code> from the input vertex texcoords matrix.  <br /></td></tr>
+<tr class="separator:ga3a74effc29b91f2091446c2460785462"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>List Import Mesh from Matrix algorithms. </p>
-<p>They allow to import mesh data from matrices.</p>
-<p>You can access these algorithms by including <code>#include &lt;<a class="el" href="import__export_8h_source.html">vclib/algorithms/mesh/import_export.h</a>&gt;</code> </p>
+<p>They allow to import mesh data from matrices. </p>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga5f29d866e30e198c0ed22f8ed9de0ba0" name="ga5f29d866e30e198c0ed22f8ed9de0ba0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5f29d866e30e198c0ed22f8ed9de0ba0">&#9670;&#160;</a></span>edgeColorsFromMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;EdgeMeshConcept MeshType, MatrixConcept ECMatrix&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::edgeColorsFromMatrix </td>
+          <td>(</td>
+          <td class="paramtype">MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">ECMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>edgeColors</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the edge colors of the given input <code>mesh</code> from the input edge colors matrix. </p>
+<p>The number of rows of the input matrix must be equal to the number of edges of the mesh, otherwise an exception is thrown.</p>
+<p>The input matrix can have 3 or 4 columns. If it has 3 columns, the alpha channel is set to 255 (1.0f).</p>
+<p>The input matrix can have integral or floating point scalar type. If it has integral scalar type, the color components are expected to be in range [0, 255]. If it has floating point scalar type, the color components are expected to be in range [0.0f, 1.0f].</p>
+<p>The function enables the per-face color component if it is not already enabled.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>the type of the mesh to be filled. It must satisfy the EdgeMeshConcept. </td></tr>
+    <tr><td class="paramname">ECMatrix</td><td>the type of the input edge colors matrix. It must satisfy the MatrixConcept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>mesh: the mesh on which import the input edge colors. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">edgeColors</td><td>a #E*3 or #E*4 matrix containing the colors of the edges of the mesh. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga09d49d27b169434f13e74ff20b970779" name="ga09d49d27b169434f13e74ff20b970779"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga09d49d27b169434f13e74ff20b970779">&#9670;&#160;</a></span>edgeColorsFromRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;EdgeMeshConcept MeshType, Range R&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::edgeColorsFromRange </td>
+          <td>(</td>
+          <td class="paramtype">MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">R &amp;&amp;&#160;</td>
+          <td class="paramname"><em>colors</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Color.html#a51d1c2a5b8ce06d43362026194a14523">Color::Format</a>&#160;</td>
+          <td class="paramname"><em>colorFormat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the edge colors of the given input <code>mesh</code> from the input color range (that could be anything that satisfies the Range concept: e.g. std::vector&lt;double&gt;, std::array&lt;double, N&gt;, Eigen::VectorXd, etc.). </p>
+<p>Each color of the input range is interpeted as a packed 32-bit unsigned integer in the given <code>colorFormat</code>.</p>
+<p>The number of elements of the input range must be equal to the number of edges of the mesh, otherwise an exception is thrown.</p>
+<p>The function enables the per-edge quality component if it is not already enabled.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>the type of the mesh to be filled. It must satisfy the EdgeMeshConcept. </td></tr>
+    <tr><td class="paramname">R</td><td>the type of the input range. It must satisfy the Range concept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>mesh: the mesh on which import the input edge color. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">colors</td><td>the input edge color range. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">colorFormat</td><td>the format used to pack the color in a single 32 bit value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga29c7bde92d34ac5f04ea25faf5b4b694" name="ga29c7bde92d34ac5f04ea25faf5b4b694"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga29c7bde92d34ac5f04ea25faf5b4b694">&#9670;&#160;</a></span>edgeIndicesFromMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;EdgeMeshConcept MeshType, MatrixConcept EMatrix&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::edgeIndicesFromMatrix </td>
+          <td>(</td>
+          <td class="paramtype">MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">EMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>edges</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">bool</a>&#160;</td>
+          <td class="paramname"><em>clearBeforeSet</em> = <code><a class="el" href="classvcl_1_1Box.html">true</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the edge indices of the given input <code>mesh</code> from the input edge matrix. </p>
+<p>If the argument <code>clearBeforeSet</code> is set to <code>true</code> (default), the function clears the edge container of the mesh and then adds a number of edges that depends on the number of rows of the input edge matrix. In this scenario, all the old edges with their components stored in the mesh before calling this function are lost.</p>
+<p>If the argument <code>clearBeforeSet</code> is set to <code>false</code>, the function checks that the number of rows of the input edge matrix is equal to the number of edges of the mesh. If this is not the case, an exception is thrown. Then, the function sets the indices of the edges of the mesh from the input edge matrix. In this scenario, all the components (except the indices) of the edges stored in the mesh before calling this function are preserved.</p>
+<p>All the other containers of the mesh are left as they are. Pointers to edges stored in the other containers of the mesh are still valid only if the number of edges is not changed (same allocation policy of the std::vector).</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>the type of the mesh to be filled. It must satisfy the EdgeMeshConcept. </td></tr>
+    <tr><td class="paramname">EMatrix</td><td>the type of the input edge matrix. It must satisfy the MatrixConcept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>mesh: the mesh on which import the input edges. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">edges</td><td>a #E*2 matrix containing the indices of the vertices of the edges of the mesh. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">clearBeforeSet</td><td>if <code>true</code>, the function clears the container of the edges of the mesh before adding the edges from the input matrix. If <code>false</code>, the function sets the indices in the input matrix to the edges of the mesh, leaving all the other components untouched. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga84194b81c33e87f19369b404464af31b" name="ga84194b81c33e87f19369b404464af31b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga84194b81c33e87f19369b404464af31b">&#9670;&#160;</a></span>edgeNormalsFromMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;EdgeMeshConcept MeshType, MatrixConcept ENMatrix&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::edgeNormalsFromMatrix </td>
+          <td>(</td>
+          <td class="paramtype">MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">ENMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>edgeNormals</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the edge normals of the given input <code>mesh</code> from the input edge normals matrix. </p>
+<p>The number of rows of the input matrix must be equal to the number of edges of the mesh, otherwise an exception is thrown.</p>
+<p>The function enables the per-edge normal component if it is not already enabled.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>the type of the mesh to be filled. It must satisfy the EdgeMeshConcept. </td></tr>
+    <tr><td class="paramname">ENMatrix</td><td>the type of the input edge normals matrix. It must satisfy the MatrixConcept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>mesh: the mesh on which import the input edge normals. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">edgeNormals</td><td>a #E*3 matrix containing the normals of the edges of the mesh. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga3f6e1c123da58d1d87877cc4a15831d6" name="ga3f6e1c123da58d1d87877cc4a15831d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3f6e1c123da58d1d87877cc4a15831d6">&#9670;&#160;</a></span>edgeQualityFromRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;EdgeMeshConcept MeshType, Range R&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::edgeQualityFromRange </td>
+          <td>(</td>
+          <td class="paramtype">MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">R &amp;&amp;&#160;</td>
+          <td class="paramname"><em>quality</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the edge quality of the given input <code>mesh</code> from the input quality range (that could be anything that satisfies the Range concept: e.g. std::vector&lt;double&gt;, std::array&lt;double, N&gt;, Eigen::VectorXd, etc.). </p>
+<p>The number of elements of the input range must be equal to the number of edges of the mesh, otherwise an exception is thrown.</p>
+<p>The function enables the per-edge quality component if it is not already enabled.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>the type of the mesh to be filled. It must satisfy the EdgeMeshConcept. </td></tr>
+    <tr><td class="paramname">R</td><td>the type of the input range. It must satisfy the Range concept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>mesh: the mesh on which import the input edge quality. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">quality</td><td>the input edge quality range. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga52332d4ac9d7b044f55eae43f5090493" name="ga52332d4ac9d7b044f55eae43f5090493"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga52332d4ac9d7b044f55eae43f5090493">&#9670;&#160;</a></span>edgeSelectionFromRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;EdgeMeshConcept MeshType, Range R&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::edgeSelectionFromRange </td>
+          <td>(</td>
+          <td class="paramtype">MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">R &amp;&amp;&#160;</td>
+          <td class="paramname"><em>selection</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the edge selection of the given input <code>mesh</code> from the input selection range (that could be anything that satisfies the Range concept: e.g. std::vector&lt;bool&gt;, std::array&lt;bool, N&gt;, Eigen::VectorXi, etc.). </p>
+<p>The number of elements of the input range must be equal to the number of edges of the mesh, otherwise an exception is thrown.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>the type of the mesh to be filled. It must satisfy the EdgeMeshConcept. </td></tr>
+    <tr><td class="paramname">R</td><td>the type of the input range. It must satisfy the Range concept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>mesh: the mesh on which import the input edge selection. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">selection</td><td>the input edge selection range. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaac5905390da0a1d9c133cae58ed3ed79" name="gaac5905390da0a1d9c133cae58ed3ed79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaac5905390da0a1d9c133cae58ed3ed79">&#9670;&#160;</a></span>elementColorsFromMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;uint ELEM_ID, MeshConcept MeshType, MatrixConcept CMatrix&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::elementColorsFromMatrix </td>
+          <td>(</td>
+          <td class="paramtype">MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">CMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>colors</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the element identified by <code>ELEM_ID</code> colors of the given input <code>mesh</code> from the input colors matrix. </p>
+<p>The number of rows of the input matrix must be equal to the number of elements of the mesh, otherwise an exception is thrown.</p>
+<p>The input matrix can have 3 or 4 columns. If it has 3 columns, the alpha channel is set to 255 (1.0f).</p>
+<p>The input matrix can have integral or floating point scalar type. If it has integral scalar type, the color components are expected to be in range [0, 255]. If it has floating point scalar type, the color components are expected to be in range [0.0f, 1.0f].</p>
+<p>The function enables the per-element color component if it is not already enabled.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>the type of the mesh to be filled. It must satisfy the MeshConcept. </td></tr>
+    <tr><td class="paramname">CMatrix</td><td>the type of the input colors matrix. It must satisfy the MatrixConcept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>mesh: the mesh on which import the input colors. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">colors</td><td>a #V*3 or #V*4 matrix containing the colors of the elements of the mesh. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga5ef668aa9cd9ecbf77bc21361e3e1b29" name="ga5ef668aa9cd9ecbf77bc21361e3e1b29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5ef668aa9cd9ecbf77bc21361e3e1b29">&#9670;&#160;</a></span>elementColorsFromRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;uint ELEM_ID, MeshConcept MeshType, Range R&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::elementColorsFromRange </td>
+          <td>(</td>
+          <td class="paramtype">MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">R &amp;&amp;&#160;</td>
+          <td class="paramname"><em>colors</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Color.html#a51d1c2a5b8ce06d43362026194a14523">Color::Format</a>&#160;</td>
+          <td class="paramname"><em>colorFormat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the element identified by <code>ELEM_ID</code> colors of the given input <code>mesh</code> from the input color range (that could be anything that satisfies the Range concept: e.g. std::vector&lt;double&gt;, std::array&lt;double, N&gt;, Eigen::VectorXd, etc.). </p>
+<p>Each color of the input range is interpeted as a packed 32-bit unsigned integer in the given <code>colorFormat</code>.</p>
+<p>The number of elements of the input range must be equal to the number of ELEM_ID elements of the mesh, otherwise an exception is thrown.</p>
+<p>The function enables the per-element quality component if it is not already enabled.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>the type of the mesh to be filled. It must satisfy the MeshConcept. </td></tr>
+    <tr><td class="paramname">R</td><td>the type of the input range. It must satisfy the Range concept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>mesh: the mesh on which import the input element color. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">colors</td><td>the input element color range. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">colorFormat</td><td>the format used to pack the color in a single 32 bit value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga152bf2ac35d5c6333005762dd21ef787" name="ga152bf2ac35d5c6333005762dd21ef787"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga152bf2ac35d5c6333005762dd21ef787">&#9670;&#160;</a></span>elementNormalsFromMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;uint ELEM_ID, MeshConcept MeshType, MatrixConcept NMatrix&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::elementNormalsFromMatrix </td>
+          <td>(</td>
+          <td class="paramtype">MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">NMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>normals</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the element identified by <code>ELEM_ID</code> normals of the given input <code>mesh</code> from the input normals matrix. </p>
+<p>The number of rows of the input matrix must be equal to the number of ELEM_ID elements of the mesh, otherwise an exception is thrown.</p>
+<p>The function enables the per-element normal component if it is not already enabled.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>the type of the mesh to be filled. It must satisfy the MeshConcept. </td></tr>
+    <tr><td class="paramname">NMatrix</td><td>the type of the input normals matrix. It must satisfy the MatrixConcept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>mesh: the mesh on which import the input element normals. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">normals</td><td>a #E*3 matrix containing the normals of the elements of the mesh. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga8b03619cbb0313736e6f084aae863059" name="ga8b03619cbb0313736e6f084aae863059"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8b03619cbb0313736e6f084aae863059">&#9670;&#160;</a></span>elementQualityFromRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;uint ELEM_ID, MeshConcept MeshType, Range R&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::elementQualityFromRange </td>
+          <td>(</td>
+          <td class="paramtype">MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">R &amp;&amp;&#160;</td>
+          <td class="paramname"><em>quality</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the element identified by <code>ELEM_ID</code> quality of the given input <code>mesh</code> from the input quality range (that could be anything that satisfies the Range concept: e.g. std::vector&lt;double&gt;, std::array&lt;double, N&gt;, Eigen::VectorXd, etc.). </p>
+<p>The number of elements of the input range must be equal to the number of ELEM_ID elements of the mesh, otherwise an exception is thrown.</p>
+<p>The function enables the per-element quality component if it is not already enabled.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>the type of the mesh to be filled. It must satisfy the MeshConcept. </td></tr>
+    <tr><td class="paramname">R</td><td>the type of the input range. It must satisfy the Range concept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>mesh: the mesh on which import the input element quality. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">quality</td><td>the input element quality range. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga2793a268224feb7835291c0ceae0b60f" name="ga2793a268224feb7835291c0ceae0b60f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2793a268224feb7835291c0ceae0b60f">&#9670;&#160;</a></span>elementSelectionFromRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;uint ELEM_ID, MeshConcept MeshType, Range R&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::elementSelectionFromRange </td>
+          <td>(</td>
+          <td class="paramtype">MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">R &amp;&amp;&#160;</td>
+          <td class="paramname"><em>selection</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the element identified by <code>ELEM_ID</code> selection of the given input <code>mesh</code> from the input selection range (that could be anything that satisfies the Range concept: e.g. std::vector&lt;bool&gt;, std::array&lt;bool, N&gt;, Eigen::VectorXi, etc.). </p>
+<p>The number of elements of the input range must be equal to the number of ELEM_ID elements of the mesh, otherwise an exception is thrown.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>the type of the mesh to be filled. It must satisfy the MeshConcept. </td></tr>
+    <tr><td class="paramname">R</td><td>the type of the input range. It must satisfy the Range concept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>mesh: the mesh on which import the input element selection. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">selection</td><td>the input element selection range. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga10a934a6e23cb98ffb7e85394ef213b3" name="ga10a934a6e23cb98ffb7e85394ef213b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga10a934a6e23cb98ffb7e85394ef213b3">&#9670;&#160;</a></span>faceColorsFromMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;FaceMeshConcept MeshType, MatrixConcept FCMatrix&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::faceColorsFromMatrix </td>
+          <td>(</td>
+          <td class="paramtype">MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">FCMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>faceColors</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the face colors of the given input <code>mesh</code> from the input face colors matrix. </p>
+<p>The number of rows of the input matrix must be equal to the number of faces of the mesh, otherwise an exception is thrown.</p>
+<p>The input matrix can have 3 or 4 columns. If it has 3 columns, the alpha channel is set to 255 (1.0f).</p>
+<p>The input matrix can have integral or floating point scalar type. If it has integral scalar type, the color components are expected to be in range [0, 255]. If it has floating point scalar type, the color components are expected to be in range [0.0f, 1.0f].</p>
+<p>The function enables the per-face color component if it is not already enabled.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>the type of the mesh to be filled. It must satisfy the FaceMeshConcept. </td></tr>
+    <tr><td class="paramname">FCMatrix</td><td>the type of the input face colors matrix. It must satisfy the MatrixConcept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>mesh: the mesh on which import the input face colors. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">faceColors</td><td>a #F*3 or #F*4 matrix containing the colors of the faces of the mesh. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga7c87ab88b2a96665c1b2b748512bbd08" name="ga7c87ab88b2a96665c1b2b748512bbd08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7c87ab88b2a96665c1b2b748512bbd08">&#9670;&#160;</a></span>faceColorsFromRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;FaceMeshConcept MeshType, Range R&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::faceColorsFromRange </td>
+          <td>(</td>
+          <td class="paramtype">MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">R &amp;&amp;&#160;</td>
+          <td class="paramname"><em>colors</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Color.html#a51d1c2a5b8ce06d43362026194a14523">Color::Format</a>&#160;</td>
+          <td class="paramname"><em>colorFormat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the face colors of the given input <code>mesh</code> from the input color range (that could be anything that satisfies the Range concept: e.g. std::vector&lt;double&gt;, std::array&lt;double, N&gt;, Eigen::VectorXd, etc.). </p>
+<p>Each color of the input range is interpeted as a packed 32-bit unsigned integer in the given <code>colorFormat</code>.</p>
+<p>The number of elements of the input range must be equal to the number of faces of the mesh, otherwise an exception is thrown.</p>
+<p>The function enables the per-face quality component if it is not already enabled.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>the type of the mesh to be filled. It must satisfy the FaceMeshConcept. </td></tr>
+    <tr><td class="paramname">R</td><td>the type of the input range. It must satisfy the Range concept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>mesh: the mesh on which import the input face color. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">colors</td><td>the input face color range. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">colorFormat</td><td>the format used to pack the color in a single 32 bit value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gae6f090aa8553f5ce74b4aebdbf0d4dfd" name="gae6f090aa8553f5ce74b4aebdbf0d4dfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae6f090aa8553f5ce74b4aebdbf0d4dfd">&#9670;&#160;</a></span>faceIndicesFromMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;FaceMeshConcept MeshType, MatrixConcept FMatrix&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::faceIndicesFromMatrix </td>
+          <td>(</td>
+          <td class="paramtype">MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">FMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>faces</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">bool</a>&#160;</td>
+          <td class="paramname"><em>clearBeforeSet</em> = <code><a class="el" href="classvcl_1_1Box.html">true</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the face indices of the given input <code>mesh</code> from the input face matrix. </p>
+<p>If the MeshType is not a polygonal mesh (e.g. a triangle mesh), the number of columns of the input face matrix must be equal to the number of vertices of each face of the mesh (e.g. 3 for triangle meshes, 4 for quad meshes, etc.). If this condition is not satisfied, an exception is thrown.</p>
+<p>If the MeshType is a polygonal mesh, the size of each polygonal face is determined by counting the number of valid vertex indices in each row of the input face matrix. Valid vertex indices are non-negative and not equal to UINT_NULL.</p>
+<p>If the argument <code>clearBeforeSet</code> is set to <code>true</code> (default), the function clears the face container of the mesh and then adds a number of faces that depends on the number of rows of the input face matrix. In this scenario, all the old faces with their components stored in the mesh before calling this function are lost.</p>
+<p>If the argument <code>clearBeforeSet</code> is set to <code>false</code>, the function checks that the number of rows of the input face matrix is equal to the number of faces of the mesh. If this is not the case, an exception is thrown. Then, the function sets the indices of the faces of the mesh from the input face matrix. In this scenario, all the components (except the indices) of the faces stored in the mesh before calling this function are preserved.</p>
+<p>All the other containers of the mesh are left as they are. Pointers to faces stored in the other containers of the mesh are still valid only if the number of faces is not changed (same allocation policy of the std::vector).</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>the type of the mesh to be filled. It must satisfy the FaceMeshConcept. </td></tr>
+    <tr><td class="paramname">FMatrix</td><td>the type of the input face matrix. It must satisfy the MatrixConcept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>mesh: the mesh on which import the input faces. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">faces</td><td>a #F*K matrix containing the indices of the vertices of the faces of the mesh. If the mesh is not a polygonal mesh (e.g. a triangle mesh), K must be equal to the number of vertices of each face of the mesh (e.g. 3 for triangle meshes, 4 for quad meshes, etc.). If this condition is not satisfied, an exception is thrown. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">clearBeforeSet</td><td>if <code>true</code>, the function clears the container of the faces of the mesh before adding the faces from the input matrix. If <code>false</code>, the function sets the indices from the input matrix to the faces of the mesh, leaving all the other components untouched. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga2f54389cd09841feea90c7479f32b8e0" name="ga2f54389cd09841feea90c7479f32b8e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2f54389cd09841feea90c7479f32b8e0">&#9670;&#160;</a></span>faceMaterialIndicesFromRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;FaceMeshConcept MeshType, Range R&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::faceMaterialIndicesFromRange </td>
+          <td>(</td>
+          <td class="paramtype">MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">R &amp;&amp;&#160;</td>
+          <td class="paramname"><em>texCoordIndices</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the face material indices of the given input <code>mesh</code> from the input material indices range (that could be anything that satisfies the Range concept: e.g. std::vector&lt;uint&gt;, std::array&lt;uint, N&gt;, Eigen::VectorXi, etc.). </p>
+<p>The number of elements of the input range must be equal to the number of faces of the mesh, otherwise an exception is thrown.</p>
+<p>The function enables the per-face material index component if it is not already enabled.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>the type of the mesh to be filled. It must satisfy the FaceMeshConcept. </td></tr>
+    <tr><td class="paramname">R</td><td>the type of the input range. It must satisfy the Range concept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>mesh: the mesh on which import the input face material indices. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">texCoordIndices</td><td>the input face material indices range. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaec421ff04aff7e2f1099697219e37ab3" name="gaec421ff04aff7e2f1099697219e37ab3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaec421ff04aff7e2f1099697219e37ab3">&#9670;&#160;</a></span>faceNormalsFromMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;FaceMeshConcept MeshType, MatrixConcept FNMatrix&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::faceNormalsFromMatrix </td>
+          <td>(</td>
+          <td class="paramtype">MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">FNMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>faceNormals</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the face normals of the given input <code>mesh</code> from the input face normals matrix. </p>
+<p>The number of rows of the input matrix must be equal to the number of faces of the mesh, otherwise an exception is thrown.</p>
+<p>The function enables the per-face normal component if it is not already enabled.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>the type of the mesh to be filled. It must satisfy the FaceMeshConcept. </td></tr>
+    <tr><td class="paramname">FNMatrix</td><td>the type of the input face normals matrix. It must satisfy the MatrixConcept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>mesh: the mesh on which import the input face normals. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">faceNormals</td><td>a #F*3 matrix containing the normals of the faces of the mesh. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga3af44fd9a60a88e7b586f346800e10ff" name="ga3af44fd9a60a88e7b586f346800e10ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3af44fd9a60a88e7b586f346800e10ff">&#9670;&#160;</a></span>faceQualityFromRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;FaceMeshConcept MeshType, Range R&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::faceQualityFromRange </td>
+          <td>(</td>
+          <td class="paramtype">MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">R &amp;&amp;&#160;</td>
+          <td class="paramname"><em>quality</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the face quality of the given input <code>mesh</code> from the input quality range (that could be anything that satisfies the Range concept: e.g. std::vector&lt;double&gt;, std::array&lt;double, N&gt;, Eigen::VectorXd, etc.). </p>
+<p>The number of elements of the input range must be equal to the number of faces of the mesh, otherwise an exception is thrown.</p>
+<p>The function enables the per-face quality component if it is not already enabled.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>the type of the mesh to be filled. It must satisfy the FaceMeshConcept. </td></tr>
+    <tr><td class="paramname">R</td><td>the type of the input range. It must satisfy the Range concept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>mesh: the mesh on which import the input face quality. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">quality</td><td>the input face quality range. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga7d6372966261dc0f444280f42762882e" name="ga7d6372966261dc0f444280f42762882e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7d6372966261dc0f444280f42762882e">&#9670;&#160;</a></span>faceSelectionFromRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;FaceMeshConcept MeshType, Range R&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::faceSelectionFromRange </td>
+          <td>(</td>
+          <td class="paramtype">MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">R &amp;&amp;&#160;</td>
+          <td class="paramname"><em>selection</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the face selection of the given input <code>mesh</code> from the input selection range (that could be anything that satisfies the Range concept: e.g. std::vector&lt;bool&gt;, std::array&lt;bool, N&gt;, Eigen::VectorXi, etc.). </p>
+<p>The number of elements of the input range must be equal to the number of faces of the mesh, otherwise an exception is thrown.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>the type of the mesh to be filled. It must satisfy the FaceMeshConcept. </td></tr>
+    <tr><td class="paramname">R</td><td>the type of the input range. It must satisfy the Range concept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>mesh: the mesh on which import the input face selection. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">selection</td><td>the input face selection range. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga60a2ae45291f7c09e5e560886b5e49e0" name="ga60a2ae45291f7c09e5e560886b5e49e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga60a2ae45291f7c09e5e560886b5e49e0">&#9670;&#160;</a></span>faceWedgeTexCoordsFromMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;FaceMeshConcept MeshType, MatrixConcept FTMatrix&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::faceWedgeTexCoordsFromMatrix </td>
+          <td>(</td>
+          <td class="paramtype">MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">FTMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>faceWedgeTexCoords</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the face wedge texcoords of the given input <code>mesh</code> from the input face wedge texcoords matrix. </p>
+<p>The number of rows of the input matrix must be equal to the number of faces of the mesh, otherwise an exception is thrown.</p>
+<p>The number of columns is expected to be equal to 2 * K, where K is the number of vertices of the largest face of the mesh. If the mesh has fixed face size (e.g. triangle mesh, quad mesh, etc.), K is equal to the number of vertices of each face of the mesh.</p>
+<p>The function enables the per-face wedge texcoords component if it is not already enabled.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>the type of the mesh to be filled. It must satisfy the FaceMeshConcept. </td></tr>
+    <tr><td class="paramname">FTMatrix</td><td>the type of the input face wedge texcoords matrix. It must satisfy the MatrixConcept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>mesh: the mesh on which import the input face wedge texcoords. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">faceWedgeTexCoords</td><td>a #F*(K*2) matrix containing the wedge texcoords of the faces of the mesh. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga205bb6964074e38d85e85f91e305917a" name="ga205bb6964074e38d85e85f91e305917a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga205bb6964074e38d85e85f91e305917a">&#9670;&#160;</a></span>meshFromMatrices() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;MeshConcept MeshType, MatrixConcept VMatrix, MatrixConcept FMatrix = Eigen::MatrixX3i, MatrixConcept EMatrix = Eigen::MatrixX2i&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">MeshType vcl::meshFromMatrices </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">VMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>vertices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">FMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>faces</em> = <code><a class="el" href="classvcl_1_1Box.html">FMatrix</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">EMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>edges</em> = <code><a class="el" href="classvcl_1_1Box.html">EMatrix</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates and returns a new mesh from the input matrices that are given as arguments. </p>
+<p>The function accepts several input matrices, that are used only if their number of rows is different from zero. It tries to fill all the data contained in the non-empty input matrices into the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>:</p><ul>
+<li>if a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> is not able to store same data, the relative input matrix is ignored. For example, if the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> has no faces, the function will ignore the input face matrix, also if that is not empty.</li>
+<li>if a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> is able to store some data and the relative input matrix is not empty, the data will be stored in the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. If the matrix has not the expected size, an exception is thrown.</li>
+</ul>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classvcl_1_1WrongSizeException.html" title="Exception thrown when the size (generally of a container) is not the expected one.">vcl::WrongSizeException</a></td><td>if the sizes of the non-empty input matrices have not the expected sizes.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>the type of the mesh to be created. It must satisfy the MeshConcept. </td></tr>
+    <tr><td class="paramname">VMatrix</td><td>the type of the input vertex matrix. It must satisfy the MatrixConcept. </td></tr>
+    <tr><td class="paramname">FMatrix</td><td>the type of the input face matrix. It must satisfy the MatrixConcept. </td></tr>
+    <tr><td class="paramname">EMatrix</td><td>the type of the input edge matrix. It must satisfy the MatrixConcept.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">vertices</td><td>a #V*3 matrix containing the positions of the vertices of the mesh. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">faces</td><td>a #F*K matrix containing the indices of the vertices of the faces of the mesh. If the MeshType has no faces, the function will ignore this matrix. If the mesh is not a polygonal mesh (e.g. a triangle mesh), K must be equal to the number of vertices of each face of the mesh (e.g. 3 for triangle meshes, 4 for quad meshes, etc.). If this condition is not satisfied, an exception is thrown. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">edges</td><td>a #E*2 matrix containing the indices of the vertices of the edges of the mesh. If the MeshType has no edges, the function will ignore this matrix.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a new mesh containing the data passed as argument. </dd></dl>
+
+</div>
+</div>
+<a id="ga2d5e7a8c28709d44a8bd8c9e703f5af2" name="ga2d5e7a8c28709d44a8bd8c9e703f5af2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2d5e7a8c28709d44a8bd8c9e703f5af2">&#9670;&#160;</a></span>meshFromMatrices() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;MeshConcept MeshType, MatrixConcept VMatrix, MatrixConcept FMatrix = Eigen::MatrixX3i, MatrixConcept EMatrix = Eigen::MatrixX2i&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::meshFromMatrices </td>
+          <td>(</td>
+          <td class="paramtype">MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">VMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>vertices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">FMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>faces</em> = <code><a class="el" href="classvcl_1_1Box.html">FMatrix</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">EMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>edges</em> = <code><a class="el" href="classvcl_1_1Box.html">EMatrix</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the given input <code>mesh</code> from the input matrices that are given as arguments. </p>
+<p>The function accepts several input matrices, that are used only if their number of rows is different from zero. It tries to fill all the data contained in the non-empty input matrices into the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>:</p><ul>
+<li>if a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> is not able to store same data, the relative input matrix is ignored. For example, if the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> has no faces, the function will ignore the input face matrix, also if that is not empty.</li>
+<li>if a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> is able to store some data and the relative input matrix is not empty, the data will be stored in the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. If the matrix has not the expected size, an exception is thrown.</li>
+</ul>
+<p>The mesh is cleared and all the optional components are disabled before adding the data from the input matrices.</p>
+<dl class="section note"><dt>Note</dt><dd>If the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> is not able to store some data from the matrices, that data will be ignored. For example, if the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> has no faces, the function will ignore the input face matrix, also if that is not empty.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classvcl_1_1WrongSizeException.html" title="Exception thrown when the size (generally of a container) is not the expected one.">vcl::WrongSizeException</a></td><td>if the sizes of the non-empty input matrices have not the expected sizes.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>the type of the mesh to be created. It must satisfy the MeshConcept. </td></tr>
+    <tr><td class="paramname">VMatrix</td><td>the type of the input vertex matrix. It must satisfy the MatrixConcept. </td></tr>
+    <tr><td class="paramname">FMatrix</td><td>the type of the input face matrix. It must satisfy the MatrixConcept. </td></tr>
+    <tr><td class="paramname">EMatrix</td><td>the type of the input edge matrix. It must satisfy the MatrixConcept.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>mesh: the mesh on which import all the input data from the matrices. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vertices</td><td>a #V*3 matrix containing the positions of the vertices of the mesh. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">faces</td><td>a #F*K matrix containing the indices of the vertices of the faces of the mesh. If the MeshType has no faces, the function will ignore this matrix. If the mesh is not a polygonal mesh (e.g. a triangle mesh), K must be equal to the number of vertices of each face of the mesh (e.g. 3 for triangle meshes, 4 for quad meshes, etc.). If this condition is not satisfied, an exception is thrown. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">edges</td><td>a #E*2 matrix containing the indices of the vertices of the edges of the mesh. If the MeshType has no edges, the function will ignore this matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaadd94a4338500fc3af8c74feda3ed0c1" name="gaadd94a4338500fc3af8c74feda3ed0c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaadd94a4338500fc3af8c74feda3ed0c1">&#9670;&#160;</a></span>vertexColorsFromMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;MeshConcept MeshType, MatrixConcept VCMatrix&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::vertexColorsFromMatrix </td>
+          <td>(</td>
+          <td class="paramtype">MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">VCMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>vertexColors</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the vertex colors of the given input <code>mesh</code> from the input vertex colors matrix. </p>
+<p>The number of rows of the input matrix must be equal to the number of vertices of the mesh, otherwise an exception is thrown.</p>
+<p>The input matrix can have 3 or 4 columns. If it has 3 columns, the alpha channel is set to 255 (1.0f).</p>
+<p>The input matrix can have integral or floating point scalar type. If it has integral scalar type, the color components are expected to be in range [0, 255]. If it has floating point scalar type, the color components are expected to be in range [0.0f, 1.0f].</p>
+<p>The function enables the per-vertex color component if it is not already enabled.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>the type of the mesh to be filled. It must satisfy the MeshConcept. </td></tr>
+    <tr><td class="paramname">VCMatrix</td><td>the type of the input vertex colors matrix. It must satisfy the MatrixConcept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>mesh: the mesh on which import the input vertex colors. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vertexColors</td><td>a #V*3 or #V*4 matrix containing the colors of the vertices of the mesh. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga0ea6eab037c30b0f56586371be8b4fe6" name="ga0ea6eab037c30b0f56586371be8b4fe6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0ea6eab037c30b0f56586371be8b4fe6">&#9670;&#160;</a></span>vertexColorsFromRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;MeshConcept MeshType, Range R&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::vertexColorsFromRange </td>
+          <td>(</td>
+          <td class="paramtype">MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">R &amp;&amp;&#160;</td>
+          <td class="paramname"><em>colors</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Color.html#a51d1c2a5b8ce06d43362026194a14523">Color::Format</a>&#160;</td>
+          <td class="paramname"><em>colorFormat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the vertex colors of the given input <code>mesh</code> from the input color range (that could be anything that satisfies the Range concept: e.g. std::vector&lt;double&gt;, std::array&lt;double, N&gt;, Eigen::VectorXd, etc.). </p>
+<p>Each color of the input range is interpeted as a packed 32-bit unsigned integer in the given <code>colorFormat</code>.</p>
+<p>The number of elements of the input range must be equal to the number of vertices of the mesh, otherwise an exception is thrown.</p>
+<p>The function enables the per-vertex quality component if it is not already enabled.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>the type of the mesh to be filled. It must satisfy the MeshConcept. </td></tr>
+    <tr><td class="paramname">R</td><td>the type of the input range. It must satisfy the Range concept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>mesh: the mesh on which import the input vertex color. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">colors</td><td>the input vertex color range. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">colorFormat</td><td>the format used to pack the color in a single 32 bit value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga235d335019947591c0c29c9c3371d829" name="ga235d335019947591c0c29c9c3371d829"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga235d335019947591c0c29c9c3371d829">&#9670;&#160;</a></span>vertexMaterialIndicesFromRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;MeshConcept MeshType, Range R&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::vertexMaterialIndicesFromRange </td>
+          <td>(</td>
+          <td class="paramtype">MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">R &amp;&amp;&#160;</td>
+          <td class="paramname"><em>materialIndices</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the vertex material indices of the given input <code>mesh</code> from the input material indices range (that could be anything that satisfies the Range concept: e.g. std::vector&lt;uint&gt;, std::array&lt;uint, N&gt;, Eigen::VectorXi, etc.). </p>
+<p>The number of elements of the input range must be equal to the number of vertices of the mesh, otherwise an exception is thrown.</p>
+<p>The function enables the per-vertex material indices component if it is not already enabled.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>the type of the mesh to be filled. It must satisfy the MeshConcept. </td></tr>
+    <tr><td class="paramname">R</td><td>the type of the input range. It must satisfy the Range concept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>mesh: the mesh on which import the input vertex material indices. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">materialIndices</td><td>the input vertex material indices range. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga80a1a648e000c8c20db6de810b7d7c49" name="ga80a1a648e000c8c20db6de810b7d7c49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga80a1a648e000c8c20db6de810b7d7c49">&#9670;&#160;</a></span>vertexNormalsFromMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;MeshConcept MeshType, MatrixConcept VNMatrix&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::vertexNormalsFromMatrix </td>
+          <td>(</td>
+          <td class="paramtype">MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">VNMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>vertexNormals</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the vertex normals of the given input <code>mesh</code> from the input vertex normals matrix. </p>
+<p>The number of rows of the input matrix must be equal to the number of vertices of the mesh, otherwise an exception is thrown.</p>
+<p>The function enables the per-vertex normal component if it is not already enabled.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>the type of the mesh to be filled. It must satisfy the MeshConcept. </td></tr>
+    <tr><td class="paramname">VNMatrix</td><td>the type of the input vertex normals matrix. It must satisfy the MatrixConcept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>mesh: the mesh on which import the input vertex normals. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vertexNormals</td><td>a #V*3 matrix containing the normals of the vertices of the mesh. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga7b807e93cc9d4c4f3f3220d592b4eb11" name="ga7b807e93cc9d4c4f3f3220d592b4eb11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7b807e93cc9d4c4f3f3220d592b4eb11">&#9670;&#160;</a></span>vertexPositionsFromMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;MeshConcept MeshType, MatrixConcept VMatrix&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::vertexPositionsFromMatrix </td>
+          <td>(</td>
+          <td class="paramtype">MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">VMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>vertices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">bool</a>&#160;</td>
+          <td class="paramname"><em>clearBeforeSet</em> = <code><a class="el" href="classvcl_1_1Box.html">true</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the vertex positions of the given input <code>mesh</code> from the input vertex matrix. </p>
+<p>If the argument <code>clearBeforeSet</code> is set to <code>true</code> (default), the function clears the vertex container of the mesh and then adds a number of vertices that depends on the number of rows of the input vertex matrix. In this scenario, all the old vertices with their components stored in the mesh before calling this function are lost.</p>
+<p>If the argument <code>clearBeforeSet</code> is set to <code>false</code>, the function checks that the number of rows of the input vertex matrix is equal to the number of vertices of the mesh. If this is not the case, an exception is thrown. Then, the function sets the positions of the vertices of the mesh from the input vertex matrix. In this scenario, all the components (except the positions) of the vertices stored in the mesh before calling this function are preserved.</p>
+<p>All the other containers of the mesh are left as they are. Pointers to vertices stored in the other containers of the mesh are still valid only if the number of vertices is not changed (same allocation policy of the std::vector).</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="classvcl_1_1WrongSizeException.html" title="Exception thrown when the size (generally of a container) is not the expected one.">vcl::WrongSizeException</a></td><td>if the sizes of the input matrix are not valid (e.g. columns != 3 or rows != mesh.vertexNumber()).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>the type of the mesh to be filled. It must satisfy the MeshConcept. </td></tr>
+    <tr><td class="paramname">VMatrix</td><td>the type of the input vertex matrix. It must satisfy the MatrixConcept.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>mesh: the mesh on which import the input vertices. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vertices</td><td>a #V*3 matrix containing the positions of the vertices of the mesh. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">clearBeforeSet</td><td>if <code>true</code>, the function clears the container of the vertices of the mesh before adding the vertices from the input matrix. If <code>false</code>, the function sets the positions in the input matrix to the vertices of the mesh, leaving all the other components untouched. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gabb20a0a8065820b07542f84521531893" name="gabb20a0a8065820b07542f84521531893"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabb20a0a8065820b07542f84521531893">&#9670;&#160;</a></span>vertexQualityFromRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;MeshConcept MeshType, Range R&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::vertexQualityFromRange </td>
+          <td>(</td>
+          <td class="paramtype">MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">R &amp;&amp;&#160;</td>
+          <td class="paramname"><em>quality</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the vertex quality of the given input <code>mesh</code> from the input quality range (that could be anything that satisfies the Range concept: e.g. std::vector&lt;double&gt;, std::array&lt;double, N&gt;, Eigen::VectorXd, etc.). </p>
+<p>The number of elements of the input range must be equal to the number of vertices of the mesh, otherwise an exception is thrown.</p>
+<p>The function enables the per-vertex quality component if it is not already enabled.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>the type of the mesh to be filled. It must satisfy the MeshConcept. </td></tr>
+    <tr><td class="paramname">R</td><td>the type of the input range. It must satisfy the Range concept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>mesh: the mesh on which import the input vertex quality. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">quality</td><td>the input vertex quality range. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaa8cfe66ccb082cfa4d9a27e8dfb2a6db" name="gaa8cfe66ccb082cfa4d9a27e8dfb2a6db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa8cfe66ccb082cfa4d9a27e8dfb2a6db">&#9670;&#160;</a></span>vertexSelectionFromRange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;MeshConcept MeshType, Range R&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::vertexSelectionFromRange </td>
+          <td>(</td>
+          <td class="paramtype">MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">R &amp;&amp;&#160;</td>
+          <td class="paramname"><em>selection</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the vertex selection of the given input <code>mesh</code> from the input selection range (that could be anything that satisfies the Range concept: e.g. std::vector&lt;bool&gt;, std::array&lt;bool, N&gt;, Eigen::VectorXi, etc.). </p>
+<p>The number of elements of the input range must be equal to the number of vertices of the mesh, otherwise an exception is thrown.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>the type of the mesh to be filled. It must satisfy the MeshConcept. </td></tr>
+    <tr><td class="paramname">R</td><td>the type of the input range. It must satisfy the Range concept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>mesh: the mesh on which import the input vertex selection. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">selection</td><td>the input vertex selection range. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga3a74effc29b91f2091446c2460785462" name="ga3a74effc29b91f2091446c2460785462"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3a74effc29b91f2091446c2460785462">&#9670;&#160;</a></span>vertexTexCoordsFromMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;MeshConcept MeshType, MatrixConcept VTMatrix&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> vcl::vertexTexCoordsFromMatrix </td>
+          <td>(</td>
+          <td class="paramtype">MeshType &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Box.html">VTMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>vertexTexCoords</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the vertex texcoords of the given input <code>mesh</code> from the input vertex texcoords matrix. </p>
+<p>The number of rows of the input matrix must be equal to the number of vertices of the mesh, otherwise an exception is thrown.</p>
+<p>The function enables the per-vertex texcoords component if it is not already enabled.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">MeshType</td><td>the type of the mesh to be filled. It must satisfy the MeshConcept. </td></tr>
+    <tr><td class="paramname">VTMatrix</td><td>the type of the input vertex texcoords matrix. It must satisfy the MatrixConcept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">[in/out]</td><td>mesh: the mesh on which import the input vertex texcoords. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vertexTexCoords</td><td>a #V*2 matrix containing the texcoords of the vertices of the mesh. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

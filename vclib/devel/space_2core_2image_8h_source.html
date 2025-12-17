@@ -143,112 +143,152 @@ $(document).ready(function(){initNavTree('space_2core_2image_8h_source.html','')
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;vclib/base.h&gt;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span>vcl {</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">namespace </span>vcl {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="foldopen" id="foldopen00043" data-start="{" data-end="};">
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classvcl_1_1Image.html">   43</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1Image.html">Image</a></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>{</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_class" href="classvcl_1_1Box.html">Array2&lt;uint&gt;</a> mImg;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_class" href="classvcl_1_1Image.html">Image</a>() {}</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="foldopen" id="foldopen00061" data-start="{" data-end="}">
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classvcl_1_1Image.html#af7c6c2371e4829a5d6d725d17f8fe8c1">   61</a></span>    <a class="code hl_function" href="classvcl_1_1Image.html#af7c6c2371e4829a5d6d725d17f8fe8c1">Image</a>(</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keyword">const</span> <span class="keywordtype">void</span>*   data,</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        uint          w,</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        uint          <a class="code hl_class" href="classvcl_1_1Box.html">h</a>,</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordtype">bool</span>          <a class="code hl_class" href="classvcl_1_1Box.html">yFlip</a>  = <span class="keyword">false</span>,</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <a class="code hl_enumeration" href="classvcl_1_1Color.html#a51d1c2a5b8ce06d43362026194a14523">Color::Format</a> format = Color::Format::ABGR)</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    {</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">if</span> (data) {</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            mImg.resize(<a class="code hl_class" href="classvcl_1_1Box.html">h</a>, w);</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            std::size_t size = w * <a class="code hl_class" href="classvcl_1_1Box.html">h</a>;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <span class="keyword">auto</span>* <a class="code hl_class" href="classvcl_1_1Box.html">cdata</a> = <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><a class="code hl_class" href="classvcl_1_1Box.html">uint32_t</a>*<span class="keyword">&gt;</span>(data);</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <span class="keywordflow">if</span> (format == Color::Format::ABGR) {</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                std::copy(<a class="code hl_class" href="classvcl_1_1Box.html">cdata</a>, <a class="code hl_class" href="classvcl_1_1Box.html">cdata</a> + size, mImg.data());</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            }</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                <span class="keywordflow">for</span> (uint <a class="code hl_class" href="classvcl_1_1Box.html">i</a> = 0; <a class="code hl_class" href="classvcl_1_1Box.html">i</a> &lt; <a class="code hl_class" href="classvcl_1_1Box.html">h</a>; <a class="code hl_class" href="classvcl_1_1Box.html">i</a>++) {</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                    <span class="keywordflow">for</span> (uint <a class="code hl_class" href="classvcl_1_1Box.html">j</a> = 0; <a class="code hl_class" href="classvcl_1_1Box.html">j</a> &lt; w; <a class="code hl_class" href="classvcl_1_1Box.html">j</a>++) {</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                        <a class="code hl_class" href="classvcl_1_1Color.html">Color</a> c(<a class="code hl_class" href="classvcl_1_1Box.html">cdata</a>[<a class="code hl_class" href="classvcl_1_1Box.html">i</a> * w + <a class="code hl_class" href="classvcl_1_1Box.html">j</a>], format);</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                        mImg(<a class="code hl_class" href="classvcl_1_1Box.html">i</a>, <a class="code hl_class" href="classvcl_1_1Box.html">j</a>) = c.abgr();</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                    }</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                }</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            }</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classvcl_1_1Box.html">yFlip</a>) {</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                mirror();</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            }</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        }</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    }</div>
-</div>
+<div class="foldopen" id="foldopen00047" data-start="{" data-end="};">
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classvcl_1_1Image.html">   47</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1Image.html">Image</a></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>{</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">enum class</span> ColorSpace { UNKNOWN, LINEAR, SRGB };</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <a class="code hl_class" href="classvcl_1_1Box.html">Array2&lt;uint&gt;</a> mImg;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    ColorSpace mColorSpace = ColorSpace::UNKNOWN;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classvcl_1_1Image.html#ad45ff948ef8b6dabdb9e9882faa398ac">   61</a></span>    <a class="code hl_function" href="classvcl_1_1Image.html#ad45ff948ef8b6dabdb9e9882faa398ac">Image</a>() {}</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="foldopen" id="foldopen00079" data-start="{" data-end="}">
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="classvcl_1_1Image.html#af7c6c2371e4829a5d6d725d17f8fe8c1">   79</a></span>    <a class="code hl_function" href="classvcl_1_1Image.html#af7c6c2371e4829a5d6d725d17f8fe8c1">Image</a>(</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keyword">const</span> <span class="keywordtype">void</span>*   <a class="code hl_function" href="classvcl_1_1Image.html#a1d7f6afd7eabc017ad68dec5cb9f5359">data</a>,</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        uint          w,</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        uint          <a class="code hl_class" href="classvcl_1_1Box.html">h</a>,</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordtype">bool</span>          <a class="code hl_class" href="classvcl_1_1Box.html">yFlip</a>  = <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <a class="code hl_enumeration" href="classvcl_1_1Color.html#a51d1c2a5b8ce06d43362026194a14523">Color::Format</a> format = Color::Format::ABGR)</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classvcl_1_1Image.html#a1d7f6afd7eabc017ad68dec5cb9f5359">data</a>) {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            mImg.resize(<a class="code hl_class" href="classvcl_1_1Box.html">h</a>, w);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            std::size_t size = w * <a class="code hl_class" href="classvcl_1_1Box.html">h</a>;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            <span class="keyword">auto</span>* <a class="code hl_class" href="classvcl_1_1Box.html">cdata</a> = <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><a class="code hl_class" href="classvcl_1_1Box.html">uint32_t</a>*<span class="keyword">&gt;</span>(<a class="code hl_function" href="classvcl_1_1Image.html#a1d7f6afd7eabc017ad68dec5cb9f5359">data</a>);</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <a class="code hl_class" href="classvcl_1_1Image.html">Image</a>(<span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Box.html">Array2&lt;uint&gt;</a>&amp; <a class="code hl_class" href="classvcl_1_1Box.html">img</a>) : mImg(<a class="code hl_class" href="classvcl_1_1Box.html">img</a>) {}</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    Image(Array2&lt;uint&gt;&amp;&amp; img) : mImg(std::move(img)) {}</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordtype">bool</span> isNull()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mImg.empty(); }</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordtype">int</span> height()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mImg.rows(); }</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordtype">int</span> width()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mImg.cols(); }</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    std::size_t sizeInBytes()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mImg.rows() * mImg.cols() * 4; }</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <span class="keywordflow">if</span> (format == Color::Format::ABGR) {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                std::copy(<a class="code hl_class" href="classvcl_1_1Box.html">cdata</a>, <a class="code hl_class" href="classvcl_1_1Box.html">cdata</a> + size, mImg.data());</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            }</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                <span class="keywordflow">for</span> (uint <a class="code hl_class" href="classvcl_1_1Box.html">i</a> = 0; <a class="code hl_class" href="classvcl_1_1Box.html">i</a> &lt; <a class="code hl_class" href="classvcl_1_1Box.html">h</a>; <a class="code hl_class" href="classvcl_1_1Box.html">i</a>++) {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                    <span class="keywordflow">for</span> (uint <a class="code hl_class" href="classvcl_1_1Box.html">j</a> = 0; <a class="code hl_class" href="classvcl_1_1Box.html">j</a> &lt; w; <a class="code hl_class" href="classvcl_1_1Box.html">j</a>++) {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                        <a class="code hl_class" href="classvcl_1_1Color.html">Color</a> c(<a class="code hl_class" href="classvcl_1_1Box.html">cdata</a>[<a class="code hl_class" href="classvcl_1_1Box.html">i</a> * w + <a class="code hl_class" href="classvcl_1_1Box.html">j</a>], format);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                        mImg(<a class="code hl_class" href="classvcl_1_1Box.html">i</a>, <a class="code hl_class" href="classvcl_1_1Box.html">j</a>) = c.abgr();</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                    }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            }</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    Color pixel(uint i, uint j)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="keywordflow">return</span> Color(<span class="keyword">static_cast&lt;</span><a class="code hl_enumeration" href="classvcl_1_1Color.html#a002e401382a7608e0c68f42c089057bc">Color::ColorABGR</a><span class="keyword">&gt;</span>(mImg(i, j)));</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    }</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* data()<span class="keyword"> const</span></div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(mImg.data());</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    }</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordtype">void</span> mirror(<span class="keywordtype">bool</span> horizontal = <span class="keyword">false</span>, <span class="keywordtype">bool</span> vertical = <span class="keyword">true</span>)</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    {</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="keywordflow">if</span> (horizontal) {</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            <span class="keywordflow">for</span> (uint i = 0; i &lt; mImg.rows(); i++) {</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                std::reverse(mImg.data(i), mImg.data(i) + mImg.cols());</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            }</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        }</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <span class="keywordflow">if</span> (vertical) {</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            <span class="keywordflow">for</span> (uint i = 0; i &lt; mImg.rows() / 2; i++) {</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                uint mir = mImg.rows() - i - 1;</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                std::swap_ranges(</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                    mImg.data(i), mImg.data(i) + mImg.cols(), mImg.data(mir));</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            }</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        }</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    }</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordtype">void</span> serialize(std::ostream&amp; os)<span class="keyword"> const </span>{ mImg.<a class="code hl_function" href="classvcl_1_1Box.html#abff6311f9bc7aab382ffa658bf810a27">serialize</a>(os); }</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keywordtype">void</span> deserialize(std::istream&amp; is) { mImg.<a class="code hl_function" href="classvcl_1_1Box.html#a355a889437820f80fbf89143e3da6259">deserialize</a>(is); }</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>};</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classvcl_1_1Box.html">yFlip</a>) {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>                <a class="code hl_function" href="classvcl_1_1Image.html#a92962bfc3d6df278d624fcad2abb82a0">mirror</a>();</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            }</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        }</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    }</div>
 </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="classvcl_1_1Image.html#a216479f559d2d40256421337d620976a">  114</a></span>    <a class="code hl_function" href="classvcl_1_1Image.html#a216479f559d2d40256421337d620976a">Image</a>(<span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Box.html">Array2&lt;uint&gt;</a>&amp; <a class="code hl_class" href="classvcl_1_1Box.html">img</a>) : mImg(<a class="code hl_class" href="classvcl_1_1Box.html">img</a>) {}</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="classvcl_1_1Image.html#afbb7be7b8f81b2f2ca84e254124047af">  120</a></span>    <a class="code hl_function" href="classvcl_1_1Image.html#afbb7be7b8f81b2f2ca84e254124047af">Image</a>(<a class="code hl_class" href="classvcl_1_1Box.html">Array2&lt;uint&gt;</a>&amp;&amp; <a class="code hl_class" href="classvcl_1_1Box.html">img</a>) : mImg(std::<a class="code hl_class" href="classvcl_1_1Box.html">move</a>(<a class="code hl_class" href="classvcl_1_1Box.html">img</a>)) {}</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="classvcl_1_1Image.html#ac6df1f2e7f7754ac221a9010820436d1">  127</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classvcl_1_1Image.html#ac6df1f2e7f7754ac221a9010820436d1">isNull</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mImg.empty(); }</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="classvcl_1_1Image.html#a683eb846af3cf88d21ea4da6c9023244">  133</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classvcl_1_1Image.html#a683eb846af3cf88d21ea4da6c9023244">height</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mImg.rows(); }</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="comment">/* Concepts */</span></div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="conceptvcl_1_1ImageConcept.html">  148</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1ImageConcept.html">ImageConcept</a> = std::derived_from&lt;std::remove_cvref_t&lt;T&gt;, Image&gt;;</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="preprocessor">#endif </span><span class="comment">// VCL_SPACE_CORE_IMAGE_H</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="classvcl_1_1Image.html#a2860e94a84747c9a74bccf6413deacd2">  139</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classvcl_1_1Image.html#a2860e94a84747c9a74bccf6413deacd2">width</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mImg.cols(); }</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="classvcl_1_1Image.html#a6374d848694091bc269da07ccda4a481">  145</a></span>    std::size_t <a class="code hl_function" href="classvcl_1_1Image.html#a6374d848694091bc269da07ccda4a481">sizeInBytes</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mImg.rows() * mImg.cols() * 4; }</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="classvcl_1_1Image.html#ac34e6be619c1ac91e8bbe8d52f98e03a">  151</a></span>    ColorSpace <a class="code hl_function" href="classvcl_1_1Image.html#ac34e6be619c1ac91e8bbe8d52f98e03a">colorSpace</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mColorSpace; }</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="classvcl_1_1Image.html#a180eb990cb42574b2384eb13ccbdbd86">  157</a></span>    ColorSpace&amp; <a class="code hl_function" href="classvcl_1_1Image.html#a180eb990cb42574b2384eb13ccbdbd86">colorSpace</a>() { <span class="keywordflow">return</span> mColorSpace; }</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="foldopen" id="foldopen00166" data-start="{" data-end="}">
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="classvcl_1_1Image.html#a4fc0646ce4cb49487b6590881ef48710">  166</a></span>    <a class="code hl_class" href="classvcl_1_1Color.html">Color</a> <a class="code hl_function" href="classvcl_1_1Image.html#a4fc0646ce4cb49487b6590881ef48710">pixel</a>(uint <a class="code hl_class" href="classvcl_1_1Box.html">i</a>, uint <a class="code hl_class" href="classvcl_1_1Box.html">j</a>)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Color.html">Color</a>(<span class="keyword">static_cast&lt;</span><a class="code hl_enumeration" href="classvcl_1_1Color.html#a002e401382a7608e0c68f42c089057bc">Color::ColorABGR</a><span class="keyword">&gt;</span>(mImg(<a class="code hl_class" href="classvcl_1_1Box.html">i</a>, <a class="code hl_class" href="classvcl_1_1Box.html">j</a>)));</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    }</div>
+</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="foldopen" id="foldopen00177" data-start="{" data-end="}">
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="classvcl_1_1Image.html#a1d7f6afd7eabc017ad68dec5cb9f5359">  177</a></span>    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="classvcl_1_1Image.html#a1d7f6afd7eabc017ad68dec5cb9f5359">data</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(mImg.data());</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    }</div>
+</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="foldopen" id="foldopen00189" data-start="{" data-end="}">
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="classvcl_1_1Image.html#a92962bfc3d6df278d624fcad2abb82a0">  189</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Image.html#a92962bfc3d6df278d624fcad2abb82a0">mirror</a>(<span class="keywordtype">bool</span> <a class="code hl_class" href="classvcl_1_1Box.html">horizontal</a> = <span class="keyword">false</span>, <span class="keywordtype">bool</span> <a class="code hl_class" href="classvcl_1_1Box.html">vertical</a> = <span class="keyword">true</span>)</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    {</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classvcl_1_1Box.html">horizontal</a>) {</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>            <span class="keywordflow">for</span> (uint <a class="code hl_class" href="classvcl_1_1Box.html">i</a> = 0; <a class="code hl_class" href="classvcl_1_1Box.html">i</a> &lt; mImg.rows(); <a class="code hl_class" href="classvcl_1_1Box.html">i</a>++) {</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>                std::reverse(mImg.data(<a class="code hl_class" href="classvcl_1_1Box.html">i</a>), mImg.data(<a class="code hl_class" href="classvcl_1_1Box.html">i</a>) + mImg.cols());</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>            }</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        }</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classvcl_1_1Box.html">vertical</a>) {</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>            <span class="keywordflow">for</span> (uint <a class="code hl_class" href="classvcl_1_1Box.html">i</a> = 0; <a class="code hl_class" href="classvcl_1_1Box.html">i</a> &lt; mImg.rows() / 2; <a class="code hl_class" href="classvcl_1_1Box.html">i</a>++) {</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>                uint <a class="code hl_class" href="classvcl_1_1Box.html">mir</a> = mImg.rows() - <a class="code hl_class" href="classvcl_1_1Box.html">i</a> - 1;</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>                std::swap_ranges(</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                    mImg.data(<a class="code hl_class" href="classvcl_1_1Box.html">i</a>), mImg.data(<a class="code hl_class" href="classvcl_1_1Box.html">i</a>) + mImg.cols(), mImg.data(<a class="code hl_class" href="classvcl_1_1Box.html">mir</a>));</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>            }</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        }</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    }</div>
+</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
+<div class="foldopen" id="foldopen00209" data-start="{" data-end="}">
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno"><a class="line" href="classvcl_1_1Image.html#a04869fe6bb360cd353a4d66001516f63">  209</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Image.html#a04869fe6bb360cd353a4d66001516f63">serialize</a>(std::ostream&amp; <a class="code hl_class" href="classvcl_1_1Box.html">os</a>)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        mImg.<a class="code hl_function" href="classvcl_1_1Box.html#abff6311f9bc7aab382ffa658bf810a27">serialize</a>(<a class="code hl_class" href="classvcl_1_1Box.html">os</a>);</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        vcl::serialize(<a class="code hl_class" href="classvcl_1_1Box.html">os</a>, mColorSpace);</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    }</div>
+</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="foldopen" id="foldopen00219" data-start="{" data-end="}">
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno"><a class="line" href="classvcl_1_1Image.html#a5a4795d201fe34f04f6115e406a05d5a">  219</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classvcl_1_1Image.html#a5a4795d201fe34f04f6115e406a05d5a">deserialize</a>(std::istream&amp; is)</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    {</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        mImg.<a class="code hl_function" href="classvcl_1_1Box.html#a355a889437820f80fbf89143e3da6259">deserialize</a>(is);</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        vcl::deserialize(is, mColorSpace);</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    }</div>
+</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>};</div>
+</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><span class="comment">/* Concepts */</span></div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno"><a class="line" href="conceptvcl_1_1ImageConcept.html">  235</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1ImageConcept.html">ImageConcept</a> = std::derived_from&lt;std::remove_cvref_t&lt;T&gt;, Image&gt;;</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span><span class="preprocessor">#endif </span><span class="comment">// VCL_SPACE_CORE_IMAGE_H</span></div>
 <div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:46</div></div>
 <div class="ttc" id="aclassvcl_1_1Box_html_a355a889437820f80fbf89143e3da6259"><div class="ttname"><a href="classvcl_1_1Box.html#a355a889437820f80fbf89143e3da6259">vcl::Box::deserialize</a></div><div class="ttdeci">void deserialize(std::istream &amp;is)</div><div class="ttdoc">Deserializes the box from the given input stream.</div><div class="ttdef"><b>Definition</b> box.h:476</div></div>
 <div class="ttc" id="aclassvcl_1_1Box_html_abff6311f9bc7aab382ffa658bf810a27"><div class="ttname"><a href="classvcl_1_1Box.html#abff6311f9bc7aab382ffa658bf810a27">vcl::Box::serialize</a></div><div class="ttdeci">void serialize(std::ostream &amp;os) const</div><div class="ttdoc">Serializes the box to the given output stream.</div><div class="ttdef"><b>Definition</b> box.h:466</div></div>
 <div class="ttc" id="aclassvcl_1_1Color_html"><div class="ttname"><a href="classvcl_1_1Color.html">vcl::Color</a></div><div class="ttdoc">The Color class represents a 32 bit color.</div><div class="ttdef"><b>Definition</b> color.h:48</div></div>
 <div class="ttc" id="aclassvcl_1_1Color_html_a002e401382a7608e0c68f42c089057bc"><div class="ttname"><a href="classvcl_1_1Color.html#a002e401382a7608e0c68f42c089057bc">vcl::Color::ColorABGR</a></div><div class="ttdeci">ColorABGR</div><div class="ttdoc">ABGR enum with some standard colors.</div><div class="ttdef"><b>Definition</b> color.h:84</div></div>
 <div class="ttc" id="aclassvcl_1_1Color_html_a51d1c2a5b8ce06d43362026194a14523"><div class="ttname"><a href="classvcl_1_1Color.html#a51d1c2a5b8ce06d43362026194a14523">vcl::Color::Format</a></div><div class="ttdeci">Format</div><div class="ttdoc">Color format enumeration.</div><div class="ttdef"><b>Definition</b> color.h:77</div></div>
-<div class="ttc" id="aclassvcl_1_1Image_html"><div class="ttname"><a href="classvcl_1_1Image.html">vcl::Image</a></div><div class="ttdoc">The Image class stores an Image in 4 bytes RGBA format.</div><div class="ttdef"><b>Definition</b> image.h:44</div></div>
-<div class="ttc" id="aclassvcl_1_1Image_html_af7c6c2371e4829a5d6d725d17f8fe8c1"><div class="ttname"><a href="classvcl_1_1Image.html#af7c6c2371e4829a5d6d725d17f8fe8c1">vcl::Image::Image</a></div><div class="ttdeci">Image(const void *data, uint w, uint h, bool yFlip=false, Color::Format format=Color::Format::ABGR)</div><div class="ttdoc">Construct an Image from a raw buffer, which is assumed to be in the given format (default: ABGR).</div><div class="ttdef"><b>Definition</b> image.h:61</div></div>
-<div class="ttc" id="aconceptvcl_1_1ImageConcept_html"><div class="ttname"><a href="conceptvcl_1_1ImageConcept.html">vcl::ImageConcept</a></div><div class="ttdoc">A concept representing an Image.</div><div class="ttdef"><b>Definition</b> image.h:148</div></div>
+<div class="ttc" id="aclassvcl_1_1Image_html"><div class="ttname"><a href="classvcl_1_1Image.html">vcl::Image</a></div><div class="ttdoc">A class for representing and manipulating 2D images.</div><div class="ttdef"><b>Definition</b> image.h:48</div></div>
+<div class="ttc" id="aclassvcl_1_1Image_html_a04869fe6bb360cd353a4d66001516f63"><div class="ttname"><a href="classvcl_1_1Image.html#a04869fe6bb360cd353a4d66001516f63">vcl::Image::serialize</a></div><div class="ttdeci">void serialize(std::ostream &amp;os) const</div><div class="ttdoc">Serializes the image data to an output stream.</div><div class="ttdef"><b>Definition</b> image.h:209</div></div>
+<div class="ttc" id="aclassvcl_1_1Image_html_a180eb990cb42574b2384eb13ccbdbd86"><div class="ttname"><a href="classvcl_1_1Image.html#a180eb990cb42574b2384eb13ccbdbd86">vcl::Image::colorSpace</a></div><div class="ttdeci">ColorSpace &amp; colorSpace()</div><div class="ttdoc">Gets a reference to the image's color space property.</div><div class="ttdef"><b>Definition</b> image.h:157</div></div>
+<div class="ttc" id="aclassvcl_1_1Image_html_a1d7f6afd7eabc017ad68dec5cb9f5359"><div class="ttname"><a href="classvcl_1_1Image.html#a1d7f6afd7eabc017ad68dec5cb9f5359">vcl::Image::data</a></div><div class="ttdeci">const unsigned char * data() const</div><div class="ttdoc">Provides direct, read-only access to the raw pixel data.</div><div class="ttdef"><b>Definition</b> image.h:177</div></div>
+<div class="ttc" id="aclassvcl_1_1Image_html_a216479f559d2d40256421337d620976a"><div class="ttname"><a href="classvcl_1_1Image.html#a216479f559d2d40256421337d620976a">vcl::Image::Image</a></div><div class="ttdeci">Image(const Array2&lt; uint &gt; &amp;img)</div><div class="ttdoc">Constructs an Image by copying an existing Array2 of pixels.</div><div class="ttdef"><b>Definition</b> image.h:114</div></div>
+<div class="ttc" id="aclassvcl_1_1Image_html_a2860e94a84747c9a74bccf6413deacd2"><div class="ttname"><a href="classvcl_1_1Image.html#a2860e94a84747c9a74bccf6413deacd2">vcl::Image::width</a></div><div class="ttdeci">int width() const</div><div class="ttdoc">Gets the width of the image in pixels.</div><div class="ttdef"><b>Definition</b> image.h:139</div></div>
+<div class="ttc" id="aclassvcl_1_1Image_html_a4fc0646ce4cb49487b6590881ef48710"><div class="ttname"><a href="classvcl_1_1Image.html#a4fc0646ce4cb49487b6590881ef48710">vcl::Image::pixel</a></div><div class="ttdeci">Color pixel(uint i, uint j) const</div><div class="ttdoc">Retrieves the color of a specific pixel.</div><div class="ttdef"><b>Definition</b> image.h:166</div></div>
+<div class="ttc" id="aclassvcl_1_1Image_html_a5a4795d201fe34f04f6115e406a05d5a"><div class="ttname"><a href="classvcl_1_1Image.html#a5a4795d201fe34f04f6115e406a05d5a">vcl::Image::deserialize</a></div><div class="ttdeci">void deserialize(std::istream &amp;is)</div><div class="ttdoc">Deserializes image data from an input stream.</div><div class="ttdef"><b>Definition</b> image.h:219</div></div>
+<div class="ttc" id="aclassvcl_1_1Image_html_a6374d848694091bc269da07ccda4a481"><div class="ttname"><a href="classvcl_1_1Image.html#a6374d848694091bc269da07ccda4a481">vcl::Image::sizeInBytes</a></div><div class="ttdeci">std::size_t sizeInBytes() const</div><div class="ttdoc">Calculates the total size of the image data in bytes.</div><div class="ttdef"><b>Definition</b> image.h:145</div></div>
+<div class="ttc" id="aclassvcl_1_1Image_html_a683eb846af3cf88d21ea4da6c9023244"><div class="ttname"><a href="classvcl_1_1Image.html#a683eb846af3cf88d21ea4da6c9023244">vcl::Image::height</a></div><div class="ttdeci">int height() const</div><div class="ttdoc">Gets the height of the image in pixels.</div><div class="ttdef"><b>Definition</b> image.h:133</div></div>
+<div class="ttc" id="aclassvcl_1_1Image_html_a92962bfc3d6df278d624fcad2abb82a0"><div class="ttname"><a href="classvcl_1_1Image.html#a92962bfc3d6df278d624fcad2abb82a0">vcl::Image::mirror</a></div><div class="ttdeci">void mirror(bool horizontal=false, bool vertical=true)</div><div class="ttdoc">Flips the image horizontally and/or vertically in-place.</div><div class="ttdef"><b>Definition</b> image.h:189</div></div>
+<div class="ttc" id="aclassvcl_1_1Image_html_ac34e6be619c1ac91e8bbe8d52f98e03a"><div class="ttname"><a href="classvcl_1_1Image.html#ac34e6be619c1ac91e8bbe8d52f98e03a">vcl::Image::colorSpace</a></div><div class="ttdeci">ColorSpace colorSpace() const</div><div class="ttdoc">Gets the color space of the image.</div><div class="ttdef"><b>Definition</b> image.h:151</div></div>
+<div class="ttc" id="aclassvcl_1_1Image_html_ac6df1f2e7f7754ac221a9010820436d1"><div class="ttname"><a href="classvcl_1_1Image.html#ac6df1f2e7f7754ac221a9010820436d1">vcl::Image::isNull</a></div><div class="ttdeci">bool isNull() const</div><div class="ttdoc">Checks if the image is null or empty.</div><div class="ttdef"><b>Definition</b> image.h:127</div></div>
+<div class="ttc" id="aclassvcl_1_1Image_html_ad45ff948ef8b6dabdb9e9882faa398ac"><div class="ttname"><a href="classvcl_1_1Image.html#ad45ff948ef8b6dabdb9e9882faa398ac">vcl::Image::Image</a></div><div class="ttdeci">Image()</div><div class="ttdoc">Default constructor. Creates an empty, null image.</div><div class="ttdef"><b>Definition</b> image.h:61</div></div>
+<div class="ttc" id="aclassvcl_1_1Image_html_af7c6c2371e4829a5d6d725d17f8fe8c1"><div class="ttname"><a href="classvcl_1_1Image.html#af7c6c2371e4829a5d6d725d17f8fe8c1">vcl::Image::Image</a></div><div class="ttdeci">Image(const void *data, uint w, uint h, bool yFlip=false, Color::Format format=Color::Format::ABGR)</div><div class="ttdoc">Constructs an Image from a raw pixel buffer.</div><div class="ttdef"><b>Definition</b> image.h:79</div></div>
+<div class="ttc" id="aclassvcl_1_1Image_html_afbb7be7b8f81b2f2ca84e254124047af"><div class="ttname"><a href="classvcl_1_1Image.html#afbb7be7b8f81b2f2ca84e254124047af">vcl::Image::Image</a></div><div class="ttdeci">Image(Array2&lt; uint &gt; &amp;&amp;img)</div><div class="ttdoc">Constructs an Image by moving an existing Array2 of pixels.</div><div class="ttdef"><b>Definition</b> image.h:120</div></div>
+<div class="ttc" id="aconceptvcl_1_1ImageConcept_html"><div class="ttname"><a href="conceptvcl_1_1ImageConcept.html">vcl::ImageConcept</a></div><div class="ttdoc">A concept that is satisfied if a type T is or derives from vcl::Image.</div><div class="ttdef"><b>Definition</b> image.h:235</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

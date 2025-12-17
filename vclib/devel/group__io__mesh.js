@@ -12,9 +12,10 @@ var group__io__mesh =
         [ "COLOR", "classvcl_1_1MeshInfo.html#a3816cab30d019e0d9b862af5580ca0cead34b17eb39a8558dc91354381e6b67c4", null ],
         [ "QUALITY", "classvcl_1_1MeshInfo.html#a3816cab30d019e0d9b862af5580ca0cea6f845e10e620b6ad966eb10cc0ea6430", null ],
         [ "TEXCOORD", "classvcl_1_1MeshInfo.html#a3816cab30d019e0d9b862af5580ca0cea398a20f670710884549cbdd1023a84fd", null ],
+        [ "MATERIAL_INDEX", "classvcl_1_1MeshInfo.html#a3816cab30d019e0d9b862af5580ca0cea9f4931026ec5f0044b4f4dd469428416", null ],
         [ "WEDGE_TEXCOORDS", "classvcl_1_1MeshInfo.html#a3816cab30d019e0d9b862af5580ca0ceaf006b97e8f095fd239c26df7bd91f5b3", null ],
         [ "CUSTOM_COMPONENTS", "classvcl_1_1MeshInfo.html#a3816cab30d019e0d9b862af5580ca0cea2e343624e405b6683de72f325ca62c08", null ],
-        [ "TEXTURES", "classvcl_1_1MeshInfo.html#a3816cab30d019e0d9b862af5580ca0cea3b37462964b504529ff0a9762701fe34", null ],
+        [ "MATERIALS", "classvcl_1_1MeshInfo.html#a3816cab30d019e0d9b862af5580ca0cea6513fe37cea9baf60e8ae7f034bdfc50", null ],
         [ "NUM_COMPONENTS", "classvcl_1_1MeshInfo.html#a3816cab30d019e0d9b862af5580ca0cea7687d975f9d77f4fd1a8334e1c0f4501", null ]
       ] ],
       [ "Element", "classvcl_1_1MeshInfo.html#abb085ab601fbf6c3044c3da811209622", [
@@ -36,9 +37,11 @@ var group__io__mesh =
       [ "getType", "classvcl_1_1MeshInfo.html#a12dcd9611238039a9a9a695fd671e4d7", null ],
       [ "hasEdges", "classvcl_1_1MeshInfo.html#aaea903fef6c63e46db313f39412f0204", null ],
       [ "hasFaces", "classvcl_1_1MeshInfo.html#a7eed9cacecf170c7e12b407b5142a516", null ],
+      [ "hasPerFaceMaterialIndex", "classvcl_1_1MeshInfo.html#af7604567ff51a4f973b407e863b0de69", null ],
       [ "hasPerFaceVertexReferences", "classvcl_1_1MeshInfo.html#aca4e4e7d00012ad1d96c476febf80906", null ],
       [ "hasPerVertexColor", "classvcl_1_1MeshInfo.html#a1204ccacf701cf7db48ed04190e4262c", null ],
       [ "hasPerVertexCustomComponents", "classvcl_1_1MeshInfo.html#a68a1530d0fa114b8a677c92db9859d5a", null ],
+      [ "hasPerVertexMaterialIndex", "classvcl_1_1MeshInfo.html#a05aaab7be5ed89211e9350231ced90df", null ],
       [ "hasPerVertexNormal", "classvcl_1_1MeshInfo.html#a26f9844f9121322dde0cb733adfce1bb", null ],
       [ "hasPerVertexPosition", "classvcl_1_1MeshInfo.html#afbb4cd3bc7ddc9ac8e0def7750377639", null ],
       [ "hasPerVertexQuality", "classvcl_1_1MeshInfo.html#afbbd4d80f07ceb89b89f42fb7d5d44b2", null ],

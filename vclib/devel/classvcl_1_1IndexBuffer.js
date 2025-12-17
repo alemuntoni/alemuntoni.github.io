@@ -1,6 +1,7 @@
 var classvcl_1_1IndexBuffer =
 [
     [ "IndexBuffer", "classvcl_1_1IndexBuffer.html#a4d5db5deffa748e0d1eea237ec59a1dd", null ],
+    [ "bind", "classvcl_1_1IndexBuffer.html#a3e8ee7881f3d3aac57dc387343016c16", null ],
     [ "bind", "classvcl_1_1IndexBuffer.html#a5969be3d55dffafcc9a4cf3fd92d1ab7", null ],
     [ "create", "classvcl_1_1IndexBuffer.html#aac7ebcf7e0e8d1349ba46934bc62c966", null ],
     [ "create", "classvcl_1_1IndexBuffer.html#a2a45a346419d118ff8cf621568f022f8", null ],

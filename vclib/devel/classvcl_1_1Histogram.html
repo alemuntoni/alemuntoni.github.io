@@ -176,9 +176,6 @@ ScalarType&#160;</td><td class="memItemRight" valign="bottom"><b>binUpperBound</
 <tr class="memitem:a29833e431177f553ee94fdebcf63d303" id="r_a29833e431177f553ee94fdebcf63d303"><td class="memItemLeft" align="right" valign="top">ScalarType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Histogram.html#a29833e431177f553ee94fdebcf63d303">numberValues</a> () <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="memdesc:a29833e431177f553ee94fdebcf63d303"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of values inserted in the histogram.  <br /></td></tr>
 <tr class="separator:a29833e431177f553ee94fdebcf63d303"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17a01924c771a70969545f274f14394c" id="r_a17a01924c771a70969545f274f14394c"><td class="memItemLeft" align="right" valign="top">ScalarType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Histogram.html#a17a01924c771a70969545f274f14394c">percentile</a> (ScalarType <a class="el" href="classvcl_1_1Box.html">frac</a>) <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
-<tr class="memdesc:a17a01924c771a70969545f274f14394c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value corresponding to a given percentile of the data.  <br /></td></tr>
-<tr class="separator:a17a01924c771a70969545f274f14394c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecf258a5edd2d73180a8e0dd1fffc531" id="r_aecf258a5edd2d73180a8e0dd1fffc531"><td class="memItemLeft" align="right" valign="top"><a id="aecf258a5edd2d73180a8e0dd1fffc531" name="aecf258a5edd2d73180a8e0dd1fffc531"></a>
 ScalarType&#160;</td><td class="memItemRight" valign="bottom"><b>rangeCount</b> (ScalarType <a class="el" href="classvcl_1_1Box.html">rangeMin</a>, ScalarType <a class="el" href="classvcl_1_1Box.html">rangeMax</a>) <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="separator:aecf258a5edd2d73180a8e0dd1fffc531"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -191,6 +188,9 @@ ScalarType&#160;</td><td class="memItemRight" valign="bottom"><b>rangeCount</b> 
 <tr class="memitem:a2a1be82defe67055c7b47956d292ad5e" id="r_a2a1be82defe67055c7b47956d292ad5e"><td class="memItemLeft" align="right" valign="top">ScalarType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Histogram.html#a2a1be82defe67055c7b47956d292ad5e">sumValues</a> () <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="memdesc:a2a1be82defe67055c7b47956d292ad5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total sum of inserted values.  <br /></td></tr>
 <tr class="separator:a2a1be82defe67055c7b47956d292ad5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8935260484107ea79aa89d84b8f220a5" id="r_a8935260484107ea79aa89d84b8f220a5"><td class="memItemLeft" align="right" valign="top">ScalarType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Histogram.html#a8935260484107ea79aa89d84b8f220a5">valueAtPercentile</a> (ScalarType <a class="el" href="classvcl_1_1Box.html">frac</a>) <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
+<tr class="memdesc:a8935260484107ea79aa89d84b8f220a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value corresponding to a given percentile of the data.  <br /></td></tr>
+<tr class="separator:a8935260484107ea79aa89d84b8f220a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e24ef4b580832f725aff9be1f0f6a31" id="r_a8e24ef4b580832f725aff9be1f0f6a31"><td class="memItemLeft" align="right" valign="top">ScalarType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Histogram.html#a8e24ef4b580832f725aff9be1f0f6a31">variance</a> () <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="memdesc:a8e24ef4b580832f725aff9be1f0f6a31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the variance of the data.  <br /></td></tr>
 <tr class="separator:a8e24ef4b580832f725aff9be1f0f6a31"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -610,43 +610,6 @@ template&lt;<a class="el" href="classvcl_1_1Box.html">typename</a> ScalarType &g
 
 </div>
 </div>
-<a id="a17a01924c771a70969545f274f14394c" name="a17a01924c771a70969545f274f14394c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a17a01924c771a70969545f274f14394c">&#9670;&#160;</a></span>percentile()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;<a class="el" href="classvcl_1_1Box.html">typename</a> ScalarType &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ScalarType <a class="el" href="classvcl_1_1Histogram.html">vcl::Histogram</a>&lt; ScalarType &gt;::percentile </td>
-          <td>(</td>
-          <td class="paramtype">ScalarType&#160;</td>
-          <td class="paramname"><em>frac</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns the value corresponding to a given percentile of the data. </p>
-<p>The percentile range between 0 and 1. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">frac</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
-</div>
-</div>
 <a id="a521e2f6333c4f5612753be6ea41d1113" name="a521e2f6333c4f5612753be6ea41d1113"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a521e2f6333c4f5612753be6ea41d1113">&#9670;&#160;</a></span>rootMeanSquare()</h2>
 
@@ -733,6 +696,43 @@ template&lt;<a class="el" href="classvcl_1_1Box.html">typename</a> ScalarType &g
 </div><div class="memdoc">
 
 <p>Total sum of inserted values. </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a8935260484107ea79aa89d84b8f220a5" name="a8935260484107ea79aa89d84b8f220a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8935260484107ea79aa89d84b8f220a5">&#9670;&#160;</a></span>valueAtPercentile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="classvcl_1_1Box.html">typename</a> ScalarType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ScalarType <a class="el" href="classvcl_1_1Histogram.html">vcl::Histogram</a>&lt; ScalarType &gt;::valueAtPercentile </td>
+          <td>(</td>
+          <td class="paramtype">ScalarType&#160;</td>
+          <td class="paramname"><em>frac</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the value corresponding to a given percentile of the data. </p>
+<p>The percentile range between 0 and 1. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frac</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>

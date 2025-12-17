@@ -4,8 +4,6 @@ var classvcl_1_1comp_1_1WedgeTexCoords =
     [ "WedgeTexCoords", "classvcl_1_1comp_1_1WedgeTexCoords.html#a8dfc9863486643f6baad93b2e6da35fd", null ],
     [ "setWedgeTexCoord", "classvcl_1_1comp_1_1WedgeTexCoords.html#afc229f0ec231f0cc5a3bbc90c2b5f65f", null ],
     [ "setWedgeTexCoords", "classvcl_1_1comp_1_1WedgeTexCoords.html#acf46120815d27340da445222e2138fbf", null ],
-    [ "textureIndex", "classvcl_1_1comp_1_1WedgeTexCoords.html#a4f9b59ab4334897d50e2c636441c0c3f", null ],
-    [ "textureIndex", "classvcl_1_1comp_1_1WedgeTexCoords.html#a974c4618b4ba3226dfbf6df611e5a210", null ],
     [ "wedgeTexCoord", "classvcl_1_1comp_1_1WedgeTexCoords.html#a4481f174bec9acd8ecf36fc212729859", null ],
     [ "wedgeTexCoord", "classvcl_1_1comp_1_1WedgeTexCoords.html#ad62944d9c89a0377f368f549af6ac781", null ],
     [ "wedgeTexCoordBegin", "classvcl_1_1comp_1_1WedgeTexCoords.html#ac07056481ca5a0eab4fa550341d280de", null ],

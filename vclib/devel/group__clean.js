@@ -7,9 +7,9 @@ var group__clean =
     [ "vcl::numberNonManifoldVertices", "group__clean.html#gabd1e4943610b0e15397196d5fc73b0da", null ],
     [ "vcl::numberUnreferencedVertices", "group__clean.html#ga79fa53e2d539bf957abab8e9bad12ff7", null ],
     [ "vcl::referencedVertices", "group__clean.html#gadd9ad1f8e67f067f3ac809f013ea5c54", null ],
-    [ "vcl::removeDegeneratedVertices", "group__clean.html#ga351485ba1c87c7bd1193917323921ba7", null ],
     [ "vcl::removeDegenerateFaces", "group__clean.html#ga3561ea390b2dfc6fec49d12543ea60e7", null ],
-    [ "vcl::removeDuplicatedFaces", "group__clean.html#ga6e771a075c5db04274b407af212d2c2b", null ],
-    [ "vcl::removeDuplicatedVertices", "group__clean.html#gabce801a437aa06438837271fde16cb5a", null ],
+    [ "vcl::removeDegenerateVertices", "group__clean.html#gab66f1f7b28309ff8be6a866b65bbc39e", null ],
+    [ "vcl::removeDuplicateFaces", "group__clean.html#ga18334bcf9f3cc7d545c1a3995156d510", null ],
+    [ "vcl::removeDuplicateVertices", "group__clean.html#ga68f5425781faf0728054878e1e165a63", null ],
     [ "vcl::removeUnreferencedVertices", "group__clean.html#ga25c5d478a258364fa7a8215e7ffbb7d2", null ]
 ];

@@ -117,7 +117,7 @@ $(document).ready(function(){initNavTree('classvcl_1_1TrackBall.html',''); initR
 </div><!--header-->
 <div class="contents">
 
-<p>The <a class="el" href="classvcl_1_1TrackBall.html" title="The TrackBall class implements a trackball camera.">TrackBall</a> class implements a trackball camera.  
+<p>The <a class="el" href="classvcl_1_1TrackBall.html" title="The TrackBall class implements a trackball (a camera combined with model transformation).">TrackBall</a> class implements a trackball (a camera combined with model transformation).  
  <a href="classvcl_1_1TrackBall.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="trackball_8h_source.html">vclib/render/viewer/trackball.h</a>&gt;</code></p>
@@ -150,6 +150,9 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ae6828f88e30d13dd3ead6e9a72ea6d63" id="r_ae6828f88e30d13dd3ead6e9a72ea6d63"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1TrackBall.html#ae6828f88e30d13dd3ead6e9a72ea6d63">adaptCurrentViewToCenter</a> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="group__space__core.html#ga13f2718b0763def563b8bd9f65982833">Point3</a>&lt; Scalar &gt; &amp;center)</td></tr>
+<tr class="memdesc:ae6828f88e30d13dd3ead6e9a72ea6d63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adapt the current view to a given center. The function adapts the trackball transformation in order to manipulate the scene with a pivot point close to the given center. This is done without affecting the current view.  <br /></td></tr>
+<tr class="separator:ae6828f88e30d13dd3ead6e9a72ea6d63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2bfc0502ed2b5bac7d11ea9d917ce01" id="r_ac2bfc0502ed2b5bac7d11ea9d917ce01"><td class="memItemLeft" align="right" valign="top"><a id="ac2bfc0502ed2b5bac7d11ea9d917ce01" name="ac2bfc0502ed2b5bac7d11ea9d917ce01"></a>
 <a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>applyArc</b> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="group__space__core.html#ga13f2718b0763def563b8bd9f65982833">Point3</a>&lt; Scalar &gt; &amp;axis, Scalar angle)</td></tr>
 <tr class="separator:ac2bfc0502ed2b5bac7d11ea9d917ce01"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -168,9 +171,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af30c59b23f55696b2513f61f16f1dea1" id="r_af30c59b23f55696b2513f61f16f1dea1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1TrackBall.html#af30c59b23f55696b2513f61f16f1dea1">beginDragMotion</a> (MotionType <a class="el" href="classvcl_1_1Box.html">motion</a>)</td></tr>
 <tr class="memdesc:af30c59b23f55696b2513f61f16f1dea1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts a drag motion.  <br /></td></tr>
 <tr class="separator:af30c59b23f55696b2513f61f16f1dea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d27e29b7e434c88df4651be12524b1a" id="r_a9d27e29b7e434c88df4651be12524b1a"><td class="memItemLeft" align="right" valign="top"><a id="a9d27e29b7e434c88df4651be12524b1a" name="a9d27e29b7e434c88df4651be12524b1a"></a>
-<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Camera.html">vcl::Camera</a>&lt; Scalar &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>camera</b> () <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
-<tr class="separator:a9d27e29b7e434c88df4651be12524b1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac26cbbf3dcc43164fc7ed36f2b92e766" id="r_ac26cbbf3dcc43164fc7ed36f2b92e766"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Camera.html">Camera</a>&lt; Scalar &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1TrackBall.html#ac26cbbf3dcc43164fc7ed36f2b92e766">camera</a> () <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
+<tr class="memdesc:ac26cbbf3dcc43164fc7ed36f2b92e766"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the camera containing the current view point of the trackball.  <br /></td></tr>
+<tr class="separator:ac26cbbf3dcc43164fc7ed36f2b92e766"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecb8806950a48fe8e0cb78ee8e6388b7" id="r_aecb8806950a48fe8e0cb78ee8e6388b7"><td class="memItemLeft" align="right" valign="top"><a id="aecb8806950a48fe8e0cb78ee8e6388b7" name="aecb8806950a48fe8e0cb78ee8e6388b7"></a>
 <a class="el" href="group__space__core.html#ga13f2718b0763def563b8bd9f65982833">Point3</a>&lt; Scalar &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>center</b> () <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="separator:aecb8806950a48fe8e0cb78ee8e6388b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -217,6 +220,9 @@ Scalar&#160;</td><td class="memItemRight" valign="bottom"><b>fovDeg</b> () <a cl
 <tr class="memitem:a0cd8800ebb7bf8b671b5d12cc12c7f73" id="r_a0cd8800ebb7bf8b671b5d12cc12c7f73"><td class="memItemLeft" align="right" valign="top"><a id="a0cd8800ebb7bf8b671b5d12cc12c7f73" name="a0cd8800ebb7bf8b671b5d12cc12c7f73"></a>
 Scalar&#160;</td><td class="memItemRight" valign="bottom"><b>scale</b> () <a class="el" href="classvcl_1_1Box.html">const</a></td></tr>
 <tr class="separator:a0cd8800ebb7bf8b671b5d12cc12c7f73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d74ff522ebd746639fda0a340886819" id="r_a7d74ff522ebd746639fda0a340886819"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1TrackBall.html#a7d74ff522ebd746639fda0a340886819">setCamera</a> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Camera.html">Camera</a>&lt; Scalar &gt; &amp;<a class="el" href="classvcl_1_1Box.html">cam</a>)</td></tr>
+<tr class="memdesc:a7d74ff522ebd746639fda0a340886819"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the camera of the trackball.  <br /></td></tr>
+<tr class="separator:a7d74ff522ebd746639fda0a340886819"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92d1aee26dadc4278a8040dd49631b78" id="r_a92d1aee26dadc4278a8040dd49631b78"><td class="memItemLeft" align="right" valign="top"><a id="a92d1aee26dadc4278a8040dd49631b78" name="a92d1aee26dadc4278a8040dd49631b78"></a>
 <a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setCenter</b> (<a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="group__space__core.html#ga13f2718b0763def563b8bd9f65982833">Point3</a>&lt; Scalar &gt; &amp;center)</td></tr>
 <tr class="separator:a92d1aee26dadc4278a8040dd49631b78"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -369,13 +375,50 @@ Static Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="classvcl_1_1Box.html">typename</a> Scalar&gt;<br />
-class vcl::TrackBall&lt; Scalar &gt;</div><p>The <a class="el" href="classvcl_1_1TrackBall.html" title="The TrackBall class implements a trackball camera.">TrackBall</a> class implements a trackball camera. </p>
-<p>The trackball class stores a camera and provides a set motions that allow the user to manipulate it.</p>
+class vcl::TrackBall&lt; Scalar &gt;</div><p>The <a class="el" href="classvcl_1_1TrackBall.html" title="The TrackBall class implements a trackball (a camera combined with model transformation).">TrackBall</a> class implements a trackball (a camera combined with model transformation). </p>
+<p>The trackball class stores a view and provides a set motions that allow the user to manipulate it.</p>
 <p>There are two main types of motions:</p><ul>
 <li>atomic motions: these motions have no state and they are applied atomicly to the camera. They are not affected by the mouse position. An example of an atomic motion is a zoom.</li>
 <li>drag motions: these motions have a state, that may change with the mouse position. They begin and end with the <code>begin</code>/<code>end</code> member functions, and they update their state trough the change of the mouse position. An example of a drag motion is an arcball rotation. </li>
 </ul>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae6828f88e30d13dd3ead6e9a72ea6d63" name="ae6828f88e30d13dd3ead6e9a72ea6d63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6828f88e30d13dd3ead6e9a72ea6d63">&#9670;&#160;</a></span>adaptCurrentViewToCenter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="classvcl_1_1Box.html">typename</a> Scalar &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> <a class="el" href="classvcl_1_1TrackBall.html">vcl::TrackBall</a>&lt; Scalar &gt;::adaptCurrentViewToCenter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="group__space__core.html#ga13f2718b0763def563b8bd9f65982833">Point3</a>&lt; Scalar &gt; &amp;&#160;</td>
+          <td class="paramname"><em>center</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adapt the current view to a given center. The function adapts the trackball transformation in order to manipulate the scene with a pivot point close to the given center. This is done without affecting the current view. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">center</td><td>The center of the scene. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This function does nothing if the provided center is behind the camera. </dd></dl>
+
+</div>
+</div>
 <a id="a3d1674a577b804a2ce0dd8e5635b1514" name="a3d1674a577b804a2ce0dd8e5635b1514"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3d1674a577b804a2ce0dd8e5635b1514">&#9670;&#160;</a></span>applyAtomicMotion()</h2>
 
@@ -483,6 +526,36 @@ template&lt;<a class="el" href="classvcl_1_1Box.html">typename</a> Scalar &gt; <
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>this function should be called when the drag motion begins (e.g., the mouse is pressed) or the motion type changes. </dd></dl>
+
+</div>
+</div>
+<a id="ac26cbbf3dcc43164fc7ed36f2b92e766" name="ac26cbbf3dcc43164fc7ed36f2b92e766"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac26cbbf3dcc43164fc7ed36f2b92e766">&#9670;&#160;</a></span>camera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="classvcl_1_1Box.html">typename</a> Scalar &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Camera.html">Camera</a>&lt; Scalar &gt; <a class="el" href="classvcl_1_1TrackBall.html">vcl::TrackBall</a>&lt; Scalar &gt;::camera </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>return the camera containing the current view point of the trackball. </p>
+<dl class="section return"><dt>Returns</dt><dd>the camera matching the current view of the trackball </dd></dl>
 
 </div>
 </div>
@@ -811,6 +884,43 @@ template&lt;<a class="el" href="classvcl_1_1Box.html">typename</a> Scalar &gt; <
 </table>
 </div><div class="memdoc">
 <p>------&mdash; Base functions ------&mdash; </p>
+
+</div>
+</div>
+<a id="a7d74ff522ebd746639fda0a340886819" name="a7d74ff522ebd746639fda0a340886819"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d74ff522ebd746639fda0a340886819">&#9670;&#160;</a></span>setCamera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="classvcl_1_1Box.html">typename</a> Scalar &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Box.html">void</a> <a class="el" href="classvcl_1_1TrackBall.html">vcl::TrackBall</a>&lt; Scalar &gt;::setCamera </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Box.html">const</a> <a class="el" href="classvcl_1_1Camera.html">Camera</a>&lt; Scalar &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cam</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the camera of the trackball. </p>
+<p>The function sets the trackball to match the provided camera. The function does not change the aspect ratio of the trackball camera, as it may be different from the provided camera.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cam</td><td>The camera to set. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

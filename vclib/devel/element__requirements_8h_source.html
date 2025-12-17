@@ -208,18 +208,31 @@ $(document).ready(function(){initNavTree('element__requirements_8h_source.html',
 <div class="foldopen" id="foldopen00194" data-start="{" data-end="}">
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno"><a class="line" href="group__mesh__requirements.html#ga64d5aafc5d7a737a9654c763ee5a8132">  194</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__mesh__requirements.html#ga64d5aafc5d7a737a9654c763ee5a8132">requirePerElementComponent</a>(<span class="keyword">const</span> MeshType&amp; <a class="code hl_class" href="classvcl_1_1Box.html">m</a>)</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>{</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <span class="keywordflow">if</span> (!<a class="code hl_class" href="classvcl_1_1Box.html">isPerElementComponentAvailable&lt;ELEM_ID, COMP_ID&gt;</a>(<a class="code hl_class" href="classvcl_1_1Box.html">m</a>)) {</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="classvcl_1_1MissingComponentException.html">MissingComponentException</a>(</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>            <span class="stringliteral">&quot;Per &quot;</span> + std::string(<a class="code hl_class" href="classvcl_1_1Box.html">elementEnumString&lt;ELEM_ID&gt;</a>()) + <span class="stringliteral">&quot; &quot;</span> +</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>            std::string(<a class="code hl_class" href="classvcl_1_1Box.html">componentEnumString&lt;COMP_ID&gt;</a>()) +</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>            <span class="stringliteral">&quot; Component is not enabled.&quot;</span>);</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    }</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>}</div>
-</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <span class="comment">// TODO C++26: use elementEnumString&lt;ELEM_ID&gt;() and</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <span class="comment">// componentEnumString&lt;COMP_ID&gt;() in static_assert messages</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    <span class="keyword">static_assert</span>(</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        <a class="code hl_concept" href="conceptvcl_1_1mesh_1_1HasElementContainer.html">mesh::HasElementContainer&lt;MeshType, ELEM_ID&gt;</a>,</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        <span class="stringliteral">&quot;The input Mesh does not have a Container of the given Element ID.&quot;</span>);</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <span class="keyword">using </span>ElementType = MeshType::template <a class="code hl_class" href="classvcl_1_1Box.html">ElementType&lt;ELEM_ID&gt;</a>;</div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="preprocessor">#endif </span><span class="comment">// VCL_MESH_REQUIREMENTS_ELEMENT_REQUIREMENTS_H</span></div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    <span class="keyword">static_assert</span>(</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        <a class="code hl_concept" href="conceptvcl_1_1comp_1_1HasComponentOfType.html">comp::HasComponentOfType&lt;ElementType, COMP_ID&gt;</a>,</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        <span class="stringliteral">&quot;The Element of the input Mesh does not have a Component of the given &quot;</span></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        <span class="stringliteral">&quot;Component ID.&quot;</span>);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <span class="keywordflow">if</span> (!<a class="code hl_class" href="classvcl_1_1Box.html">isPerElementComponentAvailable&lt;ELEM_ID, COMP_ID&gt;</a>(<a class="code hl_class" href="classvcl_1_1Box.html">m</a>)) {</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        <span class="keywordflow">throw</span> <a class="code hl_class" href="classvcl_1_1MissingComponentException.html">MissingComponentException</a>(</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>            <span class="stringliteral">&quot;Per &quot;</span> + std::string(<a class="code hl_class" href="classvcl_1_1Box.html">elementEnumString&lt;ELEM_ID&gt;</a>()) + <span class="stringliteral">&quot; &quot;</span> +</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>            std::string(<a class="code hl_class" href="classvcl_1_1Box.html">componentEnumString&lt;COMP_ID&gt;</a>()) +</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>            <span class="stringliteral">&quot; Component is not enabled.&quot;</span>);</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    }</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>}</div>
+</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span><span class="preprocessor">#endif </span><span class="comment">// VCL_MESH_REQUIREMENTS_ELEMENT_REQUIREMENTS_H</span></div>
 <div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:46</div></div>
 <div class="ttc" id="aclassvcl_1_1Element_html"><div class="ttname"><a href="classvcl_1_1Element.html">vcl::Element</a></div><div class="ttdoc">The Element class.</div><div class="ttdef"><b>Definition</b> element.h:75</div></div>
 <div class="ttc" id="aclassvcl_1_1MissingCompactnessException_html"><div class="ttname"><a href="classvcl_1_1MissingCompactnessException.html">vcl::MissingCompactnessException</a></div><div class="ttdoc">Exception thrown when the mesh is not compact.</div><div class="ttdef"><b>Definition</b> exceptions.h:84</div></div>

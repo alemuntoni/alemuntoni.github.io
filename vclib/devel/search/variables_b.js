@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['uint_5fnull_0',['UINT_NULL',['../group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6',1,'vcl']]],
-  ['user_5fbits_5fnumber_1',['user_bits_number',['../classvcl_1_1comp_1_1BitFlags.html#ac8c4ec5fa8498235e9f3871368e21336',1,'vcl::comp::BitFlags::USER_BITS_NUMBER'],['../classvcl_1_1comp_1_1PolygonBitFlags.html#a9d491d1fc85b927718332b45ae05aa4e',1,'vcl::comp::PolygonBitFlags::USER_BITS_NUMBER'],['../classvcl_1_1comp_1_1TriangleBitFlags.html#a901c859f4008b29bd1e42094eff9c46a',1,'vcl::comp::TriangleBitFlags::USER_BITS_NUMBER']]]
+  ['savetextureimages_0',['saveTextureImages',['../structvcl_1_1SaveSettings.html#aa3349b22705fee5f654f8e8bee22e440',1,'vcl::SaveSettings']]],
+  ['size_1',['size',['../classvcl_1_1BitSet.html#a5cf700625a27abaeb401fd3aba125a17',1,'vcl::BitSet::SIZE'],['../classvcl_1_1Vector.html#af303936623d10f51443b3b597d65d61b',1,'vcl::Vector::SIZE'],['../classvcl_1_1PointerVector.html#af303936623d10f51443b3b597d65d61b',1,'vcl::PointerVector::SIZE'],['../classvcl_1_1PolymorphicObjectVector.html#af303936623d10f51443b3b597d65d61b',1,'vcl::PolymorphicObjectVector::SIZE']]],
+  ['str_2',['str',['../structvcl_1_1ComponentString.html#ab1b5fcc41d40f8cafdc4ab36e47b2982',1,'vcl::ComponentString::str'],['../structvcl_1_1ElementString.html#adf709994861b97ace3d6f67096dfe07e',1,'vcl::ElementString::str']]]
 ];

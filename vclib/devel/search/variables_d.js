@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['window_5fmanager_5fid_0',['window_manager_id',['../classvcl_1_1glfw_1_1WindowManager.html#adbdfe4c395277b74e608a601502ed83f',1,'vcl::glfw::WindowManager::WINDOW_MANAGER_ID'],['../classvcl_1_1qt_1_1WidgetManager.html#a28091d0decf8af00351a5618a2c95c35',1,'vcl::qt::WidgetManager::WINDOW_MANAGER_ID']]]
+  ['uint_5fnull_0',['UINT_NULL',['../group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6',1,'vcl']]],
+  ['user_5fbits_5fnumber_1',['user_bits_number',['../classvcl_1_1comp_1_1BitFlags.html#ac8c4ec5fa8498235e9f3871368e21336',1,'vcl::comp::BitFlags::USER_BITS_NUMBER'],['../classvcl_1_1comp_1_1PolygonBitFlags.html#a9d491d1fc85b927718332b45ae05aa4e',1,'vcl::comp::PolygonBitFlags::USER_BITS_NUMBER'],['../classvcl_1_1comp_1_1TriangleBitFlags.html#a901c859f4008b29bd1e42094eff9c46a',1,'vcl::comp::TriangleBitFlags::USER_BITS_NUMBER']]],
+  ['ushort_5fnull_2',['USHORT_NULL',['../group__base.html#gaef8d9ec663b370d435ff71c9f2f738aa',1,'vcl']]]
 ];

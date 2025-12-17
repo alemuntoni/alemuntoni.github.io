@@ -10,7 +10,9 @@ var dir_3eb6a9b3fcbc86ec135451ef3945f0c7 =
     [ "distribution.h", "distribution_8h_source.html", null ],
     [ "histogram.h", "histogram_8h_source.html", null ],
     [ "image.h", "space_2core_2image_8h_source.html", null ],
+    [ "material.h", "space_2core_2material_8h_source.html", null ],
     [ "matrix.h", "core_2include_2vclib_2space_2core_2matrix_8h_source.html", null ],
+    [ "parallel_vector_tuple.h", "parallel__vector__tuple_8h_source.html", null ],
     [ "plane.h", "plane_8h_source.html", null ],
     [ "point.h", "point_8h_source.html", null ],
     [ "polygon.h", "space_2core_2polygon_8h_source.html", null ],
@@ -20,7 +22,7 @@ var dir_3eb6a9b3fcbc86ec135451ef3945f0c7 =
     [ "sphere.h", "space_2core_2sphere_8h_source.html", null ],
     [ "tex_coord.h", "space_2core_2tex__coord_8h_source.html", null ],
     [ "tex_coord_indexed.h", "tex__coord__indexed_8h_source.html", null ],
-    [ "texture.h", "texture_8h_source.html", null ],
+    [ "texture_descriptor.h", "texture__descriptor_8h_source.html", null ],
     [ "triangle.h", "triangle_8h_source.html", null ],
     [ "triangle_wrapper.h", "triangle__wrapper_8h_source.html", null ],
     [ "vector.h", "vector_8h_source.html", null ]

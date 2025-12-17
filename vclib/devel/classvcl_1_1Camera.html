@@ -113,6 +113,11 @@ $(document).ready(function(){initNavTree('classvcl_1_1Camera.html',''); initResi
   <div class="headertitle"><div class="title">vcl::Camera&lt; Scalar &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A Pinhole camera model.  
+ <a href="classvcl_1_1Camera.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="viewer_2camera_8h_source.html">vclib/render/viewer/camera.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -180,9 +185,9 @@ ProjectionMode&#160;</td><td class="memItemRight" valign="bottom"><b>projectionM
 <tr class="memitem:aef0e7a5e14d68439a2851f6c0f068e8a" id="r_aef0e7a5e14d68439a2851f6c0f068e8a"><td class="memItemLeft" align="right" valign="top"><a id="aef0e7a5e14d68439a2851f6c0f068e8a" name="aef0e7a5e14d68439a2851f6c0f068e8a"></a>
 <a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr>
 <tr class="separator:aef0e7a5e14d68439a2851f6c0f068e8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aade4fc322e4eef69c45c56d30f447562" id="r_aade4fc322e4eef69c45c56d30f447562"><td class="memItemLeft" align="right" valign="top"><a id="aade4fc322e4eef69c45c56d30f447562" name="aade4fc322e4eef69c45c56d30f447562"></a>
-<a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setFieldOfViewAdaptingEyeDistance</b> (<a class="el" href="classvcl_1_1Box.html">const</a> Scalar &amp;<a class="el" href="classvcl_1_1Box.html">fov</a>)</td></tr>
-<tr class="separator:aade4fc322e4eef69c45c56d30f447562"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59383638e9b369fa13cefe083e1b3d96" id="r_a59383638e9b369fa13cefe083e1b3d96"><td class="memItemLeft" align="right" valign="top"><a id="a59383638e9b369fa13cefe083e1b3d96" name="a59383638e9b369fa13cefe083e1b3d96"></a>
+<a class="el" href="classvcl_1_1Box.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setFieldOfViewAdaptingEyeDistance</b> (<a class="el" href="classvcl_1_1Box.html">const</a> Scalar &amp;fovDeg)</td></tr>
+<tr class="separator:a59383638e9b369fa13cefe083e1b3d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeed9f3eee3e5a7d5c6e00fec963552ce" id="r_aeed9f3eee3e5a7d5c6e00fec963552ce"><td class="memItemLeft" align="right" valign="top"><a id="aeed9f3eee3e5a7d5c6e00fec963552ce" name="aeed9f3eee3e5a7d5c6e00fec963552ce"></a>
 <a class="el" href="classvcl_1_1Box.html">PointType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>up</b> ()</td></tr>
 <tr class="separator:aeed9f3eee3e5a7d5c6e00fec963552ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -207,7 +212,7 @@ Scalar&#160;</td><td class="memItemRight" valign="bottom"><b>mAspect</b> = 1.0</
 <tr class="separator:ab9f43d6ff614734ef72c5657059578c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2edb13b2b6aae4650d7d73e4b0b921f4" id="r_a2edb13b2b6aae4650d7d73e4b0b921f4"><td class="memItemLeft" align="right" valign="top"><a id="a2edb13b2b6aae4650d7d73e4b0b921f4" name="a2edb13b2b6aae4650d7d73e4b0b921f4"></a>
 <a class="el" href="classvcl_1_1Box.html">PointType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mCenter</b> = <a class="el" href="classvcl_1_1Box.html">PointType</a>(0.0f, 0.0f, 0.0f)</td></tr>
-<tr class="memdesc:a2edb13b2b6aae4650d7d73e4b0b921f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position where the camera is looking at. <br /></td></tr>
+<tr class="memdesc:a2edb13b2b6aae4650d7d73e4b0b921f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position where the camera is looking at (i.e. target point) <br /></td></tr>
 <tr class="separator:a2edb13b2b6aae4650d7d73e4b0b921f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeffdf7123827526791be547eabf812f4" id="r_aeffdf7123827526791be547eabf812f4"><td class="memItemLeft" align="right" valign="top"><a id="aeffdf7123827526791be547eabf812f4" name="aeffdf7123827526791be547eabf812f4"></a>
 <a class="el" href="classvcl_1_1Box.html">PointType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mEye</b> = <a class="el" href="classvcl_1_1Box.html">PointType</a>(0.0f, 0.0f, 1.0f)</td></tr>
@@ -238,7 +243,10 @@ Scalar&#160;</td><td class="memItemRight" valign="bottom"><b>mVerticalHeight</b>
 <tr class="memdesc:a0df34dc24035e58b1657e23d90a07f23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Height of the target in world space (used for ortho projection, and adapting the eye distance for perspective projection) <br /></td></tr>
 <tr class="separator:a0df34dc24035e58b1657e23d90a07f23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="classvcl_1_1Box.html">typename</a> Scalar&gt;<br />
+class vcl::Camera&lt; Scalar &gt;</div><p>A Pinhole camera model. </p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>vclib/render/include/vclib/render/viewer/<a class="el" href="viewer_2camera_8h_source.html">camera.h</a></li>
 </ul>
 </div><!-- contents -->

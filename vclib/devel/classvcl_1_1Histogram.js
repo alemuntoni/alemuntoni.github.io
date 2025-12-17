@@ -13,9 +13,9 @@ var classvcl_1_1Histogram =
     [ "minRangeValue", "classvcl_1_1Histogram.html#a6ef7af0f32247a8601cafa7757a3cde0", null ],
     [ "minValue", "classvcl_1_1Histogram.html#ac3caf0e589cb8d0df4169015b2011435", null ],
     [ "numberValues", "classvcl_1_1Histogram.html#a29833e431177f553ee94fdebcf63d303", null ],
-    [ "percentile", "classvcl_1_1Histogram.html#a17a01924c771a70969545f274f14394c", null ],
     [ "rootMeanSquare", "classvcl_1_1Histogram.html#a521e2f6333c4f5612753be6ea41d1113", null ],
     [ "standardDeviation", "classvcl_1_1Histogram.html#ad0c8b335f1f0964123f94364fa5ffa59", null ],
     [ "sumValues", "classvcl_1_1Histogram.html#a2a1be82defe67055c7b47956d292ad5e", null ],
+    [ "valueAtPercentile", "classvcl_1_1Histogram.html#a8935260484107ea79aa89d84b8f220a5", null ],
     [ "variance", "classvcl_1_1Histogram.html#a8e24ef4b580832f725aff9be1f0f6a31", null ]
 ];

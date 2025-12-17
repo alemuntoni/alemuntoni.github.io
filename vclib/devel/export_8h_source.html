@@ -254,33 +254,47 @@ $(document).ready(function(){initNavTree('export_8h_source.html',''); initResiza
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>            <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (HasPerFaceWedgeTexCoords&lt;MeshType&gt;) {</div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                <span class="keywordflow">if</span> (<a class="code hl_function" href="group__face__requirements.html#ga5fbed843fdb42d0018a5f343523b0719">isPerFaceWedgeTexCoordsAvailable</a>(mesh)) {</div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                    <span class="keywordflow">if</span> (vcg::tri::HasPerWedgeTexCoord(vcgMesh)) {</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                        vcgMesh.face[fi].WT(0).U() = f.wedgeTexCoord(0).u();</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                        vcgMesh.face[fi].WT(0).V() = f.wedgeTexCoord(0).v();</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                        vcgMesh.face[fi].WT(0).N() = f.textureIndex();</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                        vcgMesh.face[fi].WT(1).U() = f.wedgeTexCoord(1).u();</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>                        vcgMesh.face[fi].WT(1).V() = f.wedgeTexCoord(1).v();</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                        vcgMesh.face[fi].WT(1).N() = f.textureIndex();</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                        vcgMesh.face[fi].WT(2).U() = f.wedgeTexCoord(2).u();</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                        vcgMesh.face[fi].WT(2).V() = f.wedgeTexCoord(2).v();</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                        vcgMesh.face[fi].WT(2).N() = f.textureIndex();</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                    }</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                }</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            }</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            <span class="comment">// todo - custom components</span></div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>            fi++;</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        }</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    }</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>}</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                        uint ti = 0;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                        <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (HasPerFaceMaterialIndex&lt;MeshType&gt;) {</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                            <span class="keywordflow">if</span> (<a class="code hl_function" href="group__face__requirements.html#ga8f412c2588bf2668d3c8fac51ecd865d">isPerFaceMaterialIndexAvailable</a>(mesh)) {</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                                ti = f.materialIndex();</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>                            }</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                        }</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                        vcgMesh.face[fi].WT(0).U() = f.wedgeTexCoord(0).u();</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                        vcgMesh.face[fi].WT(0).V() = f.wedgeTexCoord(0).v();</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                        vcgMesh.face[fi].WT(0).N() = ti;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                        vcgMesh.face[fi].WT(1).U() = f.wedgeTexCoord(1).u();</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                        vcgMesh.face[fi].WT(1).V() = f.wedgeTexCoord(1).v();</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                        vcgMesh.face[fi].WT(1).N() = ti;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                        vcgMesh.face[fi].WT(2).U() = f.wedgeTexCoord(2).u();</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                        vcgMesh.face[fi].WT(2).V() = f.wedgeTexCoord(2).v();</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                        vcgMesh.face[fi].WT(2).N() = ti;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                    }</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                }</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>            }</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>} <span class="comment">// namespace vcl::vc</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            <span class="comment">// todo - custom components</span></div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="preprocessor">#endif </span><span class="comment">// VCL_VCG_EXPORT_H</span></div>
-<div class="ttc" id="agroup__face__requirements_html_ga5fbed843fdb42d0018a5f343523b0719"><div class="ttname"><a href="group__face__requirements.html#ga5fbed843fdb42d0018a5f343523b0719">vcl::isPerFaceWedgeTexCoordsAvailable</a></div><div class="ttdeci">bool isPerFaceWedgeTexCoordsAvailable(const MeshType &amp;m)</div><div class="ttdoc">Returns true if the WedgeTexCoords component is available (enabled) in the Face element of the input ...</div><div class="ttdef"><b>Definition</b> face_requirements.h:833</div></div>
-<div class="ttc" id="agroup__face__requirements_html_ga6ab2973732b455aedeb6f6dfe424346f"><div class="ttname"><a href="group__face__requirements.html#ga6ab2973732b455aedeb6f6dfe424346f">vcl::isPerFaceNormalAvailable</a></div><div class="ttdeci">bool isPerFaceNormalAvailable(const MeshType &amp;m)</div><div class="ttdoc">Returns true if the Normal component is available (enabled) in the Face element of the input mesh m.</div><div class="ttdef"><b>Definition</b> face_requirements.h:592</div></div>
-<div class="ttc" id="agroup__face__requirements_html_ga75a72c0a2cccc6981c1ac702ab4f5a5c"><div class="ttname"><a href="group__face__requirements.html#ga75a72c0a2cccc6981c1ac702ab4f5a5c">vcl::isPerFaceQualityAvailable</a></div><div class="ttdeci">bool isPerFaceQualityAvailable(const MeshType &amp;m)</div><div class="ttdoc">Returns true if the Quality component is available (enabled) in the Face element of the input mesh m.</div><div class="ttdef"><b>Definition</b> face_requirements.h:713</div></div>
-<div class="ttc" id="agroup__face__requirements_html_gac0944e94fb8c662edf2cca5f55b721c7"><div class="ttname"><a href="group__face__requirements.html#gac0944e94fb8c662edf2cca5f55b721c7">vcl::isPerFaceColorAvailable</a></div><div class="ttdeci">bool isPerFaceColorAvailable(const MeshType &amp;m)</div><div class="ttdoc">Returns true if the Color component is available (enabled) in the Face element of the input mesh m.</div><div class="ttdef"><b>Definition</b> face_requirements.h:476</div></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>            fi++;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        }</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    }</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (HasMaterials&lt;MeshType&gt;) {</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> Material&amp; m : mesh.materials()) {</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>            vcgMesh.textures.push_back(m.baseColorTextureDescriptor().path());</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        }</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    }</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>}</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>} <span class="comment">// namespace vcl::vc</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="preprocessor">#endif </span><span class="comment">// VCL_VCG_EXPORT_H</span></div>
+<div class="ttc" id="agroup__face__requirements_html_ga5fbed843fdb42d0018a5f343523b0719"><div class="ttname"><a href="group__face__requirements.html#ga5fbed843fdb42d0018a5f343523b0719">vcl::isPerFaceWedgeTexCoordsAvailable</a></div><div class="ttdeci">bool isPerFaceWedgeTexCoordsAvailable(const MeshType &amp;m)</div><div class="ttdoc">Returns true if the WedgeTexCoords component is available (enabled) in the Face element of the input ...</div><div class="ttdef"><b>Definition</b> face_requirements.h:910</div></div>
+<div class="ttc" id="agroup__face__requirements_html_ga6ab2973732b455aedeb6f6dfe424346f"><div class="ttname"><a href="group__face__requirements.html#ga6ab2973732b455aedeb6f6dfe424346f">vcl::isPerFaceNormalAvailable</a></div><div class="ttdeci">bool isPerFaceNormalAvailable(const MeshType &amp;m)</div><div class="ttdoc">Returns true if the Normal component is available (enabled) in the Face element of the input mesh m.</div><div class="ttdef"><b>Definition</b> face_requirements.h:669</div></div>
+<div class="ttc" id="agroup__face__requirements_html_ga75a72c0a2cccc6981c1ac702ab4f5a5c"><div class="ttname"><a href="group__face__requirements.html#ga75a72c0a2cccc6981c1ac702ab4f5a5c">vcl::isPerFaceQualityAvailable</a></div><div class="ttdeci">bool isPerFaceQualityAvailable(const MeshType &amp;m)</div><div class="ttdoc">Returns true if the Quality component is available (enabled) in the Face element of the input mesh m.</div><div class="ttdef"><b>Definition</b> face_requirements.h:790</div></div>
+<div class="ttc" id="agroup__face__requirements_html_ga8f412c2588bf2668d3c8fac51ecd865d"><div class="ttname"><a href="group__face__requirements.html#ga8f412c2588bf2668d3c8fac51ecd865d">vcl::isPerFaceMaterialIndexAvailable</a></div><div class="ttdeci">bool isPerFaceMaterialIndexAvailable(const MeshType &amp;m)</div><div class="ttdoc">Returns true if the MaterialIndex component is available (enabled) in the Face element of the input m...</div><div class="ttdef"><b>Definition</b> face_requirements.h:608</div></div>
+<div class="ttc" id="agroup__face__requirements_html_gac0944e94fb8c662edf2cca5f55b721c7"><div class="ttname"><a href="group__face__requirements.html#gac0944e94fb8c662edf2cca5f55b721c7">vcl::isPerFaceColorAvailable</a></div><div class="ttdeci">bool isPerFaceColorAvailable(const MeshType &amp;m)</div><div class="ttdoc">Returns true if the Color component is available (enabled) in the Face element of the input mesh m.</div><div class="ttdef"><b>Definition</b> face_requirements.h:492</div></div>
 <div class="ttc" id="agroup__views_html_ga33947d4d6db5271a84ac1ae5555d50d7"><div class="ttname"><a href="group__views.html#ga33947d4d6db5271a84ac1ae5555d50d7">vcl::views::faces</a></div><div class="ttdeci">constexpr detail::FacesView faces</div><div class="ttdoc">A view that allows to iterate overt the Face elements of an object.</div><div class="ttdef"><b>Definition</b> face.h:84</div></div>
 <div class="ttc" id="agroup__views_html_gae55a7544cb59464c26959bcc4cec23ea"><div class="ttname"><a href="group__views.html#gae55a7544cb59464c26959bcc4cec23ea">vcl::views::vertices</a></div><div class="ttdeci">constexpr detail::VerticesView vertices</div><div class="ttdoc">A view that allows to iterate over the Vertex elements of an object.</div><div class="ttdef"><b>Definition</b> vertex.h:92</div></div>
 </div><!-- fragment --></div><!-- contents -->

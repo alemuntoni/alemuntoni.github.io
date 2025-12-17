@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['matrixstoragetype_0',['MatrixStorageType',['../group__base.html#ga16a1bfbea022f6766d2f3ebbf69a3b52',1,'vcl']]],
-  ['meshtype_1',['MeshType',['../classvcl_1_1MeshInfo.html#afa7c37698fe8e745372cf25f24a322cc',1,'vcl::MeshInfo']]]
+  ['format_0',['Format',['../classvcl_1_1Color.html#a51d1c2a5b8ce06d43362026194a14523',1,'vcl::Color']]]
 ];

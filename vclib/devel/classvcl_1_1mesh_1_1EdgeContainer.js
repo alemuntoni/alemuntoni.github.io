@@ -54,5 +54,5 @@ var classvcl_1_1mesh_1_1EdgeContainer =
     [ "reserveEdges", "classvcl_1_1mesh_1_1EdgeContainer.html#aacc7a00243db99c16f2b305f3c04804e", null ],
     [ "resizeEdges", "classvcl_1_1mesh_1_1EdgeContainer.html#a4de50de9042dd64dc4889cb8baa2b8ea", null ],
     [ "serializePerEdgeCustomComponentsOfType", "classvcl_1_1mesh_1_1EdgeContainer.html#a1184fc5f1c71987d8b9edfab435bbe10", null ],
-    [ "updateEdgeIndices", "classvcl_1_1mesh_1_1EdgeContainer.html#adb4e3cd37b1e8951c749f808fe677660", null ]
+    [ "updateEdgeReferences", "classvcl_1_1mesh_1_1EdgeContainer.html#af7363c568d3eeca0ebc6c795463c9673", null ]
 ];

@@ -9,5 +9,6 @@ var dir_47b4e1c723526cc98e36bdcdcdc36b42 =
     [ "principal_curvatures.h", "principal__curvatures_8h_source.html", null ],
     [ "quality.h", "mesh_2views_2components_2quality_8h_source.html", null ],
     [ "selection.h", "mesh_2views_2components_2selection_8h_source.html", null ],
+    [ "tangents.h", "tangents_8h_source.html", null ],
     [ "tex_coords.h", "tex__coords_8h_source.html", null ]
 ];
