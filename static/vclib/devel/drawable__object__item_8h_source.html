@@ -117,7 +117,7 @@ $(document).ready(function(){initNavTree('drawable__object__item_8h_source.html'
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2025                                                    *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2026                                                    *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
@@ -147,36 +147,44 @@ $(document).ready(function(){initNavTree('drawable__object__item_8h_source.html'
 <div class="foldopen" id="foldopen00032" data-start="{" data-end="};">
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classvcl_1_1qt_1_1DrawableObjectItem.html">   32</a></span><span class="keyword">class </span><a class="code hl_class" href="classvcl_1_1qt_1_1DrawableObjectItem.html">DrawableObjectItem</a> : <span class="keyword">public</span> QTreeWidgetItem</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>{</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    std::shared_ptr&lt;DrawableObject&gt; mObj;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classvcl_1_1qt_1_1DrawableObjectItem.html">DrawableObjectItem</a>(</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keyword">const</span> std::shared_ptr&lt;DrawableObject&gt;&amp; <a class="code hl_class" href="classvcl_1_1Box.html">obj</a>,</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <a class="code hl_class" href="classvcl_1_1Box.html">QTreeWidget</a>*                           <a class="code hl_class" href="classvcl_1_1Box.html">parent</a> = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    std::shared_ptr&lt;DrawableObject&gt; drawableObject() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> addMeshItem();</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> addMeshInfoItem(<span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1AbstractDrawableMesh.html">AbstractDrawableMesh</a>&amp; mesh);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">void</span> addTransformMatrixItem(<span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1AbstractDrawableMesh.html">AbstractDrawableMesh</a>&amp; mesh);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> addMaterialsItem(<span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1AbstractDrawableMesh.html">AbstractDrawableMesh</a>&amp; mesh);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">void</span> addMaterialData(</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1AbstractDrawableMesh.html">AbstractDrawableMesh</a>&amp; mesh,</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Material.html">Material</a>&amp;             material,</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        QTreeWidgetItem*            <a class="code hl_class" href="classvcl_1_1Box.html">parent</a>);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> makeItemNotSelectable(QTreeWidgetItem* <a class="code hl_class" href="classvcl_1_1Box.html">item</a>);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>};</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">using </span>IconFunction =</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        std::function&lt;std::pair&lt;QIcon, std::string&gt;(<span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1DrawableObject.html">DrawableObject</a>&amp;)&gt;;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    std::shared_ptr&lt;DrawableObject&gt; mObj;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    IconFunction                    mIconFunction;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classvcl_1_1qt_1_1DrawableObjectItem.html">DrawableObjectItem</a>(</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keyword">const</span> std::shared_ptr&lt;DrawableObject&gt;&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">obj</a>,</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        IconFunction                           <a class="code hl_class" href="classvcl_1_1Segment.html">iconFunction</a>,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_class" href="classvcl_1_1Segment.html">QTreeWidget</a>*                           <a class="code hl_class" href="classvcl_1_1Segment.html">parent</a> = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    std::shared_ptr&lt;DrawableObject&gt; drawableObject() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">void</span> addMeshItem();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">void</span> addMeshInfoItem(<span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1AbstractDrawableMesh.html">AbstractDrawableMesh</a>&amp; mesh);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">void</span> addTransformMatrixItem(<span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1AbstractDrawableMesh.html">AbstractDrawableMesh</a>&amp; mesh);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">void</span> addMaterialsItem(<span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1AbstractDrawableMesh.html">AbstractDrawableMesh</a>&amp; mesh);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">void</span> addMaterialData(</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1AbstractDrawableMesh.html">AbstractDrawableMesh</a>&amp; mesh,</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keyword">const</span> <a class="code hl_class" href="classvcl_1_1Material.html">Material</a>&amp;             material,</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        QTreeWidgetItem*            <a class="code hl_class" href="classvcl_1_1Segment.html">parent</a>);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> makeItemNotSelectable(QTreeWidgetItem* <a class="code hl_class" href="classvcl_1_1Segment.html">item</a>);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>};</div>
 </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>} <span class="comment">// namespace vcl::qt</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#endif </span><span class="comment">// VCL_QT_GUI_DRAWABLE_OBJECT_ITEM_H</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>} <span class="comment">// namespace vcl::qt</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#endif </span><span class="comment">// VCL_QT_GUI_DRAWABLE_OBJECT_ITEM_H</span></div>
 <div class="ttc" id="aclassvcl_1_1AbstractDrawableMesh_html"><div class="ttname"><a href="classvcl_1_1AbstractDrawableMesh.html">vcl::AbstractDrawableMesh</a></div><div class="ttdoc">The AbstractDrawableMesh class is the base class for all the drawable meshes in the VCLib render syst...</div><div class="ttdef"><b>Definition</b> abstract_drawable_mesh.h:41</div></div>
-<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:46</div></div>
+<div class="ttc" id="aclassvcl_1_1DrawableObject_html"><div class="ttname"><a href="classvcl_1_1DrawableObject.html">vcl::DrawableObject</a></div><div class="ttdoc">The DrawableObject class is the base class for all the objects that can be drawn in a 3D viewer.</div><div class="ttdef"><b>Definition</b> drawable_object.h:57</div></div>
 <div class="ttc" id="aclassvcl_1_1Material_html"><div class="ttname"><a href="classvcl_1_1Material.html">vcl::Material</a></div><div class="ttdoc">Represents a Physically-Based Rendering (PBR) material.</div><div class="ttdef"><b>Definition</b> material.h:45</div></div>
+<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:41</div></div>
 <div class="ttc" id="aclassvcl_1_1qt_1_1DrawableObjectItem_html"><div class="ttname"><a href="classvcl_1_1qt_1_1DrawableObjectItem.html">vcl::qt::DrawableObjectItem</a></div><div class="ttdef"><b>Definition</b> drawable_object_item.h:33</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

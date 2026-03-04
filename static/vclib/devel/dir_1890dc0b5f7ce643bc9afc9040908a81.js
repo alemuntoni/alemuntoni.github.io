@@ -3,6 +3,7 @@ var dir_1890dc0b5f7ce643bc9afc9040908a81 =
     [ "custom_cpu_lines.h", "custom__cpu__lines_8h_source.html", null ],
     [ "drawable_axis.h", "programs_2embedded__vf__programs_2drawable__axis_8h_source.html", null ],
     [ "drawable_directional_light.h", "programs_2embedded__vf__programs_2drawable__directional__light_8h_source.html", null ],
+    [ "drawable_environment_pbr.h", "drawable__environment__pbr_8h_source.html", null ],
     [ "drawable_mesh_edges.h", "drawable__mesh__edges_8h_source.html", null ],
     [ "drawable_mesh_edges_id.h", "drawable__mesh__edges__id_8h_source.html", null ],
     [ "drawable_mesh_points.h", "embedded__vf__programs_2drawable__mesh__points_8h_source.html", null ],

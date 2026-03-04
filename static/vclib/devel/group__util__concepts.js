@@ -14,6 +14,7 @@ var group__util__concepts =
     [ "vcl::IsAnyPointerToConst", "conceptvcl_1_1IsAnyPointerToConst.html", null ],
     [ "vcl::Cloneable", "conceptvcl_1_1Cloneable.html", null ],
     [ "vcl::Range", "conceptvcl_1_1Range.html", null ],
+    [ "vcl::RandomAccessRange", "conceptvcl_1_1RandomAccessRange.html", null ],
     [ "vcl::RangeOf", "conceptvcl_1_1RangeOf.html", null ],
     [ "vcl::InputRange", "conceptvcl_1_1InputRange.html", null ],
     [ "vcl::OutputRange", "conceptvcl_1_1OutputRange.html", null ],

@@ -117,7 +117,7 @@ $(document).ready(function(){initNavTree('custom__components__vector__map_8h_sou
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2025                                                    *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2026                                                    *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
@@ -333,7 +333,7 @@ $(document).ready(function(){initNavTree('custom__components__vector__map_8h_sou
 <div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>            <span class="keywordtype">bool</span> b = mNeedToInitialize.at(name);</div>
 <div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>            vcl::serialize(os, b);</div>
 <div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>            <span class="keyword">const</span> std::vector&lt;std::any&gt;&amp; v = componentVector&lt;CompType&gt;(name);</div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>            <a class="code hl_class" href="classvcl_1_1Box.html">vcl::serialize&lt;CompType&gt;</a>(os, v);</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>            <a class="code hl_class" href="classvcl_1_1Segment.html">vcl::serialize&lt;CompType&gt;</a>(os, v);</div>
 <div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>        }</div>
 <div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>    }</div>
 <div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span> </div>
@@ -346,7 +346,7 @@ $(document).ready(function(){initNavTree('custom__components__vector__map_8h_sou
 <div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>            <span class="keywordtype">bool</span> b;</div>
 <div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>            vcl::deserialize(is, b);</div>
 <div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>            std::vector&lt;std::any&gt; v;</div>
-<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>            <a class="code hl_class" href="classvcl_1_1Box.html">vcl::deserialize&lt;CompType&gt;</a>(is, v);</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>            <a class="code hl_class" href="classvcl_1_1Segment.html">vcl::deserialize&lt;CompType&gt;</a>(is, v);</div>
 <div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>            mMap[name]              = v;</div>
 <div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>            mNeedToInitialize[name] = b;</div>
 <div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>            mCompType.emplace(name, <span class="keyword">typeid</span>(CompType));</div>
@@ -370,7 +370,7 @@ $(document).ready(function(){initNavTree('custom__components__vector__map_8h_sou
 <div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>} <span class="comment">// namespace vcl::mesh::detail</span></div>
 <div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span> </div>
 <div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span><span class="preprocessor">#endif </span><span class="comment">// VCL_MESH_CONTAINERS_DETAIL_CUSTOM_COMPONENTS_VECTOR_MAP_H</span></div>
-<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:46</div></div>
+<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:41</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

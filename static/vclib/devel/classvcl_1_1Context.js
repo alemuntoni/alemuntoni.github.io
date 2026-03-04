@@ -2,6 +2,7 @@ var classvcl_1_1Context =
 [
     [ "capabilites", "classvcl_1_1Context.html#ab851c9abdf382cf764f9845817394092", null ],
     [ "createOffscreenFramebuffer", "classvcl_1_1Context.html#ac577192bb34fd856464af221e95889e2", null ],
+    [ "getAllocatedBufferAndReleaseFn", "classvcl_1_1Context.html#a1863bd6383db206a59941e3457aa7b8f", null ],
     [ "instance", "classvcl_1_1Context.html#ac1b1d3f6d8d5802760487bc68f29d9e3", null ],
     [ "isDefaultWindow", "classvcl_1_1Context.html#a0ff7bed4c59153e2204de1bf7921a43b", null ],
     [ "renderType", "classvcl_1_1Context.html#ac2a413b318fbcfd391bd9122b907414f", null ],

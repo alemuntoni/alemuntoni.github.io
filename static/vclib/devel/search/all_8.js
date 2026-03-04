@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['halfspacedeterminant_0',['halfspacedeterminant',['../group__algorithms__core.html#ga258c61f730c08e6d3cfc4f6c93af1588',1,'vcl::halfSpaceDeterminant(const FaceType &amp;face, const PointType &amp;point)'],['../group__algorithms__core.html#ga5973cf28c34d62dc9e4364ee8c19f41a',1,'vcl::halfSpaceDeterminant(const TriangleType &amp;triangle, const PointType &amp;point)'],['../group__algorithms__core.html#ga394b096177019cfacda94eb16ae1fdc2',1,'vcl::halfSpaceDeterminant(const PointType &amp;p0, const PointType &amp;p1, const PointType &amp;p2, const PointType &amp;p)']]],
+  ['halfspacedeterminant_0',['halfspacedeterminant',['../group__algorithms__core.html#ga394b096177019cfacda94eb16ae1fdc2',1,'vcl::halfSpaceDeterminant(const PointType &amp;p0, const PointType &amp;p1, const PointType &amp;p2, const PointType &amp;p)'],['../group__algorithms__core.html#ga258c61f730c08e6d3cfc4f6c93af1588',1,'vcl::halfSpaceDeterminant(const FaceType &amp;face, const PointType &amp;point)'],['../group__algorithms__core.html#ga5973cf28c34d62dc9e4364ee8c19f41a',1,'vcl::halfSpaceDeterminant(const TriangleType &amp;triangle, const PointType &amp;point)']]],
   ['handle_1',['handle',['../classvcl_1_1IndirectBuffer.html#a131b1dcf2da17d612f732d8eb3e9b3b8',1,'vcl::IndirectBuffer::handle()'],['../classvcl_1_1Uniform.html#aa2927009dd2a70b440407e029b3102b3',1,'vcl::Uniform::handle()']]],
   ['hascontainerof_2',['hascontainerof',['../classvcl_1_1Mesh.html#af76409bf09afd6f60e6bb8f15ee21dc0',1,'vcl::Mesh::hasContainerOf()'],['../classvcl_1_1Mesh.html#af76409bf09afd6f60e6bb8f15ee21dc0',1,'vcl::Mesh::hasContainerOf()']]],
   ['hascontainerofelementpred_3',['HasContainerOfElementPred',['../structvcl_1_1mesh_1_1HasContainerOfElementPred.html',1,'vcl::mesh']]],
@@ -32,8 +32,10 @@ var searchData=
   ['height_29',['height',['../classvcl_1_1Image.html#a683eb846af3cf88d21ea4da6c9023244',1,'vcl::Image']]],
   ['histogram_30',['histogram',['../classvcl_1_1Histogram.html#ac454f39e64714c1070009716387377cc',1,'vcl::Histogram::Histogram()'],['../classvcl_1_1Histogram.html',1,'vcl::Histogram&lt; ScalarType &gt;']]],
   ['histogram_3c_20double_20_3e_31',['Histogram&lt; double &gt;',['../classvcl_1_1Histogram.html',1,'vcl']]],
-  ['hsvhue_32',['hsvHue',['../classvcl_1_1Color.html#a4c4d1cdcf2e86cba2bbab8567ac50041',1,'vcl::Color']]],
-  ['hsvhuef_33',['hsvHueF',['../classvcl_1_1Color.html#ad3959e60cab3306eb9048120e009ef23',1,'vcl::Color']]],
-  ['hsvsaturation_34',['hsvSaturation',['../classvcl_1_1Color.html#a9a4d5f5f2d3eec2063a2263c33cbf09f',1,'vcl::Color']]],
-  ['hsvsaturationf_35',['hsvSaturationF',['../classvcl_1_1Color.html#a8c746456e82cac73f786809bd2b3c437',1,'vcl::Color']]]
+  ['hitresult_32',['HitResult',['../classvcl_1_1embree_1_1Scene.html#a94364a4bf33ac1f65e94566ac8f1094d',1,'vcl::embree::Scene']]],
+  ['holecount_33',['holeCount',['../group__clean.html#ga168f7cafa7e3cf3ce8b08a85ac949970',1,'vcl']]],
+  ['hsvhue_34',['hsvHue',['../classvcl_1_1Color.html#a4c4d1cdcf2e86cba2bbab8567ac50041',1,'vcl::Color']]],
+  ['hsvhuef_35',['hsvHueF',['../classvcl_1_1Color.html#ad3959e60cab3306eb9048120e009ef23',1,'vcl::Color']]],
+  ['hsvsaturation_36',['hsvSaturation',['../classvcl_1_1Color.html#a9a4d5f5f2d3eec2063a2263c33cbf09f',1,'vcl::Color']]],
+  ['hsvsaturationf_37',['hsvSaturationF',['../classvcl_1_1Color.html#a8c746456e82cac73f786809bd2b3c437',1,'vcl::Color']]]
 ];

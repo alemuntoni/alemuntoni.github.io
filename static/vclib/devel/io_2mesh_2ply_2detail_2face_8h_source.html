@@ -117,7 +117,7 @@ $(document).ready(function(){initNavTree('io_2mesh_2ply_2detail_2face_8h_source.
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2025                                                    *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2026                                                    *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
@@ -160,7 +160,7 @@ $(document).ready(function(){initNavTree('io_2mesh_2ply_2detail_2face_8h_source.
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>{</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">using </span>VertexType = MeshType::VertexType;</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    uint fsize = f.vertexNumber();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    uint fsize = f.vertexCount();</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    io::writeProperty(file, fsize, p.listSizeType, format);</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> VertexType* v : f.<a class="code hl_variable" href="group__views.html#gae55a7544cb59464c26959bcc4cec23ea">vertices</a>()) {</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        io::writeProperty(file, vIndices[m.index(v)], p.type, format);</div>
@@ -172,11 +172,11 @@ $(document).ready(function(){initNavTree('io_2mesh_2ply_2detail_2face_8h_source.
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>{</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">bool</span> splitFace = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="comment">// we have a polygonal mesh</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (FaceType::VERTEX_NUMBER &lt; 0) {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (FaceType::VERTEX_COUNT &lt; 0) {</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="comment">// need to resize the face to the right number of verts</span></div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        f.resizeVertices(vids.size());</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (FaceType::VERTEX_NUMBER != vids.size()) {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (FaceType::VERTEX_COUNT != vids.size()) {</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="comment">// we have faces with static sizes (triangles), but we are loading faces</span></div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="comment">// with number of verts &gt; 3. Need to split the face we are loading in n</span></div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="comment">// faces!</span></div>
@@ -185,8 +185,8 @@ $(document).ready(function(){initNavTree('io_2mesh_2ply_2detail_2face_8h_source.
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordflow">if</span> (!splitFace) { <span class="comment">// classic load, no split needed</span></div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        uint i = 0;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordflow">for</span> (uint i = 0; i &lt; f.vertexNumber(); ++i) {</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <span class="keywordflow">if</span> (vids[i] &gt;= m.vertexNumber()) {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordflow">for</span> (uint i = 0; i &lt; f.vertexCount(); ++i) {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <span class="keywordflow">if</span> (vids[i] &gt;= m.vertexCount()) {</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                <span class="keywordflow">throw</span> MalformedFileException(</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                    <span class="stringliteral">&quot;Bad vertex index for face &quot;</span> + std::to_string(f.index()));</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            }</div>
@@ -206,7 +206,7 @@ $(document).ready(function(){initNavTree('io_2mesh_2ply_2detail_2face_8h_source.
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keyword">const</span> std::vector&lt;std::pair&lt;Scalar, Scalar&gt;&gt;&amp; wedges)</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>{</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordtype">bool</span> splitFace = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keywordflow">if</span> (FaceType::VERTEX_NUMBER &gt; 0 &amp;&amp; FaceType::VERTEX_NUMBER != wedges.size())</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keywordflow">if</span> (FaceType::VERTEX_COUNT &gt; 0 &amp;&amp; FaceType::VERTEX_COUNT != wedges.size())</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        splitFace = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordflow">if</span> (!splitFace) {</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordflow">for</span> (uint i = 0; i &lt; wedges.size(); ++i) {</div>
@@ -216,9 +216,9 @@ $(document).ready(function(){initNavTree('io_2mesh_2ply_2detail_2face_8h_source.
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    }</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keywordflow">else</span> { <span class="comment">// the face has been splitted</span></div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="comment">// for each triangle generated by the polygon</span></div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="keywordflow">for</span> (uint ff = m.index(f); ff &lt; m.faceNumber(); ++ff) {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="keywordflow">for</span> (uint ff = m.index(f); ff &lt; m.faceCount(); ++ff) {</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            <span class="comment">// for each vertex/wedge of the triangle</span></div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            <span class="keywordflow">for</span> (uint i = 0; i &lt; m.face(ff).vertexNumber(); ++i) {</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            <span class="keywordflow">for</span> (uint i = 0; i &lt; m.face(ff).vertexCount(); ++i) {</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>                <span class="comment">// get the position of this vertex in the original polygon</span></div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                uint vid = m.index(m.face(ff).vertex(i));</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                <span class="keyword">auto</span> it  = std::find(vids.begin(), vids.end(), vid);</div>
@@ -259,7 +259,7 @@ $(document).ready(function(){initNavTree('io_2mesh_2ply_2detail_2face_8h_source.
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <span class="comment">// will manage the case of loading a polygon in a triangle mesh</span></div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        setPlyFaceIndices(f, mesh, vids);</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    }</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordflow">if</span> (p.name == ply::texcoord) { <span class="comment">// loading wedge texcoords</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (p.name == ply::texcoord) { <span class="comment">// loading wedge texcoords</span></div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (HasPerFaceWedgeTexCoords&lt;MeshType&gt;) {</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="group__face__requirements.html#ga5fbed843fdb42d0018a5f343523b0719">isPerFaceWedgeTexCoordsAvailable</a>(mesh)) {</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                <span class="keyword">using </span>Scalar = FaceType::WedgeTexCoordType::ScalarType;</div>
@@ -279,21 +279,21 @@ $(document).ready(function(){initNavTree('io_2mesh_2ply_2detail_2face_8h_source.
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        }</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    }</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="comment">// loading texture id associated to ALL the wedges</span></div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="keywordflow">if</span> (p.name == ply::texnumber) {</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (p.name == ply::material_index) {</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (HasPerFaceMaterialIndex&lt;MeshType&gt;) {</div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="group__face__requirements.html#ga8f412c2588bf2668d3c8fac51ecd865d">isPerFaceMaterialIndexAvailable</a>(mesh)) {</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                uint n      = io::readPrimitiveType&lt;uint&gt;(file, p.type, end);</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                hasBeenRead = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                <span class="comment">// in case the loaded polygon has been triangulated in the last</span></div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                <span class="comment">// n triangles of mesh</span></div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                <span class="keywordflow">for</span> (uint ff = mesh.index(f); ff &lt; mesh.faceNumber(); ++ff) {</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                <span class="keywordflow">for</span> (uint ff = mesh.index(f); ff &lt; mesh.faceCount(); ++ff) {</div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>                    mesh.face(ff).materialIndex() = n;</div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                }</div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>            }</div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        }</div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    }</div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    <span class="comment">// loading one of the normal components</span></div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <span class="keywordflow">if</span> (p.name &gt;= ply::nx &amp;&amp; p.name &lt;= ply::nz) {</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (p.name &gt;= ply::nx &amp;&amp; p.name &lt;= ply::nz) {</div>
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (HasPerFaceNormal&lt;MeshType&gt;) {</div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="group__face__requirements.html#ga6ab2973732b455aedeb6f6dfe424346f">isPerFaceNormalAvailable</a>(mesh)) {</div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>                <span class="keyword">using </span>Scalar = FaceType::NormalType::ScalarType;</div>
@@ -302,14 +302,14 @@ $(document).ready(function(){initNavTree('io_2mesh_2ply_2detail_2face_8h_source.
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>                hasBeenRead  = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>                <span class="comment">// in case the loaded polygon has been triangulated in the last</span></div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>                <span class="comment">// n triangles of mesh</span></div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>                <span class="keywordflow">for</span> (uint ff = mesh.index(f); ff &lt; mesh.faceNumber(); ++ff) {</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>                <span class="keywordflow">for</span> (uint ff = mesh.index(f); ff &lt; mesh.faceCount(); ++ff) {</div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                    mesh.face(ff).normal()[a] = n;</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>                }</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>            }</div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        }</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    }</div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <span class="comment">// loading one of the color components</span></div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <span class="keywordflow">if</span> (p.name &gt;= ply::red &amp;&amp; p.name &lt;= ply::alpha) {</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (p.name &gt;= ply::red &amp;&amp; p.name &lt;= ply::alpha) {</div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (HasPerFaceColor&lt;MeshType&gt;) {</div>
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="group__face__requirements.html#gac0944e94fb8c662edf2cca5f55b721c7">isPerFaceColorAvailable</a>(mesh)) {</div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                <span class="keywordtype">int</span>           a = p.name - ply::red;</div>
@@ -318,13 +318,13 @@ $(document).ready(function(){initNavTree('io_2mesh_2ply_2detail_2face_8h_source.
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>                hasBeenRead = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>                <span class="comment">// in case the loaded polygon has been triangulated in the last</span></div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>                <span class="comment">// n triangles of mesh</span></div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>                <span class="keywordflow">for</span> (uint ff = mesh.index(f); ff &lt; mesh.faceNumber(); ++ff) {</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>                <span class="keywordflow">for</span> (uint ff = mesh.index(f); ff &lt; mesh.faceCount(); ++ff) {</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>                    mesh.face(ff).color()[a] = c;</div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>                }</div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>            }</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        }</div>
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    }</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <span class="keywordflow">if</span> (p.name == ply::quality) { <span class="comment">// loading the quality component</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (p.name == ply::quality) { <span class="comment">// loading the quality component</span></div>
 <div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (HasPerFaceQuality&lt;MeshType&gt;) {</div>
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>            <span class="keyword">using </span>QualityType = FaceType::QualityType;</div>
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="group__face__requirements.html#ga75a72c0a2cccc6981c1ac702ab4f5a5c">isPerFaceQualityAvailable</a>(mesh)) {</div>
@@ -333,13 +333,13 @@ $(document).ready(function(){initNavTree('io_2mesh_2ply_2detail_2face_8h_source.
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>                hasBeenRead = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>                <span class="comment">// in case the loaded polygon has been triangulated in the last</span></div>
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                <span class="comment">// n triangles of mesh</span></div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                <span class="keywordflow">for</span> (uint ff = mesh.index(f); ff &lt; mesh.faceNumber(); ++ff) {</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                <span class="keywordflow">for</span> (uint ff = mesh.index(f); ff &lt; mesh.faceCount(); ++ff) {</div>
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>                    mesh.face(ff).quality() = s;</div>
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>                }</div>
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>            }</div>
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>        }</div>
 <div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    }</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <span class="keywordflow">if</span> (p.name == ply::unknown) {</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (p.name == ply::unknown) {</div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (HasPerFaceCustomComponents&lt;MeshType&gt;) {</div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>            <span class="keywordflow">if</span> (mesh.hasPerFaceCustomComponent(p.unknownPropertyName)) {</div>
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                io::readCustomComponent(</div>
@@ -352,7 +352,7 @@ $(document).ready(function(){initNavTree('io_2mesh_2ply_2detail_2face_8h_source.
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    <span class="comment">// we still need to read and discard what we read</span></div>
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    <span class="keywordflow">if</span> (!hasBeenRead) {</div>
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        <span class="keywordflow">if</span> (p.list) {</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>            uint s = io::readPrimitiveType&lt;int&gt;(file, p.listSizeType, end);</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>            uint s = io::readPrimitiveType&lt;uint&gt;(file, p.listSizeType, end);</div>
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>            <span class="keywordflow">for</span> (uint i = 0; i &lt; s; ++i)</div>
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>                io::readPrimitiveType&lt;int&gt;(file, p.type, end);</div>
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        }</div>
@@ -420,30 +420,30 @@ $(document).ready(function(){initNavTree('io_2mesh_2ply_2detail_2face_8h_source.
 <div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>                detail::writePlyFaceIndices(file, p, mesh, vIndices, f, format);</div>
 <div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>                hasBeenWritten = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>            }</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>            <span class="keywordflow">if</span> (p.name &gt;= ply::nx &amp;&amp; p.name &lt;= ply::nz) {</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (p.name &gt;= ply::nx &amp;&amp; p.name &lt;= ply::nz) {</div>
 <div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>                <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (HasPerFaceNormal&lt;MeshType&gt;) {</div>
 <div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>                    io::writeProperty(</div>
 <div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>                        file, f.normal()[p.name - ply::nx], p.type, format);</div>
 <div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>                    hasBeenWritten = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>                }</div>
 <div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>            }</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>            <span class="keywordflow">if</span> (p.name &gt;= ply::red &amp;&amp; p.name &lt;= ply::alpha) {</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (p.name &gt;= ply::red &amp;&amp; p.name &lt;= ply::alpha) {</div>
 <div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>                <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (HasPerFaceColor&lt;MeshType&gt;) {</div>
 <div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>                    io::writeProperty(</div>
 <div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>                        file, f.color()[p.name - ply::red], p.type, format);</div>
 <div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>                    hasBeenWritten = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>                }</div>
 <div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>            }</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>            <span class="keywordflow">if</span> (p.name == ply::quality) {</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (p.name == ply::quality) {</div>
 <div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>                <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (HasPerFaceQuality&lt;MeshType&gt;) {</div>
 <div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>                    io::writeProperty(file, f.quality(), p.type, format);</div>
 <div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>                    hasBeenWritten = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>                }</div>
 <div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>            }</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>            <span class="keywordflow">if</span> (p.name == ply::texcoord) {</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (p.name == ply::texcoord) {</div>
 <div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>                <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (HasPerFaceWedgeTexCoords&lt;MeshType&gt;) {</div>
 <div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>                    io::writeProperty(</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>                        file, f.vertexNumber() * 2, p.listSizeType, format);</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>                        file, f.vertexCount() * 2, p.listSizeType, format);</div>
 <div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>                    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; tc : f.wedgeTexCoords()) {</div>
 <div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>                        io::writeProperty(file, tc.u(), p.type, format);</div>
 <div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>                        io::writeProperty(file, tc.v(), p.type, format);</div>
@@ -451,13 +451,13 @@ $(document).ready(function(){initNavTree('io_2mesh_2ply_2detail_2face_8h_source.
 <div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>                    hasBeenWritten = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>                }</div>
 <div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>            }</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>            <span class="keywordflow">if</span> (p.name == ply::texnumber) {</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (p.name == ply::material_index) {</div>
 <div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>                <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (HasPerFaceMaterialIndex&lt;MeshType&gt;) {</div>
 <div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>                    io::writeProperty(file, f.materialIndex(), p.type, format);</div>
 <div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>                    hasBeenWritten = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>                }</div>
 <div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>            }</div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>            <span class="keywordflow">if</span> (p.name == ply::unknown) {</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (p.name == ply::unknown) {</div>
 <div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>                <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (HasPerFaceCustomComponents&lt;MeshType&gt;) {</div>
 <div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>                    <span class="keywordflow">if</span> (mesh.hasPerFaceCustomComponent(p.unknownPropertyName)) {</div>
 <div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>                        io::writeCustomComponent(</div>
@@ -486,11 +486,11 @@ $(document).ready(function(){initNavTree('io_2mesh_2ply_2detail_2face_8h_source.
 <div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>    LogType&amp;         log)</div>
 <div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>{</div>
 <div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>    <span class="keyword">using </span>FaceType = MeshType::FaceType;</div>
-<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>    mesh.reserveFaces(header.numberFaces());</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>    mesh.reserveFaces(header.faceCount());</div>
 <div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span> </div>
-<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>    log.startProgress(<span class="stringliteral">&quot;Reading faces&quot;</span>, header.numberFaces());</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>    log.startProgress(<span class="stringliteral">&quot;Reading faces&quot;</span>, header.faceCount());</div>
 <div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span> </div>
-<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>    <span class="keywordflow">for</span> (uint fid = 0; fid &lt; header.numberFaces(); ++fid) {</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>    <span class="keywordflow">for</span> (uint fid = 0; fid &lt; header.faceCount(); ++fid) {</div>
 <div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>        uint      ffid = mesh.addFace();</div>
 <div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>        FaceType&amp; f    = mesh.face(ffid);</div>
 <div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>        <span class="keywordflow">if</span> (header.format() == ply::ASCII) {</div>

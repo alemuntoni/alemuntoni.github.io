@@ -117,7 +117,7 @@ $(document).ready(function(){initNavTree('element__container_8h_source.html','')
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2025                                                    *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2026                                                    *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
@@ -175,7 +175,7 @@ $(document).ready(function(){initNavTree('element__container_8h_source.html','')
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keyword">protected</span>:</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    ParentMeshType* mParentMesh = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    uint mElemNumber = 0;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    uint mElemCount = 0;</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    std::vector&lt;T&gt; mElemVec;</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
@@ -206,13 +206,13 @@ $(document).ready(function(){initNavTree('element__container_8h_source.html','')
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <span class="keywordflow">return</span> mElemVec[i];</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    }</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    uint elementNumber()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mElemNumber; }</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    uint elementCount()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mElemCount; }</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    uint elementContainerSize()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mElemVec.<a class="code hl_function" href="classvcl_1_1Box.html#ad4dd21aaa7669f0ccbba075764c77664">size</a>(); }</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    uint elementContainerSize()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mElemVec.size(); }</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    uint deletedElementNumber()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    uint deletedElementCount()<span class="keyword"> const</span></div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="keyword">    </span>{</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        <span class="keywordflow">return</span> elementContainerSize() - elementNumber();</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        <span class="keywordflow">return</span> elementContainerSize() - elementCount();</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    }</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    uint addElement()</div>
@@ -224,7 +224,7 @@ $(document).ready(function(){initNavTree('element__container_8h_source.html','')
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        T* oldB = mElemVec.data();</div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        mElemVec.emplace_back();</div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        T* newB = mElemVec.data();</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        mElemNumber++;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        mElemCount++;</div>
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        mElemVec.back().setParentMesh(mParentMesh);</div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        mElemVec.back().initVerticalComponents();</div>
@@ -243,11 +243,11 @@ $(document).ready(function(){initNavTree('element__container_8h_source.html','')
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (comp::HasCustomComponents&lt;T&gt;)</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>            mCustomCompVecMap.resize(mElemVec.size() + size);</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        uint baseId = mElemVec.<a class="code hl_function" href="classvcl_1_1Box.html#ad4dd21aaa7669f0ccbba075764c77664">size</a>();</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        uint baseId = mElemVec.size();</div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        T*   oldB   = mElemVec.data();</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        mElemVec.resize(mElemVec.size() + size);</div>
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        T* newB = mElemVec.data();</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        mElemNumber += size;</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        mElemCount += size;</div>
 <div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        <span class="keywordflow">for</span> (uint i = baseId; i &lt; mElemVec.size(); ++i) {</div>
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>            mElemVec[i].setParentMesh(mParentMesh);</div>
@@ -265,7 +265,7 @@ $(document).ready(function(){initNavTree('element__container_8h_source.html','')
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <span class="keywordtype">void</span> clearElements()</div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    {</div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        mElemVec.clear();</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        mElemNumber = 0;</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        mElemCount = 0;</div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        <span class="comment">// clear vertical and custom components</span></div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
@@ -276,11 +276,11 @@ $(document).ready(function(){initNavTree('element__container_8h_source.html','')
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
 <div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    <span class="keywordtype">void</span> resizeElements(uint size)</div>
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    {</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        <span class="keywordflow">if</span> (size &gt; mElemNumber) {</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>            addElements(size - mElemNumber);</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        <span class="keywordflow">if</span> (size &gt; mElemCount) {</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>            addElements(size - mElemCount);</div>
 <div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        }</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (size &lt; mElemNumber) {</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>            uint nToDelete = mElemNumber - size;</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (size &lt; mElemCount) {</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>            uint nToDelete = mElemCount - size;</div>
 <div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>            <span class="keywordflow">for</span> (uint i = mElemVec.size() - 1; nToDelete &gt; 0; --i) {</div>
 <div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>                <span class="keywordflow">if</span> (!mElemVec[i].deleted()) {</div>
 <div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>                    deleteElement(i);</div>
@@ -308,7 +308,7 @@ $(document).ready(function(){initNavTree('element__container_8h_source.html','')
 <div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>    std::vector&lt;uint&gt; compactElements()</div>
 <div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    {</div>
 <div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>        std::vector&lt;uint&gt; newIndices = elementCompactIndices();</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>        <span class="keywordflow">if</span> (elementNumber() != elementContainerSize()) {</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>        <span class="keywordflow">if</span> (elementCount() != elementContainerSize()) {</div>
 <div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>            compactVector(mElemVec, newIndices);</div>
 <div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span> </div>
 <div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>            mVerticalCompVecTuple.compact(newIndices);</div>
@@ -324,7 +324,7 @@ $(document).ready(function(){initNavTree('element__container_8h_source.html','')
 <div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>    {</div>
 <div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>        assert(i &lt; mElemVec.size());</div>
 <div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>        mElemVec[i].deletedBit() = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>        --mElemNumber;</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>        --mElemCount;</div>
 <div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    }</div>
 <div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span> </div>
 <div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>    <span class="keywordtype">void</span> deleteElement(<span class="keyword">const</span> T* e) { deleteElement(index(e)); }</div>
@@ -332,7 +332,7 @@ $(document).ready(function(){initNavTree('element__container_8h_source.html','')
 <div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>    uint elementIndexIfCompact(uint i)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span><span class="keyword">    </span>{</div>
 <div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>        assert(i &lt; mElemVec.size());</div>
-<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>        <span class="keywordflow">if</span> (mElemVec.size() == mElemNumber)</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>        <span class="keywordflow">if</span> (mElemVec.size() == mElemCount)</div>
 <div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>            <span class="keywordflow">return</span> i;</div>
 <div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>        <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>            uint cnt = 0;</div>
@@ -381,7 +381,7 @@ $(document).ready(function(){initNavTree('element__container_8h_source.html','')
 <div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span>        appendCustomComponents(other);</div>
 <div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span>    }</div>
 <div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span> </div>
-<div class="line"><a id="l00460" name="l00460"></a><span class="lineno">  460</span>    <span class="keywordtype">void</span> serializeOptionalComponentsAndElementsNumber(std::ostream&amp; out)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00460" name="l00460"></a><span class="lineno">  460</span>    <span class="keywordtype">void</span> serializeOptionalComponentsAndElementCount(std::ostream&amp; out)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span><span class="keyword">    </span>{</div>
 <div class="line"><a id="l00462" name="l00462"></a><span class="lineno">  462</span>        <span class="keyword">constexpr</span> uint                 N_VERT_COMPS = VertComps::size();</div>
 <div class="line"><a id="l00463" name="l00463"></a><span class="lineno">  463</span>        std::array&lt;bool, N_VERT_COMPS&gt; enabledComps;</div>
@@ -406,7 +406,7 @@ $(document).ready(function(){initNavTree('element__container_8h_source.html','')
 <div class="line"><a id="l00490" name="l00490"></a><span class="lineno">  490</span>        }</div>
 <div class="line"><a id="l00491" name="l00491"></a><span class="lineno">  491</span>    }</div>
 <div class="line"><a id="l00492" name="l00492"></a><span class="lineno">  492</span> </div>
-<div class="line"><a id="l00503" name="l00503"></a><span class="lineno">  503</span>    <span class="keywordtype">void</span> deserializeOptionalComponentsAndElementsNumber(std::istream&amp; in)</div>
+<div class="line"><a id="l00503" name="l00503"></a><span class="lineno">  503</span>    <span class="keywordtype">void</span> deserializeOptionalComponentsAndElementCount(std::istream&amp; in)</div>
 <div class="line"><a id="l00504" name="l00504"></a><span class="lineno">  504</span>    {</div>
 <div class="line"><a id="l00505" name="l00505"></a><span class="lineno">  505</span>        <span class="keyword">constexpr</span> uint                 N_VERT_COMPS = VertComps::size();</div>
 <div class="line"><a id="l00506" name="l00506"></a><span class="lineno">  506</span>        std::array&lt;bool, N_VERT_COMPS&gt; enabledComps;</div>
@@ -441,7 +441,7 @@ $(document).ready(function(){initNavTree('element__container_8h_source.html','')
 <div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>        <span class="keywordflow">return</span> ElementIterator(</div>
 <div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>            mElemVec.begin(),</div>
 <div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>            mElemVec,</div>
-<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>            jumpDeleted &amp;&amp; mElemVec.size() != mElemNumber);</div>
+<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>            jumpDeleted &amp;&amp; mElemVec.size() != mElemCount);</div>
 <div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>    }</div>
 <div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span> </div>
 <div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>    ElementIterator elementEnd()</div>
@@ -454,7 +454,7 @@ $(document).ready(function(){initNavTree('element__container_8h_source.html','')
 <div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span>        <span class="keywordflow">return</span> ConstElementIterator(</div>
 <div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>            mElemVec.begin(),</div>
 <div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span>            mElemVec,</div>
-<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>            jumpDeleted &amp;&amp; mElemVec.size() != mElemNumber);</div>
+<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>            jumpDeleted &amp;&amp; mElemVec.size() != mElemCount);</div>
 <div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>    }</div>
 <div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span> </div>
 <div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>    ConstElementIterator elementEnd()<span class="keyword"> const</span></div>
@@ -465,7 +465,7 @@ $(document).ready(function(){initNavTree('element__container_8h_source.html','')
 <div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>    View&lt;ElementIterator&gt; elements(<span class="keywordtype">bool</span> jumpDeleted = <span class="keyword">true</span>)</div>
 <div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>    {</div>
 <div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span>        <span class="keywordflow">return</span> View(</div>
-<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>            elementBegin(jumpDeleted &amp;&amp; mElemVec.size() != mElemNumber),</div>
+<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>            elementBegin(jumpDeleted &amp;&amp; mElemVec.size() != mElemCount),</div>
 <div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span>            elementEnd());</div>
 <div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span>    }</div>
 <div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span> </div>
@@ -481,7 +481,7 @@ $(document).ready(function(){initNavTree('element__container_8h_source.html','')
 <div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span>    View&lt;ConstElementIterator&gt; elements(<span class="keywordtype">bool</span> jumpDeleted = <span class="keyword">true</span>)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span><span class="keyword">    </span>{</div>
 <div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span>        <span class="keywordflow">return</span> View(</div>
-<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>            elementBegin(jumpDeleted &amp;&amp; mElemVec.size() != mElemNumber),</div>
+<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>            elementBegin(jumpDeleted &amp;&amp; mElemVec.size() != mElemCount),</div>
 <div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span>            elementEnd());</div>
 <div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span>    }</div>
 <div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span> </div>
@@ -561,13 +561,13 @@ $(document).ready(function(){initNavTree('element__container_8h_source.html','')
 <div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span>                    e.C::init();</div>
 <div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span>                }</div>
 <div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span>            }</div>
-<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span>            <span class="comment">// then resize the component containers with tied size to vertex</span></div>
-<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span>            <span class="comment">// number</span></div>
-<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span>            <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (comp::IsTiedToVertexNumber&lt;C&gt;) {</div>
-<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>                <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> N = T::VERTEX_NUMBER;</div>
+<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span>            <span class="comment">// then resize the component containers with tied size to number of</span></div>
+<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span>            <span class="comment">// vertices of the element, if needed</span></div>
+<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span>            <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (comp::IsTiedToVertexCount&lt;C&gt;) {</div>
+<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>                <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> N = T::VERTEX_COUNT;</div>
 <div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>                <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (N &lt; 0) {</div>
 <div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>                    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; e : elements()) {</div>
-<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>                        e.C::resize(e.vertexNumber());</div>
+<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>                        e.C::resize(e.vertexCount());</div>
 <div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span>                    }</div>
 <div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>                }</div>
 <div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span>            }</div>
@@ -754,7 +754,7 @@ $(document).ready(function(){initNavTree('element__container_8h_source.html','')
 <div class="line"><a id="l01009" name="l01009"></a><span class="lineno"> 1009</span>                ++eid;</div>
 <div class="line"><a id="l01010" name="l01010"></a><span class="lineno"> 1010</span>            }</div>
 <div class="line"><a id="l01011" name="l01011"></a><span class="lineno"> 1011</span>            <span class="comment">// set the number of elements (different from the container size)</span></div>
-<div class="line"><a id="l01012" name="l01012"></a><span class="lineno"> 1012</span>            mElemNumber = c.mElemNumber;</div>
+<div class="line"><a id="l01012" name="l01012"></a><span class="lineno"> 1012</span>            mElemCount = c.mElemCount;</div>
 <div class="line"><a id="l01013" name="l01013"></a><span class="lineno"> 1013</span>            <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (</div>
 <div class="line"><a id="l01014" name="l01014"></a><span class="lineno"> 1014</span>                comp::HasCustomComponents&lt;T&gt; &amp;&amp;</div>
 <div class="line"><a id="l01015" name="l01015"></a><span class="lineno"> 1015</span>                comp::HasCustomComponents&lt;typename Container::ElementType&gt;) {</div>
@@ -943,8 +943,7 @@ $(document).ready(function(){initNavTree('element__container_8h_source.html','')
 <div class="line"><a id="l01215" name="l01215"></a><span class="lineno"> 1215</span>} <span class="comment">// namespace vcl::mesh</span></div>
 <div class="line"><a id="l01216" name="l01216"></a><span class="lineno"> 1216</span> </div>
 <div class="line"><a id="l01217" name="l01217"></a><span class="lineno"> 1217</span><span class="preprocessor">#endif </span><span class="comment">// VCL_MESH_CONTAINERS_BASE_ELEMENT_CONTAINER_H</span></div>
-<div class="ttc" id="aclassvcl_1_1Box_html_ad4dd21aaa7669f0ccbba075764c77664"><div class="ttname"><a href="classvcl_1_1Box.html#ad4dd21aaa7669f0ccbba075764c77664">vcl::Box::size</a></div><div class="ttdeci">PointT size() const</div><div class="ttdoc">Computes the size of the box.</div><div class="ttdef"><b>Definition</b> box.h:267</div></div>
-<div class="ttc" id="agroup__base_html_ga9ad8104cd9ccfa9352d33bc7e6ba47e6"><div class="ttname"><a href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">vcl::UINT_NULL</a></div><div class="ttdeci">constexpr uint UINT_NULL</div><div class="ttdoc">The UINT_NULL value represent a null value of uint that is the maximum value that can be represented ...</div><div class="ttdef"><b>Definition</b> base.h:48</div></div>
+<div class="ttc" id="agroup__base_html_ga9ad8104cd9ccfa9352d33bc7e6ba47e6"><div class="ttname"><a href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">vcl::UINT_NULL</a></div><div class="ttdeci">constexpr uint UINT_NULL</div><div class="ttdoc">The UINT_NULL value represent a null value of uint that is the maximum value that can be represented ...</div><div class="ttdef"><b>Definition</b> base.h:49</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

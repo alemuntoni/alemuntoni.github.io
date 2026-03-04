@@ -26,7 +26,7 @@ var classvcl_1_1MeshRenderData =
     [ "setEdgeIndicesBuffer", "classvcl_1_1MeshRenderData.html#a1e5d7a0ef6d5bd9555f3cabb9461e995", null ],
     [ "setEdgeNormalsBuffer", "classvcl_1_1MeshRenderData.html#a283a9bd7cf83149f046f36b6040d08ce", null ],
     [ "setFaceMaterialIndicesBuffer", "classvcl_1_1MeshRenderData.html#afba7b91b46b2f3dfefae253ad3d72f09", null ],
-    [ "setMeshUniforms", "classvcl_1_1MeshRenderData.html#aef0e2b438a12ecec4584154f86e7cd42", null ],
+    [ "setMeshAdditionalData", "classvcl_1_1MeshRenderData.html#ae64c38e4527bea6782d68e525708e57d", null ],
     [ "setTextures", "classvcl_1_1MeshRenderData.html#a3090e2ece19ae9b0538976265a38da7d", null ],
     [ "setTriangleColorsBuffer", "classvcl_1_1MeshRenderData.html#abc79ab9db3a7a3e1dc687d2b7c30d107", null ],
     [ "setTriangleIndicesBuffer", "classvcl_1_1MeshRenderData.html#a1986b114d33d0dbbdbd5320bc57adca7", null ],
@@ -39,5 +39,7 @@ var classvcl_1_1MeshRenderData =
     [ "setVertexTexCoordsBuffer", "classvcl_1_1MeshRenderData.html#a983d97ed4534c6a81383ca828d8c92a9", null ],
     [ "setWedgeTexCoordsBuffer", "classvcl_1_1MeshRenderData.html#af108c2784d786a37bb4485c0f4557595", null ],
     [ "setWireframeIndicesBuffer", "classvcl_1_1MeshRenderData.html#ad9a346a363ded46832c192f7075c289f", null ],
+    [ "triangleChunk", "classvcl_1_1MeshRenderData.html#ad4e7f75d44208e3f5391ec05be5e1f58", null ],
+    [ "triangleChunksNumber", "classvcl_1_1MeshRenderData.html#a1d294e961e4087e2e879ab219abbcad4", null ],
     [ "update", "classvcl_1_1MeshRenderData.html#a9ec603e5ddc4ecb7f8fca08a683311a1", null ]
 ];

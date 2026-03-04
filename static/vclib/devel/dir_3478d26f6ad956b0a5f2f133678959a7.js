@@ -11,6 +11,7 @@ var dir_3478d26f6ad956b0a5f2f133678959a7 =
     [ "fibonacci.h", "fibonacci_8h_source.html", null ],
     [ "fitting.h", "fitting_8h_source.html", null ],
     [ "intersection.h", "algorithms_2core_2intersection_8h_source.html", null ],
+    [ "matrix_camera.h", "matrix__camera_8h_source.html", null ],
     [ "perlin_noise.h", "perlin__noise_8h_source.html", null ],
     [ "polygon.h", "algorithms_2core_2polygon_8h_source.html", null ],
     [ "random.h", "algorithms_2core_2random_8h_source.html", null ],

@@ -117,7 +117,7 @@ $(document).ready(function(){initNavTree('container__component_8h_source.html','
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2025                                                    *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2026                                                    *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
@@ -179,7 +179,7 @@ $(document).ready(function(){initNavTree('container__component_8h_source.html','
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keyword">typename</span> ParentElemType,   <span class="comment">// parent element type</span></div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordtype">bool</span> VERT,                 <span class="comment">// true if component vertical</span></div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordtype">bool</span> OPT,                  <span class="comment">// true if component vertical and optional</span></div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keywordtype">bool</span> TTVN,                 <span class="comment">// true if container size tied to vertex number</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keywordtype">bool</span> TTVC,                 <span class="comment">// true if container size tied to vertex count</span></div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keyword">typename</span>... PointedTypes&gt;  <span class="comment">// types of pointers stored by the component</span></div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="keyword">class </span>ContainerComponent :</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <span class="keyword">public</span> detail::ContCompBase&lt;</div>
@@ -191,7 +191,7 @@ $(document).ready(function(){initNavTree('container__component_8h_source.html','
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            ParentElemType,</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            VERT,</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            OPT,</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            TTVN,</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            TTVC,</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            PointedTypes...&gt;</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>{</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> HAS_ADDITIONAL_DATA =</div>
@@ -206,11 +206,11 @@ $(document).ready(function(){initNavTree('container__component_8h_source.html','
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        ParentElemType,</div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        VERT,</div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        OPT,</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        TTVN,</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        TTVC,</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        PointedTypes...&gt;;</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> TIED_TO_VERTEX_NUMBER = TTVN;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> TIED_TO_VERTEX_COUNT = TTVC;</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> SIZE = N;</div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>

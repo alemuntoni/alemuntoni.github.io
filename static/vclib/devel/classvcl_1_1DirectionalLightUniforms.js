@@ -1,4 +1,4 @@
 var classvcl_1_1DirectionalLightUniforms =
 [
-    [ "updateLight", "classvcl_1_1DirectionalLightUniforms.html#a67b8bb1567c99e5d8f5f4bfcf7fed9ad", null ]
+    [ "setLight", "classvcl_1_1DirectionalLightUniforms.html#ada079133b11ca282c1e0ccce673a522b", null ]
 ];

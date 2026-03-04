@@ -334,7 +334,12 @@ var hierarchy =
       ] ]
     ] ],
     [ "vcl::ComputeLoader< PROGRAM >", "structvcl_1_1ComputeLoader.html", null ],
+    [ "vcl::ComputeLoader< ComputeProgram::CUBEMAP_MIPMAP_GEN >", "structvcl_1_1ComputeLoader_3_01ComputeProgram_1_1CUBEMAP__MIPMAP__GEN_01_4.html", null ],
+    [ "vcl::ComputeLoader< ComputeProgram::CUBEMAP_TO_IRRADIANCE >", "structvcl_1_1ComputeLoader_3_01ComputeProgram_1_1CUBEMAP__TO__IRRADIANCE_01_4.html", null ],
+    [ "vcl::ComputeLoader< ComputeProgram::CUBEMAP_TO_SPECULAR >", "structvcl_1_1ComputeLoader_3_01ComputeProgram_1_1CUBEMAP__TO__SPECULAR_01_4.html", null ],
     [ "vcl::ComputeLoader< ComputeProgram::DRAWABLE_MESH_POINTS >", "structvcl_1_1ComputeLoader_3_01ComputeProgram_1_1DRAWABLE__MESH__POINTS_01_4.html", null ],
+    [ "vcl::ComputeLoader< ComputeProgram::HDR_EQUIRECT_TO_CUBEMAP >", "structvcl_1_1ComputeLoader_3_01ComputeProgram_1_1HDR__EQUIRECT__TO__CUBEMAP_01_4.html", null ],
+    [ "vcl::ComputeLoader< ComputeProgram::IBL_LOOKUP_TEXTURE_GEN >", "structvcl_1_1ComputeLoader_3_01ComputeProgram_1_1IBL__LOOKUP__TEXTURE__GEN_01_4.html", null ],
     [ "std::vector< T >::const_iterator", null, [
       [ "vcl::CustomComponentVectorHandle< T >::ConstIterator", "classvcl_1_1CustomComponentVectorHandle_1_1ConstIterator.html", null ]
     ] ],
@@ -396,6 +401,8 @@ var hierarchy =
     [ "vcl::Distribution< Scalar >", "classvcl_1_1Distribution.html", null ],
     [ "vcl::DrawableAxisUniforms", "classvcl_1_1DrawableAxisUniforms.html", null ],
     [ "vcl::DrawableDirectionalLightUniforms", "classvcl_1_1DrawableDirectionalLightUniforms.html", null ],
+    [ "vcl::DrawableEnvironment", "classvcl_1_1DrawableEnvironment.html", null ],
+    [ "vcl::DrawableEnvironmentUniforms", "classvcl_1_1DrawableEnvironmentUniforms.html", null ],
     [ "vcl::DrawableMeshUniforms", "classvcl_1_1DrawableMeshUniforms.html", null ],
     [ "vcl::DrawableObject", "classvcl_1_1DrawableObject.html", [
       [ "vcl::AbstractDrawableMesh", "classvcl_1_1AbstractDrawableMesh.html", [
@@ -547,6 +554,7 @@ var hierarchy =
     [ "vcl::KDTree< PointType >", "classvcl_1_1KDTree.html", null ],
     [ "vcl::Key", "structvcl_1_1Key.html", null ],
     [ "vcl::KeyModifier", "structvcl_1_1KeyModifier.html", null ],
+    [ "vcl::Line< PointT >", "classvcl_1_1Line.html", null ],
     [ "vcl::Lines", "classvcl_1_1Lines.html", [
       [ "vcl::DrawableLines", "classvcl_1_1DrawableLines.html", null ]
     ] ],
@@ -632,6 +640,7 @@ var hierarchy =
     [ "vcl::comp::ParentMeshPointer< TMPSimpleTriMesh >", "classvcl_1_1comp_1_1ParentMeshPointer.html", null ],
     [ "vcl::comp::ParentMeshPointer< TriEdgeMeshT< Scalar, I > >", "classvcl_1_1comp_1_1ParentMeshPointer.html", null ],
     [ "vcl::comp::ParentMeshPointer< TriMeshT< Scalar, I > >", "classvcl_1_1comp_1_1ParentMeshPointer.html", null ],
+    [ "vcl::PBRViewerSettings", "structvcl_1_1PBRViewerSettings.html", null ],
     [ "vcl::PlainDrawer< DerivedRenderApp >", "classvcl_1_1PlainDrawer.html", [
       [ "vcl::BlockerEventDrawer< DerivedRenderApp >", "classvcl_1_1BlockerEventDrawer.html", [
         [ "vcl::imgui::ImGuiDrawer< DerivedRenderApp >", "classvcl_1_1imgui_1_1ImGuiDrawer.html", null ]
@@ -666,7 +675,8 @@ var hierarchy =
         [ "vcl::qt::WireframeFrame", "classvcl_1_1qt_1_1WireframeFrame.html", null ]
       ] ],
       [ "vcl::qt::MeshRenderSettingsFrame", "classvcl_1_1qt_1_1MeshRenderSettingsFrame.html", null ],
-      [ "vcl::qt::TextEditLogger", "classvcl_1_1qt_1_1TextEditLogger.html", null ]
+      [ "vcl::qt::TextEditLogger", "classvcl_1_1qt_1_1TextEditLogger.html", null ],
+      [ "vcl::qt::ViewerRenderSettingsFrame", "classvcl_1_1qt_1_1ViewerRenderSettingsFrame.html", null ]
     ] ],
     [ "QIODevice", null, [
       [ "vcl::qt::DebugIODevice", "classvcl_1_1qt_1_1DebugIODevice.html", null ],
@@ -694,9 +704,10 @@ var hierarchy =
     [ "QWindow", null, [
       [ "vcl::qt::WindowManager< DerivedRenderApp >", "classvcl_1_1qt_1_1WindowManager.html", null ]
     ] ],
+    [ "vcl::Ray< PointT >", "classvcl_1_1Ray.html", null ],
     [ "vcl::ReadBufferTypes", "structvcl_1_1ReadBufferTypes.html", null ],
     [ "ReferenceContainerComponent", null, [
-      [ "vcl::comp::AdjacentEdges< STORE_INDICES, Edge, N, TTVN, ParentElemType, VERT, OPT >", "classvcl_1_1comp_1_1AdjacentEdges.html", [
+      [ "vcl::comp::AdjacentEdges< STORE_INDICES, Edge, N, TTVC, ParentElemType, VERT, OPT >", "classvcl_1_1comp_1_1AdjacentEdges.html", [
         [ "vcl::edgemesh::Edge< Scalar, I >", "classvcl_1_1edgemesh_1_1Edge.html", null ],
         [ "vcl::edgemesh::Vertex< Scalar, I >", "classvcl_1_1edgemesh_1_1Vertex.html", null ],
         [ "vcl::polyedgemesh::Edge< Scalar, I >", "classvcl_1_1polyedgemesh_1_1Edge.html", null ],
@@ -706,7 +717,7 @@ var hierarchy =
         [ "vcl::triedgemesh::Face< Scalar, I >", "classvcl_1_1triedgemesh_1_1Face.html", null ],
         [ "vcl::triedgemesh::Vertex< Scalar, I >", "classvcl_1_1triedgemesh_1_1Vertex.html", null ]
       ] ],
-      [ "vcl::comp::AdjacentFaces< STORE_INDICES, Face, N, TTVN, ParentElemType, VERT, OPT >", "classvcl_1_1comp_1_1AdjacentFaces.html", [
+      [ "vcl::comp::AdjacentFaces< STORE_INDICES, Face, N, TTVC, ParentElemType, VERT, OPT >", "classvcl_1_1comp_1_1AdjacentFaces.html", [
         [ "vcl::polyedgemesh::Edge< Scalar, I >", "classvcl_1_1polyedgemesh_1_1Edge.html", null ],
         [ "vcl::polyedgemesh::Face< Scalar, I >", "classvcl_1_1polyedgemesh_1_1Face.html", null ],
         [ "vcl::polyedgemesh::Vertex< Scalar, I >", "classvcl_1_1polyedgemesh_1_1Vertex.html", null ],
@@ -742,6 +753,7 @@ var hierarchy =
     ] ],
     [ "vcl::RegularGrid< Scalar, N >", "classvcl_1_1RegularGrid.html", null ],
     [ "vcl::SaveSettings", "structvcl_1_1SaveSettings.html", null ],
+    [ "vcl::embree::Scene", "classvcl_1_1embree_1_1Scene.html", null ],
     [ "vcl::SecondRefPair< T1, T2 >", "classvcl_1_1SecondRefPair.html", [
       [ "vcl::KeyValueRefPair< T1, T2 >", "classvcl_1_1KeyValueRefPair.html", null ]
     ] ],
@@ -793,6 +805,7 @@ var hierarchy =
     [ "vcl::VertFragLoader< VertFragProgram::CUSTOM_CPU_LINES >", "structvcl_1_1VertFragLoader_3_01VertFragProgram_1_1CUSTOM__CPU__LINES_01_4.html", null ],
     [ "vcl::VertFragLoader< VertFragProgram::DRAWABLE_AXIS >", "structvcl_1_1VertFragLoader_3_01VertFragProgram_1_1DRAWABLE__AXIS_01_4.html", null ],
     [ "vcl::VertFragLoader< VertFragProgram::DRAWABLE_DIRECTIONAL_LIGHT >", "structvcl_1_1VertFragLoader_3_01VertFragProgram_1_1DRAWABLE__DIRECTIONAL__LIGHT_01_4.html", null ],
+    [ "vcl::VertFragLoader< VertFragProgram::DRAWABLE_ENVIRONMENT_PBR >", "structvcl_1_1VertFragLoader_3_01VertFragProgram_1_1DRAWABLE__ENVIRONMENT__PBR_01_4.html", null ],
     [ "vcl::VertFragLoader< VertFragProgram::DRAWABLE_MESH_EDGES >", "structvcl_1_1VertFragLoader_3_01VertFragProgram_1_1DRAWABLE__MESH__EDGES_01_4.html", null ],
     [ "vcl::VertFragLoader< VertFragProgram::DRAWABLE_MESH_EDGES_ID >", "structvcl_1_1VertFragLoader_3_01VertFragProgram_1_1DRAWABLE__MESH__EDGES__ID_01_4.html", null ],
     [ "vcl::VertFragLoader< VertFragProgram::DRAWABLE_MESH_POINTS >", "structvcl_1_1VertFragLoader_3_01VertFragProgram_1_1DRAWABLE__MESH__POINTS_01_4.html", null ],
@@ -853,6 +866,7 @@ var hierarchy =
     [ "std::ranges::view_interface", null, [
       [ "vcl::View< It >", "classvcl_1_1View.html", null ]
     ] ],
+    [ "vcl::ViewerDrawerUniforms", "classvcl_1_1ViewerDrawerUniforms.html", null ],
     [ "ViewProjEventDrawer", null, [
       [ "vcl::AbstractViewerDrawer< ViewProjEventDrawer >", "classvcl_1_1AbstractViewerDrawer.html", [
         [ "vcl::ViewerDrawerBGFX< TrackBallEventDrawer< DerivedRenderApp > >", "classvcl_1_1ViewerDrawerBGFX.html", [

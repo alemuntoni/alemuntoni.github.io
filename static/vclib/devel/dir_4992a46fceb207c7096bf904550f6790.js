@@ -6,6 +6,7 @@ var dir_4992a46fceb207c7096bf904550f6790 =
     [ "drawers", "dir_9527285608fcf6c3ac0b37e32b06e09e.html", "dir_9527285608fcf6c3ac0b37e32b06e09e" ],
     [ "primitives", "dir_08022ed9f42592e32a51668bd8b910ac.html", "dir_08022ed9f42592e32a51668bd8b910ac" ],
     [ "programs", "dir_02193dfb0a4fc2495f6158d1567c63df.html", "dir_02193dfb0a4fc2495f6158d1567c63df" ],
+    [ "settings", "dir_59c4955fd27d589b1586c122708972b5.html", "dir_59c4955fd27d589b1586c122708972b5" ],
     [ "system", "dir_b71b25cb72d7b80d96910f2dfd601c3a.html", "dir_b71b25cb72d7b80d96910f2dfd601c3a" ],
     [ "text", "dir_d298764313ddb75a5ec80454c7069efc.html", "dir_d298764313ddb75a5ec80454c7069efc" ],
     [ "buffers.h", "buffers_8h_source.html", null ],

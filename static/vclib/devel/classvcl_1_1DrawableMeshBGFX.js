@@ -8,5 +8,5 @@ var classvcl_1_1DrawableMeshBGFX =
     [ "init", "classvcl_1_1DrawableMeshBGFX.html#aeeeac785e1052481ff21439dd04bfaad", null ],
     [ "name", "classvcl_1_1DrawableMeshBGFX.html#a5543158a54a41d8e01d4fc18fee4cf24", null ],
     [ "name", "classvcl_1_1DrawableMeshBGFX.html#a7b043c2aa079a252cbdbb1f4b20c7d0d", null ],
-    [ "setVisibility", "classvcl_1_1DrawableMeshBGFX.html#ace4be6e53735eefec383dc5026a55dd7", null ]
+    [ "updateAndBindMaterialUniforms", "classvcl_1_1DrawableMeshBGFX.html#a35fe32f86ecbddd1248f3db6e0aba61b", null ]
 ];

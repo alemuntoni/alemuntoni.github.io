@@ -9,8 +9,13 @@ var group__space__core =
     [ "vcl::BoxConcept", "conceptvcl_1_1BoxConcept.html", null ],
     [ "vcl::Box2Concept", "conceptvcl_1_1Box2Concept.html", null ],
     [ "vcl::Box3Concept", "conceptvcl_1_1Box3Concept.html", null ],
+    [ "vcl::GenericCameraConcept", "conceptvcl_1_1GenericCameraConcept.html", null ],
+    [ "vcl::CameraConcept", "conceptvcl_1_1CameraConcept.html", null ],
     [ "vcl::ColorConcept", "conceptvcl_1_1ColorConcept.html", null ],
     [ "vcl::ImageConcept", "conceptvcl_1_1ImageConcept.html", null ],
+    [ "vcl::LineConcept", "conceptvcl_1_1LineConcept.html", null ],
+    [ "vcl::Line2Concept", "conceptvcl_1_1Line2Concept.html", null ],
+    [ "vcl::Line3Concept", "conceptvcl_1_1Line3Concept.html", null ],
     [ "vcl::MaterialConcept", "conceptvcl_1_1MaterialConcept.html", null ],
     [ "vcl::MatrixConcept", "conceptvcl_1_1MatrixConcept.html", null ],
     [ "vcl::Matrix33Concept", "conceptvcl_1_1Matrix33Concept.html", null ],
@@ -30,6 +35,9 @@ var group__space__core =
     [ "vcl::Polygon2Concept", "conceptvcl_1_1Polygon2Concept.html", null ],
     [ "vcl::Polygon3Concept", "conceptvcl_1_1Polygon3Concept.html", null ],
     [ "vcl::PrincipalCurvatureConcept", "conceptvcl_1_1PrincipalCurvatureConcept.html", null ],
+    [ "vcl::RayConcept", "conceptvcl_1_1RayConcept.html", null ],
+    [ "vcl::Ray2Concept", "conceptvcl_1_1Ray2Concept.html", null ],
+    [ "vcl::Ray3Concept", "conceptvcl_1_1Ray3Concept.html", null ],
     [ "vcl::SegmentConcept", "conceptvcl_1_1SegmentConcept.html", null ],
     [ "vcl::Segment2Concept", "conceptvcl_1_1Segment2Concept.html", null ],
     [ "vcl::Segment3Concept", "conceptvcl_1_1Segment3Concept.html", null ],
@@ -152,6 +160,19 @@ var group__space__core =
       [ "volume", "classvcl_1_1Box.html#ac507f07f90b7cb00c5bf16501357e416", null ],
       [ "DIM", "classvcl_1_1Box.html#a802e45f912807f1b7ae1ac8cf916726f", null ]
     ] ],
+    [ "vcl::Camera< Scalar >", "classvcl_1_1Camera.html", [
+      [ "deserialize", "classvcl_1_1Camera.html#a30f4f8681fc715c13be1a2a10731898a", null ],
+      [ "serialize", "classvcl_1_1Camera.html#a171df57c47172301807aaf2ba1d24239", null ],
+      [ "mAspect", "classvcl_1_1Camera.html#ab9f43d6ff614734ef72c5657059578c6", null ],
+      [ "mCenter", "classvcl_1_1Camera.html#a2edb13b2b6aae4650d7d73e4b0b921f4", null ],
+      [ "mEye", "classvcl_1_1Camera.html#aeffdf7123827526791be547eabf812f4", null ],
+      [ "mFar", "classvcl_1_1Camera.html#a3d212d9ad54be6517e409c11a68d58aa", null ],
+      [ "mFovDeg", "classvcl_1_1Camera.html#a167ec39c1852c5c57c7f11235617c730", null ],
+      [ "mNear", "classvcl_1_1Camera.html#a07a52a894a330e511eecac4d6d92b3c5", null ],
+      [ "mProjectionMode", "classvcl_1_1Camera.html#a1891131cf50669db41c6d517d966969e", null ],
+      [ "mUp", "classvcl_1_1Camera.html#ab9aa29148205335d94e5f3d4190dcc2a", null ],
+      [ "mVerticalHeight", "classvcl_1_1Camera.html#a0df34dc24035e58b1657e23d90a07f23", null ]
+    ] ],
     [ "vcl::Color", "classvcl_1_1Color.html", [
       [ "ColorABGR", "classvcl_1_1Color.html#a002e401382a7608e0c68f42c089057bc", [
         [ "Black", "classvcl_1_1Color.html#a002e401382a7608e0c68f42c089057bca5777c5f96e2970090b99598c215292f7", null ],
@@ -255,20 +276,20 @@ var group__space__core =
       [ "Histogram", "classvcl_1_1Histogram.html#ac454f39e64714c1070009716387377cc", null ],
       [ "addValue", "classvcl_1_1Histogram.html#ab9b372c1e43a8d02f30ad15bfc35e489", null ],
       [ "average", "classvcl_1_1Histogram.html#adb0d96b179e6d7371fcc02e63b2032b1", null ],
+      [ "binCount", "classvcl_1_1Histogram.html#a775174331390a32cef538d4b6a64dd65", null ],
       [ "binIndex", "classvcl_1_1Histogram.html#ae3f80f9f5c56dbd7add2a9cb94670af9", null ],
-      [ "binsNumber", "classvcl_1_1Histogram.html#a90f7ca7c51043bc0a80cdde00b2bd707", null ],
+      [ "binValuesCountInRangeMax", "classvcl_1_1Histogram.html#a5169a38335102b4c30bf025bbb55ee0e", null ],
+      [ "binValuesCountMax", "classvcl_1_1Histogram.html#a3b67b336334f168027dfd185f15a8167", null ],
       [ "clear", "classvcl_1_1Histogram.html#ac8d69a9192707f187e705dff3ab44ef6", null ],
-      [ "maxBinCount", "classvcl_1_1Histogram.html#aa949fc2ba3c1b0209714f37116f93e53", null ],
-      [ "maxBinCountInRange", "classvcl_1_1Histogram.html#a7ee1b929dabec08e285763f01044b780", null ],
-      [ "maxRangeValue", "classvcl_1_1Histogram.html#aa80dc00f1bd081cb0b9c241a18ff6a63", null ],
-      [ "maxValue", "classvcl_1_1Histogram.html#aeffcc3f9334f767cec3664692968ffdb", null ],
-      [ "minRangeValue", "classvcl_1_1Histogram.html#a6ef7af0f32247a8601cafa7757a3cde0", null ],
-      [ "minValue", "classvcl_1_1Histogram.html#ac3caf0e589cb8d0df4169015b2011435", null ],
-      [ "numberValues", "classvcl_1_1Histogram.html#a29833e431177f553ee94fdebcf63d303", null ],
+      [ "rangeValueMax", "classvcl_1_1Histogram.html#a913c13940b1acdb8a44e944b6c47f5b2", null ],
+      [ "rangeValueMin", "classvcl_1_1Histogram.html#a09b96b0c86a19a913e6a23046e812618", null ],
       [ "rootMeanSquare", "classvcl_1_1Histogram.html#a521e2f6333c4f5612753be6ea41d1113", null ],
       [ "standardDeviation", "classvcl_1_1Histogram.html#ad0c8b335f1f0964123f94364fa5ffa59", null ],
-      [ "sumValues", "classvcl_1_1Histogram.html#a2a1be82defe67055c7b47956d292ad5e", null ],
       [ "valueAtPercentile", "classvcl_1_1Histogram.html#a8935260484107ea79aa89d84b8f220a5", null ],
+      [ "valueCount", "classvcl_1_1Histogram.html#ae8f7e83c3841cac4dbacb689d1bcbfeb", null ],
+      [ "valueMax", "classvcl_1_1Histogram.html#a9a73c3b347e17fa3816cd8535237c0fb", null ],
+      [ "valueMin", "classvcl_1_1Histogram.html#ab2788685c945e2d79bc66509d13dc1aa", null ],
+      [ "valueSum", "classvcl_1_1Histogram.html#ac46b0d36dd62a6434731c82ca25f2ce3", null ],
       [ "variance", "classvcl_1_1Histogram.html#a8e24ef4b580832f725aff9be1f0f6a31", null ]
     ] ],
     [ "vcl::Image", "classvcl_1_1Image.html", [
@@ -287,6 +308,19 @@ var group__space__core =
       [ "serialize", "classvcl_1_1Image.html#a04869fe6bb360cd353a4d66001516f63", null ],
       [ "sizeInBytes", "classvcl_1_1Image.html#a6374d848694091bc269da07ccda4a481", null ],
       [ "width", "classvcl_1_1Image.html#a2860e94a84747c9a74bccf6413deacd2", null ]
+    ] ],
+    [ "vcl::Line< PointT >", "classvcl_1_1Line.html", [
+      [ "PointType", "classvcl_1_1Line.html#a7c05dd4bad05ea2d1c7371a5ff8c8024", null ],
+      [ "ScalarType", "classvcl_1_1Line.html#a5f106bf17fc301a60b51675cd14eb71f", null ],
+      [ "Line", "classvcl_1_1Line.html#af896a0f2b492187e25de9b074a77d32c", null ],
+      [ "Line", "classvcl_1_1Line.html#a9eaa509986ecb3a0b4464e0440f70904", null ],
+      [ "direction", "classvcl_1_1Line.html#ae23dd96751027f157e2106f7b6e3e659", null ],
+      [ "direction", "classvcl_1_1Line.html#aa98e27c3b72fc0bc0f0d9053a9a1dcd5", null ],
+      [ "normalizedDirection", "classvcl_1_1Line.html#a6729bb4375c4c56b98b9fe9ed5511625", null ],
+      [ "origin", "classvcl_1_1Line.html#a9565bafebccfba4608dfd1bd0abd1137", null ],
+      [ "origin", "classvcl_1_1Line.html#a70ab05f2b9ba83f33eb0f873e5ada76d", null ],
+      [ "pointAtParameter", "classvcl_1_1Line.html#a83932008488513ae974c817cb84e2b2d", null ],
+      [ "DIM", "classvcl_1_1Line.html#a10e2751da40175a34bd205d703af613f", null ]
     ] ],
     [ "vcl::Material", "classvcl_1_1Material.html", [
       [ "AlphaMode", "classvcl_1_1Material.html#a8e48508274998d89e7ae12cdfb63d363", [
@@ -554,6 +588,17 @@ var group__space__core =
       [ "cast", "classvcl_1_1Quaternion.html#aa25e0814a247873945799b47da31825b", null ],
       [ "hash", "classvcl_1_1Quaternion.html#acb4c1850814e06cbe19ef98fcc284125", null ],
       [ "operator*", "classvcl_1_1Quaternion.html#ac52c76f7720c70a9d950144daaf54497", null ]
+    ] ],
+    [ "vcl::Ray< PointT >", "classvcl_1_1Ray.html", [
+      [ "PointType", "classvcl_1_1Ray.html#a8b9fee39e0e4d95fd4afed2b13f5486f", null ],
+      [ "ScalarType", "classvcl_1_1Ray.html#a4eac5edf036340c2d453f43adcbcdda2", null ],
+      [ "Ray", "classvcl_1_1Ray.html#afc4a9e69fffc02977e569831d982891b", null ],
+      [ "Ray", "classvcl_1_1Ray.html#a8ad412a93189a90882d6c879b05369d8", null ],
+      [ "direction", "classvcl_1_1Ray.html#ad851a2aa4497c0314d16d989ad1a9460", null ],
+      [ "direction", "classvcl_1_1Ray.html#a7f3aad6e7398d070276383002e0c6b64", null ],
+      [ "origin", "classvcl_1_1Ray.html#aab698254670061ac0145362bca9d98c0", null ],
+      [ "origin", "classvcl_1_1Ray.html#aa08c3a67efe4d11fa79d4b3c36f10775", null ],
+      [ "DIM", "classvcl_1_1Ray.html#a9c14272a4ea2aa86a3d64b4d461cb4b6", null ]
     ] ],
     [ "vcl::Segment< PointT >", "classvcl_1_1Segment.html", [
       [ "PointType", "classvcl_1_1Segment.html#af7c90b5d83194dd331a9b33cdeb314e5", null ],

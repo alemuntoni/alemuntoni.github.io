@@ -1,5 +1,7 @@
 var classvcl_1_1Camera =
 [
+    [ "deserialize", "classvcl_1_1Camera.html#a30f4f8681fc715c13be1a2a10731898a", null ],
+    [ "serialize", "classvcl_1_1Camera.html#a171df57c47172301807aaf2ba1d24239", null ],
     [ "mAspect", "classvcl_1_1Camera.html#ab9f43d6ff614734ef72c5657059578c6", null ],
     [ "mCenter", "classvcl_1_1Camera.html#a2edb13b2b6aae4650d7d73e4b0b921f4", null ],
     [ "mEye", "classvcl_1_1Camera.html#aeffdf7123827526791be547eabf812f4", null ],

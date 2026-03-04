@@ -11,11 +11,11 @@ var classvcl_1_1comp_1_1Materials =
     [ "material", "classvcl_1_1comp_1_1Materials.html#a67bc9aa65ab5cde85569dce85344ee18", null ],
     [ "materialBegin", "classvcl_1_1comp_1_1Materials.html#a654789d2901a3a62390cb66109d83e67", null ],
     [ "materialBegin", "classvcl_1_1comp_1_1Materials.html#aa23f6c0d4b0498f9056d47af24ed6c17", null ],
+    [ "materialCount", "classvcl_1_1comp_1_1Materials.html#a20225e85480336a30abcc319a8b8bba3", null ],
     [ "materialEnd", "classvcl_1_1comp_1_1Materials.html#afa2748242f7660abcbf8657169df60bc", null ],
     [ "materialEnd", "classvcl_1_1comp_1_1Materials.html#a47da62873365ef1321fe51f563dd5510", null ],
     [ "materials", "classvcl_1_1comp_1_1Materials.html#ac7948e196ca381f9a2a654cbe49dbd48", null ],
     [ "materials", "classvcl_1_1comp_1_1Materials.html#a0abfd3739904c6c1b14783b75bbe6c34", null ],
-    [ "materialsNumber", "classvcl_1_1comp_1_1Materials.html#af29708b7a4592deabbd6ddcaf8f5ab2c", null ],
     [ "meshBasePath", "classvcl_1_1comp_1_1Materials.html#a4943a918cfb9d6511e110068ff649c58", null ],
     [ "meshBasePath", "classvcl_1_1comp_1_1Materials.html#aa32d824eec7e557ee32348d008345a4a", null ],
     [ "pushMaterial", "classvcl_1_1comp_1_1Materials.html#afbdfea6332c63d0e4fc1c6f62d73c1ef", null ],
@@ -24,9 +24,9 @@ var classvcl_1_1comp_1_1Materials =
     [ "textureImage", "classvcl_1_1comp_1_1Materials.html#abd786cc58b0af6cbb14146b527f46c9a", null ],
     [ "textureImageBegin", "classvcl_1_1comp_1_1Materials.html#ac5720a59e7e1744fd5366fb060fd028c", null ],
     [ "textureImageBegin", "classvcl_1_1comp_1_1Materials.html#aff24c5e0d2ed936cb401abf42d949331", null ],
+    [ "textureImageCount", "classvcl_1_1comp_1_1Materials.html#a56fce82a9ca42c351783f6c7fc27c6b9", null ],
     [ "textureImageEnd", "classvcl_1_1comp_1_1Materials.html#aec0e9ae71be82fcc60ac3cbade2d3032", null ],
     [ "textureImageEnd", "classvcl_1_1comp_1_1Materials.html#abf1bdd1fdd4cffb284567a2b58b0f44a", null ],
     [ "textureImages", "classvcl_1_1comp_1_1Materials.html#ab8c11a0f8a5e4f82ae75e06b8affa79e", null ],
-    [ "textureImages", "classvcl_1_1comp_1_1Materials.html#a18fc5526906006da2833009b78fbe9d7", null ],
-    [ "textureImagesNumber", "classvcl_1_1comp_1_1Materials.html#a6a3a8a2b939a10efd04cb3806342e5a9", null ]
+    [ "textureImages", "classvcl_1_1comp_1_1Materials.html#a18fc5526906006da2833009b78fbe9d7", null ]
 ];
