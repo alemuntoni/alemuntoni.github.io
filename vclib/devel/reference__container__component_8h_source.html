@@ -117,7 +117,7 @@ $(document).ready(function(){initNavTree('reference__container__component_8h_sou
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2025                                                    *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2026                                                    *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
@@ -153,7 +153,7 @@ $(document).ready(function(){initNavTree('reference__container__component_8h_sou
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">typename</span> ParentElemType,   <span class="comment">// parent element type</span></div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordtype">bool</span> VERT,                 <span class="comment">// true if component vertical</span></div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">bool</span> OPT,                  <span class="comment">// true if component vertical and optional</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordtype">bool</span> TTVN&gt;                 <span class="comment">// true if container size tied to vertex number</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordtype">bool</span> TTVC&gt;                 <span class="comment">// true if container size tied to vertex count</span></div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="keyword">class </span>ReferenceContainerComponent :</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keyword">public</span> std::conditional_t&lt;</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            STORE_INDICES,</div>
@@ -165,7 +165,7 @@ $(document).ready(function(){initNavTree('reference__container__component_8h_sou
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                ParentElemType,</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                VERT,</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                OPT,</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                TTVN&gt;,</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                TTVC&gt;,</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            PointerContainerComponent&lt;</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                DerivedComponent,</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                COMP_ID,</div>
@@ -174,7 +174,7 @@ $(document).ready(function(){initNavTree('reference__container__component_8h_sou
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                ParentElemType,</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                VERT,</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                OPT,</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                TTVN&gt;&gt;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                TTVC&gt;&gt;</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>{</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="keyword">protected</span>:</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keyword">using </span>Base = std::conditional_t&lt;</div>
@@ -187,7 +187,7 @@ $(document).ready(function(){initNavTree('reference__container__component_8h_sou
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            ParentElemType,</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            VERT,</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            OPT,</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            TTVN&gt;,</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            TTVC&gt;,</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        PointerContainerComponent&lt;</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            DerivedComponent,</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            COMP_ID,</div>
@@ -196,9 +196,9 @@ $(document).ready(function(){initNavTree('reference__container__component_8h_sou
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            ParentElemType,</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            VERT,</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            OPT,</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            TTVN&gt;&gt;;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            TTVC&gt;&gt;;</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    uint size()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> Base::container().<a class="code hl_function" href="classvcl_1_1Box.html#ad4dd21aaa7669f0ccbba075764c77664">size</a>(); }</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    uint size()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> Base::container().size(); }</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    Elem* element(uint i)</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    {</div>
@@ -508,8 +508,7 @@ $(document).ready(function(){initNavTree('reference__container__component_8h_sou
 <div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>} <span class="comment">// namespace vcl::comp</span></div>
 <div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span> </div>
 <div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span><span class="preprocessor">#endif </span><span class="comment">// VCL_MESH_COMPONENTS_BASE_REFERENCE_CONTAINER_COMPONENT_H</span></div>
-<div class="ttc" id="aclassvcl_1_1Box_html_ad4dd21aaa7669f0ccbba075764c77664"><div class="ttname"><a href="classvcl_1_1Box.html#ad4dd21aaa7669f0ccbba075764c77664">vcl::Box::size</a></div><div class="ttdeci">PointT size() const</div><div class="ttdoc">Computes the size of the box.</div><div class="ttdef"><b>Definition</b> box.h:267</div></div>
-<div class="ttc" id="agroup__base_html_ga9ad8104cd9ccfa9352d33bc7e6ba47e6"><div class="ttname"><a href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">vcl::UINT_NULL</a></div><div class="ttdeci">constexpr uint UINT_NULL</div><div class="ttdoc">The UINT_NULL value represent a null value of uint that is the maximum value that can be represented ...</div><div class="ttdef"><b>Definition</b> base.h:48</div></div>
+<div class="ttc" id="agroup__base_html_ga9ad8104cd9ccfa9352d33bc7e6ba47e6"><div class="ttname"><a href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">vcl::UINT_NULL</a></div><div class="ttdeci">constexpr uint UINT_NULL</div><div class="ttdoc">The UINT_NULL value represent a null value of uint that is the maximum value that can be represented ...</div><div class="ttdef"><b>Definition</b> base.h:49</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

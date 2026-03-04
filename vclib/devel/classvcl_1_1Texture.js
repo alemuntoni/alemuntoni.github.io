@@ -5,12 +5,14 @@ var classvcl_1_1Texture =
     [ "Texture", "classvcl_1_1Texture.html#aa11ceedecbda280b369ad9d4cd886095", null ],
     [ "~Texture", "classvcl_1_1Texture.html#aa784535130673f903a72c78b25d456d0", null ],
     [ "bind", "classvcl_1_1Texture.html#aa894b61e631290b1f8129df4f0490da2", null ],
+    [ "bindForCompute", "classvcl_1_1Texture.html#a0fb505f3282ec1f26a1029a501530ba3", null ],
     [ "isValid", "classvcl_1_1Texture.html#a02c2aea925898e19525a8eb5bf10992b", null ],
     [ "operator=", "classvcl_1_1Texture.html#a584a2880a01da4bee43c5b3937a2bdd8", null ],
     [ "operator=", "classvcl_1_1Texture.html#a2f5169ecfc18cc506f35c16283bb8fb8", null ],
     [ "samplerFlagsFromTexture", "classvcl_1_1Texture.html#a731ac6808febab24fc0d61412faeb857", null ],
-    [ "set", "classvcl_1_1Texture.html#a35c0839931c63ccd8dc309b98c37db1f", null ],
-    [ "set", "classvcl_1_1Texture.html#ad13cfb82bd682e367f5a9c45d00f72c2", null ],
+    [ "set", "classvcl_1_1Texture.html#a2fe4a70fae66deede202f969bade35bf", null ],
+    [ "set", "classvcl_1_1Texture.html#a5e916898b778327f2408be5c9df90ee3", null ],
+    [ "set", "classvcl_1_1Texture.html#af920c0d3d3fe9efbcddeeae4819adea9", null ],
     [ "swap", "classvcl_1_1Texture.html#aa01bd58e3b6e5815bed3f60b40abcbcd", null ],
     [ "swap", "classvcl_1_1Texture.html#a569bfe00c9bbc2a8ed5ab46fa16102a2", null ]
 ];

@@ -117,7 +117,7 @@ $(document).ready(function(){initNavTree('border_8h_source.html',''); initResiza
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2025                                                    *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2026                                                    *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
@@ -151,10 +151,10 @@ $(document).ready(function(){initNavTree('border_8h_source.html',''); initResiza
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">using </span>FaceType   = MeshType::FaceType;</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordflow">for</span> (FaceType&amp; f : m.<a class="code hl_variable" href="group__views.html#ga33947d4d6db5271a84ac1ae5555d50d7">faces</a>())</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        for (uint i = 0; i &lt; f.vertexNumber(); ++i)</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        for (uint i = 0; i &lt; f.vertexCount(); ++i)</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            f.edgeOnBorder(i) = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordflow">if</span> (m.faceNumber() == 0)</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordflow">if</span> (m.faceCount() == 0)</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    std::vector&lt;MeshEdgeUtil&lt;MeshType&gt;&gt; e = fillAndSortMeshEdgeUtilVector(m);</div>

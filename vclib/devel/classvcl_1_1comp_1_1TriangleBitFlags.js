@@ -21,5 +21,5 @@ var classvcl_1_1comp_1_1TriangleBitFlags =
     [ "userBit", "classvcl_1_1comp_1_1TriangleBitFlags.html#a5e8d068ef8dbf29bbd6867f4221e989c", null ],
     [ "visited", "classvcl_1_1comp_1_1TriangleBitFlags.html#ac026276f0433a61aad54a748f4fcb845", null ],
     [ "visited", "classvcl_1_1comp_1_1TriangleBitFlags.html#a1835c5e7e1e08b479bd47b0a925e8ff8", null ],
-    [ "USER_BITS_NUMBER", "classvcl_1_1comp_1_1TriangleBitFlags.html#a901c859f4008b29bd1e42094eff9c46a", null ]
+    [ "USER_BIT_COUNT", "classvcl_1_1comp_1_1TriangleBitFlags.html#a66b23db1a67d9ed02a558191b6af27fb", null ]
 ];

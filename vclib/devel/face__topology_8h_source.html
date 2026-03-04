@@ -117,7 +117,7 @@ $(document).ready(function(){initNavTree('face__topology_8h_source.html',''); in
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2025                                                    *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2026                                                    *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
@@ -182,12 +182,12 @@ $(document).ready(function(){initNavTree('face__topology_8h_source.html',''); in
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordflow">for</span> (uint i = 0; i &lt; polygon.size(); ++i)</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        unorderedEdges.emplace(i, (i + 1) % (uint) polygon.size());</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (FaceType::VERTEX_NUMBER &lt; 0) {</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (FaceType::VERTEX_COUNT &lt; 0) {</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        f.resizeVertices(3);</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    }</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="comment">// set the first triangle of the loaded polygon</span></div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordflow">for</span> (uint i = 0; i &lt; f.vertexNumber(); ++i) {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordflow">for</span> (uint i = 0; i &lt; f.vertexCount(); ++i) {</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        f.setVertex(i, polygon[tris[i]]);</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    }</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
@@ -207,11 +207,11 @@ $(document).ready(function(){initNavTree('face__topology_8h_source.html',''); in
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keywordflow">for</span> (uint i = 3; i &lt; tris.size(); i += 3) {</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        uint ff = m.addFace();</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (FaceType::VERTEX_NUMBER &lt; 0) {</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (FaceType::VERTEX_COUNT &lt; 0) {</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            m.face(ff).resizeVertices(3);</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        }</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <span class="keywordflow">for</span> (uint j = 0; j &lt; m.face(ff).vertexNumber(); ++j) {</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <span class="keywordflow">for</span> (uint j = 0; j &lt; m.face(ff).vertexCount(); ++j) {</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            m.face(ff).setVertex(j, polygon[tris[i + j]]);</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        }</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
@@ -279,7 +279,7 @@ $(document).ready(function(){initNavTree('face__topology_8h_source.html',''); in
 <div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span> </div>
 <div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    <span class="keyword">using </span>VertexType = FaceType::VertexType;</div>
 <div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    <span class="keywordflow">if</span> (f.vertexNumber() &gt; 3)</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    <span class="keywordflow">if</span> (f.vertexCount() &gt; 3)</div>
 <div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> </div>
 <div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    <span class="keywordflow">if</span> (isFaceEdgeOnBorder(f, edge))</div>
@@ -315,7 +315,7 @@ $(document).ready(function(){initNavTree('face__topology_8h_source.html',''); in
 <div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>}</div>
 <div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span> </div>
 <div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span><span class="keyword">template</span>&lt;FaceConcept FaceType&gt;</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>uint edgeAdjacentFacesNumber(<span class="keyword">const</span> FaceType&amp; f, uint edge)</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>uint edgeAdjacentFaceCount(<span class="keyword">const</span> FaceType&amp; f, uint edge)</div>
 <div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>    <span class="keyword">requires</span> comp::HasAdjacentFaces&lt;FaceType&gt;</div>
 <div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>{</div>
 <div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>    <span class="keywordflow">if</span> (!comp::isAdjacentFacesAvailableOn(f)) {</div>
@@ -333,7 +333,7 @@ $(document).ready(function(){initNavTree('face__topology_8h_source.html',''); in
 <div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>}</div>
 <div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span> </div>
 <div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span><span class="keyword">template</span>&lt;FaceConcept FaceType&gt;</div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>uint faceEdgesOnBorderNumber(<span class="keyword">const</span> FaceType&amp; f)</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>uint faceOnBorderEdgeCount(<span class="keyword">const</span> FaceType&amp; f)</div>
 <div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>    <span class="keyword">requires</span> comp::HasAdjacentFaces&lt;FaceType&gt;</div>
 <div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>{</div>
 <div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>    <span class="keywordflow">if</span> (!comp::isAdjacentFacesAvailableOn(f)) {</div>
@@ -342,7 +342,7 @@ $(document).ready(function(){initNavTree('face__topology_8h_source.html',''); in
 <div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>    }</div>
 <div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span> </div>
 <div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>    uint cnt = 0;</div>
-<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>    <span class="keywordflow">for</span> (uint i = 0; i &lt; f.vertexNumber(); ++i)</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>    <span class="keywordflow">for</span> (uint i = 0; i &lt; f.vertexCount(); ++i)</div>
 <div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>        <span class="keywordflow">if</span> (isFaceEdgeOnBorder(f, i))</div>
 <div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>            cnt++;</div>
 <div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span> </div>
@@ -439,7 +439,7 @@ $(document).ready(function(){initNavTree('face__topology_8h_source.html',''); in
 <div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span> </div>
 <div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span>    <span class="keyword">using </span>VertexType = FaceType::VertexType;</div>
 <div class="line"><a id="l00533" name="l00533"></a><span class="lineno">  533</span> </div>
-<div class="line"><a id="l00534" name="l00534"></a><span class="lineno">  534</span>    <span class="keywordflow">for</span> (uint e = 0; e &lt; f.vertexNumber(); ++e) {</div>
+<div class="line"><a id="l00534" name="l00534"></a><span class="lineno">  534</span>    <span class="keywordflow">for</span> (uint e = 0; e &lt; f.vertexCount(); ++e) {</div>
 <div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span>        detachAdjacentFacesOnEdge(f, e);</div>
 <div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span> </div>
 <div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>        <span class="comment">// if the vertices have adjacent faces</span></div>
@@ -500,7 +500,7 @@ $(document).ready(function(){initNavTree('face__topology_8h_source.html',''); in
 <div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>} <span class="comment">// namespace vcl</span></div>
 <div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span> </div>
 <div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span><span class="preprocessor">#endif </span><span class="comment">// VCL_ALGORITHMS_MESH_FACE_TOPOLOGY_H</span></div>
-<div class="ttc" id="agroup__base_html_ga9ad8104cd9ccfa9352d33bc7e6ba47e6"><div class="ttname"><a href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">vcl::UINT_NULL</a></div><div class="ttdeci">constexpr uint UINT_NULL</div><div class="ttdoc">The UINT_NULL value represent a null value of uint that is the maximum value that can be represented ...</div><div class="ttdef"><b>Definition</b> base.h:48</div></div>
+<div class="ttc" id="agroup__base_html_ga9ad8104cd9ccfa9352d33bc7e6ba47e6"><div class="ttname"><a href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">vcl::UINT_NULL</a></div><div class="ttdeci">constexpr uint UINT_NULL</div><div class="ttdoc">The UINT_NULL value represent a null value of uint that is the maximum value that can be represented ...</div><div class="ttdef"><b>Definition</b> base.h:49</div></div>
 <div class="ttc" id="agroup__core__polygon_html_ga2fd523c4f86a82d948003bd3849feef2"><div class="ttname"><a href="group__core__polygon.html#ga2fd523c4f86a82d948003bd3849feef2">vcl::faceNormal</a></div><div class="ttdeci">FaceType::VertexType::PositionType faceNormal(const FaceType &amp;f)</div><div class="ttdoc">Computes the normal of a face, without modifying the face. Works both for triangle and polygonal face...</div><div class="ttdef"><b>Definition</b> geometry.h:46</div></div>
 <div class="ttc" id="agroup__core__polygon_html_ga5529ffbd22f80c7b3502d461b3f25fd2"><div class="ttname"><a href="group__core__polygon.html#ga5529ffbd22f80c7b3502d461b3f25fd2">vcl::earCut</a></div><div class="ttdeci">std::vector&lt; uint &gt; earCut(Iterator begin, Iterator end)</div><div class="ttdoc">Triangulates a simple polygon with no holes using the ear-cutting algorithm.</div><div class="ttdef"><b>Definition</b> ear_cut.h:90</div></div>
 <div class="ttc" id="agroup__views_html_ga33947d4d6db5271a84ac1ae5555d50d7"><div class="ttname"><a href="group__views.html#ga33947d4d6db5271a84ac1ae5555d50d7">vcl::views::faces</a></div><div class="ttdeci">constexpr detail::FacesView faces</div><div class="ttdoc">A view that allows to iterate overt the Face elements of an object.</div><div class="ttdef"><b>Definition</b> face.h:84</div></div>

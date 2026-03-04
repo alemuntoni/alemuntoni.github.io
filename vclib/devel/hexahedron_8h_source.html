@@ -117,7 +117,7 @@ $(document).ready(function(){initNavTree('hexahedron_8h_source.html',''); initRe
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2025                                                    *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2026                                                    *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
@@ -182,7 +182,7 @@ $(document).ready(function(){initNavTree('hexahedron_8h_source.html',''); initRe
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>{</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keyword">using </span>PositionType = MeshType::Vertex::PositionType;</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Box.html">createHexahedron&lt;MeshType&gt;</a>(</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Segment.html">createHexahedron&lt;MeshType&gt;</a>(</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        PositionType(-1, -1, -1), PositionType(1, 1, 1));</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>}</div>
 </div>
@@ -191,10 +191,10 @@ $(document).ready(function(){initNavTree('hexahedron_8h_source.html',''); initRe
 <div class="foldopen" id="foldopen00098" data-start="{" data-end="}">
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="group__create.html#gac68ddc8ba1af1d4039a0ab4c611f4072">   98</a></span>MeshType <a class="code hl_function" href="group__create.html#gad27918bc874e941633aeeb83c09ef8bc">createHexahedron</a>(<span class="keyword">const</span> PositionType&amp; <a class="code hl_function" href="group__base.html#gae6c5f005182de34972bb2430132acb8f">min</a>, <span class="keyword">const</span> PositionType&amp; <a class="code hl_function" href="group__base.html#ga45d99c06ee2cb1cd9434fd0e86a1a413">max</a>)</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>{</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    MeshType <a class="code hl_class" href="classvcl_1_1Box.html">m</a>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    MeshType <a class="code hl_class" href="classvcl_1_1Segment.html">m</a>;</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="comment">// fill vertices...</span></div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <a class="code hl_class" href="classvcl_1_1Box.html">m</a>.addVertices(</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <a class="code hl_class" href="classvcl_1_1Segment.html">m</a>.addVertices(</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        PositionType(<a class="code hl_function" href="group__base.html#gae6c5f005182de34972bb2430132acb8f">min</a>(0), <a class="code hl_function" href="group__base.html#gae6c5f005182de34972bb2430132acb8f">min</a>(1), <a class="code hl_function" href="group__base.html#gae6c5f005182de34972bb2430132acb8f">min</a>(2)),</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        PositionType(<a class="code hl_function" href="group__base.html#ga45d99c06ee2cb1cd9434fd0e86a1a413">max</a>(0), <a class="code hl_function" href="group__base.html#gae6c5f005182de34972bb2430132acb8f">min</a>(1), <a class="code hl_function" href="group__base.html#gae6c5f005182de34972bb2430132acb8f">min</a>(2)),</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        PositionType(<a class="code hl_function" href="group__base.html#gae6c5f005182de34972bb2430132acb8f">min</a>(0), <a class="code hl_function" href="group__base.html#ga45d99c06ee2cb1cd9434fd0e86a1a413">max</a>(1), <a class="code hl_function" href="group__base.html#gae6c5f005182de34972bb2430132acb8f">min</a>(2)),</div>
@@ -206,20 +206,20 @@ $(document).ready(function(){initNavTree('hexahedron_8h_source.html',''); initRe
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="comment">// fill faces</span></div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<a class="code hl_concept" href="conceptvcl_1_1HasTriangles.html">HasTriangles&lt;MeshType&gt;</a>) {</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        detail::fillHexahedronTriangles(<a class="code hl_class" href="classvcl_1_1Box.html">m</a>);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        detail::fillHexahedronTriangles(<a class="code hl_class" href="classvcl_1_1Segment.html">m</a>);</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    }</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        detail::fillHexahedronQuads(<a class="code hl_class" href="classvcl_1_1Box.html">m</a>);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        detail::fillHexahedronQuads(<a class="code hl_class" href="classvcl_1_1Segment.html">m</a>);</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    }</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Box.html">m</a>;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Segment.html">m</a>;</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>}</div>
 </div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="keyword">template</span>&lt;FaceMeshConcept MeshType, Po<span class="keywordtype">int</span>3Concept PositionType&gt;</div>
 <div class="foldopen" id="foldopen00139" data-start="{" data-end="}">
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="group__create.html#gaccc732e08d8dffa905fa3d2c9600a99b">  139</a></span>MeshType <a class="code hl_function" href="group__create.html#ga6fb4ccc7456d5cfc0b4dfa61775d43fd">createCube</a>(<span class="keyword">const</span> PositionType&amp; <a class="code hl_function" href="group__base.html#gae6c5f005182de34972bb2430132acb8f">min</a>, <span class="keywordtype">double</span> <a class="code hl_class" href="classvcl_1_1Box.html">edgeLength</a>)</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="group__create.html#gaccc732e08d8dffa905fa3d2c9600a99b">  139</a></span>MeshType <a class="code hl_function" href="group__create.html#ga6fb4ccc7456d5cfc0b4dfa61775d43fd">createCube</a>(<span class="keyword">const</span> PositionType&amp; <a class="code hl_function" href="group__base.html#gae6c5f005182de34972bb2430132acb8f">min</a>, <span class="keywordtype">double</span> <a class="code hl_class" href="classvcl_1_1Segment.html">edgeLength</a>)</div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>{</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Box.html">createHexahedron&lt;MeshType&gt;</a>(<a class="code hl_function" href="group__base.html#gae6c5f005182de34972bb2430132acb8f">min</a>, PositionType(<a class="code hl_function" href="group__base.html#gae6c5f005182de34972bb2430132acb8f">min</a> + <a class="code hl_class" href="classvcl_1_1Box.html">edgeLength</a>));</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Segment.html">createHexahedron&lt;MeshType&gt;</a>(<a class="code hl_function" href="group__base.html#gae6c5f005182de34972bb2430132acb8f">min</a>, PositionType(<a class="code hl_function" href="group__base.html#gae6c5f005182de34972bb2430132acb8f">min</a> + <a class="code hl_class" href="classvcl_1_1Segment.html">edgeLength</a>));</div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>}</div>
 </div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
@@ -228,14 +228,14 @@ $(document).ready(function(){initNavTree('hexahedron_8h_source.html',''); initRe
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="group__create.html#ga6fb4ccc7456d5cfc0b4dfa61775d43fd">  157</a></span>MeshType <a class="code hl_function" href="group__create.html#ga6fb4ccc7456d5cfc0b4dfa61775d43fd">createCube</a>()</div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>{</div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <span class="keyword">using </span>PositionType = MeshType::Vertex::PositionType;</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Box.html">createCube&lt;MeshType&gt;</a>(PositionType(-0.5, -0.5, -0.5), 1);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Segment.html">createCube&lt;MeshType&gt;</a>(PositionType(-0.5, -0.5, -0.5), 1);</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>}</div>
 </div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>} <span class="comment">// namespace vcl</span></div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="preprocessor">#endif </span><span class="comment">// VCL_ALGORITHMS_MESH_CREATE_HEXAHEDRON_H</span></div>
-<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:46</div></div>
+<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:41</div></div>
 <div class="ttc" id="aconceptvcl_1_1HasTriangles_html"><div class="ttname"><a href="conceptvcl_1_1HasTriangles.html">vcl::HasTriangles</a></div><div class="ttdef"><b>Definition</b> face_requirements.h:52</div></div>
 <div class="ttc" id="agroup__base_html_ga45d99c06ee2cb1cd9434fd0e86a1a413"><div class="ttname"><a href="group__base.html#ga45d99c06ee2cb1cd9434fd0e86a1a413">vcl::max</a></div><div class="ttdeci">constexpr auto max(const T &amp;p1, const T &amp;p2)</div><div class="ttdoc">Returns the maximum between the two parameters.</div><div class="ttdef"><b>Definition</b> min_max.h:81</div></div>
 <div class="ttc" id="agroup__base_html_gae6c5f005182de34972bb2430132acb8f"><div class="ttname"><a href="group__base.html#gae6c5f005182de34972bb2430132acb8f">vcl::min</a></div><div class="ttdeci">constexpr auto min(const T &amp;p1, const T &amp;p2)</div><div class="ttdoc">Returns the minimum between the two parameters.</div><div class="ttdef"><b>Definition</b> min_max.h:40</div></div>

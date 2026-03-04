@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['halfspacedeterminant_0',['halfspacedeterminant',['../group__algorithms__core.html#ga258c61f730c08e6d3cfc4f6c93af1588',1,'vcl::halfSpaceDeterminant(const FaceType &amp;face, const PointType &amp;point)'],['../group__algorithms__core.html#ga5973cf28c34d62dc9e4364ee8c19f41a',1,'vcl::halfSpaceDeterminant(const TriangleType &amp;triangle, const PointType &amp;point)'],['../group__algorithms__core.html#ga394b096177019cfacda94eb16ae1fdc2',1,'vcl::halfSpaceDeterminant(const PointType &amp;p0, const PointType &amp;p1, const PointType &amp;p2, const PointType &amp;p)']]],
+  ['halfspacedeterminant_0',['halfspacedeterminant',['../group__algorithms__core.html#ga394b096177019cfacda94eb16ae1fdc2',1,'vcl::halfSpaceDeterminant(const PointType &amp;p0, const PointType &amp;p1, const PointType &amp;p2, const PointType &amp;p)'],['../group__algorithms__core.html#ga5973cf28c34d62dc9e4364ee8c19f41a',1,'vcl::halfSpaceDeterminant(const TriangleType &amp;triangle, const PointType &amp;point)'],['../group__algorithms__core.html#ga258c61f730c08e6d3cfc4f6c93af1588',1,'vcl::halfSpaceDeterminant(const FaceType &amp;face, const PointType &amp;point)']]],
   ['handle_1',['handle',['../classvcl_1_1Uniform.html#aa2927009dd2a70b440407e029b3102b3',1,'vcl::Uniform::handle()'],['../classvcl_1_1IndirectBuffer.html#a131b1dcf2da17d612f732d8eb3e9b3b8',1,'vcl::IndirectBuffer::handle()']]],
   ['hascontainerof_2',['hascontainerof',['../classvcl_1_1Mesh.html#af76409bf09afd6f60e6bb8f15ee21dc0',1,'vcl::Mesh::hasContainerOf()'],['../classvcl_1_1Mesh.html#af76409bf09afd6f60e6bb8f15ee21dc0',1,'vcl::Mesh::hasContainerOf()']]],
   ['hascustomcomponent_3',['hasCustomComponent',['../classvcl_1_1comp_1_1CustomComponents.html#aea611826ed71303ef39ed943f219adcb',1,'vcl::comp::CustomComponents']]],
@@ -28,8 +28,9 @@ var searchData=
   ['hasvertices_25',['hasVertices',['../classvcl_1_1MeshInfo.html#a5e5c8a5959613368ae56948abafab172',1,'vcl::MeshInfo']]],
   ['height_26',['height',['../classvcl_1_1Image.html#a683eb846af3cf88d21ea4da6c9023244',1,'vcl::Image']]],
   ['histogram_27',['Histogram',['../classvcl_1_1Histogram.html#ac454f39e64714c1070009716387377cc',1,'vcl::Histogram']]],
-  ['hsvhue_28',['hsvHue',['../classvcl_1_1Color.html#a4c4d1cdcf2e86cba2bbab8567ac50041',1,'vcl::Color']]],
-  ['hsvhuef_29',['hsvHueF',['../classvcl_1_1Color.html#ad3959e60cab3306eb9048120e009ef23',1,'vcl::Color']]],
-  ['hsvsaturation_30',['hsvSaturation',['../classvcl_1_1Color.html#a9a4d5f5f2d3eec2063a2263c33cbf09f',1,'vcl::Color']]],
-  ['hsvsaturationf_31',['hsvSaturationF',['../classvcl_1_1Color.html#a8c746456e82cac73f786809bd2b3c437',1,'vcl::Color']]]
+  ['holecount_28',['holeCount',['../group__clean.html#ga168f7cafa7e3cf3ce8b08a85ac949970',1,'vcl']]],
+  ['hsvhue_29',['hsvHue',['../classvcl_1_1Color.html#a4c4d1cdcf2e86cba2bbab8567ac50041',1,'vcl::Color']]],
+  ['hsvhuef_30',['hsvHueF',['../classvcl_1_1Color.html#ad3959e60cab3306eb9048120e009ef23',1,'vcl::Color']]],
+  ['hsvsaturation_31',['hsvSaturation',['../classvcl_1_1Color.html#a9a4d5f5f2d3eec2063a2263c33cbf09f',1,'vcl::Color']]],
+  ['hsvsaturationf_32',['hsvSaturationF',['../classvcl_1_1Color.html#a8c746456e82cac73f786809bd2b3c437',1,'vcl::Color']]]
 ];

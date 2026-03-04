@@ -7,5 +7,6 @@ var dir_b9dc359daf097cd3eca1946dc8e95bdb =
     [ "drawable_object_vector_tree.h", "drawable__object__vector__tree_8h_source.html", null ],
     [ "mesh_render_settings_frame.h", "mesh__render__settings__frame_8h_source.html", null ],
     [ "screen_shot_dialog.h", "screen__shot__dialog_8h_source.html", null ],
-    [ "text_edit_logger.h", "text__edit__logger_8h_source.html", null ]
+    [ "text_edit_logger.h", "text__edit__logger_8h_source.html", null ],
+    [ "viewer_render_settings_frame.h", "viewer__render__settings__frame_8h_source.html", null ]
 ];

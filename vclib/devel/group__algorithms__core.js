@@ -12,6 +12,10 @@ var group__algorithms__core =
     [ "vcl::halfSpaceDeterminant", "group__algorithms__core.html#ga258c61f730c08e6d3cfc4f6c93af1588", null ],
     [ "vcl::halfSpaceDeterminant", "group__algorithms__core.html#ga394b096177019cfacda94eb16ae1fdc2", null ],
     [ "vcl::halfSpaceDeterminant", "group__algorithms__core.html#ga5973cf28c34d62dc9e4364ee8c19f41a", null ],
+    [ "vcl::lookAtMatrix", "group__algorithms__core.html#gabca5c38061d4e57efe500fa803223afc", null ],
+    [ "vcl::lookAtMatrix", "group__algorithms__core.html#ga4d589e9c4d9608c5570a424ea346e210", null ],
+    [ "vcl::lookAtMatrixLeftHanded", "group__algorithms__core.html#ga034a32b0f0dd10eeaaa61b9f34e56abe", null ],
+    [ "vcl::lookAtMatrixLeftHanded", "group__algorithms__core.html#ga2ebc5ce4ca1d1348db7d0aee561043fc", null ],
     [ "vcl::poissonRandomNumber", "group__algorithms__core.html#ga212c052ae1efd3426a5ea49051f8011c", null ],
     [ "vcl::randomTriangleBarycentricCoordinate", "group__algorithms__core.html#ga1928216d4ca321551feca3fc03054e03", null ],
     [ "vcl::removeScalingFromMatrix", "group__algorithms__core.html#ga5396bbb99432d258d9330d681f1461db", null ],
@@ -24,5 +28,6 @@ var group__algorithms__core =
     [ "vcl::setTransformMatrixRotationDeg", "group__algorithms__core.html#gabd5d95d87600e42a0da835735e35ea99", null ],
     [ "vcl::sphericalFibonacciPointSet", "group__algorithms__core.html#ga438da980623645640c78105766bde287", null ],
     [ "vcl::trianglePointVisibility", "group__algorithms__core.html#ga9928af42e442b4e28f3232f698a0912b", null ],
-    [ "vcl::trianglePointVisibility", "group__algorithms__core.html#gacd3fb0fe60790cd9aca934b9d3461f6a", null ]
+    [ "vcl::trianglePointVisibility", "group__algorithms__core.html#gacd3fb0fe60790cd9aca934b9d3461f6a", null ],
+    [ "vcl::unprojectScreenPosition", "group__algorithms__core.html#gaa497ec7bc156d5ac2f9384d15eda21ce", null ]
 ];

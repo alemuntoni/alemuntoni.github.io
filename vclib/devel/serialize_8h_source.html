@@ -117,7 +117,7 @@ $(document).ready(function(){initNavTree('serialize_8h_source.html',''); initRes
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2025                                                    *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2026                                                    *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
@@ -176,7 +176,7 @@ $(document).ready(function(){initNavTree('serialize_8h_source.html',''); initRes
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="keywordtype">void</span> serialize(std::ostream&amp; os, <span class="keyword">const</span> T&amp; data, <span class="keyword">const</span> Others&amp;... others)</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>{</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (Serializable&lt;T&gt;) {</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        data.<a class="code hl_function" href="classvcl_1_1Box.html#abff6311f9bc7aab382ffa658bf810a27">serialize</a>(os);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        data.serialize(os);</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    }</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        serialize(os, data, std::endian::little);</div>
@@ -189,7 +189,6 @@ $(document).ready(function(){initNavTree('serialize_8h_source.html',''); initRes
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>} <span class="comment">// namespace vcl</span></div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="preprocessor">#endif </span><span class="comment">// VCL_BASE_SERIALIZATION_SERIALIZE_H</span></div>
-<div class="ttc" id="aclassvcl_1_1Box_html_abff6311f9bc7aab382ffa658bf810a27"><div class="ttname"><a href="classvcl_1_1Box.html#abff6311f9bc7aab382ffa658bf810a27">vcl::Box::serialize</a></div><div class="ttdeci">void serialize(std::ostream &amp;os) const</div><div class="ttdoc">Serializes the box to the given output stream.</div><div class="ttdef"><b>Definition</b> box.h:466</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

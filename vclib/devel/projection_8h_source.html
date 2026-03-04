@@ -117,7 +117,7 @@ $(document).ready(function(){initNavTree('projection_8h_source.html',''); initRe
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2025                                                    *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2026                                                    *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
@@ -149,24 +149,24 @@ $(document).ready(function(){initNavTree('projection_8h_source.html',''); initRe
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">using </span>PointType  = Iterator::value_type;</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">using </span>ScalarType = PointType::ScalarType;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_class" href="classvcl_1_1Box.html">Polygon2&lt;ScalarType&gt;</a> <a class="code hl_class" href="classvcl_1_1Box.html">projectedPolygon</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_class" href="classvcl_1_1Segment.html">Polygon2&lt;ScalarType&gt;</a> <a class="code hl_class" href="classvcl_1_1Segment.html">projectedPolygon</a>;</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="comment">// Calculate the normal vector of the polygon and an orthonormal basis</span></div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="comment">// for the plane containing the polygon.</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    PointType normal = <a class="code hl_class" href="classvcl_1_1Box.html">Polygon3&lt;ScalarType&gt;::normal</a>(begin, end);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    PointType normal = <a class="code hl_class" href="classvcl_1_1Segment.html">Polygon3&lt;ScalarType&gt;::normal</a>(begin, end);</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    PointType u, v;</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    normal.orthoBase(u, v);</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <a class="code hl_class" href="classvcl_1_1Box.html">projectedPolygon</a>.reserve(std::distance(begin, end));</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <a class="code hl_class" href="classvcl_1_1Segment.html">projectedPolygon</a>.reserve(std::distance(begin, end));</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="comment">// Project each vertex onto the plane defined by the orthonormal basis.</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> <a class="code hl_class" href="classvcl_1_1Box.html">it</a> = begin; <a class="code hl_class" href="classvcl_1_1Box.html">it</a> != end; ++<a class="code hl_class" href="classvcl_1_1Box.html">it</a>) {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> <a class="code hl_class" href="classvcl_1_1Segment.html">it</a> = begin; <a class="code hl_class" href="classvcl_1_1Segment.html">it</a> != end; ++<a class="code hl_class" href="classvcl_1_1Segment.html">it</a>) {</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        ScalarType x = (*it).dot(u);</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        ScalarType y = (*it).dot(v);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <a class="code hl_class" href="classvcl_1_1Box.html">projectedPolygon</a>.pushBack(<a class="code hl_class" href="classvcl_1_1Box.html">Point2&lt;ScalarType&gt;</a>(x, y));</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <a class="code hl_class" href="classvcl_1_1Segment.html">projectedPolygon</a>.pushBack(<a class="code hl_class" href="classvcl_1_1Segment.html">Point2&lt;ScalarType&gt;</a>(x, y));</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    }</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Box.html">projectedPolygon</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Segment.html">projectedPolygon</a>;</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>}</div>
 </div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
@@ -181,7 +181,7 @@ $(document).ready(function(){initNavTree('projection_8h_source.html',''); initRe
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>} <span class="comment">// namespace vcl</span></div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">#endif </span><span class="comment">// VCL_ALGORITHMS_CORE_POLYGON_PROJECTION_H</span></div>
-<div class="ttc" id="aclassvcl_1_1Box_html"><div class="ttname"><a href="classvcl_1_1Box.html">vcl::Box</a></div><div class="ttdoc">A class representing a box in N-dimensional space.</div><div class="ttdef"><b>Definition</b> box.h:46</div></div>
+<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:41</div></div>
 <div class="ttc" id="aconceptvcl_1_1Point3Concept_html"><div class="ttname"><a href="conceptvcl_1_1Point3Concept.html">vcl::Point3Concept</a></div><div class="ttdoc">A concept representing a 3D Point.</div><div class="ttdef"><b>Definition</b> point.h:872</div></div>
 <div class="ttc" id="agroup__core__polygon_html_ga025a3a732555abc356e597426d99764c"><div class="ttname"><a href="group__core__polygon.html#ga025a3a732555abc356e597426d99764c">vcl::project</a></div><div class="ttdeci">auto project(Iterator begin, Iterator end)</div><div class="ttdoc">Project a 3D polygon onto a plane, and return the 2D polygon.</div><div class="ttdef"><b>Definition</b> projection.h:41</div></div>
 </div><!-- fragment --></div><!-- contents -->

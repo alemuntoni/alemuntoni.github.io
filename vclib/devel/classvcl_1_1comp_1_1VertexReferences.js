@@ -29,6 +29,7 @@ var classvcl_1_1comp_1_1VertexReferences =
     [ "vertex", "classvcl_1_1comp_1_1VertexReferences.html#ab282f57b3ec7886d09bc5d3a1e549d48", null ],
     [ "vertexBegin", "classvcl_1_1comp_1_1VertexReferences.html#a88cc67ba23fb263d14b4881e75a86fd2", null ],
     [ "vertexBegin", "classvcl_1_1comp_1_1VertexReferences.html#aa1ad71bc0ca192bba25455f14551f8fe", null ],
+    [ "vertexCount", "classvcl_1_1comp_1_1VertexReferences.html#a9f638affe6d98399d1900a68e5b98ec9", null ],
     [ "vertexEnd", "classvcl_1_1comp_1_1VertexReferences.html#aa27f8d5b1f82137e6719c5b6ed12aaa6", null ],
     [ "vertexEnd", "classvcl_1_1comp_1_1VertexReferences.html#a25faed596822b5e4a56735149fe69664", null ],
     [ "vertexIndex", "classvcl_1_1comp_1_1VertexReferences.html#a7e0fe284362ba1e1c643938d435840cc", null ],
@@ -38,7 +39,6 @@ var classvcl_1_1comp_1_1VertexReferences =
     [ "vertexIndices", "classvcl_1_1comp_1_1VertexReferences.html#aa3e0db8f2bf253545df611368990d073", null ],
     [ "vertexMod", "classvcl_1_1comp_1_1VertexReferences.html#a09ab5d68d17d89ec226cc2fdcf031800", null ],
     [ "vertexMod", "classvcl_1_1comp_1_1VertexReferences.html#a8717d106427405b25f23047571b93f26", null ],
-    [ "vertexNumber", "classvcl_1_1comp_1_1VertexReferences.html#a7462057eaa05122af319a06ea8dc6284", null ],
     [ "vertices", "classvcl_1_1comp_1_1VertexReferences.html#a62db2f88b0689aaf26cce546ae10d63b", null ],
     [ "vertices", "classvcl_1_1comp_1_1VertexReferences.html#a183213832a85a882c859f030f17a88b0", null ]
 ];

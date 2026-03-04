@@ -117,7 +117,7 @@ $(document).ready(function(){initNavTree('algorithms_2mesh_2stat_2geometry_8h_so
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2025                                                    *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2026                                                    *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
@@ -175,7 +175,7 @@ $(document).ready(function(){initNavTree('algorithms_2mesh_2stat_2geometry_8h_so
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">double</span> l = 0;</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> FaceType&amp; f : m.<a class="code hl_variable" href="group__views.html#ga33947d4d6db5271a84ac1ae5555d50d7">faces</a>()) {</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keywordflow">for</span> (uint i = 0; i &lt; f.vertexNumber(); ++i) {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keywordflow">for</span> (uint i = 0; i &lt; f.vertexCount(); ++i) {</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            <span class="keywordflow">if</span> (f.adjFace(i) == <span class="keyword">nullptr</span>) {</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                l += f.vertex(i)-&gt;position().dist(</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                    f.vertexMod(i + 1)-&gt;position());</div>
@@ -272,7 +272,7 @@ $(document).ready(function(){initNavTree('algorithms_2mesh_2stat_2geometry_8h_so
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>{</div>
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    <span class="keyword">using </span>VertexType = MeshType::VertexType;</div>
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    assert(std::ranges::size(weights) == m.vertexNumber());</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    assert(std::ranges::size(weights) == m.vertexCount());</div>
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    std::vector&lt;ScalarType&gt; radius(m.vertexContainerSize());</div>
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    <span class="keyword">const</span> <span class="keyword">auto</span> [<a class="code hl_function" href="group__base.html#gae6c5f005182de34972bb2430132acb8f">min</a>, <a class="code hl_function" href="group__base.html#ga45d99c06ee2cb1cd9434fd0e86a1a413">max</a>] = std::ranges::minmax_element(weights);</div>
@@ -301,7 +301,7 @@ $(document).ready(function(){initNavTree('algorithms_2mesh_2stat_2geometry_8h_so
 <div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    std::vector&lt;std::pair&lt;uint, uint&gt;&gt; creaseEdges;</div>
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span> </div>
 <div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; f : m.<a class="code hl_variable" href="group__views.html#ga33947d4d6db5271a84ac1ae5555d50d7">faces</a>()) {</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        <span class="keywordflow">for</span> (uint i = 0; i &lt; f.vertexNumber(); ++i) {</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        <span class="keywordflow">for</span> (uint i = 0; i &lt; f.vertexCount(); ++i) {</div>
 <div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>            <span class="keywordflow">if</span> (f.adjFace(i) == <span class="keyword">nullptr</span>) {</div>
 <div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>                <span class="comment">// border edge</span></div>
 <div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>                <span class="keywordflow">if</span> (alsoBorderEdges) {</div>

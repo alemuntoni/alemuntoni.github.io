@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['reference_0',['reference',['../classvcl_1_1Array.html#af218def24f6484c9da48e992dcabfd6b',1,'vcl::Array::Reference'],['../classvcl_1_1Vector.html#a06a998f447e9998a98bf8bb6bf74a780',1,'vcl::Vector::Reference']]],
-  ['removeconstfrompointer_1',['RemoveConstFromPointer',['../group__base.html#gacfdd7af0f9712ffc6b96c5d27be41965',1,'vcl']]],
-  ['removecvrefandpointer_2',['RemoveCVRefAndPointer',['../group__base.html#gaa1938bcd17ca07bf32500695f422efeb',1,'vcl']]],
-  ['removeptr_3',['RemovePtr',['../group__base.html#ga25fc582d09d14f037e742c66fd58dbeb',1,'vcl']]],
-  ['removeref_4',['RemoveRef',['../group__base.html#ga5c494877e683bb96964551900501a466',1,'vcl']]]
+  ['qualityd_0',['Qualityd',['../group__components.html#gaefd4d50585ce2aa170d469eb1d4bbce3',1,'vcl::comp']]],
+  ['qualityf_1',['Qualityf',['../group__components.html#gad14bbf090e3c6268f9b6d297f142b5b3',1,'vcl::comp']]],
+  ['qualitytype_2',['QualityType',['../classvcl_1_1comp_1_1Quality.html#a8ff000dce1397d1c6cb69c23fa10fe18',1,'vcl::comp::Quality']]],
+  ['quaterniond_3',['Quaterniond',['../group__space__core.html#ga7c0856e648a45f5fdd58a1c70db0b0a5',1,'vcl']]],
+  ['quaternionf_4',['Quaternionf',['../group__space__core.html#ga49eb563a903acba81d2a38e974d999cc',1,'vcl']]],
+  ['queryboundeddistfunction_5',['QueryBoundedDistFunction',['../classvcl_1_1AbstractGrid.html#af3105d63ad6aa895e62002eb4580aa4e',1,'vcl::AbstractGrid']]],
+  ['querydistfunction_6',['QueryDistFunction',['../classvcl_1_1AbstractGrid.html#ab35a3aa3ed5c4caf6c7fd39d2ef3eec7',1,'vcl::AbstractGrid']]]
 ];

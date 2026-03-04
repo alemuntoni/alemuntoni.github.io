@@ -117,7 +117,7 @@ $(document).ready(function(){initNavTree('mesh_2off_2save_8h_source.html',''); i
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2025                                                    *</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2026                                                    *</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
@@ -173,10 +173,10 @@ $(document).ready(function(){initNavTree('mesh_2off_2save_8h_source.html',''); i
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    uint fn = 0;</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    uint en = 0;</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (HasVertices&lt;MeshType&gt;) {</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        vn = m.vertexNumber();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        vn = m.vertexCount();</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    }</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (HasFaces&lt;MeshType&gt;) {</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        fn = m.faceNumber();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        fn = m.faceCount();</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    io::writeInt(fp, vn, <span class="keyword">false</span>);</div>
@@ -227,7 +227,7 @@ $(document).ready(function(){initNavTree('mesh_2off_2save_8h_source.html',''); i
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        std::vector&lt;uint&gt; vIndices = m.vertexCompactIndices();</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> FaceType&amp; f : m.<a class="code hl_variable" href="group__views.html#ga33947d4d6db5271a84ac1ae5555d50d7">faces</a>()) {</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            io::writeInt(fp, f.vertexNumber(), <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            io::writeInt(fp, f.vertexCount(), <span class="keyword">false</span>);</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> VertexType* v : f.<a class="code hl_variable" href="group__views.html#gae55a7544cb59464c26959bcc4cec23ea">vertices</a>()) {</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                io::writeInt(fp, vIndices[m.index(v)], <span class="keyword">false</span>);</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            }</div>
