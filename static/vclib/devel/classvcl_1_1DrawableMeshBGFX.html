@@ -106,12 +106,10 @@ $(document).ready(function(){initNavTree('classvcl_1_1DrawableMeshBGFX.html','')
 
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#pri-types">Private Types</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classvcl_1_1DrawableMeshBGFX-members.html">List of all members</a>  </div>
@@ -133,32 +131,16 @@ Inheritance diagram for vcl::DrawableMeshBGFX&lt; MeshType &gt;:</div>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:afbe8d083841afa1289ea6a736133bdc6" id="r_afbe8d083841afa1289ea6a736133bdc6"><td class="memItemLeft" align="right" valign="top"><a id="afbe8d083841afa1289ea6a736133bdc6" name="afbe8d083841afa1289ea6a736133bdc6"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>SurfaceProgramsType</b> { <b>UBER</b>
-, <b>SPLIT</b>
-, <b>UBER_WITH_STATIC_IF</b>
- }</td></tr>
-<tr class="separator:afbe8d083841afa1289ea6a736133bdc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_types_classvcl_1_1AbstractDrawableMesh"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classvcl_1_1AbstractDrawableMesh')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classvcl_1_1AbstractDrawableMesh.html">vcl::AbstractDrawableMesh</a></td></tr>
-<tr class="memitem:a17a134a4cb2d8ad718f8b1192db3dc0e inherit pub_types_classvcl_1_1AbstractDrawableMesh" id="r_a17a134a4cb2d8ad718f8b1192db3dc0e"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="classvcl_1_1Segment.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><b>MatIt</b> = std::vector&lt; <a class="el" href="classvcl_1_1Material.html">Material</a> &gt;::const_iterator</td></tr>
-<tr class="separator:a17a134a4cb2d8ad718f8b1192db3dc0e inherit pub_types_classvcl_1_1AbstractDrawableMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7d1790c2f80aac31af3e3e9a7a910d04" id="r_a7d1790c2f80aac31af3e3e9a7a910d04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">Box3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableMeshBGFX.html#a7d1790c2f80aac31af3e3e9a7a910d04">boundingBox</a> () <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">override</a></td></tr>
+<tr class="memitem:a7d1790c2f80aac31af3e3e9a7a910d04" id="r_a7d1790c2f80aac31af3e3e9a7a910d04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">Box3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableMeshBGFX.html#a7d1790c2f80aac31af3e3e9a7a910d04">boundingBox</a> () <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">override</a></td></tr>
 <tr class="memdesc:a7d1790c2f80aac31af3e3e9a7a910d04"><td class="mdescLeft">&#160;</td><td class="mdescRight">This member function is used to find a good camera position to render object. It should return the the bounding box of the object. Return a null bounding box if the object shouldn't influence the position of the camera.  <br /></td></tr>
 <tr class="separator:a7d1790c2f80aac31af3e3e9a7a910d04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a775e7167549414e75904234996972056" id="r_a775e7167549414e75904234996972056"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classvcl_1_1DrawableObject.html">DrawableObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableMeshBGFX.html#a775e7167549414e75904234996972056">clone</a> () &amp;&amp;<a class="el" href="classvcl_1_1Segment.html">override</a></td></tr>
-<tr class="memdesc:a775e7167549414e75904234996972056"><td class="mdescLeft">&#160;</td><td class="mdescRight">This member function is used to create a new <a class="el" href="classvcl_1_1DrawableObject.html" title="The DrawableObject class is the base class for all the objects that can be drawn in a 3D viewer.">DrawableObject</a> that is a moved from the current one. This object will be destroyed after the call of this function. Each derived class must implement this member function, that returns a shared pointer pointing to the moved object. For more details about this paradigm, check polimorphism clone in modern c++: <a href="https://www.fluentcpp.com/2017/09/08/make-polymorphic-copy-modern-cpp/">https://www.fluentcpp.com/2017/09/08/make-polymorphic-copy-modern-cpp/</a>.  <br /></td></tr>
-<tr class="separator:a775e7167549414e75904234996972056"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cd54c6f04b51c786c36ff5b1076a872" id="r_a0cd54c6f04b51c786c36ff5b1076a872"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classvcl_1_1DrawableObject.html">DrawableObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableMeshBGFX.html#a0cd54c6f04b51c786c36ff5b1076a872">clone</a> () <a class="el" href="classvcl_1_1Segment.html">const</a> &amp;<a class="el" href="classvcl_1_1Segment.html">override</a></td></tr>
-<tr class="memdesc:a0cd54c6f04b51c786c36ff5b1076a872"><td class="mdescLeft">&#160;</td><td class="mdescRight">This member function is used to create a new copy of the <a class="el" href="classvcl_1_1DrawableObject.html" title="The DrawableObject class is the base class for all the objects that can be drawn in a 3D viewer.">DrawableObject</a>. Each derived class must implement this member function, that returns a shared pointer pointing to a copy of the current one. for more details about this paradigm, check polimorphism clone in modern c++: <a href="https://www.fluentcpp.com/2017/09/08/make-polymorphic-copy-modern-cpp/">https://www.fluentcpp.com/2017/09/08/make-polymorphic-copy-modern-cpp/</a>.  <br /></td></tr>
-<tr class="separator:a0cd54c6f04b51c786c36ff5b1076a872"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a979b31deac9d8eff553675bf4c13122a" id="r_a979b31deac9d8eff553675bf4c13122a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableMeshBGFX.html#a979b31deac9d8eff553675bf4c13122a">draw</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">DrawObjectSettings</a> &amp;settings) <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">override</a></td></tr>
-<tr class="memdesc:a979b31deac9d8eff553675bf4c13122a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This member function must draw the object. It will be called at every frame.  <br /></td></tr>
-<tr class="separator:a979b31deac9d8eff553675bf4c13122a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a036df2d93618aba413e00c28ed5a87" id="r_a4a036df2d93618aba413e00c28ed5a87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableMeshBGFX.html#a4a036df2d93618aba413e00c28ed5a87">computeSelection</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="structvcl_1_1SelectionParameters.html">SelectionParameters</a> &amp;<a class="el" href="classvcl_1_1Segment.html">params</a>) <a class="el" href="classvcl_1_1Segment.html">override</a></td></tr>
+<tr class="separator:a4a036df2d93618aba413e00c28ed5a87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add8e5ebdf5287a73a10d7286cd7df464" id="r_add8e5ebdf5287a73a10d7286cd7df464"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableMeshBGFX.html#add8e5ebdf5287a73a10d7286cd7df464">draw</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">DrawObjectSettings</a> &amp;settings) <a class="el" href="classvcl_1_1Segment.html">override</a></td></tr>
+<tr class="memdesc:add8e5ebdf5287a73a10d7286cd7df464"><td class="mdescLeft">&#160;</td><td class="mdescRight">This member function must draw the object. It will be called at every frame.  <br /></td></tr>
+<tr class="separator:add8e5ebdf5287a73a10d7286cd7df464"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9225d1ca7a0151204db6b9b04b82f812" id="r_a9225d1ca7a0151204db6b9b04b82f812"><td class="memItemLeft" align="right" valign="top"><a id="a9225d1ca7a0151204db6b9b04b82f812" name="a9225d1ca7a0151204db6b9b04b82f812"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>DrawableMeshBGFX</b> (<a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1DrawableMeshBGFX.html">DrawableMeshBGFX</a> &amp;<a class="el" href="classvcl_1_1Segment.html">drawableMesh</a>)</td></tr>
 <tr class="separator:a9225d1ca7a0151204db6b9b04b82f812"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,18 +153,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acd624ff7cb595af0816d14a2ebb92e3b" id="r_acd624ff7cb595af0816d14a2ebb92e3b"><td class="memItemLeft" align="right" valign="top"><a id="acd624ff7cb595af0816d14a2ebb92e3b" name="acd624ff7cb595af0816d14a2ebb92e3b"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>DrawableMeshBGFX</b> (MeshType &amp;&amp;mesh)</td></tr>
 <tr class="separator:acd624ff7cb595af0816d14a2ebb92e3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8b4c71ac449741c48a87224bc552646" id="r_aa8b4c71ac449741c48a87224bc552646"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableMeshBGFX.html#aa8b4c71ac449741c48a87224bc552646">drawId</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">DrawObjectSettings</a> &amp;settings) <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">override</a></td></tr>
-<tr class="memdesc:aa8b4c71ac449741c48a87224bc552646"><td class="mdescLeft">&#160;</td><td class="mdescRight">This member function should draw the object. It will be called on request when the renderer needs to draw the ID of the object.  <br /></td></tr>
-<tr class="separator:aa8b4c71ac449741c48a87224bc552646"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9222fa1246404bf06899c3ffa7f84c6" id="r_af9222fa1246404bf06899c3ffa7f84c6"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableMeshBGFX.html#af9222fa1246404bf06899c3ffa7f84c6">edgeCount</a> () <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">override</a></td></tr>
-<tr class="separator:af9222fa1246404bf06899c3ffa7f84c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af777cfb82f206821627681faad63d204" id="r_af777cfb82f206821627681faad63d204"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableMeshBGFX.html#af777cfb82f206821627681faad63d204">faceCount</a> () <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">override</a></td></tr>
-<tr class="separator:af777cfb82f206821627681faad63d204"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1c77ee07db6e116a86c2f51d2a4f1e0" id="r_af1c77ee07db6e116a86c2f51d2a4f1e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableMeshBGFX.html#af1c77ee07db6e116a86c2f51d2a4f1e0">drawId</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">DrawObjectSettings</a> &amp;settings) <a class="el" href="classvcl_1_1Segment.html">override</a></td></tr>
+<tr class="memdesc:af1c77ee07db6e116a86c2f51d2a4f1e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">This member function should draw the object. It will be called on request when the renderer needs to draw the ID of the object.  <br /></td></tr>
+<tr class="separator:af1c77ee07db6e116a86c2f51d2a4f1e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03dd123cfa98b39c2609556566004457" id="r_a03dd123cfa98b39c2609556566004457"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitVector.html">vcl::BitVector</a>&lt; <a class="el" href="classvcl_1_1Segment.html">true</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableMeshBGFX.html#a03dd123cfa98b39c2609556566004457">faceSelectionBitVector</a> () <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">override</a></td></tr>
+<tr class="separator:a03dd123cfa98b39c2609556566004457"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeeeac785e1052481ff21439dd04bfaad" id="r_aeeeac785e1052481ff21439dd04bfaad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableMeshBGFX.html#aeeeac785e1052481ff21439dd04bfaad">init</a> () <a class="el" href="classvcl_1_1Segment.html">override</a></td></tr>
 <tr class="memdesc:aeeeac785e1052481ff21439dd04bfaad"><td class="mdescLeft">&#160;</td><td class="mdescRight">This member function is called after the initialization of the <a class="el" href="classvcl_1_1Context.html">Context</a>. It must initialize and bind data to the GPU like buffers and textures.  <br /></td></tr>
 <tr class="separator:aeeeac785e1052481ff21439dd04bfaad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c6ed744baf96d29f8d112d1d9403cdf" id="r_a2c6ed744baf96d29f8d112d1d9403cdf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1View.html">View</a>&lt; MatIt &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableMeshBGFX.html#a2c6ed744baf96d29f8d112d1d9403cdf">materials</a> () <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">override</a></td></tr>
-<tr class="separator:a2c6ed744baf96d29f8d112d1d9403cdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99f975571494215fafd7947324e1ff4f" id="r_a99f975571494215fafd7947324e1ff4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableMeshBGFX.html#a99f975571494215fafd7947324e1ff4f">isSelectionReadbackPending</a> () <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">override</a></td></tr>
+<tr class="separator:a99f975571494215fafd7947324e1ff4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59c8c118cb6bb73384aee980bf0fe4a9" id="r_a59c8c118cb6bb73384aee980bf0fe4a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1AbstractMeshProvider.html">AbstractMeshProvider</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableMeshBGFX.html#a59c8c118cb6bb73384aee980bf0fe4a9">meshProvider</a> () <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">override</a></td></tr>
+<tr class="separator:a59c8c118cb6bb73384aee980bf0fe4a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5543158a54a41d8e01d4fc18fee4cf24" id="r_a5543158a54a41d8e01d4fc18fee4cf24"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">const</a> std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableMeshBGFX.html#a5543158a54a41d8e01d4fc18fee4cf24">name</a> () <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">override</a></td></tr>
 <tr class="memdesc:a5543158a54a41d8e01d4fc18fee4cf24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of the object.  <br /></td></tr>
 <tr class="separator:a5543158a54a41d8e01d4fc18fee4cf24"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -192,22 +174,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae3fcccfe9345c8e9d61598b3f42bc796" id="r_ae3fcccfe9345c8e9d61598b3f42bc796"><td class="memItemLeft" align="right" valign="top"><a id="ae3fcccfe9345c8e9d61598b3f42bc796" name="ae3fcccfe9345c8e9d61598b3f42bc796"></a>
 <a class="el" href="classvcl_1_1DrawableMeshBGFX.html">DrawableMeshBGFX</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classvcl_1_1DrawableMeshBGFX.html">DrawableMeshBGFX</a> <a class="el" href="classvcl_1_1Segment.html">drawableMesh</a>)</td></tr>
 <tr class="separator:ae3fcccfe9345c8e9d61598b3f42bc796"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cd10bc6a509b38a77bc6c7515f05351" id="r_a3cd10bc6a509b38a77bc6c7515f05351"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableMeshBGFX.html#a3cd10bc6a509b38a77bc6c7515f05351">setFaceSelectionBitVector</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1BitVector.html">vcl::BitVector</a>&lt; <a class="el" href="classvcl_1_1Segment.html">true</a> &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">bitVector</a>) <a class="el" href="classvcl_1_1Segment.html">override</a></td></tr>
+<tr class="separator:a3cd10bc6a509b38a77bc6c7515f05351"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b51b0a87d845953610622849a5fb273" id="r_a5b51b0a87d845953610622849a5fb273"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableMeshBGFX.html#a5b51b0a87d845953610622849a5fb273">setRenderSettings</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1MeshRenderSettings.html">MeshRenderSettings</a> &amp;<a class="el" href="classvcl_1_1Segment.html">rs</a>) <a class="el" href="classvcl_1_1Segment.html">override</a></td></tr>
 <tr class="separator:a5b51b0a87d845953610622849a5fb273"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb3c0cf6f1c398869277f4bfe74bed95" id="r_abb3c0cf6f1c398869277f4bfe74bed95"><td class="memItemLeft" align="right" valign="top"><a id="abb3c0cf6f1c398869277f4bfe74bed95" name="abb3c0cf6f1c398869277f4bfe74bed95"></a>
-<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setSurfaceProgramType</b> (SurfaceProgramsType type)</td></tr>
-<tr class="separator:abb3c0cf6f1c398869277f4bfe74bed95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa947f487a2d7ef70c11457d6fe058d9b" id="r_aa947f487a2d7ef70c11457d6fe058d9b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableMeshBGFX.html#aa947f487a2d7ef70c11457d6fe058d9b">setVertexSelectionBitVector</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1BitVector.html">vcl::BitVector</a>&lt; <a class="el" href="classvcl_1_1Segment.html">true</a> &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">bitVector</a>) <a class="el" href="classvcl_1_1Segment.html">override</a></td></tr>
+<tr class="separator:aa947f487a2d7ef70c11457d6fe058d9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41bb379bdb35b674cc3de8833ee6a2c4" id="r_a41bb379bdb35b674cc3de8833ee6a2c4"><td class="memItemLeft" align="right" valign="top"><a id="a41bb379bdb35b674cc3de8833ee6a2c4" name="a41bb379bdb35b674cc3de8833ee6a2c4"></a>
 <a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>swap</b> (<a class="el" href="classvcl_1_1DrawableMeshBGFX.html">DrawableMeshBGFX</a> &amp;<a class="el" href="classvcl_1_1Segment.html">other</a>)</td></tr>
 <tr class="separator:a41bb379bdb35b674cc3de8833ee6a2c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c0610b441c10e9a543ede5d183afc0e" id="r_a5c0610b441c10e9a543ede5d183afc0e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Image.html">Image</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableMeshBGFX.html#a5c0610b441c10e9a543ede5d183afc0e">textureImage</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> std::string &amp;path) <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">override</a></td></tr>
-<tr class="separator:a5c0610b441c10e9a543ede5d183afc0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86fa92209b7ff7f5137bbb97cb0794d2" id="r_a86fa92209b7ff7f5137bbb97cb0794d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">vcl::Matrix44d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableMeshBGFX.html#a86fa92209b7ff7f5137bbb97cb0794d2">transformMatrix</a> () <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">override</a></td></tr>
-<tr class="separator:a86fa92209b7ff7f5137bbb97cb0794d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ababa6c280727b40597751360bce4ee09" id="r_ababa6c280727b40597751360bce4ee09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableMeshBGFX.html#ababa6c280727b40597751360bce4ee09">updateBuffers</a> (<a class="el" href="classvcl_1_1BitSet.html">MRI::BuffersBitSet</a> <a class="el" href="classvcl_1_1Segment.html">buffersToUpdate</a>=MRI::BUFFERS_ALL) <a class="el" href="classvcl_1_1Segment.html">override</a></td></tr>
 <tr class="separator:ababa6c280727b40597751360bce4ee09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2700506cbfcb34d1027242fd94f48b2b" id="r_a2700506cbfcb34d1027242fd94f48b2b"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableMeshBGFX.html#a2700506cbfcb34d1027242fd94f48b2b">vertexCount</a> () <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">override</a></td></tr>
-<tr class="separator:a2700506cbfcb34d1027242fd94f48b2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ac3267c23b35dbd4aa58a199be06e80" id="r_a7ac3267c23b35dbd4aa58a199be06e80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableMeshBGFX.html#a7ac3267c23b35dbd4aa58a199be06e80">updateRenderSettingsCapabilities</a> () <a class="el" href="classvcl_1_1Segment.html">override</a></td></tr>
+<tr class="separator:a7ac3267c23b35dbd4aa58a199be06e80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ea875d0a41728b0e97d3de01eb3585c" id="r_a9ea875d0a41728b0e97d3de01eb3585c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitVector.html">vcl::BitVector</a>&lt; <a class="el" href="classvcl_1_1Segment.html">true</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableMeshBGFX.html#a9ea875d0a41728b0e97d3de01eb3585c">vertexSelectionBitVector</a> () <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">override</a></td></tr>
+<tr class="separator:a9ea875d0a41728b0e97d3de01eb3585c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classvcl_1_1AbstractDrawableMesh"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classvcl_1_1AbstractDrawableMesh')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classvcl_1_1AbstractDrawableMesh.html">vcl::AbstractDrawableMesh</a></td></tr>
 <tr class="memitem:aa410247b657b2a1c9d7617c76bfa2268 inherit pub_methods_classvcl_1_1AbstractDrawableMesh" id="r_aa410247b657b2a1c9d7617c76bfa2268"><td class="memItemLeft" align="right" valign="top">
 &#160;</td><td class="memItemRight" valign="bottom"><b>AbstractDrawableMesh</b> (<a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1AbstractDrawableMesh.html">AbstractDrawableMesh</a> &amp;<a class="el" href="classvcl_1_1Segment.html">other</a>)=<a class="el" href="classvcl_1_1Segment.html">default</a></td></tr>
@@ -222,6 +203,9 @@ template&lt;MeshConcept MeshType&gt; </td></tr>
 <tr class="memitem:aa4b71d5f25acdef898f64a39a736962a inherit pub_methods_classvcl_1_1AbstractDrawableMesh" id="r_aa4b71d5f25acdef898f64a39a736962a"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1MeshRenderSettings.html">MeshRenderSettings</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>renderSettings</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
 <tr class="separator:aa4b71d5f25acdef898f64a39a736962a inherit pub_methods_classvcl_1_1AbstractDrawableMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a820ee7a1d5fcebaab290467dc90d3c05 inherit pub_methods_classvcl_1_1AbstractDrawableMesh" id="r_a820ee7a1d5fcebaab290467dc90d3c05"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setOnSelectionUpdatedCallback</b> (std::function&lt; <a class="el" href="classvcl_1_1Segment.html">void</a>()&gt; <a class="el" href="classvcl_1_1Segment.html">cb</a>)</td></tr>
+<tr class="separator:a820ee7a1d5fcebaab290467dc90d3c05 inherit pub_methods_classvcl_1_1AbstractDrawableMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad804fd258839c410bfb099e8cc8aa597 inherit pub_methods_classvcl_1_1AbstractDrawableMesh" id="r_ad804fd258839c410bfb099e8cc8aa597"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1AbstractDrawableMesh.html#ad804fd258839c410bfb099e8cc8aa597">setVisibility</a> (<a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1Segment.html">vis</a>) <a class="el" href="classvcl_1_1Segment.html">override</a></td></tr>
 <tr class="memdesc:ad804fd258839c410bfb099e8cc8aa597 inherit pub_methods_classvcl_1_1AbstractDrawableMesh"><td class="mdescLeft">&#160;</td><td class="mdescRight">This member function is used to set the visibility of the object.  <br /></td></tr>
 <tr class="separator:ad804fd258839c410bfb099e8cc8aa597 inherit pub_methods_classvcl_1_1AbstractDrawableMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -244,14 +228,10 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:abbd850aec20f7e979302af12bdf561c2" id="r_abbd850aec20f7e979302af12bdf561c2"><td class="memItemLeft" align="right" valign="top"><a id="abbd850aec20f7e979302af12bdf561c2" name="abbd850aec20f7e979302af12bdf561c2"></a>
 bgfx::ProgramHandle&#160;</td><td class="memItemRight" valign="bottom"><b>surfaceProgramSelector</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
 <tr class="separator:abbd850aec20f7e979302af12bdf561c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35fe32f86ecbddd1248f3db6e0aba61b" id="r_a35fe32f86ecbddd1248f3db6e0aba61b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">uint64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableMeshBGFX.html#a35fe32f86ecbddd1248f3db6e0aba61b">updateAndBindMaterialUniforms</a> (uint <a class="el" href="classvcl_1_1Segment.html">chunkNumber</a>, <a class="el" href="classvcl_1_1Segment.html">bool</a> imageBasedLighting) <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
-<tr class="memdesc:a35fe32f86ecbddd1248f3db6e0aba61b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets and binds the material uniforms for the given triangle chunk, and returns the render state associated to the material that must be set for the draw call.  <br /></td></tr>
-<tr class="separator:a35fe32f86ecbddd1248f3db6e0aba61b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15a7f76c3764d7e8a05a8739abca3d39" id="r_a15a7f76c3764d7e8a05a8739abca3d39"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">uint64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableMeshBGFX.html#a15a7f76c3764d7e8a05a8739abca3d39">updateAndBindMaterialUniforms</a> (uint <a class="el" href="classvcl_1_1Segment.html">chunkNumber</a>) <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
+<tr class="memdesc:a15a7f76c3764d7e8a05a8739abca3d39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets and binds the material uniforms for the given triangle chunk, and returns the render state associated to the material that must be set for the draw call.  <br /></td></tr>
+<tr class="separator:a15a7f76c3764d7e8a05a8739abca3d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classvcl_1_1AbstractDrawableMesh"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classvcl_1_1AbstractDrawableMesh')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classvcl_1_1AbstractDrawableMesh.html">vcl::AbstractDrawableMesh</a></td></tr>
-<tr class="memitem:aebdb6184a83316e6b82325983fa25283 inherit pro_methods_classvcl_1_1AbstractDrawableMesh" id="r_aebdb6184a83316e6b82325983fa25283"><td class="memTemplParams" colspan="2">
-template&lt;MeshConcept MeshType&gt; </td></tr>
-<tr class="memitem:aebdb6184a83316e6b82325983fa25283 inherit pro_methods_classvcl_1_1AbstractDrawableMesh"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>computeBoundingBox</b> (<a class="el" href="classvcl_1_1Segment.html">const</a> MeshType &amp;<a class="el" href="classvcl_1_1Segment.html">m</a>)</td></tr>
-<tr class="separator:aebdb6184a83316e6b82325983fa25283 inherit pro_methods_classvcl_1_1AbstractDrawableMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac207a6046de26b2e32218f022ea69d40 inherit pro_methods_classvcl_1_1AbstractDrawableMesh" id="r_ac207a6046de26b2e32218f022ea69d40"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>swap</b> (<a class="el" href="classvcl_1_1AbstractDrawableMesh.html">AbstractDrawableMesh</a> &amp;<a class="el" href="classvcl_1_1Segment.html">other</a>)</td></tr>
 <tr class="separator:ac207a6046de26b2e32218f022ea69d40 inherit pro_methods_classvcl_1_1AbstractDrawableMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -265,25 +245,21 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:aa76420f62aa2b26b6f96ae473e5e58d2" id="r_aa76420f62aa2b26b6f96ae473e5e58d2"><td class="memItemLeft" align="right" valign="top"><a id="aa76420f62aa2b26b6f96ae473e5e58d2" name="aa76420f62aa2b26b6f96ae473e5e58d2"></a>
 <a class="el" href="classvcl_1_1MeshRenderBuffers.html">MeshRenderBuffers</a>&lt; MeshType &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mMRB</b></td></tr>
 <tr class="separator:aa76420f62aa2b26b6f96ae473e5e58d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4034626b1c24a97dc4734221ae654ec3" id="r_a4034626b1c24a97dc4734221ae654ec3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1MeshProviderReference.html">MeshProviderReference</a>&lt; MeshType &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableMeshBGFX.html#a4034626b1c24a97dc4734221ae654ec3">mProvider</a></td></tr>
+<tr class="separator:a4034626b1c24a97dc4734221ae654ec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classvcl_1_1AbstractDrawableMesh"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classvcl_1_1AbstractDrawableMesh')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classvcl_1_1AbstractDrawableMesh.html">vcl::AbstractDrawableMesh</a></td></tr>
-<tr class="memitem:a4ea2b41576c4a81f936b52afd92956c6 inherit pro_attribs_classvcl_1_1AbstractDrawableMesh" id="r_a4ea2b41576c4a81f936b52afd92956c6"><td class="memItemLeft" align="right" valign="top">
-<a class="el" href="classvcl_1_1Box.html">Box3d</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mBoundingBox</b></td></tr>
-<tr class="separator:a4ea2b41576c4a81f936b52afd92956c6 inherit pro_attribs_classvcl_1_1AbstractDrawableMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83f473a42c3ae4db9a9c8de5c3b6b746 inherit pro_attribs_classvcl_1_1AbstractDrawableMesh" id="r_a83f473a42c3ae4db9a9c8de5c3b6b746"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="classvcl_1_1MeshRenderSettings.html">MeshRenderSettings</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mMRS</b></td></tr>
 <tr class="separator:a83f473a42c3ae4db9a9c8de5c3b6b746 inherit pro_attribs_classvcl_1_1AbstractDrawableMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac01b77e2cfa9d12e378e21a880f9a032 inherit pro_attribs_classvcl_1_1AbstractDrawableMesh" id="r_ac01b77e2cfa9d12e378e21a880f9a032"><td class="memItemLeft" align="right" valign="top">
+std::function&lt; <a class="el" href="classvcl_1_1Segment.html">void</a>()&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mOnSelectionUpdated</b></td></tr>
+<tr class="separator:ac01b77e2cfa9d12e378e21a880f9a032 inherit pro_attribs_classvcl_1_1AbstractDrawableMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-types" name="pri-types"></a>
 Private Types</h2></td></tr>
 <tr class="memitem:a2fa3c24b1e8fc2549edb42785418157c" id="r_a2fa3c24b1e8fc2549edb42785418157c"><td class="memItemLeft" align="right" valign="top"><a id="a2fa3c24b1e8fc2549edb42785418157c" name="a2fa3c24b1e8fc2549edb42785418157c"></a>
 <a class="el" href="classvcl_1_1Segment.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><b>MRI</b> = <a class="el" href="classvcl_1_1MeshRenderInfo.html">MeshRenderInfo</a></td></tr>
 <tr class="separator:a2fa3c24b1e8fc2549edb42785418157c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:aedef208d1db738edb1a7587632834850" id="r_aedef208d1db738edb1a7587632834850"><td class="memItemLeft" align="right" valign="top"><a id="aedef208d1db738edb1a7587632834850" name="aedef208d1db738edb1a7587632834850"></a>
-SurfaceProgramsType&#160;</td><td class="memItemRight" valign="bottom"><b>mSurfaceProgramType</b> = SurfaceProgramsType::UBER</td></tr>
-<tr class="separator:aedef208d1db738edb1a7587632834850"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
@@ -293,8 +269,15 @@ Static Private Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:ac18d8e96afb2034efe9162d9403e3633" id="r_ac18d8e96afb2034efe9162d9403e3633"><td class="memItemLeft" align="right" valign="top"><a id="ac18d8e96afb2034efe9162d9403e3633" name="ac18d8e96afb2034efe9162d9403e3633"></a>
-<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>swap</b> (<a class="el" href="classvcl_1_1DrawableMeshBGFX.html">DrawableMeshBGFX</a> &amp;<a class="el" href="classvcl_1_1Segment.html">a</a>, <a class="el" href="classvcl_1_1DrawableMeshBGFX.html">DrawableMeshBGFX</a> &amp;<a class="el" href="classvcl_1_1Segment.html">b</a>)</td></tr>
+<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>swap</b> (<a class="el" href="classvcl_1_1DrawableMeshBGFX.html">DrawableMeshBGFX</a> &amp;a, <a class="el" href="classvcl_1_1DrawableMeshBGFX.html">DrawableMeshBGFX</a> &amp;b)</td></tr>
 <tr class="separator:ac18d8e96afb2034efe9162d9403e3633"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_classvcl_1_1AbstractDrawableMesh"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classvcl_1_1AbstractDrawableMesh')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classvcl_1_1AbstractDrawableMesh.html">vcl::AbstractDrawableMesh</a></td></tr>
+<tr class="memitem:a17a134a4cb2d8ad718f8b1192db3dc0e inherit pub_types_classvcl_1_1AbstractDrawableMesh" id="r_a17a134a4cb2d8ad718f8b1192db3dc0e"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="classvcl_1_1Segment.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><b>MatIt</b> = std::vector&lt; <a class="el" href="classvcl_1_1Material.html">Material</a> &gt;::const_iterator</td></tr>
+<tr class="separator:a17a134a4cb2d8ad718f8b1192db3dc0e inherit pub_types_classvcl_1_1AbstractDrawableMesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a7d1790c2f80aac31af3e3e9a7a910d04" name="a7d1790c2f80aac31af3e3e9a7a910d04"></a>
@@ -309,7 +292,7 @@ template&lt;MeshConcept MeshType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Box.html">Box3d</a> vcl::AbstractDrawableMesh::boundingBox </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">Box3d</a> vcl::AbstractDrawableMesh::boundingBox </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -329,8 +312,8 @@ template&lt;MeshConcept MeshType&gt; </div>
 
 </div>
 </div>
-<a id="a775e7167549414e75904234996972056" name="a775e7167549414e75904234996972056"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a775e7167549414e75904234996972056">&#9670;&#160;</a></span>clone() <span class="overload">[1/2]</span></h2>
+<a id="a4a036df2d93618aba413e00c28ed5a87" name="a4a036df2d93618aba413e00c28ed5a87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a036df2d93618aba413e00c28ed5a87">&#9670;&#160;</a></span>computeSelection()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -341,10 +324,11 @@ template&lt;MeshConcept MeshType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::shared_ptr&lt; <a class="el" href="classvcl_1_1DrawableObject.html">DrawableObject</a> &gt; <a class="el" href="classvcl_1_1DrawableMeshBGFX.html">vcl::DrawableMeshBGFX</a>&lt; MeshType &gt;::clone </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">void</a> <a class="el" href="classvcl_1_1DrawableMeshBGFX.html">vcl::DrawableMeshBGFX</a>&lt; MeshType &gt;::computeSelection </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> &amp;&amp;</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="structvcl_1_1SelectionParameters.html">SelectionParameters</a> &amp;&#160;</td>
+          <td class="paramname"><em>params</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -354,58 +338,12 @@ template&lt;MeshConcept MeshType&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>This member function is used to create a new <a class="el" href="classvcl_1_1DrawableObject.html" title="The DrawableObject class is the base class for all the objects that can be drawn in a 3D viewer.">DrawableObject</a> that is a moved from the current one. This object will be destroyed after the call of this function. Each derived class must implement this member function, that returns a shared pointer pointing to the moved object. For more details about this paradigm, check polimorphism clone in modern c++: <a href="https://www.fluentcpp.com/2017/09/08/make-polymorphic-copy-modern-cpp/">https://www.fluentcpp.com/2017/09/08/make-polymorphic-copy-modern-cpp/</a>. </p>
-<p>Generally, if your class that inherits from <a class="el" href="classvcl_1_1DrawableObject.html" title="The DrawableObject class is the base class for all the objects that can be drawn in a 3D viewer.">DrawableObject</a> is called MyObject, the clone member function should be implemented as follows:</p>
-<div class="fragment"><div class="line">std::shared_ptr&lt;DrawableObject&gt; MyObject::clone() &amp;&amp;</div>
-<div class="line">{</div>
-<div class="line">   <span class="keywordflow">return</span> std::make_shared&lt;MyObject&gt;(std::move(*<span class="keyword">this</span>));</div>
-<div class="line">}</div>
-</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>A shared pointers that points to a new <a class="el" href="classvcl_1_1DrawableObject.html" title="The DrawableObject class is the base class for all the objects that can be drawn in a 3D viewer.">DrawableObject</a> that is a moved from the current one. </dd></dl>
-
-<p>Implements <a class="el" href="classvcl_1_1DrawableObject.html#aa382b5f7ea887d2894c4d7934d3afe83">vcl::DrawableObject</a>.</p>
+<p>Reimplemented from <a class="el" href="classvcl_1_1AbstractDrawableMesh.html">vcl::AbstractDrawableMesh</a>.</p>
 
 </div>
 </div>
-<a id="a0cd54c6f04b51c786c36ff5b1076a872" name="a0cd54c6f04b51c786c36ff5b1076a872"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0cd54c6f04b51c786c36ff5b1076a872">&#9670;&#160;</a></span>clone() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;MeshConcept MeshType&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt; <a class="el" href="classvcl_1_1DrawableObject.html">DrawableObject</a> &gt; <a class="el" href="classvcl_1_1DrawableMeshBGFX.html">vcl::DrawableMeshBGFX</a>&lt; MeshType &gt;::clone </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const &amp;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>This member function is used to create a new copy of the <a class="el" href="classvcl_1_1DrawableObject.html" title="The DrawableObject class is the base class for all the objects that can be drawn in a 3D viewer.">DrawableObject</a>. Each derived class must implement this member function, that returns a shared pointer pointing to a copy of the current one. for more details about this paradigm, check polimorphism clone in modern c++: <a href="https://www.fluentcpp.com/2017/09/08/make-polymorphic-copy-modern-cpp/">https://www.fluentcpp.com/2017/09/08/make-polymorphic-copy-modern-cpp/</a>. </p>
-<p>Generally, if your class that inherits from <a class="el" href="classvcl_1_1DrawableObject.html" title="The DrawableObject class is the base class for all the objects that can be drawn in a 3D viewer.">DrawableObject</a> is called MyObject, the clone member function should be implemented as follows:</p>
-<div class="fragment"><div class="line">std::shared_ptr&lt;DrawableObject&gt; MyObject::clone() <a class="code hl_class" href="classvcl_1_1Segment.html">const</a>&amp;</div>
-<div class="line">{</div>
-<div class="line">   <span class="keywordflow">return</span> std::make_shared&lt;MyObject&gt;(*<span class="keyword">this</span>);</div>
-<div class="line">}</div>
-<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:41</div></div>
-</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>A shared pointers that points to a new <a class="el" href="classvcl_1_1DrawableObject.html" title="The DrawableObject class is the base class for all the objects that can be drawn in a 3D viewer.">DrawableObject</a> that is a copy of the current one. </dd></dl>
-
-<p>Implements <a class="el" href="classvcl_1_1DrawableObject.html#aed0d44d07cb86a6ac7509f01680db62c">vcl::DrawableObject</a>.</p>
-
-</div>
-</div>
-<a id="a979b31deac9d8eff553675bf4c13122a" name="a979b31deac9d8eff553675bf4c13122a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a979b31deac9d8eff553675bf4c13122a">&#9670;&#160;</a></span>draw()</h2>
+<a id="add8e5ebdf5287a73a10d7286cd7df464" name="add8e5ebdf5287a73a10d7286cd7df464"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add8e5ebdf5287a73a10d7286cd7df464">&#9670;&#160;</a></span>draw()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -420,7 +358,7 @@ template&lt;MeshConcept MeshType&gt; </div>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">DrawObjectSettings</a> &amp;&#160;</td>
           <td class="paramname"><em>settings</em></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -438,12 +376,12 @@ template&lt;MeshConcept MeshType&gt; </div>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classvcl_1_1DrawableObject.html#a530baed5108b8e1c7fcefef639ee2f8e">vcl::DrawableObject</a>.</p>
+<p>Implements <a class="el" href="classvcl_1_1DrawableObject.html#a62c5b447e47b1f95fcfb0411d6a86d08">vcl::DrawableObject</a>.</p>
 
 </div>
 </div>
-<a id="aa8b4c71ac449741c48a87224bc552646" name="aa8b4c71ac449741c48a87224bc552646"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8b4c71ac449741c48a87224bc552646">&#9670;&#160;</a></span>drawId()</h2>
+<a id="af1c77ee07db6e116a86c2f51d2a4f1e0" name="af1c77ee07db6e116a86c2f51d2a4f1e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1c77ee07db6e116a86c2f51d2a4f1e0">&#9670;&#160;</a></span>drawId()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -458,7 +396,7 @@ template&lt;MeshConcept MeshType&gt; </div>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">DrawObjectSettings</a> &amp;&#160;</td>
           <td class="paramname"><em>settings</em></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -476,12 +414,12 @@ template&lt;MeshConcept MeshType&gt; </div>
   </dd>
 </dl>
 
-<p>Reimplemented from <a class="el" href="classvcl_1_1DrawableObject.html#a9b5238a28d54c19380b1211f20ed4135">vcl::DrawableObject</a>.</p>
+<p>Reimplemented from <a class="el" href="classvcl_1_1DrawableObject.html#a594f178f0c685acf8e10ae86f374dfb6">vcl::DrawableObject</a>.</p>
 
 </div>
 </div>
-<a id="af9222fa1246404bf06899c3ffa7f84c6" name="af9222fa1246404bf06899c3ffa7f84c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af9222fa1246404bf06899c3ffa7f84c6">&#9670;&#160;</a></span>edgeCount()</h2>
+<a id="a03dd123cfa98b39c2609556566004457" name="a03dd123cfa98b39c2609556566004457"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03dd123cfa98b39c2609556566004457">&#9670;&#160;</a></span>faceSelectionBitVector()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -492,7 +430,7 @@ template&lt;MeshConcept MeshType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint <a class="el" href="classvcl_1_1DrawableMeshBGFX.html">vcl::DrawableMeshBGFX</a>&lt; MeshType &gt;::edgeCount </td>
+          <td class="memname"><a class="el" href="classvcl_1_1BitVector.html">vcl::BitVector</a>&lt; <a class="el" href="classvcl_1_1Segment.html">true</a> &gt; <a class="el" href="classvcl_1_1DrawableMeshBGFX.html">vcl::DrawableMeshBGFX</a>&lt; MeshType &gt;::faceSelectionBitVector </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -505,36 +443,7 @@ template&lt;MeshConcept MeshType&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classvcl_1_1AbstractDrawableMesh.html">vcl::AbstractDrawableMesh</a>.</p>
-
-</div>
-</div>
-<a id="af777cfb82f206821627681faad63d204" name="af777cfb82f206821627681faad63d204"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af777cfb82f206821627681faad63d204">&#9670;&#160;</a></span>faceCount()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;MeshConcept MeshType&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint <a class="el" href="classvcl_1_1DrawableMeshBGFX.html">vcl::DrawableMeshBGFX</a>&lt; MeshType &gt;::faceCount </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implements <a class="el" href="classvcl_1_1AbstractDrawableMesh.html">vcl::AbstractDrawableMesh</a>.</p>
+<p>Reimplemented from <a class="el" href="classvcl_1_1AbstractDrawableMesh.html">vcl::AbstractDrawableMesh</a>.</p>
 
 </div>
 </div>
@@ -569,8 +478,8 @@ template&lt;MeshConcept MeshType&gt; </div>
 
 </div>
 </div>
-<a id="a2c6ed744baf96d29f8d112d1d9403cdf" name="a2c6ed744baf96d29f8d112d1d9403cdf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c6ed744baf96d29f8d112d1d9403cdf">&#9670;&#160;</a></span>materials()</h2>
+<a id="a99f975571494215fafd7947324e1ff4f" name="a99f975571494215fafd7947324e1ff4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99f975571494215fafd7947324e1ff4f">&#9670;&#160;</a></span>isSelectionReadbackPending()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -581,7 +490,7 @@ template&lt;MeshConcept MeshType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1View.html">View</a>&lt; MatIt &gt; <a class="el" href="classvcl_1_1DrawableMeshBGFX.html">vcl::DrawableMeshBGFX</a>&lt; MeshType &gt;::materials </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1DrawableMeshBGFX.html">vcl::DrawableMeshBGFX</a>&lt; MeshType &gt;::isSelectionReadbackPending </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -595,6 +504,35 @@ template&lt;MeshConcept MeshType&gt; </div>
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="classvcl_1_1AbstractDrawableMesh.html">vcl::AbstractDrawableMesh</a>.</p>
+
+</div>
+</div>
+<a id="a59c8c118cb6bb73384aee980bf0fe4a9" name="a59c8c118cb6bb73384aee980bf0fe4a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59c8c118cb6bb73384aee980bf0fe4a9">&#9670;&#160;</a></span>meshProvider()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;MeshConcept MeshType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1AbstractMeshProvider.html">AbstractMeshProvider</a> &amp; <a class="el" href="classvcl_1_1DrawableMeshBGFX.html">vcl::DrawableMeshBGFX</a>&lt; MeshType &gt;::meshProvider </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classvcl_1_1AbstractDrawableMesh.html">vcl::AbstractDrawableMesh</a>.</p>
 
 </div>
 </div>
@@ -667,6 +605,36 @@ template&lt;MeshConcept MeshType&gt; </div>
 
 </div>
 </div>
+<a id="a3cd10bc6a509b38a77bc6c7515f05351" name="a3cd10bc6a509b38a77bc6c7515f05351"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cd10bc6a509b38a77bc6c7515f05351">&#9670;&#160;</a></span>setFaceSelectionBitVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;MeshConcept MeshType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">void</a> <a class="el" href="classvcl_1_1DrawableMeshBGFX.html">vcl::DrawableMeshBGFX</a>&lt; MeshType &gt;::setFaceSelectionBitVector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1BitVector.html">vcl::BitVector</a>&lt; <a class="el" href="classvcl_1_1Segment.html">true</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>bitVector</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classvcl_1_1AbstractDrawableMesh.html">vcl::AbstractDrawableMesh</a>.</p>
+
+</div>
+</div>
 <a id="a5b51b0a87d845953610622849a5fb273" name="a5b51b0a87d845953610622849a5fb273"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5b51b0a87d845953610622849a5fb273">&#9670;&#160;</a></span>setRenderSettings()</h2>
 
@@ -697,8 +665,8 @@ template&lt;MeshConcept MeshType&gt; </div>
 
 </div>
 </div>
-<a id="a5c0610b441c10e9a543ede5d183afc0e" name="a5c0610b441c10e9a543ede5d183afc0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c0610b441c10e9a543ede5d183afc0e">&#9670;&#160;</a></span>textureImage()</h2>
+<a id="aa947f487a2d7ef70c11457d6fe058d9b" name="aa947f487a2d7ef70c11457d6fe058d9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa947f487a2d7ef70c11457d6fe058d9b">&#9670;&#160;</a></span>setVertexSelectionBitVector()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -709,11 +677,11 @@ template&lt;MeshConcept MeshType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Image.html">Image</a> &amp; <a class="el" href="classvcl_1_1DrawableMeshBGFX.html">vcl::DrawableMeshBGFX</a>&lt; MeshType &gt;::textureImage </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">void</a> <a class="el" href="classvcl_1_1DrawableMeshBGFX.html">vcl::DrawableMeshBGFX</a>&lt; MeshType &gt;::setVertexSelectionBitVector </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">const</a> std::string &amp;&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1BitVector.html">vcl::BitVector</a>&lt; <a class="el" href="classvcl_1_1Segment.html">true</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>bitVector</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -727,37 +695,8 @@ template&lt;MeshConcept MeshType&gt; </div>
 
 </div>
 </div>
-<a id="a86fa92209b7ff7f5137bbb97cb0794d2" name="a86fa92209b7ff7f5137bbb97cb0794d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a86fa92209b7ff7f5137bbb97cb0794d2">&#9670;&#160;</a></span>transformMatrix()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;MeshConcept MeshType&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">vcl::Matrix44d</a> <a class="el" href="classvcl_1_1DrawableMeshBGFX.html">vcl::DrawableMeshBGFX</a>&lt; MeshType &gt;::transformMatrix </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implements <a class="el" href="classvcl_1_1AbstractDrawableMesh.html">vcl::AbstractDrawableMesh</a>.</p>
-
-</div>
-</div>
-<a id="a35fe32f86ecbddd1248f3db6e0aba61b" name="a35fe32f86ecbddd1248f3db6e0aba61b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35fe32f86ecbddd1248f3db6e0aba61b">&#9670;&#160;</a></span>updateAndBindMaterialUniforms()</h2>
+<a id="a15a7f76c3764d7e8a05a8739abca3d39" name="a15a7f76c3764d7e8a05a8739abca3d39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15a7f76c3764d7e8a05a8739abca3d39">&#9670;&#160;</a></span>updateAndBindMaterialUniforms()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -771,18 +710,8 @@ template&lt;MeshConcept MeshType&gt; </div>
           <td class="memname"><a class="el" href="classvcl_1_1Segment.html">uint64_t</a> <a class="el" href="classvcl_1_1DrawableMeshBGFX.html">vcl::DrawableMeshBGFX</a>&lt; MeshType &gt;::updateAndBindMaterialUniforms </td>
           <td>(</td>
           <td class="paramtype">uint&#160;</td>
-          <td class="paramname"><em>chunkNumber</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td>
-          <td class="paramname"><em>imageBasedLighting</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
+          <td class="paramname"><em>chunkNumber</em></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -833,8 +762,8 @@ template&lt;MeshConcept MeshType&gt; </div>
 
 </div>
 </div>
-<a id="a2700506cbfcb34d1027242fd94f48b2b" name="a2700506cbfcb34d1027242fd94f48b2b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2700506cbfcb34d1027242fd94f48b2b">&#9670;&#160;</a></span>vertexCount()</h2>
+<a id="a7ac3267c23b35dbd4aa58a199be06e80" name="a7ac3267c23b35dbd4aa58a199be06e80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ac3267c23b35dbd4aa58a199be06e80">&#9670;&#160;</a></span>updateRenderSettingsCapabilities()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -845,10 +774,10 @@ template&lt;MeshConcept MeshType&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint <a class="el" href="classvcl_1_1DrawableMeshBGFX.html">vcl::DrawableMeshBGFX</a>&lt; MeshType &gt;::vertexCount </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">void</a> <a class="el" href="classvcl_1_1DrawableMeshBGFX.html">vcl::DrawableMeshBGFX</a>&lt; MeshType &gt;::updateRenderSettingsCapabilities </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -862,7 +791,62 @@ template&lt;MeshConcept MeshType&gt; </div>
 
 </div>
 </div>
+<a id="a9ea875d0a41728b0e97d3de01eb3585c" name="a9ea875d0a41728b0e97d3de01eb3585c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ea875d0a41728b0e97d3de01eb3585c">&#9670;&#160;</a></span>vertexSelectionBitVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;MeshConcept MeshType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1BitVector.html">vcl::BitVector</a>&lt; <a class="el" href="classvcl_1_1Segment.html">true</a> &gt; <a class="el" href="classvcl_1_1DrawableMeshBGFX.html">vcl::DrawableMeshBGFX</a>&lt; MeshType &gt;::vertexSelectionBitVector </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classvcl_1_1AbstractDrawableMesh.html">vcl::AbstractDrawableMesh</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a4034626b1c24a97dc4734221ae654ec3" name="a4034626b1c24a97dc4734221ae654ec3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4034626b1c24a97dc4734221ae654ec3">&#9670;&#160;</a></span>mProvider</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;MeshConcept MeshType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1MeshProviderReference.html">MeshProviderReference</a>&lt;MeshType&gt; <a class="el" href="classvcl_1_1DrawableMeshBGFX.html">vcl::DrawableMeshBGFX</a>&lt; MeshType &gt;::mProvider</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div>
+<div class="line">        <span class="keyword">static_cast&lt;</span><span class="keyword">const </span>MeshType&amp;<span class="keyword">&gt;</span>(*this)}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="ad6754bc10be241878386aefb88bcf109" name="ad6754bc10be241878386aefb88bcf109"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad6754bc10be241878386aefb88bcf109">&#9670;&#160;</a></span>N_TEXTURE_TYPES</h2>
 

@@ -133,17 +133,21 @@ Public Types</h2></td></tr>
 , <b>VERT_TEXCOORDS</b>
 , <br />
 &#160;&#160;<b>VERT_TANGENT</b>
+, <b>VERT_SELECTION</b>
 , <b>TRIANGLES</b>
 , <b>TRI_NORMALS</b>
-, <b>TRI_COLORS</b>
 , <br />
-&#160;&#160;<b>WEDGE_TEXCOORDS</b>
+&#160;&#160;<b>TRI_COLORS</b>
+, <b>FACE_SELECTION</b>
+, <b>WEDGE_TEXCOORDS</b>
 , <b>WIREFRAME</b>
-, <b>EDGES</b>
-, <b>EDGE_COLORS</b>
 , <br />
-&#160;&#160;<b>EDGE_NORMALS</b>
-, <b>TEXTURES</b>
+&#160;&#160;<b>EDGES</b>
+, <b>EDGE_COLORS</b>
+, <b>EDGE_NORMALS</b>
+, <b>EDGE_SELECTION</b>
+, <br />
+&#160;&#160;<b>TEXTURES</b>
 , <b>MESH_ADDITIONAL_DATA</b>
 , <b>COUNT</b>
 <br />
@@ -163,7 +167,8 @@ Public Types</h2></td></tr>
 , <b>COLOR_MESH</b> = VCL_MRS_EDGES_COLOR_MESH
 , <b>COLOR_USER</b> = VCL_MRS_EDGES_COLOR_USER
 , <br />
-&#160;&#160;<b>COUNT</b>
+&#160;&#160;<b>SELECTION</b> = VCL_MRS_EDGES_DRAW_SELECTION
+, <b>COUNT</b>
 <br />
  }</td></tr>
 <tr class="memdesc:aef510f701c23aab4947d6264ebaa4826"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of possible settings for the edges primitive. <br /></td></tr>
@@ -180,6 +185,7 @@ Public Types</h2></td></tr>
 , <b>COLOR_MESH</b> = VCL_MRS_POINTS_COLOR_MESH
 , <br />
 &#160;&#160;<b>COLOR_USER</b> = VCL_MRS_POINTS_COLOR_USER
+, <b>SELECTION</b> = VCL_MRS_POINTS_DRAW_SELECTION
 , <b>COUNT</b>
 <br />
  }</td></tr>
@@ -202,14 +208,22 @@ Public Types</h2></td></tr>
 , <b>SHADING_FLAT</b> = VCL_MRS_SURF_SHADING_FLAT
 , <b>SHADING_SMOOTH</b> = VCL_MRS_SURF_SHADING_SMOOTH
 , <br />
-&#160;&#160;<b>COLOR_VERTEX</b> = VCL_MRS_SURF_COLOR_VERTEX
+&#160;&#160;<b>SHADING_NORMAL_MAP</b> = VCL_MRS_SURF_SHADING_NORMAL_MAP
+, <b>COLOR_VERTEX</b> = VCL_MRS_SURF_COLOR_VERTEX
 , <b>COLOR_FACE</b> = VCL_MRS_SURF_COLOR_FACE
 , <b>COLOR_VERTEX_TEX</b> = VCL_MRS_SURF_TEX_VERTEX
-, <b>COLOR_WEDGE_TEX</b> = VCL_MRS_SURF_TEX_WEDGE
 , <br />
-&#160;&#160;<b>COLOR_MESH</b> = VCL_MRS_SURF_COLOR_MESH
+&#160;&#160;<b>COLOR_WEDGE_TEX</b> = VCL_MRS_SURF_TEX_WEDGE
+, <b>COLOR_MESH</b> = VCL_MRS_SURF_COLOR_MESH
 , <b>COLOR_USER</b> = VCL_MRS_SURF_COLOR_USER
-, <b>COUNT</b>
+, <b>SELECTION</b> = VCL_MRS_SURF_DRAW_SELECTION
+, <br />
+&#160;&#160;<b>BACKFACE_SINGLE</b> = VCL_MRS_SURF_BF_SINGLE
+, <b>BACKFACE_DOUBLE</b> = VCL_MRS_SURF_BF_DOUBLE
+, <b>BACKFACE_CULL</b> = VCL_MRS_SURF_BF_CULL
+, <b>SPECULAR</b> = VCL_MRS_SURF_SPECULAR
+, <br />
+&#160;&#160;<b>COUNT</b>
 <br />
  }</td></tr>
 <tr class="memdesc:a7484200c8959e56605375c4ed01c1a49"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of possible settings for the surface primitive. <br /></td></tr>
@@ -295,7 +309,7 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:af0988808c2e037cab4bfa74363eeeef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a primitive and a setting, returns pair representing the range in the primitive enumeration of the mutual exclusive settings for the given setting.  <br /></td></tr>
 <tr class="separator:af0988808c2e037cab4bfa74363eeeef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac92b6b3317ad0b0df52a776a9c385ee6" id="r_ac92b6b3317ad0b0df52a776a9c385ee6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">static</a> <a class="el" href="classvcl_1_1Segment.html">constexpr</a> <a class="el" href="classvcl_1_1Segment.html">auto</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshRenderInfo.html#ac92b6b3317ad0b0df52a776a9c385ee6">pointsExclusiveRange</a> (<a class="el" href="classvcl_1_1Segment.html">auto</a> value)</td></tr>
-<tr class="memdesc:ac92b6b3317ad0b0df52a776a9c385ee6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns pair representing the range in the Points enumeration of the mutual exclusive settings for the given setting.  <br /></td></tr>
+<tr class="memdesc:ac92b6b3317ad0b0df52a776a9c385ee6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns pair representing the range in the <a class="el" href="classvcl_1_1Points.html" title="Renders a set of 3D points in world space as point splats (squares or circles).">Points</a> enumeration of the mutual exclusive settings for the given setting.  <br /></td></tr>
 <tr class="separator:ac92b6b3317ad0b0df52a776a9c385ee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5202b91398437f0f2efcde4ffa55da8f" id="r_a5202b91398437f0f2efcde4ffa55da8f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">static</a> <a class="el" href="classvcl_1_1Segment.html">constexpr</a> <a class="el" href="classvcl_1_1Segment.html">auto</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshRenderInfo.html#a5202b91398437f0f2efcde4ffa55da8f">surfaceExclusiveRange</a> (<a class="el" href="classvcl_1_1Segment.html">auto</a> value)</td></tr>
 <tr class="memdesc:a5202b91398437f0f2efcde4ffa55da8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns pair representing the range in the Surface enumeration of the mutual exclusive settings for the given setting.  <br /></td></tr>
@@ -315,9 +329,9 @@ Static Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-types" name="pri-types"></a>
 Private Types</h2></td></tr>
-<tr class="memitem:ad13d495f47e547d4b69bcc708c442fbd" id="r_ad13d495f47e547d4b69bcc708c442fbd"><td class="memItemLeft" align="right" valign="top"><a id="ad13d495f47e547d4b69bcc708c442fbd" name="ad13d495f47e547d4b69bcc708c442fbd"></a>
-<a class="el" href="classvcl_1_1Segment.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><b>BuffersBitSetUnderlyingType</b> = <a class="el" href="classvcl_1_1Segment.html">ushort</a></td></tr>
-<tr class="separator:ad13d495f47e547d4b69bcc708c442fbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e1fd115397332f445f671958ca2bb28" id="r_a8e1fd115397332f445f671958ca2bb28"><td class="memItemLeft" align="right" valign="top"><a id="a8e1fd115397332f445f671958ca2bb28" name="a8e1fd115397332f445f671958ca2bb28"></a>
+<a class="el" href="classvcl_1_1Segment.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><b>BuffersBitSetUnderlyingType</b> = <a class="el" href="classvcl_1_1Segment.html">uint</a></td></tr>
+<tr class="separator:a8e1fd115397332f445f671958ca2bb28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
 Static Private Member Functions</h2></td></tr>
@@ -478,7 +492,7 @@ template&lt;<a class="el" href="classvcl_1_1MeshRenderInfo.html#a05c0871c8cf74ec
 
 <p>Given a primitive and a setting, returns pair representing the range in the primitive enumeration of the mutual exclusive settings for the given setting. </p>
 <p>If the given value does not belong to any range, the function returns a pair having the same value as first and second element.</p>
-<p>E.g. for a Points primitive, if the setting given is COLOR_USER, the function returns a pair having as first value the first setting of the Points enumeration that starts with COLOR_ and as second value the last setting of the Points enumeration that starts with COLOR_.</p>
+<p>E.g. for a <a class="el" href="classvcl_1_1Points.html" title="Renders a set of 3D points in world space as point splats (squares or circles).">Points</a> primitive, if the setting given is COLOR_USER, the function returns a pair having as first value the first setting of the <a class="el" href="classvcl_1_1Points.html" title="Renders a set of 3D points in world space as point splats (squares or circles).">Points</a> enumeration that starts with COLOR_ and as second value the last setting of the <a class="el" href="classvcl_1_1Points.html" title="Renders a set of 3D points in world space as point splats (squares or circles).">Points</a> enumeration that starts with COLOR_.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">PRIMITIVE</td><td>the primitive for which to get the exclusive range.</td></tr>
@@ -575,9 +589,9 @@ template&lt;<a class="el" href="classvcl_1_1MeshRenderInfo.html#a05c0871c8cf74ec
 </table>
 </div><div class="memdoc">
 
-<p>Returns pair representing the range in the Points enumeration of the mutual exclusive settings for the given setting. </p>
+<p>Returns pair representing the range in the <a class="el" href="classvcl_1_1Points.html" title="Renders a set of 3D points in world space as point splats (squares or circles).">Points</a> enumeration of the mutual exclusive settings for the given setting. </p>
 <p>If the given value does not belong to any range, the function returns a pair having the same value as first and second element.</p>
-<p>E.g. if the setting given is COLOR_USER, the function returns a pair having as first value the first setting of the Points enumeration that starts with COLOR_ and as second value the last setting of the Points enumeration that starts with COLOR_.</p>
+<p>E.g. if the setting given is COLOR_USER, the function returns a pair having as first value the first setting of the <a class="el" href="classvcl_1_1Points.html" title="Renders a set of 3D points in world space as point splats (squares or circles).">Points</a> enumeration that starts with COLOR_ and as second value the last setting of the <a class="el" href="classvcl_1_1Points.html" title="Renders a set of 3D points in world space as point splats (squares or circles).">Points</a> enumeration that starts with COLOR_.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>the option to query. </td></tr>
@@ -982,10 +996,12 @@ template&lt;<a class="el" href="classvcl_1_1MeshRenderInfo.html#a05c0871c8cf74ec
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div>
 <div class="line">        detail::makeExclusiveReangesArray&lt;Surface&gt;(</div>
-<div class="line">            Surface::SHADING_NONE,   </div>
-<div class="line">            Surface::SHADING_SMOOTH, </div>
-<div class="line">            Surface::COLOR_VERTEX,   </div>
-<div class="line">            Surface::COLOR_USER)</div>
+<div class="line">            Surface::SHADING_NONE,       </div>
+<div class="line">            Surface::SHADING_NORMAL_MAP, </div>
+<div class="line">            Surface::COLOR_VERTEX,       </div>
+<div class="line">            Surface::COLOR_USER,         </div>
+<div class="line">            Surface::BACKFACE_SINGLE,    </div>
+<div class="line">            Surface::BACKFACE_CULL)</div>
 </div><!-- fragment -->
 </div>
 </div>

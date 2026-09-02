@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pbrmode_0',['pbrMode',['../structvcl_1_1PBRViewerSettings.html#a4d3c36a615fb36aa2d9f1e6fd47b9950',1,'vcl::PBRViewerSettings']]]
+  ['panoramapath_0',['panoramaPath',['../structvcl_1_1ViewerSettings.html#a82c32ced1199a26eb73f901981d90932',1,'vcl::ViewerSettings']]]
 ];

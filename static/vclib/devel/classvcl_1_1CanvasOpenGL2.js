@@ -6,5 +6,7 @@ var classvcl_1_1CanvasOpenGL2 =
     [ "onReadId", "classvcl_1_1CanvasOpenGL2.html#a597ead311f9f6929b6038aa630279be8", null ],
     [ "onResize", "classvcl_1_1CanvasOpenGL2.html#a6c625e5568929b0c42f6f51047e54d2d", null ],
     [ "onScreenshot", "classvcl_1_1CanvasOpenGL2.html#a95a6c0e683bae97aada6ef80c1fdd4d5", null ],
-    [ "screenshot", "classvcl_1_1CanvasOpenGL2.html#a7ca4e6334fdab3ed43ba9fb72f7eacbf", null ]
+    [ "onScreenshot", "classvcl_1_1CanvasOpenGL2.html#aeca85f727b89cf1d57f1b7f29c74e751", null ],
+    [ "screenshot", "classvcl_1_1CanvasOpenGL2.html#a7ca4e6334fdab3ed43ba9fb72f7eacbf", null ],
+    [ "screenshot", "classvcl_1_1CanvasOpenGL2.html#a938c1876a703ad15bf1817d52628a901", null ]
 ];

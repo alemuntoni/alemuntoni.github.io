@@ -1,12 +1,10 @@
 var classvcl_1_1DrawableMeshBGFX =
 [
     [ "boundingBox", "classvcl_1_1DrawableMeshBGFX.html#a7d1790c2f80aac31af3e3e9a7a910d04", null ],
-    [ "clone", "classvcl_1_1DrawableMeshBGFX.html#a775e7167549414e75904234996972056", null ],
-    [ "clone", "classvcl_1_1DrawableMeshBGFX.html#a0cd54c6f04b51c786c36ff5b1076a872", null ],
-    [ "draw", "classvcl_1_1DrawableMeshBGFX.html#a979b31deac9d8eff553675bf4c13122a", null ],
-    [ "drawId", "classvcl_1_1DrawableMeshBGFX.html#aa8b4c71ac449741c48a87224bc552646", null ],
+    [ "draw", "classvcl_1_1DrawableMeshBGFX.html#add8e5ebdf5287a73a10d7286cd7df464", null ],
+    [ "drawId", "classvcl_1_1DrawableMeshBGFX.html#af1c77ee07db6e116a86c2f51d2a4f1e0", null ],
     [ "init", "classvcl_1_1DrawableMeshBGFX.html#aeeeac785e1052481ff21439dd04bfaad", null ],
     [ "name", "classvcl_1_1DrawableMeshBGFX.html#a5543158a54a41d8e01d4fc18fee4cf24", null ],
     [ "name", "classvcl_1_1DrawableMeshBGFX.html#a7b043c2aa079a252cbdbb1f4b20c7d0d", null ],
-    [ "updateAndBindMaterialUniforms", "classvcl_1_1DrawableMeshBGFX.html#a35fe32f86ecbddd1248f3db6e0aba61b", null ]
+    [ "updateAndBindMaterialUniforms", "classvcl_1_1DrawableMeshBGFX.html#a15a7f76c3764d7e8a05a8739abca3d39", null ]
 ];

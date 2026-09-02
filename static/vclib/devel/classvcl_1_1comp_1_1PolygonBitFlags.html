@@ -106,6 +106,7 @@ $(document).ready(function(){initNavTree('classvcl_1_1comp_1_1PolygonBitFlags.ht
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
@@ -117,7 +118,7 @@ $(document).ready(function(){initNavTree('classvcl_1_1comp_1_1PolygonBitFlags.ht
 </div><!--header-->
 <div class="contents">
 
-<p>The <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html" title="The PolygonBitFlags class represents a collection of 8 bits plus 8 bits for each edge that will be pa...">PolygonBitFlags</a> class represents a collection of 8 bits plus 8 bits for each edge that will be part of a generic Polygonal <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>.  
+<p>The <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html" title="The PolygonBitFlags class represents a collection of 32 bits plus 8 bits for each edge that will be p...">PolygonBitFlags</a> class represents a collection of 32 bits plus 8 bits for each edge that will be part of a generic Polygonal <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>.  
  <a href="classvcl_1_1comp_1_1PolygonBitFlags.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="polygon__bit__flags_8h_source.html">vclib/mesh/components/polygon_bit_flags.h</a>&gt;</code></p>
@@ -126,7 +127,7 @@ Inheritance diagram for vcl::comp::PolygonBitFlags&lt; N, ParentElemType, OPT &g
 <div class="dyncontent">
 <div class="center"><img src="classvcl_1_1comp_1_1PolygonBitFlags__inherit__graph.png" border="0" usemap="#avcl_1_1comp_1_1PolygonBitFlags_3_01N_00_01ParentElemType_00_01OPT_01_4_inherit__map" alt="Inheritance graph"/></div>
 <map name="avcl_1_1comp_1_1PolygonBitFlags_3_01N_00_01ParentElemType_00_01OPT_01_4_inherit__map" id="avcl_1_1comp_1_1PolygonBitFlags_3_01N_00_01ParentElemType_00_01OPT_01_4_inherit__map">
-<area shape="rect" title="The PolygonBitFlags class represents a collection of 8 bits plus 8 bits for each edge that will be pa..." alt="" coords="272,42,480,82"/>
+<area shape="rect" title="The PolygonBitFlags class represents a collection of 32 bits plus 8 bits for each edge that will be p..." alt="" coords="272,42,480,82"/>
 <area shape="rect" href="classvcl_1_1polyedgemesh_1_1Face.html" title="The Face type used by the PolyEdgeMeshT class." alt="" coords="528,10,681,50"/>
 <area shape="poly" title=" " alt="" coords="493,43,527,38,528,43,494,48"/>
 <area shape="rect" href="classvcl_1_1polymesh_1_1Face.html" title="The Face type used by the PolyMeshT class." alt="" coords="529,74,680,114"/>
@@ -136,38 +137,49 @@ Inheritance diagram for vcl::comp::PolygonBitFlags&lt; N, ParentElemType, OPT &g
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ae41adfc417060e06b73c935dc201e542" id="r_ae41adfc417060e06b73c935dc201e542"><td class="memItemLeft" align="right" valign="top"><a id="ae41adfc417060e06b73c935dc201e542" name="ae41adfc417060e06b73c935dc201e542"></a>
+<a class="el" href="classvcl_1_1Segment.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><b>EdgeFlagsType</b> = <a class="el" href="classvcl_1_1Segment.html">uchar</a></td></tr>
+<tr class="memdesc:ae41adfc417060e06b73c935dc201e542"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expose the underlying type of the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> <a class="el" href="classvcl_1_1comp_1_1BitFlags.html" title="The BitFlags component class represents a collection of 32 bits that will be part of an Element (e....">BitFlags</a>. <br /></td></tr>
+<tr class="separator:ae41adfc417060e06b73c935dc201e542"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf535f8d1974c377d1e453e1e95d3f33" id="r_adf535f8d1974c377d1e453e1e95d3f33"><td class="memItemLeft" align="right" valign="top"><a id="adf535f8d1974c377d1e453e1e95d3f33" name="adf535f8d1974c377d1e453e1e95d3f33"></a>
+<a class="el" href="classvcl_1_1Segment.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><b>FlagsType</b> = uint</td></tr>
+<tr class="memdesc:adf535f8d1974c377d1e453e1e95d3f33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expose the underlying type of the <a class="el" href="classvcl_1_1comp_1_1BitFlags.html" title="The BitFlags component class represents a collection of 32 bits that will be part of an Element (e....">BitFlags</a>. <br /></td></tr>
+<tr class="separator:adf535f8d1974c377d1e453e1e95d3f33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a86da16eeff73965a6d2628188892b06e" id="r_a86da16eeff73965a6d2628188892b06e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#a86da16eeff73965a6d2628188892b06e">deleted</a> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
 <tr class="memdesc:a86da16eeff73965a6d2628188892b06e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the current <a class="el" href="classvcl_1_1Polygon.html" title="The Polygon class represents a polygon in a N-dimensional Euclidean space.">Polygon</a> is deleted or not.  <br /></td></tr>
 <tr class="separator:a86da16eeff73965a6d2628188892b06e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19836bf0a9e53a07cb591edb69f05034" id="r_a19836bf0a9e53a07cb591edb69f05034"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; <a class="el" href="classvcl_1_1Segment.html">FT</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#a19836bf0a9e53a07cb591edb69f05034">edgeFaux</a> (uint <a class="el" href="classvcl_1_1Segment.html">i</a>)</td></tr>
-<tr class="memdesc:a19836bf0a9e53a07cb591edb69f05034"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses the 'faux' bit of the i-th edge of the polygon, returning a reference to it.  <br /></td></tr>
-<tr class="separator:a19836bf0a9e53a07cb591edb69f05034"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d084e1bb4e17123cfa9a211b041fc36" id="r_a0d084e1bb4e17123cfa9a211b041fc36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#adf535f8d1974c377d1e453e1e95d3f33">FlagsType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#a0d084e1bb4e17123cfa9a211b041fc36">edgeFaux</a> (uint <a class="el" href="classvcl_1_1Segment.html">i</a>)</td></tr>
+<tr class="memdesc:a0d084e1bb4e17123cfa9a211b041fc36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses the 'faux' bit of the i-th edge of the polygon, returning a reference to it.  <br /></td></tr>
+<tr class="separator:a0d084e1bb4e17123cfa9a211b041fc36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7abb9731af873b79a77b722433cc7baa" id="r_a7abb9731af873b79a77b722433cc7baa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#a7abb9731af873b79a77b722433cc7baa">edgeFaux</a> (uint <a class="el" href="classvcl_1_1Segment.html">i</a>) <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
 <tr class="memdesc:a7abb9731af873b79a77b722433cc7baa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the i-th edge of the current <a class="el" href="classvcl_1_1Polygon.html" title="The Polygon class represents a polygon in a N-dimensional Euclidean space.">Polygon</a> is faux or not.  <br /></td></tr>
 <tr class="separator:a7abb9731af873b79a77b722433cc7baa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e618bfaaa68c53ebcd4a1714486d2a8" id="r_a8e618bfaaa68c53ebcd4a1714486d2a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; <a class="el" href="classvcl_1_1Segment.html">FT</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#a8e618bfaaa68c53ebcd4a1714486d2a8">edgeOnBorder</a> (uint <a class="el" href="classvcl_1_1Segment.html">i</a>)</td></tr>
-<tr class="memdesc:a8e618bfaaa68c53ebcd4a1714486d2a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses the 'onBorder' bit of the i-th edge of the polygon, returning a reference to it.  <br /></td></tr>
-<tr class="separator:a8e618bfaaa68c53ebcd4a1714486d2a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41af0573d2257b2af9553b5e788bd1f3" id="r_a41af0573d2257b2af9553b5e788bd1f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#ae41adfc417060e06b73c935dc201e542">EdgeFlagsType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#a41af0573d2257b2af9553b5e788bd1f3">edgeOnBorder</a> (uint <a class="el" href="classvcl_1_1Segment.html">i</a>)</td></tr>
+<tr class="memdesc:a41af0573d2257b2af9553b5e788bd1f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses the 'onBorder' bit of the i-th edge of the polygon, returning a reference to it.  <br /></td></tr>
+<tr class="separator:a41af0573d2257b2af9553b5e788bd1f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4474801510851d2613021d2dab9b88b3" id="r_a4474801510851d2613021d2dab9b88b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#a4474801510851d2613021d2dab9b88b3">edgeOnBorder</a> (uint <a class="el" href="classvcl_1_1Segment.html">i</a>) <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
 <tr class="memdesc:a4474801510851d2613021d2dab9b88b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the i-th edge of the current <a class="el" href="classvcl_1_1Polygon.html" title="The Polygon class represents a polygon in a N-dimensional Euclidean space.">Polygon</a> is on border or not.  <br /></td></tr>
 <tr class="separator:a4474801510851d2613021d2dab9b88b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe930d4ac41e8f24d4eb781ee31929ff" id="r_abe930d4ac41e8f24d4eb781ee31929ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; <a class="el" href="classvcl_1_1Segment.html">FT</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#abe930d4ac41e8f24d4eb781ee31929ff">edgeSelected</a> (uint <a class="el" href="classvcl_1_1Segment.html">i</a>)</td></tr>
-<tr class="memdesc:abe930d4ac41e8f24d4eb781ee31929ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses the 'selected' bit of the i-th edge of the polygon, returning a reference to it.  <br /></td></tr>
-<tr class="separator:abe930d4ac41e8f24d4eb781ee31929ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a4cbf8910654c87c50f49989955c29e" id="r_a6a4cbf8910654c87c50f49989955c29e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#ae41adfc417060e06b73c935dc201e542">EdgeFlagsType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#a6a4cbf8910654c87c50f49989955c29e">edgeSelected</a> (uint <a class="el" href="classvcl_1_1Segment.html">i</a>)</td></tr>
+<tr class="memdesc:a6a4cbf8910654c87c50f49989955c29e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses the 'selected' bit of the i-th edge of the polygon, returning a reference to it.  <br /></td></tr>
+<tr class="separator:a6a4cbf8910654c87c50f49989955c29e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a489fd5aafa7619cc11b60e4e0889063c" id="r_a489fd5aafa7619cc11b60e4e0889063c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#a489fd5aafa7619cc11b60e4e0889063c">edgeSelected</a> (uint <a class="el" href="classvcl_1_1Segment.html">i</a>) <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
 <tr class="memdesc:a489fd5aafa7619cc11b60e4e0889063c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the i-th edge of the current <a class="el" href="classvcl_1_1Polygon.html" title="The Polygon class represents a polygon in a N-dimensional Euclidean space.">Polygon</a> is selected or not.  <br /></td></tr>
 <tr class="separator:a489fd5aafa7619cc11b60e4e0889063c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10704a94a72dc04cddaef8eb5ba4acba" id="r_a10704a94a72dc04cddaef8eb5ba4acba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; <a class="el" href="classvcl_1_1Segment.html">FT</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#a10704a94a72dc04cddaef8eb5ba4acba">edgeUserBit</a> (uint <a class="el" href="classvcl_1_1Segment.html">i</a>, uint <a class="el" href="classvcl_1_1Segment.html">bit</a>)</td></tr>
-<tr class="memdesc:a10704a94a72dc04cddaef8eb5ba4acba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the value of the user bit of the i-th edge of this <a class="el" href="classvcl_1_1Polygon.html" title="The Polygon class represents a polygon in a N-dimensional Euclidean space.">Polygon</a> given in input. The bit is checked to be less than the total number of assigned edge user bits, which in this class is 5.  <br /></td></tr>
-<tr class="separator:a10704a94a72dc04cddaef8eb5ba4acba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af54148dcd0f5a4ee9cb46d4d925d4b15" id="r_af54148dcd0f5a4ee9cb46d4d925d4b15"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#ae41adfc417060e06b73c935dc201e542">EdgeFlagsType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#af54148dcd0f5a4ee9cb46d4d925d4b15">edgeUserBit</a> (uint <a class="el" href="classvcl_1_1Segment.html">i</a>, uint <a class="el" href="classvcl_1_1Segment.html">bit</a>)</td></tr>
+<tr class="memdesc:af54148dcd0f5a4ee9cb46d4d925d4b15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the value of the user bit of the i-th edge of this <a class="el" href="classvcl_1_1Polygon.html" title="The Polygon class represents a polygon in a N-dimensional Euclidean space.">Polygon</a> given in input. The bit is checked to be less than the total number of assigned edge user bits, which in this class is 5.  <br /></td></tr>
+<tr class="separator:af54148dcd0f5a4ee9cb46d4d925d4b15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2784380bb045413f6118cc35af15258" id="r_ab2784380bb045413f6118cc35af15258"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#ab2784380bb045413f6118cc35af15258">edgeUserBit</a> (uint <a class="el" href="classvcl_1_1Segment.html">i</a>, uint <a class="el" href="classvcl_1_1Segment.html">bit</a>) <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
 <tr class="memdesc:ab2784380bb045413f6118cc35af15258"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the boolean value of the user bit of the i-th edge of this <a class="el" href="classvcl_1_1Polygon.html" title="The Polygon class represents a polygon in a N-dimensional Euclidean space.">Polygon</a> given in input. The bit is checked to be less than the total number of assigned edge user bits, which in this class is 5.  <br /></td></tr>
 <tr class="separator:ab2784380bb045413f6118cc35af15258"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa114cc5d68ccd41adc2cbf916afc4c06" id="r_aa114cc5d68ccd41adc2cbf916afc4c06"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; <a class="el" href="classvcl_1_1Segment.html">FT</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#aa114cc5d68ccd41adc2cbf916afc4c06">edgeVisited</a> (uint <a class="el" href="classvcl_1_1Segment.html">i</a>)</td></tr>
-<tr class="memdesc:aa114cc5d68ccd41adc2cbf916afc4c06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses the 'visited' bit of the i-th edge of the polygon, returning a reference to it.  <br /></td></tr>
-<tr class="separator:aa114cc5d68ccd41adc2cbf916afc4c06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d83d2b81b92bf0b22bdbc61ef7eb631" id="r_a4d83d2b81b92bf0b22bdbc61ef7eb631"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#ae41adfc417060e06b73c935dc201e542">EdgeFlagsType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#a4d83d2b81b92bf0b22bdbc61ef7eb631">edgeVisited</a> (uint <a class="el" href="classvcl_1_1Segment.html">i</a>)</td></tr>
+<tr class="memdesc:a4d83d2b81b92bf0b22bdbc61ef7eb631"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses the 'visited' bit of the i-th edge of the polygon, returning a reference to it.  <br /></td></tr>
+<tr class="separator:a4d83d2b81b92bf0b22bdbc61ef7eb631"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a657de493ff479b3bb06db0f4f3e66f88" id="r_a657de493ff479b3bb06db0f4f3e66f88"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#a657de493ff479b3bb06db0f4f3e66f88">edgeVisited</a> (uint <a class="el" href="classvcl_1_1Segment.html">i</a>) <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
 <tr class="memdesc:a657de493ff479b3bb06db0f4f3e66f88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the i-th edge of the current <a class="el" href="classvcl_1_1Polygon.html" title="The Polygon class represents a polygon in a N-dimensional Euclidean space.">Polygon</a> has been visited or not.  <br /></td></tr>
 <tr class="separator:a657de493ff479b3bb06db0f4f3e66f88"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -187,21 +199,33 @@ Public Member Functions</h2></td></tr>
 <a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>resetBitFlags</b> ()</td></tr>
 <tr class="memdesc:a5d0d2cf8d173e9dcfce26c473697eafd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unsets all the flags of this <a class="el" href="classvcl_1_1Polygon.html" title="The Polygon class represents a polygon in a N-dimensional Euclidean space.">Polygon</a> and sets them to <code>false</code>, <b>except the deleted flag</b>, which needs to be manually reset. <br /></td></tr>
 <tr class="separator:a5d0d2cf8d173e9dcfce26c473697eafd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab239dc8ac7d6085523fa1bf37adbb309" id="r_ab239dc8ac7d6085523fa1bf37adbb309"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; <a class="el" href="classvcl_1_1Segment.html">FT</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#ab239dc8ac7d6085523fa1bf37adbb309">selected</a> ()</td></tr>
-<tr class="memdesc:ab239dc8ac7d6085523fa1bf37adbb309"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses the 'selected' bit of this <a class="el" href="classvcl_1_1Polygon.html" title="The Polygon class represents a polygon in a N-dimensional Euclidean space.">Polygon</a>, returning a reference to it.  <br /></td></tr>
-<tr class="separator:ab239dc8ac7d6085523fa1bf37adbb309"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd19f28a6e05f5501300ce94f83cc429" id="r_afd19f28a6e05f5501300ce94f83cc429"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#adf535f8d1974c377d1e453e1e95d3f33">FlagsType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#afd19f28a6e05f5501300ce94f83cc429">selected</a> ()</td></tr>
+<tr class="memdesc:afd19f28a6e05f5501300ce94f83cc429"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses the 'selected' bit of this <a class="el" href="classvcl_1_1Polygon.html" title="The Polygon class represents a polygon in a N-dimensional Euclidean space.">Polygon</a>, returning a reference to it.  <br /></td></tr>
+<tr class="separator:afd19f28a6e05f5501300ce94f83cc429"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af98b29dfb61ee8927e3e79bc20904b5e" id="r_af98b29dfb61ee8927e3e79bc20904b5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#af98b29dfb61ee8927e3e79bc20904b5e">selected</a> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
 <tr class="memdesc:af98b29dfb61ee8927e3e79bc20904b5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the current <a class="el" href="classvcl_1_1Polygon.html" title="The Polygon class represents a polygon in a N-dimensional Euclidean space.">Polygon</a> is selected or not.  <br /></td></tr>
 <tr class="separator:af98b29dfb61ee8927e3e79bc20904b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6af3163418456adc01b413668b6561f" id="r_ac6af3163418456adc01b413668b6561f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; <a class="el" href="classvcl_1_1Segment.html">FT</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#ac6af3163418456adc01b413668b6561f">userBit</a> (uint <a class="el" href="classvcl_1_1Segment.html">bit</a>)</td></tr>
-<tr class="memdesc:ac6af3163418456adc01b413668b6561f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the value of the user bit of this <a class="el" href="classvcl_1_1Polygon.html" title="The Polygon class represents a polygon in a N-dimensional Euclidean space.">Polygon</a> given in input. The bit is checked to be less than the total number of assigned user bits, which in this class is 2.  <br /></td></tr>
-<tr class="separator:ac6af3163418456adc01b413668b6561f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73136e42781027bc36ad0a73513e07d5" id="r_a73136e42781027bc36ad0a73513e07d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#a73136e42781027bc36ad0a73513e07d5">setUnderlyingBitFlags</a> (<a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#adf535f8d1974c377d1e453e1e95d3f33">FlagsType</a> <a class="el" href="classvcl_1_1Segment.html">bits</a>)</td></tr>
+<tr class="memdesc:a73136e42781027bc36ad0a73513e07d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the underlying integral value of the <a class="el" href="classvcl_1_1comp_1_1BitFlags.html" title="The BitFlags component class represents a collection of 32 bits that will be part of an Element (e....">BitFlags</a>.  <br /></td></tr>
+<tr class="separator:a73136e42781027bc36ad0a73513e07d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb363a13eece432dcbac37b4c7b5c411" id="r_aeb363a13eece432dcbac37b4c7b5c411"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#aeb363a13eece432dcbac37b4c7b5c411">setUnderlyingEdgeBitFlags</a> (uint <a class="el" href="classvcl_1_1Segment.html">i</a>, <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#ae41adfc417060e06b73c935dc201e542">EdgeFlagsType</a> <a class="el" href="classvcl_1_1Segment.html">bits</a>)</td></tr>
+<tr class="memdesc:aeb363a13eece432dcbac37b4c7b5c411"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the underlying integral value of the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> <a class="el" href="classvcl_1_1comp_1_1BitFlags.html" title="The BitFlags component class represents a collection of 32 bits that will be part of an Element (e....">BitFlags</a> of the i-th edge.  <br /></td></tr>
+<tr class="separator:aeb363a13eece432dcbac37b4c7b5c411"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fcd15453a32a43768ab9daf37a6459e" id="r_a3fcd15453a32a43768ab9daf37a6459e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#adf535f8d1974c377d1e453e1e95d3f33">FlagsType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#a3fcd15453a32a43768ab9daf37a6459e">underlyingBitFlags</a> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
+<tr class="memdesc:a3fcd15453a32a43768ab9daf37a6459e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the underlying integral value of the <a class="el" href="classvcl_1_1comp_1_1BitFlags.html" title="The BitFlags component class represents a collection of 32 bits that will be part of an Element (e....">BitFlags</a>.  <br /></td></tr>
+<tr class="separator:a3fcd15453a32a43768ab9daf37a6459e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f2fe4f2359fe035e77ebd21963dad4f" id="r_a4f2fe4f2359fe035e77ebd21963dad4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#ae41adfc417060e06b73c935dc201e542">EdgeFlagsType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#a4f2fe4f2359fe035e77ebd21963dad4f">underlyingEdgeBitFlags</a> (uint <a class="el" href="classvcl_1_1Segment.html">i</a>) <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
+<tr class="memdesc:a4f2fe4f2359fe035e77ebd21963dad4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the underlying integral value of the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> <a class="el" href="classvcl_1_1comp_1_1BitFlags.html" title="The BitFlags component class represents a collection of 32 bits that will be part of an Element (e....">BitFlags</a> of the i-th edge.  <br /></td></tr>
+<tr class="separator:a4f2fe4f2359fe035e77ebd21963dad4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0651d3d10d4a325b0e50cc222f0d0e4d" id="r_a0651d3d10d4a325b0e50cc222f0d0e4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#adf535f8d1974c377d1e453e1e95d3f33">FlagsType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#a0651d3d10d4a325b0e50cc222f0d0e4d">userBit</a> (uint <a class="el" href="classvcl_1_1Segment.html">bit</a>)</td></tr>
+<tr class="memdesc:a0651d3d10d4a325b0e50cc222f0d0e4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the value of the user bit of this <a class="el" href="classvcl_1_1Polygon.html" title="The Polygon class represents a polygon in a N-dimensional Euclidean space.">Polygon</a> given in input. The bit is checked to be less than the total number of assigned user bits, which in this class is 26.  <br /></td></tr>
+<tr class="separator:a0651d3d10d4a325b0e50cc222f0d0e4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae71e2818d661b6a4d6a24f0540f3ee41" id="r_ae71e2818d661b6a4d6a24f0540f3ee41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#ae71e2818d661b6a4d6a24f0540f3ee41">userBit</a> (uint <a class="el" href="classvcl_1_1Segment.html">bit</a>) <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
-<tr class="memdesc:ae71e2818d661b6a4d6a24f0540f3ee41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the boolean value of the user bit of this <a class="el" href="classvcl_1_1Polygon.html" title="The Polygon class represents a polygon in a N-dimensional Euclidean space.">Polygon</a> given in input. The bit is checked to be less than the total number of assigned user bits, which in this class is 2.  <br /></td></tr>
+<tr class="memdesc:ae71e2818d661b6a4d6a24f0540f3ee41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the boolean value of the user bit of this <a class="el" href="classvcl_1_1Polygon.html" title="The Polygon class represents a polygon in a N-dimensional Euclidean space.">Polygon</a> given in input. The bit is checked to be less than the total number of assigned user bits, which in this class is 26.  <br /></td></tr>
 <tr class="separator:ae71e2818d661b6a4d6a24f0540f3ee41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d93cc0ac71d67ec8beb074becbc9277" id="r_a6d93cc0ac71d67ec8beb074becbc9277"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; <a class="el" href="classvcl_1_1Segment.html">FT</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#a6d93cc0ac71d67ec8beb074becbc9277">visited</a> ()</td></tr>
-<tr class="memdesc:a6d93cc0ac71d67ec8beb074becbc9277"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses the 'visited' bit of this <a class="el" href="classvcl_1_1Polygon.html" title="The Polygon class represents a polygon in a N-dimensional Euclidean space.">Polygon</a>, returning a reference to it.  <br /></td></tr>
-<tr class="separator:a6d93cc0ac71d67ec8beb074becbc9277"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af500dc9051b4987314b9b19cb825b4a7" id="r_af500dc9051b4987314b9b19cb825b4a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#adf535f8d1974c377d1e453e1e95d3f33">FlagsType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#af500dc9051b4987314b9b19cb825b4a7">visited</a> ()</td></tr>
+<tr class="memdesc:af500dc9051b4987314b9b19cb825b4a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accesses the 'visited' bit of this <a class="el" href="classvcl_1_1Polygon.html" title="The Polygon class represents a polygon in a N-dimensional Euclidean space.">Polygon</a>, returning a reference to it.  <br /></td></tr>
+<tr class="separator:af500dc9051b4987314b9b19cb825b4a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73a2dddf62349770fcf4d6e8cdb112d2" id="r_a73a2dddf62349770fcf4d6e8cdb112d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#a73a2dddf62349770fcf4d6e8cdb112d2">visited</a> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
 <tr class="memdesc:a73a2dddf62349770fcf4d6e8cdb112d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the current <a class="el" href="classvcl_1_1Polygon.html" title="The Polygon class represents a polygon in a N-dimensional Euclidean space.">Polygon</a> has been visited or not.  <br /></td></tr>
 <tr class="separator:a73a2dddf62349770fcf4d6e8cdb112d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -211,9 +235,8 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:a0a3621e113d47192afbc05043e17957e" id="r_a0a3621e113d47192afbc05043e17957e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">static</a> <a class="el" href="classvcl_1_1Segment.html">const</a> uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#a0a3621e113d47192afbc05043e17957e">EDGE_USER_BIT_COUNT</a></td></tr>
 <tr class="memdesc:a0a3621e113d47192afbc05043e17957e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static number of bits for each edge that can have custom meanings to the user.  <br /></td></tr>
 <tr class="separator:a0a3621e113d47192afbc05043e17957e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf5666b283bebb86ce8d7902a8b17347" id="r_acf5666b283bebb86ce8d7902a8b17347"><td class="memItemLeft" align="right" valign="top"><a id="acf5666b283bebb86ce8d7902a8b17347" name="acf5666b283bebb86ce8d7902a8b17347"></a>
-<a class="el" href="classvcl_1_1Segment.html">static</a> <a class="el" href="classvcl_1_1Segment.html">const</a> uint&#160;</td><td class="memItemRight" valign="bottom"><b>USER_BIT_COUNT</b> = <a class="el" href="classvcl_1_1Segment.html">sizeof</a>(<a class="el" href="classvcl_1_1Segment.html">FT</a>) * 8 - FIRST_USER_BIT</td></tr>
-<tr class="memdesc:acf5666b283bebb86ce8d7902a8b17347"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static number of bits that can have custom meanings to the user. <br /></td></tr>
+<tr class="memitem:acf5666b283bebb86ce8d7902a8b17347" id="r_acf5666b283bebb86ce8d7902a8b17347"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">static</a> <a class="el" href="classvcl_1_1Segment.html">const</a> uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#acf5666b283bebb86ce8d7902a8b17347">USER_BIT_COUNT</a></td></tr>
+<tr class="memdesc:acf5666b283bebb86ce8d7902a8b17347"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static number of bits that can have custom meanings to the user.  <br /></td></tr>
 <tr class="separator:acf5666b283bebb86ce8d7902a8b17347"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
@@ -221,9 +244,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a5c8188130d23f0faa17624b05dab8178" id="r_a5c8188130d23f0faa17624b05dab8178"><td class="memItemLeft" align="right" valign="top"><a id="a5c8188130d23f0faa17624b05dab8178" name="a5c8188130d23f0faa17624b05dab8178"></a>
 <a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr>
 <tr class="separator:a5c8188130d23f0faa17624b05dab8178"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb9a175d16c433f0208d641a39e1b309" id="r_abb9a175d16c433f0208d641a39e1b309"><td class="memItemLeft" align="right" valign="top"><a id="abb9a175d16c433f0208d641a39e1b309" name="abb9a175d16c433f0208d641a39e1b309"></a>
-<a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; <a class="el" href="classvcl_1_1Segment.html">FT</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>deletedBit</b> ()</td></tr>
-<tr class="separator:abb9a175d16c433f0208d641a39e1b309"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e6bcd44e69b193ff03bd86b5435d74e" id="r_a5e6bcd44e69b193ff03bd86b5435d74e"><td class="memItemLeft" align="right" valign="top"><a id="a5e6bcd44e69b193ff03bd86b5435d74e" name="a5e6bcd44e69b193ff03bd86b5435d74e"></a>
+<a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#adf535f8d1974c377d1e453e1e95d3f33">FlagsType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>deletedBit</b> ()</td></tr>
+<tr class="separator:a5e6bcd44e69b193ff03bd86b5435d74e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb1e6b13759ae8f974593b25948c4634" id="r_afb1e6b13759ae8f974593b25948c4634"><td class="memItemLeft" align="right" valign="top"><a id="afb1e6b13759ae8f974593b25948c4634" name="afb1e6b13759ae8f974593b25948c4634"></a>
 <a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>deserialize</b> (std::istream &amp;is)</td></tr>
 <tr class="separator:afb1e6b13759ae8f974593b25948c4634"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -234,12 +257,12 @@ Protected Member Functions</h2></td></tr>
 template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> <a class="el" href="classvcl_1_1Element.html">Element</a> &gt; </td></tr>
 <tr class="memitem:ac0de2d40365672f1c540fd4cda5c1b96"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>importFrom</b> (<a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Element.html">Element</a> &amp;e, <a class="el" href="classvcl_1_1Segment.html">bool</a>=<a class="el" href="classvcl_1_1Segment.html">true</a>)</td></tr>
 <tr class="separator:ac0de2d40365672f1c540fd4cda5c1b96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00a00902a76109eace7e5463c3cca6e2" id="r_a00a00902a76109eace7e5463c3cca6e2"><td class="memItemLeft" align="right" valign="top"><a id="a00a00902a76109eace7e5463c3cca6e2" name="a00a00902a76109eace7e5463c3cca6e2"></a>
-<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>insert</b> (uint <a class="el" href="classvcl_1_1Segment.html">i</a>, <a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; <a class="el" href="classvcl_1_1Segment.html">FT</a> &gt; f=<a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; <a class="el" href="classvcl_1_1Segment.html">FT</a> &gt;())</td></tr>
-<tr class="separator:a00a00902a76109eace7e5463c3cca6e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d26e48b43e90552f241c92ddc5018ac" id="r_a1d26e48b43e90552f241c92ddc5018ac"><td class="memItemLeft" align="right" valign="top"><a id="a1d26e48b43e90552f241c92ddc5018ac" name="a1d26e48b43e90552f241c92ddc5018ac"></a>
-<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>pushBack</b> (<a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; <a class="el" href="classvcl_1_1Segment.html">FT</a> &gt; f=<a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; <a class="el" href="classvcl_1_1Segment.html">FT</a> &gt;())</td></tr>
-<tr class="separator:a1d26e48b43e90552f241c92ddc5018ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43f7de0074f99944040d0bbdf886cf9d" id="r_a43f7de0074f99944040d0bbdf886cf9d"><td class="memItemLeft" align="right" valign="top"><a id="a43f7de0074f99944040d0bbdf886cf9d" name="a43f7de0074f99944040d0bbdf886cf9d"></a>
+<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>insert</b> (uint <a class="el" href="classvcl_1_1Segment.html">i</a>, <a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#ae41adfc417060e06b73c935dc201e542">EdgeFlagsType</a> &gt; f=<a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#ae41adfc417060e06b73c935dc201e542">EdgeFlagsType</a> &gt;())</td></tr>
+<tr class="separator:a43f7de0074f99944040d0bbdf886cf9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76cacddbc8217fd963705a7ea070b2ec" id="r_a76cacddbc8217fd963705a7ea070b2ec"><td class="memItemLeft" align="right" valign="top"><a id="a76cacddbc8217fd963705a7ea070b2ec" name="a76cacddbc8217fd963705a7ea070b2ec"></a>
+<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>pushBack</b> (<a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#ae41adfc417060e06b73c935dc201e542">EdgeFlagsType</a> &gt; f=<a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#ae41adfc417060e06b73c935dc201e542">EdgeFlagsType</a> &gt;())</td></tr>
+<tr class="separator:a76cacddbc8217fd963705a7ea070b2ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a689002f1772869297208a1c338b748e7" id="r_a689002f1772869297208a1c338b748e7"><td class="memItemLeft" align="right" valign="top"><a id="a689002f1772869297208a1c338b748e7" name="a689002f1772869297208a1c338b748e7"></a>
 <a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>resize</b> (uint <a class="el" href="classvcl_1_1Segment.html">n</a>)</td></tr>
 <tr class="separator:a689002f1772869297208a1c338b748e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -260,27 +283,24 @@ Private Types</h2></td></tr>
 , <b>EDGEVIS</b> = 2
  }</td></tr>
 <tr class="separator:ab8d42af749b3f89f5be6290271f0705d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc6f3e9c9d8bc9641ed35f4a2658563d" id="r_afc6f3e9c9d8bc9641ed35f4a2658563d"><td class="memItemLeft" align="right" valign="top"><a id="afc6f3e9c9d8bc9641ed35f4a2658563d" name="afc6f3e9c9d8bc9641ed35f4a2658563d"></a>
-<a class="el" href="classvcl_1_1Segment.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Base</b> = ContainerComponent&lt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html">PolygonBitFlags</a>&lt; N, <a class="el" href="classvcl_1_1Segment.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Segment.html">OPT</a> &gt;, CompId::BIT_FLAGS, <a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; <a class="el" href="classvcl_1_1Segment.html">FT</a> &gt;, N, <a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; <a class="el" href="classvcl_1_1Segment.html">FT</a> &gt;, <a class="el" href="classvcl_1_1Segment.html">ParentElemType</a>, !std::is_same_v&lt; <a class="el" href="classvcl_1_1Segment.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Segment.html">void</a> &gt;, <a class="el" href="classvcl_1_1Segment.html">OPT</a>, <a class="el" href="classvcl_1_1Segment.html">true</a> &gt;</td></tr>
-<tr class="separator:afc6f3e9c9d8bc9641ed35f4a2658563d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bdc75593dc5b5af7da438c796a07a6e" id="r_a8bdc75593dc5b5af7da438c796a07a6e"><td class="memItemLeft" align="right" valign="top"><a id="a8bdc75593dc5b5af7da438c796a07a6e" name="a8bdc75593dc5b5af7da438c796a07a6e"></a>
-<a class="el" href="classvcl_1_1Segment.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><b>FT</b> = <a class="el" href="classvcl_1_1Segment.html">char</a></td></tr>
-<tr class="separator:a8bdc75593dc5b5af7da438c796a07a6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac064239452f76b05975992a3201325c8" id="r_ac064239452f76b05975992a3201325c8"><td class="memItemLeft" align="right" valign="top"><a id="ac064239452f76b05975992a3201325c8" name="ac064239452f76b05975992a3201325c8"></a>
+<a class="el" href="classvcl_1_1Segment.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Base</b> = ContainerComponent&lt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html">PolygonBitFlags</a>&lt; N, <a class="el" href="classvcl_1_1Segment.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Segment.html">OPT</a> &gt;, CompId::BIT_FLAGS, <a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; <a class="el" href="classvcl_1_1Segment.html">uchar</a> &gt;, N, <a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; uint &gt;, <a class="el" href="classvcl_1_1Segment.html">ParentElemType</a>, !std::is_same_v&lt; <a class="el" href="classvcl_1_1Segment.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Segment.html">void</a> &gt;, <a class="el" href="classvcl_1_1Segment.html">OPT</a>, <a class="el" href="classvcl_1_1Segment.html">true</a> &gt;</td></tr>
+<tr class="separator:ac064239452f76b05975992a3201325c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a61f571afdfbcf4288a850ce77a2fbd7b" id="r_a61f571afdfbcf4288a850ce77a2fbd7b"><td class="memItemLeft" align="right" valign="top"><a id="a61f571afdfbcf4288a850ce77a2fbd7b" name="a61f571afdfbcf4288a850ce77a2fbd7b"></a>
-<a class="el" href="classvcl_1_1Vector.html">Vector</a>&lt; <a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; <a class="el" href="classvcl_1_1Segment.html">FT</a> &gt;, -1 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>edgeFlags</b> ()</td></tr>
-<tr class="separator:a61f571afdfbcf4288a850ce77a2fbd7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ff07fb9493a8620b9129c6510926092" id="r_a1ff07fb9493a8620b9129c6510926092"><td class="memItemLeft" align="right" valign="top"><a id="a1ff07fb9493a8620b9129c6510926092" name="a1ff07fb9493a8620b9129c6510926092"></a>
-<a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Vector.html">Vector</a>&lt; <a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; <a class="el" href="classvcl_1_1Segment.html">FT</a> &gt;, -1 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>edgeFlags</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
-<tr class="separator:a1ff07fb9493a8620b9129c6510926092"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32f50cf633896f226fbcaf8c4dd5d665" id="r_a32f50cf633896f226fbcaf8c4dd5d665"><td class="memItemLeft" align="right" valign="top"><a id="a32f50cf633896f226fbcaf8c4dd5d665" name="a32f50cf633896f226fbcaf8c4dd5d665"></a>
-<a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; <a class="el" href="classvcl_1_1Segment.html">FT</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>flags</b> ()</td></tr>
-<tr class="separator:a32f50cf633896f226fbcaf8c4dd5d665"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad8102f360135ed9536ee75e8626db0e" id="r_aad8102f360135ed9536ee75e8626db0e"><td class="memItemLeft" align="right" valign="top"><a id="aad8102f360135ed9536ee75e8626db0e" name="aad8102f360135ed9536ee75e8626db0e"></a>
-<a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; <a class="el" href="classvcl_1_1Segment.html">FT</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>flags</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
-<tr class="separator:aad8102f360135ed9536ee75e8626db0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb37a0b3585ee9753cc43c3ae6f28b3d" id="r_afb37a0b3585ee9753cc43c3ae6f28b3d"><td class="memItemLeft" align="right" valign="top"><a id="afb37a0b3585ee9753cc43c3ae6f28b3d" name="afb37a0b3585ee9753cc43c3ae6f28b3d"></a>
+<a class="el" href="classvcl_1_1Vector.html">Vector</a>&lt; <a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#ae41adfc417060e06b73c935dc201e542">EdgeFlagsType</a> &gt;, -1 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>edgeFlags</b> ()</td></tr>
+<tr class="separator:afb37a0b3585ee9753cc43c3ae6f28b3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8058803e9b75c86119ab68b3cbbe6ab6" id="r_a8058803e9b75c86119ab68b3cbbe6ab6"><td class="memItemLeft" align="right" valign="top"><a id="a8058803e9b75c86119ab68b3cbbe6ab6" name="a8058803e9b75c86119ab68b3cbbe6ab6"></a>
+<a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Vector.html">Vector</a>&lt; <a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#ae41adfc417060e06b73c935dc201e542">EdgeFlagsType</a> &gt;, -1 &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>edgeFlags</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
+<tr class="separator:a8058803e9b75c86119ab68b3cbbe6ab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bec7ee83c4b5b39c012592e81fcf329" id="r_a7bec7ee83c4b5b39c012592e81fcf329"><td class="memItemLeft" align="right" valign="top"><a id="a7bec7ee83c4b5b39c012592e81fcf329" name="a7bec7ee83c4b5b39c012592e81fcf329"></a>
+<a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#adf535f8d1974c377d1e453e1e95d3f33">FlagsType</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>flags</b> ()</td></tr>
+<tr class="separator:a7bec7ee83c4b5b39c012592e81fcf329"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0a1f04bab28f9e66374cc4e56e9cc69" id="r_aa0a1f04bab28f9e66374cc4e56e9cc69"><td class="memItemLeft" align="right" valign="top"><a id="aa0a1f04bab28f9e66374cc4e56e9cc69" name="aa0a1f04bab28f9e66374cc4e56e9cc69"></a>
+<a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1BitSet.html">BitSet</a>&lt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#adf535f8d1974c377d1e453e1e95d3f33">FlagsType</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>flags</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
+<tr class="separator:aa0a1f04bab28f9e66374cc4e56e9cc69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cd066e4824fafa18bf19c9676f9d4fb" id="r_a2cd066e4824fafa18bf19c9676f9d4fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#a2cd066e4824fafa18bf19c9676f9d4fb">init</a> ()</td></tr>
 <tr class="memdesc:a2cd066e4824fafa18bf19c9676f9d4fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the bits to false.  <br /></td></tr>
 <tr class="separator:a2cd066e4824fafa18bf19c9676f9d4fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -291,22 +311,23 @@ Static Private Attributes</h2></td></tr>
 <a class="el" href="classvcl_1_1Segment.html">static</a> <a class="el" href="classvcl_1_1Segment.html">const</a> uint&#160;</td><td class="memItemRight" valign="bottom"><b>FIRST_EDGE_USER_BIT</b> = 3</td></tr>
 <tr class="separator:a14d1d113cc19869a7cd97ac376566413"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a236b1e409aae2c88ff0679fd1972e576" id="r_a236b1e409aae2c88ff0679fd1972e576"><td class="memItemLeft" align="right" valign="top"><a id="a236b1e409aae2c88ff0679fd1972e576" name="a236b1e409aae2c88ff0679fd1972e576"></a>
-<a class="el" href="classvcl_1_1Segment.html">static</a> <a class="el" href="classvcl_1_1Segment.html">const</a> uint&#160;</td><td class="memItemRight" valign="bottom"><b>FIRST_USER_BIT</b> = 6</td></tr>
+<a class="el" href="classvcl_1_1Segment.html">static</a> <a class="el" href="classvcl_1_1Segment.html">const</a> uint&#160;</td><td class="memItemRight" valign="bottom"><b>FIRST_USER_BIT</b> = 15</td></tr>
 <tr class="separator:a236b1e409aae2c88ff0679fd1972e576"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="classvcl_1_1Segment.html">int</a> N, <a class="el" href="classvcl_1_1Segment.html">typename</a> <a class="el" href="classvcl_1_1Segment.html">ParentElemType</a> = void, <a class="el" href="classvcl_1_1Segment.html">bool</a> OPT = false&gt;<br />
-class vcl::comp::PolygonBitFlags&lt; N, ParentElemType, OPT &gt;</div><p>The <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html" title="The PolygonBitFlags class represents a collection of 8 bits plus 8 bits for each edge that will be pa...">PolygonBitFlags</a> class represents a collection of 8 bits plus 8 bits for each edge that will be part of a generic Polygonal <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. </p>
-<p>This is a specialization class of the <a class="el" href="classvcl_1_1comp_1_1BitFlags.html" title="The BitFlags component class represents a collection of 8 bits that will be part of an Element (e....">BitFlags</a> component, meaning that it can be used in sostitution to that component. The difference is that this class is meant to be used on Polygonal Faces, and adds bits with particular meanings for polygons.</p>
+class vcl::comp::PolygonBitFlags&lt; N, ParentElemType, OPT &gt;</div><p>The <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html" title="The PolygonBitFlags class represents a collection of 32 bits plus 8 bits for each edge that will be p...">PolygonBitFlags</a> class represents a collection of 32 bits plus 8 bits for each edge that will be part of a generic Polygonal <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> of a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. </p>
+<p>This is a specialization class of the <a class="el" href="classvcl_1_1comp_1_1BitFlags.html" title="The BitFlags component class represents a collection of 32 bits that will be part of an Element (e....">BitFlags</a> component, meaning that it can be used in sostitution to that component. The difference is that this class is meant to be used on Polygonal Faces, and adds bits with particular meanings for polygons.</p>
 <p>This class also provides 3 flags for faux edges. These flags are added just to make portable all the algorithms that use faux flags also for PolygonMeshes. However, these flags should be used only when the mesh is a <a class="el" href="classvcl_1_1Triangle.html">Triangle</a> mesh, that is when each face has vertexCount() == 3.</p>
 <p>The bits have the follwing meaning:</p><ul>
 <li>0: deleted: if the current <a class="el" href="classvcl_1_1Polygon.html" title="The Polygon class represents a polygon in a N-dimensional Euclidean space.">Polygon</a> has been deleted - read only</li>
 <li>1: selected: if the current <a class="el" href="classvcl_1_1Polygon.html" title="The Polygon class represents a polygon in a N-dimensional Euclidean space.">Polygon</a> has been selected</li>
 <li>2: visited: if the current <a class="el" href="classvcl_1_1Polygon.html" title="The Polygon class represents a polygon in a N-dimensional Euclidean space.">Polygon</a> has been visited (useful for some visit algorithms)</li>
 <li>from 3 to 5: edge faux: if the current <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> has is i-th edge (i in [0, 2]) marked as faux</li>
-<li>from 6 to 7: user bits that can have custom meanings to the user</li>
+<li>from 6 to 14: unused for compatibility with <a class="el" href="classvcl_1_1comp_1_1TriangleBitFlags.html" title="The TriangleBitFlags class represents a collection of 32 bits that will be part of a Triangle of a Me...">TriangleBitFlags</a></li>
+<li>from 15 to 31: user bits that can have custom meanings to the user</li>
 </ul>
-<p>This class provides 2 user bits, that can be accessed using the member function <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#ac6af3163418456adc01b413668b6561f" title="Returns a reference to the value of the user bit of this Polygon given in input. The bit is checked t...">userBit(uint i)</a> with position in the interval [0, 1].</p>
+<p>This class provides 17 user bits, that can be accessed using the member function <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#a0651d3d10d4a325b0e50cc222f0d0e4d" title="Returns a reference to the value of the user bit of this Polygon given in input. The bit is checked t...">userBit(uint i)</a> with position in the interval [0, 16].</p>
 <p>Additionally, this class provides the following bits for each edge of the Polygonal <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a>:</p><ul>
 <li>0: edge border: if the current Polygonal face has the i-th edge on border</li>
 <li>1: edge selection: if the current Polygonal face has the i-th edge selected</li>
@@ -314,7 +335,7 @@ class vcl::comp::PolygonBitFlags&lt; N, ParentElemType, OPT &gt;</div><p>The <a 
 <li>from 3 to 7: user bits of the i-th edge that can have custo meanings to the user</li>
 </ul>
 <p>The member functions of this class will be available in the instance of any <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> that will contain this component.</p>
-<p>For example, if you have a <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> <code>f</code> that has the <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html" title="The PolygonBitFlags class represents a collection of 8 bits plus 8 bits for each edge that will be pa...">PolygonBitFlags</a> component, you'll be able to access to this component member functions from <code>f</code>:</p>
+<p>For example, if you have a <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> <code>f</code> that has the <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html" title="The PolygonBitFlags class represents a collection of 32 bits plus 8 bits for each edge that will be p...">PolygonBitFlags</a> component, you'll be able to access to this component member functions from <code>f</code>:</p>
 <div class="fragment"><div class="line">v.isAnyEdgeOnBorder();</div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>This component is <em>Tied To <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Count</em>: it means that the size of the container, if dynamic, will change automatically along the <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Count of the Component. For further details check the documentation of the ContainerComponent class.</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
@@ -387,8 +408,8 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">int</a> N, <a class="e
 
 </div>
 </div>
-<a id="a19836bf0a9e53a07cb591edb69f05034" name="a19836bf0a9e53a07cb591edb69f05034"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19836bf0a9e53a07cb591edb69f05034">&#9670;&#160;</a></span>edgeFaux() <span class="overload">[1/2]</span></h2>
+<a id="a0d084e1bb4e17123cfa9a211b041fc36" name="a0d084e1bb4e17123cfa9a211b041fc36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d084e1bb4e17123cfa9a211b041fc36">&#9670;&#160;</a></span>edgeFaux() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -399,7 +420,7 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">int</a> N, <a class="e
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; <a class="el" href="classvcl_1_1Segment.html">FT</a> &gt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html">vcl::comp::PolygonBitFlags</a>&lt; N, <a class="el" href="classvcl_1_1Segment.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Segment.html">OPT</a> &gt;::edgeFaux </td>
+          <td class="memname"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#adf535f8d1974c377d1e453e1e95d3f33">FlagsType</a> &gt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html">vcl::comp::PolygonBitFlags</a>&lt; N, <a class="el" href="classvcl_1_1Segment.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Segment.html">OPT</a> &gt;::edgeFaux </td>
           <td>(</td>
           <td class="paramtype">uint&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
@@ -463,8 +484,8 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">int</a> N, <a class="e
 
 </div>
 </div>
-<a id="a8e618bfaaa68c53ebcd4a1714486d2a8" name="a8e618bfaaa68c53ebcd4a1714486d2a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e618bfaaa68c53ebcd4a1714486d2a8">&#9670;&#160;</a></span>edgeOnBorder() <span class="overload">[1/2]</span></h2>
+<a id="a41af0573d2257b2af9553b5e788bd1f3" name="a41af0573d2257b2af9553b5e788bd1f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41af0573d2257b2af9553b5e788bd1f3">&#9670;&#160;</a></span>edgeOnBorder() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -475,7 +496,7 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">int</a> N, <a class="e
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; <a class="el" href="classvcl_1_1Segment.html">FT</a> &gt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html">vcl::comp::PolygonBitFlags</a>&lt; N, <a class="el" href="classvcl_1_1Segment.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Segment.html">OPT</a> &gt;::edgeOnBorder </td>
+          <td class="memname"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#ae41adfc417060e06b73c935dc201e542">EdgeFlagsType</a> &gt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html">vcl::comp::PolygonBitFlags</a>&lt; N, <a class="el" href="classvcl_1_1Segment.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Segment.html">OPT</a> &gt;::edgeOnBorder </td>
           <td>(</td>
           <td class="paramtype">uint&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
@@ -537,8 +558,8 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">int</a> N, <a class="e
 
 </div>
 </div>
-<a id="abe930d4ac41e8f24d4eb781ee31929ff" name="abe930d4ac41e8f24d4eb781ee31929ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe930d4ac41e8f24d4eb781ee31929ff">&#9670;&#160;</a></span>edgeSelected() <span class="overload">[1/2]</span></h2>
+<a id="a6a4cbf8910654c87c50f49989955c29e" name="a6a4cbf8910654c87c50f49989955c29e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a4cbf8910654c87c50f49989955c29e">&#9670;&#160;</a></span>edgeSelected() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -549,7 +570,7 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">int</a> N, <a class="e
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; <a class="el" href="classvcl_1_1Segment.html">FT</a> &gt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html">vcl::comp::PolygonBitFlags</a>&lt; N, <a class="el" href="classvcl_1_1Segment.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Segment.html">OPT</a> &gt;::edgeSelected </td>
+          <td class="memname"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#ae41adfc417060e06b73c935dc201e542">EdgeFlagsType</a> &gt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html">vcl::comp::PolygonBitFlags</a>&lt; N, <a class="el" href="classvcl_1_1Segment.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Segment.html">OPT</a> &gt;::edgeSelected </td>
           <td>(</td>
           <td class="paramtype">uint&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
@@ -611,8 +632,8 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">int</a> N, <a class="e
 
 </div>
 </div>
-<a id="a10704a94a72dc04cddaef8eb5ba4acba" name="a10704a94a72dc04cddaef8eb5ba4acba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10704a94a72dc04cddaef8eb5ba4acba">&#9670;&#160;</a></span>edgeUserBit() <span class="overload">[1/2]</span></h2>
+<a id="af54148dcd0f5a4ee9cb46d4d925d4b15" name="af54148dcd0f5a4ee9cb46d4d925d4b15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af54148dcd0f5a4ee9cb46d4d925d4b15">&#9670;&#160;</a></span>edgeUserBit() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -623,7 +644,7 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">int</a> N, <a class="e
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; <a class="el" href="classvcl_1_1Segment.html">FT</a> &gt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html">vcl::comp::PolygonBitFlags</a>&lt; N, <a class="el" href="classvcl_1_1Segment.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Segment.html">OPT</a> &gt;::edgeUserBit </td>
+          <td class="memname"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#ae41adfc417060e06b73c935dc201e542">EdgeFlagsType</a> &gt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html">vcl::comp::PolygonBitFlags</a>&lt; N, <a class="el" href="classvcl_1_1Segment.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Segment.html">OPT</a> &gt;::edgeUserBit </td>
           <td>(</td>
           <td class="paramtype">uint&#160;</td>
           <td class="paramname"><em>i</em>, </td>
@@ -707,8 +728,8 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">int</a> N, <a class="e
 
 </div>
 </div>
-<a id="aa114cc5d68ccd41adc2cbf916afc4c06" name="aa114cc5d68ccd41adc2cbf916afc4c06"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa114cc5d68ccd41adc2cbf916afc4c06">&#9670;&#160;</a></span>edgeVisited() <span class="overload">[1/2]</span></h2>
+<a id="a4d83d2b81b92bf0b22bdbc61ef7eb631" name="a4d83d2b81b92bf0b22bdbc61ef7eb631"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d83d2b81b92bf0b22bdbc61ef7eb631">&#9670;&#160;</a></span>edgeVisited() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -719,7 +740,7 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">int</a> N, <a class="e
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; <a class="el" href="classvcl_1_1Segment.html">FT</a> &gt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html">vcl::comp::PolygonBitFlags</a>&lt; N, <a class="el" href="classvcl_1_1Segment.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Segment.html">OPT</a> &gt;::edgeVisited </td>
+          <td class="memname"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#ae41adfc417060e06b73c935dc201e542">EdgeFlagsType</a> &gt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html">vcl::comp::PolygonBitFlags</a>&lt; N, <a class="el" href="classvcl_1_1Segment.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Segment.html">OPT</a> &gt;::edgeVisited </td>
           <td>(</td>
           <td class="paramtype">uint&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
@@ -908,8 +929,8 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">int</a> N, <a class="e
 
 </div>
 </div>
-<a id="ab239dc8ac7d6085523fa1bf37adbb309" name="ab239dc8ac7d6085523fa1bf37adbb309"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab239dc8ac7d6085523fa1bf37adbb309">&#9670;&#160;</a></span>selected() <span class="overload">[1/2]</span></h2>
+<a id="afd19f28a6e05f5501300ce94f83cc429" name="afd19f28a6e05f5501300ce94f83cc429"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd19f28a6e05f5501300ce94f83cc429">&#9670;&#160;</a></span>selected() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -920,7 +941,7 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">int</a> N, <a class="e
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; <a class="el" href="classvcl_1_1Segment.html">FT</a> &gt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html">vcl::comp::PolygonBitFlags</a>&lt; N, <a class="el" href="classvcl_1_1Segment.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Segment.html">OPT</a> &gt;::selected </td>
+          <td class="memname"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#adf535f8d1974c377d1e453e1e95d3f33">FlagsType</a> &gt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html">vcl::comp::PolygonBitFlags</a>&lt; N, <a class="el" href="classvcl_1_1Segment.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Segment.html">OPT</a> &gt;::selected </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -968,8 +989,8 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">int</a> N, <a class="e
 
 </div>
 </div>
-<a id="ac6af3163418456adc01b413668b6561f" name="ac6af3163418456adc01b413668b6561f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6af3163418456adc01b413668b6561f">&#9670;&#160;</a></span>userBit() <span class="overload">[1/2]</span></h2>
+<a id="a73136e42781027bc36ad0a73513e07d5" name="a73136e42781027bc36ad0a73513e07d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73136e42781027bc36ad0a73513e07d5">&#9670;&#160;</a></span>setUnderlyingBitFlags()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -980,7 +1001,158 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">int</a> N, <a class="e
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; <a class="el" href="classvcl_1_1Segment.html">FT</a> &gt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html">vcl::comp::PolygonBitFlags</a>&lt; N, <a class="el" href="classvcl_1_1Segment.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Segment.html">OPT</a> &gt;::userBit </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">void</a> <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html">vcl::comp::PolygonBitFlags</a>&lt; N, <a class="el" href="classvcl_1_1Segment.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Segment.html">OPT</a> &gt;::setUnderlyingBitFlags </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#adf535f8d1974c377d1e453e1e95d3f33">FlagsType</a>&#160;</td>
+          <td class="paramname"><em>bits</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the underlying integral value of the <a class="el" href="classvcl_1_1comp_1_1BitFlags.html" title="The BitFlags component class represents a collection of 32 bits that will be part of an Element (e....">BitFlags</a>. </p>
+<dl class="section note"><dt>Note</dt><dd>The deleted flag will be preserved and won't be overridden by the input integral value.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">bits</td><td>the integral value to set as the underlying value of the <a class="el" href="classvcl_1_1comp_1_1BitFlags.html" title="The BitFlags component class represents a collection of 32 bits that will be part of an Element (e....">BitFlags</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aeb363a13eece432dcbac37b4c7b5c411" name="aeb363a13eece432dcbac37b4c7b5c411"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb363a13eece432dcbac37b4c7b5c411">&#9670;&#160;</a></span>setUnderlyingEdgeBitFlags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="classvcl_1_1Segment.html">int</a> N, <a class="el" href="classvcl_1_1Segment.html">typename</a> <a class="el" href="classvcl_1_1Segment.html">ParentElemType</a>  = void, <a class="el" href="classvcl_1_1Segment.html">bool</a> OPT = false&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">void</a> <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html">vcl::comp::PolygonBitFlags</a>&lt; N, <a class="el" href="classvcl_1_1Segment.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Segment.html">OPT</a> &gt;::setUnderlyingEdgeBitFlags </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#ae41adfc417060e06b73c935dc201e542">EdgeFlagsType</a>&#160;</td>
+          <td class="paramname"><em>bits</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the underlying integral value of the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> <a class="el" href="classvcl_1_1comp_1_1BitFlags.html" title="The BitFlags component class represents a collection of 32 bits that will be part of an Element (e....">BitFlags</a> of the i-th edge. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>the index of the edge. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bits</td><td>the integral value to set as the underlying value of the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> <a class="el" href="classvcl_1_1comp_1_1BitFlags.html" title="The BitFlags component class represents a collection of 32 bits that will be part of an Element (e....">BitFlags</a> of the i-th edge. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3fcd15453a32a43768ab9daf37a6459e" name="a3fcd15453a32a43768ab9daf37a6459e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fcd15453a32a43768ab9daf37a6459e">&#9670;&#160;</a></span>underlyingBitFlags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="classvcl_1_1Segment.html">int</a> N, <a class="el" href="classvcl_1_1Segment.html">typename</a> <a class="el" href="classvcl_1_1Segment.html">ParentElemType</a>  = void, <a class="el" href="classvcl_1_1Segment.html">bool</a> OPT = false&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#adf535f8d1974c377d1e453e1e95d3f33">FlagsType</a> <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html">vcl::comp::PolygonBitFlags</a>&lt; N, <a class="el" href="classvcl_1_1Segment.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Segment.html">OPT</a> &gt;::underlyingBitFlags </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the underlying integral value of the <a class="el" href="classvcl_1_1comp_1_1BitFlags.html" title="The BitFlags component class represents a collection of 32 bits that will be part of an Element (e....">BitFlags</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>the underlying integral value of the <a class="el" href="classvcl_1_1comp_1_1BitFlags.html" title="The BitFlags component class represents a collection of 32 bits that will be part of an Element (e....">BitFlags</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a4f2fe4f2359fe035e77ebd21963dad4f" name="a4f2fe4f2359fe035e77ebd21963dad4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f2fe4f2359fe035e77ebd21963dad4f">&#9670;&#160;</a></span>underlyingEdgeBitFlags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="classvcl_1_1Segment.html">int</a> N, <a class="el" href="classvcl_1_1Segment.html">typename</a> <a class="el" href="classvcl_1_1Segment.html">ParentElemType</a>  = void, <a class="el" href="classvcl_1_1Segment.html">bool</a> OPT = false&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#ae41adfc417060e06b73c935dc201e542">EdgeFlagsType</a> <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html">vcl::comp::PolygonBitFlags</a>&lt; N, <a class="el" href="classvcl_1_1Segment.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Segment.html">OPT</a> &gt;::underlyingEdgeBitFlags </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the underlying integral value of the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> <a class="el" href="classvcl_1_1comp_1_1BitFlags.html" title="The BitFlags component class represents a collection of 32 bits that will be part of an Element (e....">BitFlags</a> of the i-th edge. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>the index of the edge. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the underlying integral value of the <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> <a class="el" href="classvcl_1_1comp_1_1BitFlags.html" title="The BitFlags component class represents a collection of 32 bits that will be part of an Element (e....">BitFlags</a> of the i-th edge. </dd></dl>
+
+</div>
+</div>
+<a id="a0651d3d10d4a325b0e50cc222f0d0e4d" name="a0651d3d10d4a325b0e50cc222f0d0e4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0651d3d10d4a325b0e50cc222f0d0e4d">&#9670;&#160;</a></span>userBit() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="classvcl_1_1Segment.html">int</a> N, <a class="el" href="classvcl_1_1Segment.html">typename</a> <a class="el" href="classvcl_1_1Segment.html">ParentElemType</a>  = void, <a class="el" href="classvcl_1_1Segment.html">bool</a> OPT = false&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#adf535f8d1974c377d1e453e1e95d3f33">FlagsType</a> &gt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html">vcl::comp::PolygonBitFlags</a>&lt; N, <a class="el" href="classvcl_1_1Segment.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Segment.html">OPT</a> &gt;::userBit </td>
           <td>(</td>
           <td class="paramtype">uint&#160;</td>
           <td class="paramname"><em>bit</em></td><td>)</td>
@@ -994,10 +1166,10 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">int</a> N, <a class="e
 </table>
 </div><div class="memdoc">
 
-<p>Returns a reference to the value of the user bit of this <a class="el" href="classvcl_1_1Polygon.html" title="The Polygon class represents a polygon in a N-dimensional Euclidean space.">Polygon</a> given in input. The bit is checked to be less than the total number of assigned user bits, which in this class is 2. </p>
+<p>Returns a reference to the value of the user bit of this <a class="el" href="classvcl_1_1Polygon.html" title="The Polygon class represents a polygon in a N-dimensional Euclidean space.">Polygon</a> given in input. The bit is checked to be less than the total number of assigned user bits, which in this class is 26. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">bit</td><td>the position of the bit, in the interval [0 - 1]. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bit</td><td>the position of the bit, in the interval [0 - 25]. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1031,10 +1203,10 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">int</a> N, <a class="e
 </table>
 </div><div class="memdoc">
 
-<p>Returns the boolean value of the user bit of this <a class="el" href="classvcl_1_1Polygon.html" title="The Polygon class represents a polygon in a N-dimensional Euclidean space.">Polygon</a> given in input. The bit is checked to be less than the total number of assigned user bits, which in this class is 2. </p>
+<p>Returns the boolean value of the user bit of this <a class="el" href="classvcl_1_1Polygon.html" title="The Polygon class represents a polygon in a N-dimensional Euclidean space.">Polygon</a> given in input. The bit is checked to be less than the total number of assigned user bits, which in this class is 26. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">bit</td><td>the position of the bit, in the interval [0 - 1], that will be returned by reference. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bit</td><td>the position of the bit, in the interval [0 - 25], that will be returned by reference. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1042,8 +1214,8 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">int</a> N, <a class="e
 
 </div>
 </div>
-<a id="a6d93cc0ac71d67ec8beb074becbc9277" name="a6d93cc0ac71d67ec8beb074becbc9277"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d93cc0ac71d67ec8beb074becbc9277">&#9670;&#160;</a></span>visited() <span class="overload">[1/2]</span></h2>
+<a id="af500dc9051b4987314b9b19cb825b4a7" name="af500dc9051b4987314b9b19cb825b4a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af500dc9051b4987314b9b19cb825b4a7">&#9670;&#160;</a></span>visited() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1054,7 +1226,7 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">int</a> N, <a class="e
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; <a class="el" href="classvcl_1_1Segment.html">FT</a> &gt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html">vcl::comp::PolygonBitFlags</a>&lt; N, <a class="el" href="classvcl_1_1Segment.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Segment.html">OPT</a> &gt;::visited </td>
+          <td class="memname"><a class="el" href="classvcl_1_1BitProxy.html">BitProxy</a>&lt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html#adf535f8d1974c377d1e453e1e95d3f33">FlagsType</a> &gt; <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html">vcl::comp::PolygonBitFlags</a>&lt; N, <a class="el" href="classvcl_1_1Segment.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Segment.html">OPT</a> &gt;::visited </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1125,9 +1297,39 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">int</a> N, <a class="e
 </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div>
-<div class="line">        <span class="keyword">sizeof</span>(FT) * 8 - FIRST_EDGE_USER_BIT</div>
+<div class="line">        <span class="keyword">sizeof</span>(<a class="code hl_typedef" href="classvcl_1_1comp_1_1PolygonBitFlags.html#ae41adfc417060e06b73c935dc201e542">EdgeFlagsType</a>) * 8 - FIRST_EDGE_USER_BIT</div>
+<div class="ttc" id="aclassvcl_1_1comp_1_1PolygonBitFlags_html_ae41adfc417060e06b73c935dc201e542"><div class="ttname"><a href="classvcl_1_1comp_1_1PolygonBitFlags.html#ae41adfc417060e06b73c935dc201e542">vcl::comp::PolygonBitFlags::EdgeFlagsType</a></div><div class="ttdeci">uchar EdgeFlagsType</div><div class="ttdoc">Expose the underlying type of the Edge BitFlags.</div><div class="ttdef"><b>Definition</b> polygon_bit_flags.h:131</div></div>
 </div><!-- fragment -->
 <p>Static number of bits for each edge that can have custom meanings to the user. </p>
+
+</div>
+</div>
+<a id="acf5666b283bebb86ce8d7902a8b17347" name="acf5666b283bebb86ce8d7902a8b17347"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf5666b283bebb86ce8d7902a8b17347">&#9670;&#160;</a></span>USER_BIT_COUNT</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="classvcl_1_1Segment.html">int</a> N, <a class="el" href="classvcl_1_1Segment.html">typename</a> <a class="el" href="classvcl_1_1Segment.html">ParentElemType</a>  = void, <a class="el" href="classvcl_1_1Segment.html">bool</a> OPT = false&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">const</a> uint <a class="el" href="classvcl_1_1comp_1_1PolygonBitFlags.html">vcl::comp::PolygonBitFlags</a>&lt; N, <a class="el" href="classvcl_1_1Segment.html">ParentElemType</a>, <a class="el" href="classvcl_1_1Segment.html">OPT</a> &gt;::USER_BIT_COUNT</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">        <span class="keyword">sizeof</span>(<a class="code hl_typedef" href="classvcl_1_1comp_1_1PolygonBitFlags.html#adf535f8d1974c377d1e453e1e95d3f33">FlagsType</a>) * 8 - FIRST_USER_BIT</div>
+<div class="ttc" id="aclassvcl_1_1comp_1_1PolygonBitFlags_html_adf535f8d1974c377d1e453e1e95d3f33"><div class="ttname"><a href="classvcl_1_1comp_1_1PolygonBitFlags.html#adf535f8d1974c377d1e453e1e95d3f33">vcl::comp::PolygonBitFlags::FlagsType</a></div><div class="ttdeci">uint FlagsType</div><div class="ttdoc">Expose the underlying type of the BitFlags.</div><div class="ttdef"><b>Definition</b> polygon_bit_flags.h:126</div></div>
+</div><!-- fragment -->
+<p>Static number of bits that can have custom meanings to the user. </p>
 
 </div>
 </div>

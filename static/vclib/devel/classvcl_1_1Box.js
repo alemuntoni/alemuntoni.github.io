@@ -1,7 +1,8 @@
 var classvcl_1_1Box =
 [
     [ "PointType", "classvcl_1_1Box.html#a15e37ebb03903616f0d1d69a344d0b7e", null ],
-    [ "Box", "classvcl_1_1Box.html#a7a51277b679305dae859f3a0744bb6f9", null ],
+    [ "ScalarType", "classvcl_1_1Box.html#ab5d386ba346f177d863c90d933202882", null ],
+    [ "Box", "classvcl_1_1Box.html#aef7b8446b60cd7f14ef14e6bf14819a3", null ],
     [ "Box", "classvcl_1_1Box.html#a17bd5970e09e343453ab3fa0335af277", null ],
     [ "Box", "classvcl_1_1Box.html#a305a3da117ddc24a2c556ac5a939b0df", null ],
     [ "add", "classvcl_1_1Box.html#a68d74263e5a0122d543150cad282e02e", null ],
@@ -14,6 +15,7 @@ var classvcl_1_1Box =
     [ "dim", "classvcl_1_1Box.html#ac1760f8808b47f9cb42cab5058434661", null ],
     [ "intersection", "classvcl_1_1Box.html#aaa9ad7e6c6fb6c7b2ba67d2b86dfbc47", null ],
     [ "intersects", "classvcl_1_1Box.html#a2112e4f51d2f88354009defe73e180bd", null ],
+    [ "isDegenerate", "classvcl_1_1Box.html#af1ad9e91f7823ffb7bc63f0f11746ada", null ],
     [ "isEmpty", "classvcl_1_1Box.html#ab62da3246fc9973f28d3b1417e420eb8", null ],
     [ "isInside", "classvcl_1_1Box.html#a85c9bf310983d70e5beda4e90beecc16", null ],
     [ "isInsideOpenBox", "classvcl_1_1Box.html#a54a9678a04374fcb1e729cfe21ae8916", null ],

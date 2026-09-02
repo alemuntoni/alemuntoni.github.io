@@ -277,12 +277,12 @@ k", without check if it is less than the number of adjacent vertices. Works also
 <tr class="separator:a9e34ef4cd3ffdb2cd2bd4723b0c485ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3106687ba1a50bd5ad36a81a28234d8" id="r_ad3106687ba1a50bd5ad36a81a28234d8"><td class="memTemplParams" colspan="2">template&lt;Range Rng&gt; <br />
 requires InputRange&lt;<a class="el" href="classvcl_1_1Segment.html">Rng</a>, <a class="el" href="classvcl_1_1Vertex.html">Vertex</a>*&gt;</td></tr>
-<tr class="memitem:ad3106687ba1a50bd5ad36a81a28234d8"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentVertices.html#ad3106687ba1a50bd5ad36a81a28234d8">setAdjVertices</a> (<a class="el" href="classvcl_1_1Segment.html">Rng</a> &amp;&amp;<a class="el" href="classvcl_1_1Segment.html">r</a>)</td></tr>
+<tr class="memitem:ad3106687ba1a50bd5ad36a81a28234d8"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentVertices.html#ad3106687ba1a50bd5ad36a81a28234d8">setAdjVertices</a> (<a class="el" href="classvcl_1_1Segment.html">Rng</a> &amp;&amp;r)</td></tr>
 <tr class="memdesc:ad3106687ba1a50bd5ad36a81a28234d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all the adjacent vertices of this element.  <br /></td></tr>
 <tr class="separator:ad3106687ba1a50bd5ad36a81a28234d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaaedf9236cc88dd7adb5cd4de5e4fc0e" id="r_aaaedf9236cc88dd7adb5cd4de5e4fc0e"><td class="memTemplParams" colspan="2">template&lt;Range Rng&gt; <br />
 requires InputRange&lt;<a class="el" href="classvcl_1_1Segment.html">Rng</a>, <a class="el" href="classvcl_1_1Segment.html">uint</a>&gt;</td></tr>
-<tr class="memitem:aaaedf9236cc88dd7adb5cd4de5e4fc0e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentVertices.html#aaaedf9236cc88dd7adb5cd4de5e4fc0e">setAdjVertices</a> (<a class="el" href="classvcl_1_1Segment.html">Rng</a> &amp;&amp;<a class="el" href="classvcl_1_1Segment.html">r</a>)</td></tr>
+<tr class="memitem:aaaedf9236cc88dd7adb5cd4de5e4fc0e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentVertices.html#aaaedf9236cc88dd7adb5cd4de5e4fc0e">setAdjVertices</a> (<a class="el" href="classvcl_1_1Segment.html">Rng</a> &amp;&amp;r)</td></tr>
 <tr class="memdesc:aaaedf9236cc88dd7adb5cd4de5e4fc0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all the adjacent vertices of this element.  <br /></td></tr>
 <tr class="separator:aaaedf9236cc88dd7adb5cd4de5e4fc0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -321,7 +321,7 @@ class vcl::comp::AdjacentVertices&lt; STORE_INDICES, Vertex, ParentElemType, VER
 <div class="fragment"><div class="line">v.adjVertexCount();</div>
 <div class="line"><span class="keyword">auto</span>* v = v.adjVertex(0);</div>
 <div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">uint</a> <a class="code hl_class" href="classvcl_1_1Segment.html">vi</a> = v.adjVertexIndex(0);</div>
-<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:41</div></div>
+<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:26</div></div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>With respect to the other components that store adjacencies, this component does not have two template arguments:<ul>
 <li><code>N</code>, because the container of adjacent vertices is always dynamic (there are no contexts in which it would make sense to have a fixed size container of adjacent vertices);</li>
 <li><code>TTVC</code>, because this argument is used on components that could be part of face elements, and this component does not apply to faces.</li>
@@ -717,7 +717,7 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">bool</a> STORE_INDICES
 </div><div class="memdoc">
 
 <p>Returns the index in the vertex container of the i-th adjacent vertex of the element, but using as index the module between i and the number of adjacent vertices. You can use this function if you need to get the "index of the adjacent vertex next to position k", without check if it is less than the number of adjacent vertices. Works also for negative numbers: </p>
-<div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">k</a> = <a class="code hl_class" href="classvcl_1_1Segment.html">pos</a>; <span class="comment">// some position of an adjacent edge</span></div>
+<div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">k</a> = pos; <span class="comment">// some position of an adjacent edge</span></div>
 <div class="line"><span class="keyword">auto</span> <a class="code hl_class" href="classvcl_1_1Segment.html">idx</a> = e.adjVertexIndexMod(<a class="code hl_class" href="classvcl_1_1Segment.html">k</a>+1); <span class="comment">// the index of the adjacent vertex</span></div>
 <div class="line">                                     <span class="comment">// next to k, that may also be at</span></div>
 <div class="line">                                     <span class="comment">// pos 0</span></div>
@@ -763,7 +763,7 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">bool</a> STORE_INDICES
 <div class="fragment"><div class="line"><span class="keywordflow">for</span> (<a class="code hl_class" href="classvcl_1_1Segment.html">uint</a> <a class="code hl_class" href="classvcl_1_1Segment.html">eid</a> : <a class="code hl_class" href="classvcl_1_1Segment.html">el</a>.<a class="code hl_function" href="classvcl_1_1comp_1_1AdjacentVertices.html#a61b2fba574789b7d5578ac1dc403954e">adjVertexIndices</a>()) {</div>
 <div class="line">    <span class="comment">// Do something with adj vertex index...</span></div>
 <div class="line">}</div>
-<div class="ttc" id="aclassvcl_1_1comp_1_1AdjacentVertices_html_a61b2fba574789b7d5578ac1dc403954e"><div class="ttname"><a href="classvcl_1_1comp_1_1AdjacentVertices.html#a61b2fba574789b7d5578ac1dc403954e">vcl::comp::AdjacentVertices::adjVertexIndices</a></div><div class="ttdeci">View&lt; ConstAdjacentVertexIndexIterator &gt; adjVertexIndices() const</div><div class="ttdoc">Returns a lightweight view object that stores the begin and end iterators of the container of adjacen...</div><div class="ttdef"><b>Definition</b> adjacent_vertices.h:586</div></div>
+<div class="ttc" id="aclassvcl_1_1comp_1_1AdjacentVertices_html_a61b2fba574789b7d5578ac1dc403954e"><div class="ttname"><a href="classvcl_1_1comp_1_1AdjacentVertices.html#a61b2fba574789b7d5578ac1dc403954e">vcl::comp::AdjacentVertices::adjVertexIndices</a></div><div class="ttdeci">View&lt; ConstAdjacentVertexIndexIterator &gt; adjVertexIndices() const</div><div class="ttdoc">Returns a lightweight view object that stores the begin and end iterators of the container of adjacen...</div><div class="ttdef"><b>Definition</b> adjacent_vertices.h:571</div></div>
 </div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>a lightweight view object that can be used in range-based for loops to iterate over adjacent vertex indices. </dd></dl>
 
 </div>
@@ -796,7 +796,7 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">bool</a> STORE_INDICES
 
 <p>Returns the pointer to the i-th adjacent vertex of the element, but using as index the module between i and the number of adjacent vertices. You can use this function if you need to get the "next adjacent
 vertex after position k", without check if it is less than the number of adj vertices. Works also for negative numbers: </p>
-<div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">k</a> = <a class="code hl_class" href="classvcl_1_1Segment.html">pos</a>; <span class="comment">// some position of an adjacent vertex</span></div>
+<div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">k</a> = pos; <span class="comment">// some position of an adjacent vertex</span></div>
 <div class="line"><span class="keyword">auto</span>* <a class="code hl_class" href="classvcl_1_1Segment.html">next</a> = e.adjVertexMod(<a class="code hl_class" href="classvcl_1_1Segment.html">k</a>+1); <span class="comment">// the adj vertex next to k, that may</span></div>
 <div class="line">                                  <span class="comment">// also be at pos 0</span></div>
 <div class="line"><span class="keyword">auto</span>* <a class="code hl_class" href="classvcl_1_1Segment.html">last</a> = e.adjVertexMod(-1); <span class="comment">// the adj vertex in position</span></div>
@@ -877,7 +877,7 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">bool</a> STORE_INDICES
 <div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keyword">auto</span>* adjEdge : <a class="code hl_class" href="classvcl_1_1Segment.html">el</a>.<a class="code hl_function" href="classvcl_1_1comp_1_1AdjacentVertices.html#af7a1b4dfed65bc3c07da08c19c174deb">adjVertices</a>()) {</div>
 <div class="line">    <span class="comment">// Do something with adjVertex</span></div>
 <div class="line">}</div>
-<div class="ttc" id="aclassvcl_1_1comp_1_1AdjacentVertices_html_af7a1b4dfed65bc3c07da08c19c174deb"><div class="ttname"><a href="classvcl_1_1comp_1_1AdjacentVertices.html#af7a1b4dfed65bc3c07da08c19c174deb">vcl::comp::AdjacentVertices::adjVertices</a></div><div class="ttdeci">View&lt; AdjacentVertexIterator &gt; adjVertices()</div><div class="ttdoc">Returns a lightweight view object that stores the begin and end iterators of the container of adjacen...</div><div class="ttdef"><b>Definition</b> adjacent_vertices.h:547</div></div>
+<div class="ttc" id="aclassvcl_1_1comp_1_1AdjacentVertices_html_af7a1b4dfed65bc3c07da08c19c174deb"><div class="ttname"><a href="classvcl_1_1comp_1_1AdjacentVertices.html#af7a1b4dfed65bc3c07da08c19c174deb">vcl::comp::AdjacentVertices::adjVertices</a></div><div class="ttdeci">View&lt; AdjacentVertexIterator &gt; adjVertices()</div><div class="ttdoc">Returns a lightweight view object that stores the begin and end iterators of the container of adjacen...</div><div class="ttdef"><b>Definition</b> adjacent_vertices.h:532</div></div>
 </div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>a lightweight view object that can be used in range-based for loops to iterate over adjacent edges. </dd></dl>
 
 </div>
@@ -1657,7 +1657,7 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">bool</a> STORE_INDICES
 
 <p>Sets the i-th adjacent vertex of the element, but using as index the module between i and the number of adjacent vertices. You can use this function if you need to set the "next adjacent vertex after position
 k", without check if it is less than the number of adjacent vertices. Works also for negative numbers: </p>
-<div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">k</a> = <a class="code hl_class" href="classvcl_1_1Segment.html">pos</a>; <span class="comment">// some position of an adj vertex</span></div>
+<div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">k</a> = pos; <span class="comment">// some position of an adj vertex</span></div>
 <div class="line">e.setAdjVertexMod(<a class="code hl_class" href="classvcl_1_1Segment.html">k</a>+1, <a class="code hl_class" href="classvcl_1_1Segment.html">aVertInd</a>); <span class="comment">// set the adj vertex next to k, that</span></div>
 <div class="line">                                  <span class="comment">// may also be at pos 0</span></div>
 <div class="line">e.setAdjVertexMod(-1, <a class="code hl_class" href="classvcl_1_1Segment.html">aVertInd</a>); <span class="comment">// set the adj vertex in position</span></div>
@@ -1710,7 +1710,7 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">bool</a> STORE_INDICES
 
 <p>Sets the i-th adjacent vertex of the element, but using as index the module between i and the number of adjacent vertices. You can use this function if you need to set the "next adjacent vertex after position
 k", without check if it is less than the number of adjacent vertices. Works also for negative numbers: </p>
-<div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">k</a> = <a class="code hl_class" href="classvcl_1_1Segment.html">pos</a>; <span class="comment">// some position of an adj vertex</span></div>
+<div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">k</a> = pos; <span class="comment">// some position of an adj vertex</span></div>
 <div class="line">e.setAdjVertexMod(<a class="code hl_class" href="classvcl_1_1Segment.html">k</a>+1, <a class="code hl_class" href="classvcl_1_1Segment.html">aVertex</a>); <span class="comment">// set the adj vertex next to k, that</span></div>
 <div class="line">                                 <span class="comment">// may also be at pos 0</span></div>
 <div class="line">e.setAdjVertexMod(-1, <a class="code hl_class" href="classvcl_1_1Segment.html">aVertex</a>); <span class="comment">// set the adj vertex in position</span></div>

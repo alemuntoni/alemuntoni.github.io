@@ -10,5 +10,6 @@ var topics =
     [ "Mesh", "group__mesh.html", "group__mesh" ],
     [ "Meshes", "group__meshes.html", "group__meshes" ],
     [ "Core Data Structures", "group__space__core.html", "group__space__core" ],
-    [ "Spatial Data Structures", "group__space__complex.html", "group__space__complex" ]
+    [ "Spatial Data Structures", "group__space__complex.html", "group__space__complex" ],
+    [ "Version Information", "group__version.html", "group__version" ]
 ];

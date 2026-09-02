@@ -108,8 +108,6 @@ $(document).ready(function(){initNavTree('classvcl_1_1IndexBuffer.html',''); ini
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-types">Private Types</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="#friends">Friends</a> &#124;
 <a href="classvcl_1_1IndexBuffer-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">vcl::IndexBuffer Class Reference</div></div>
 </div><!--header-->
@@ -138,45 +136,27 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5969be3d55dffafcc9a4cf3fd92d1ab7" id="r_a5969be3d55dffafcc9a4cf3fd92d1ab7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1IndexBuffer.html#a5969be3d55dffafcc9a4cf3fd92d1ab7">bind</a> (<a class="el" href="classvcl_1_1Segment.html">uint</a> <a class="el" href="classvcl_1_1Segment.html">stage</a>=<a class="el" href="group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6">UINT_NULL</a>, bgfx::Access::Enum <a class="el" href="classvcl_1_1Segment.html">access</a>=bgfx::Access::Read) <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
 <tr class="memdesc:a5969be3d55dffafcc9a4cf3fd92d1ab7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind the index buffer to the rendering pipeline.  <br /></td></tr>
 <tr class="separator:a5969be3d55dffafcc9a4cf3fd92d1ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac7ebcf7e0e8d1349ba46934bc62c966" id="r_aac7ebcf7e0e8d1349ba46934bc62c966"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1IndexBuffer.html#aac7ebcf7e0e8d1349ba46934bc62c966">create</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> bgfx::Memory *indices, <a class="el" href="classvcl_1_1Segment.html">uint64_t</a> flags=<a class="el" href="classvcl_1_1Segment.html">BGFX_BUFFER_NONE</a>, <a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1Segment.html">compute</a>=<a class="el" href="classvcl_1_1Segment.html">false</a>)</td></tr>
-<tr class="memdesc:aac7ebcf7e0e8d1349ba46934bc62c966"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the index buffer and sets the data.  <br /></td></tr>
-<tr class="separator:aac7ebcf7e0e8d1349ba46934bc62c966"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a45a346419d118ff8cf621568f022f8" id="r_a2a45a346419d118ff8cf621568f022f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1IndexBuffer.html#a2a45a346419d118ff8cf621568f022f8">create</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">void</a> *<a class="el" href="classvcl_1_1Segment.html">bufferIndices</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">uint</a> bufferSize, <a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1Segment.html">is32Bit</a>=<a class="el" href="classvcl_1_1Segment.html">true</a>, bgfx::ReleaseFn <a class="el" href="classvcl_1_1Segment.html">releaseFn</a>=<a class="el" href="classvcl_1_1Segment.html">nullptr</a>)</td></tr>
-<tr class="memdesc:a2a45a346419d118ff8cf621568f022f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the index buffer and sets the data for rendering.  <br /></td></tr>
-<tr class="separator:a2a45a346419d118ff8cf621568f022f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af22b84aa9c88465ed587b707b89ff1a4" id="r_af22b84aa9c88465ed587b707b89ff1a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1IndexBuffer.html#af22b84aa9c88465ed587b707b89ff1a4">createForCompute</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">void</a> *<a class="el" href="classvcl_1_1Segment.html">bufferIndices</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">uint</a> bufferSize, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">PrimitiveType</a> type, bgfx::Access::Enum <a class="el" href="classvcl_1_1Segment.html">access</a>=bgfx::Access::Read, bgfx::ReleaseFn <a class="el" href="classvcl_1_1Segment.html">releaseFn</a>=<a class="el" href="classvcl_1_1Segment.html">nullptr</a>)</td></tr>
-<tr class="memdesc:af22b84aa9c88465ed587b707b89ff1a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the index buffer and sets the data for compute shaders.  <br /></td></tr>
-<tr class="separator:af22b84aa9c88465ed587b707b89ff1a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b9a24389810fccfb75fdfe2e04b4743" id="r_a6b9a24389810fccfb75fdfe2e04b4743"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1IndexBuffer.html#a6b9a24389810fccfb75fdfe2e04b4743">create</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> bgfx::Memory *indices, <a class="el" href="classvcl_1_1Segment.html">uint64_t</a> flags=<a class="el" href="classvcl_1_1Segment.html">BGFX_BUFFER_NONE</a>)</td></tr>
+<tr class="memdesc:a6b9a24389810fccfb75fdfe2e04b4743"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the index buffer and sets the data.  <br /></td></tr>
+<tr class="separator:a6b9a24389810fccfb75fdfe2e04b4743"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af20bc9381966adb07233d804fe3fdc80" id="r_af20bc9381966adb07233d804fe3fdc80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1IndexBuffer.html#af20bc9381966adb07233d804fe3fdc80">create</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">void</a> *<a class="el" href="classvcl_1_1Segment.html">bufferIndices</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">uint</a> bufferSize, bgfx::ReleaseFn <a class="el" href="classvcl_1_1Segment.html">releaseFn</a>=<a class="el" href="classvcl_1_1Segment.html">nullptr</a>)</td></tr>
+<tr class="memdesc:af20bc9381966adb07233d804fe3fdc80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the index buffer and sets the data for rendering or compute.  <br /></td></tr>
+<tr class="separator:af20bc9381966adb07233d804fe3fdc80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00488ef9ff7c20f4a4132228ea78676b" id="r_a00488ef9ff7c20f4a4132228ea78676b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1IndexBuffer.html#a00488ef9ff7c20f4a4132228ea78676b">create</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">void</a> *<a class="el" href="classvcl_1_1Segment.html">bufferIndices</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">uint</a> bufferSize, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">PrimitiveType</a> type, bgfx::Access::Enum <a class="el" href="classvcl_1_1Segment.html">access</a>=bgfx::Access::Read, bgfx::ReleaseFn <a class="el" href="classvcl_1_1Segment.html">releaseFn</a>=<a class="el" href="classvcl_1_1Segment.html">nullptr</a>)</td></tr>
+<tr class="memdesc:a00488ef9ff7c20f4a4132228ea78676b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the index buffer and sets the data for rendering or compute.  <br /></td></tr>
+<tr class="separator:a00488ef9ff7c20f4a4132228ea78676b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ddf277f685d2fb95ce1698164e8c59a" id="r_a4ddf277f685d2fb95ce1698164e8c59a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1IndexBuffer.html#a4ddf277f685d2fb95ce1698164e8c59a">create</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">void</a> *<a class="el" href="classvcl_1_1Segment.html">bufferIndices</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">uint</a> bufferSize, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">PrimitiveType</a> type, bgfx::ReleaseFn <a class="el" href="classvcl_1_1Segment.html">releaseFn</a>)</td></tr>
+<tr class="memdesc:a4ddf277f685d2fb95ce1698164e8c59a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the index buffer and sets the data for rendering or compute.  <br /></td></tr>
+<tr class="separator:a4ddf277f685d2fb95ce1698164e8c59a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d5db5deffa748e0d1eea237ec59a1dd" id="r_a4d5db5deffa748e0d1eea237ec59a1dd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1IndexBuffer.html#a4d5db5deffa748e0d1eea237ec59a1dd">IndexBuffer</a> ()=<a class="el" href="classvcl_1_1Segment.html">default</a></td></tr>
 <tr class="memdesc:a4d5db5deffa748e0d1eea237ec59a1dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empty constructor.  <br /></td></tr>
 <tr class="separator:a4d5db5deffa748e0d1eea237ec59a1dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a7dc12b6d4cfc666dd0939ec973910c" id="r_a1a7dc12b6d4cfc666dd0939ec973910c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1IndexBuffer.html#a1a7dc12b6d4cfc666dd0939ec973910c">isCompute</a> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
-<tr class="memdesc:a1a7dc12b6d4cfc666dd0939ec973910c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the <a class="el" href="classvcl_1_1IndexBuffer.html" title="The IndexBuffer manages the lifetime of a bgfx::IndexBufferHandle.">IndexBuffer</a> is used for compute shaders.  <br /></td></tr>
-<tr class="separator:a1a7dc12b6d4cfc666dd0939ec973910c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0d8a008d8315b6a8e687a8f9d8fb341" id="r_aa0d8a008d8315b6a8e687a8f9d8fb341"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1IndexBuffer.html#aa0d8a008d8315b6a8e687a8f9d8fb341">setCompute</a> (<a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1Segment.html">compute</a>)</td></tr>
-<tr class="memdesc:aa0d8a008d8315b6a8e687a8f9d8fb341"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set if the <a class="el" href="classvcl_1_1IndexBuffer.html" title="The IndexBuffer manages the lifetime of a bgfx::IndexBufferHandle.">IndexBuffer</a> is used for compute shaders.  <br /></td></tr>
-<tr class="separator:aa0d8a008d8315b6a8e687a8f9d8fb341"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5be70cdfd17f8dabb4d8f2264771e2cc" id="r_a5be70cdfd17f8dabb4d8f2264771e2cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1IndexBuffer.html#a5be70cdfd17f8dabb4d8f2264771e2cc">swap</a> (<a class="el" href="classvcl_1_1IndexBuffer.html">IndexBuffer</a> &amp;<a class="el" href="classvcl_1_1Segment.html">other</a>)</td></tr>
-<tr class="memdesc:a5be70cdfd17f8dabb4d8f2264771e2cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swap the content of this object with another <a class="el" href="classvcl_1_1IndexBuffer.html" title="The IndexBuffer manages the lifetime of a bgfx::IndexBufferHandle.">IndexBuffer</a> object.  <br /></td></tr>
-<tr class="separator:a5be70cdfd17f8dabb4d8f2264771e2cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-types" name="pri-types"></a>
 Private Types</h2></td></tr>
 <tr class="memitem:af8a0a6713687577e2c9a408ca3c5016e" id="r_af8a0a6713687577e2c9a408ca3c5016e"><td class="memItemLeft" align="right" valign="top"><a id="af8a0a6713687577e2c9a408ca3c5016e" name="af8a0a6713687577e2c9a408ca3c5016e"></a>
 <a class="el" href="classvcl_1_1Segment.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Base</b> = <a class="el" href="classvcl_1_1GenericBuffer.html">GenericBuffer</a>&lt; bgfx::IndexBufferHandle &gt;</td></tr>
 <tr class="separator:af8a0a6713687577e2c9a408ca3c5016e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:a540f625f16a1f806d0096b40d428540c" id="r_a540f625f16a1f806d0096b40d428540c"><td class="memItemLeft" align="right" valign="top"><a id="a540f625f16a1f806d0096b40d428540c" name="a540f625f16a1f806d0096b40d428540c"></a>
-<a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mCompute</b> = <a class="el" href="classvcl_1_1Segment.html">false</a></td></tr>
-<tr class="separator:a540f625f16a1f806d0096b40d428540c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
-Friends</h2></td></tr>
-<tr class="memitem:a6e199fb172dd964924168f18dde078ea" id="r_a6e199fb172dd964924168f18dde078ea"><td class="memItemLeft" align="right" valign="top"><a id="a6e199fb172dd964924168f18dde078ea" name="a6e199fb172dd964924168f18dde078ea"></a>
-<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>swap</b> (<a class="el" href="classvcl_1_1IndexBuffer.html">IndexBuffer</a> &amp;<a class="el" href="classvcl_1_1Segment.html">a</a>, <a class="el" href="classvcl_1_1IndexBuffer.html">IndexBuffer</a> &amp;<a class="el" href="classvcl_1_1Segment.html">b</a>)</td></tr>
-<tr class="separator:a6e199fb172dd964924168f18dde078ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="classvcl_1_1IndexBuffer.html" title="The IndexBuffer manages the lifetime of a bgfx::IndexBufferHandle.">IndexBuffer</a> manages the lifetime of a bgfx::IndexBufferHandle. </p>
@@ -304,8 +284,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="aac7ebcf7e0e8d1349ba46934bc62c966" name="aac7ebcf7e0e8d1349ba46934bc62c966"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac7ebcf7e0e8d1349ba46934bc62c966">&#9670;&#160;</a></span>create() <span class="overload">[1/2]</span></h2>
+<a id="a6b9a24389810fccfb75fdfe2e04b4743" name="a6b9a24389810fccfb75fdfe2e04b4743"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b9a24389810fccfb75fdfe2e04b4743">&#9670;&#160;</a></span>create() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -323,13 +303,7 @@ Friends</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">uint64_t</a>&#160;</td>
-          <td class="paramname"><em>flags</em> = <code><a class="el" href="classvcl_1_1Segment.html">BGFX_BUFFER_NONE</a></code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td>
-          <td class="paramname"><em>compute</em> = <code><a class="el" href="classvcl_1_1Segment.html">false</a></code>&#160;</td>
+          <td class="paramname"><em>flags</em> = <code><a class="el" href="classvcl_1_1Segment.html">BGFX_BUFFER_NONE</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -350,15 +324,14 @@ Friends</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">indices</td><td>the memory containing the data. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">flags</td><td>the flags for the buffer. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">compute</td><td>if true, the buffer is used for compute shaders. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a2a45a346419d118ff8cf621568f022f8" name="a2a45a346419d118ff8cf621568f022f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a45a346419d118ff8cf621568f022f8">&#9670;&#160;</a></span>create() <span class="overload">[2/2]</span></h2>
+<a id="af20bc9381966adb07233d804fe3fdc80" name="af20bc9381966adb07233d804fe3fdc80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af20bc9381966adb07233d804fe3fdc80">&#9670;&#160;</a></span>create() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -381,12 +354,6 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td>
-          <td class="paramname"><em>is32Bit</em> = <code><a class="el" href="classvcl_1_1Segment.html">true</a></code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">bgfx::ReleaseFn&#160;</td>
           <td class="paramname"><em>releaseFn</em> = <code><a class="el" href="classvcl_1_1Segment.html">nullptr</a></code>&#160;</td>
         </tr>
@@ -403,14 +370,13 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Creates the index buffer and sets the data for rendering. </p>
-<p>If the buffer is already created (<a class="el" href="classvcl_1_1GenericBuffer.html#ac254df5bcc10578382172a047375fd38">isValid()</a> returns <code>true</code>), it is destroyed and a new one is created.</p>
+<p>Creates the index buffer and sets the data for rendering or compute. </p>
+<p>The type is assumed to be UINT, and the access type is assumed to be Read.</p>
 <dl class="section note"><dt>Note</dt><dd>The data must be available for two bgfx::frame calls, then it is safe to release the data. If you cannot guarantee this, you must provide a release function that will be called automatically when the data is no longer needed.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">bufferIndices</td><td>the data to be copied in the index buffer. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">bufferSize</td><td>the size of the bufferIndices. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">is32Bit</td><td>if true, the bufferIndices are 32-bit integers. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">releaseFn</td><td>the release function to be called when the data is no longer needed. </td></tr>
   </table>
   </dd>
@@ -418,8 +384,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="af22b84aa9c88465ed587b707b89ff1a4" name="af22b84aa9c88465ed587b707b89ff1a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af22b84aa9c88465ed587b707b89ff1a4">&#9670;&#160;</a></span>createForCompute()</h2>
+<a id="a00488ef9ff7c20f4a4132228ea78676b" name="a00488ef9ff7c20f4a4132228ea78676b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00488ef9ff7c20f4a4132228ea78676b">&#9670;&#160;</a></span>create() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -428,7 +394,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">void</a> vcl::IndexBuffer::createForCompute </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">void</a> vcl::IndexBuffer::create </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">void</a> *&#160;</td>
           <td class="paramname"><em>bufferIndices</em>, </td>
@@ -470,7 +436,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Creates the index buffer and sets the data for compute shaders. </p>
+<p>Creates the index buffer and sets the data for rendering or compute. </p>
 <p>If the buffer is already created (<a class="el" href="classvcl_1_1GenericBuffer.html#ac254df5bcc10578382172a047375fd38">isValid()</a> returns <code>true</code>), it is destroyed and a new one is created.</p>
 <dl class="section note"><dt>Note</dt><dd>The data must be available for two bgfx::frame calls, then it is safe to release the data. If you cannot guarantee this, you must provide a release function that will be called automatically when the data is no longer needed.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -486,8 +452,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a1a7dc12b6d4cfc666dd0939ec973910c" name="a1a7dc12b6d4cfc666dd0939ec973910c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a7dc12b6d4cfc666dd0939ec973910c">&#9670;&#160;</a></span>isCompute()</h2>
+<a id="a4ddf277f685d2fb95ce1698164e8c59a" name="a4ddf277f685d2fb95ce1698164e8c59a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ddf277f685d2fb95ce1698164e8c59a">&#9670;&#160;</a></span>create() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -496,39 +462,33 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">bool</a> vcl::IndexBuffer::isCompute </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">void</a> vcl::IndexBuffer::create </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">void</a> *&#160;</td>
+          <td class="paramname"><em>bufferIndices</em>, </td>
         </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Check if the <a class="el" href="classvcl_1_1IndexBuffer.html" title="The IndexBuffer manages the lifetime of a bgfx::IndexBufferHandle.">IndexBuffer</a> is used for compute shaders. </p>
-<dl class="section return"><dt>Returns</dt><dd>true if the <a class="el" href="classvcl_1_1IndexBuffer.html" title="The IndexBuffer manages the lifetime of a bgfx::IndexBufferHandle.">IndexBuffer</a> is used for compute shaders, false otherwise. </dd></dl>
-
-</div>
-</div>
-<a id="aa0d8a008d8315b6a8e687a8f9d8fb341" name="aa0d8a008d8315b6a8e687a8f9d8fb341"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa0d8a008d8315b6a8e687a8f9d8fb341">&#9670;&#160;</a></span>setCompute()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">void</a> vcl::IndexBuffer::setCompute </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td>
-          <td class="paramname"><em>compute</em></td><td>)</td>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">uint</a>&#160;</td>
+          <td class="paramname"><em>bufferSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">PrimitiveType</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bgfx::ReleaseFn&#160;</td>
+          <td class="paramname"><em>releaseFn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -538,44 +498,15 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set if the <a class="el" href="classvcl_1_1IndexBuffer.html" title="The IndexBuffer manages the lifetime of a bgfx::IndexBufferHandle.">IndexBuffer</a> is used for compute shaders. </p>
+<p>Creates the index buffer and sets the data for rendering or compute. </p>
+<p>The access type is assumed to be Read.</p>
+<dl class="section note"><dt>Note</dt><dd>The data must be available for two bgfx::frame calls, then it is safe to release the data. If you cannot guarantee this, you must provide a release function that will be called automatically when the data is no longer needed.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">compute</td><td>if true, the <a class="el" href="classvcl_1_1IndexBuffer.html" title="The IndexBuffer manages the lifetime of a bgfx::IndexBufferHandle.">IndexBuffer</a> is used for compute shaders. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a5be70cdfd17f8dabb4d8f2264771e2cc" name="a5be70cdfd17f8dabb4d8f2264771e2cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5be70cdfd17f8dabb4d8f2264771e2cc">&#9670;&#160;</a></span>swap()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">void</a> vcl::IndexBuffer::swap </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1IndexBuffer.html">IndexBuffer</a> &amp;&#160;</td>
-          <td class="paramname"><em>other</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Swap the content of this object with another <a class="el" href="classvcl_1_1IndexBuffer.html" title="The IndexBuffer manages the lifetime of a bgfx::IndexBufferHandle.">IndexBuffer</a> object. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>the other <a class="el" href="classvcl_1_1IndexBuffer.html" title="The IndexBuffer manages the lifetime of a bgfx::IndexBufferHandle.">IndexBuffer</a> object. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bufferIndices</td><td>the data to be copied in the index buffer. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bufferSize</td><td>the size of the bufferIndices. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>the type of the elements. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">releaseFn</td><td>the release function to be called when the data is no longer needed. </td></tr>
   </table>
   </dd>
 </dl>

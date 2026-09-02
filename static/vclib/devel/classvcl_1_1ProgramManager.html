@@ -107,38 +107,361 @@ $(document).ready(function(){initNavTree('classvcl_1_1ProgramManager.html',''); 
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classvcl_1_1ProgramManager-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">vcl::ProgramManager Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Manages the creation, retrieval, and lifetime of bgfx programs.  
+ <a href="classvcl_1_1ProgramManager.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="program__manager_8h_source.html">vclib/bgfx/context/program_manager.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a28ee22bf7b64b8baf23c763bf2f68a53" id="r_a28ee22bf7b64b8baf23c763bf2f68a53"><td class="memTemplParams" colspan="2"><a id="a28ee22bf7b64b8baf23c763bf2f68a53" name="a28ee22bf7b64b8baf23c763bf2f68a53"></a>
-template&lt;ComputeProgram PROGRAM&gt; </td></tr>
-<tr class="memitem:a28ee22bf7b64b8baf23c763bf2f68a53"><td class="memTemplItemLeft" align="right" valign="top">bgfx::ProgramHandle&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getComputeProgram</b> ()</td></tr>
+<tr class="memitem:a28ee22bf7b64b8baf23c763bf2f68a53" id="r_a28ee22bf7b64b8baf23c763bf2f68a53"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="classvcl_1_1Segment.html">ComputeProgram</a> PROGRAM&gt; </td></tr>
+<tr class="memitem:a28ee22bf7b64b8baf23c763bf2f68a53"><td class="memTemplItemLeft" align="right" valign="top">bgfx::ProgramHandle&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1ProgramManager.html#a28ee22bf7b64b8baf23c763bf2f68a53">getComputeProgram</a> ()</td></tr>
+<tr class="memdesc:a28ee22bf7b64b8baf23c763bf2f68a53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the bgfx program handle for a specific Compute program template argument.  <br /></td></tr>
 <tr class="separator:a28ee22bf7b64b8baf23c763bf2f68a53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54912b60b53b05d75c285ff02dd492a2" id="r_a54912b60b53b05d75c285ff02dd492a2"><td class="memTemplParams" colspan="2"><a id="a54912b60b53b05d75c285ff02dd492a2" name="a54912b60b53b05d75c285ff02dd492a2"></a>
-template&lt;VertFragProgram PROGRAM&gt; </td></tr>
-<tr class="memitem:a54912b60b53b05d75c285ff02dd492a2"><td class="memTemplItemLeft" align="right" valign="top">bgfx::ProgramHandle&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getProgram</b> ()</td></tr>
+<tr class="memitem:ac950358d479c1fe49180c0f41fa7c2b5" id="r_ac950358d479c1fe49180c0f41fa7c2b5"><td class="memItemLeft" align="right" valign="top">bgfx::ProgramHandle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1ProgramManager.html#ac950358d479c1fe49180c0f41fa7c2b5">getComputeProgram</a> (<a class="el" href="classvcl_1_1Segment.html">ComputeProgram</a> <a class="el" href="classvcl_1_1Segment.html">p</a>)</td></tr>
+<tr class="memdesc:ac950358d479c1fe49180c0f41fa7c2b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the bgfx program handle for a given Compute program enum value.  <br /></td></tr>
+<tr class="separator:ac950358d479c1fe49180c0f41fa7c2b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54912b60b53b05d75c285ff02dd492a2" id="r_a54912b60b53b05d75c285ff02dd492a2"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="classvcl_1_1Segment.html">VertFragProgram</a> PROGRAM&gt; </td></tr>
+<tr class="memitem:a54912b60b53b05d75c285ff02dd492a2"><td class="memTemplItemLeft" align="right" valign="top">bgfx::ProgramHandle&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1ProgramManager.html#a54912b60b53b05d75c285ff02dd492a2">getProgram</a> ()</td></tr>
+<tr class="memdesc:a54912b60b53b05d75c285ff02dd492a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the bgfx program handle for a specific Vertex/Fragment program template argument.  <br /></td></tr>
 <tr class="separator:a54912b60b53b05d75c285ff02dd492a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad26c8b4bbeae5e8deef184f1db9affa0" id="r_ad26c8b4bbeae5e8deef184f1db9affa0"><td class="memItemLeft" align="right" valign="top"><a id="ad26c8b4bbeae5e8deef184f1db9affa0" name="ad26c8b4bbeae5e8deef184f1db9affa0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ProgramManager</b> (bgfx::RendererType::Enum renderType)</td></tr>
+<tr class="memitem:aaf067e394a7723b0253ec6b02ad1b040" id="r_aaf067e394a7723b0253ec6b02ad1b040"><td class="memItemLeft" align="right" valign="top">bgfx::ProgramHandle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1ProgramManager.html#aaf067e394a7723b0253ec6b02ad1b040">getProgram</a> (<a class="el" href="classvcl_1_1Segment.html">VertFragProgram</a> <a class="el" href="classvcl_1_1Segment.html">p</a>)</td></tr>
+<tr class="memdesc:aaf067e394a7723b0253ec6b02ad1b040"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the bgfx program handle for a given Vertex/Fragment program enum value.  <br /></td></tr>
+<tr class="separator:aaf067e394a7723b0253ec6b02ad1b040"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad26c8b4bbeae5e8deef184f1db9affa0" id="r_ad26c8b4bbeae5e8deef184f1db9affa0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1ProgramManager.html#ad26c8b4bbeae5e8deef184f1db9affa0">ProgramManager</a> (bgfx::RendererType::Enum renderType)</td></tr>
+<tr class="memdesc:ad26c8b4bbeae5e8deef184f1db9affa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classvcl_1_1ProgramManager.html" title="Manages the creation, retrieval, and lifetime of bgfx programs.">ProgramManager</a>.  <br /></td></tr>
 <tr class="separator:ad26c8b4bbeae5e8deef184f1db9affa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c145b78f64079ed1d57b159d558d2e9" id="r_a9c145b78f64079ed1d57b159d558d2e9"><td class="memItemLeft" align="right" valign="top"><a id="a9c145b78f64079ed1d57b159d558d2e9" name="a9c145b78f64079ed1d57b159d558d2e9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>~ProgramManager</b> ()</td></tr>
+<tr class="memdesc:a9c145b78f64079ed1d57b159d558d2e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. Destroys all cached bgfx programs. <br /></td></tr>
+<tr class="separator:a9c145b78f64079ed1d57b159d558d2e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a99292f16efa6984265a0e1b5b4bb1528" id="r_a99292f16efa6984265a0e1b5b4bb1528"><td class="memTemplParams" colspan="2">template&lt;size_t... Is&gt; </td></tr>
+<tr class="memitem:a99292f16efa6984265a0e1b5b4bb1528"><td class="memTemplItemLeft" align="right" valign="top">bgfx::ProgramHandle&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1ProgramManager.html#a99292f16efa6984265a0e1b5b4bb1528">getComputeProgramImpl</a> (<a class="el" href="classvcl_1_1Segment.html">ComputeProgram</a> <a class="el" href="classvcl_1_1Segment.html">p</a>, std::index_sequence&lt; Is... &gt;)</td></tr>
+<tr class="memdesc:a99292f16efa6984265a0e1b5b4bb1528"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper template method to retrieve the compute program handle dynamically.  <br /></td></tr>
+<tr class="separator:a99292f16efa6984265a0e1b5b4bb1528"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a871688cdce2c9818d60c7ff603e7c921" id="r_a871688cdce2c9818d60c7ff603e7c921"><td class="memTemplParams" colspan="2">template&lt;size_t... Is&gt; </td></tr>
+<tr class="memitem:a871688cdce2c9818d60c7ff603e7c921"><td class="memTemplItemLeft" align="right" valign="top">bgfx::ProgramHandle&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1ProgramManager.html#a871688cdce2c9818d60c7ff603e7c921">getProgramImpl</a> (<a class="el" href="classvcl_1_1Segment.html">VertFragProgram</a> <a class="el" href="classvcl_1_1Segment.html">p</a>, std::index_sequence&lt; Is... &gt;)</td></tr>
+<tr class="memdesc:a871688cdce2c9818d60c7ff603e7c921"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper template method to retrieve the program handle dynamically.  <br /></td></tr>
+<tr class="separator:a871688cdce2c9818d60c7ff603e7c921"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a262c295d7c0b1ae099c5526772145f70" id="r_a262c295d7c0b1ae099c5526772145f70"><td class="memItemLeft" align="right" valign="top"><a id="a262c295d7c0b1ae099c5526772145f70" name="a262c295d7c0b1ae099c5526772145f70"></a>
 std::array&lt; bgfx::ProgramHandle, toUnderlying(ComputeProgram::COUNT)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mCPrograms</b></td></tr>
+<tr class="memdesc:a262c295d7c0b1ae099c5526772145f70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cache of Compute programs. <br /></td></tr>
 <tr class="separator:a262c295d7c0b1ae099c5526772145f70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a814b845ea70281151cd3212db3f5846a" id="r_a814b845ea70281151cd3212db3f5846a"><td class="memItemLeft" align="right" valign="top"><a id="a814b845ea70281151cd3212db3f5846a" name="a814b845ea70281151cd3212db3f5846a"></a>
 bgfx::RendererType::Enum&#160;</td><td class="memItemRight" valign="bottom"><b>mRenderType</b> = bgfx::RendererType::Count</td></tr>
+<tr class="memdesc:a814b845ea70281151cd3212db3f5846a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The bgfx renderer type used to load the correct shader binaries. <br /></td></tr>
 <tr class="separator:a814b845ea70281151cd3212db3f5846a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a537d7a73b1994abf76d17f1aeac43ae8" id="r_a537d7a73b1994abf76d17f1aeac43ae8"><td class="memItemLeft" align="right" valign="top"><a id="a537d7a73b1994abf76d17f1aeac43ae8" name="a537d7a73b1994abf76d17f1aeac43ae8"></a>
 std::array&lt; bgfx::ProgramHandle, toUnderlying(VertFragProgram::COUNT)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mVFPrograms</b></td></tr>
+<tr class="memdesc:a537d7a73b1994abf76d17f1aeac43ae8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cache of Vertex/Fragment programs. <br /></td></tr>
 <tr class="separator:a537d7a73b1994abf76d17f1aeac43ae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Manages the creation, retrieval, and lifetime of bgfx programs. </p>
+<p>This class handles both vertex-fragment programs and compute programs, loading them lazily (on demand) and caching their handles. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ad26c8b4bbeae5e8deef184f1db9affa0" name="ad26c8b4bbeae5e8deef184f1db9affa0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad26c8b4bbeae5e8deef184f1db9affa0">&#9670;&#160;</a></span>ProgramManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vcl::ProgramManager::ProgramManager </td>
+          <td>(</td>
+          <td class="paramtype">bgfx::RendererType::Enum&#160;</td>
+          <td class="paramname"><em>renderType</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="classvcl_1_1ProgramManager.html" title="Manages the creation, retrieval, and lifetime of bgfx programs.">ProgramManager</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">renderType</td><td>The bgfx renderer type used to select the correct shader binaries. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a28ee22bf7b64b8baf23c763bf2f68a53" name="a28ee22bf7b64b8baf23c763bf2f68a53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28ee22bf7b64b8baf23c763bf2f68a53">&#9670;&#160;</a></span>getComputeProgram() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="classvcl_1_1Segment.html">ComputeProgram</a> PROGRAM&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bgfx::ProgramHandle vcl::ProgramManager::getComputeProgram </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the bgfx program handle for a specific Compute program template argument. </p>
+<p>Creates and caches the program if it has not been loaded yet.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">PROGRAM</td><td>The Compute program enum value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The bgfx program handle. </dd></dl>
+
+</div>
+</div>
+<a id="ac950358d479c1fe49180c0f41fa7c2b5" name="ac950358d479c1fe49180c0f41fa7c2b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac950358d479c1fe49180c0f41fa7c2b5">&#9670;&#160;</a></span>getComputeProgram() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bgfx::ProgramHandle vcl::ProgramManager::getComputeProgram </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">ComputeProgram</a>&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the bgfx program handle for a given Compute program enum value. </p>
+<p>Creates and caches the program if it has not been loaded yet.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>The Compute program enum value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The bgfx program handle. </dd></dl>
+
+</div>
+</div>
+<a id="a99292f16efa6984265a0e1b5b4bb1528" name="a99292f16efa6984265a0e1b5b4bb1528"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99292f16efa6984265a0e1b5b4bb1528">&#9670;&#160;</a></span>getComputeProgramImpl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t... Is&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bgfx::ProgramHandle vcl::ProgramManager::getComputeProgramImpl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">ComputeProgram</a>&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::index_sequence&lt; Is... &gt;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Helper template method to retrieve the compute program handle dynamically. </p>
+<p>Uses index sequences to map the dynamic enum value to the static template version.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Is</td><td>Index sequence pack. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>The Compute program enum value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The bgfx program handle. </dd></dl>
+
+</div>
+</div>
+<a id="a54912b60b53b05d75c285ff02dd492a2" name="a54912b60b53b05d75c285ff02dd492a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54912b60b53b05d75c285ff02dd492a2">&#9670;&#160;</a></span>getProgram() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="classvcl_1_1Segment.html">VertFragProgram</a> PROGRAM&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bgfx::ProgramHandle vcl::ProgramManager::getProgram </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the bgfx program handle for a specific Vertex/Fragment program template argument. </p>
+<p>Creates and caches the program if it has not been loaded yet.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">PROGRAM</td><td>The Vertex/Fragment program enum value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The bgfx program handle. </dd></dl>
+
+</div>
+</div>
+<a id="aaf067e394a7723b0253ec6b02ad1b040" name="aaf067e394a7723b0253ec6b02ad1b040"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf067e394a7723b0253ec6b02ad1b040">&#9670;&#160;</a></span>getProgram() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bgfx::ProgramHandle vcl::ProgramManager::getProgram </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">VertFragProgram</a>&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the bgfx program handle for a given Vertex/Fragment program enum value. </p>
+<p>Creates and caches the program if it has not been loaded yet.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>The Vertex/Fragment program enum value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The bgfx program handle. </dd></dl>
+
+</div>
+</div>
+<a id="a871688cdce2c9818d60c7ff603e7c921" name="a871688cdce2c9818d60c7ff603e7c921"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a871688cdce2c9818d60c7ff603e7c921">&#9670;&#160;</a></span>getProgramImpl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t... Is&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bgfx::ProgramHandle vcl::ProgramManager::getProgramImpl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">VertFragProgram</a>&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::index_sequence&lt; Is... &gt;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Helper template method to retrieve the program handle dynamically. </p>
+<p>Uses index sequences to map the dynamic enum value to the static template version.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Is</td><td>Index sequence pack. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p</td><td>The Vertex/Fragment program enum value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The bgfx program handle. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>vclib/render/include/vclib/bgfx/context/<a class="el" href="program__manager_8h_source.html">program_manager.h</a></li>
 </ul>

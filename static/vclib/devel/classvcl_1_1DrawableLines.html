@@ -106,126 +106,133 @@ $(document).ready(function(){initNavTree('classvcl_1_1DrawableLines.html',''); i
 
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="#friends">Friends</a> &#124;
 <a href="classvcl_1_1DrawableLines-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">vcl::DrawableLines Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A <a class="el" href="classvcl_1_1DrawableObject.html" title="The DrawableObject class is the base class for all the objects that can be drawn in a 3D viewer.">DrawableObject</a> that renders a set of 3D lines.  
+ <a href="classvcl_1_1DrawableLines.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="drawable__lines_8h_source.html">vclib/bgfx/drawable/drawable_lines.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for vcl::DrawableLines:</div>
 <div class="dyncontent">
 <div class="center"><img src="classvcl_1_1DrawableLines__inherit__graph.png" border="0" usemap="#avcl_1_1DrawableLines_inherit__map" alt="Inheritance graph"/></div>
 <map name="avcl_1_1DrawableLines_inherit__map" id="avcl_1_1DrawableLines_inherit__map">
-<area shape="rect" title=" " alt="" coords="45,79,190,104"/>
-<area shape="rect" href="classvcl_1_1Lines.html" title="The Lines class provides an abstraction for rendering 3D lines with variable thickness and different ..." alt="" coords="5,5,88,31"/>
-<area shape="poly" title=" " alt="" coords="70,39,108,77,104,80,66,43"/>
-<area shape="rect" href="classvcl_1_1DrawableObject.html" title="The DrawableObject class is the base class for all the objects that can be drawn in a 3D viewer." alt="" coords="113,5,266,31"/>
-<area shape="poly" title=" " alt="" coords="169,43,131,80,127,77,166,39"/>
+<area shape="rect" title="A DrawableObject that renders a set of 3D lines." alt="" coords="80,79,225,104"/>
+<area shape="rect" href="classvcl_1_1DrawableObject.html" title="The DrawableObject class is the base class for all the objects that can be drawn in a 3D viewer." alt="" coords="5,5,159,31"/>
+<area shape="poly" title=" " alt="" coords="105,39,143,77,139,80,101,43"/>
+<area shape="rect" href="classvcl_1_1Lines.html" title="Renders a set of 3D lines as line segments with variable width." alt="" coords="183,5,266,31"/>
+<area shape="poly" title=" " alt="" coords="205,43,166,80,162,77,201,39"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a3c95410de113dbebfbe0cba197f73672" id="r_a3c95410de113dbebfbe0cba197f73672"><td class="memItemLeft" align="right" valign="top"><a id="a3c95410de113dbebfbe0cba197f73672" name="a3c95410de113dbebfbe0cba197f73672"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableLines.html#a3c95410de113dbebfbe0cba197f73672">ColorSetting</a> </td></tr>
+<tr class="memdesc:a3c95410de113dbebfbe0cba197f73672"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specifies how line colors are determined during rendering. <br /></td></tr>
+<tr class="separator:a3c95410de113dbebfbe0cba197f73672"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab92b1d637b80d7ee067ca02109ad6fef" id="r_ab92b1d637b80d7ee067ca02109ad6fef"><td class="memItemLeft" align="right" valign="top"><a id="ab92b1d637b80d7ee067ca02109ad6fef" name="ab92b1d637b80d7ee067ca02109ad6fef"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableLines.html#ab92b1d637b80d7ee067ca02109ad6fef">Shading</a> </td></tr>
+<tr class="memdesc:ab92b1d637b80d7ee067ca02109ad6fef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specifies how lines are shaded. <br /></td></tr>
+<tr class="separator:ab92b1d637b80d7ee067ca02109ad6fef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79229939340cb5daa71ebad4622799d6" id="r_a79229939340cb5daa71ebad4622799d6"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableLines.html#a79229939340cb5daa71ebad4622799d6">Topology</a> </td></tr>
+<tr class="memdesc:a79229939340cb5daa71ebad4622799d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specifies the topology used for rendering lines.  <a href="classvcl_1_1DrawableLines.html#a79229939340cb5daa71ebad4622799d6">More...</a><br /></td></tr>
+<tr class="separator:a79229939340cb5daa71ebad4622799d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classvcl_1_1Lines"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classvcl_1_1Lines')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classvcl_1_1Lines.html">vcl::Lines</a></td></tr>
+<tr class="memitem:a3c95410de113dbebfbe0cba197f73672 inherit pub_types_classvcl_1_1Lines" id="r_a3c95410de113dbebfbe0cba197f73672"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#a3c95410de113dbebfbe0cba197f73672">ColorSetting</a> { <a class="el" href="classvcl_1_1Lines.html#a3c95410de113dbebfbe0cba197f73672a83e7f44a4d403e1ef4f9171bc7edcf58">PER_VERTEX</a> = 0
+, <a class="el" href="classvcl_1_1Lines.html#a3c95410de113dbebfbe0cba197f73672a9168da24f9a75a3c129a6364dd3fe629">PER_LINE</a> = 1
+, <a class="el" href="classvcl_1_1Lines.html#a3c95410de113dbebfbe0cba197f73672ab61773b9b3968a9988d765d728985862">GENERAL</a> = 2
+ }</td></tr>
+<tr class="memdesc:a3c95410de113dbebfbe0cba197f73672"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specifies how line colors are determined during rendering.  <a href="classvcl_1_1Lines.html#a3c95410de113dbebfbe0cba197f73672">More...</a><br /></td></tr>
+<tr class="separator:a3c95410de113dbebfbe0cba197f73672 inherit pub_types_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab92b1d637b80d7ee067ca02109ad6fef inherit pub_types_classvcl_1_1Lines" id="r_ab92b1d637b80d7ee067ca02109ad6fef"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#ab92b1d637b80d7ee067ca02109ad6fef">Shading</a> { <a class="el" href="classvcl_1_1Lines.html#ab92b1d637b80d7ee067ca02109ad6fefab50339a10e1de285ac99d4c3990b8693">NONE</a> = 0
+, <a class="el" href="classvcl_1_1Lines.html#ab92b1d637b80d7ee067ca02109ad6fefa83e7f44a4d403e1ef4f9171bc7edcf58">PER_VERTEX</a> = 1
+, <a class="el" href="classvcl_1_1Lines.html#ab92b1d637b80d7ee067ca02109ad6fefa9168da24f9a75a3c129a6364dd3fe629">PER_LINE</a> = 2
+ }</td></tr>
+<tr class="memdesc:ab92b1d637b80d7ee067ca02109ad6fef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specifies how lines are shaded.  <a href="classvcl_1_1Lines.html#ab92b1d637b80d7ee067ca02109ad6fef">More...</a><br /></td></tr>
+<tr class="separator:ab92b1d637b80d7ee067ca02109ad6fef inherit pub_types_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79229939340cb5daa71ebad4622799d6 inherit pub_types_classvcl_1_1Lines" id="r_a79229939340cb5daa71ebad4622799d6"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#a79229939340cb5daa71ebad4622799d6">Topology</a> { <b>LINES</b> = 0
+, <b>LINE_STRIP</b> = 1
+ }</td></tr>
+<tr class="memdesc:a79229939340cb5daa71ebad4622799d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specifies the topology used for rendering lines.  <a href="classvcl_1_1Lines.html#a79229939340cb5daa71ebad4622799d6">More...</a><br /></td></tr>
+<tr class="separator:a79229939340cb5daa71ebad4622799d6 inherit pub_types_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a041bc42d98efb9016e96f2bb06be0d26" id="r_a041bc42d98efb9016e96f2bb06be0d26"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Box.html">vcl::Box3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableLines.html#a041bc42d98efb9016e96f2bb06be0d26">boundingBox</a> () <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">override</a></td></tr>
+<tr class="memitem:a041bc42d98efb9016e96f2bb06be0d26" id="r_a041bc42d98efb9016e96f2bb06be0d26"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">vcl::Box3d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableLines.html#a041bc42d98efb9016e96f2bb06be0d26">boundingBox</a> () <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">override</a></td></tr>
 <tr class="memdesc:a041bc42d98efb9016e96f2bb06be0d26"><td class="mdescLeft">&#160;</td><td class="mdescRight">This member function is used to find a good camera position to render object. It should return the the bounding box of the object. Return a null bounding box if the object shouldn't influence the position of the camera.  <br /></td></tr>
 <tr class="separator:a041bc42d98efb9016e96f2bb06be0d26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e400da76e25a22ebb879e72460718f1" id="r_a0e400da76e25a22ebb879e72460718f1"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classvcl_1_1DrawableObject.html">DrawableObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableLines.html#a0e400da76e25a22ebb879e72460718f1">clone</a> () &amp;&amp;<a class="el" href="classvcl_1_1Segment.html">override</a></td></tr>
-<tr class="memdesc:a0e400da76e25a22ebb879e72460718f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">This member function is used to create a new <a class="el" href="classvcl_1_1DrawableObject.html" title="The DrawableObject class is the base class for all the objects that can be drawn in a 3D viewer.">DrawableObject</a> that is a moved from the current one. This object will be destroyed after the call of this function. Each derived class must implement this member function, that returns a shared pointer pointing to the moved object. For more details about this paradigm, check polimorphism clone in modern c++: <a href="https://www.fluentcpp.com/2017/09/08/make-polymorphic-copy-modern-cpp/">https://www.fluentcpp.com/2017/09/08/make-polymorphic-copy-modern-cpp/</a>.  <br /></td></tr>
-<tr class="separator:a0e400da76e25a22ebb879e72460718f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81d13c23c61906b3d063a18f40ba33c1" id="r_a81d13c23c61906b3d063a18f40ba33c1"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classvcl_1_1DrawableObject.html">DrawableObject</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableLines.html#a81d13c23c61906b3d063a18f40ba33c1">clone</a> () <a class="el" href="classvcl_1_1Segment.html">const</a> &amp;<a class="el" href="classvcl_1_1Segment.html">override</a></td></tr>
-<tr class="memdesc:a81d13c23c61906b3d063a18f40ba33c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">This member function is used to create a new copy of the <a class="el" href="classvcl_1_1DrawableObject.html" title="The DrawableObject class is the base class for all the objects that can be drawn in a 3D viewer.">DrawableObject</a>. Each derived class must implement this member function, that returns a shared pointer pointing to a copy of the current one. for more details about this paradigm, check polimorphism clone in modern c++: <a href="https://www.fluentcpp.com/2017/09/08/make-polymorphic-copy-modern-cpp/">https://www.fluentcpp.com/2017/09/08/make-polymorphic-copy-modern-cpp/</a>.  <br /></td></tr>
-<tr class="separator:a81d13c23c61906b3d063a18f40ba33c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89f3198b0a6e48a17e9f6aad97830964" id="r_a89f3198b0a6e48a17e9f6aad97830964"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableLines.html#a89f3198b0a6e48a17e9f6aad97830964">draw</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">DrawObjectSettings</a> &amp;settings) <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">override</a></td></tr>
-<tr class="memdesc:a89f3198b0a6e48a17e9f6aad97830964"><td class="mdescLeft">&#160;</td><td class="mdescRight">This member function must draw the object. It will be called at every frame.  <br /></td></tr>
-<tr class="separator:a89f3198b0a6e48a17e9f6aad97830964"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa860a744806b240d8f21fc9dc1cb14d9" id="r_aa860a744806b240d8f21fc9dc1cb14d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableLines.html#aa860a744806b240d8f21fc9dc1cb14d9">draw</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">DrawObjectSettings</a> &amp;settings) <a class="el" href="classvcl_1_1Segment.html">override</a></td></tr>
+<tr class="memdesc:aa860a744806b240d8f21fc9dc1cb14d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This member function must draw the object. It will be called at every frame.  <br /></td></tr>
+<tr class="separator:aa860a744806b240d8f21fc9dc1cb14d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ac4ce4318d0b9ed5e64bb18e1dee494" id="r_a3ac4ce4318d0b9ed5e64bb18e1dee494"><td class="memItemLeft" align="right" valign="top"><a id="a3ac4ce4318d0b9ed5e64bb18e1dee494" name="a3ac4ce4318d0b9ed5e64bb18e1dee494"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>DrawableLines</b> ()=<a class="el" href="classvcl_1_1Segment.html">default</a></td></tr>
+<tr class="memdesc:a3ac4ce4318d0b9ed5e64bb18e1dee494"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. Creates an empty drawable line set. <br /></td></tr>
+<tr class="separator:a3ac4ce4318d0b9ed5e64bb18e1dee494"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a603b4b769488e68ea9137225e1b3a42e" id="r_a603b4b769488e68ea9137225e1b3a42e"><td class="memItemLeft" align="right" valign="top"><a id="a603b4b769488e68ea9137225e1b3a42e" name="a603b4b769488e68ea9137225e1b3a42e"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>DrawableLines</b> (<a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1DrawableLines.html">DrawableLines</a> &amp;<a class="el" href="classvcl_1_1Segment.html">other</a>)</td></tr>
+<tr class="memdesc:a603b4b769488e68ea9137225e1b3a42e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor. Creates a deep copy of the line set. <br /></td></tr>
 <tr class="separator:a603b4b769488e68ea9137225e1b3a42e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59960bbfa251b3c3d6f364ba0ff62cbc" id="r_a59960bbfa251b3c3d6f364ba0ff62cbc"><td class="memItemLeft" align="right" valign="top"><a id="a59960bbfa251b3c3d6f364ba0ff62cbc" name="a59960bbfa251b3c3d6f364ba0ff62cbc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>DrawableLines</b> (<a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; <a class="el" href="classvcl_1_1Segment.html">float</a> &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">vertCoords</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; <a class="el" href="classvcl_1_1Segment.html">float</a> &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">vertNormals</a>=std::vector&lt; <a class="el" href="classvcl_1_1Segment.html">float</a> &gt;(), <a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; uint &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">vertColors</a>=std::vector&lt; uint &gt;(), <a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; uint &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">lineColors</a>=std::vector&lt; uint &gt;())</td></tr>
-<tr class="separator:a59960bbfa251b3c3d6f364ba0ff62cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2fff0b0357233898b08fc01397e4ae7" id="r_af2fff0b0357233898b08fc01397e4ae7"><td class="memItemLeft" align="right" valign="top"><a id="af2fff0b0357233898b08fc01397e4ae7" name="af2fff0b0357233898b08fc01397e4ae7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>DrawableLines</b> (<a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; <a class="el" href="classvcl_1_1Segment.html">float</a> &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">vertCoords</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; uint &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">lineIndices</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; <a class="el" href="classvcl_1_1Segment.html">float</a> &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">vertNormals</a>=std::vector&lt; <a class="el" href="classvcl_1_1Segment.html">float</a> &gt;(), <a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; uint &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">vertColors</a>=std::vector&lt; uint &gt;(), <a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; uint &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">lineColors</a>=std::vector&lt; uint &gt;())</td></tr>
-<tr class="separator:af2fff0b0357233898b08fc01397e4ae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fa8849f622485a564dc3e45be1fb7a5" id="r_a7fa8849f622485a564dc3e45be1fb7a5"><td class="memItemLeft" align="right" valign="top"><a id="a7fa8849f622485a564dc3e45be1fb7a5" name="a7fa8849f622485a564dc3e45be1fb7a5"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>DrawableLines</b> (<a class="el" href="classvcl_1_1DrawableLines.html">DrawableLines</a> &amp;&amp;<a class="el" href="classvcl_1_1Segment.html">other</a>)</td></tr>
+<tr class="memdesc:a7fa8849f622485a564dc3e45be1fb7a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move constructor. <br /></td></tr>
 <tr class="separator:a7fa8849f622485a564dc3e45be1fb7a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade0d55f311b4afaacc992a2d999220e4" id="r_ade0d55f311b4afaacc992a2d999220e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableLines.html#ade0d55f311b4afaacc992a2d999220e4">isVisible</a> () <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">override</a></td></tr>
 <tr class="memdesc:ade0d55f311b4afaacc992a2d999220e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This member function is used to check if the object is visible.  <br /></td></tr>
 <tr class="separator:ade0d55f311b4afaacc992a2d999220e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1840d5bd5fb72e4766947dd86d304b4" id="r_ac1840d5bd5fb72e4766947dd86d304b4"><td class="memItemLeft" align="right" valign="top"><a id="ac1840d5bd5fb72e4766947dd86d304b4" name="ac1840d5bd5fb72e4766947dd86d304b4"></a>
 <a class="el" href="classvcl_1_1DrawableLines.html">DrawableLines</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classvcl_1_1DrawableLines.html">DrawableLines</a> <a class="el" href="classvcl_1_1Segment.html">other</a>)</td></tr>
+<tr class="memdesc:ac1840d5bd5fb72e4766947dd86d304b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy assignment operator. <br /></td></tr>
 <tr class="separator:ac1840d5bd5fb72e4766947dd86d304b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a760e4c6352e08dc639ef104f15a07cf9" id="r_a760e4c6352e08dc639ef104f15a07cf9"><td class="memItemLeft" align="right" valign="top"><a id="a760e4c6352e08dc639ef104f15a07cf9" name="a760e4c6352e08dc639ef104f15a07cf9"></a>
-<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setImplementationType</b> (ImplementationType type)</td></tr>
-<tr class="separator:a760e4c6352e08dc639ef104f15a07cf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aacc49dc687fe9692a2489022927c4885" id="r_aacc49dc687fe9692a2489022927c4885"><td class="memItemLeft" align="right" valign="top"><a id="aacc49dc687fe9692a2489022927c4885" name="aacc49dc687fe9692a2489022927c4885"></a>
-<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPoints</b> (<a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; <a class="el" href="classvcl_1_1Segment.html">float</a> &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">vertCoords</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; <a class="el" href="classvcl_1_1Segment.html">float</a> &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">vertNormals</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; uint &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">vertColors</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; uint &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">lineColors</a>)</td></tr>
-<tr class="separator:aacc49dc687fe9692a2489022927c4885"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0b48cc308ad2a24aa05124fab7fd9a7" id="r_aa0b48cc308ad2a24aa05124fab7fd9a7"><td class="memItemLeft" align="right" valign="top"><a id="aa0b48cc308ad2a24aa05124fab7fd9a7" name="aa0b48cc308ad2a24aa05124fab7fd9a7"></a>
-<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPoints</b> (<a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; <a class="el" href="classvcl_1_1Segment.html">float</a> &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">vertCoords</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; uint &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">lineIndices</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; <a class="el" href="classvcl_1_1Segment.html">float</a> &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">vertNormals</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; uint &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">vertColors</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; uint &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">lineColors</a>)</td></tr>
-<tr class="separator:aa0b48cc308ad2a24aa05124fab7fd9a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b8ce67193606274799e5d06e04eebd3" id="r_a3b8ce67193606274799e5d06e04eebd3"><td class="memTemplParams" colspan="2">template&lt;Range R&gt; <br />
+requires std::integral&lt;std::ranges::range_value_t&lt;R&gt;&gt;</td></tr>
+<tr class="memitem:a3b8ce67193606274799e5d06e04eebd3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableLines.html#a3b8ce67193606274799e5d06e04eebd3">setIndices</a> (R &amp;&amp;indices)</td></tr>
+<tr class="memdesc:a3b8ce67193606274799e5d06e04eebd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets line indices from a range of indices and stores a local copy.  <br /></td></tr>
+<tr class="separator:a3b8ce67193606274799e5d06e04eebd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb3b7dc1d1779ff621b28798fa0e483f" id="r_abb3b7dc1d1779ff621b28798fa0e483f"><td class="memTemplParams" colspan="2">template&lt;Range R&gt; <br />
+requires ColorConcept&lt;std::ranges::range_value_t&lt;R&gt;&gt;</td></tr>
+<tr class="memitem:abb3b7dc1d1779ff621b28798fa0e483f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableLines.html#abb3b7dc1d1779ff621b28798fa0e483f">setLineColors</a> (R &amp;&amp;<a class="el" href="classvcl_1_1Segment.html">linColors</a>)</td></tr>
+<tr class="memdesc:abb3b7dc1d1779ff621b28798fa0e483f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets per-line colors and stores a local copy.  <br /></td></tr>
+<tr class="separator:abb3b7dc1d1779ff621b28798fa0e483f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a666479a0dd62b76dafcefb94c7cd5aee" id="r_a666479a0dd62b76dafcefb94c7cd5aee"><td class="memTemplParams" colspan="2">template&lt;Range R&gt; <br />
+requires Point3Concept&lt;std::ranges::range_value_t&lt;R&gt;&gt;</td></tr>
+<tr class="memitem:a666479a0dd62b76dafcefb94c7cd5aee"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableLines.html#a666479a0dd62b76dafcefb94c7cd5aee">setLineNormals</a> (R &amp;&amp;<a class="el" href="classvcl_1_1Segment.html">lineNormals</a>)</td></tr>
+<tr class="memdesc:a666479a0dd62b76dafcefb94c7cd5aee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets per-line normals and stores a local copy.  <br /></td></tr>
+<tr class="separator:a666479a0dd62b76dafcefb94c7cd5aee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a604e7439a2dc1dcc66edb66f1255f96c" id="r_a604e7439a2dc1dcc66edb66f1255f96c"><td class="memTemplParams" colspan="2">template&lt;Range R&gt; <br />
+requires ColorConcept&lt;std::ranges::range_value_t&lt;R&gt;&gt;</td></tr>
+<tr class="memitem:a604e7439a2dc1dcc66edb66f1255f96c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableLines.html#a604e7439a2dc1dcc66edb66f1255f96c">setVertexColors</a> (R &amp;&amp;<a class="el" href="classvcl_1_1Segment.html">vertColors</a>)</td></tr>
+<tr class="memdesc:a604e7439a2dc1dcc66edb66f1255f96c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets per-vertex colors and stores a local copy.  <br /></td></tr>
+<tr class="separator:a604e7439a2dc1dcc66edb66f1255f96c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3957236b56a3d3497fd6490ce7044b48" id="r_a3957236b56a3d3497fd6490ce7044b48"><td class="memTemplParams" colspan="2">template&lt;Range R&gt; <br />
+requires Point3Concept&lt;std::ranges::range_value_t&lt;R&gt;&gt;</td></tr>
+<tr class="memitem:a3957236b56a3d3497fd6490ce7044b48"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableLines.html#a3957236b56a3d3497fd6490ce7044b48">setVertexNormals</a> (R &amp;&amp;<a class="el" href="classvcl_1_1Segment.html">vertNormals</a>)</td></tr>
+<tr class="memdesc:a3957236b56a3d3497fd6490ce7044b48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets per-vertex normals and stores a local copy.  <br /></td></tr>
+<tr class="separator:a3957236b56a3d3497fd6490ce7044b48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae26cccf5a79af0c148526a4d1c8dab41" id="r_ae26cccf5a79af0c148526a4d1c8dab41"><td class="memTemplParams" colspan="2">template&lt;Range R&gt; <br />
+requires Point3Concept&lt;std::ranges::range_value_t&lt;R&gt;&gt;</td></tr>
+<tr class="memitem:ae26cccf5a79af0c148526a4d1c8dab41"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableLines.html#ae26cccf5a79af0c148526a4d1c8dab41">setVertices</a> (R &amp;&amp;<a class="el" href="classvcl_1_1Segment.html">verts</a>)</td></tr>
+<tr class="memdesc:ae26cccf5a79af0c148526a4d1c8dab41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets line coordinates from a range of 3D points and stores a local copy.  <br /></td></tr>
+<tr class="separator:ae26cccf5a79af0c148526a4d1c8dab41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc072fe48570b01c3c201235d377a1e8" id="r_abc072fe48570b01c3c201235d377a1e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableLines.html#abc072fe48570b01c3c201235d377a1e8">setVisibility</a> (<a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1Segment.html">vis</a>) <a class="el" href="classvcl_1_1Segment.html">override</a></td></tr>
 <tr class="memdesc:abc072fe48570b01c3c201235d377a1e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">This member function is used to set the visibility of the object.  <br /></td></tr>
 <tr class="separator:abc072fe48570b01c3c201235d377a1e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24efb256a85409f93b85add065cffaf5" id="r_a24efb256a85409f93b85add065cffaf5"><td class="memItemLeft" align="right" valign="top"><a id="a24efb256a85409f93b85add065cffaf5" name="a24efb256a85409f93b85add065cffaf5"></a>
 <a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>swap</b> (<a class="el" href="classvcl_1_1DrawableLines.html">DrawableLines</a> &amp;<a class="el" href="classvcl_1_1Segment.html">other</a>)</td></tr>
+<tr class="memdesc:a24efb256a85409f93b85add065cffaf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps the contents of this object with another. <br /></td></tr>
 <tr class="separator:a24efb256a85409f93b85add065cffaf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classvcl_1_1Lines"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classvcl_1_1Lines')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classvcl_1_1Lines.html">vcl::Lines</a></td></tr>
-<tr class="memitem:a3dcbf325287935b546083f1cace229b4 inherit pub_methods_classvcl_1_1Lines" id="r_a3dcbf325287935b546083f1cace229b4"><td class="memItemLeft" align="right" valign="top">ColorToUse&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#a3dcbf325287935b546083f1cace229b4">colorToUse</a> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
-<tr class="memdesc:a3dcbf325287935b546083f1cace229b4 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the color that is used to render the lines.  <br /></td></tr>
-<tr class="separator:a3dcbf325287935b546083f1cace229b4 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fe1dd426c6b3ce69f28d71cd43533c9 inherit pub_methods_classvcl_1_1Lines" id="r_a3fe1dd426c6b3ce69f28d71cd43533c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#a3fe1dd426c6b3ce69f28d71cd43533c9">draw</a> (uint viewId) <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
-<tr class="memdesc:a3fe1dd426c6b3ce69f28d71cd43533c9 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws in the given view the lines with the current settings.  <br /></td></tr>
-<tr class="separator:a3fe1dd426c6b3ce69f28d71cd43533c9 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5de0a9a6c02501e66ec859755318f41a inherit pub_methods_classvcl_1_1Lines" id="r_a5de0a9a6c02501e66ec859755318f41a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Color.html">Color</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#a5de0a9a6c02501e66ec859755318f41a">generalColor</a> ()</td></tr>
-<tr class="memdesc:a5de0a9a6c02501e66ec859755318f41a inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the general color that is used to render the lines when <a class="el" href="classvcl_1_1Lines.html#a3dcbf325287935b546083f1cace229b4" title="Returns the color that is used to render the lines.">colorToUse()</a> is set to ColorToUse::GENERAL. This allows to modify the color directly.  <br /></td></tr>
-<tr class="separator:a5de0a9a6c02501e66ec859755318f41a inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abcf0e663fd2e445a0f2eabc5a0bd3888 inherit pub_methods_classvcl_1_1Lines" id="r_abcf0e663fd2e445a0f2eabc5a0bd3888"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#abcf0e663fd2e445a0f2eabc5a0bd3888">generalColor</a> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
-<tr class="memdesc:abcf0e663fd2e445a0f2eabc5a0bd3888 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the general color that is used to render the lines when <a class="el" href="classvcl_1_1Lines.html#a3dcbf325287935b546083f1cace229b4" title="Returns the color that is used to render the lines.">colorToUse()</a> is set to ColorToUse::GENERAL.  <br /></td></tr>
-<tr class="separator:abcf0e663fd2e445a0f2eabc5a0bd3888 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a7a1722248ac7b90b4ed2e1291fc4a5 inherit pub_methods_classvcl_1_1Lines" id="r_a1a7a1722248ac7b90b4ed2e1291fc4a5"><td class="memItemLeft" align="right" valign="top">ImplementationType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#a1a7a1722248ac7b90b4ed2e1291fc4a5">implementationType</a> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
-<tr class="memdesc:a1a7a1722248ac7b90b4ed2e1291fc4a5 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current implementation type that is used to render the lines.  <br /></td></tr>
-<tr class="separator:a1a7a1722248ac7b90b4ed2e1291fc4a5 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a677b5236c34df12735f6f3a44ce52a inherit pub_methods_classvcl_1_1Lines" id="r_a5a677b5236c34df12735f6f3a44ce52a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#a5a677b5236c34df12735f6f3a44ce52a">Lines</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; <a class="el" href="classvcl_1_1Segment.html">float</a> &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">vertCoords</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; <a class="el" href="classvcl_1_1Segment.html">float</a> &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">vertNormals</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; uint &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">vertColors</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; uint &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">lineColors</a>, <a class="el" href="classvcl_1_1Segment.html">float</a> <a class="el" href="classvcl_1_1Lines.html#aa91a06c244096127f531766f34aeac53">thickness</a>=5.0f, <a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1Lines.html#aac5a66de6855f1593b4cafad7e53ced0">shadingPerVertex</a>=<a class="el" href="classvcl_1_1Segment.html">false</a>, ColorToUse <a class="el" href="classvcl_1_1Lines.html#a3dcbf325287935b546083f1cace229b4">colorToUse</a>=ColorToUse::GENERAL, ImplementationType type=ImplementationType::COUNT)</td></tr>
-<tr class="memdesc:a5a677b5236c34df12735f6f3a44ce52a inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classvcl_1_1Lines.html" title="The Lines class provides an abstraction for rendering 3D lines with variable thickness and different ...">Lines</a> object with given points and parameters.  <br /></td></tr>
-<tr class="separator:a5a677b5236c34df12735f6f3a44ce52a inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95a5a8e940a7df58811f682b142cda54 inherit pub_methods_classvcl_1_1Lines" id="r_a95a5a8e940a7df58811f682b142cda54"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#a95a5a8e940a7df58811f682b142cda54">Lines</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; <a class="el" href="classvcl_1_1Segment.html">float</a> &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">vertCoords</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; uint &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">lineIndices</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; <a class="el" href="classvcl_1_1Segment.html">float</a> &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">vertNormals</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; uint &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">vertColors</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; uint &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">lineColors</a>, <a class="el" href="classvcl_1_1Segment.html">float</a> <a class="el" href="classvcl_1_1Lines.html#aa91a06c244096127f531766f34aeac53">thickness</a>=5.0f, <a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1Lines.html#aac5a66de6855f1593b4cafad7e53ced0">shadingPerVertex</a>=<a class="el" href="classvcl_1_1Segment.html">false</a>, ColorToUse <a class="el" href="classvcl_1_1Lines.html#a3dcbf325287935b546083f1cace229b4">colorToUse</a>=ColorToUse::GENERAL, ImplementationType type=ImplementationType::COUNT)</td></tr>
-<tr class="memdesc:a95a5a8e940a7df58811f682b142cda54 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classvcl_1_1Lines.html" title="The Lines class provides an abstraction for rendering 3D lines with variable thickness and different ...">Lines</a> object with given points and parameters.  <br /></td></tr>
-<tr class="separator:a95a5a8e940a7df58811f682b142cda54 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1b86b76d7be916abd3b9e466fe67b9c inherit pub_methods_classvcl_1_1Lines" id="r_aa1b86b76d7be916abd3b9e466fe67b9c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#aa1b86b76d7be916abd3b9e466fe67b9c">Lines</a> (ImplementationType type=ImplementationType::COUNT)</td></tr>
-<tr class="memdesc:aa1b86b76d7be916abd3b9e466fe67b9c inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classvcl_1_1Lines.html" title="The Lines class provides an abstraction for rendering 3D lines with variable thickness and different ...">Lines</a> object with default parameters and without points.  <br /></td></tr>
-<tr class="separator:aa1b86b76d7be916abd3b9e466fe67b9c inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d873c8207fdead7305981298a103f85 inherit pub_methods_classvcl_1_1Lines" id="r_a7d873c8207fdead7305981298a103f85"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#a7d873c8207fdead7305981298a103f85">setColorToUse</a> (ColorToUse color)</td></tr>
-<tr class="memdesc:a7d873c8207fdead7305981298a103f85 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets which color to use for rendering the lines.  <br /></td></tr>
-<tr class="separator:a7d873c8207fdead7305981298a103f85 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea32f53d7475cb306ae0c1bde224ddd0 inherit pub_methods_classvcl_1_1Lines" id="r_aea32f53d7475cb306ae0c1bde224ddd0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#aea32f53d7475cb306ae0c1bde224ddd0">setPoints</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; <a class="el" href="classvcl_1_1Segment.html">float</a> &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">vertCoords</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; <a class="el" href="classvcl_1_1Segment.html">float</a> &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">vertNormals</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; uint &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">vertColors</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; uint &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">lineColors</a>, ImplementationType type=ImplementationType::COUNT)</td></tr>
-<tr class="memdesc:aea32f53d7475cb306ae0c1bde224ddd0 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the points of the lines.  <br /></td></tr>
-<tr class="separator:aea32f53d7475cb306ae0c1bde224ddd0 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a175538b61fbf8630ba80b8693cbc72 inherit pub_methods_classvcl_1_1Lines" id="r_a3a175538b61fbf8630ba80b8693cbc72"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#a3a175538b61fbf8630ba80b8693cbc72">setPoints</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; <a class="el" href="classvcl_1_1Segment.html">float</a> &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">vertCoords</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; uint &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">lineIndices</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; <a class="el" href="classvcl_1_1Segment.html">float</a> &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">vertNormals</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; uint &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">vertColors</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; uint &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">lineColors</a>, ImplementationType type=ImplementationType::COUNT)</td></tr>
-<tr class="memdesc:a3a175538b61fbf8630ba80b8693cbc72 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the points of the lines.  <br /></td></tr>
-<tr class="separator:a3a175538b61fbf8630ba80b8693cbc72 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af192c14c04fa22fcde3ff8d0d6a1d285 inherit pub_methods_classvcl_1_1Lines" id="r_af192c14c04fa22fcde3ff8d0d6a1d285"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#af192c14c04fa22fcde3ff8d0d6a1d285">setShading</a> (<a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1Segment.html">perVertex</a>)</td></tr>
-<tr class="memdesc:af192c14c04fa22fcde3ff8d0d6a1d285 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets wether to use per vertex shading (using vertex normals) or not.  <br /></td></tr>
-<tr class="separator:af192c14c04fa22fcde3ff8d0d6a1d285 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac5a66de6855f1593b4cafad7e53ced0 inherit pub_methods_classvcl_1_1Lines" id="r_aac5a66de6855f1593b4cafad7e53ced0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#aac5a66de6855f1593b4cafad7e53ced0">shadingPerVertex</a> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
-<tr class="memdesc:aac5a66de6855f1593b4cafad7e53ced0 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if shading is computed per vertex using vertex normals, false if no shading is applied.  <br /></td></tr>
-<tr class="separator:aac5a66de6855f1593b4cafad7e53ced0 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab341a4de5ab5ef9e6e3c840229a0648 inherit pub_methods_classvcl_1_1Lines" id="r_aab341a4de5ab5ef9e6e3c840229a0648"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">float</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#aab341a4de5ab5ef9e6e3c840229a0648">thickness</a> ()</td></tr>
-<tr class="memdesc:aab341a4de5ab5ef9e6e3c840229a0648 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the thickness of the lines (in pixels). This allows to modify the thickness directly.  <br /></td></tr>
-<tr class="separator:aab341a4de5ab5ef9e6e3c840229a0648 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa91a06c244096127f531766f34aeac53 inherit pub_methods_classvcl_1_1Lines" id="r_aa91a06c244096127f531766f34aeac53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#aa91a06c244096127f531766f34aeac53">thickness</a> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
-<tr class="memdesc:aa91a06c244096127f531766f34aeac53 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the thickness of the lines (in pixels).  <br /></td></tr>
-<tr class="separator:aa91a06c244096127f531766f34aeac53 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classvcl_1_1DrawableObject"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classvcl_1_1DrawableObject')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classvcl_1_1DrawableObject.html">vcl::DrawableObject</a></td></tr>
 <tr class="memitem:af859a3bc1ba66ce1d9287f0a8d852396 inherit pub_methods_classvcl_1_1DrawableObject" id="r_af859a3bc1ba66ce1d9287f0a8d852396"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableObject.html#af859a3bc1ba66ce1d9287f0a8d852396">DrawableObject</a> ()=<a class="el" href="classvcl_1_1Segment.html">default</a></td></tr>
 <tr class="memdesc:af859a3bc1ba66ce1d9287f0a8d852396 inherit pub_methods_classvcl_1_1DrawableObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empty constructor.  <br /></td></tr>
 <tr class="separator:af859a3bc1ba66ce1d9287f0a8d852396 inherit pub_methods_classvcl_1_1DrawableObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b5238a28d54c19380b1211f20ed4135 inherit pub_methods_classvcl_1_1DrawableObject" id="r_a9b5238a28d54c19380b1211f20ed4135"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">virtual</a> <a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableObject.html#a9b5238a28d54c19380b1211f20ed4135">drawId</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">DrawObjectSettings</a> &amp;settings) <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
-<tr class="memdesc:a9b5238a28d54c19380b1211f20ed4135 inherit pub_methods_classvcl_1_1DrawableObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">This member function should draw the object. It will be called on request when the renderer needs to draw the ID of the object.  <br /></td></tr>
-<tr class="separator:a9b5238a28d54c19380b1211f20ed4135 inherit pub_methods_classvcl_1_1DrawableObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a594f178f0c685acf8e10ae86f374dfb6 inherit pub_methods_classvcl_1_1DrawableObject" id="r_a594f178f0c685acf8e10ae86f374dfb6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">virtual</a> <a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableObject.html#a594f178f0c685acf8e10ae86f374dfb6">drawId</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">DrawObjectSettings</a> &amp;settings)</td></tr>
+<tr class="memdesc:a594f178f0c685acf8e10ae86f374dfb6 inherit pub_methods_classvcl_1_1DrawableObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">This member function should draw the object. It will be called on request when the renderer needs to draw the ID of the object.  <br /></td></tr>
+<tr class="separator:a594f178f0c685acf8e10ae86f374dfb6 inherit pub_methods_classvcl_1_1DrawableObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4483ff90168a8a58f947ca9ed78cee22 inherit pub_methods_classvcl_1_1DrawableObject" id="r_a4483ff90168a8a58f947ca9ed78cee22"><td class="memItemLeft" align="right" valign="top">std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableObject.html#a4483ff90168a8a58f947ca9ed78cee22">info</a> ()</td></tr>
 <tr class="memdesc:a4483ff90168a8a58f947ca9ed78cee22 inherit pub_methods_classvcl_1_1DrawableObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference of the info of the object, that allows to modify it.  <br /></td></tr>
 <tr class="separator:a4483ff90168a8a58f947ca9ed78cee22 inherit pub_methods_classvcl_1_1DrawableObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -241,55 +248,298 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aabe8c851d6722f281f0c3dd3a849e10e inherit pub_methods_classvcl_1_1DrawableObject" id="r_aabe8c851d6722f281f0c3dd3a849e10e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">virtual</a> <a class="el" href="classvcl_1_1Segment.html">const</a> std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableObject.html#aabe8c851d6722f281f0c3dd3a849e10e">name</a> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
 <tr class="memdesc:aabe8c851d6722f281f0c3dd3a849e10e inherit pub_methods_classvcl_1_1DrawableObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of the object.  <br /></td></tr>
 <tr class="separator:aabe8c851d6722f281f0c3dd3a849e10e inherit pub_methods_classvcl_1_1DrawableObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classvcl_1_1Lines"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classvcl_1_1Lines')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classvcl_1_1Lines.html">vcl::Lines</a></td></tr>
+<tr class="memitem:a564994e42a2b7323c8ca5573ae608978 inherit pub_methods_classvcl_1_1Lines" id="r_a564994e42a2b7323c8ca5573ae608978"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="classvcl_1_1Lines.html#a3c95410de113dbebfbe0cba197f73672">ColorSetting</a>&#160;</td><td class="memItemRight" valign="bottom"><b>colorSetting</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
+<tr class="memdesc:a564994e42a2b7323c8ca5573ae608978 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the color setting used for rendering lines. <br /></td></tr>
+<tr class="separator:a564994e42a2b7323c8ca5573ae608978 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32f5f74f77522219f034eedd6f295a34 inherit pub_methods_classvcl_1_1Lines" id="r_a32f5f74f77522219f034eedd6f295a34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#a32f5f74f77522219f034eedd6f295a34">depthOffset</a> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
+<tr class="memdesc:a32f5f74f77522219f034eedd6f295a34 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the depth offset applied to the lines.  <br /></td></tr>
+<tr class="separator:a32f5f74f77522219f034eedd6f295a34 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc8ba50be231a9a9dbc2d8154618ab33 inherit pub_methods_classvcl_1_1Lines" id="r_afc8ba50be231a9a9dbc2d8154618ab33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#afc8ba50be231a9a9dbc2d8154618ab33">draw</a> (bgfx::ViewId viewId) <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
+<tr class="memdesc:afc8ba50be231a9a9dbc2d8154618ab33 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the line segments on the specified view.  <br /></td></tr>
+<tr class="separator:afc8ba50be231a9a9dbc2d8154618ab33 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bb870362a6fcaa914be5a68190b4398 inherit pub_methods_classvcl_1_1Lines" id="r_a6bb870362a6fcaa914be5a68190b4398"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>drawId</b> (bgfx::ViewId viewId, <a class="el" href="classvcl_1_1Segment.html">uint32_t</a> id) <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
+<tr class="separator:a6bb870362a6fcaa914be5a68190b4398 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcf0e663fd2e445a0f2eabc5a0bd3888 inherit pub_methods_classvcl_1_1Lines" id="r_abcf0e663fd2e445a0f2eabc5a0bd3888"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="classvcl_1_1Color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>generalColor</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
+<tr class="memdesc:abcf0e663fd2e445a0f2eabc5a0bd3888 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the general color used for rendering lines when ColorSetting is GENERAL. <br /></td></tr>
+<tr class="separator:abcf0e663fd2e445a0f2eabc5a0bd3888 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ca5fa2b65ff03c42673fb65b9a61d9e inherit pub_methods_classvcl_1_1Lines" id="r_a1ca5fa2b65ff03c42673fb65b9a61d9e"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>hasIndices</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
+<tr class="memdesc:a1ca5fa2b65ff03c42673fb65b9a61d9e inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the line set has valid indices. <br /></td></tr>
+<tr class="separator:a1ca5fa2b65ff03c42673fb65b9a61d9e inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c824bd04d728a0af49e539c7c8c48e3 inherit pub_methods_classvcl_1_1Lines" id="r_a5c824bd04d728a0af49e539c7c8c48e3"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>hasLineColors</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
+<tr class="memdesc:a5c824bd04d728a0af49e539c7c8c48e3 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the line set has valid line colors. <br /></td></tr>
+<tr class="separator:a5c824bd04d728a0af49e539c7c8c48e3 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec591c7e98adf6ae7e286b8d4b445803 inherit pub_methods_classvcl_1_1Lines" id="r_aec591c7e98adf6ae7e286b8d4b445803"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>hasLineNormals</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
+<tr class="memdesc:aec591c7e98adf6ae7e286b8d4b445803 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the line set has valid line normals. <br /></td></tr>
+<tr class="separator:aec591c7e98adf6ae7e286b8d4b445803 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ef1e74605ad56a0c5fcc70d3e4f5ecc inherit pub_methods_classvcl_1_1Lines" id="r_a1ef1e74605ad56a0c5fcc70d3e4f5ecc"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>hasLineSelections</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
+<tr class="memdesc:a1ef1e74605ad56a0c5fcc70d3e4f5ecc inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the line set has valid line selections. <br /></td></tr>
+<tr class="separator:a1ef1e74605ad56a0c5fcc70d3e4f5ecc inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada82260e8f10e4e2ec72ce4ccf53fd74 inherit pub_methods_classvcl_1_1Lines" id="r_ada82260e8f10e4e2ec72ce4ccf53fd74"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>hasPositions</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
+<tr class="memdesc:ada82260e8f10e4e2ec72ce4ccf53fd74 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the line set has valid vertex positions. <br /></td></tr>
+<tr class="separator:ada82260e8f10e4e2ec72ce4ccf53fd74 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa83decf02b0cc98bd4161e22c4784fe2 inherit pub_methods_classvcl_1_1Lines" id="r_aa83decf02b0cc98bd4161e22c4784fe2"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>hasVertexColors</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
+<tr class="memdesc:aa83decf02b0cc98bd4161e22c4784fe2 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the line set has valid vertex colors. <br /></td></tr>
+<tr class="separator:aa83decf02b0cc98bd4161e22c4784fe2 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8388c0b4e54940ff59c3ccfa32d24609 inherit pub_methods_classvcl_1_1Lines" id="r_a8388c0b4e54940ff59c3ccfa32d24609"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>hasVertexNormals</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
+<tr class="memdesc:a8388c0b4e54940ff59c3ccfa32d24609 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the line set has valid vertex normals. <br /></td></tr>
+<tr class="separator:a8388c0b4e54940ff59c3ccfa32d24609 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1c1ec0ea6fa6d11204e05fbe986866d inherit pub_methods_classvcl_1_1Lines" id="r_ac1c1ec0ea6fa6d11204e05fbe986866d"><td class="memItemLeft" align="right" valign="top">
+uint&#160;</td><td class="memItemRight" valign="bottom"><b>indexCount</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
+<tr class="memdesc:ac1c1ec0ea6fa6d11204e05fbe986866d inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of indices in the set. <br /></td></tr>
+<tr class="separator:ac1c1ec0ea6fa6d11204e05fbe986866d inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e51b2c46117c5520e091b2a01491801 inherit pub_methods_classvcl_1_1Lines" id="r_a9e51b2c46117c5520e091b2a01491801"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#a9e51b2c46117c5520e091b2a01491801">isSelectionVisible</a> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
+<tr class="memdesc:a9e51b2c46117c5520e091b2a01491801 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether the selection visibility is enabled.  <br /></td></tr>
+<tr class="separator:a9e51b2c46117c5520e091b2a01491801 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3df4de649ef2175e78a35bbd8d75d266 inherit pub_methods_classvcl_1_1Lines" id="r_a3df4de649ef2175e78a35bbd8d75d266"><td class="memItemLeft" align="right" valign="top">
+&#160;</td><td class="memItemRight" valign="bottom"><b>Lines</b> ()=<a class="el" href="classvcl_1_1Segment.html">default</a></td></tr>
+<tr class="memdesc:a3df4de649ef2175e78a35bbd8d75d266 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor — creates an empty line set with no lines. <br /></td></tr>
+<tr class="separator:a3df4de649ef2175e78a35bbd8d75d266 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab90a32c7b36863ce9d9874d3eeaf1116 inherit pub_methods_classvcl_1_1Lines" id="r_ab90a32c7b36863ce9d9874d3eeaf1116"><td class="memItemLeft" align="right" valign="top">
+&#160;</td><td class="memItemRight" valign="bottom"><b>Lines</b> (<a class="el" href="classvcl_1_1Segment.html">const</a> uint <a class="el" href="classvcl_1_1Lines.html#a86f3047357529f8ab0d4fb25cfc16e9e">vertexCount</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1VertexBuffer.html">VertexBuffer</a> &amp;<a class="el" href="classvcl_1_1Segment.html">verts</a>)</td></tr>
+<tr class="separator:ab90a32c7b36863ce9d9874d3eeaf1116 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fd55fd301b7a34555be3d182d4b6e6e inherit pub_methods_classvcl_1_1Lines" id="r_a6fd55fd301b7a34555be3d182d4b6e6e"><td class="memTemplParams" colspan="2">template&lt;Range RV&gt; <br />
+requires Point3Concept&lt;std::ranges::range_value_t&lt;<a class="el" href="classvcl_1_1Segment.html">RV</a>&gt;&gt;</td></tr>
+<tr class="memitem:a6fd55fd301b7a34555be3d182d4b6e6e inherit pub_methods_classvcl_1_1Lines"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#a6fd55fd301b7a34555be3d182d4b6e6e">Lines</a> (<a class="el" href="classvcl_1_1Segment.html">RV</a> &amp;&amp;<a class="el" href="classvcl_1_1Segment.html">verts</a>)</td></tr>
+<tr class="memdesc:a6fd55fd301b7a34555be3d182d4b6e6e inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a line set from ranges of 3D coordinates.  <br /></td></tr>
+<tr class="separator:a6fd55fd301b7a34555be3d182d4b6e6e inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63f2caa0307c48dde4404c82182d7ad2 inherit pub_methods_classvcl_1_1Lines" id="r_a63f2caa0307c48dde4404c82182d7ad2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#a63f2caa0307c48dde4404c82182d7ad2">selectionColor</a> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
+<tr class="memdesc:a63f2caa0307c48dde4404c82182d7ad2 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the selection color.  <br /></td></tr>
+<tr class="separator:a63f2caa0307c48dde4404c82182d7ad2 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeeb45c965eaedacc84af35456c0400ac inherit pub_methods_classvcl_1_1Lines" id="r_aeeb45c965eaedacc84af35456c0400ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#aeeb45c965eaedacc84af35456c0400ac">setColorSetting</a> (<a class="el" href="classvcl_1_1Lines.html#a3c95410de113dbebfbe0cba197f73672">ColorSetting</a> <a class="el" href="classvcl_1_1Segment.html">colorToUse</a>)</td></tr>
+<tr class="memdesc:aeeb45c965eaedacc84af35456c0400ac inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the color mode for line rendering.  <br /></td></tr>
+<tr class="separator:aeeb45c965eaedacc84af35456c0400ac inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a381698cef31d53fff021df991007ed9b inherit pub_methods_classvcl_1_1Lines" id="r_a381698cef31d53fff021df991007ed9b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#a381698cef31d53fff021df991007ed9b">setDepthOffset</a> (<a class="el" href="classvcl_1_1Segment.html">float</a> <a class="el" href="classvcl_1_1Lines.html#a32f5f74f77522219f034eedd6f295a34">depthOffset</a>)</td></tr>
+<tr class="memdesc:a381698cef31d53fff021df991007ed9b inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the depth offset applied to the lines.  <br /></td></tr>
+<tr class="separator:a381698cef31d53fff021df991007ed9b inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e6dad6a013b7900c0c4ac0de6a987f4 inherit pub_methods_classvcl_1_1Lines" id="r_a5e6dad6a013b7900c0c4ac0de6a987f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#a5e6dad6a013b7900c0c4ac0de6a987f4">setGeneralColor</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Color.html">Color</a> &amp;<a class="el" href="classvcl_1_1Lines.html#abcf0e663fd2e445a0f2eabc5a0bd3888">generalColor</a>)</td></tr>
+<tr class="memdesc:a5e6dad6a013b7900c0c4ac0de6a987f4 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the general (uniform) color used when color mode is GENERAL.  <br /></td></tr>
+<tr class="separator:a5e6dad6a013b7900c0c4ac0de6a987f4 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a033d5e3f85b97e1c27bbc82d241318e9 inherit pub_methods_classvcl_1_1Lines" id="r_a033d5e3f85b97e1c27bbc82d241318e9"><td class="memTemplParams" colspan="2">
+template&lt;Range R&gt; <br />
+requires std::integral&lt;std::ranges::range_value_t&lt;R&gt;&gt;</td></tr>
+<tr class="memitem:a033d5e3f85b97e1c27bbc82d241318e9 inherit pub_methods_classvcl_1_1Lines"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>setIndices</b> (R &amp;&amp;indices)</td></tr>
+<tr class="memdesc:a033d5e3f85b97e1c27bbc82d241318e9 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets line indices from a range of unsigned integers. <br /></td></tr>
+<tr class="separator:a033d5e3f85b97e1c27bbc82d241318e9 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1922587d5d3c8709b21ebd6cdc381a93 inherit pub_methods_classvcl_1_1Lines" id="r_a1922587d5d3c8709b21ebd6cdc381a93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#a1922587d5d3c8709b21ebd6cdc381a93">setIndices</a> (uint <a class="el" href="classvcl_1_1Lines.html#ac1c1ec0ea6fa6d11204e05fbe986866d">indexCount</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1IndexBuffer.html">IndexBuffer</a> &amp;indices)</td></tr>
+<tr class="memdesc:a1922587d5d3c8709b21ebd6cdc381a93 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets line indices by referencing an existing <a class="el" href="classvcl_1_1IndexBuffer.html" title="The IndexBuffer manages the lifetime of a bgfx::IndexBufferHandle.">IndexBuffer</a>.  <br /></td></tr>
+<tr class="separator:a1922587d5d3c8709b21ebd6cdc381a93 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc4cdf536a305e314a47cb0ceee22ebe inherit pub_methods_classvcl_1_1Lines" id="r_abc4cdf536a305e314a47cb0ceee22ebe"><td class="memTemplParams" colspan="2">
+template&lt;Range R&gt; <br />
+requires ColorConcept&lt;std::ranges::range_value_t&lt;R&gt;&gt;</td></tr>
+<tr class="memitem:abc4cdf536a305e314a47cb0ceee22ebe inherit pub_methods_classvcl_1_1Lines"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>setLineColors</b> (R &amp;&amp;<a class="el" href="classvcl_1_1Segment.html">linColors</a>)</td></tr>
+<tr class="memdesc:abc4cdf536a305e314a47cb0ceee22ebe inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets per-line colors from a range of <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a 32 bit color.">Color</a> elements. <br /></td></tr>
+<tr class="separator:abc4cdf536a305e314a47cb0ceee22ebe inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb61c987d5f7b1d7799b15e21f76b5d0 inherit pub_methods_classvcl_1_1Lines" id="r_acb61c987d5f7b1d7799b15e21f76b5d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#acb61c987d5f7b1d7799b15e21f76b5d0">setLineColors</a> (uint <a class="el" href="classvcl_1_1Segment.html">lColorCount</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1IndexBuffer.html">IndexBuffer</a> &amp;<a class="el" href="classvcl_1_1Segment.html">lineColors</a>)</td></tr>
+<tr class="memdesc:acb61c987d5f7b1d7799b15e21f76b5d0 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets per-line colors by referencing an existing <a class="el" href="classvcl_1_1IndexBuffer.html" title="The IndexBuffer manages the lifetime of a bgfx::IndexBufferHandle.">IndexBuffer</a>.  <br /></td></tr>
+<tr class="separator:acb61c987d5f7b1d7799b15e21f76b5d0 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaed6e9c46687abaa5cd2d17490f9c762 inherit pub_methods_classvcl_1_1Lines" id="r_aaed6e9c46687abaa5cd2d17490f9c762"><td class="memTemplParams" colspan="2">
+template&lt;Range R&gt; <br />
+requires Point3Concept&lt;std::ranges::range_value_t&lt;R&gt;&gt;</td></tr>
+<tr class="memitem:aaed6e9c46687abaa5cd2d17490f9c762 inherit pub_methods_classvcl_1_1Lines"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>setLineNormals</b> (R &amp;&amp;<a class="el" href="classvcl_1_1Segment.html">lineNormals</a>)</td></tr>
+<tr class="memdesc:aaed6e9c46687abaa5cd2d17490f9c762 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets per-line normals from a range of 3D points. <br /></td></tr>
+<tr class="separator:aaed6e9c46687abaa5cd2d17490f9c762 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae09a27979ae84d1dc2b8408f935c22fd inherit pub_methods_classvcl_1_1Lines" id="r_ae09a27979ae84d1dc2b8408f935c22fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#ae09a27979ae84d1dc2b8408f935c22fd">setLineNormals</a> (uint <a class="el" href="classvcl_1_1Segment.html">lNorCount</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1VertexBuffer.html">VertexBuffer</a> &amp;<a class="el" href="classvcl_1_1Segment.html">lineNormals</a>)</td></tr>
+<tr class="memdesc:ae09a27979ae84d1dc2b8408f935c22fd inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets per-line normals by referencing an existing <a class="el" href="classvcl_1_1VertexBuffer.html" title="The VertexBuffer manages the lifetime of a bgfx::VertexBufferHandle.">VertexBuffer</a>.  <br /></td></tr>
+<tr class="separator:ae09a27979ae84d1dc2b8408f935c22fd inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa096cc1f37aa76b2c4eb02b339c14481 inherit pub_methods_classvcl_1_1Lines" id="r_aa096cc1f37aa76b2c4eb02b339c14481"><td class="memTemplParams" colspan="2">template&lt;Range R&gt; <br />
+requires std::convertible_to&lt;std::ranges::range_value_t&lt;R&gt;, <a class="el" href="classvcl_1_1Segment.html">bool</a>&gt;</td></tr>
+<tr class="memitem:aa096cc1f37aa76b2c4eb02b339c14481 inherit pub_methods_classvcl_1_1Lines"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#aa096cc1f37aa76b2c4eb02b339c14481">setLineSelections</a> (R &amp;&amp;<a class="el" href="classvcl_1_1Segment.html">selections</a>)</td></tr>
+<tr class="memdesc:aa096cc1f37aa76b2c4eb02b339c14481 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets per-line selection state from a range of booleans.  <br /></td></tr>
+<tr class="separator:aa096cc1f37aa76b2c4eb02b339c14481 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac021734e07a1787ecad76051a7a31b0c inherit pub_methods_classvcl_1_1Lines" id="r_ac021734e07a1787ecad76051a7a31b0c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#ac021734e07a1787ecad76051a7a31b0c">setLineSelections</a> (uint <a class="el" href="classvcl_1_1Segment.html">lSelCount</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1BooleanBuffer.html">BooleanBuffer</a> &amp;<a class="el" href="classvcl_1_1Segment.html">lineSels</a>)</td></tr>
+<tr class="memdesc:ac021734e07a1787ecad76051a7a31b0c inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets per-line selection state by referencing an existing <a class="el" href="classvcl_1_1BooleanBuffer.html" title="Manages a GPU buffer of booleans.">BooleanBuffer</a>.  <br /></td></tr>
+<tr class="separator:ac021734e07a1787ecad76051a7a31b0c inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b3b01981ce34fb007886ecb69d0f3c9 inherit pub_methods_classvcl_1_1Lines" id="r_a1b3b01981ce34fb007886ecb69d0f3c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#a1b3b01981ce34fb007886ecb69d0f3c9">setSelectionColor</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Color.html">Color</a> &amp;color)</td></tr>
+<tr class="memdesc:a1b3b01981ce34fb007886ecb69d0f3c9 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the selection color.  <br /></td></tr>
+<tr class="separator:a1b3b01981ce34fb007886ecb69d0f3c9 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4923b1d972e84324731868a2dfd60cae inherit pub_methods_classvcl_1_1Lines" id="r_a4923b1d972e84324731868a2dfd60cae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#a4923b1d972e84324731868a2dfd60cae">setSelectionVisibility</a> (<a class="el" href="classvcl_1_1Segment.html">bool</a> visible)</td></tr>
+<tr class="memdesc:a4923b1d972e84324731868a2dfd60cae inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether the selection should be visible.  <br /></td></tr>
+<tr class="separator:a4923b1d972e84324731868a2dfd60cae inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08b402841f1e9575707316b32c5c61c5 inherit pub_methods_classvcl_1_1Lines" id="r_a08b402841f1e9575707316b32c5c61c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#a08b402841f1e9575707316b32c5c61c5">setShading</a> (<a class="el" href="classvcl_1_1Lines.html#ab92b1d637b80d7ee067ca02109ad6fef">Shading</a> <a class="el" href="classvcl_1_1Lines.html#ad665a3b378c063d99f58c45219365097">shading</a>)</td></tr>
+<tr class="memdesc:a08b402841f1e9575707316b32c5c61c5 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the shading mode for line rendering.  <br /></td></tr>
+<tr class="separator:a08b402841f1e9575707316b32c5c61c5 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d027618be7a831aed585b2bac0f4019 inherit pub_methods_classvcl_1_1Lines" id="r_a4d027618be7a831aed585b2bac0f4019"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#a4d027618be7a831aed585b2bac0f4019">setTopology</a> (<a class="el" href="classvcl_1_1Lines.html#a79229939340cb5daa71ebad4622799d6">Topology</a> <a class="el" href="classvcl_1_1Segment.html">topo</a>)</td></tr>
+<tr class="memdesc:a4d027618be7a831aed585b2bac0f4019 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the topology used for rendering lines.  <br /></td></tr>
+<tr class="separator:a4d027618be7a831aed585b2bac0f4019 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab55d1c3da85f05d06e532181fba5e2eb inherit pub_methods_classvcl_1_1Lines" id="r_ab55d1c3da85f05d06e532181fba5e2eb"><td class="memTemplParams" colspan="2">
+template&lt;Range R&gt; <br />
+requires ColorConcept&lt;std::ranges::range_value_t&lt;R&gt;&gt;</td></tr>
+<tr class="memitem:ab55d1c3da85f05d06e532181fba5e2eb inherit pub_methods_classvcl_1_1Lines"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>setVertexColors</b> (R &amp;&amp;<a class="el" href="classvcl_1_1Segment.html">vertColors</a>)</td></tr>
+<tr class="memdesc:ab55d1c3da85f05d06e532181fba5e2eb inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets per-vertex colors from a range of <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a 32 bit color.">Color</a> elements. <br /></td></tr>
+<tr class="separator:ab55d1c3da85f05d06e532181fba5e2eb inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefc036d581a97de7aae87d1d62886923 inherit pub_methods_classvcl_1_1Lines" id="r_aefc036d581a97de7aae87d1d62886923"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#aefc036d581a97de7aae87d1d62886923">setVertexColors</a> (uint <a class="el" href="classvcl_1_1Segment.html">vColsCount</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1VertexBuffer.html">VertexBuffer</a> &amp;<a class="el" href="classvcl_1_1Segment.html">vertexColors</a>)</td></tr>
+<tr class="memdesc:aefc036d581a97de7aae87d1d62886923 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets per-vertex colors by referencing an existing <a class="el" href="classvcl_1_1VertexBuffer.html" title="The VertexBuffer manages the lifetime of a bgfx::VertexBufferHandle.">VertexBuffer</a>.  <br /></td></tr>
+<tr class="separator:aefc036d581a97de7aae87d1d62886923 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2d356e1fb8187ee4d464bcb5fe8152e inherit pub_methods_classvcl_1_1Lines" id="r_ad2d356e1fb8187ee4d464bcb5fe8152e"><td class="memTemplParams" colspan="2">
+template&lt;Range R&gt; <br />
+requires Point3Concept&lt;std::ranges::range_value_t&lt;R&gt;&gt;</td></tr>
+<tr class="memitem:ad2d356e1fb8187ee4d464bcb5fe8152e inherit pub_methods_classvcl_1_1Lines"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>setVertexNormals</b> (R &amp;&amp;<a class="el" href="classvcl_1_1Segment.html">vertNormals</a>)</td></tr>
+<tr class="memdesc:ad2d356e1fb8187ee4d464bcb5fe8152e inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets per-vertex normals from a range of 3D points. <br /></td></tr>
+<tr class="separator:ad2d356e1fb8187ee4d464bcb5fe8152e inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2b7bb00844f948a4962da6fdfdd3e41 inherit pub_methods_classvcl_1_1Lines" id="r_af2b7bb00844f948a4962da6fdfdd3e41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#af2b7bb00844f948a4962da6fdfdd3e41">setVertexNormals</a> (uint <a class="el" href="classvcl_1_1Segment.html">vNorCount</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1VertexBuffer.html">VertexBuffer</a> &amp;<a class="el" href="classvcl_1_1Segment.html">vertexNormals</a>)</td></tr>
+<tr class="memdesc:af2b7bb00844f948a4962da6fdfdd3e41 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets vertex normals by referencing an existing <a class="el" href="classvcl_1_1VertexBuffer.html" title="The VertexBuffer manages the lifetime of a bgfx::VertexBufferHandle.">VertexBuffer</a>.  <br /></td></tr>
+<tr class="separator:af2b7bb00844f948a4962da6fdfdd3e41 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8d245e558a784831d2f4648a925fcd3 inherit pub_methods_classvcl_1_1Lines" id="r_aa8d245e558a784831d2f4648a925fcd3"><td class="memTemplParams" colspan="2">template&lt;Range R&gt; <br />
+requires Point3Concept&lt;std::ranges::range_value_t&lt;R&gt;&gt;</td></tr>
+<tr class="memitem:aa8d245e558a784831d2f4648a925fcd3 inherit pub_methods_classvcl_1_1Lines"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#aa8d245e558a784831d2f4648a925fcd3">setVertices</a> (R &amp;&amp;<a class="el" href="classvcl_1_1Segment.html">verts</a>)</td></tr>
+<tr class="memdesc:aa8d245e558a784831d2f4648a925fcd3 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets line coordinates from a range of 3D points.  <br /></td></tr>
+<tr class="separator:aa8d245e558a784831d2f4648a925fcd3 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cce64eef4dc34de7b920c41d48aa156 inherit pub_methods_classvcl_1_1Lines" id="r_a1cce64eef4dc34de7b920c41d48aa156"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#a1cce64eef4dc34de7b920c41d48aa156">setVertices</a> (uint <a class="el" href="classvcl_1_1Lines.html#a86f3047357529f8ab0d4fb25cfc16e9e">vertexCount</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1VertexBuffer.html">VertexBuffer</a> &amp;<a class="el" href="classvcl_1_1Segment.html">verts</a>)</td></tr>
+<tr class="memdesc:a1cce64eef4dc34de7b920c41d48aa156 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets vertex positions by referencing an existing <a class="el" href="classvcl_1_1VertexBuffer.html" title="The VertexBuffer manages the lifetime of a bgfx::VertexBufferHandle.">VertexBuffer</a>.  <br /></td></tr>
+<tr class="separator:a1cce64eef4dc34de7b920c41d48aa156 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30422a2cc9314ef6017308bfb57f5d8a inherit pub_methods_classvcl_1_1Lines" id="r_a30422a2cc9314ef6017308bfb57f5d8a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#a30422a2cc9314ef6017308bfb57f5d8a">setWidth</a> (<a class="el" href="classvcl_1_1Segment.html">float</a> <a class="el" href="classvcl_1_1Lines.html#abf48e5e8ac8792bea96dbe833914fa4d">width</a>)</td></tr>
+<tr class="memdesc:a30422a2cc9314ef6017308bfb57f5d8a inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the width of line segments.  <br /></td></tr>
+<tr class="separator:a30422a2cc9314ef6017308bfb57f5d8a inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad665a3b378c063d99f58c45219365097 inherit pub_methods_classvcl_1_1Lines" id="r_ad665a3b378c063d99f58c45219365097"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="classvcl_1_1Lines.html#ab92b1d637b80d7ee067ca02109ad6fef">Shading</a>&#160;</td><td class="memItemRight" valign="bottom"><b>shading</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
+<tr class="memdesc:ad665a3b378c063d99f58c45219365097 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the shading mode used for rendering lines. <br /></td></tr>
+<tr class="separator:ad665a3b378c063d99f58c45219365097 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf065068c630a562dea051b35feb3779 inherit pub_methods_classvcl_1_1Lines" id="r_abf065068c630a562dea051b35feb3779"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="classvcl_1_1Lines.html#a79229939340cb5daa71ebad4622799d6">Topology</a>&#160;</td><td class="memItemRight" valign="bottom"><b>topology</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
+<tr class="memdesc:abf065068c630a562dea051b35feb3779 inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the topology used for rendering lines. <br /></td></tr>
+<tr class="separator:abf065068c630a562dea051b35feb3779 inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86f3047357529f8ab0d4fb25cfc16e9e inherit pub_methods_classvcl_1_1Lines" id="r_a86f3047357529f8ab0d4fb25cfc16e9e"><td class="memItemLeft" align="right" valign="top">
+uint&#160;</td><td class="memItemRight" valign="bottom"><b>vertexCount</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
+<tr class="memdesc:a86f3047357529f8ab0d4fb25cfc16e9e inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of vertices in the set. <br /></td></tr>
+<tr class="separator:a86f3047357529f8ab0d4fb25cfc16e9e inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf48e5e8ac8792bea96dbe833914fa4d inherit pub_methods_classvcl_1_1Lines" id="r_abf48e5e8ac8792bea96dbe833914fa4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">float</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Lines.html#abf48e5e8ac8792bea96dbe833914fa4d">width</a> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
+<tr class="memdesc:abf48e5e8ac8792bea96dbe833914fa4d inherit pub_methods_classvcl_1_1Lines"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the width of line segments.  <br /></td></tr>
+<tr class="separator:abf48e5e8ac8792bea96dbe833914fa4d inherit pub_methods_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:afc8ba50be231a9a9dbc2d8154618ab33" id="r_afc8ba50be231a9a9dbc2d8154618ab33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableLines.html#afc8ba50be231a9a9dbc2d8154618ab33">draw</a> (bgfx::ViewId viewId) <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
+<tr class="memdesc:afc8ba50be231a9a9dbc2d8154618ab33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the line segments on the specified view.  <br /></td></tr>
+<tr class="separator:afc8ba50be231a9a9dbc2d8154618ab33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a033d5e3f85b97e1c27bbc82d241318e9" id="r_a033d5e3f85b97e1c27bbc82d241318e9"><td class="memTemplParams" colspan="2"><a id="a033d5e3f85b97e1c27bbc82d241318e9" name="a033d5e3f85b97e1c27bbc82d241318e9"></a>
+template&lt;Range R&gt; <br />
+requires std::integral&lt;std::ranges::range_value_t&lt;R&gt;&gt;</td></tr>
+<tr class="memitem:a033d5e3f85b97e1c27bbc82d241318e9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>setIndices</b> (R &amp;&amp;indices)</td></tr>
+<tr class="memdesc:a033d5e3f85b97e1c27bbc82d241318e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets line indices from a range of unsigned integers. <br /></td></tr>
+<tr class="separator:a033d5e3f85b97e1c27bbc82d241318e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1922587d5d3c8709b21ebd6cdc381a93" id="r_a1922587d5d3c8709b21ebd6cdc381a93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableLines.html#a1922587d5d3c8709b21ebd6cdc381a93">setIndices</a> (uint <a class="el" href="classvcl_1_1Lines.html#ac1c1ec0ea6fa6d11204e05fbe986866d">indexCount</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1IndexBuffer.html">IndexBuffer</a> &amp;indices)</td></tr>
+<tr class="memdesc:a1922587d5d3c8709b21ebd6cdc381a93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets line indices by referencing an existing <a class="el" href="classvcl_1_1IndexBuffer.html" title="The IndexBuffer manages the lifetime of a bgfx::IndexBufferHandle.">IndexBuffer</a>.  <br /></td></tr>
+<tr class="separator:a1922587d5d3c8709b21ebd6cdc381a93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc4cdf536a305e314a47cb0ceee22ebe" id="r_abc4cdf536a305e314a47cb0ceee22ebe"><td class="memTemplParams" colspan="2"><a id="abc4cdf536a305e314a47cb0ceee22ebe" name="abc4cdf536a305e314a47cb0ceee22ebe"></a>
+template&lt;Range R&gt; <br />
+requires ColorConcept&lt;std::ranges::range_value_t&lt;R&gt;&gt;</td></tr>
+<tr class="memitem:abc4cdf536a305e314a47cb0ceee22ebe"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>setLineColors</b> (R &amp;&amp;<a class="el" href="classvcl_1_1Segment.html">linColors</a>)</td></tr>
+<tr class="memdesc:abc4cdf536a305e314a47cb0ceee22ebe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets per-line colors from a range of <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a 32 bit color.">Color</a> elements. <br /></td></tr>
+<tr class="separator:abc4cdf536a305e314a47cb0ceee22ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb61c987d5f7b1d7799b15e21f76b5d0" id="r_acb61c987d5f7b1d7799b15e21f76b5d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableLines.html#acb61c987d5f7b1d7799b15e21f76b5d0">setLineColors</a> (uint <a class="el" href="classvcl_1_1Segment.html">lColorCount</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1IndexBuffer.html">IndexBuffer</a> &amp;<a class="el" href="classvcl_1_1Segment.html">lineColors</a>)</td></tr>
+<tr class="memdesc:acb61c987d5f7b1d7799b15e21f76b5d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets per-line colors by referencing an existing <a class="el" href="classvcl_1_1IndexBuffer.html" title="The IndexBuffer manages the lifetime of a bgfx::IndexBufferHandle.">IndexBuffer</a>.  <br /></td></tr>
+<tr class="separator:acb61c987d5f7b1d7799b15e21f76b5d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaed6e9c46687abaa5cd2d17490f9c762" id="r_aaed6e9c46687abaa5cd2d17490f9c762"><td class="memTemplParams" colspan="2"><a id="aaed6e9c46687abaa5cd2d17490f9c762" name="aaed6e9c46687abaa5cd2d17490f9c762"></a>
+template&lt;Range R&gt; <br />
+requires Point3Concept&lt;std::ranges::range_value_t&lt;R&gt;&gt;</td></tr>
+<tr class="memitem:aaed6e9c46687abaa5cd2d17490f9c762"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>setLineNormals</b> (R &amp;&amp;<a class="el" href="classvcl_1_1Segment.html">lineNormals</a>)</td></tr>
+<tr class="memdesc:aaed6e9c46687abaa5cd2d17490f9c762"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets per-line normals from a range of 3D points. <br /></td></tr>
+<tr class="separator:aaed6e9c46687abaa5cd2d17490f9c762"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae09a27979ae84d1dc2b8408f935c22fd" id="r_ae09a27979ae84d1dc2b8408f935c22fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableLines.html#ae09a27979ae84d1dc2b8408f935c22fd">setLineNormals</a> (uint <a class="el" href="classvcl_1_1Segment.html">lNorCount</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1VertexBuffer.html">VertexBuffer</a> &amp;<a class="el" href="classvcl_1_1Segment.html">lineNormals</a>)</td></tr>
+<tr class="memdesc:ae09a27979ae84d1dc2b8408f935c22fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets per-line normals by referencing an existing <a class="el" href="classvcl_1_1VertexBuffer.html" title="The VertexBuffer manages the lifetime of a bgfx::VertexBufferHandle.">VertexBuffer</a>.  <br /></td></tr>
+<tr class="separator:ae09a27979ae84d1dc2b8408f935c22fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab55d1c3da85f05d06e532181fba5e2eb" id="r_ab55d1c3da85f05d06e532181fba5e2eb"><td class="memTemplParams" colspan="2"><a id="ab55d1c3da85f05d06e532181fba5e2eb" name="ab55d1c3da85f05d06e532181fba5e2eb"></a>
+template&lt;Range R&gt; <br />
+requires ColorConcept&lt;std::ranges::range_value_t&lt;R&gt;&gt;</td></tr>
+<tr class="memitem:ab55d1c3da85f05d06e532181fba5e2eb"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>setVertexColors</b> (R &amp;&amp;<a class="el" href="classvcl_1_1Segment.html">vertColors</a>)</td></tr>
+<tr class="memdesc:ab55d1c3da85f05d06e532181fba5e2eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets per-vertex colors from a range of <a class="el" href="classvcl_1_1Color.html" title="The Color class represents a 32 bit color.">Color</a> elements. <br /></td></tr>
+<tr class="separator:ab55d1c3da85f05d06e532181fba5e2eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefc036d581a97de7aae87d1d62886923" id="r_aefc036d581a97de7aae87d1d62886923"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableLines.html#aefc036d581a97de7aae87d1d62886923">setVertexColors</a> (uint <a class="el" href="classvcl_1_1Segment.html">vColsCount</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1VertexBuffer.html">VertexBuffer</a> &amp;<a class="el" href="classvcl_1_1Segment.html">vertexColors</a>)</td></tr>
+<tr class="memdesc:aefc036d581a97de7aae87d1d62886923"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets per-vertex colors by referencing an existing <a class="el" href="classvcl_1_1VertexBuffer.html" title="The VertexBuffer manages the lifetime of a bgfx::VertexBufferHandle.">VertexBuffer</a>.  <br /></td></tr>
+<tr class="separator:aefc036d581a97de7aae87d1d62886923"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2d356e1fb8187ee4d464bcb5fe8152e" id="r_ad2d356e1fb8187ee4d464bcb5fe8152e"><td class="memTemplParams" colspan="2"><a id="ad2d356e1fb8187ee4d464bcb5fe8152e" name="ad2d356e1fb8187ee4d464bcb5fe8152e"></a>
+template&lt;Range R&gt; <br />
+requires Point3Concept&lt;std::ranges::range_value_t&lt;R&gt;&gt;</td></tr>
+<tr class="memitem:ad2d356e1fb8187ee4d464bcb5fe8152e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>setVertexNormals</b> (R &amp;&amp;<a class="el" href="classvcl_1_1Segment.html">vertNormals</a>)</td></tr>
+<tr class="memdesc:ad2d356e1fb8187ee4d464bcb5fe8152e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets per-vertex normals from a range of 3D points. <br /></td></tr>
+<tr class="separator:ad2d356e1fb8187ee4d464bcb5fe8152e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2b7bb00844f948a4962da6fdfdd3e41" id="r_af2b7bb00844f948a4962da6fdfdd3e41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableLines.html#af2b7bb00844f948a4962da6fdfdd3e41">setVertexNormals</a> (uint <a class="el" href="classvcl_1_1Segment.html">vNorCount</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1VertexBuffer.html">VertexBuffer</a> &amp;<a class="el" href="classvcl_1_1Segment.html">vertexNormals</a>)</td></tr>
+<tr class="memdesc:af2b7bb00844f948a4962da6fdfdd3e41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets vertex normals by referencing an existing <a class="el" href="classvcl_1_1VertexBuffer.html" title="The VertexBuffer manages the lifetime of a bgfx::VertexBufferHandle.">VertexBuffer</a>.  <br /></td></tr>
+<tr class="separator:af2b7bb00844f948a4962da6fdfdd3e41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8d245e558a784831d2f4648a925fcd3" id="r_aa8d245e558a784831d2f4648a925fcd3"><td class="memTemplParams" colspan="2">template&lt;Range R&gt; <br />
+requires Point3Concept&lt;std::ranges::range_value_t&lt;R&gt;&gt;</td></tr>
+<tr class="memitem:aa8d245e558a784831d2f4648a925fcd3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableLines.html#aa8d245e558a784831d2f4648a925fcd3">setVertices</a> (R &amp;&amp;<a class="el" href="classvcl_1_1Segment.html">verts</a>)</td></tr>
+<tr class="memdesc:aa8d245e558a784831d2f4648a925fcd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets line coordinates from a range of 3D points.  <br /></td></tr>
+<tr class="separator:aa8d245e558a784831d2f4648a925fcd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cce64eef4dc34de7b920c41d48aa156" id="r_a1cce64eef4dc34de7b920c41d48aa156"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableLines.html#a1cce64eef4dc34de7b920c41d48aa156">setVertices</a> (uint <a class="el" href="classvcl_1_1Lines.html#a86f3047357529f8ab0d4fb25cfc16e9e">vertexCount</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1VertexBuffer.html">VertexBuffer</a> &amp;<a class="el" href="classvcl_1_1Segment.html">verts</a>)</td></tr>
+<tr class="memdesc:a1cce64eef4dc34de7b920c41d48aa156"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets vertex positions by referencing an existing <a class="el" href="classvcl_1_1VertexBuffer.html" title="The VertexBuffer manages the lifetime of a bgfx::VertexBufferHandle.">VertexBuffer</a>.  <br /></td></tr>
+<tr class="separator:a1cce64eef4dc34de7b920c41d48aa156"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:aac1f4c143b57d05cb34e4c9a22055d63" id="r_aac1f4c143b57d05cb34e4c9a22055d63"><td class="memItemLeft" align="right" valign="top"><a id="aac1f4c143b57d05cb34e4c9a22055d63" name="aac1f4c143b57d05cb34e4c9a22055d63"></a>
-std::vector&lt; uint &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mLineColors</b></td></tr>
-<tr class="separator:aac1f4c143b57d05cb34e4c9a22055d63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96b81e9888592ddfb137d29dacef21c6" id="r_a96b81e9888592ddfb137d29dacef21c6"><td class="memItemLeft" align="right" valign="top"><a id="a96b81e9888592ddfb137d29dacef21c6" name="a96b81e9888592ddfb137d29dacef21c6"></a>
-std::vector&lt; uint &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mLineIndices</b></td></tr>
-<tr class="separator:a96b81e9888592ddfb137d29dacef21c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1dc54b5645bfd4fa723bc011dbea03b1" id="r_a1dc54b5645bfd4fa723bc011dbea03b1"><td class="memItemLeft" align="right" valign="top"><a id="a1dc54b5645bfd4fa723bc011dbea03b1" name="a1dc54b5645bfd4fa723bc011dbea03b1"></a>
-<a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mUseLineIndices</b> = <a class="el" href="classvcl_1_1Segment.html">false</a></td></tr>
-<tr class="separator:a1dc54b5645bfd4fa723bc011dbea03b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7a40c7ca1a24429fdb39f2a4086ceeb" id="r_ad7a40c7ca1a24429fdb39f2a4086ceeb"><td class="memItemLeft" align="right" valign="top"><a id="ad7a40c7ca1a24429fdb39f2a4086ceeb" name="ad7a40c7ca1a24429fdb39f2a4086ceeb"></a>
-std::vector&lt; uint &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mVertColors</b></td></tr>
-<tr class="separator:ad7a40c7ca1a24429fdb39f2a4086ceeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c4fda7ab5dd87df34da8d2eabed7055" id="r_a8c4fda7ab5dd87df34da8d2eabed7055"><td class="memItemLeft" align="right" valign="top"><a id="a8c4fda7ab5dd87df34da8d2eabed7055" name="a8c4fda7ab5dd87df34da8d2eabed7055"></a>
-std::vector&lt; <a class="el" href="classvcl_1_1Segment.html">float</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mVertCoords</b></td></tr>
-<tr class="separator:a8c4fda7ab5dd87df34da8d2eabed7055"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a78a763cf92e49cb317428bbcb3dbf5" id="r_a9a78a763cf92e49cb317428bbcb3dbf5"><td class="memItemLeft" align="right" valign="top"><a id="a9a78a763cf92e49cb317428bbcb3dbf5" name="a9a78a763cf92e49cb317428bbcb3dbf5"></a>
-std::vector&lt; <a class="el" href="classvcl_1_1Segment.html">float</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mVertNormals</b></td></tr>
-<tr class="separator:a9a78a763cf92e49cb317428bbcb3dbf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79e62de1035ec031c33fcea94012a503" id="r_a79e62de1035ec031c33fcea94012a503"><td class="memItemLeft" align="right" valign="top"><a id="a79e62de1035ec031c33fcea94012a503" name="a79e62de1035ec031c33fcea94012a503"></a>
+std::vector&lt; uint &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mIndices</b></td></tr>
+<tr class="separator:a79e62de1035ec031c33fcea94012a503"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46f323ce9c22625cbd90c29d759b007e" id="r_a46f323ce9c22625cbd90c29d759b007e"><td class="memItemLeft" align="right" valign="top"><a id="a46f323ce9c22625cbd90c29d759b007e" name="a46f323ce9c22625cbd90c29d759b007e"></a>
+std::vector&lt; <a class="el" href="classvcl_1_1Color.html">vcl::Color</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mLineColors</b></td></tr>
+<tr class="separator:a46f323ce9c22625cbd90c29d759b007e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87fe426f9fc35aac0ef2670797814496" id="r_a87fe426f9fc35aac0ef2670797814496"><td class="memItemLeft" align="right" valign="top"><a id="a87fe426f9fc35aac0ef2670797814496" name="a87fe426f9fc35aac0ef2670797814496"></a>
+std::vector&lt; <a class="el" href="group__space__core.html#gabb47c1364fb2fe1464a54417684f011e">vcl::Point3d</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mLineNormals</b></td></tr>
+<tr class="separator:a87fe426f9fc35aac0ef2670797814496"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85d326944ace546a658af93b444917a1" id="r_a85d326944ace546a658af93b444917a1"><td class="memItemLeft" align="right" valign="top"><a id="a85d326944ace546a658af93b444917a1" name="a85d326944ace546a658af93b444917a1"></a>
+std::vector&lt; <a class="el" href="group__space__core.html#gabb47c1364fb2fe1464a54417684f011e">vcl::Point3d</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mPositions</b></td></tr>
+<tr class="separator:a85d326944ace546a658af93b444917a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79cc4db302942322fa308e14a9cc57f9" id="r_a79cc4db302942322fa308e14a9cc57f9"><td class="memItemLeft" align="right" valign="top"><a id="a79cc4db302942322fa308e14a9cc57f9" name="a79cc4db302942322fa308e14a9cc57f9"></a>
+std::vector&lt; <a class="el" href="classvcl_1_1Color.html">vcl::Color</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mVertexColors</b></td></tr>
+<tr class="separator:a79cc4db302942322fa308e14a9cc57f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e6f789544fdbaebc665820f93e8bdde" id="r_a1e6f789544fdbaebc665820f93e8bdde"><td class="memItemLeft" align="right" valign="top"><a id="a1e6f789544fdbaebc665820f93e8bdde" name="a1e6f789544fdbaebc665820f93e8bdde"></a>
+std::vector&lt; <a class="el" href="group__space__core.html#gabb47c1364fb2fe1464a54417684f011e">vcl::Point3d</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mVertexNormals</b></td></tr>
+<tr class="separator:a1e6f789544fdbaebc665820f93e8bdde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74721271f98d45cc7177aecb9e359c64" id="r_a74721271f98d45cc7177aecb9e359c64"><td class="memItemLeft" align="right" valign="top"><a id="a74721271f98d45cc7177aecb9e359c64" name="a74721271f98d45cc7177aecb9e359c64"></a>
 <a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mVisible</b> = <a class="el" href="classvcl_1_1Segment.html">true</a></td></tr>
 <tr class="separator:a74721271f98d45cc7177aecb9e359c64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
-Friends</h2></td></tr>
-<tr class="memitem:a9907cc5c1b0491507f7d3109d051e0f6" id="r_a9907cc5c1b0491507f7d3109d051e0f6"><td class="memItemLeft" align="right" valign="top"><a id="a9907cc5c1b0491507f7d3109d051e0f6" name="a9907cc5c1b0491507f7d3109d051e0f6"></a>
-<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>swap</b> (<a class="el" href="classvcl_1_1DrawableLines.html">DrawableLines</a> &amp;first, <a class="el" href="classvcl_1_1DrawableLines.html">DrawableLines</a> &amp;second)</td></tr>
-<tr class="separator:a9907cc5c1b0491507f7d3109d051e0f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_types_classvcl_1_1Lines"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classvcl_1_1Lines')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classvcl_1_1Lines.html">vcl::Lines</a></td></tr>
-<tr class="memitem:ae339ce766f6b671e8ddbb2a02eb887f2 inherit pub_types_classvcl_1_1Lines" id="r_ae339ce766f6b671e8ddbb2a02eb887f2"><td class="memItemLeft" align="right" valign="top"><a id="ae339ce766f6b671e8ddbb2a02eb887f2" name="ae339ce766f6b671e8ddbb2a02eb887f2"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>ColorToUse</b> { <b>PER_VERTEX</b>
-, <b>PER_EDGE</b>
-, <b>GENERAL</b>
- }</td></tr>
-<tr class="separator:ae339ce766f6b671e8ddbb2a02eb887f2 inherit pub_types_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58781e34ab529c9628570431a905c95b inherit pub_types_classvcl_1_1Lines" id="r_a58781e34ab529c9628570431a905c95b"><td class="memItemLeft" align="right" valign="top"><a id="a58781e34ab529c9628570431a905c95b" name="a58781e34ab529c9628570431a905c95b"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>ImplementationType</b> { <b>PRIMITIVE</b> = 0
-, <b>CPU_GENERATED</b> = 1
-, <b>COUNT</b>
- }</td></tr>
-<tr class="separator:a58781e34ab529c9628570431a905c95b inherit pub_types_classvcl_1_1Lines"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classvcl_1_1DrawableObject"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classvcl_1_1DrawableObject')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classvcl_1_1DrawableObject.html">vcl::DrawableObject</a></td></tr>
 <tr class="memitem:a02d15a9a9869a0d72397cd15b54e0f68 inherit pro_methods_classvcl_1_1DrawableObject" id="r_a02d15a9a9869a0d72397cd15b54e0f68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1DrawableObject.html#a02d15a9a9869a0d72397cd15b54e0f68">swap</a> (<a class="el" href="classvcl_1_1DrawableObject.html">DrawableObject</a> &amp;<a class="el" href="classvcl_1_1Segment.html">other</a>)</td></tr>
 <tr class="memdesc:a02d15a9a9869a0d72397cd15b54e0f68 inherit pro_methods_classvcl_1_1DrawableObject"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility swap function that allows to swap the content of two <a class="el" href="classvcl_1_1DrawableObject.html" title="The DrawableObject class is the base class for all the objects that can be drawn in a 3D viewer.">DrawableObject</a> instances.  <br /></td></tr>
 <tr class="separator:a02d15a9a9869a0d72397cd15b54e0f68 inherit pro_methods_classvcl_1_1DrawableObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A <a class="el" href="classvcl_1_1DrawableObject.html" title="The DrawableObject class is the base class for all the objects that can be drawn in a 3D viewer.">DrawableObject</a> that renders a set of 3D lines. </p>
+<p>This class wraps the <code><a class="el" href="classvcl_1_1Lines.html" title="Renders a set of 3D lines as line segments with variable width.">vcl::Lines</a></code> primitive to be used within the VCLib rendering framework as a <code><a class="el" href="classvcl_1_1DrawableObject.html" title="The DrawableObject class is the base class for all the objects that can be drawn in a 3D viewer.">DrawableObject</a></code>. It maintains a local CPU copy of the vertices, indices, normals, and colors to support <code><a class="el" href="classvcl_1_1DrawableObject.html" title="The DrawableObject class is the base class for all the objects that can be drawn in a 3D viewer.">DrawableObject</a></code> interfaces such as bounding box computation and cloning. </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a79229939340cb5daa71ebad4622799d6" name="a79229939340cb5daa71ebad4622799d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79229939340cb5daa71ebad4622799d6">&#9670;&#160;</a></span>Topology</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classvcl_1_1Segment.html">class</a> <a class="el" href="classvcl_1_1Lines.html#a79229939340cb5daa71ebad4622799d6">vcl::Lines::Topology</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Specifies the topology used for rendering lines. </p>
+<ul>
+<li>LINES: <a class="el" href="classvcl_1_1Lines.html" title="Renders a set of 3D lines as line segments with variable width.">Lines</a> are defined by consecutive pairs of vertices in the vertex buffer. (vertices 0-1 form line 1, vertices 2-3 form line 2, etc.)</li>
+<li>LINE_STRIP: <a class="el" href="classvcl_1_1Lines.html" title="Renders a set of 3D lines as line segments with variable width.">Lines</a> are defined by a strip of vertices, where each vertex after the first forms a line segment with the previous vertex. (vertices 0-1 form line 1, vertices 1-2 form line 2, etc.)</li>
+</ul>
+<p>The topology determines how the vertex data is interpreted to form lines. The default is LINES. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a041bc42d98efb9016e96f2bb06be0d26" name="a041bc42d98efb9016e96f2bb06be0d26"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a041bc42d98efb9016e96f2bb06be0d26">&#9670;&#160;</a></span>boundingBox()</h2>
@@ -301,7 +551,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Box.html">vcl::Box3d</a> vcl::DrawableLines::boundingBox </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">vcl::Box3d</a> vcl::DrawableLines::boundingBox </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -321,8 +571,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a0e400da76e25a22ebb879e72460718f1" name="a0e400da76e25a22ebb879e72460718f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e400da76e25a22ebb879e72460718f1">&#9670;&#160;</a></span>clone() <span class="overload">[1/2]</span></h2>
+<a id="afc8ba50be231a9a9dbc2d8154618ab33" name="afc8ba50be231a9a9dbc2d8154618ab33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc8ba50be231a9a9dbc2d8154618ab33">&#9670;&#160;</a></span>draw() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -331,69 +581,34 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::shared_ptr&lt; <a class="el" href="classvcl_1_1DrawableObject.html">DrawableObject</a> &gt; vcl::DrawableLines::clone </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">void</a> vcl::Lines::draw </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> &amp;&amp;</td>
+          <td class="paramtype">bgfx::ViewId&#160;</td>
+          <td class="paramname"><em>viewId</em></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>This member function is used to create a new <a class="el" href="classvcl_1_1DrawableObject.html" title="The DrawableObject class is the base class for all the objects that can be drawn in a 3D viewer.">DrawableObject</a> that is a moved from the current one. This object will be destroyed after the call of this function. Each derived class must implement this member function, that returns a shared pointer pointing to the moved object. For more details about this paradigm, check polimorphism clone in modern c++: <a href="https://www.fluentcpp.com/2017/09/08/make-polymorphic-copy-modern-cpp/">https://www.fluentcpp.com/2017/09/08/make-polymorphic-copy-modern-cpp/</a>. </p>
-<p>Generally, if your class that inherits from <a class="el" href="classvcl_1_1DrawableObject.html" title="The DrawableObject class is the base class for all the objects that can be drawn in a 3D viewer.">DrawableObject</a> is called MyObject, the clone member function should be implemented as follows:</p>
-<div class="fragment"><div class="line">std::shared_ptr&lt;DrawableObject&gt; MyObject::clone() &amp;&amp;</div>
-<div class="line">{</div>
-<div class="line">   <span class="keywordflow">return</span> std::make_shared&lt;MyObject&gt;(std::move(*<span class="keyword">this</span>));</div>
-<div class="line">}</div>
-</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>A shared pointers that points to a new <a class="el" href="classvcl_1_1DrawableObject.html" title="The DrawableObject class is the base class for all the objects that can be drawn in a 3D viewer.">DrawableObject</a> that is a moved from the current one. </dd></dl>
-
-<p>Implements <a class="el" href="classvcl_1_1DrawableObject.html#aa382b5f7ea887d2894c4d7934d3afe83">vcl::DrawableObject</a>.</p>
-
-</div>
-</div>
-<a id="a81d13c23c61906b3d063a18f40ba33c1" name="a81d13c23c61906b3d063a18f40ba33c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81d13c23c61906b3d063a18f40ba33c1">&#9670;&#160;</a></span>clone() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt; <a class="el" href="classvcl_1_1DrawableObject.html">DrawableObject</a> &gt; vcl::DrawableLines::clone </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const &amp;</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>This member function is used to create a new copy of the <a class="el" href="classvcl_1_1DrawableObject.html" title="The DrawableObject class is the base class for all the objects that can be drawn in a 3D viewer.">DrawableObject</a>. Each derived class must implement this member function, that returns a shared pointer pointing to a copy of the current one. for more details about this paradigm, check polimorphism clone in modern c++: <a href="https://www.fluentcpp.com/2017/09/08/make-polymorphic-copy-modern-cpp/">https://www.fluentcpp.com/2017/09/08/make-polymorphic-copy-modern-cpp/</a>. </p>
-<p>Generally, if your class that inherits from <a class="el" href="classvcl_1_1DrawableObject.html" title="The DrawableObject class is the base class for all the objects that can be drawn in a 3D viewer.">DrawableObject</a> is called MyObject, the clone member function should be implemented as follows:</p>
-<div class="fragment"><div class="line">std::shared_ptr&lt;DrawableObject&gt; MyObject::clone() <a class="code hl_class" href="classvcl_1_1Segment.html">const</a>&amp;</div>
-<div class="line">{</div>
-<div class="line">   <span class="keywordflow">return</span> std::make_shared&lt;MyObject&gt;(*<span class="keyword">this</span>);</div>
-<div class="line">}</div>
-<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:41</div></div>
-</div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>A shared pointers that points to a new <a class="el" href="classvcl_1_1DrawableObject.html" title="The DrawableObject class is the base class for all the objects that can be drawn in a 3D viewer.">DrawableObject</a> that is a copy of the current one. </dd></dl>
-
-<p>Implements <a class="el" href="classvcl_1_1DrawableObject.html#aed0d44d07cb86a6ac7509f01680db62c">vcl::DrawableObject</a>.</p>
+<p>Draws the line segments on the specified view. </p>
+<p>Renders all lines as screen-space line segments with variable width using vertex pulling. Each line (pair of endpoints) is expanded into 2 triangles (6 vertices) procedurally in the vertex shader.</p>
+<p>If the line set is empty/invalid, this method does nothing.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">viewId</td><td>The bgfx view ID to submit the rendering commands to. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="a89f3198b0a6e48a17e9f6aad97830964" name="a89f3198b0a6e48a17e9f6aad97830964"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a89f3198b0a6e48a17e9f6aad97830964">&#9670;&#160;</a></span>draw()</h2>
+<a id="aa860a744806b240d8f21fc9dc1cb14d9" name="aa860a744806b240d8f21fc9dc1cb14d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa860a744806b240d8f21fc9dc1cb14d9">&#9670;&#160;</a></span>draw() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -406,7 +621,7 @@ Additional Inherited Members</h2></td></tr>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">DrawObjectSettings</a> &amp;&#160;</td>
           <td class="paramname"><em>settings</em></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -424,7 +639,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classvcl_1_1DrawableObject.html#a530baed5108b8e1c7fcefef639ee2f8e">vcl::DrawableObject</a>.</p>
+<p>Implements <a class="el" href="classvcl_1_1DrawableObject.html#a62c5b447e47b1f95fcfb0411d6a86d08">vcl::DrawableObject</a>.</p>
 
 </div>
 </div>
@@ -455,6 +670,592 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the object is visible; </dd></dl>
 
 <p>Implements <a class="el" href="classvcl_1_1DrawableObject.html#a527f2bce3a4c64d7bbe2126bbe0c5da3">vcl::DrawableObject</a>.</p>
+
+</div>
+</div>
+<a id="a3b8ce67193606274799e5d06e04eebd3" name="a3b8ce67193606274799e5d06e04eebd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b8ce67193606274799e5d06e04eebd3">&#9670;&#160;</a></span>setIndices() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Range R&gt; <br />
+requires std::integral&lt;std::ranges::range_value_t&lt;R&gt;&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">void</a> vcl::DrawableLines::setIndices </td>
+          <td>(</td>
+          <td class="paramtype">R &amp;&amp;&#160;</td>
+          <td class="paramname"><em>indices</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets line indices from a range of indices and stores a local copy. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">R</td><td>Range type satisfying integral concept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">indices</td><td>Range of indices. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1922587d5d3c8709b21ebd6cdc381a93" name="a1922587d5d3c8709b21ebd6cdc381a93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1922587d5d3c8709b21ebd6cdc381a93">&#9670;&#160;</a></span>setIndices() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">void</a> vcl::Lines::setIndices </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>indexCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1IndexBuffer.html">IndexBuffer</a> &amp;&#160;</td>
+          <td class="paramname"><em>indices</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets line indices by referencing an existing <a class="el" href="classvcl_1_1IndexBuffer.html" title="The IndexBuffer manages the lifetime of a bgfx::IndexBufferHandle.">IndexBuffer</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">indexCount</td><td>Number of indices in the <a class="el" href="classvcl_1_1IndexBuffer.html" title="The IndexBuffer manages the lifetime of a bgfx::IndexBufferHandle.">IndexBuffer</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">indices</td><td><a class="el" href="classvcl_1_1IndexBuffer.html" title="The IndexBuffer manages the lifetime of a bgfx::IndexBufferHandle.">IndexBuffer</a> to use for lines. The interpretation of indices depends on the topology:<ul>
+<li>For LINES topology, each pair of indices defines one line segment.</li>
+<li>For LINE_STRIP topology, each index after the first forms a line segment with the previous index.</li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>The buffer must remain valid for the lifetime of this object. </dd></dl>
+
+</div>
+</div>
+<a id="abb3b7dc1d1779ff621b28798fa0e483f" name="abb3b7dc1d1779ff621b28798fa0e483f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb3b7dc1d1779ff621b28798fa0e483f">&#9670;&#160;</a></span>setLineColors() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Range R&gt; <br />
+requires ColorConcept&lt;std::ranges::range_value_t&lt;R&gt;&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">void</a> vcl::DrawableLines::setLineColors </td>
+          <td>(</td>
+          <td class="paramtype">R &amp;&amp;&#160;</td>
+          <td class="paramname"><em>linColors</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets per-line colors and stores a local copy. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">R</td><td>Range type satisfying ColorConcept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">linColors</td><td>Range of Colors. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acb61c987d5f7b1d7799b15e21f76b5d0" name="acb61c987d5f7b1d7799b15e21f76b5d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb61c987d5f7b1d7799b15e21f76b5d0">&#9670;&#160;</a></span>setLineColors() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">void</a> vcl::Lines::setLineColors </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>lColorCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1IndexBuffer.html">IndexBuffer</a> &amp;&#160;</td>
+          <td class="paramname"><em>lineColors</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets per-line colors by referencing an existing <a class="el" href="classvcl_1_1IndexBuffer.html" title="The IndexBuffer manages the lifetime of a bgfx::IndexBufferHandle.">IndexBuffer</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">lColorCount</td><td>Number of line colors in the <a class="el" href="classvcl_1_1IndexBuffer.html" title="The IndexBuffer manages the lifetime of a bgfx::IndexBufferHandle.">IndexBuffer</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lineColors</td><td><a class="el" href="classvcl_1_1IndexBuffer.html" title="The IndexBuffer manages the lifetime of a bgfx::IndexBufferHandle.">IndexBuffer</a> containing per-line colors. Expected layout: an array of <code>uint</code> with 4 channels per color in ABGR order (A, B, G, R packed as a single 32-bit integer).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>The buffer must remain valid for the lifetime of this object. </dd></dl>
+
+</div>
+</div>
+<a id="a666479a0dd62b76dafcefb94c7cd5aee" name="a666479a0dd62b76dafcefb94c7cd5aee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a666479a0dd62b76dafcefb94c7cd5aee">&#9670;&#160;</a></span>setLineNormals() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Range R&gt; <br />
+requires Point3Concept&lt;std::ranges::range_value_t&lt;R&gt;&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">void</a> vcl::DrawableLines::setLineNormals </td>
+          <td>(</td>
+          <td class="paramtype">R &amp;&amp;&#160;</td>
+          <td class="paramname"><em>lineNormals</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets per-line normals and stores a local copy. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">R</td><td>Range type satisfying Point3Concept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lineNormals</td><td>Range of 3D points representing normals. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae09a27979ae84d1dc2b8408f935c22fd" name="ae09a27979ae84d1dc2b8408f935c22fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae09a27979ae84d1dc2b8408f935c22fd">&#9670;&#160;</a></span>setLineNormals() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">void</a> vcl::Lines::setLineNormals </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>lNorCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1VertexBuffer.html">VertexBuffer</a> &amp;&#160;</td>
+          <td class="paramname"><em>lineNormals</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets per-line normals by referencing an existing <a class="el" href="classvcl_1_1VertexBuffer.html" title="The VertexBuffer manages the lifetime of a bgfx::VertexBufferHandle.">VertexBuffer</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">lNorCount</td><td>Number of line normals in the <a class="el" href="classvcl_1_1VertexBuffer.html" title="The VertexBuffer manages the lifetime of a bgfx::VertexBufferHandle.">VertexBuffer</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lineNormals</td><td><a class="el" href="classvcl_1_1VertexBuffer.html" title="The VertexBuffer manages the lifetime of a bgfx::VertexBufferHandle.">VertexBuffer</a> containing per-line normals. Expected layout: an array of <code>float</code> with 3 components per line (x, y, z), stored as consecutive floats: [x0, y0, z0, x1, y1, z1, ..., xn-1, yn-1, zn-1].</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>The buffer must remain valid for the lifetime of this object. </dd></dl>
+
+</div>
+</div>
+<a id="a604e7439a2dc1dcc66edb66f1255f96c" name="a604e7439a2dc1dcc66edb66f1255f96c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a604e7439a2dc1dcc66edb66f1255f96c">&#9670;&#160;</a></span>setVertexColors() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Range R&gt; <br />
+requires ColorConcept&lt;std::ranges::range_value_t&lt;R&gt;&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">void</a> vcl::DrawableLines::setVertexColors </td>
+          <td>(</td>
+          <td class="paramtype">R &amp;&amp;&#160;</td>
+          <td class="paramname"><em>vertColors</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets per-vertex colors and stores a local copy. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">R</td><td>Range type satisfying ColorConcept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertColors</td><td>Range of Colors. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aefc036d581a97de7aae87d1d62886923" name="aefc036d581a97de7aae87d1d62886923"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefc036d581a97de7aae87d1d62886923">&#9670;&#160;</a></span>setVertexColors() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">void</a> vcl::Lines::setVertexColors </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>vColsCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1VertexBuffer.html">VertexBuffer</a> &amp;&#160;</td>
+          <td class="paramname"><em>vertexColors</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets per-vertex colors by referencing an existing <a class="el" href="classvcl_1_1VertexBuffer.html" title="The VertexBuffer manages the lifetime of a bgfx::VertexBufferHandle.">VertexBuffer</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">vColsCount</td><td>Number of vertex colors in the <a class="el" href="classvcl_1_1VertexBuffer.html" title="The VertexBuffer manages the lifetime of a bgfx::VertexBufferHandle.">VertexBuffer</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vertexColors</td><td><a class="el" href="classvcl_1_1VertexBuffer.html" title="The VertexBuffer manages the lifetime of a bgfx::VertexBufferHandle.">VertexBuffer</a> containing per-vertex colors. Expected layout: an array of <code>uint</code> with 4 channels per color in ABGR order (A, B, G, R packed as a single 32-bit integer).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>The buffer must remain valid for the lifetime of this object. </dd></dl>
+
+</div>
+</div>
+<a id="a3957236b56a3d3497fd6490ce7044b48" name="a3957236b56a3d3497fd6490ce7044b48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3957236b56a3d3497fd6490ce7044b48">&#9670;&#160;</a></span>setVertexNormals() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Range R&gt; <br />
+requires Point3Concept&lt;std::ranges::range_value_t&lt;R&gt;&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">void</a> vcl::DrawableLines::setVertexNormals </td>
+          <td>(</td>
+          <td class="paramtype">R &amp;&amp;&#160;</td>
+          <td class="paramname"><em>vertNormals</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets per-vertex normals and stores a local copy. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">R</td><td>Range type satisfying Point3Concept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertNormals</td><td>Range of 3D points representing normals. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af2b7bb00844f948a4962da6fdfdd3e41" name="af2b7bb00844f948a4962da6fdfdd3e41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2b7bb00844f948a4962da6fdfdd3e41">&#9670;&#160;</a></span>setVertexNormals() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">void</a> vcl::Lines::setVertexNormals </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>vNorCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1VertexBuffer.html">VertexBuffer</a> &amp;&#160;</td>
+          <td class="paramname"><em>vertexNormals</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets vertex normals by referencing an existing <a class="el" href="classvcl_1_1VertexBuffer.html" title="The VertexBuffer manages the lifetime of a bgfx::VertexBufferHandle.">VertexBuffer</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">vNorCount</td><td>Number of vertex normals in the <a class="el" href="classvcl_1_1VertexBuffer.html" title="The VertexBuffer manages the lifetime of a bgfx::VertexBufferHandle.">VertexBuffer</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vertexNormals</td><td><a class="el" href="classvcl_1_1VertexBuffer.html" title="The VertexBuffer manages the lifetime of a bgfx::VertexBufferHandle.">VertexBuffer</a> containing vertex normals. Expected layout: an array of <code>float</code> with 3 components per vertex (x, y, z), stored as consecutive floats: [x0, y0, z0, x1, y1, z1, ..., xn-1, yn-1, zn-1].</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>The buffer must remain valid for the lifetime of this object. </dd></dl>
+
+</div>
+</div>
+<a id="aa8d245e558a784831d2f4648a925fcd3" name="aa8d245e558a784831d2f4648a925fcd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8d245e558a784831d2f4648a925fcd3">&#9670;&#160;</a></span>setVertices() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Range R&gt; <br />
+requires Point3Concept&lt;std::ranges::range_value_t&lt;R&gt;&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">void</a> vcl::Lines::setVertices </td>
+          <td>(</td>
+          <td class="paramtype">R &amp;&amp;&#160;</td>
+          <td class="paramname"><em>verts</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets line coordinates from a range of 3D points. </p>
+<p>If no indices are set, the interpretation depends on the topology:</p><ul>
+<li>For LINES topology, each pair of vertices defines one line segment.</li>
+<li>For LINE_STRIP topology, each vertex after the first forms a line segment with the previous vertex.</li>
+</ul>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">R</td><td>Range whose value type satisfies Point3Concept (must provide x(), y(), z()). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">verts</td><td>Range of 3D points.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This creates an owned buffer copy. The original range is not referenced. </dd></dl>
+
+</div>
+</div>
+<a id="ae26cccf5a79af0c148526a4d1c8dab41" name="ae26cccf5a79af0c148526a4d1c8dab41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae26cccf5a79af0c148526a4d1c8dab41">&#9670;&#160;</a></span>setVertices() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Range R&gt; <br />
+requires Point3Concept&lt;std::ranges::range_value_t&lt;R&gt;&gt;</div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">void</a> vcl::DrawableLines::setVertices </td>
+          <td>(</td>
+          <td class="paramtype">R &amp;&amp;&#160;</td>
+          <td class="paramname"><em>verts</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets line coordinates from a range of 3D points and stores a local copy. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">R</td><td>Range type satisfying Point3Concept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">verts</td><td>Range of 3D points. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1cce64eef4dc34de7b920c41d48aa156" name="a1cce64eef4dc34de7b920c41d48aa156"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cce64eef4dc34de7b920c41d48aa156">&#9670;&#160;</a></span>setVertices() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">void</a> vcl::Lines::setVertices </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>vertexCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1VertexBuffer.html">VertexBuffer</a> &amp;&#160;</td>
+          <td class="paramname"><em>verts</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets vertex positions by referencing an existing <a class="el" href="classvcl_1_1VertexBuffer.html" title="The VertexBuffer manages the lifetime of a bgfx::VertexBufferHandle.">VertexBuffer</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">vertexCount</td><td>Number of vertices in the <a class="el" href="classvcl_1_1VertexBuffer.html" title="The VertexBuffer manages the lifetime of a bgfx::VertexBufferHandle.">VertexBuffer</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">verts</td><td><a class="el" href="classvcl_1_1VertexBuffer.html" title="The VertexBuffer manages the lifetime of a bgfx::VertexBufferHandle.">VertexBuffer</a> containing vertex positions. Expected layout: an array of <code>float</code> with 3 components per vertex (x, y, z), stored as consecutive floats: [x0, y0, z0, x1, y1, z1, ..., xn-1, yn-1, zn-1].</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>The buffer must remain valid for the lifetime of this object. </dd></dl>
 
 </div>
 </div>

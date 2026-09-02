@@ -119,14 +119,15 @@ Collaboration diagram for Mesh Algorithms:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__algorithms__mesh.png" border="0" usemap="#agroup____algorithms____mesh" alt=""/></div>
 <map name="agroup____algorithms____mesh" id="agroup____algorithms____mesh">
-<area shape="rect" title="List of Mesh algorithms." alt="" coords="5,185,137,210"/>
+<area shape="rect" title="List of Mesh algorithms." alt="" coords="5,206,137,231"/>
 <area shape="rect" href="group__clean.html" title="List of Mesh Cleaning and repairing algorithms." alt="" coords="205,5,379,45"/>
 <area shape="rect" href="group__create.html" title="List of Mesh Creation algorithms." alt="" coords="197,70,387,95"/>
-<area shape="rect" href="group__import__export.html" title="List of Import/Export Mesh algorithms." alt="" coords="217,120,367,160"/>
-<area shape="rect" href="group__intersection__mesh.html" title="List of mesh intersection algorithms." alt="" coords="185,185,399,210"/>
-<area shape="rect" href="group__mesh__stat.html" title="TODO." alt="" coords="197,234,387,259"/>
-<area shape="rect" href="group__point__sampling.html" title="List of functions that compute point samplings." alt="" coords="195,283,389,309"/>
-<area shape="rect" href="group__update.html" title="List of Mesh Update algorithms." alt="" coords="201,333,383,358"/>
+<area shape="rect" href="group__delete.html" title="List of Algorithms that delete elements from a mesh based on a given filter condition." alt="" coords="216,119,368,145"/>
+<area shape="rect" href="group__import__export.html" title="List of Import/Export Mesh algorithms." alt="" coords="217,169,367,209"/>
+<area shape="rect" href="group__intersection__mesh.html" title="List of mesh intersection algorithms." alt="" coords="185,234,399,259"/>
+<area shape="rect" href="group__mesh__stat.html" title="TODO." alt="" coords="197,283,387,309"/>
+<area shape="rect" href="group__point__sampling.html" title="List of functions that compute point samplings." alt="" coords="195,333,389,358"/>
+<area shape="rect" href="group__update.html" title="List of Mesh Update algorithms." alt="" coords="201,382,383,407"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -137,6 +138,9 @@ Modules</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group__create" id="r_group__create"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__create.html">Mesh Creation Algorithms</a></td></tr>
 <tr class="memdesc:group__create"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of Mesh Creation algorithms. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__delete" id="r_group__delete"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__delete.html">Deleting Algorithms</a></td></tr>
+<tr class="memdesc:group__delete"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of Algorithms that delete elements from a mesh based on a given filter condition. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:group__import__export" id="r_group__import__export"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__import__export.html">Import/Export Mesh Algorithms</a></td></tr>
 <tr class="memdesc:group__import__export"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of Import/Export Mesh algorithms. <br /></td></tr>
@@ -161,11 +165,11 @@ requires Point3Concept&lt;std::ranges::range_value_t&lt;R&gt;&gt;</td></tr>
 <tr class="memitem:ga6799a920686c8d65f0d9db3caa515d07"><td class="memTemplItemLeft" align="right" valign="top">MeshType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__algorithms__mesh.html#ga6799a920686c8d65f0d9db3caa515d07">vcl::convexHull</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> R &amp;points, <a class="el" href="classvcl_1_1Segment.html">LogType</a> &amp;log)</td></tr>
 <tr class="memdesc:ga6799a920686c8d65f0d9db3caa515d07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the convex hull of a set of points.  <br /></td></tr>
 <tr class="separator:ga6799a920686c8d65f0d9db3caa515d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0b5d8e9835e6a64b5c6e31f40fb9bb63" id="r_ga0b5d8e9835e6a64b5c6e31f40fb9bb63"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType, Range R, LoggerConcept LogType = NullLogger&gt; <br />
+<tr class="memitem:ga71fe390e7705f603077083f93e199ef6" id="r_ga71fe390e7705f603077083f93e199ef6"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType, Range R, LoggerConcept LogType = NullLogger&gt; <br />
 requires Point3Concept&lt;std::ranges::range_value_t&lt;R&gt;&gt;</td></tr>
-<tr class="memitem:ga0b5d8e9835e6a64b5c6e31f40fb9bb63"><td class="memTemplItemLeft" align="right" valign="top">MeshType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__algorithms__mesh.html#ga0b5d8e9835e6a64b5c6e31f40fb9bb63">vcl::convexHull</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> R &amp;points, std::optional&lt; uint &gt; <a class="el" href="classvcl_1_1Segment.html">seed</a>=std::nullopt, <a class="el" href="classvcl_1_1Segment.html">LogType</a> &amp;log=<a class="el" href="group__base.html#ga3377e3c875ec245e90ac5a395105ce99">nullLogger</a>)</td></tr>
-<tr class="memdesc:ga0b5d8e9835e6a64b5c6e31f40fb9bb63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the convex hull of a set of points.  <br /></td></tr>
-<tr class="separator:ga0b5d8e9835e6a64b5c6e31f40fb9bb63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga71fe390e7705f603077083f93e199ef6"><td class="memTemplItemLeft" align="right" valign="top">MeshType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__algorithms__mesh.html#ga71fe390e7705f603077083f93e199ef6">vcl::convexHull</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> R &amp;points, <a class="el" href="group__base.html#gac23c0056d07d547cca0552f0df438b2e">RandomConfig</a> <a class="el" href="classvcl_1_1Segment.html">config</a>=std::monostate(), <a class="el" href="classvcl_1_1Segment.html">LogType</a> &amp;log=<a class="el" href="group__base.html#ga3377e3c875ec245e90ac5a395105ce99">nullLogger</a>)</td></tr>
+<tr class="memdesc:ga71fe390e7705f603077083f93e199ef6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the convex hull of a set of points.  <br /></td></tr>
+<tr class="separator:ga71fe390e7705f603077083f93e199ef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga69869e18ffd99dbfe36823b9d4a5b1f4" id="r_ga69869e18ffd99dbfe36823b9d4a5b1f4"><td class="memTemplParams" colspan="2">template&lt;MeshConcept MeshType&gt; </td></tr>
 <tr class="memitem:ga69869e18ffd99dbfe36823b9d4a5b1f4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">constexpr</a> std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__algorithms__mesh.html#ga69869e18ffd99dbfe36823b9d4a5b1f4">vcl::meshTypeName</a> ()</td></tr>
 <tr class="memdesc:ga69869e18ffd99dbfe36823b9d4a5b1f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of the mesh type as a string.  <br /></td></tr>
@@ -223,8 +227,8 @@ requires Point3Concept&lt;std::ranges::range_value_t&lt;R&gt;&gt;</div>
 
 </div>
 </div>
-<a id="ga0b5d8e9835e6a64b5c6e31f40fb9bb63" name="ga0b5d8e9835e6a64b5c6e31f40fb9bb63"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0b5d8e9835e6a64b5c6e31f40fb9bb63">&#9670;&#160;</a></span>convexHull() <span class="overload">[2/2]</span></h2>
+<a id="ga71fe390e7705f603077083f93e199ef6" name="ga71fe390e7705f603077083f93e199ef6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga71fe390e7705f603077083f93e199ef6">&#9670;&#160;</a></span>convexHull() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -241,8 +245,8 @@ requires Point3Concept&lt;std::ranges::range_value_t&lt;R&gt;&gt;</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::optional&lt; uint &gt;&#160;</td>
-          <td class="paramname"><em>seed</em> = <code>std::nullopt</code>, </td>
+          <td class="paramtype"><a class="el" href="group__base.html#gac23c0056d07d547cca0552f0df438b2e">RandomConfig</a>&#160;</td>
+          <td class="paramname"><em>config</em> = <code>std::monostate()</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -268,7 +272,7 @@ requires Point3Concept&lt;std::ranges::range_value_t&lt;R&gt;&gt;</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">points</td><td>The set of points. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">seed</td><td>optional value of seed, to get deterministic results. If not provided, a random seed is used. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">config</td><td>RandomConfig that determines how to provide the random number generator. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">log</td><td>The logger. </td></tr>
   </table>
   </dd>

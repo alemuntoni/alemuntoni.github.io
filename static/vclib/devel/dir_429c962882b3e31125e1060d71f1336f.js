@@ -9,5 +9,6 @@ var dir_429c962882b3e31125e1060d71f1336f =
     [ "load_mesh.h", "load__mesh_8h_source.html", null ],
     [ "load_meshes.h", "load__meshes_8h_source.html", null ],
     [ "save_mesh.h", "save__mesh_8h_source.html", null ],
-    [ "settings.h", "settings_8h_source.html", null ]
+    [ "save_meshes.h", "save__meshes_8h_source.html", null ],
+    [ "settings.h", "core_2include_2vclib_2io_2mesh_2settings_8h_source.html", null ]
 ];

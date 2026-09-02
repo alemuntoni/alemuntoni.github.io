@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['parenttype_0',['parenttype',['../classvcl_1_1qt_1_1WidgetManager.html#ab7705ef6cad9f63befc1fedc722966b4',1,'vcl::qt::WidgetManager::ParentType'],['../classvcl_1_1glfw_1_1WindowManager.html#ac8ec3c07cbadb06e909d02846c9fea48',1,'vcl::glfw::WindowManager::ParentType']]],
+  ['parenttype_0',['parenttype',['../classvcl_1_1qt_1_1WidgetManager.html#ab7705ef6cad9f63befc1fedc722966b4',1,'vcl::qt::WidgetManager::ParentType'],['../classvcl_1_1HeadlessManager.html#ae7581fda8ab3b932fb6ead1ab2a3bf09',1,'vcl::HeadlessManager::ParentType'],['../classvcl_1_1glfw_1_1WindowManager.html#ac8ec3c07cbadb06e909d02846c9fea48',1,'vcl::glfw::WindowManager::ParentType']]],
   ['point2_1',['Point2',['../group__space__core.html#ga6d15a5d1bc87330938ae9b8a55373334',1,'vcl']]],
   ['point2d_2',['Point2d',['../group__space__core.html#ga4b02e85ff4d51fe7d689f8dd0e87ecd5',1,'vcl']]],
   ['point2f_3',['Point2f',['../group__space__core.html#gac9560ad588438ce539ec3fdc5658746a',1,'vcl']]],
@@ -16,7 +16,7 @@ var searchData=
   ['pointcloud_13',['PointCloud',['../group__meshes.html#gab2939073dbb778a3a2f5d9f93e3fb146',1,'vcl']]],
   ['pointcloudf_14',['PointCloudf',['../group__meshes.html#gae1ddd0d2b0a8168f7a6134ed53cd1f3c',1,'vcl']]],
   ['pointer_15',['pointer',['../classvcl_1_1Vector.html#a458e2517acfb493003f6fcfd151ac7a2',1,'vcl::Vector::Pointer'],['../classvcl_1_1Array.html#aac408b61a9923ef85dce7a05170c5b7e',1,'vcl::Array::Pointer']]],
-  ['pointtype_16',['pointtype',['../classvcl_1_1Segment.html#af7c90b5d83194dd331a9b33cdeb314e5',1,'vcl::Segment::PointType'],['../classvcl_1_1Ray.html#a8b9fee39e0e4d95fd4afed2b13f5486f',1,'vcl::Ray::PointType'],['../classvcl_1_1Polygon.html#a848028ffd06ddd245c1b83e07909e490',1,'vcl::Polygon::PointType'],['../classvcl_1_1Line.html#a7c05dd4bad05ea2d1c7371a5ff8c8024',1,'vcl::Line::PointType'],['../classvcl_1_1Box.html#a15e37ebb03903616f0d1d69a344d0b7e',1,'vcl::Box::PointType']]],
+  ['pointtype_16',['pointtype',['../classvcl_1_1Segment.html#af7c90b5d83194dd331a9b33cdeb314e5',1,'vcl::Segment::PointType'],['../classvcl_1_1Ray.html#a8b9fee39e0e4d95fd4afed2b13f5486f',1,'vcl::Ray::PointType'],['../classvcl_1_1Polygon.html#a848028ffd06ddd245c1b83e07909e490',1,'vcl::Polygon::PointType'],['../classvcl_1_1Line.html#a7c05dd4bad05ea2d1c7371a5ff8c8024',1,'vcl::Line::PointType'],['../classvcl_1_1Box.html#a15e37ebb03903616f0d1d69a344d0b7e',1,'vcl::Box::PointType'],['../classvcl_1_1PointSampler.html#ab0638869d8b87fcb8f5346cde7c2e7ac',1,'vcl::PointSampler::PointType']]],
   ['polyedgemesh_17',['PolyEdgeMesh',['../group__meshes.html#ga391ce21ca8e060041785a9e3b06f8442',1,'vcl']]],
   ['polyedgemeshf_18',['PolyEdgeMeshf',['../group__meshes.html#ga3cb67cbe83f20d828d47330340506db4',1,'vcl']]],
   ['polyedgemeshindexed_19',['PolyEdgeMeshIndexed',['../group__meshes.html#gab8966ff50a2060bdf6a9a4c6e5ba660b',1,'vcl']]],

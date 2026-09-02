@@ -238,6 +238,10 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">uint</a> COMP_ID, type
 <tr class="memitem:gacf666dac86845a2be5e6ce935c5c67d7"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">using</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vcl::comp::ComponentOfType</b> = <a class="el" href="group__base.html#ga38c527736a2d0a3d7af0493e228227e3">FirstTypeT</a>&lt; <a class="el" href="classvcl_1_1Segment.html">typename</a> detail::ComponentOfTypePred&lt; <a class="el" href="classvcl_1_1Segment.html">COMP_ID</a>, Components... &gt;::type &gt;</td></tr>
 <tr class="memdesc:gacf666dac86845a2be5e6ce935c5c67d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the ID of a Component and a list of Component types (or a <a class="el" href="structvcl_1_1TypeWrapper.html" title="A simple structure that wraps a list of variadic templates, without instantiating anything....">TypeWrapper</a>), this alias sets its type to the corresponding Component type found in the list. <br /></td></tr>
 <tr class="separator:gacf666dac86845a2be5e6ce935c5c67d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0430f4135d06fef7f529a8aa326088aa" id="r_ga0430f4135d06fef7f529a8aa326088aa"><td class="memTemplParams" colspan="2">template&lt;Numeric T&gt; </td></tr>
+<tr class="memitem:ga0430f4135d06fef7f529a8aa326088aa"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">using</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__base.html#ga0430f4135d06fef7f529a8aa326088aa">vcl::DistConfig</a> = std::variant&lt; std::monostate, std::pair&lt; T, T &gt;, std::function&lt; T(std::mt19937 &amp;)&gt; &gt;</td></tr>
+<tr class="memdesc:ga0430f4135d06fef7f529a8aa326088aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration type for random value distribution behavior.  <br /></td></tr>
+<tr class="separator:ga0430f4135d06fef7f529a8aa326088aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga38c527736a2d0a3d7af0493e228227e3" id="r_ga38c527736a2d0a3d7af0493e228227e3"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:ga38c527736a2d0a3d7af0493e228227e3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">using</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__base.html#ga38c527736a2d0a3d7af0493e228227e3">vcl::FirstTypeT</a> = <a class="el" href="classvcl_1_1Segment.html">typename</a> <a class="el" href="structvcl_1_1FirstType.html">FirstType</a>&lt; Args... &gt;::type</td></tr>
 <tr class="memdesc:ga38c527736a2d0a3d7af0493e228227e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias for the type of the first type in a pack of types.  <br /></td></tr>
@@ -250,6 +254,9 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">uint</a> COMP_ID, type
 <tr class="memitem:gaacc96304be3365c944d0239dd550f74e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">using</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__base.html#gaacc96304be3365c944d0239dd550f74e">vcl::MakeConstPointerT</a> = <a class="el" href="classvcl_1_1Segment.html">typename</a> <a class="el" href="structvcl_1_1MakeConstPointer.html">MakeConstPointer</a>&lt; T &gt;::type</td></tr>
 <tr class="memdesc:gaacc96304be3365c944d0239dd550f74e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility alias for the <a class="el" href="structvcl_1_1MakeConstPointer.html" title="Utility type that makes possible to treat const pointers in a templated class that can treat a both c...">MakeConstPointer</a> type.  <br /></td></tr>
 <tr class="separator:gaacc96304be3365c944d0239dd550f74e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac23c0056d07d547cca0552f0df438b2e" id="r_gac23c0056d07d547cca0552f0df438b2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__base.html#gac23c0056d07d547cca0552f0df438b2e">vcl::RandomConfig</a> = std::variant&lt; std::monostate, uint, std::reference_wrapper&lt; std::mt19937 &gt; &gt;</td></tr>
+<tr class="memdesc:gac23c0056d07d547cca0552f0df438b2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration type for random number generation behavior.  <br /></td></tr>
+<tr class="separator:gac23c0056d07d547cca0552f0df438b2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gacfdd7af0f9712ffc6b96c5d27be41965" id="r_gacfdd7af0f9712ffc6b96c5d27be41965"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> T &gt; </td></tr>
 <tr class="memitem:gacfdd7af0f9712ffc6b96c5d27be41965"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">using</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__base.html#gacfdd7af0f9712ffc6b96c5d27be41965">vcl::RemoveConstFromPointer</a> = std::conditional_t&lt; std::is_pointer_v&lt; T &gt;, std::add_pointer_t&lt; std::remove_cv_t&lt; <a class="el" href="group__base.html#ga25fc582d09d14f037e742c66fd58dbeb">RemovePtr</a>&lt; T &gt; &gt; &gt;, T &gt;</td></tr>
 <tr class="memdesc:gacfdd7af0f9712ffc6b96c5d27be41965"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility alias to get a pointer type without the constness. e.g. If T is const int*, the resulting type is int* If the type is not a pointer, it is left as it was.  <br /></td></tr>
@@ -298,7 +305,7 @@ Enumerations</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:gae32401c3c5edbdeead1769b4d6160f87" id="r_gae32401c3c5edbdeead1769b4d6160f87"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> T &gt; </td></tr>
-<tr class="memitem:gae32401c3c5edbdeead1769b4d6160f87"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">auto</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__base.html#gae32401c3c5edbdeead1769b4d6160f87">vcl::addressOfObj</a> (T &amp;<a class="el" href="classvcl_1_1Segment.html">obj</a>)</td></tr>
+<tr class="memitem:gae32401c3c5edbdeead1769b4d6160f87"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">auto</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__base.html#gae32401c3c5edbdeead1769b4d6160f87">vcl::addressOfObj</a> (T &amp;obj)</td></tr>
 <tr class="memdesc:gae32401c3c5edbdeead1769b4d6160f87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility function that applies the unary operator '&amp;' to the argument only if it is not a pointer.  <br /></td></tr>
 <tr class="separator:gae32401c3c5edbdeead1769b4d6160f87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9ca8accd2e2b6881a3b2359e56396e77" id="r_ga9ca8accd2e2b6881a3b2359e56396e77"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> T &gt; </td></tr>
@@ -313,12 +320,20 @@ Functions</h2></td></tr>
 <tr class="memitem:gabe5c457181ae725f99627c541993a3a8"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">constexpr</a> T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__base.html#gabe5c457181ae725f99627c541993a3a8">vcl::asConst</a> (T *value) <a class="el" href="classvcl_1_1Segment.html">noexcept</a></td></tr>
 <tr class="memdesc:gabe5c457181ae725f99627c541993a3a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility function that converts a const pointer/reference to a non-const pointer/reference.    <br /></td></tr>
 <tr class="separator:gabe5c457181ae725f99627c541993a3a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac4578b986c126145b20d39f22571b835" id="r_gac4578b986c126145b20d39f22571b835"><td class="memTemplParams" colspan="2">template&lt;Numeric T, <a class="el" href="classvcl_1_1Segment.html">typename</a> <a class="el" href="classvcl_1_1Segment.html">Func</a> &gt; </td></tr>
+<tr class="memitem:gac4578b986c126145b20d39f22571b835"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">decltype</a>(<a class="el" href="classvcl_1_1Segment.html">auto</a>)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__base.html#gac4578b986c126145b20d39f22571b835">vcl::callWithDistribution</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="group__base.html#ga0430f4135d06fef7f529a8aa326088aa">DistConfig</a>&lt; T &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">distConf</a>, <a class="el" href="classvcl_1_1Segment.html">Func</a> &amp;&amp;<a class="el" href="classvcl_1_1Segment.html">func</a>)</td></tr>
+<tr class="memdesc:gac4578b986c126145b20d39f22571b835"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls a function with a random number generator and a distribution based on the provided DistConfig.  <br /></td></tr>
+<tr class="separator:gac4578b986c126145b20d39f22571b835"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabd80cd7bd7cacfd7b14c01ff6f796d9f" id="r_gabd80cd7bd7cacfd7b14c01ff6f796d9f"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> <a class="el" href="classvcl_1_1Segment.html">Func</a> &gt; </td></tr>
+<tr class="memitem:gabd80cd7bd7cacfd7b14c01ff6f796d9f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">decltype</a>(<a class="el" href="classvcl_1_1Segment.html">auto</a>)&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__base.html#gabd80cd7bd7cacfd7b14c01ff6f796d9f">vcl::callWithRandomGenerator</a> (<a class="el" href="group__base.html#gac23c0056d07d547cca0552f0df438b2e">RandomConfig</a> <a class="el" href="classvcl_1_1Segment.html">config</a>, <a class="el" href="classvcl_1_1Segment.html">Func</a> &amp;&amp;<a class="el" href="classvcl_1_1Segment.html">func</a>)</td></tr>
+<tr class="memdesc:gabd80cd7bd7cacfd7b14c01ff6f796d9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls a function with a random number generator based on the provided RandomConfig.  <br /></td></tr>
+<tr class="separator:gabd80cd7bd7cacfd7b14c01ff6f796d9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga86d50e779d2b4fd59e31de5a48e6d112" id="r_ga86d50e779d2b4fd59e31de5a48e6d112"><td class="memTemplParams" colspan="2">template&lt;uint COMP_ID&gt; </td></tr>
 <tr class="memitem:ga86d50e779d2b4fd59e31de5a48e6d112"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">constexpr</a> <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">char</a> *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__base.html#ga86d50e779d2b4fd59e31de5a48e6d112">vcl::componentEnumString</a> ()</td></tr>
 <tr class="memdesc:ga86d50e779d2b4fd59e31de5a48e6d112"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the string associated to the COMP_ID value.  <br /></td></tr>
 <tr class="separator:ga86d50e779d2b4fd59e31de5a48e6d112"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga769dac8f4b92030d30690a78b7fc2d79" id="r_ga769dac8f4b92030d30690a78b7fc2d79"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> T &gt; </td></tr>
-<tr class="memitem:ga769dac8f4b92030d30690a78b7fc2d79"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">auto</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__base.html#ga769dac8f4b92030d30690a78b7fc2d79">vcl::dereferencePtr</a> (T &amp;&amp;<a class="el" href="classvcl_1_1Segment.html">obj</a>)</td></tr>
+<tr class="memitem:ga769dac8f4b92030d30690a78b7fc2d79"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">auto</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__base.html#ga769dac8f4b92030d30690a78b7fc2d79">vcl::dereferencePtr</a> (T &amp;&amp;obj)</td></tr>
 <tr class="memdesc:ga769dac8f4b92030d30690a78b7fc2d79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility function that applies the unary operator '*' to the argument only if the object is a pointer, and returns a reference to the object itself.  <br /></td></tr>
 <tr class="separator:ga769dac8f4b92030d30690a78b7fc2d79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0068c984cb7a600004242ea341b506eb" id="r_ga0068c984cb7a600004242ea341b506eb"><td class="memTemplParams" colspan="2">template&lt;uint ELEM_ID&gt; </td></tr>
@@ -354,6 +369,18 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> T , <a cl
 <tr class="memitem:ga7da4c4b0342d3a5f906db63db504bea7"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__base.html#ga7da4c4b0342d3a5f906db63db504bea7">vcl::isDegenerate</a> (Scalar <a class="el" href="classvcl_1_1Segment.html">number</a>)</td></tr>
 <tr class="memdesc:ga7da4c4b0342d3a5f906db63db504bea7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a floating point number is degenerate.  <br /></td></tr>
 <tr class="separator:ga7da4c4b0342d3a5f906db63db504bea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7887ade5c3e7243a291b8898fce1f27d" id="r_ga7887ade5c3e7243a291b8898fce1f27d"><td class="memTemplParams" colspan="2">template&lt;std::size_t N, <a class="el" href="classvcl_1_1Segment.html">typename</a> T &gt; </td></tr>
+<tr class="memitem:ga7887ade5c3e7243a291b8898fce1f27d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">constexpr</a> T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__base.html#ga7887ade5c3e7243a291b8898fce1f27d">vcl::linearizeIndex</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> std::array&lt; T, N &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">sizes</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> std::array&lt; T, N &gt; &amp;indices)</td></tr>
+<tr class="memdesc:ga7887ade5c3e7243a291b8898fce1f27d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linearizes an N-dimensional index into a flat 1D index using row-major order.  <br /></td></tr>
+<tr class="separator:ga7887ade5c3e7243a291b8898fce1f27d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga928d6a543fe7f2aab32eb3e74df750cd" id="r_ga928d6a543fe7f2aab32eb3e74df750cd"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> T &gt; </td></tr>
+<tr class="memitem:ga928d6a543fe7f2aab32eb3e74df750cd"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">constexpr</a> T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__base.html#ga928d6a543fe7f2aab32eb3e74df750cd">vcl::linearizeIndex</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> T *<a class="el" href="classvcl_1_1Segment.html">sizes</a>, <a class="el" href="classvcl_1_1Segment.html">const</a> T *indices, std::size_t N)</td></tr>
+<tr class="memdesc:ga928d6a543fe7f2aab32eb3e74df750cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linearizes an N-dimensional index into a flat 1D index using row-major order.  <br /></td></tr>
+<tr class="separator:ga928d6a543fe7f2aab32eb3e74df750cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7dbef591ffe6c23d54874a56df9fb788" id="r_ga7dbef591ffe6c23d54874a56df9fb788"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="classvcl_1_1Segment.html">auto</a> Size, auto... Sizes, typename... Ts&gt; </td></tr>
+<tr class="memitem:ga7dbef591ffe6c23d54874a56df9fb788"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">constexpr</a> <a class="el" href="classvcl_1_1Segment.html">auto</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__base.html#ga7dbef591ffe6c23d54874a56df9fb788">vcl::linearizeIndex</a> (Ts... indices)</td></tr>
+<tr class="memdesc:ga7dbef591ffe6c23d54874a56df9fb788"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linearizes an N-dimensional index into a flat 1D index using row-major order.  <br /></td></tr>
+<tr class="separator:ga7dbef591ffe6c23d54874a56df9fb788"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa6613e39304926dee856b8b9770b3be5" id="r_gaa6613e39304926dee856b8b9770b3be5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__base.html#gaa6613e39304926dee856b8b9770b3be5">vcl::lnOfFactorial</a> (<a class="el" href="classvcl_1_1Segment.html">int</a> <a class="el" href="classvcl_1_1Segment.html">n</a>)</td></tr>
 <tr class="memdesc:gaa6613e39304926dee856b8b9770b3be5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes and caches the result of the natural logarithm of n!  <br /></td></tr>
 <tr class="separator:gaa6613e39304926dee856b8b9770b3be5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -378,10 +405,13 @@ requires (sizeof...(<a class="el" href="classvcl_1_1Segment.html">tail</a>) &gt;
 <tr class="memitem:ga6636a67e3d567f5d2306024beb0b38e2" id="r_ga6636a67e3d567f5d2306024beb0b38e2"><td class="memItemLeft" align="right" valign="top">std::mt19937&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__base.html#ga6636a67e3d567f5d2306024beb0b38e2">vcl::randomGenerator</a> (std::optional&lt; uint &gt; <a class="el" href="classvcl_1_1Segment.html">seed</a>=std::nullopt)</td></tr>
 <tr class="memdesc:ga6636a67e3d567f5d2306024beb0b38e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a random number generator with an optional seed.  <br /></td></tr>
 <tr class="separator:ga6636a67e3d567f5d2306024beb0b38e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9397cf00e2fe170e786a187514989916" id="r_ga9397cf00e2fe170e786a187514989916"><td class="memTemplParams" colspan="2">template&lt;Range R&gt; </td></tr>
-<tr class="memitem:ga9397cf00e2fe170e786a187514989916"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__base.html#ga9397cf00e2fe170e786a187514989916">vcl::shuffle</a> (R &amp;&amp;<a class="el" href="classvcl_1_1Segment.html">range</a>, std::optional&lt; uint &gt; <a class="el" href="classvcl_1_1Segment.html">seed</a>=std::nullopt)</td></tr>
-<tr class="memdesc:ga9397cf00e2fe170e786a187514989916"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shuffle the elements of a range.  <br /></td></tr>
-<tr class="separator:ga9397cf00e2fe170e786a187514989916"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga226cd551714f0bf618e75a9d9f9675cc" id="r_ga226cd551714f0bf618e75a9d9f9675cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__base.html#ga226cd551714f0bf618e75a9d9f9675cc">vcl::roundUp</a> (<a class="el" href="classvcl_1_1Segment.html">int</a> <a class="el" href="classvcl_1_1Segment.html">numToRound</a>, <a class="el" href="classvcl_1_1Segment.html">int</a> <a class="el" href="classvcl_1_1Segment.html">multiple</a>)</td></tr>
+<tr class="memdesc:ga226cd551714f0bf618e75a9d9f9675cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rounds up an integer to the nearest multiple of another integer.  <br /></td></tr>
+<tr class="separator:ga226cd551714f0bf618e75a9d9f9675cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6272c9a8fd236ce5b0a6288ff5fa9010" id="r_ga6272c9a8fd236ce5b0a6288ff5fa9010"><td class="memTemplParams" colspan="2">template&lt;Range R&gt; </td></tr>
+<tr class="memitem:ga6272c9a8fd236ce5b0a6288ff5fa9010"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__base.html#ga6272c9a8fd236ce5b0a6288ff5fa9010">vcl::shuffle</a> (R &amp;&amp;<a class="el" href="classvcl_1_1Segment.html">range</a>, <a class="el" href="group__base.html#gac23c0056d07d547cca0552f0df438b2e">RandomConfig</a> <a class="el" href="classvcl_1_1Segment.html">config</a>=std::monostate())</td></tr>
+<tr class="memdesc:ga6272c9a8fd236ce5b0a6288ff5fa9010"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shuffle the elements of a range.  <br /></td></tr>
+<tr class="separator:ga6272c9a8fd236ce5b0a6288ff5fa9010"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaaef0e24c2e1f1179f14204b1a56c57d9" id="r_gaaef0e24c2e1f1179f14204b1a56c57d9"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> Scalar &gt; </td></tr>
 <tr class="memitem:gaaef0e24c2e1f1179f14204b1a56c57d9"><td class="memTemplItemLeft" align="right" valign="top">Scalar&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__base.html#gaaef0e24c2e1f1179f14204b1a56c57d9">vcl::toDeg</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> Scalar &amp;<a class="el" href="classvcl_1_1Segment.html">rad</a>)</td></tr>
 <tr class="memdesc:gaaef0e24c2e1f1179f14204b1a56c57d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an angle in radians to degrees.  <br /></td></tr>
@@ -423,6 +453,37 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> T , <a cl
 <p>This module does not depend on any other module of the library, and it is used by all the other modules.</p>
 <p>You can access to the module by including <code>#include &lt;<a class="el" href="base_8h_source.html">vclib/base.h</a>&gt;</code> </p>
 <h2 class="groupheader">Typedef Documentation</h2>
+<a id="ga0430f4135d06fef7f529a8aa326088aa" name="ga0430f4135d06fef7f529a8aa326088aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0430f4135d06fef7f529a8aa326088aa">&#9670;&#160;</a></span>DistConfig</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Numeric T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">using</a> <a class="el" href="group__base.html#ga0430f4135d06fef7f529a8aa326088aa">vcl::DistConfig</a> = <a class="el" href="classvcl_1_1Segment.html">typedef</a> std:: <a class="el" href="classvcl_1_1Segment.html">variant</a>&lt;std::monostate, std::pair&lt;T, T&gt;, std::function&lt;T(std::mt19937&amp;)&gt; &gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configuration type for random value distribution behavior. </p>
+<p>This templated variant abstracts the statistical distribution used to generate random numbers. It allows functions to seamlessly accept default uniform generation, simple min/max bounds, or fully custom distributions (like Gaussian or Poisson) without requiring multiple overloads.</p>
+<p>Depending on the passed argument, the behavior adapts as follows:</p><ul>
+<li><b>std::monostate</b> (Default): The function will use a standard uniform distribution (Typically <code>[0.0, 1.0)</code> for floating-point types, or full range for integers).</li>
+<li><b>std::pair&lt;T, T&gt;</b> (Bounds): The function will use a uniform distribution clamped between the provided minimum (<code>first</code>) and maximum (<code>second</code>) values.</li>
+<li><b>std::function&lt;T(std::mt19937&amp;)&gt;</b> (Custom): The function will evaluate the provided callable. This is ideal for injecting complex standard distributions (e.g., <code>std::normal_distribution</code>) by wrapping them in a simple lambda.</li>
+</ul>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The numeric type of the generated values (defaults to <code>double</code>).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Thanks to implicit conversions, you can pass a <code>std::pair</code> directly (e.g., <code>{10.0, 20.0}</code>) without explicitly constructing the <code>std::variant</code>. </dd></dl>
+
+</div>
+</div>
 <a id="ga38c527736a2d0a3d7af0493e228227e3" name="ga38c527736a2d0a3d7af0493e228227e3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga38c527736a2d0a3d7af0493e228227e3">&#9670;&#160;</a></span>FirstTypeT</h2>
 
@@ -440,7 +501,7 @@ template&lt;typename... Args&gt; </div>
 <p>Alias for the type of the first type in a pack of types. </p>
 <p>Usage: </p><div class="fragment"><div class="line"><span class="keyword">using </span><a class="code hl_class" href="classvcl_1_1Segment.html">ResType</a> = <a class="code hl_class" href="classvcl_1_1Segment.html">FirstTypeT&lt;int, float, double&gt;</a>;</div>
 <div class="line"><span class="keyword">static_assert</span>(std::is_same&lt;ResType, int&gt;::value, <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:41</div></div>
+<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:26</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -463,7 +524,7 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> derived ,
 <div class="fragment"><div class="line"><span class="keyword">using </span><a class="code hl_class" href="classvcl_1_1Segment.html">myCheck</a> = <a class="code hl_typedef" href="group__base.html#ga8a37fc3ccf3b54b062d37fe46900e112">vcl::IsDerivedFromTemplateSpecialization&lt;X, C&gt;::type</a>;</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordflow">if</span> <span class="keyword">constexpr</span> (myCheck::value) { ... }</div>
-<div class="ttc" id="agroup__base_html_ga8a37fc3ccf3b54b062d37fe46900e112"><div class="ttname"><a href="group__base.html#ga8a37fc3ccf3b54b062d37fe46900e112">vcl::IsDerivedFromTemplateSpecialization</a></div><div class="ttdeci">std::invoke_result&lt; detail::IsDerivedFromImplementation&lt; base &gt;, typename std::remove_cv&lt; derived &gt;::type * &gt;::type IsDerivedFromTemplateSpecialization</div><div class="ttdoc">Utility class that allows to check if given class 'Derived' is derived from a specialization of a tem...</div><div class="ttdef"><b>Definition</b> inheritance.h:69</div></div>
+<div class="ttc" id="agroup__base_html_ga8a37fc3ccf3b54b062d37fe46900e112"><div class="ttname"><a href="group__base.html#ga8a37fc3ccf3b54b062d37fe46900e112">vcl::IsDerivedFromTemplateSpecialization</a></div><div class="ttdeci">std::invoke_result&lt; detail::IsDerivedFromImplementation&lt; base &gt;, typename std::remove_cv&lt; derived &gt;::type * &gt;::type IsDerivedFromTemplateSpecialization</div><div class="ttdoc">Utility class that allows to check if given class 'Derived' is derived from a specialization of a tem...</div><div class="ttdef"><b>Definition</b> inheritance.h:54</div></div>
 </div><!-- fragment --><p>and will return true if X derives from any specialization of C.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -496,6 +557,30 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> T &gt; </
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="gac23c0056d07d547cca0552f0df438b2e" name="gac23c0056d07d547cca0552f0df438b2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac23c0056d07d547cca0552f0df438b2e">&#9670;&#160;</a></span>RandomConfig</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">using</a> <a class="el" href="group__base.html#gac23c0056d07d547cca0552f0df438b2e">vcl::RandomConfig</a> = <a class="el" href="classvcl_1_1Segment.html">typedef</a> std::variant&lt;std::monostate, uint, std::reference_wrapper&lt;std::mt19937&gt; &gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configuration type for random number generation behavior. </p>
+<p>This variant abstracts the source of randomness, providing maximum flexibility without the need to write multiple overloads for every function.</p>
+<p>All functions in the VCLib codebase that require random generation take an instance of this type as an optional parameter, defaulting to <code>std::monostate</code>.</p>
+<p>Depending on the passed argument, the behavior adapts as follows:</p><ul>
+<li><b>std::monostate</b> (Default): The function will use a purely random, persistent internal generator (typically a <code>thread_local</code> instance).</li>
+<li><b>uint</b> (Seed): The function will instantiate a temporary deterministic generator initialized with the provided seed for a single-use sequence.</li>
+<li><b>std::reference_wrapper&lt;std::mt19937&gt;</b>: The function will use a user-provided external generator, advancing its state. Thanks to implicit conversions, callers can simply pass the generator directly without wrapping it in <code>std::ref()</code>.</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>You do not need to construct the <code>std::variant</code> manually. The compiler will automatically deduce the correct state based on the argument provided at the call site. </dd></dl>
 
 </div>
 </div>
@@ -805,6 +890,127 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> T &gt; </
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The non-const pointer/reference.   </dd></dl>
+
+</div>
+</div>
+<a id="gac4578b986c126145b20d39f22571b835" name="gac4578b986c126145b20d39f22571b835"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac4578b986c126145b20d39f22571b835">&#9670;&#160;</a></span>callWithDistribution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;Numeric T, <a class="el" href="classvcl_1_1Segment.html">typename</a> <a class="el" href="classvcl_1_1Segment.html">Func</a> &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">decltype</a>(<a class="el" href="classvcl_1_1Segment.html">auto</a>) vcl::callWithDistribution </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="group__base.html#ga0430f4135d06fef7f529a8aa326088aa">DistConfig</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>distConf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">Func</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>func</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calls a function with a random number generator and a distribution based on the provided DistConfig. </p>
+<p>Depending on the type of DistConfig, the function will be called with:</p><ul>
+<li>A uniform distribution based on provided bounds.</li>
+<li>A custom distribution function provided by the user.</li>
+<li>A default uniform distribution if no config is provided.</li>
+</ul>
+<p>Example usage:</p>
+<div class="fragment"><div class="line"><span class="keywordtype">double</span> <a class="code hl_class" href="classvcl_1_1Segment.html">randomDouble</a>(<a class="code hl_class" href="classvcl_1_1Segment.html">DistConfig&lt;double&gt;</a> <a class="code hl_class" href="classvcl_1_1Segment.html">distConf</a>, <a class="code hl_typedef" href="group__base.html#gac23c0056d07d547cca0552f0df438b2e">RandomConfig</a> <a class="code hl_class" href="classvcl_1_1Segment.html">randConf</a>) {</div>
+<div class="line">  <span class="keywordflow">return</span> <a class="code hl_function" href="group__base.html#gac4578b986c126145b20d39f22571b835">callWithDistribution</a>(<a class="code hl_class" href="classvcl_1_1Segment.html">distConf</a>, [&amp;](<span class="keyword">auto</span>&amp;&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">distFunc</a>) {</div>
+<div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="group__base.html#gabd80cd7bd7cacfd7b14c01ff6f796d9f">callWithRandomGenerator</a>(<a class="code hl_class" href="classvcl_1_1Segment.html">randConf</a>, [&amp;](std::mt19937&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">gen</a>) {</div>
+<div class="line">      <span class="keywordflow">return</span> <a class="code hl_class" href="classvcl_1_1Segment.html">distFunc</a>(<a class="code hl_class" href="classvcl_1_1Segment.html">gen</a>);</div>
+<div class="line">    });</div>
+<div class="line">  });</div>
+<div class="line">}</div>
+<div class="ttc" id="agroup__base_html_gabd80cd7bd7cacfd7b14c01ff6f796d9f"><div class="ttname"><a href="group__base.html#gabd80cd7bd7cacfd7b14c01ff6f796d9f">vcl::callWithRandomGenerator</a></div><div class="ttdeci">decltype(auto) callWithRandomGenerator(RandomConfig config, Func &amp;&amp;func)</div><div class="ttdoc">Calls a function with a random number generator based on the provided RandomConfig.</div><div class="ttdef"><b>Definition</b> random.h:140</div></div>
+<div class="ttc" id="agroup__base_html_gac23c0056d07d547cca0552f0df438b2e"><div class="ttname"><a href="group__base.html#gac23c0056d07d547cca0552f0df438b2e">vcl::RandomConfig</a></div><div class="ttdeci">std::variant&lt; std::monostate, uint, std::reference_wrapper&lt; std::mt19937 &gt; &gt; RandomConfig</div><div class="ttdoc">Configuration type for random number generation behavior.</div><div class="ttdef"><b>Definition</b> random.h:49</div></div>
+<div class="ttc" id="agroup__base_html_gac4578b986c126145b20d39f22571b835"><div class="ttname"><a href="group__base.html#gac4578b986c126145b20d39f22571b835">vcl::callWithDistribution</a></div><div class="ttdeci">decltype(auto) callWithDistribution(const DistConfig&lt; T &gt; &amp;distConf, Func &amp;&amp;func)</div><div class="ttdoc">Calls a function with a random number generator and a distribution based on the provided DistConfig.</div><div class="ttdef"><b>Definition</b> random.h:194</div></div>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The numeric type of the generated values. </td></tr>
+    <tr><td class="paramname">Func</td><td>The type of the function to call. It should accept a std::mt19937&amp; as its first parameter. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">distConf</td><td>DistConfig that determines how to provide the random distribution. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>The function to call with the appropriate random distribution.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The result of calling func with the appropriate random distribution. </dd></dl>
+
+</div>
+</div>
+<a id="gabd80cd7bd7cacfd7b14c01ff6f796d9f" name="gabd80cd7bd7cacfd7b14c01ff6f796d9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabd80cd7bd7cacfd7b14c01ff6f796d9f">&#9670;&#160;</a></span>callWithRandomGenerator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> <a class="el" href="classvcl_1_1Segment.html">Func</a> &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">decltype</a>(<a class="el" href="classvcl_1_1Segment.html">auto</a>) vcl::callWithRandomGenerator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__base.html#gac23c0056d07d547cca0552f0df438b2e">RandomConfig</a>&#160;</td>
+          <td class="paramname"><em>config</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">Func</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>func</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calls a function with a random number generator based on the provided RandomConfig. </p>
+<p>Depending on the type of RandomConfig, the function will be called with:</p><ul>
+<li>A reference to a user-provided std::mt19937 generator.</li>
+<li>A temporary std::mt19937 generator seeded with the provided seed.</li>
+<li>A thread-local std::mt19937 generator if no config is provided.</li>
+</ul>
+<p>Example usage:</p>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> <a class="code hl_class" href="classvcl_1_1Segment.html">randomInt</a>(<a class="code hl_typedef" href="group__base.html#gac23c0056d07d547cca0552f0df438b2e">RandomConfig</a> <a class="code hl_class" href="classvcl_1_1Segment.html">config</a>) {</div>
+<div class="line">  <span class="keywordflow">return</span> <a class="code hl_function" href="group__base.html#gabd80cd7bd7cacfd7b14c01ff6f796d9f">callWithRandomGenerator</a>(<a class="code hl_class" href="classvcl_1_1Segment.html">config</a>, [](std::mt19937&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">gen</a>) {</div>
+<div class="line">    std::uniform_int_distribution&lt;int&gt; dist(1, 100);</div>
+<div class="line">    <span class="keywordflow">return</span> dist(<a class="code hl_class" href="classvcl_1_1Segment.html">gen</a>);</div>
+<div class="line">  });</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Func</td><td>The type of the function to call. It should accept a std::mt19937&amp; as its first parameter. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">config</td><td>RandomConfig that determines how to provide the random number generator. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>The function to call with the appropriate random number generator.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The result of calling func with the appropriate random number generator. </dd></dl>
 
 </div>
 </div>
@@ -1130,6 +1336,167 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> Scalar &g
 
 </div>
 </div>
+<a id="ga7887ade5c3e7243a291b8898fce1f27d" name="ga7887ade5c3e7243a291b8898fce1f27d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7887ade5c3e7243a291b8898fce1f27d">&#9670;&#160;</a></span>linearizeIndex() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;std::size_t N, <a class="el" href="classvcl_1_1Segment.html">typename</a> T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">constexpr</a> T vcl::linearizeIndex </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">const</a> std::array&lt; T, N &gt; &amp;&#160;</td>
+          <td class="paramname"><em>sizes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">const</a> std::array&lt; T, N &gt; &amp;&#160;</td>
+          <td class="paramname"><em>indices</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Linearizes an N-dimensional index into a flat 1D index using row-major order. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">N</td><td>The number of dimensions. </td></tr>
+    <tr><td class="paramname">T</td><td>The type of the sizes and indices (typically an unsigned integer type). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">sizes</td><td>An array containing the size of each dimension. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">indices</td><td>An array containing the N-dimensional index. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The linearized 1D index. </dd></dl>
+
+</div>
+</div>
+<a id="ga928d6a543fe7f2aab32eb3e74df750cd" name="ga928d6a543fe7f2aab32eb3e74df750cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga928d6a543fe7f2aab32eb3e74df750cd">&#9670;&#160;</a></span>linearizeIndex() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">constexpr</a> T vcl::linearizeIndex </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">const</a> T *&#160;</td>
+          <td class="paramname"><em>sizes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">const</a> T *&#160;</td>
+          <td class="paramname"><em>indices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>N</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Linearizes an N-dimensional index into a flat 1D index using row-major order. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of the sizes and indices. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">sizes</td><td>A pointer to the sizes array. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">indices</td><td>A pointer to the indices array. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">N</td><td>The number of dimensions. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The linearized 1D index. </dd></dl>
+
+</div>
+</div>
+<a id="ga7dbef591ffe6c23d54874a56df9fb788" name="ga7dbef591ffe6c23d54874a56df9fb788"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7dbef591ffe6c23d54874a56df9fb788">&#9670;&#160;</a></span>linearizeIndex() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="classvcl_1_1Segment.html">auto</a> Size, auto... Sizes, typename... Ts&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">constexpr</a> <a class="el" href="classvcl_1_1Segment.html">auto</a> vcl::linearizeIndex </td>
+          <td>(</td>
+          <td class="paramtype">Ts...&#160;</td>
+          <td class="paramname"><em>indices</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Linearizes an N-dimensional index into a flat 1D index using row-major order. </p>
+<p>This version uses variadic template arguments to allow passing sizes as compile-time constants.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Sizes</td><td>The sizes of each dimension. </td></tr>
+    <tr><td class="paramname">Ts</td><td>The types of the indices. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">indices</td><td>The N-dimensional indices to linearize. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The linearized 1D index. </dd></dl>
+
+</div>
+</div>
 <a id="gaa6613e39304926dee856b8b9770b3be5" name="gaa6613e39304926dee856b8b9770b3be5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaa6613e39304926dee856b8b9770b3be5">&#9670;&#160;</a></span>lnOfFactorial()</h2>
 
@@ -1213,7 +1580,7 @@ requires (sizeof...(<a class="el" href="classvcl_1_1Segment.html">tail</a>) &gt;
 <p>Given a list of parameters, this function returns the maximum between all of them.</p>
 <p>Example:</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> <a class="code hl_class" href="classvcl_1_1Segment.html">m</a> = <a class="code hl_function" href="group__base.html#ga45d99c06ee2cb1cd9434fd0e86a1a413">vcl::max</a>(1, 2, 3, 4, 5); <span class="comment">// m = 5</span></div>
-<div class="ttc" id="agroup__base_html_ga45d99c06ee2cb1cd9434fd0e86a1a413"><div class="ttname"><a href="group__base.html#ga45d99c06ee2cb1cd9434fd0e86a1a413">vcl::max</a></div><div class="ttdeci">constexpr auto max(const T &amp;p1, const T &amp;p2)</div><div class="ttdoc">Returns the maximum between the two parameters.</div><div class="ttdef"><b>Definition</b> min_max.h:81</div></div>
+<div class="ttc" id="agroup__base_html_ga45d99c06ee2cb1cd9434fd0e86a1a413"><div class="ttname"><a href="group__base.html#ga45d99c06ee2cb1cd9434fd0e86a1a413">vcl::max</a></div><div class="ttdeci">constexpr auto max(const T &amp;p1, const T &amp;p2)</div><div class="ttdoc">Returns the maximum between the two parameters.</div><div class="ttdef"><b>Definition</b> min_max.h:66</div></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">head0</td><td>The first parameter. </td></tr>
@@ -1321,7 +1688,7 @@ requires (sizeof...(<a class="el" href="classvcl_1_1Segment.html">tail</a>) &gt;
 <p>Given a list of parameters, this function returns the minimum between all of them.</p>
 <p>Example:</p>
 <div class="fragment"><div class="line"><span class="keyword">auto</span> <a class="code hl_class" href="classvcl_1_1Segment.html">m</a> = <a class="code hl_function" href="group__base.html#gae6c5f005182de34972bb2430132acb8f">vcl::min</a>(1, 2, 3, 4, 5); <span class="comment">// m = 1</span></div>
-<div class="ttc" id="agroup__base_html_gae6c5f005182de34972bb2430132acb8f"><div class="ttname"><a href="group__base.html#gae6c5f005182de34972bb2430132acb8f">vcl::min</a></div><div class="ttdeci">constexpr auto min(const T &amp;p1, const T &amp;p2)</div><div class="ttdoc">Returns the minimum between the two parameters.</div><div class="ttdef"><b>Definition</b> min_max.h:40</div></div>
+<div class="ttc" id="agroup__base_html_gae6c5f005182de34972bb2430132acb8f"><div class="ttname"><a href="group__base.html#gae6c5f005182de34972bb2430132acb8f">vcl::min</a></div><div class="ttdeci">constexpr auto min(const T &amp;p1, const T &amp;p2)</div><div class="ttdoc">Returns the minimum between the two parameters.</div><div class="ttdef"><b>Definition</b> min_max.h:25</div></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">head0</td><td>The first parameter. </td></tr>
@@ -1418,8 +1785,56 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> T &gt; </
 
 </div>
 </div>
-<a id="ga9397cf00e2fe170e786a187514989916" name="ga9397cf00e2fe170e786a187514989916"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9397cf00e2fe170e786a187514989916">&#9670;&#160;</a></span>shuffle()</h2>
+<a id="ga226cd551714f0bf618e75a9d9f9675cc" name="ga226cd551714f0bf618e75a9d9f9675cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga226cd551714f0bf618e75a9d9f9675cc">&#9670;&#160;</a></span>roundUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">int</a> vcl::roundUp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">int</a>&#160;</td>
+          <td class="paramname"><em>numToRound</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">int</a>&#160;</td>
+          <td class="paramname"><em>multiple</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rounds up an integer to the nearest multiple of another integer. </p>
+<p>This function takes an integer numToRound and rounds it up to the nearest multiple of the specified multiple. If numToRound is already a multiple of multiple, it is returned unchanged.</p>
+<dl class="section note"><dt>Note</dt><dd>this function works for both positive and negative integers, and it rounds towards positive.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">numToRound</td><td>the integer to round up </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">multiple</td><td>the multiple to which numToRound should be rounded up </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the smallest integer greater than or equal to numToRound that is a multiple of multiple. </dd></dl>
+
+</div>
+</div>
+<a id="ga6272c9a8fd236ce5b0a6288ff5fa9010" name="ga6272c9a8fd236ce5b0a6288ff5fa9010"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6272c9a8fd236ce5b0a6288ff5fa9010">&#9670;&#160;</a></span>shuffle()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1435,8 +1850,8 @@ template&lt;Range R&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::optional&lt; uint &gt;&#160;</td>
-          <td class="paramname"><em>seed</em> = <code>std::nullopt</code>&#160;</td>
+          <td class="paramtype"><a class="el" href="group__base.html#gac23c0056d07d547cca0552f0df438b2e">RandomConfig</a>&#160;</td>
+          <td class="paramname"><em>config</em> = <code>std::monostate()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1456,7 +1871,7 @@ template&lt;Range R&gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">range</td><td>Range to shuffle. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">seed</td><td>optional value of seed, to get deterministic results. If not provided, a random seed is used. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">config</td><td>RandomConfig that determines how to provide the random number generator. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1639,7 +2054,7 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> T , <a cl
 <p>The nullLogger object is an object of type <a class="el" href="classvcl_1_1NullLogger.html" title="The NullLogger class is used as default type in all the library functions that take as input a logger...">NullLogger</a> that is used as default argument in the functions that can take as input a logger. </p>
 <p>A typical function that could take a logger is defined as follows:</p>
 <div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, LoggerConcept LoggerType = NullLogger&gt;</div>
-<div class="line"><span class="keywordtype">void</span> <a class="code hl_class" href="classvcl_1_1Segment.html">foo</a>(T <a class="code hl_class" href="classvcl_1_1Segment.html">obj</a>, <a class="code hl_class" href="classvcl_1_1Segment.html">LoggerType</a> log = <a class="code hl_variable" href="group__base.html#ga3377e3c875ec245e90ac5a395105ce99">nullLogger</a>)</div>
+<div class="line"><span class="keywordtype">void</span> <a class="code hl_class" href="classvcl_1_1Segment.html">foo</a>(T obj, <a class="code hl_class" href="classvcl_1_1Segment.html">LoggerType</a> log = <a class="code hl_variable" href="group__base.html#ga3377e3c875ec245e90ac5a395105ce99">nullLogger</a>)</div>
 <div class="line">{</div>
 <div class="line">   <span class="comment">// code of the function...</span></div>
 <div class="line"> </div>
@@ -1647,7 +2062,7 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> T , <a cl
 <div class="line">   log.log(<span class="stringliteral">&quot;log!&quot;</span>);</div>
 <div class="line"> </div>
 <div class="line">}</div>
-<div class="ttc" id="agroup__base_html_ga3377e3c875ec245e90ac5a395105ce99"><div class="ttname"><a href="group__base.html#ga3377e3c875ec245e90ac5a395105ce99">vcl::nullLogger</a></div><div class="ttdeci">NullLogger nullLogger</div><div class="ttdoc">The nullLogger object is an object of type NullLogger that is used as default argument in the functio...</div><div class="ttdef"><b>Definition</b> null_logger.h:123</div></div>
+<div class="ttc" id="agroup__base_html_ga3377e3c875ec245e90ac5a395105ce99"><div class="ttname"><a href="group__base.html#ga3377e3c875ec245e90ac5a395105ce99">vcl::nullLogger</a></div><div class="ttdeci">NullLogger nullLogger</div><div class="ttdoc">The nullLogger object is an object of type NullLogger that is used as default argument in the functio...</div><div class="ttdef"><b>Definition</b> null_logger.h:93</div></div>
 </div><!-- fragment --><p>In this way, when the user does not give a logger argument, the default will be an object of <a class="el" href="classvcl_1_1NullLogger.html" title="The NullLogger class is used as default type in all the library functions that take as input a logger...">NullLogger</a>. </p>
 
 </div>

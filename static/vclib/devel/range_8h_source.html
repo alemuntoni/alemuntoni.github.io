@@ -113,60 +113,45 @@ $(document).ready(function(){initNavTree('range_8h_source.html',''); initResizab
   <div class="headertitle"><div class="title">range.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2026                                                    *</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> * All rights reserved.                                                      *</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> * This program is free software; you can redistribute it and/or modify      *</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> * it under the terms of the Mozilla Public License Version 2.0 as published *</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> * by the Mozilla Foundation; either version 2 of the License, or            *</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> * (at your option) any later version.                                       *</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> * This program is distributed in the hope that it will be useful,           *</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of            *</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the              *</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> * Mozilla Public License Version 2.0                                        *</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> * (https://www.mozilla.org/en-US/MPL/2.0/) for more details.                *</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> ****************************************************************************/</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_BASE_CONCEPTS_RANGE_H</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_BASE_CONCEPTS_RANGE_H</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// VCLib - Visual Computing Library</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Copyright (C) 2021-2026 Visual Computing Lab, ISTI - CNR.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// This Source Code Form is subject to the terms of the Mozilla Public License,</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// v. 2.0. If a copy of the MPL was not distributed with this file, You can</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// obtain one at https://mozilla.org/MPL/2.0/.</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#ifndef VCL_BASE_CONCEPTS_RANGE_H</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define VCL_BASE_CONCEPTS_RANGE_H</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;ranges&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span>vcl {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="conceptvcl_1_1Range.html">   24</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1Range.html">Range</a> = std::ranges::range&lt;T&gt;;</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;ranges&gt;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">namespace </span>vcl {</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="conceptvcl_1_1Range.html">   39</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1Range.html">Range</a> = std::ranges::range&lt;T&gt;;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="conceptvcl_1_1RandomAccessRange.html">   49</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1RandomAccessRange.html">RandomAccessRange</a> = std::ranges::random_access_range&lt;T&gt;;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="conceptvcl_1_1RangeOf.html">   76</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1RangeOf.html">RangeOf</a> = <a class="code hl_concept" href="conceptvcl_1_1Range.html">Range&lt;R&gt;</a> &amp;&amp; std::same_as&lt;std::ranges::range_value_t&lt;R&gt;, T&gt;;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="conceptvcl_1_1InputRange.html">   99</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1InputRange.html">InputRange</a> =</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <a class="code hl_concept" href="conceptvcl_1_1Range.html">Range&lt;R&gt;</a> &amp;&amp; std::convertible_to&lt;std::ranges::range_value_t&lt;R&gt;, T&gt;;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="conceptvcl_1_1OutputRange.html">  123</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1OutputRange.html">OutputRange</a> = <a class="code hl_concept" href="conceptvcl_1_1Range.html">Range&lt;R&gt;</a> &amp;&amp; std::ranges::output_range&lt;R, T&gt; &amp;&amp;</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                      std::same_as&lt;std::ranges::range_value_t&lt;R&gt;, T&gt;;</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>} <span class="comment">// namespace vcl</span></div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="preprocessor">#endif </span><span class="comment">// VCL_BASE_CONCEPTS_RANGE_H</span></div>
-<div class="ttc" id="aconceptvcl_1_1InputRange_html"><div class="ttname"><a href="conceptvcl_1_1InputRange.html">vcl::InputRange</a></div><div class="ttdoc">Utility concept that is evaluated true the Range R is an Input Range and has a value_type that is con...</div><div class="ttdef"><b>Definition</b> range.h:99</div></div>
-<div class="ttc" id="aconceptvcl_1_1OutputRange_html"><div class="ttname"><a href="conceptvcl_1_1OutputRange.html">vcl::OutputRange</a></div><div class="ttdoc">Utility concept that is evaluated true the Range R is an Output Range and has a value_type that is T.</div><div class="ttdef"><b>Definition</b> range.h:123</div></div>
-<div class="ttc" id="aconceptvcl_1_1RandomAccessRange_html"><div class="ttname"><a href="conceptvcl_1_1RandomAccessRange.html">vcl::RandomAccessRange</a></div><div class="ttdoc">Utility concept that is evaluated true if T is a Random Access Range.</div><div class="ttdef"><b>Definition</b> range.h:49</div></div>
-<div class="ttc" id="aconceptvcl_1_1RangeOf_html"><div class="ttname"><a href="conceptvcl_1_1RangeOf.html">vcl::RangeOf</a></div><div class="ttdoc">Utility concept that is evaluated true the Range R has a value_type that is exactly T.</div><div class="ttdef"><b>Definition</b> range.h:76</div></div>
-<div class="ttc" id="aconceptvcl_1_1Range_html"><div class="ttname"><a href="conceptvcl_1_1Range.html">vcl::Range</a></div><div class="ttdoc">Utility concept that is evaluated true if T is a range, e.g. if has a begin and an end.</div><div class="ttdef"><b>Definition</b> range.h:39</div></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="conceptvcl_1_1RandomAccessRange.html">   34</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1RandomAccessRange.html">RandomAccessRange</a> = std::ranges::random_access_range&lt;T&gt;;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="conceptvcl_1_1RangeOf.html">   61</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1RangeOf.html">RangeOf</a> = <a class="code hl_concept" href="conceptvcl_1_1Range.html">Range&lt;R&gt;</a> &amp;&amp; std::same_as&lt;std::ranges::range_value_t&lt;R&gt;, T&gt;;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="conceptvcl_1_1InputRange.html">   84</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1InputRange.html">InputRange</a> =</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <a class="code hl_concept" href="conceptvcl_1_1Range.html">Range&lt;R&gt;</a> &amp;&amp; std::convertible_to&lt;std::ranges::range_value_t&lt;R&gt;, T&gt;;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="keyword">template</span>&lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="conceptvcl_1_1OutputRange.html">  108</a></span><span class="keyword">concept </span><a class="code hl_concept" href="conceptvcl_1_1OutputRange.html">OutputRange</a> = <a class="code hl_concept" href="conceptvcl_1_1Range.html">Range&lt;R&gt;</a> &amp;&amp; std::ranges::output_range&lt;R, T&gt; &amp;&amp;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                      std::same_as&lt;std::ranges::range_value_t&lt;R&gt;, T&gt;;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>} <span class="comment">// namespace vcl</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="preprocessor">#endif </span><span class="comment">// VCL_BASE_CONCEPTS_RANGE_H</span></div>
+<div class="ttc" id="aconceptvcl_1_1InputRange_html"><div class="ttname"><a href="conceptvcl_1_1InputRange.html">vcl::InputRange</a></div><div class="ttdoc">Utility concept that is evaluated true the Range R is an Input Range and has a value_type that is con...</div><div class="ttdef"><b>Definition</b> range.h:84</div></div>
+<div class="ttc" id="aconceptvcl_1_1OutputRange_html"><div class="ttname"><a href="conceptvcl_1_1OutputRange.html">vcl::OutputRange</a></div><div class="ttdoc">Utility concept that is evaluated true the Range R is an Output Range and has a value_type that is T.</div><div class="ttdef"><b>Definition</b> range.h:108</div></div>
+<div class="ttc" id="aconceptvcl_1_1RandomAccessRange_html"><div class="ttname"><a href="conceptvcl_1_1RandomAccessRange.html">vcl::RandomAccessRange</a></div><div class="ttdoc">Utility concept that is evaluated true if T is a Random Access Range.</div><div class="ttdef"><b>Definition</b> range.h:34</div></div>
+<div class="ttc" id="aconceptvcl_1_1RangeOf_html"><div class="ttname"><a href="conceptvcl_1_1RangeOf.html">vcl::RangeOf</a></div><div class="ttdoc">Utility concept that is evaluated true the Range R has a value_type that is exactly T.</div><div class="ttdef"><b>Definition</b> range.h:61</div></div>
+<div class="ttc" id="aconceptvcl_1_1Range_html"><div class="ttname"><a href="conceptvcl_1_1Range.html">vcl::Range</a></div><div class="ttdoc">Utility concept that is evaluated true if T is a range, e.g. if has a begin and an end.</div><div class="ttdef"><b>Definition</b> range.h:24</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

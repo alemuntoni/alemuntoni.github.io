@@ -12,6 +12,8 @@ var classvcl_1_1Point =
     [ "epsilonEquals", "classvcl_1_1Point.html#af26fc03c0ab646ee152bcb7f9c9b6770", null ],
     [ "hash", "classvcl_1_1Point.html#ac4e586c3ccc3f8c973e1cffe0d3f0310", null ],
     [ "isDegenerate", "classvcl_1_1Point.html#adda73e2111f40693d9b464022afecd2d", null ],
+    [ "max", "classvcl_1_1Point.html#a99989502d90a0ddd95f09bf8f93825be", null ],
+    [ "min", "classvcl_1_1Point.html#a2ef904b824c5314976e4f383fb66574c", null ],
     [ "mul", "classvcl_1_1Point.html#ac7c617c9e05740ddd11d6cc24a79a4c2", null ],
     [ "operator*", "classvcl_1_1Point.html#a087c9c932af8cd72c8b10f777feaeba9", null ],
     [ "operator*", "classvcl_1_1Point.html#a1e68c130dd1cdb9aaa2717d6fac57c90", null ],

@@ -3,7 +3,7 @@ var group__append__replace__to__buffer =
     [ "vcl::appendDuplicateVertexColorsToBuffer", "group__append__replace__to__buffer.html#ga83f3ac3fc3172a3e041616c747f5218a", null ],
     [ "vcl::appendDuplicateVertexColorsToBuffer", "group__append__replace__to__buffer.html#ga42988075554636d87b23c7eb3541ba73", null ],
     [ "vcl::appendDuplicateVertexMaterialIndicesToBuffer", "group__append__replace__to__buffer.html#ga5afc0c1d2ab2b4351dcd54fdc9a475f4", null ],
-    [ "vcl::appendDuplicateVertexNormalsToBuffer", "group__append__replace__to__buffer.html#gae39fb469cfcbf8c02a139039f210746a", null ],
+    [ "vcl::appendDuplicateVertexNormalsToBuffer", "group__append__replace__to__buffer.html#ga62cf81fa3380a3740730b18ab432c360", null ],
     [ "vcl::appendDuplicateVertexPositionsToBuffer", "group__append__replace__to__buffer.html#ga03d69f42c17d02e37d288fbce329f0b2", null ],
     [ "vcl::appendDuplicateVertexQualityToBuffer", "group__append__replace__to__buffer.html#ga409b34d8cea5c7222a04cb32bb21bc21", null ],
     [ "vcl::appendDuplicateVertexSelectionToBuffer", "group__append__replace__to__buffer.html#gab7200f0ca0c159fa1bd1a7b4e2d91df8", null ],

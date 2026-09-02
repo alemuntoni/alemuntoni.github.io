@@ -8,7 +8,6 @@ var classvcl_1_1Logger =
     [ "log", "classvcl_1_1Logger.html#ad475d7844ed0e338394ae03539724982", null ],
     [ "log", "classvcl_1_1Logger.html#a4bfa493362c894df5fc8ae2dd4f30a3c", null ],
     [ "progress", "classvcl_1_1Logger.html#acbdf48efc32ba4f66740638a48845d15", null ],
-    [ "setPrintLevel", "classvcl_1_1Logger.html#a1ae3430a05188a56cd1e66935257a649", null ],
-    [ "startProgress", "classvcl_1_1Logger.html#abbb1ea5175e8ecc88b177dd87f3e46d8", null ],
+    [ "startProgress", "classvcl_1_1Logger.html#acef7e6b7f047921a9e62605c2c68a4de", null ],
     [ "time", "classvcl_1_1Logger.html#acb324c454ef406cbb01bc71bb81d92e2", null ]
 ];

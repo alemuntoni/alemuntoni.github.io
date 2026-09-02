@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Visual Computing Library: vcl::EventDrawer&lt; DerivedRenderApp &gt; Class Template Reference</title>
+<title>Visual Computing Library: vcl::EventDrawer&lt; DerivedRenderApp, CAN_BLOCK_EVENTS &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -109,7 +109,7 @@ $(document).ready(function(){initNavTree('classvcl_1_1EventDrawer.html',''); ini
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classvcl_1_1EventDrawer-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">vcl::EventDrawer&lt; DerivedRenderApp &gt; Class Template Reference</div></div>
+  <div class="headertitle"><div class="title">vcl::EventDrawer&lt; DerivedRenderApp, CAN_BLOCK_EVENTS &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -118,48 +118,52 @@ $(document).ready(function(){initNavTree('classvcl_1_1EventDrawer.html',''); ini
 
 <p><code>#include &lt;<a class="el" href="drawers_2event__drawer_8h_source.html">vclib/render/drawers/event_drawer.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for vcl::EventDrawer&lt; DerivedRenderApp &gt;:</div>
+Inheritance diagram for vcl::EventDrawer&lt; DerivedRenderApp, CAN_BLOCK_EVENTS &gt;:</div>
 <div class="dyncontent">
-<div class="center"><img src="classvcl_1_1EventDrawer__inherit__graph.png" border="0" usemap="#avcl_1_1EventDrawer_3_01DerivedRenderApp_01_4_inherit__map" alt="Inheritance graph"/></div>
-<map name="avcl_1_1EventDrawer_3_01DerivedRenderApp_01_4_inherit__map" id="avcl_1_1EventDrawer_3_01DerivedRenderApp_01_4_inherit__map">
-<area shape="rect" title="The EventDrawer class is a base class for drawers that can handle events." alt="" coords="248,37,447,77"/>
-<area shape="rect" href="classvcl_1_1CameraDrawerT.html" title=" " alt="" coords="499,5,721,45"/>
-<area shape="poly" title=" " alt="" coords="460,41,498,36,499,42,461,46"/>
-<area shape="rect" href="classvcl_1_1TrackBallEventDrawerT.html" title=" " alt="" coords="495,69,725,109"/>
-<area shape="poly" title=" " alt="" coords="461,68,495,73,494,78,460,74"/>
-<area shape="rect" href="classvcl_1_1PlainDrawer.html" title=" " alt="" coords="5,37,200,77"/>
-<area shape="poly" title=" " alt="" coords="214,55,248,55,248,60,214,60"/>
-<area shape="rect" href="classvcl_1_1AbstractViewerDrawer.html" title=" " alt="" coords="773,62,968,117"/>
-<area shape="poly" title=" " alt="" coords="739,87,773,87,773,92,739,92"/>
+<div class="center"><img src="classvcl_1_1EventDrawer__inherit__graph.png" border="0" usemap="#avcl_1_1EventDrawer_3_01DerivedRenderApp_00_01CAN__BLOCK__EVENTS_01_4_inherit__map" alt="Inheritance graph"/></div>
+<map name="avcl_1_1EventDrawer_3_01DerivedRenderApp_00_01CAN__BLOCK__EVENTS_01_4_inherit__map" id="avcl_1_1EventDrawer_3_01DerivedRenderApp_00_01CAN__BLOCK__EVENTS_01_4_inherit__map">
+<area shape="rect" title="The EventDrawer class is a base class for drawers that can handle events." alt="" coords="248,69,501,109"/>
+<area shape="rect" href="classvcl_1_1TrackBallEventDrawerT.html" title=" " alt="" coords="549,37,780,77"/>
+<area shape="poly" title=" " alt="" coords="515,71,549,67,550,73,515,76"/>
+<area shape="rect" href="classvcl_1_1imgui_1_1ImGuiDrawer.html" title=" " alt="" coords="575,101,755,141"/>
+<area shape="poly" title=" " alt="" coords="515,102,575,109,574,114,515,107"/>
+<area shape="rect" href="classvcl_1_1PlainDrawer.html" title=" " alt="" coords="5,69,200,109"/>
+<area shape="poly" title=" " alt="" coords="214,87,248,87,248,92,214,92"/>
+<area shape="rect" href="classvcl_1_1AbstractViewerDrawer.html" title="The AbstractViewerDrawer class is a base class for all viewer drawers implementations." alt="" coords="828,37,1023,77"/>
+<area shape="poly" title=" " alt="" coords="794,55,828,55,828,60,794,60"/>
+<area shape="rect" href="classvcl_1_1ViewerDrawerBGFX.html" title="The ViewerDrawerBGFX class is a concrete viewer drawer implementation for the BGFX backend." alt="" coords="1082,5,1259,45"/>
+<area shape="poly" title=" " alt="" coords="1036,40,1082,34,1082,40,1037,46"/>
+<area shape="rect" href="classvcl_1_1ViewerDrawerOpenGL2.html" title="The ViewerDrawerOpenGL2 class is a concrete viewer drawer implementation for the OpenGL2 backend." alt="" coords="1071,69,1271,109"/>
+<area shape="poly" title=" " alt="" coords="1037,69,1071,74,1070,79,1036,74"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aef5167fd8301d381992a2c14e0b6ee06" id="r_aef5167fd8301d381992a2c14e0b6ee06"><td class="memItemLeft" align="right" valign="top"><a id="aef5167fd8301d381992a2c14e0b6ee06" name="aef5167fd8301d381992a2c14e0b6ee06"></a>
+<tr class="memitem:aa5c52df8df6b350d7213805a9d2de5ff" id="r_aa5c52df8df6b350d7213805a9d2de5ff"><td class="memItemLeft" align="right" valign="top"><a id="aa5c52df8df6b350d7213805a9d2de5ff" name="aa5c52df8df6b350d7213805a9d2de5ff"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>EventDrawer</b> (<a class="el" href="classvcl_1_1Segment.html">uint</a>, <a class="el" href="classvcl_1_1Segment.html">uint</a>)</td></tr>
-<tr class="separator:aef5167fd8301d381992a2c14e0b6ee06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e9a084def5003983db6fd2d993e9d39" id="r_a6e9a084def5003983db6fd2d993e9d39"><td class="memItemLeft" align="right" valign="top"><a id="a6e9a084def5003983db6fd2d993e9d39" name="a6e9a084def5003983db6fd2d993e9d39"></a>
-<a class="el" href="classvcl_1_1Segment.html">virtual</a> <a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>onKeyPress</b> (Key::Enum key, <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1BitSet.html">KeyModifiers</a> &amp;<a class="el" href="classvcl_1_1Segment.html">modifiers</a>)</td></tr>
-<tr class="separator:a6e9a084def5003983db6fd2d993e9d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69f5a0300b60b6da28188b5e46914077" id="r_a69f5a0300b60b6da28188b5e46914077"><td class="memItemLeft" align="right" valign="top"><a id="a69f5a0300b60b6da28188b5e46914077" name="a69f5a0300b60b6da28188b5e46914077"></a>
-<a class="el" href="classvcl_1_1Segment.html">virtual</a> <a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>onKeyRelease</b> (Key::Enum key, <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1BitSet.html">KeyModifiers</a> &amp;<a class="el" href="classvcl_1_1Segment.html">modifiers</a>)</td></tr>
-<tr class="separator:a69f5a0300b60b6da28188b5e46914077"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c7fe857393c0394a57749fc94beb720" id="r_a1c7fe857393c0394a57749fc94beb720"><td class="memItemLeft" align="right" valign="top"><a id="a1c7fe857393c0394a57749fc94beb720" name="a1c7fe857393c0394a57749fc94beb720"></a>
-<a class="el" href="classvcl_1_1Segment.html">virtual</a> <a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>onMouseDoubleClick</b> (MouseButton::Enum <a class="el" href="classvcl_1_1Segment.html">button</a>, <a class="el" href="classvcl_1_1Segment.html">double</a> x, <a class="el" href="classvcl_1_1Segment.html">double</a> y, <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1BitSet.html">KeyModifiers</a> &amp;<a class="el" href="classvcl_1_1Segment.html">modifiers</a>)</td></tr>
-<tr class="separator:a1c7fe857393c0394a57749fc94beb720"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b597bea2eeff6013885e7eb75e7269a" id="r_a4b597bea2eeff6013885e7eb75e7269a"><td class="memItemLeft" align="right" valign="top"><a id="a4b597bea2eeff6013885e7eb75e7269a" name="a4b597bea2eeff6013885e7eb75e7269a"></a>
-<a class="el" href="classvcl_1_1Segment.html">virtual</a> <a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>onMouseMove</b> (<a class="el" href="classvcl_1_1Segment.html">double</a> x, <a class="el" href="classvcl_1_1Segment.html">double</a> y, <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1BitSet.html">KeyModifiers</a> &amp;<a class="el" href="classvcl_1_1Segment.html">modifiers</a>)</td></tr>
-<tr class="separator:a4b597bea2eeff6013885e7eb75e7269a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38b1132fe9bef4cec431a97faecf1ea2" id="r_a38b1132fe9bef4cec431a97faecf1ea2"><td class="memItemLeft" align="right" valign="top"><a id="a38b1132fe9bef4cec431a97faecf1ea2" name="a38b1132fe9bef4cec431a97faecf1ea2"></a>
-<a class="el" href="classvcl_1_1Segment.html">virtual</a> <a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>onMousePress</b> (MouseButton::Enum <a class="el" href="classvcl_1_1Segment.html">button</a>, <a class="el" href="classvcl_1_1Segment.html">double</a> x, <a class="el" href="classvcl_1_1Segment.html">double</a> y, <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1BitSet.html">KeyModifiers</a> &amp;<a class="el" href="classvcl_1_1Segment.html">modifiers</a>)</td></tr>
-<tr class="separator:a38b1132fe9bef4cec431a97faecf1ea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac05806e9f3cca75b5a500a730804454" id="r_aac05806e9f3cca75b5a500a730804454"><td class="memItemLeft" align="right" valign="top"><a id="aac05806e9f3cca75b5a500a730804454" name="aac05806e9f3cca75b5a500a730804454"></a>
-<a class="el" href="classvcl_1_1Segment.html">virtual</a> <a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>onMouseRelease</b> (MouseButton::Enum <a class="el" href="classvcl_1_1Segment.html">button</a>, <a class="el" href="classvcl_1_1Segment.html">double</a> x, <a class="el" href="classvcl_1_1Segment.html">double</a> y, <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1BitSet.html">KeyModifiers</a> &amp;<a class="el" href="classvcl_1_1Segment.html">modifiers</a>)</td></tr>
-<tr class="separator:aac05806e9f3cca75b5a500a730804454"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27c031e637c54be5955d36c9d51989ad" id="r_a27c031e637c54be5955d36c9d51989ad"><td class="memItemLeft" align="right" valign="top"><a id="a27c031e637c54be5955d36c9d51989ad" name="a27c031e637c54be5955d36c9d51989ad"></a>
-<a class="el" href="classvcl_1_1Segment.html">virtual</a> <a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>onMouseScroll</b> (<a class="el" href="classvcl_1_1Segment.html">double</a> x, <a class="el" href="classvcl_1_1Segment.html">double</a> y, <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1BitSet.html">KeyModifiers</a> &amp;<a class="el" href="classvcl_1_1Segment.html">modifiers</a>)</td></tr>
-<tr class="separator:a27c031e637c54be5955d36c9d51989ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:aa5c52df8df6b350d7213805a9d2de5ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab51b49b01803937ab25cf9b824417d63" id="r_ab51b49b01803937ab25cf9b824417d63"><td class="memItemLeft" align="right" valign="top"><a id="ab51b49b01803937ab25cf9b824417d63" name="ab51b49b01803937ab25cf9b824417d63"></a>
+<a class="el" href="classvcl_1_1Segment.html">virtual</a> <a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>onKeyPress</b> (Key::Enum key, <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1BitSet.html">KeyModifiers</a> &amp;<a class="el" href="classvcl_1_1Segment.html">modifiers</a>)</td></tr>
+<tr class="separator:ab51b49b01803937ab25cf9b824417d63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5aca9ed344e66331737bf57529dfb4d" id="r_ac5aca9ed344e66331737bf57529dfb4d"><td class="memItemLeft" align="right" valign="top"><a id="ac5aca9ed344e66331737bf57529dfb4d" name="ac5aca9ed344e66331737bf57529dfb4d"></a>
+<a class="el" href="classvcl_1_1Segment.html">virtual</a> <a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>onKeyRelease</b> (Key::Enum key, <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1BitSet.html">KeyModifiers</a> &amp;<a class="el" href="classvcl_1_1Segment.html">modifiers</a>)</td></tr>
+<tr class="separator:ac5aca9ed344e66331737bf57529dfb4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2453c24efb31f5a1cabb07e600e98788" id="r_a2453c24efb31f5a1cabb07e600e98788"><td class="memItemLeft" align="right" valign="top"><a id="a2453c24efb31f5a1cabb07e600e98788" name="a2453c24efb31f5a1cabb07e600e98788"></a>
+<a class="el" href="classvcl_1_1Segment.html">virtual</a> <a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>onMouseDoubleClick</b> (MouseButton::Enum <a class="el" href="classvcl_1_1Segment.html">button</a>, <a class="el" href="classvcl_1_1Segment.html">double</a> x, <a class="el" href="classvcl_1_1Segment.html">double</a> y, <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1BitSet.html">KeyModifiers</a> &amp;<a class="el" href="classvcl_1_1Segment.html">modifiers</a>)</td></tr>
+<tr class="separator:a2453c24efb31f5a1cabb07e600e98788"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e834bb94f75ce2e5a3685571892cd52" id="r_a6e834bb94f75ce2e5a3685571892cd52"><td class="memItemLeft" align="right" valign="top"><a id="a6e834bb94f75ce2e5a3685571892cd52" name="a6e834bb94f75ce2e5a3685571892cd52"></a>
+<a class="el" href="classvcl_1_1Segment.html">virtual</a> <a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>onMouseMove</b> (<a class="el" href="classvcl_1_1Segment.html">double</a> x, <a class="el" href="classvcl_1_1Segment.html">double</a> y, <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1BitSet.html">KeyModifiers</a> &amp;<a class="el" href="classvcl_1_1Segment.html">modifiers</a>)</td></tr>
+<tr class="separator:a6e834bb94f75ce2e5a3685571892cd52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebe6ab3a36837f4d128aed54ddaba6ba" id="r_aebe6ab3a36837f4d128aed54ddaba6ba"><td class="memItemLeft" align="right" valign="top"><a id="aebe6ab3a36837f4d128aed54ddaba6ba" name="aebe6ab3a36837f4d128aed54ddaba6ba"></a>
+<a class="el" href="classvcl_1_1Segment.html">virtual</a> <a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>onMousePress</b> (MouseButton::Enum <a class="el" href="classvcl_1_1Segment.html">button</a>, <a class="el" href="classvcl_1_1Segment.html">double</a> x, <a class="el" href="classvcl_1_1Segment.html">double</a> y, <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1BitSet.html">KeyModifiers</a> &amp;<a class="el" href="classvcl_1_1Segment.html">modifiers</a>)</td></tr>
+<tr class="separator:aebe6ab3a36837f4d128aed54ddaba6ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6fca18b72625bb76d1774c8a4d5b00c" id="r_ad6fca18b72625bb76d1774c8a4d5b00c"><td class="memItemLeft" align="right" valign="top"><a id="ad6fca18b72625bb76d1774c8a4d5b00c" name="ad6fca18b72625bb76d1774c8a4d5b00c"></a>
+<a class="el" href="classvcl_1_1Segment.html">virtual</a> <a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>onMouseRelease</b> (MouseButton::Enum <a class="el" href="classvcl_1_1Segment.html">button</a>, <a class="el" href="classvcl_1_1Segment.html">double</a> x, <a class="el" href="classvcl_1_1Segment.html">double</a> y, <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1BitSet.html">KeyModifiers</a> &amp;<a class="el" href="classvcl_1_1Segment.html">modifiers</a>)</td></tr>
+<tr class="separator:ad6fca18b72625bb76d1774c8a4d5b00c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a969fa575c92cda2bf87e0b6837947936" id="r_a969fa575c92cda2bf87e0b6837947936"><td class="memItemLeft" align="right" valign="top"><a id="a969fa575c92cda2bf87e0b6837947936" name="a969fa575c92cda2bf87e0b6837947936"></a>
+<a class="el" href="classvcl_1_1Segment.html">virtual</a> <a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>onMouseScroll</b> (<a class="el" href="classvcl_1_1Segment.html">double</a> x, <a class="el" href="classvcl_1_1Segment.html">double</a> y, <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1BitSet.html">KeyModifiers</a> &amp;<a class="el" href="classvcl_1_1Segment.html">modifiers</a>)</td></tr>
+<tr class="separator:a969fa575c92cda2bf87e0b6837947936"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classvcl_1_1PlainDrawer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classvcl_1_1PlainDrawer')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classvcl_1_1PlainDrawer.html">vcl::PlainDrawer&lt; DerivedRenderApp &gt;</a></td></tr>
 <tr class="memitem:aecdd91a361841be720494c9e6289a45c inherit pub_methods_classvcl_1_1PlainDrawer" id="r_aecdd91a361841be720494c9e6289a45c"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="classvcl_1_1Segment.html">virtual</a> <a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>onDraw</b> (uint viewId)</td></tr>
@@ -185,9 +189,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a480cbf689a135cb0c1f736fe08f1c5b6" id="r_a480cbf689a135cb0c1f736fe08f1c5b6"><td class="memItemLeft" align="right" valign="top"><a id="a480cbf689a135cb0c1f736fe08f1c5b6" name="a480cbf689a135cb0c1f736fe08f1c5b6"></a>
-<a class="el" href="classvcl_1_1Segment.html">static</a> <a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>CAN_BLOCK_EVENT_PROPAGATION</b> = <a class="el" href="classvcl_1_1Segment.html">false</a></td></tr>
-<tr class="separator:a480cbf689a135cb0c1f736fe08f1c5b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94cef9543a4a1a88e0c7eabe83efc6da" id="r_a94cef9543a4a1a88e0c7eabe83efc6da"><td class="memItemLeft" align="right" valign="top"><a id="a94cef9543a4a1a88e0c7eabe83efc6da" name="a94cef9543a4a1a88e0c7eabe83efc6da"></a>
+<a class="el" href="classvcl_1_1Segment.html">static</a> <a class="el" href="classvcl_1_1Segment.html">constexpr</a> <a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>CAN_BLOCK_EVENT_PROPAGATION</b> = <a class="el" href="classvcl_1_1Segment.html">CAN_BLOCK_EVENTS</a></td></tr>
+<tr class="separator:a94cef9543a4a1a88e0c7eabe83efc6da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -204,12 +208,15 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a2a2731234aefce7adde6dec3bc992489 inherit pro_methods_classvcl_1_1PlainDrawer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> <a class="el" href="classvcl_1_1Segment.html">DerivedRenderApp</a>&gt;<br />
-class vcl::EventDrawer&lt; DerivedRenderApp &gt;</div><p>The <a class="el" href="classvcl_1_1EventDrawer.html" title="The EventDrawer class is a base class for drawers that can handle events.">EventDrawer</a> class is a base class for drawers that can handle events. </p>
+<div class="textblock"><div class="compoundTemplParams">template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> <a class="el" href="classvcl_1_1Segment.html">DerivedRenderApp</a>, <a class="el" href="classvcl_1_1Segment.html">bool</a> CAN_BLOCK_EVENTS = false&gt;<br />
+class vcl::EventDrawer&lt; DerivedRenderApp, CAN_BLOCK_EVENTS &gt;</div><p>The <a class="el" href="classvcl_1_1EventDrawer.html" title="The EventDrawer class is a base class for drawers that can handle events.">EventDrawer</a> class is a base class for drawers that can handle events. </p>
 <p>The <a class="el" href="classvcl_1_1EventDrawer.html" title="The EventDrawer class is a base class for drawers that can handle events.">EventDrawer</a> class is a CRTP class that is templated on the derived <a class="el" href="classvcl_1_1RenderApp.html" title="The RenderApp class is a template class that combines a canvas, a window manager, and a set of drawer...">RenderApp</a> class. It provides the interface for handling events produced by the DerivedRenderApp class.</p>
+<p>By default, the <a class="el" href="classvcl_1_1EventDrawer.html" title="The EventDrawer class is a base class for drawers that can handle events.">EventDrawer</a> class does not block event propagation to other drawers. This behaviour can be changed by setting the CAN_BLOCK_EVENTS template parameter to true (or by inheriting from the BlockerEventDrawer class).</p>
+<p>All the event functions of this class return a boolean value. If the <a class="el" href="classvcl_1_1EventDrawer.html" title="The EventDrawer class is a base class for drawers that can handle events.">EventDrawer</a> class is instantiated with CAN_BLOCK_EVENTS = false (default), the return value of the event functions is ignored. In case of CAN_BLOCK_EVENTS = true (BlockerEventDrawer), if a function returns true, the DerivedRenderApp will block event propagation to other drawers; if a function returns false, the event is propagated to the other drawers.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">DerivedRenderApp</td><td>The type of the derived <a class="el" href="classvcl_1_1RenderApp.html" title="The RenderApp class is a template class that combines a canvas, a window manager, and a set of drawer...">RenderApp</a> class. </td></tr>
+    <tr><td class="paramname">CAN_BLOCK_EVENTS</td><td>Whether the event functions of this class can block event propagation to other drawers. </td></tr>
   </table>
   </dd>
 </dl>

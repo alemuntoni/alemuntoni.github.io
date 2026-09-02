@@ -129,7 +129,7 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1WindowManagerConcept.htm
 <div class="line">    <a class="code hl_class" href="classvcl_1_1Segment.html">RemoveRef&lt;T&gt;</a>(s, u, u);</div>
 <div class="line">    <a class="code hl_class" href="classvcl_1_1Segment.html">RemoveRef&lt;T&gt;</a>(s, u, u, <a class="code hl_class" href="classvcl_1_1Segment.html">pPtr</a>);</div>
 <div class="line"> </div>
-<div class="line">    { <a class="code hl_class" href="classvcl_1_1Segment.html">obj</a>.windowTitle() } -&gt; std::same_as&lt;const std::string&amp;&gt;;</div>
+<div class="line">    { obj.windowTitle() } -&gt; std::same_as&lt;const std::string&amp;&gt;;</div>
 <div class="line"> </div>
 <div class="line">    { obj.width() } -&gt; std::convertible_to&lt;uint&gt;;</div>
 <div class="line">    { obj.height() } -&gt; std::convertible_to&lt;uint&gt;;</div>
@@ -139,17 +139,20 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1WindowManagerConcept.htm
 <div class="line">    { obj.dpiScale() } -&gt; Point2Concept;</div>
 <div class="line"> </div>
 <div class="line">    obj.winId(); </div>
-<div class="line">    { obj.displayId() } -&gt; std::same_as&lt;void*&gt;;</div>
+<div class="line">    { RemoveRef&lt;T&gt;::displayId() } -&gt; std::same_as&lt;void*&gt;;</div>
+<div class="line">    { RemoveRef&lt;T&gt;::handleType() } -&gt; std::same_as&lt;vcl::NativeWindowHandleType&gt;;</div>
 <div class="line"> </div>
 <div class="line">    </div>
 <div class="line">    <span class="keyword">requires</span> IsConst&lt;T&gt; || <span class="keyword">requires</span> {</div>
 <div class="line">        { obj.setWindowTitle(std::string()) } -&gt; std::same_as&lt;void&gt;;</div>
 <div class="line"> </div>
 <div class="line">        { obj.update() } -&gt; std::same_as&lt;void&gt;;</div>
+<div class="line"> </div>
+<div class="line">        { obj.setContinuousRedraw(<span class="keywordtype">bool</span>()) } -&gt; std::same_as&lt;void&gt;;</div>
 <div class="line">    };</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:41</div></div>
-<div class="ttc" id="aconceptvcl_1_1WindowManagerConcept_html"><div class="ttname"><a href="conceptvcl_1_1WindowManagerConcept.html">vcl::WindowManagerConcept</a></div><div class="ttdoc">The WindowManagerConcept concept is used to check if a class satisfies the requirements of the Window...</div><div class="ttdef"><b>Definition</b> window_manager.h:95</div></div>
+<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:26</div></div>
+<div class="ttc" id="aconceptvcl_1_1WindowManagerConcept_html"><div class="ttname"><a href="conceptvcl_1_1WindowManagerConcept.html">vcl::WindowManagerConcept</a></div><div class="ttdoc">The WindowManagerConcept concept is used to check if a class satisfies the requirements of the Window...</div><div class="ttdef"><b>Definition</b> window_manager.h:85</div></div>
 </div><!-- fragment --><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The WindowManagerConcept concept is used to check if a class satisfies the requirements of the WindowManager concept. </p>
 <p>Each class that satisfies this concept can be used as a window manager in the <a class="el" href="classvcl_1_1RenderApp.html">vcl::RenderApp</a> class (first template parameter). The WindowManager class is responsible for managing the window and the window events.</p>
@@ -176,7 +179,8 @@ $(document).ready(function(){initNavTree('conceptvcl_1_1WindowManagerConcept.htm
 <li><code>height() -&gt; uint</code>: Returns the height of the window.</li>
 <li><code>dpiScale() -&gt; Point2Concept</code>: Returns the DPI scale of the window.</li>
 <li><code>winId() -&gt; void*</code>: Returns the platform dependent identifier of the window.</li>
-<li><code>displayId() -&gt; void*</code>: Returns the platform dependent identifier of the display where the window is placed. This parameter is required only on linux platforms, it can be left nullptr in other platforms.</li>
+<li><code>displayId() -&gt; void*</code>: Returns the platform dependent identifier of the display where the window is placed. This parameter is required only on linux platforms, it can be left nullptr in other platforms. Must be a static method.</li>
+<li><code>handleType() -&gt; vcl::NativeWindowHandleType</code>: Returns the native window handle type. Must be a static method.</li>
 <li><code>update() -&gt; void</code>: Updates the window. </li>
 </ul>
 </div></div><!-- contents -->

@@ -9,6 +9,7 @@ var classvcl_1_1MeshRenderInfo =
       [ "COLOR_EDGE", "classvcl_1_1MeshRenderInfo.html#aef510f701c23aab4947d6264ebaa4826a7138c0729dd1897dd12a25ce0a86853e", null ],
       [ "COLOR_MESH", "classvcl_1_1MeshRenderInfo.html#aef510f701c23aab4947d6264ebaa4826ad230b9dc271eba968f6911d7228e5195", null ],
       [ "COLOR_USER", "classvcl_1_1MeshRenderInfo.html#aef510f701c23aab4947d6264ebaa4826ab76438b9ccc52b046afc164c57a2dee0", null ],
+      [ "SELECTION", "classvcl_1_1MeshRenderInfo.html#aef510f701c23aab4947d6264ebaa4826a0a2dba942c08df9fd12a10acc7f19a78", null ],
       [ "COUNT", "classvcl_1_1MeshRenderInfo.html#aef510f701c23aab4947d6264ebaa4826a4905ac9d6a22bdfc1ae096094ce6248d", null ]
     ] ],
     [ "Points", "classvcl_1_1MeshRenderInfo.html#afc5bb9722de2309dcabb91e790b63dad", [
@@ -21,6 +22,7 @@ var classvcl_1_1MeshRenderInfo =
       [ "COLOR_VERTEX", "classvcl_1_1MeshRenderInfo.html#afc5bb9722de2309dcabb91e790b63dada1f613e122379b766e5e0172f6bb0cb6b", null ],
       [ "COLOR_MESH", "classvcl_1_1MeshRenderInfo.html#afc5bb9722de2309dcabb91e790b63dadad230b9dc271eba968f6911d7228e5195", null ],
       [ "COLOR_USER", "classvcl_1_1MeshRenderInfo.html#afc5bb9722de2309dcabb91e790b63dadab76438b9ccc52b046afc164c57a2dee0", null ],
+      [ "SELECTION", "classvcl_1_1MeshRenderInfo.html#afc5bb9722de2309dcabb91e790b63dada0a2dba942c08df9fd12a10acc7f19a78", null ],
       [ "COUNT", "classvcl_1_1MeshRenderInfo.html#afc5bb9722de2309dcabb91e790b63dada4905ac9d6a22bdfc1ae096094ce6248d", null ]
     ] ],
     [ "Primitive", "classvcl_1_1MeshRenderInfo.html#a05c0871c8cf74ec41e9859d2bb1bd45a", [
@@ -35,12 +37,18 @@ var classvcl_1_1MeshRenderInfo =
       [ "SHADING_NONE", "classvcl_1_1MeshRenderInfo.html#a7484200c8959e56605375c4ed01c1a49aa3f899683a9e12c66db1632115a576c6", null ],
       [ "SHADING_FLAT", "classvcl_1_1MeshRenderInfo.html#a7484200c8959e56605375c4ed01c1a49a2b2efd736ab5b235d09545a0313b6230", null ],
       [ "SHADING_SMOOTH", "classvcl_1_1MeshRenderInfo.html#a7484200c8959e56605375c4ed01c1a49a5b59cabb87d7ea5fddd47d0e16f42541", null ],
+      [ "SHADING_NORMAL_MAP", "classvcl_1_1MeshRenderInfo.html#a7484200c8959e56605375c4ed01c1a49ae44dcc8b0a940e1aa952fd0ba5cf296d", null ],
       [ "COLOR_VERTEX", "classvcl_1_1MeshRenderInfo.html#a7484200c8959e56605375c4ed01c1a49a1f613e122379b766e5e0172f6bb0cb6b", null ],
       [ "COLOR_FACE", "classvcl_1_1MeshRenderInfo.html#a7484200c8959e56605375c4ed01c1a49a551754f0331a85b86b6cb108a8f7fd3f", null ],
       [ "COLOR_VERTEX_TEX", "classvcl_1_1MeshRenderInfo.html#a7484200c8959e56605375c4ed01c1a49a58932d939edba1371a90a7e6a34191e7", null ],
       [ "COLOR_WEDGE_TEX", "classvcl_1_1MeshRenderInfo.html#a7484200c8959e56605375c4ed01c1a49ad4cc1b92bb27648a761cb87624d29b21", null ],
       [ "COLOR_MESH", "classvcl_1_1MeshRenderInfo.html#a7484200c8959e56605375c4ed01c1a49ad230b9dc271eba968f6911d7228e5195", null ],
       [ "COLOR_USER", "classvcl_1_1MeshRenderInfo.html#a7484200c8959e56605375c4ed01c1a49ab76438b9ccc52b046afc164c57a2dee0", null ],
+      [ "SELECTION", "classvcl_1_1MeshRenderInfo.html#a7484200c8959e56605375c4ed01c1a49a0a2dba942c08df9fd12a10acc7f19a78", null ],
+      [ "BACKFACE_SINGLE", "classvcl_1_1MeshRenderInfo.html#a7484200c8959e56605375c4ed01c1a49a507f88b6a21068426cc17dc1fdf377f9", null ],
+      [ "BACKFACE_DOUBLE", "classvcl_1_1MeshRenderInfo.html#a7484200c8959e56605375c4ed01c1a49ad8046ed822d96f5b39b6ad4ecf13f1a2", null ],
+      [ "BACKFACE_CULL", "classvcl_1_1MeshRenderInfo.html#a7484200c8959e56605375c4ed01c1a49a8e8f937f721871fe77f484bd0322a7a8", null ],
+      [ "SPECULAR", "classvcl_1_1MeshRenderInfo.html#a7484200c8959e56605375c4ed01c1a49a0df54c320628149300093da5e2ff693d", null ],
       [ "COUNT", "classvcl_1_1MeshRenderInfo.html#a7484200c8959e56605375c4ed01c1a49a4905ac9d6a22bdfc1ae096094ce6248d", null ]
     ] ],
     [ "Wireframe", "classvcl_1_1MeshRenderInfo.html#a0a3f8646d2bb2a3777bd6f21f10179d2", [

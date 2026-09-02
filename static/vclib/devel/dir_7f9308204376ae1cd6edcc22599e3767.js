@@ -8,6 +8,7 @@ var dir_7f9308204376ae1cd6edcc22599e3767 =
     [ "clean.h", "clean_8h_source.html", null ],
     [ "convex_hull.h", "mesh_2convex__hull_8h_source.html", null ],
     [ "create.h", "mesh_2create_8h_source.html", null ],
+    [ "delete.h", "delete_8h_source.html", null ],
     [ "distance.h", "algorithms_2mesh_2distance_8h_source.html", null ],
     [ "face_topology.h", "face__topology_8h_source.html", null ],
     [ "filter.h", "filter_8h_source.html", null ],

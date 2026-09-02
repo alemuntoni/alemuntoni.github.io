@@ -113,54 +113,54 @@ $(document).ready(function(){initNavTree('io_2mesh_2ply_2detail_2vertex_8h_sourc
   <div class="headertitle"><div class="title">vertex.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************************</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * VCLib                                                                     *</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Visual Computing Library                                                  *</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * Copyright(C) 2021-2026                                                    *</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Visual Computing Lab                                                      *</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * ISTI - Italian National Research Council                                  *</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> * All rights reserved.                                                      *</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> * This program is free software; you can redistribute it and/or modify      *</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> * it under the terms of the Mozilla Public License Version 2.0 as published *</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> * by the Mozilla Foundation; either version 2 of the License, or            *</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> * (at your option) any later version.                                       *</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> *                                                                           *</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> * This program is distributed in the hope that it will be useful,           *</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> * but WITHOUT ANY WARRANTY; without even the implied warranty of            *</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the              *</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> * Mozilla Public License Version 2.0                                        *</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> * (https://www.mozilla.org/en-US/MPL/2.0/) for more details.                *</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> ****************************************************************************/</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifndef VCL_IO_MESH_PLY_DETAIL_VERTEX_H</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define VCL_IO_MESH_PLY_DETAIL_VERTEX_H</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;header.h&quot;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;vclib/io/read.h&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;vclib/io/write.h&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;vclib/mesh.h&gt;</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">namespace </span>vcl::detail {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">template</span>&lt;MeshConcept MeshType, VertexConcept VertexType, <span class="keyword">typename</span> Stream&gt;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keywordtype">void</span> readPlyVertexProperty(</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    Stream&amp;     file,</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    MeshType&amp;   mesh,</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    VertexType&amp; v,</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    PlyProperty p,</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    std::endian end = std::endian::little)</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>{</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">bool</span> hasBeenRead = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordflow">if</span> (p.name &gt;= ply::x &amp;&amp; p.name &lt;= ply::z) {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">using </span>Scalar    = VertexType::PositionType::ScalarType;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordtype">int</span> a           = p.name - ply::x;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        v.position()[a] = io::readPrimitiveType&lt;Scalar&gt;(file, p.type, end);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        hasBeenRead     = <span class="keyword">true</span>;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// VCLib - Visual Computing Library</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Copyright (C) 2021-2026 Visual Computing Lab, ISTI - CNR.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">//</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// This Source Code Form is subject to the terms of the Mozilla Public License,</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// v. 2.0. If a copy of the MPL was not distributed with this file, You can</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// obtain one at https://mozilla.org/MPL/2.0/.</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#ifndef VCL_IO_MESH_PLY_DETAIL_VERTEX_H</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define VCL_IO_MESH_PLY_DETAIL_VERTEX_H</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;header.h&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;vclib/io/read.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;vclib/io/write.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;vclib/mesh.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span>vcl::detail {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">template</span>&lt;MeshConcept MeshType, VertexConcept VertexType, <span class="keyword">typename</span> Stream&gt;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keywordtype">void</span> readPlyVertexProperty(</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    Stream&amp;     file,</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    MeshType&amp;   mesh,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    VertexType&amp; v,</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    PlyProperty p,</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">bool</span>        vcgGenerated = <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    std::endian end          = std::endian::little)</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>{</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">bool</span> hasBeenRead = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordflow">if</span> (p.name &gt;= ply::x &amp;&amp; p.name &lt;= ply::z) {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keyword">using </span>Scalar    = VertexType::PositionType::ScalarType;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordtype">int</span> a           = p.name - ply::x;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        v.position()[a] = io::readPrimitiveType&lt;Scalar&gt;(file, p.type, end);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        hasBeenRead     = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (p.name == ply::bit_flags) {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordflow">if</span> (vcgGenerated) {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="keywordtype">int</span> fval = io::readPrimitiveType&lt;int&gt;(file, p.type, end);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            v.importFlagsFromVCGFormat(fval);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            hasBeenRead = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="keyword">using </span>FlagsType = VertexType::FlagsType;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            FlagsType fval =</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                io::readPrimitiveType&lt;FlagsType&gt;(file, p.type, end);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            v.setUnderlyingBitFlags(fval);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            hasBeenRead = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        }</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (p.name &gt;= ply::nx &amp;&amp; p.name &lt;= ply::nz) {</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (HasPerVertexNormal&lt;MeshType&gt;) {</div>
@@ -239,141 +239,153 @@ $(document).ready(function(){initNavTree('io_2mesh_2ply_2detail_2vertex_8h_sourc
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    std::istream&amp;                 file,</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    VertexType&amp;                   v,</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    MeshType&amp;                     mesh,</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keyword">const</span> std::list&lt;PlyProperty&gt;&amp; vertexProperties)</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>{</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    Tokenizer           spaceTokenizer = readAndTokenizeNextNonEmptyLine(file);</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    Tokenizer::iterator token          = spaceTokenizer.begin();</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> PlyProperty&amp; p : vertexProperties) {</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <span class="keywordflow">if</span> (token == spaceTokenizer.end()) {</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            <span class="keywordflow">throw</span> MalformedFileException(<span class="stringliteral">&quot;Unexpected end of line.&quot;</span>);</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        }</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        readPlyVertexProperty(token, mesh, v, p);</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    }</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>}</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="keyword">template</span>&lt;VertexConcept VertexType, MeshConcept MeshType&gt;</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="keywordtype">void</span> readPlyVertexBin(</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    std::istream&amp;                 file,</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    VertexType&amp;                   v,</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    MeshType&amp;                     mesh,</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="keyword">const</span> std::list&lt;PlyProperty&gt;&amp; vertexProperties,</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    std::endian                   end)</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>{</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> PlyProperty&amp; p : vertexProperties) {</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        readPlyVertexProperty(file, mesh, v, p, end);</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    }</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>}</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="keyword">template</span>&lt;MeshConcept MeshType&gt;</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="keywordtype">void</span> writePlyVertices(</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    std::ostream&amp;    file,</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keyword">const</span> PlyHeader&amp; header,</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <span class="keyword">const</span> MeshType&amp;  mesh)</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>{</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <span class="keyword">using </span>VertexType = MeshType::VertexType;</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    FileType format;</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <span class="keywordflow">if</span> (header.format() == ply::ASCII) {</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        format.isBinary = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    }</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (header.format() == ply::BINARY_BIG_ENDIAN) {</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        format.endian = std::endian::big;</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    }</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> VertexType&amp; v : mesh.<a class="code hl_variable" href="group__views.html#gae55a7544cb59464c26959bcc4cec23ea">vertices</a>()) {</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> PlyProperty&amp; p : header.vertexProperties()) {</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>            <span class="keywordtype">bool</span> hasBeenWritten = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>            <span class="keywordflow">if</span> (p.name &gt;= ply::x &amp;&amp; p.name &lt;= ply::z) {</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                io::writeProperty(</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                    file, v.position()[p.name - ply::x], p.type, format);</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                hasBeenWritten = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>            }</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (p.name &gt;= ply::nx &amp;&amp; p.name &lt;= ply::nz) {</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>                <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (HasPerVertexNormal&lt;MeshType&gt;) {</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                    io::writeProperty(</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>                        file, v.normal()[p.name - ply::nx], p.type, format);</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>                    hasBeenWritten = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>                }</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>            }</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (p.name &gt;= ply::red &amp;&amp; p.name &lt;= ply::alpha) {</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>                <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (HasPerVertexColor&lt;MeshType&gt;) {</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                    io::writeProperty(</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>                        file, v.color()[p.name - ply::red], p.type, format);</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>                    hasBeenWritten = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>                }</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>            }</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (p.name == ply::quality) {</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (HasPerVertexQuality&lt;MeshType&gt;) {</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>                    io::writeProperty(file, v.quality(), p.type, format);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keyword">const</span> std::list&lt;PlyProperty&gt;&amp; vertexProperties,</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keywordtype">bool</span>                          vcgGenerated = <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>{</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    Tokenizer           spaceTokenizer = readAndTokenizeNextNonEmptyLine(file);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    Tokenizer::iterator token          = spaceTokenizer.begin();</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> PlyProperty&amp; p : vertexProperties) {</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <span class="keywordflow">if</span> (token == spaceTokenizer.end()) {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            <span class="keywordflow">throw</span> MalformedFileException(<span class="stringliteral">&quot;Unexpected end of line.&quot;</span>);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        }</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        readPlyVertexProperty(token, mesh, v, p, vcgGenerated);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    }</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>}</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="keyword">template</span>&lt;VertexConcept VertexType, MeshConcept MeshType&gt;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="keywordtype">void</span> readPlyVertexBin(</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    std::istream&amp;                 file,</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    VertexType&amp;                   v,</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    MeshType&amp;                     mesh,</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="keyword">const</span> std::list&lt;PlyProperty&gt;&amp; vertexProperties,</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    std::endian                   end,</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordtype">bool</span>                          vcgGenerated = <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>{</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> PlyProperty&amp; p : vertexProperties) {</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        readPlyVertexProperty(file, mesh, v, p, vcgGenerated, end);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    }</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>}</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="keyword">template</span>&lt;MeshConcept MeshType&gt;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="keywordtype">void</span> writePlyVertices(</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    std::ostream&amp;    file,</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="keyword">const</span> PlyHeader&amp; header,</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <span class="keyword">const</span> MeshType&amp;  mesh)</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>{</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <span class="keyword">using </span>VertexType = MeshType::VertexType;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    FileType format;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <span class="keywordflow">if</span> (header.format() == ply::ASCII) {</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        format.isBinary = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    }</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (header.format() == ply::BINARY_BIG_ENDIAN) {</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        format.endian = std::endian::big;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    }</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> VertexType&amp; v : mesh.<a class="code hl_variable" href="group__views.html#gae55a7544cb59464c26959bcc4cec23ea">vertices</a>()) {</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> PlyProperty&amp; p : header.vertexProperties()) {</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>            <span class="keywordtype">bool</span> hasBeenWritten = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>            <span class="keywordflow">if</span> (p.name &gt;= ply::x &amp;&amp; p.name &lt;= ply::z) {</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                io::writeProperty(</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>                    file, v.position()[p.name - ply::x], p.type, format);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                hasBeenWritten = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>            }</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (p.name == ply::bit_flags) {</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>                io::writeProperty(file, v.underlyingBitFlags(), p.type, format);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>                hasBeenWritten = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>            }</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (p.name &gt;= ply::nx &amp;&amp; p.name &lt;= ply::nz) {</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>                <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (HasPerVertexNormal&lt;MeshType&gt;) {</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>                    io::writeProperty(</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                        file, v.normal()[p.name - ply::nx], p.type, format);</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>                    hasBeenWritten = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>                }</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>            }</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (p.name &gt;= ply::red &amp;&amp; p.name &lt;= ply::alpha) {</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>                <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (HasPerVertexColor&lt;MeshType&gt;) {</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                    io::writeProperty(</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>                        file, v.color()[p.name - ply::red], p.type, format);</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>                    hasBeenWritten = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>                }</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>            }</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (p.name &gt;= ply::texture_u &amp;&amp; p.name &lt;= ply::texture_v) {</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>                <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (HasPerVertexTexCoord&lt;MeshType&gt;) {</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>                    <span class="keyword">const</span> uint a = p.name - ply::texture_u;</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>                    io::writeProperty(file, v.texCoord()[a], p.type, format);</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                    hasBeenWritten = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>                }</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>            }</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (p.name == ply::material_index) {</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>                <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (HasPerVertexMaterialIndex&lt;MeshType&gt;) {</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>                    io::writeProperty(file, v.materialIndex(), p.type, format);</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (p.name == ply::quality) {</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>                <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (HasPerVertexQuality&lt;MeshType&gt;) {</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>                    io::writeProperty(file, v.quality(), p.type, format);</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>                    hasBeenWritten = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                }</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>            }</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (p.name &gt;= ply::texture_u &amp;&amp; p.name &lt;= ply::texture_v) {</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>                <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (HasPerVertexTexCoord&lt;MeshType&gt;) {</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>                    <span class="keyword">const</span> uint a = p.name - ply::texture_u;</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>                    io::writeProperty(file, v.texCoord()[a], p.type, format);</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>                    hasBeenWritten = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>                }</div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>            }</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (p.name == ply::unknown) {</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>                <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (HasPerVertexCustomComponents&lt;MeshType&gt;) {</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>                    <span class="keywordflow">if</span> (mesh.hasPerVertexCustomComponent(</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>                            p.unknownPropertyName)) {</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>                        io::writeCustomComponent(</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>                            file, v, p.unknownPropertyName, p.type, format);</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>                        hasBeenWritten = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>                    }</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>                }</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>            }</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            <span class="keywordflow">if</span> (!hasBeenWritten) {</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                <span class="comment">// be sure to write something if the header declares some</span></div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                <span class="comment">// property that is not in the mesh</span></div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>                io::writeProperty(file, 0, p.type, format);</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>            }</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        }</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>        <span class="keywordflow">if</span> (!format.isBinary)</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>            file &lt;&lt; std::endl;</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    }</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>}</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="keyword">template</span>&lt;MeshConcept MeshType, LoggerConcept LogType&gt;</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span><span class="keywordtype">void</span> readPlyVertices(</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    std::istream&amp;    file,</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    <span class="keyword">const</span> PlyHeader&amp; header,</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    MeshType&amp;        m,</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    LogType&amp;         log)</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>{</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    m.addVertices(header.vertexCount());</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    log.startProgress(<span class="stringliteral">&quot;Reading vertices&quot;</span>, header.vertexCount());</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span> </div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    <span class="keywordflow">for</span> (uint vid = 0; vid &lt; header.vertexCount(); ++vid) {</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        <span class="keyword">auto</span>&amp; v = m.vertex(vid);</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        <span class="keywordflow">if</span> (header.format() == ply::ASCII) {</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>            detail::readPlyVertexTxt(file, v, m, header.vertexProperties());</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        }</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>            std::endian end = header.format() == ply::BINARY_BIG_ENDIAN ?</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>                                  std::endian::big :</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>                                  std::endian::little;</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>            detail::readPlyVertexBin(</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>                file, v, m, header.vertexProperties(), end);</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (p.name == ply::material_index) {</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>                <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (HasPerVertexMaterialIndex&lt;MeshType&gt;) {</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>                    io::writeProperty(file, v.materialIndex(), p.type, format);</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>                    hasBeenWritten = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>                }</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>            }</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (p.name == ply::unknown) {</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>                <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (HasPerVertexCustomComponents&lt;MeshType&gt;) {</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>                    <span class="keywordflow">if</span> (mesh.hasPerVertexCustomComponent(</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>                            p.unknownPropertyName)) {</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>                        io::writeCustomComponent(</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                            file, v, p.unknownPropertyName, p.type, format);</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                        hasBeenWritten = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>                    }</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>                }</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>            }</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>            <span class="keywordflow">if</span> (!hasBeenWritten) {</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>                <span class="comment">// be sure to write something if the header declares some</span></div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>                <span class="comment">// property that is not in the mesh</span></div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>                io::writeProperty(file, 0, p.type, format);</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>            }</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        }</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        <span class="keywordflow">if</span> (!format.isBinary)</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>            file &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    }</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>}</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span><span class="keyword">template</span>&lt;MeshConcept MeshType, LoggerConcept LogType&gt;</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span><span class="keywordtype">void</span> readPlyVertices(</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    std::istream&amp;    file,</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    <span class="keyword">const</span> PlyHeader&amp; header,</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    MeshType&amp;        m,</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    LogType&amp;         log)</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>{</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    m.addVertices(header.vertexCount());</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    log.startProgress(<span class="stringliteral">&quot;Reading vertices&quot;</span>, header.vertexCount());</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    <span class="keywordflow">for</span> (uint vid = 0; vid &lt; header.vertexCount(); ++vid) {</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        <span class="keyword">auto</span>&amp; v = m.vertex(vid);</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>        <span class="keywordflow">if</span> (header.format() == ply::ASCII) {</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>            detail::readPlyVertexTxt(</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>                file, v, m, header.vertexProperties(), header.isVcgGenerated());</div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        }</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        log.progress(vid);</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    }</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    log.endProgress();</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>}</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span> </div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>} <span class="comment">// namespace vcl::detail</span></div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span> </div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span><span class="preprocessor">#endif </span><span class="comment">// VCL_IO_MESH_PLY_DETAIL_VERTEX_H</span></div>
-<div class="ttc" id="agroup__views_html_gae55a7544cb59464c26959bcc4cec23ea"><div class="ttname"><a href="group__views.html#gae55a7544cb59464c26959bcc4cec23ea">vcl::views::vertices</a></div><div class="ttdeci">constexpr detail::VerticesView vertices</div><div class="ttdoc">A view that allows to iterate over the Vertex elements of an object.</div><div class="ttdef"><b>Definition</b> vertex.h:92</div></div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>            std::endian end = header.format() == ply::BINARY_BIG_ENDIAN ?</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>                                  std::endian::big :</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>                                  std::endian::little;</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>            detail::readPlyVertexBin(</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>                file,</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>                v,</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>                m,</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>                header.vertexProperties(),</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>                end,</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>                header.isVcgGenerated());</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        }</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>        log.progress(vid);</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    }</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    log.endProgress();</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>}</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>} <span class="comment">// namespace vcl::detail</span></div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span> </div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span><span class="preprocessor">#endif </span><span class="comment">// VCL_IO_MESH_PLY_DETAIL_VERTEX_H</span></div>
+<div class="ttc" id="agroup__views_html_gae55a7544cb59464c26959bcc4cec23ea"><div class="ttname"><a href="group__views.html#gae55a7544cb59464c26959bcc4cec23ea">vcl::views::vertices</a></div><div class="ttdeci">constexpr detail::VerticesView vertices</div><div class="ttdoc">A view that allows to iterate over the Vertex elements of an object.</div><div class="ttdef"><b>Definition</b> vertex.h:77</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
