@@ -16,7 +16,7 @@ var group__load__mesh =
     [ "vcl::loadMeshes", "group__load__mesh.html#gaa65ff4bc5eb4aad49ae79091227f017f", null ],
     [ "vcl::loadMeshes", "group__load__mesh.html#gace793f303f73b4d3535ba88d50af603f", null ],
     [ "vcl::loadMeshes", "group__load__mesh.html#ga466ca92447216e56fe8632c97fa60eb4", null ],
-    [ "vcl::loadMeshesFileFormats", "group__load__mesh.html#ga628d6f60ac99826b94c8792934e0712c", null ],
+    [ "vcl::loadMeshesFormats", "group__load__mesh.html#ga6aab95f6dc00af3d5e166a507aedb283", null ],
     [ "vcl::loadMeshFormats", "group__load__mesh.html#gaca2ffd01c19343c95dea0e1966921f45", null ],
     [ "vcl::loadObj", "group__load__mesh.html#ga50de9bdc1377f0e237c225e72f8d9152", null ],
     [ "vcl::loadObj", "group__load__mesh.html#ga21b0e84221ba3f932ffcdd0fbec03bde", null ],

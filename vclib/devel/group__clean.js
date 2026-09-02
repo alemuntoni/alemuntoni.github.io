@@ -7,7 +7,7 @@ var group__clean =
     [ "vcl::nonManifoldVertexCount", "group__clean.html#ga96f52653df559ec74ee4fddcb6f6dbb8", null ],
     [ "vcl::referencedVertices", "group__clean.html#gadd9ad1f8e67f067f3ac809f013ea5c54", null ],
     [ "vcl::removeDegenerateFaces", "group__clean.html#ga3561ea390b2dfc6fec49d12543ea60e7", null ],
-    [ "vcl::removeDegenerateVertices", "group__clean.html#gab66f1f7b28309ff8be6a866b65bbc39e", null ],
+    [ "vcl::removeDegenerateVertices", "group__clean.html#gab76eff6370bb8d3104b390396c07fd54", null ],
     [ "vcl::removeDuplicateFaces", "group__clean.html#ga18334bcf9f3cc7d545c1a3995156d510", null ],
     [ "vcl::removeDuplicateVertices", "group__clean.html#ga68f5425781faf0728054878e1e165a63", null ],
     [ "vcl::removeUnreferencedVertices", "group__clean.html#ga25c5d478a258364fa7a8215e7ffbb7d2", null ],

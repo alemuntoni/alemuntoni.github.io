@@ -153,12 +153,12 @@ requires HasPerFaceAdjacentFaces&lt;MeshType&gt;</td></tr>
 <tr class="separator:gadd9ad1f8e67f067f3ac809f013ea5c54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3561ea390b2dfc6fec49d12543ea60e7" id="r_ga3561ea390b2dfc6fec49d12543ea60e7"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
 <tr class="memitem:ga3561ea390b2dfc6fec49d12543ea60e7"><td class="memTemplItemLeft" align="right" valign="top">uint&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__clean.html#ga3561ea390b2dfc6fec49d12543ea60e7">vcl::removeDegenerateFaces</a> (MeshType &amp;<a class="el" href="classvcl_1_1Segment.html">m</a>)</td></tr>
-<tr class="memdesc:ga3561ea390b2dfc6fec49d12543ea60e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all degenerate faces from the input mesh.  <br /></td></tr>
+<tr class="memdesc:ga3561ea390b2dfc6fec49d12543ea60e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes or repairs all degenerate faces from the input mesh.  <br /></td></tr>
 <tr class="separator:ga3561ea390b2dfc6fec49d12543ea60e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab66f1f7b28309ff8be6a866b65bbc39e" id="r_gab66f1f7b28309ff8be6a866b65bbc39e"><td class="memTemplParams" colspan="2">template&lt;MeshConcept MeshType&gt; </td></tr>
-<tr class="memitem:gab66f1f7b28309ff8be6a866b65bbc39e"><td class="memTemplItemLeft" align="right" valign="top">uint&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__clean.html#gab66f1f7b28309ff8be6a866b65bbc39e">vcl::removeDegenerateVertices</a> (MeshType &amp;<a class="el" href="classvcl_1_1Segment.html">m</a>, <a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1Segment.html">deleteAlsoFaces</a>)</td></tr>
-<tr class="memdesc:gab66f1f7b28309ff8be6a866b65bbc39e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all vertices that have position with invalid floating point values (NaN or inf).  <br /></td></tr>
-<tr class="separator:gab66f1f7b28309ff8be6a866b65bbc39e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab76eff6370bb8d3104b390396c07fd54" id="r_gab76eff6370bb8d3104b390396c07fd54"><td class="memTemplParams" colspan="2">template&lt;MeshConcept MeshType&gt; </td></tr>
+<tr class="memitem:gab76eff6370bb8d3104b390396c07fd54"><td class="memTemplItemLeft" align="right" valign="top">uint&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__clean.html#gab76eff6370bb8d3104b390396c07fd54">vcl::removeDegenerateVertices</a> (MeshType &amp;<a class="el" href="classvcl_1_1Segment.html">m</a>, <a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1Segment.html">deleteAlsoIncidentElements</a>)</td></tr>
+<tr class="memdesc:gab76eff6370bb8d3104b390396c07fd54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all vertices that have position with invalid floating point values (NaN or inf).  <br /></td></tr>
+<tr class="separator:gab76eff6370bb8d3104b390396c07fd54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga18334bcf9f3cc7d545c1a3995156d510" id="r_ga18334bcf9f3cc7d545c1a3995156d510"><td class="memTemplParams" colspan="2">template&lt;FaceMeshConcept MeshType&gt; </td></tr>
 <tr class="memitem:ga18334bcf9f3cc7d545c1a3995156d510"><td class="memTemplItemLeft" align="right" valign="top">uint&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__clean.html#ga18334bcf9f3cc7d545c1a3995156d510">vcl::removeDuplicateFaces</a> (MeshType &amp;<a class="el" href="classvcl_1_1Segment.html">m</a>)</td></tr>
 <tr class="memdesc:ga18334bcf9f3cc7d545c1a3995156d510"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all duplicate faces of the mesh by looking only at their vertex references.  <br /></td></tr>
@@ -179,7 +179,7 @@ requires HasPerFaceAdjacentFaces&lt;MeshType&gt;</td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>List of Mesh Cleaning and repairing algorithms. </p>
 <p>This group contains algorithms for cleaning and repairing meshes, along with algorithms for checking the mesh topology that allow to identify issues in the mesh structure.</p>
-<p>You can access these algorithms by including <code>#include &lt;vclib/algorithms/clean.h&gt;</code> </p>
+<p>You can access these algorithms by including <code>#include &lt;<a class="el" href="algorithms_2mesh_8h_source.html">vclib/algorithms/mesh.h</a>&gt;</code> </p>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ga6da6833bc5f28213e28d424af19029e4" name="ga6da6833bc5f28213e28d424af19029e4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga6da6833bc5f28213e28d424af19029e4">&#9670;&#160;</a></span>connectedComponentCount()</h2>
@@ -437,8 +437,11 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Removes all degenerate faces from the input mesh. </p>
-<p>This function removes all faces in the input mesh that are topologically degenerate, meaning that they have two or more vertex references that link the same vertex. All degenerate faces are zero area faces, but not all zero area faces are degenerate (for example, a face with three different vertex references, but two of them have the same position). Therefore, if you also want to remove these kinds of faces, you should call <code>removeDuplicatedVertices(m)</code> first. This function does not adjust topology.</p>
+<p>Removes or repairs all degenerate faces from the input mesh. </p>
+<p>This function removes or repairs all faces in the input mesh that are topologically degenerate, meaning that they have two or more consecutive vertex references that link the same vertex.</p>
+<p>For fixed-size faces (e.g. <a class="el" href="classvcl_1_1Triangle.html">Triangle</a> meshes), any face containing consecutive duplicated vertices is completely marked as deleted. For dynamic-size faces (e.g. <a class="el" href="classvcl_1_1Polygon.html" title="The Polygon class represents a polygon in a N-dimensional Euclidean space.">Polygon</a> meshes), the function will attempt to "repair" the face by erasing the duplicated vertex references. If after this process the polygon ends up having fewer than 3 vertices, it will be marked as deleted.</p>
+<p>All degenerate faces are zero area faces, but not all zero area faces are degenerate (for example, a face with three different vertex references, but two of them have the same position). Therefore, if you also want to remove these kinds of faces, you should call <code>removeDuplicateVertices(m)</code> first.</p>
+<dl class="section note"><dt>Note</dt><dd>This function automatically updates all internal topological references to the deleted faces, invalidating them (e.g. setting them to <code>nullptr</code> or <code>UINT_NULL</code>).</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">MeshType</td><td>The type of the input <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. It must satisfy the FaceMeshConcept.</td></tr>
@@ -447,7 +450,7 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">m</td><td>The input mesh for which to remove degenerate faces. This mesh will be modified in place, with all degenerate faces being marked as deleted.</td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">m</td><td>The input mesh for which to remove degenerate faces. This mesh will be modified in place.</td></tr>
   </table>
   </dd>
 </dl>
@@ -455,8 +458,8 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
 
 </div>
 </div>
-<a id="gab66f1f7b28309ff8be6a866b65bbc39e" name="gab66f1f7b28309ff8be6a866b65bbc39e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab66f1f7b28309ff8be6a866b65bbc39e">&#9670;&#160;</a></span>removeDegenerateVertices()</h2>
+<a id="gab76eff6370bb8d3104b390396c07fd54" name="gab76eff6370bb8d3104b390396c07fd54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab76eff6370bb8d3104b390396c07fd54">&#9670;&#160;</a></span>removeDegenerateVertices()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -473,7 +476,7 @@ template&lt;MeshConcept MeshType&gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td>
-          <td class="paramname"><em>deleteAlsoFaces</em>&#160;</td>
+          <td class="paramname"><em>deleteAlsoIncidentElements</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -484,7 +487,7 @@ template&lt;MeshConcept MeshType&gt; </div>
 </div><div class="memdoc">
 
 <p>Removes all vertices that have position with invalid floating point values (NaN or inf). </p>
-<p>This function removes all vertices in the input mesh that have position with invalid floating point values, such as NaN or inf. If the input mesh has faces, and if the flag <code>deleteAlsoFaces</code> is set to true, all faces incident on deleted vertices are also deleted.</p>
+<p>This function removes all vertices in the input mesh that have position with invalid floating point values, such as NaN or inf. If the flag <code>deleteAlsoIncidentElements</code> is set to true, all elements (e.g. faces or edges) incident on deleted vertices are also deleted.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">MeshType</td><td>The type of the input <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. It must satisfy the MeshConcept.</td></tr>
@@ -494,7 +497,7 @@ template&lt;MeshConcept MeshType&gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">m</td><td>The input mesh for which to remove degenerated vertices. This mesh will be modified in place, with all degenerated vertices being marked as deleted.</td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">deleteAlsoFaces</td><td>If true, all faces incident on deleted vertices will also be deleted.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">deleteAlsoIncidentElements</td><td>If true, all elements incident on deleted vertices will also be deleted.</td></tr>
   </table>
   </dd>
 </dl>
@@ -524,7 +527,7 @@ template&lt;FaceMeshConcept MeshType&gt; </div>
 <p>This function removes all faces in the input mesh that have the same vertex references as another face in the mesh. The comparison of face vertex references is based on the indices of the face vertices, so it assumes that the mesh's vertices have already been unified.</p>
 <dl class="section note"><dt>Note</dt><dd>This function currently only works for triangle meshes. It should be made more general to work for polygonal meshes as well.</dd>
 <dd>
-This function does not update any topology relation that could be affected by the removal of duplicate faces, such as the VF or FF relation. Therefore, it is usually performed before building any topology information.</dd></dl>
+This function automatically updates all internal topological references to the deleted faces, invalidating them (e.g. setting them to <code>nullptr</code> or <code>UINT_NULL</code>).</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">MeshType</td><td>The type of the input <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a>. It must satisfy the TriangleMeshConcept.</td></tr>

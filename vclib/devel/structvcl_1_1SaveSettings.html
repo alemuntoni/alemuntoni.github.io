@@ -115,13 +115,16 @@ $(document).ready(function(){initNavTree('structvcl_1_1SaveSettings.html',''); i
 <p>The <a class="el" href="structvcl_1_1SaveSettings.html" title="The SaveSettings structure contains the settings that can be used to save a mesh to a stream/file.">SaveSettings</a> structure contains the settings that can be used to save a mesh to a stream/file.  
  <a href="structvcl_1_1SaveSettings.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="settings_8h_source.html">vclib/io/mesh/settings.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="core_2include_2vclib_2io_2mesh_2settings_8h_source.html">vclib/io/mesh/settings.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a2543b816d94fe26b06368f50fe413d86" id="r_a2543b816d94fe26b06368f50fe413d86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvcl_1_1SaveSettings.html#a2543b816d94fe26b06368f50fe413d86">binary</a> = <a class="el" href="classvcl_1_1Segment.html">true</a></td></tr>
 <tr class="memdesc:a2543b816d94fe26b06368f50fe413d86"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, the mesh will be saved in binary format. Otherwise, it will be saved in ASCII format.  <br /></td></tr>
 <tr class="separator:a2543b816d94fe26b06368f50fe413d86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad22cfb884dbd017acee902a0d1df47b2" id="r_ad22cfb884dbd017acee902a0d1df47b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvcl_1_1SaveSettings.html#ad22cfb884dbd017acee902a0d1df47b2">embedBuffers</a> = <a class="el" href="classvcl_1_1Segment.html">false</a></td></tr>
+<tr class="memdesc:ad22cfb884dbd017acee902a0d1df47b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, the mesh buffers (textures included) will be saved embedded. Otherwise, they will be saved externally.  <br /></td></tr>
+<tr class="separator:ad22cfb884dbd017acee902a0d1df47b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a838dcb7142b60a9e351d6f706e88e019" id="r_a838dcb7142b60a9e351d6f706e88e019"><td class="memItemLeft" align="right" valign="top"><a id="a838dcb7142b60a9e351d6f706e88e019" name="a838dcb7142b60a9e351d6f706e88e019"></a>
 <a class="el" href="classvcl_1_1MeshInfo.html">MeshInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
 <tr class="memdesc:a838dcb7142b60a9e351d6f706e88e019"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data structure that tells the saving functions which components of the mesh should be saved. Only the components that can be saved in the file format will be saved. If the info is uninitialized, all the components that can be saved will be saved. <br /></td></tr>
@@ -158,6 +161,24 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ad22cfb884dbd017acee902a0d1df47b2" name="ad22cfb884dbd017acee902a0d1df47b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad22cfb884dbd017acee902a0d1df47b2">&#9670;&#160;</a></span>embedBuffers</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">bool</a> vcl::SaveSettings::embedBuffers = <a class="el" href="classvcl_1_1Segment.html">false</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If true, the mesh buffers (textures included) will be saved embedded. Otherwise, they will be saved externally. </p>
+<p>It applies only to file formats that support embedded buffers (like glTF).</p>
+<dl class="section note"><dt>Note</dt><dd>When set to true, texture images are saved even if saveTextureImages is set to false. When embedBuffers is set to false, saveTextureImages determines whether to save texture images or not. </dd></dl>
+
+</div>
+</div>
 <a id="aa3349b22705fee5f654f8e8bee22e440" name="aa3349b22705fee5f654f8e8bee22e440"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa3349b22705fee5f654f8e8bee22e440">&#9670;&#160;</a></span>saveTextureImages</h2>
 
@@ -178,7 +199,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>vclib/core/include/vclib/io/mesh/<a class="el" href="settings_8h_source.html">settings.h</a></li>
+<li>vclib/core/include/vclib/io/mesh/<a class="el" href="core_2include_2vclib_2io_2mesh_2settings_8h_source.html">settings.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

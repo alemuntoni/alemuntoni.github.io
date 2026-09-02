@@ -31,15 +31,18 @@ var classvcl_1_1MeshRenderData =
     [ "setTriangleColorsBuffer", "classvcl_1_1MeshRenderData.html#abc79ab9db3a7a3e1dc687d2b7c30d107", null ],
     [ "setTriangleIndicesBuffer", "classvcl_1_1MeshRenderData.html#a1986b114d33d0dbbdbd5320bc57adca7", null ],
     [ "setTriangleNormalsBuffer", "classvcl_1_1MeshRenderData.html#af4f650b6f3dbda766369b2df30eebad5", null ],
+    [ "setTriangleSelectionBuffer", "classvcl_1_1MeshRenderData.html#a6e115394efbb5c0695f80a4a74068800", null ],
     [ "setVertexColorsBuffer", "classvcl_1_1MeshRenderData.html#a27c475c2e2465bf70fba2594be834acd", null ],
     [ "setVertexMaterialIndicesBuffer", "classvcl_1_1MeshRenderData.html#a876279396f4729bc223641c5fe65351d", null ],
     [ "setVertexNormalsBuffer", "classvcl_1_1MeshRenderData.html#ac9c0e5867db771925f02f992b9a0b20d", null ],
     [ "setVertexPositionsBuffer", "classvcl_1_1MeshRenderData.html#acc582a7f89437c093d9d145b6743bb73", null ],
+    [ "setVertexSelectionBuffer", "classvcl_1_1MeshRenderData.html#aa3ac5a9f1adff661462f6f89f89e0e08", null ],
     [ "setVertexTangentsBuffer", "classvcl_1_1MeshRenderData.html#acd70ae41e3974436a45ff5c84066315c", null ],
     [ "setVertexTexCoordsBuffer", "classvcl_1_1MeshRenderData.html#a983d97ed4534c6a81383ca828d8c92a9", null ],
     [ "setWedgeTexCoordsBuffer", "classvcl_1_1MeshRenderData.html#af108c2784d786a37bb4485c0f4557595", null ],
     [ "setWireframeIndicesBuffer", "classvcl_1_1MeshRenderData.html#ad9a346a363ded46832c192f7075c289f", null ],
     [ "triangleChunk", "classvcl_1_1MeshRenderData.html#ad4e7f75d44208e3f5391ec05be5e1f58", null ],
     [ "triangleChunksNumber", "classvcl_1_1MeshRenderData.html#a1d294e961e4087e2e879ab219abbcad4", null ],
+    [ "triPolyIndexMap", "classvcl_1_1MeshRenderData.html#af1cd03265f407955ed50b18ad460edf4", null ],
     [ "update", "classvcl_1_1MeshRenderData.html#a9ec603e5ddc4ecb7f8fca08a683311a1", null ]
 ];

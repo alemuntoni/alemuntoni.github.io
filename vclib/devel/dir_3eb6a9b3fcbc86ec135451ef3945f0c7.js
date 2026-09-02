@@ -1,10 +1,10 @@
 var dir_3eb6a9b3fcbc86ec135451ef3945f0c7 =
 [
-    [ "bit_set", "dir_a09d32db7b4cfa6c0a71c46316497008.html", "dir_a09d32db7b4cfa6c0a71c46316497008" ],
     [ "camera", "dir_4670e557c62657244e455bef775388b6.html", "dir_4670e557c62657244e455bef775388b6" ],
     [ "matrix", "dir_8277401a9e435b4fdbbb05dda0130fe7.html", "dir_8277401a9e435b4fdbbb05dda0130fe7" ],
     [ "vector", "dir_661f0b79192f9e747ba0cc6f51f7aee4.html", "dir_661f0b79192f9e747ba0cc6f51f7aee4" ],
     [ "array.h", "array_8h_source.html", null ],
+    [ "bit_proxy.h", "bit__proxy_8h_source.html", null ],
     [ "bit_set.h", "bit__set_8h_source.html", null ],
     [ "box.h", "space_2core_2box_8h_source.html", null ],
     [ "camera.h", "space_2core_2camera_8h_source.html", null ],
@@ -15,6 +15,8 @@ var dir_3eb6a9b3fcbc86ec135451ef3945f0c7 =
     [ "line.h", "line_8h_source.html", null ],
     [ "material.h", "space_2core_2material_8h_source.html", null ],
     [ "matrix.h", "matrix_8h_source.html", null ],
+    [ "ortho_basis.h", "ortho__basis_8h_source.html", null ],
+    [ "ortho_frame.h", "ortho__frame_8h_source.html", null ],
     [ "parallel_vector_tuple.h", "parallel__vector__tuple_8h_source.html", null ],
     [ "plane.h", "plane_8h_source.html", null ],
     [ "point.h", "point_8h_source.html", null ],

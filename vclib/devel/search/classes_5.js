@@ -23,9 +23,12 @@ var searchData=
   ['firsttype_20',['FirstType',['../structvcl_1_1FirstType.html',1,'vcl']]],
   ['firsttype_3c_20templatedtypewrapper_3c_20args_2e_2e_2e_20_3e_20_3e_21',['FirstType&lt; TemplatedTypeWrapper&lt; Args... &gt; &gt;',['../structvcl_1_1FirstType_3_01TemplatedTypeWrapper_3_01Args_8_8_8_01_4_01_4.html',1,'vcl']]],
   ['firsttype_3c_20typewrapper_3c_20args_2e_2e_2e_20_3e_20_3e_22',['FirstType&lt; TypeWrapper&lt; Args... &gt; &gt;',['../structvcl_1_1FirstType_3_01TypeWrapper_3_01Args_8_8_8_01_4_01_4.html',1,'vcl']]],
-  ['fontdata_23',['FontData',['../structvcl_1_1FontData.html',1,'vcl']]],
-  ['fontmanager_24',['FontManager',['../classvcl_1_1FontManager.html',1,'vcl']]],
-  ['foreachtype_25',['ForEachType',['../structvcl_1_1ForEachType.html',1,'vcl']]],
-  ['foreachtype_3c_20t_2e_2e_2e_20_3e_26',['ForEachType&lt; T... &gt;',['../structvcl_1_1ForEachType.html',1,'vcl']]],
-  ['foreachtype_3c_20typewrapper_3c_20t_2e_2e_2e_20_3e_20_3e_27',['ForEachType&lt; TypeWrapper&lt; T... &gt; &gt;',['../structvcl_1_1ForEachType_3_01TypeWrapper_3_01T_8_8_8_01_4_01_4.html',1,'vcl']]]
+  ['floatrangeslider_23',['FloatRangeSlider',['../classvcl_1_1qt_1_1FloatRangeSlider.html',1,'vcl::qt']]],
+  ['floatslider_24',['FloatSlider',['../classvcl_1_1qt_1_1FloatSlider.html',1,'vcl::qt']]],
+  ['fontdata_25',['FontData',['../structvcl_1_1FontData.html',1,'vcl']]],
+  ['fontmanager_26',['FontManager',['../classvcl_1_1FontManager.html',1,'vcl']]],
+  ['foreachtype_27',['ForEachType',['../structvcl_1_1ForEachType.html',1,'vcl']]],
+  ['foreachtype_3c_20t_2e_2e_2e_20_3e_28',['ForEachType&lt; T... &gt;',['../structvcl_1_1ForEachType.html',1,'vcl']]],
+  ['foreachtype_3c_20typewrapper_3c_20t_2e_2e_2e_20_3e_20_3e_29',['ForEachType&lt; TypeWrapper&lt; T... &gt; &gt;',['../structvcl_1_1ForEachType_3_01TypeWrapper_3_01T_8_8_8_01_4_01_4.html',1,'vcl']]],
+  ['framebuffer_30',['FrameBuffer',['../classvcl_1_1FrameBuffer.html',1,'vcl']]]
 ];

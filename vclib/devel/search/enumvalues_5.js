@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['metallic_5froughness_0',['METALLIC_ROUGHNESS',['../classvcl_1_1Material.html#a12db78645943e2a62e14e6e6a350c622a9d3d58825f3b7225ff1fa4cf2609fea5',1,'vcl::Material']]],
-  ['mirrored_5frepeat_1',['MIRRORED_REPEAT',['../classvcl_1_1TextureDescriptor.html#ae7756cc72dbb1d94a95a251072562396acf6164235e7bfffb5c4c7c4b685f660a',1,'vcl::TextureDescriptor']]]
+  ['khronos_5fpbr_5fneutral_0',['KHRONOS_PBR_NEUTRAL',['../structvcl_1_1ViewerSettings.html#ace7e2a53d9196e69b5360efa978b5986af028cab613834f0cfaa4ea6d07a4a6b7',1,'vcl::ViewerSettings']]]
 ];

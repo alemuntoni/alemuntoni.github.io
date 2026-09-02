@@ -129,12 +129,11 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2b37e7c7de79684a1af66aeebe2b2611" id="r_a2b37e7c7de79684a1af66aeebe2b2611"><td class="memItemLeft" align="right" valign="top"><a id="a2b37e7c7de79684a1af66aeebe2b2611" name="a2b37e7c7de79684a1af66aeebe2b2611"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CanvasOpenGL2</b> (<a class="el" href="classvcl_1_1Segment.html">void</a> *winId, uint width, uint height, <a class="el" href="classvcl_1_1Segment.html">void</a> *displayId=<a class="el" href="classvcl_1_1Segment.html">nullptr</a>)</td></tr>
-<tr class="separator:a2b37e7c7de79684a1af66aeebe2b2611"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a25273773432372ffd2a71d97cc64df" id="r_a2a25273773432372ffd2a71d97cc64df"><td class="memItemLeft" align="right" valign="top"><a id="a2a25273773432372ffd2a71d97cc64df" name="a2a25273773432372ffd2a71d97cc64df"></a>
-<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>onInit</b> ()</td></tr>
-<tr class="memdesc:a2a25273773432372ffd2a71d97cc64df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Automatically called by the DerivedRenderApp when the window initializes. Initialization is requires in some backends+window manager combinations, and therefore it must be implemented (also if empty) in every Canvas class. <br /></td></tr>
+<tr class="memitem:afb0e8790d0e058d49eb325d276d39d43" id="r_afb0e8790d0e058d49eb325d276d39d43"><td class="memItemLeft" align="right" valign="top"><a id="afb0e8790d0e058d49eb325d276d39d43" name="afb0e8790d0e058d49eb325d276d39d43"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CanvasOpenGL2</b> (<a class="el" href="classvcl_1_1Segment.html">void</a> *winId, uint width, uint height, <a class="el" href="classvcl_1_1Segment.html">void</a> *displayId=<a class="el" href="classvcl_1_1Segment.html">nullptr</a>, vcl::NativeWindowHandleType <a class="el" href="classvcl_1_1Segment.html">windowType</a>=vcl::NativeWindowHandleType::DEFAULT)</td></tr>
+<tr class="separator:afb0e8790d0e058d49eb325d276d39d43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a25273773432372ffd2a71d97cc64df" id="r_a2a25273773432372ffd2a71d97cc64df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1CanvasOpenGL2.html#a2a25273773432372ffd2a71d97cc64df">onInit</a> ()</td></tr>
+<tr class="memdesc:a2a25273773432372ffd2a71d97cc64df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functions called by the DerivedRenderApp.  <br /></td></tr>
 <tr class="separator:a2a25273773432372ffd2a71d97cc64df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8f94af541edbfb6e01f8904b7f3bc24" id="r_af8f94af541edbfb6e01f8904b7f3bc24"><td class="memItemLeft" align="right" valign="top"><a id="af8f94af541edbfb6e01f8904b7f3bc24" name="af8f94af541edbfb6e01f8904b7f3bc24"></a>
 <a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>onPaint</b> ()</td></tr>
@@ -152,9 +151,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a95a6c0e683bae97aada6ef80c1fdd4d5" id="r_a95a6c0e683bae97aada6ef80c1fdd4d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1CanvasOpenGL2.html#a95a6c0e683bae97aada6ef80c1fdd4d5">onScreenshot</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> std::string &amp;<a class="el" href="classvcl_1_1Segment.html">filename</a>, uint <a class="el" href="classvcl_1_1Segment.html">multiplier</a>=1)</td></tr>
 <tr class="memdesc:a95a6c0e683bae97aada6ef80c1fdd4d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Automatically called by the DerivedRenderApp when a drawer asks for a screenshot.  <br /></td></tr>
 <tr class="separator:a95a6c0e683bae97aada6ef80c1fdd4d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeca85f727b89cf1d57f1b7f29c74e751" id="r_aeca85f727b89cf1d57f1b7f29c74e751"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1CanvasOpenGL2.html#aeca85f727b89cf1d57f1b7f29c74e751">onScreenshot</a> (<a class="el" href="classvcl_1_1Image.html">vcl::Image</a> &amp;image, uint <a class="el" href="classvcl_1_1Segment.html">multiplier</a>=1)</td></tr>
+<tr class="memdesc:aeca85f727b89cf1d57f1b7f29c74e751"><td class="mdescLeft">&#160;</td><td class="mdescRight">Automatically called by the DerivedRenderApp when a drawer asks for a screenshot in memory. Also called by the public member function <a class="el" href="classvcl_1_1CanvasOpenGL2.html#a7ca4e6334fdab3ed43ba9fb72f7eacbf" title="Request a screenshot of the canvas.">screenshot()</a>.  <br /></td></tr>
+<tr class="separator:aeca85f727b89cf1d57f1b7f29c74e751"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ca4e6334fdab3ed43ba9fb72f7eacbf" id="r_a7ca4e6334fdab3ed43ba9fb72f7eacbf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1CanvasOpenGL2.html#a7ca4e6334fdab3ed43ba9fb72f7eacbf">screenshot</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> std::string &amp;<a class="el" href="classvcl_1_1Segment.html">filename</a>, uint <a class="el" href="classvcl_1_1Segment.html">multiplier</a>=1)</td></tr>
-<tr class="memdesc:a7ca4e6334fdab3ed43ba9fb72f7eacbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request a screenshot of the canvas. The screenshot will be saved asynchronously.  <br /></td></tr>
+<tr class="memdesc:a7ca4e6334fdab3ed43ba9fb72f7eacbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request a screenshot of the canvas.  <br /></td></tr>
 <tr class="separator:a7ca4e6334fdab3ed43ba9fb72f7eacbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a938c1876a703ad15bf1817d52628a901" id="r_a938c1876a703ad15bf1817d52628a901"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1CanvasOpenGL2.html#a938c1876a703ad15bf1817d52628a901">screenshot</a> (<a class="el" href="classvcl_1_1Image.html">vcl::Image</a> &amp;image, uint <a class="el" href="classvcl_1_1Segment.html">multiplier</a>=1)</td></tr>
+<tr class="memdesc:a938c1876a703ad15bf1817d52628a901"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request a screenshot of the canvas in memory.  <br /></td></tr>
+<tr class="separator:a938c1876a703ad15bf1817d52628a901"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09a869c9b0c5c3254cb41d3e94c64c8d" id="r_a09a869c9b0c5c3254cb41d3e94c64c8d"><td class="memItemLeft" align="right" valign="top"><a id="a09a869c9b0c5c3254cb41d3e94c64c8d" name="a09a869c9b0c5c3254cb41d3e94c64c8d"></a>
 <a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setDefaultClearColor</b> (<a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="classvcl_1_1Color.html">Color</a> &amp;color)</td></tr>
 <tr class="separator:a09a869c9b0c5c3254cb41d3e94c64c8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -218,6 +223,36 @@ class vcl::CanvasOpenGL2&lt; DerivedRenderApp &gt;</div><p>The Canvas class desc
 <li>frame(): this function must be called by the derived classes at the end of each frame, after all the opengl2 rendering commands have been issued; </li>
 </ul>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2a25273773432372ffd2a71d97cc64df" name="a2a25273773432372ffd2a71d97cc64df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a25273773432372ffd2a71d97cc64df">&#9670;&#160;</a></span>onInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> <a class="el" href="classvcl_1_1Segment.html">DerivedRenderApp</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">void</a> <a class="el" href="classvcl_1_1CanvasOpenGL2.html">vcl::CanvasOpenGL2</a>&lt; <a class="el" href="classvcl_1_1Segment.html">DerivedRenderApp</a> &gt;::onInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Functions called by the DerivedRenderApp. </p>
+<p>Automatically called by the DerivedRenderApp when the window initializes. Initialization is requires in some backends+window manager combinations, and therefore it must be implemented (also if empty) in every Canvas class. </p>
+
+</div>
+</div>
 <a id="ad8581b008848df2530d01e2eee2e194d" name="ad8581b008848df2530d01e2eee2e194d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad8581b008848df2530d01e2eee2e194d">&#9670;&#160;</a></span>onReadDepth()</h2>
 
@@ -363,7 +398,7 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> <a class=
 </div>
 </div>
 <a id="a95a6c0e683bae97aada6ef80c1fdd4d5" name="a95a6c0e683bae97aada6ef80c1fdd4d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95a6c0e683bae97aada6ef80c1fdd4d5">&#9670;&#160;</a></span>onScreenshot()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a95a6c0e683bae97aada6ef80c1fdd4d5">&#9670;&#160;</a></span>onScreenshot() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -411,8 +446,56 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> <a class=
 
 </div>
 </div>
+<a id="aeca85f727b89cf1d57f1b7f29c74e751" name="aeca85f727b89cf1d57f1b7f29c74e751"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeca85f727b89cf1d57f1b7f29c74e751">&#9670;&#160;</a></span>onScreenshot() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> <a class="el" href="classvcl_1_1Segment.html">DerivedRenderApp</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1CanvasOpenGL2.html">vcl::CanvasOpenGL2</a>&lt; <a class="el" href="classvcl_1_1Segment.html">DerivedRenderApp</a> &gt;::onScreenshot </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Image.html">vcl::Image</a> &amp;&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>multiplier</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Automatically called by the DerivedRenderApp when a drawer asks for a screenshot in memory. Also called by the public member function <a class="el" href="classvcl_1_1CanvasOpenGL2.html#a7ca4e6334fdab3ed43ba9fb72f7eacbf" title="Request a screenshot of the canvas.">screenshot()</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td></td></tr>
+    <tr><td class="paramname">multiplier</td><td>multiplier applied to the canvas image. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the screenshot is requested, false otherwise. </dd></dl>
+
+</div>
+</div>
 <a id="a7ca4e6334fdab3ed43ba9fb72f7eacbf" name="a7ca4e6334fdab3ed43ba9fb72f7eacbf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ca4e6334fdab3ed43ba9fb72f7eacbf">&#9670;&#160;</a></span>screenshot()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ca4e6334fdab3ed43ba9fb72f7eacbf">&#9670;&#160;</a></span>screenshot() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -447,11 +530,59 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> <a class=
 </table>
 </div><div class="memdoc">
 
-<p>Request a screenshot of the canvas. The screenshot will be saved asynchronously. </p>
+<p>Request a screenshot of the canvas. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">filename</td><td>The filename where the screenshot will be saved. </td></tr>
-    <tr><td class="paramname">multiplier</td><td>The multiplier applied to the canvas image. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>The filename where the screenshot will be saved. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">multiplier</td><td>The multiplier applied to the canvas image. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the screenshot is requested, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a938c1876a703ad15bf1817d52628a901" name="a938c1876a703ad15bf1817d52628a901"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a938c1876a703ad15bf1817d52628a901">&#9670;&#160;</a></span>screenshot() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> <a class="el" href="classvcl_1_1Segment.html">DerivedRenderApp</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1CanvasOpenGL2.html">vcl::CanvasOpenGL2</a>&lt; <a class="el" href="classvcl_1_1Segment.html">DerivedRenderApp</a> &gt;::screenshot </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classvcl_1_1Image.html">vcl::Image</a> &amp;&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>multiplier</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Request a screenshot of the canvas in memory. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">image</td><td>The image where the screenshot will be saved. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">multiplier</td><td>The multiplier applied to the canvas image. </td></tr>
   </table>
   </dd>
 </dl>

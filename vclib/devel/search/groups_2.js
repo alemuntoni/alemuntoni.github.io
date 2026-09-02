@@ -8,11 +8,12 @@ var searchData=
   ['core_20algorithms_5',['core algorithms',['../group__algorithms__core.html',1,'Core Algorithms'],['../group__core__polygon.html',1,'Polygon Core Algorithms']]],
   ['core_20bounding_20box_20algorithms_6',['Core Bounding Box Algorithms',['../group__core__bounding__box.html',1,'']]],
   ['core_20box_20algorithms_7',['Core Box Algorithms',['../group__core__box.html',1,'']]],
-  ['core_20box3_20algorithms_8',['Core Box3 Algorithms',['../group__core__box3.html',1,'']]],
-  ['core_20create_20algorithms_9',['Core Create Algorithms',['../group__core__create.html',1,'']]],
-  ['core_20data_20structures_10',['Core Data Structures',['../group__space__core.html',1,'']]],
-  ['core_20distance_20algorithms_11',['Core Distance Algorithms',['../group__core__distance.html',1,'']]],
-  ['core_20intersection_20algorithms_12',['Core Intersection Algorithms',['../group__core__intersection.html',1,'']]],
-  ['create_20algorithms_13',['Core Create Algorithms',['../group__core__create.html',1,'']]],
-  ['creation_20algorithms_14',['Mesh Creation Algorithms',['../group__create.html',1,'']]]
+  ['core_20box2_20algorithms_8',['Core Box2 Algorithms',['../group__core__box2.html',1,'']]],
+  ['core_20box3_20algorithms_9',['Core Box3 Algorithms',['../group__core__box3.html',1,'']]],
+  ['core_20create_20algorithms_10',['Core Create Algorithms',['../group__core__create.html',1,'']]],
+  ['core_20data_20structures_11',['Core Data Structures',['../group__space__core.html',1,'']]],
+  ['core_20distance_20algorithms_12',['Core Distance Algorithms',['../group__core__distance.html',1,'']]],
+  ['core_20intersection_20algorithms_13',['Core Intersection Algorithms',['../group__core__intersection.html',1,'']]],
+  ['create_20algorithms_14',['Core Create Algorithms',['../group__core__create.html',1,'']]],
+  ['creation_20algorithms_15',['Mesh Creation Algorithms',['../group__create.html',1,'']]]
 ];

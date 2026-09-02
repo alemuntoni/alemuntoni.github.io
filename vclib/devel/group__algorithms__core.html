@@ -192,13 +192,34 @@ Functions</h2></td></tr>
 <tr class="memitem:ga2ebc5ce4ca1d1348db7d0aee561043fc"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Matrix.html">Matrix44</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__algorithms__core.html#ga2ebc5ce4ca1d1348db7d0aee561043fc">vcl::lookAtMatrixLeftHanded</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> PointType &amp;eye, <a class="el" href="classvcl_1_1Segment.html">const</a> PointType &amp;center, <a class="el" href="classvcl_1_1Segment.html">const</a> PointType &amp;up)</td></tr>
 <tr class="memdesc:ga2ebc5ce4ca1d1348db7d0aee561043fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and returns a left handed look at matrix.  <br /></td></tr>
 <tr class="separator:ga2ebc5ce4ca1d1348db7d0aee561043fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga212c052ae1efd3426a5ea49051f8011c" id="r_ga212c052ae1efd3426a5ea49051f8011c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__algorithms__core.html#ga212c052ae1efd3426a5ea49051f8011c">vcl::poissonRandomNumber</a> (<a class="el" href="classvcl_1_1Segment.html">double</a> <a class="el" href="classvcl_1_1Segment.html">lambda</a>, std::mt19937 &amp;<a class="el" href="classvcl_1_1Segment.html">gen</a>)</td></tr>
-<tr class="memdesc:ga212c052ae1efd3426a5ea49051f8011c"><td class="mdescLeft">&#160;</td><td class="mdescRight">algorithm poisson random number (Knuth): init: Let L ← e^−λ, k ← 0 and p ← 1. do: k ← k + 1. Generate uniform random number u in [0,1] and let p ← p × u. while p &gt; L. return k − 1.  <br /></td></tr>
-<tr class="separator:ga212c052ae1efd3426a5ea49051f8011c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1928216d4ca321551feca3fc03054e03" id="r_ga1928216d4ca321551feca3fc03054e03"><td class="memTemplParams" colspan="2">template&lt;Point3Concept PointType&gt; </td></tr>
-<tr class="memitem:ga1928216d4ca321551feca3fc03054e03"><td class="memTemplItemLeft" align="right" valign="top">PointType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__algorithms__core.html#ga1928216d4ca321551feca3fc03054e03">vcl::randomTriangleBarycentricCoordinate</a> (std::mt19937 &amp;<a class="el" href="classvcl_1_1Segment.html">gen</a>)</td></tr>
-<tr class="memdesc:ga1928216d4ca321551feca3fc03054e03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate the barycentric coords of a random point over a triangle, with a uniform distribution over the triangle. It uses the parallelogram folding trick.  <br /></td></tr>
-<tr class="separator:ga1928216d4ca321551feca3fc03054e03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5c46b9d1e5b0e1c8e36e091e9d4aeef1" id="r_ga5c46b9d1e5b0e1c8e36e091e9d4aeef1"><td class="memTemplParams" colspan="2">template&lt;Numeric T&gt; </td></tr>
+<tr class="memitem:ga5c46b9d1e5b0e1c8e36e091e9d4aeef1"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__algorithms__core.html#ga5c46b9d1e5b0e1c8e36e091e9d4aeef1">vcl::random</a> (<a class="el" href="group__base.html#ga0430f4135d06fef7f529a8aa326088aa">DistConfig</a>&lt; T &gt; <a class="el" href="classvcl_1_1Segment.html">distConf</a>=std::monostate(), <a class="el" href="group__base.html#gac23c0056d07d547cca0552f0df438b2e">RandomConfig</a> <a class="el" href="classvcl_1_1Segment.html">config</a>=std::monostate())</td></tr>
+<tr class="memdesc:ga5c46b9d1e5b0e1c8e36e091e9d4aeef1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a random number with a specified distribution.  <br /></td></tr>
+<tr class="separator:ga5c46b9d1e5b0e1c8e36e091e9d4aeef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4df2709fa13188b7b71405ab99fc055d" id="r_ga4df2709fa13188b7b71405ab99fc055d"><td class="memTemplParams" colspan="2">template&lt;BitSetConcept BitSetType&gt; </td></tr>
+<tr class="memitem:ga4df2709fa13188b7b71405ab99fc055d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">BitSetType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__algorithms__core.html#ga4df2709fa13188b7b71405ab99fc055d">vcl::random</a> (<a class="el" href="group__base.html#ga0430f4135d06fef7f529a8aa326088aa">DistConfig</a>&lt; <a class="el" href="classvcl_1_1Segment.html">typename</a> BitSetType::UnderlyingType &gt; <a class="el" href="classvcl_1_1Segment.html">distConf</a>=std::monostate(), <a class="el" href="group__base.html#gac23c0056d07d547cca0552f0df438b2e">RandomConfig</a> <a class="el" href="classvcl_1_1Segment.html">config</a>=std::monostate())</td></tr>
+<tr class="memdesc:ga4df2709fa13188b7b71405ab99fc055d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a random bitset of a given BitSetType.  <br /></td></tr>
+<tr class="separator:ga4df2709fa13188b7b71405ab99fc055d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga84232bbd011331a53cb7c861547108ef" id="r_ga84232bbd011331a53cb7c861547108ef"><td class="memTemplParams" colspan="2">template&lt;BoxConcept BoxType&gt; </td></tr>
+<tr class="memitem:ga84232bbd011331a53cb7c861547108ef"><td class="memTemplItemLeft" align="right" valign="top">BoxType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__algorithms__core.html#ga84232bbd011331a53cb7c861547108ef">vcl::random</a> (<a class="el" href="group__base.html#ga0430f4135d06fef7f529a8aa326088aa">DistConfig</a>&lt; <a class="el" href="classvcl_1_1Segment.html">typename</a> BoxType::ScalarType &gt; <a class="el" href="classvcl_1_1Segment.html">distConf</a>=std::monostate(), <a class="el" href="group__base.html#gac23c0056d07d547cca0552f0df438b2e">RandomConfig</a> <a class="el" href="classvcl_1_1Segment.html">config</a>=std::monostate())</td></tr>
+<tr class="memdesc:ga84232bbd011331a53cb7c861547108ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a random box of a given BoxType.  <br /></td></tr>
+<tr class="separator:ga84232bbd011331a53cb7c861547108ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gade6ed24c29ad16edd099fcdfd660fbed" id="r_gade6ed24c29ad16edd099fcdfd660fbed"><td class="memTemplParams" colspan="2">template&lt;PlaneConcept PlaneType&gt; </td></tr>
+<tr class="memitem:gade6ed24c29ad16edd099fcdfd660fbed"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">PlaneType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__algorithms__core.html#gade6ed24c29ad16edd099fcdfd660fbed">vcl::random</a> (<a class="el" href="group__base.html#ga0430f4135d06fef7f529a8aa326088aa">DistConfig</a>&lt; <a class="el" href="classvcl_1_1Segment.html">typename</a> PlaneType::ScalarType &gt; <a class="el" href="classvcl_1_1Segment.html">distConf</a>=std::monostate(), <a class="el" href="group__base.html#gac23c0056d07d547cca0552f0df438b2e">RandomConfig</a> <a class="el" href="classvcl_1_1Segment.html">config</a>=std::monostate())</td></tr>
+<tr class="memdesc:gade6ed24c29ad16edd099fcdfd660fbed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a random plane of a given PlaneType.  <br /></td></tr>
+<tr class="separator:gade6ed24c29ad16edd099fcdfd660fbed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0c04abce6560bb749497b5fc648b3104" id="r_ga0c04abce6560bb749497b5fc648b3104"><td class="memTemplParams" colspan="2">template&lt;PointConcept PointType&gt; </td></tr>
+<tr class="memitem:ga0c04abce6560bb749497b5fc648b3104"><td class="memTemplItemLeft" align="right" valign="top">PointType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__algorithms__core.html#ga0c04abce6560bb749497b5fc648b3104">vcl::random</a> (<a class="el" href="group__base.html#ga0430f4135d06fef7f529a8aa326088aa">DistConfig</a>&lt; <a class="el" href="classvcl_1_1Segment.html">typename</a> PointType::ScalarType &gt; <a class="el" href="classvcl_1_1Segment.html">distConf</a>=std::monostate(), <a class="el" href="group__base.html#gac23c0056d07d547cca0552f0df438b2e">RandomConfig</a> <a class="el" href="classvcl_1_1Segment.html">config</a>=std::monostate())</td></tr>
+<tr class="memdesc:ga0c04abce6560bb749497b5fc648b3104"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a random point of a given PointType.  <br /></td></tr>
+<tr class="separator:ga0c04abce6560bb749497b5fc648b3104"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga52a3feba2ce862a57506471f7d7b6630" id="r_ga52a3feba2ce862a57506471f7d7b6630"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> ScalarType &gt; </td></tr>
+<tr class="memitem:ga52a3feba2ce862a57506471f7d7b6630"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; ScalarType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__algorithms__core.html#ga52a3feba2ce862a57506471f7d7b6630">vcl::randomPolygonBarycentricCoordinate</a> (uint <a class="el" href="classvcl_1_1Segment.html">polySize</a>, <a class="el" href="group__base.html#gac23c0056d07d547cca0552f0df438b2e">RandomConfig</a> <a class="el" href="classvcl_1_1Segment.html">config</a>=std::monostate())</td></tr>
+<tr class="memdesc:ga52a3feba2ce862a57506471f7d7b6630"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate barycentric coordinates of a random point over a regular polygon in 2D, with uniform distribution over its vertices.  <br /></td></tr>
+<tr class="separator:ga52a3feba2ce862a57506471f7d7b6630"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae547d0316fb8e7f2f1ac6ab3260e12d9" id="r_gae547d0316fb8e7f2f1ac6ab3260e12d9"><td class="memTemplParams" colspan="2">template&lt;Point3Concept PointType&gt; </td></tr>
+<tr class="memitem:gae547d0316fb8e7f2f1ac6ab3260e12d9"><td class="memTemplItemLeft" align="right" valign="top">PointType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__algorithms__core.html#gae547d0316fb8e7f2f1ac6ab3260e12d9">vcl::randomTriangleBarycentricCoordinate</a> (<a class="el" href="group__base.html#gac23c0056d07d547cca0552f0df438b2e">RandomConfig</a> <a class="el" href="classvcl_1_1Segment.html">config</a>=std::monostate())</td></tr>
+<tr class="memdesc:gae547d0316fb8e7f2f1ac6ab3260e12d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate the barycentric coordinates of a random point over a triangle, with a uniform distribution over the triangle.  <br /></td></tr>
+<tr class="separator:gae547d0316fb8e7f2f1ac6ab3260e12d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5396bbb99432d258d9330d681f1461db" id="r_ga5396bbb99432d258d9330d681f1461db"><td class="memTemplParams" colspan="2">template&lt;Matrix33Or44Concept MatrixType&gt; </td></tr>
 <tr class="memitem:ga5396bbb99432d258d9330d681f1461db"><td class="memTemplItemLeft" align="right" valign="top">MatrixType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__algorithms__core.html#ga5396bbb99432d258d9330d681f1461db">vcl::removeScalingFromMatrix</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> MatrixType &amp;<a class="el" href="classvcl_1_1Segment.html">matrix</a>)</td></tr>
 <tr class="memdesc:ga5396bbb99432d258d9330d681f1461db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a matrix with the scaling factors removed.  <br /></td></tr>
@@ -790,26 +811,25 @@ template&lt;MatrixConcept Matrix44, Point3Concept PointType&gt; </div>
 
 </div>
 </div>
-<a id="ga212c052ae1efd3426a5ea49051f8011c" name="ga212c052ae1efd3426a5ea49051f8011c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga212c052ae1efd3426a5ea49051f8011c">&#9670;&#160;</a></span>poissonRandomNumber()</h2>
+<a id="ga5c46b9d1e5b0e1c8e36e091e9d4aeef1" name="ga5c46b9d1e5b0e1c8e36e091e9d4aeef1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5c46b9d1e5b0e1c8e36e091e9d4aeef1">&#9670;&#160;</a></span>random() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
+<div class="memtemplate">
+template&lt;Numeric T&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">int</a> vcl::poissonRandomNumber </td>
+          <td class="memname">T vcl::random </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">double</a>&#160;</td>
-          <td class="paramname"><em>lambda</em>, </td>
+          <td class="paramtype"><a class="el" href="group__base.html#ga0430f4135d06fef7f529a8aa326088aa">DistConfig</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>distConf</em> = <code>std::monostate()</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::mt19937 &amp;&#160;</td>
-          <td class="paramname"><em>gen</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="group__base.html#gac23c0056d07d547cca0552f0df438b2e">RandomConfig</a>&#160;</td>
+          <td class="paramname"><em>config</em> = <code>std::monostate()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -817,27 +837,278 @@ template&lt;MatrixConcept Matrix44, Point3Concept PointType&gt; </div>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>algorithm poisson random number (Knuth): init: Let L ← e^−λ, k ← 0 and p ← 1. do: k ← k + 1. Generate uniform random number u in [0,1] and let p ← p × u. while p &gt; L. return k − 1. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">lambda</td><td></td></tr>
-    <tr><td class="paramname">gen</td><td></td></tr>
+<p>Generate a random number with a specified distribution. </p>
+<p>This function generates a random number based on the provided distribution configuration and random generator configuration. The distribution can be specified as a pair of bounds for a uniform distribution or as a custom function that takes a random generator and returns a random number.</p>
+<p>When distConf is std::monostate (default), the numeric type determines how the distribution range is chosen:</p><ul>
+<li>Floating-point types (float, double): uniform in [0.0, 1.0)</li>
+<li>Unsigned integer types: uniform in [0, numeric_limits&lt;T&gt;::max()]</li>
+<li>Signed integer types: uniform in [numeric_limits&lt;T&gt;::min(), numeric_limits&lt;T&gt;::max()], which includes negative values for two's complement representations (e.g., INT32_MIN to INT32_MAX).</li>
+</ul>
+<p>Example usage: </p><div class="fragment"><div class="line"><span class="comment">// Integer with explicit bounds [0, 100]</span></div>
+<div class="line"><span class="keywordtype">int</span> x = <a class="code hl_class" href="classvcl_1_1Segment.html">vcl::random&lt;int&gt;</a>(std::pair{0, 100});</div>
+<div class="line"><span class="comment">// Double with deterministic seed</span></div>
+<div class="line"><span class="keywordtype">double</span> y = <a class="code hl_class" href="classvcl_1_1Segment.html">vcl::random&lt;double&gt;</a>(std::pair{0.0, 1.0}, 42);</div>
+<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:26</div></div>
+</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Numeric type for the random number. Must satisfy the Numeric concept. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">distConf</td><td>DistConfig&lt;T&gt; that determines how to provide the random distribution. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">config</td><td>RandomConfig that determines how to provide the random number generator. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A random number of type T based on the specified distribution. </dd></dl>
 
 </div>
 </div>
-<a id="ga1928216d4ca321551feca3fc03054e03" name="ga1928216d4ca321551feca3fc03054e03"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1928216d4ca321551feca3fc03054e03">&#9670;&#160;</a></span>randomTriangleBarycentricCoordinate()</h2>
+<a id="ga4df2709fa13188b7b71405ab99fc055d" name="ga4df2709fa13188b7b71405ab99fc055d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4df2709fa13188b7b71405ab99fc055d">&#9670;&#160;</a></span>random() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;BitSetConcept BitSetType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">BitSetType</a> vcl::random </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__base.html#ga0430f4135d06fef7f529a8aa326088aa">DistConfig</a>&lt; <a class="el" href="classvcl_1_1Segment.html">typename</a> BitSetType::UnderlyingType &gt;&#160;</td>
+          <td class="paramname"><em>distConf</em> = <code>std::monostate()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__base.html#gac23c0056d07d547cca0552f0df438b2e">RandomConfig</a>&#160;</td>
+          <td class="paramname"><em>config</em> = <code>std::monostate()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate a random bitset of a given BitSetType. </p>
+<p>This function generates a random bitset of the specified BitSetType based on the provided distribution configuration and random generator configuration. The distribution can be specified as a pair of bounds for a uniform distribution or as a custom function that takes a random generator and returns a random number.</p>
+<p>The function performs a single random draw from the specified distribution and sets the underlying value of the bitset accordingly. The resulting bitset will have its bits set based on the random value generated.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">BitSetType</td><td>Type of the bitset to generate, must satisfy BitSetConcept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">distConf</td><td>DistConfig that determines how to provide the random distribution. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">config</td><td>RandomConfig that determines how to provide the random number generator. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A random bitset of type BitSetType based on the specified distribution. </dd></dl>
+
+</div>
+</div>
+<a id="ga84232bbd011331a53cb7c861547108ef" name="ga84232bbd011331a53cb7c861547108ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga84232bbd011331a53cb7c861547108ef">&#9670;&#160;</a></span>random() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;BoxConcept BoxType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">BoxType vcl::random </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__base.html#ga0430f4135d06fef7f529a8aa326088aa">DistConfig</a>&lt; <a class="el" href="classvcl_1_1Segment.html">typename</a> BoxType::ScalarType &gt;&#160;</td>
+          <td class="paramname"><em>distConf</em> = <code>std::monostate()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__base.html#gac23c0056d07d547cca0552f0df438b2e">RandomConfig</a>&#160;</td>
+          <td class="paramname"><em>config</em> = <code>std::monostate()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate a random box of a given BoxType. </p>
+<p>This function generates a random box of the specified BoxType based on the provided distribution configuration and random generator configuration. The distribution can be specified as a pair of bounds for a uniform distribution or as a custom function that takes a random generator and returns a random number.</p>
+<p>Generated boxes will have their min and max points randomly generated, ensuring that the min point is less than or equal to the max point for each dimension.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">BoxType</td><td>Type of the box to generate, must satisfy BoxConcept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">distConf</td><td>DistConfig that determines how to provide the random distribution. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">config</td><td>RandomConfig that determines how to provide the random number generator. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A random box of type BoxType based on the specified distribution. </dd></dl>
+
+</div>
+</div>
+<a id="gade6ed24c29ad16edd099fcdfd660fbed" name="gade6ed24c29ad16edd099fcdfd660fbed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gade6ed24c29ad16edd099fcdfd660fbed">&#9670;&#160;</a></span>random() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;PlaneConcept PlaneType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">PlaneType</a> vcl::random </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__base.html#ga0430f4135d06fef7f529a8aa326088aa">DistConfig</a>&lt; <a class="el" href="classvcl_1_1Segment.html">typename</a> PlaneType::ScalarType &gt;&#160;</td>
+          <td class="paramname"><em>distConf</em> = <code>std::monostate()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__base.html#gac23c0056d07d547cca0552f0df438b2e">RandomConfig</a>&#160;</td>
+          <td class="paramname"><em>config</em> = <code>std::monostate()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate a random plane of a given PlaneType. </p>
+<p>This function generates a random plane of the specified PlaneType based on the provided distribution configuration and random generator configuration. The distribution can be specified as a pair of bounds for a uniform distribution or as a custom function that takes a random generator and returns a random number.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">PlaneType</td><td>Type of the plane to generate, must satisfy PlaneConcept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">distConf</td><td>DistConfig that determines how to provide the random distribution. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">config</td><td>RandomConfig that determines how to provide the random number generator. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A random plane of type PlaneType based on the specified distribution. </dd></dl>
+
+</div>
+</div>
+<a id="ga0c04abce6560bb749497b5fc648b3104" name="ga0c04abce6560bb749497b5fc648b3104"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0c04abce6560bb749497b5fc648b3104">&#9670;&#160;</a></span>random() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;PointConcept PointType&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">PointType vcl::random </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__base.html#ga0430f4135d06fef7f529a8aa326088aa">DistConfig</a>&lt; <a class="el" href="classvcl_1_1Segment.html">typename</a> PointType::ScalarType &gt;&#160;</td>
+          <td class="paramname"><em>distConf</em> = <code>std::monostate()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__base.html#gac23c0056d07d547cca0552f0df438b2e">RandomConfig</a>&#160;</td>
+          <td class="paramname"><em>config</em> = <code>std::monostate()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate a random point of a given PointType. </p>
+<p>This function generates a random point of the specified PointType based on the provided distribution configuration and random generator configuration. The distribution can be specified as a pair of bounds for a uniform distribution or as a custom function that takes a random generator and returns a random number.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">PointType</td><td>Type of the point to generate, must satisfy PointConcept. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">distConf</td><td>DistConfig that determines how to provide the random distribution. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">config</td><td>RandomConfig that determines how to provide the random number generator. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A random point of type PointType based on the specified distribution. </dd></dl>
+
+</div>
+</div>
+<a id="ga52a3feba2ce862a57506471f7d7b6630" name="ga52a3feba2ce862a57506471f7d7b6630"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga52a3feba2ce862a57506471f7d7b6630">&#9670;&#160;</a></span>randomPolygonBarycentricCoordinate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> ScalarType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; ScalarType &gt; vcl::randomPolygonBarycentricCoordinate </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>polySize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__base.html#gac23c0056d07d547cca0552f0df438b2e">RandomConfig</a>&#160;</td>
+          <td class="paramname"><em>config</em> = <code>std::monostate()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate barycentric coordinates of a random point over a regular polygon in 2D, with uniform distribution over its vertices. </p>
+<p>The algorithm generates N independent and identically distributed random values, then normalizes them so they sum to 1. This produces a point uniformly distributed on the (N-1)-simplex — equivalent to a random convex combination of the polygon vertices.</p>
+<p>For triangles (polySize == 3), prefer <a class="el" href="group__algorithms__core.html#gae547d0316fb8e7f2f1ac6ab3260e12d9">randomTriangleBarycentricCoordinate</a> which uses the exact parallelogram folding trick and may offer better control over distribution bounds.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ScalarType</td><td>Numeric type for the barycentric coordinates. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">polySize</td><td>Number of vertices in the polygon. Must be greater than 0. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">config</td><td>RandomConfig that determines how to provide the random number generator. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A std::vector&lt;ScalarType&gt; of size polySize with values in [0, 1) that sum to exactly 1 (within floating-point precision). The i-th element is the weight for the i-th vertex of the polygon.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>For perfect uniformity on triangles, the barycentric coordinate method used by randomTriangleBarycentricCoordinate is exact. This function uses normalization which is an approximation that becomes arbitrarily close to uniform as polySize increases. </dd></dl>
+
+</div>
+</div>
+<a id="gae547d0316fb8e7f2f1ac6ab3260e12d9" name="gae547d0316fb8e7f2f1ac6ab3260e12d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae547d0316fb8e7f2f1ac6ab3260e12d9">&#9670;&#160;</a></span>randomTriangleBarycentricCoordinate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -847,21 +1118,28 @@ template&lt;Point3Concept PointType&gt; </div>
         <tr>
           <td class="memname">PointType vcl::randomTriangleBarycentricCoordinate </td>
           <td>(</td>
-          <td class="paramtype">std::mt19937 &amp;&#160;</td>
-          <td class="paramname"><em>gen</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="group__base.html#gac23c0056d07d547cca0552f0df438b2e">RandomConfig</a>&#160;</td>
+          <td class="paramname"><em>config</em> = <code>std::monostate()</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Generate the barycentric coords of a random point over a triangle, with a uniform distribution over the triangle. It uses the parallelogram folding trick. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">gen</td><td></td></tr>
+<p>Generate the barycentric coordinates of a random point over a triangle, with a uniform distribution over the triangle. </p>
+<p>It uses the parallelogram folding trick.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">PointType</td><td>Type of the point to generate. It must satisfy the Point3Concept. The ScalarType is used as the distribution numeric type. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">config</td><td>RandomConfig that determines how to provide the random number generator. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A Point3 of type PointType whose components are normalized barycentric coordinates (they sum to 1 and each component is in [0, 1]). </dd></dl>
 
 </div>
 </div>

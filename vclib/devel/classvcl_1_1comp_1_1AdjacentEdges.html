@@ -278,12 +278,12 @@ position k", without check if it is less than the number of adj edges. Works als
 <tr class="separator:a6d01a13a06936c5da5e04508af63b199"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f53fbe2e5151c17589e3a7ad6cf3831" id="r_a9f53fbe2e5151c17589e3a7ad6cf3831"><td class="memTemplParams" colspan="2">template&lt;Range Rng&gt; <br />
 requires InputRange&lt;<a class="el" href="classvcl_1_1Segment.html">Rng</a>, <a class="el" href="classvcl_1_1Edge.html">Edge</a>*&gt;</td></tr>
-<tr class="memitem:a9f53fbe2e5151c17589e3a7ad6cf3831"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a9f53fbe2e5151c17589e3a7ad6cf3831">setAdjEdges</a> (<a class="el" href="classvcl_1_1Segment.html">Rng</a> &amp;&amp;<a class="el" href="classvcl_1_1Segment.html">r</a>)</td></tr>
+<tr class="memitem:a9f53fbe2e5151c17589e3a7ad6cf3831"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a9f53fbe2e5151c17589e3a7ad6cf3831">setAdjEdges</a> (<a class="el" href="classvcl_1_1Segment.html">Rng</a> &amp;&amp;r)</td></tr>
 <tr class="memdesc:a9f53fbe2e5151c17589e3a7ad6cf3831"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all the adjacent edges of the element.  <br /></td></tr>
 <tr class="separator:a9f53fbe2e5151c17589e3a7ad6cf3831"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ac864e9187a2eddfba689164e1d1946" id="r_a4ac864e9187a2eddfba689164e1d1946"><td class="memTemplParams" colspan="2">template&lt;Range Rng&gt; <br />
 requires InputRange&lt;<a class="el" href="classvcl_1_1Segment.html">Rng</a>, <a class="el" href="classvcl_1_1Segment.html">uint</a>&gt;</td></tr>
-<tr class="memitem:a4ac864e9187a2eddfba689164e1d1946"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a4ac864e9187a2eddfba689164e1d1946">setAdjEdges</a> (<a class="el" href="classvcl_1_1Segment.html">Rng</a> &amp;&amp;<a class="el" href="classvcl_1_1Segment.html">r</a>)</td></tr>
+<tr class="memitem:a4ac864e9187a2eddfba689164e1d1946"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentEdges.html#a4ac864e9187a2eddfba689164e1d1946">setAdjEdges</a> (<a class="el" href="classvcl_1_1Segment.html">Rng</a> &amp;&amp;r)</td></tr>
 <tr class="memdesc:a4ac864e9187a2eddfba689164e1d1946"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all the adjacent edges of the element.  <br /></td></tr>
 <tr class="separator:a4ac864e9187a2eddfba689164e1d1946"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -329,7 +329,7 @@ class vcl::comp::AdjacentEdges&lt; STORE_INDICES, Edge, N, TTVC, ParentElemType,
 <div class="fragment"><div class="line">v.adjEdgeCount();</div>
 <div class="line"><span class="keyword">auto</span>* e = v.adjEdge(0);</div>
 <div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">uint</a> <a class="code hl_class" href="classvcl_1_1Segment.html">ei</a> = v.adjEdgeIndex(0);</div>
-<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:41</div></div>
+<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:26</div></div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>This component could be <em>Tied To <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Count</em>: it means that the size of the container, if dynamic, will change automatically along the <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Count of the Component. Check the <code>TTVC</code> template value on the specialization of your component to check if it is tied to the <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Count. For further details check the documentation of the ContainerComponent class.</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -724,7 +724,7 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">bool</a> STORE_INDICES
 
 <p>Returns the index in the edge container of the i-th adjacent edge of the element, but using as index the module between i and the number of adjacent edges. You can use this function if you need to get the "index
 of the adjacent edge next to position k", without check if it is less than the number of adjacent edges. Works also for negative numbers: </p>
-<div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">k</a> = <a class="code hl_class" href="classvcl_1_1Segment.html">pos</a>; <span class="comment">// some position of an adjacent edge</span></div>
+<div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">k</a> = pos; <span class="comment">// some position of an adjacent edge</span></div>
 <div class="line"><span class="keyword">auto</span> <a class="code hl_class" href="classvcl_1_1Segment.html">idx</a> = e.adjEdgeIndexMod(<a class="code hl_class" href="classvcl_1_1Segment.html">k</a>+1); <span class="comment">// the index of the adjacent edge next</span></div>
 <div class="line">                                   <span class="comment">// to k, that may also be at pos 0</span></div>
 <div class="line"><span class="keyword">auto</span> <a class="code hl_class" href="classvcl_1_1Segment.html">lastIdx</a> = e.adjEdgeIndexMod(-1); <span class="comment">// the index of the adjacent edge</span></div>
@@ -768,7 +768,7 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">bool</a> STORE_INDICES
 <div class="fragment"><div class="line"><span class="keywordflow">for</span> (<a class="code hl_class" href="classvcl_1_1Segment.html">uint</a> <a class="code hl_class" href="classvcl_1_1Segment.html">eid</a> : <a class="code hl_class" href="classvcl_1_1Segment.html">el</a>.<a class="code hl_function" href="classvcl_1_1comp_1_1AdjacentEdges.html#a48261566203e734f9abeb46d0acdde4a">adjEdgeIndices</a>()) {</div>
 <div class="line">    <span class="comment">// Do something with adj edge index...</span></div>
 <div class="line">}</div>
-<div class="ttc" id="aclassvcl_1_1comp_1_1AdjacentEdges_html_a48261566203e734f9abeb46d0acdde4a"><div class="ttname"><a href="classvcl_1_1comp_1_1AdjacentEdges.html#a48261566203e734f9abeb46d0acdde4a">vcl::comp::AdjacentEdges::adjEdgeIndices</a></div><div class="ttdeci">View&lt; ConstAdjacentEdgeIndexIterator &gt; adjEdgeIndices() const</div><div class="ttdoc">Returns a lightweight view object that stores the begin and end iterators of the container of adjacen...</div><div class="ttdef"><b>Definition</b> adjacent_edges.h:601</div></div>
+<div class="ttc" id="aclassvcl_1_1comp_1_1AdjacentEdges_html_a48261566203e734f9abeb46d0acdde4a"><div class="ttname"><a href="classvcl_1_1comp_1_1AdjacentEdges.html#a48261566203e734f9abeb46d0acdde4a">vcl::comp::AdjacentEdges::adjEdgeIndices</a></div><div class="ttdeci">View&lt; ConstAdjacentEdgeIndexIterator &gt; adjEdgeIndices() const</div><div class="ttdoc">Returns a lightweight view object that stores the begin and end iterators of the container of adjacen...</div><div class="ttdef"><b>Definition</b> adjacent_edges.h:586</div></div>
 </div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>a lightweight view object that can be used in range-based for loops to iterate over adjacent edge indices. </dd></dl>
 
 </div>
@@ -801,7 +801,7 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">bool</a> STORE_INDICES
 
 <p>Returns the pointer to the i-th adjacent edge of the element but using as index the module between i and the number of adjacent edges. You can use this function if you need to get the "next adjacent edge after
 position k", without check if it is less than the number of adj edges. Works also for negative numbers: </p>
-<div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">k</a> = <a class="code hl_class" href="classvcl_1_1Segment.html">pos</a>; <span class="comment">// some position of an adjacent edge</span></div>
+<div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">k</a> = pos; <span class="comment">// some position of an adjacent edge</span></div>
 <div class="line"><span class="keyword">auto</span>* <a class="code hl_class" href="classvcl_1_1Segment.html">next</a> = e.adjEdgeMod(<a class="code hl_class" href="classvcl_1_1Segment.html">k</a>+1); <span class="comment">// the adj edge next to k, that may also</span></div>
 <div class="line">                                <span class="comment">// be at pos 0</span></div>
 <div class="line"><span class="keyword">auto</span>* <a class="code hl_class" href="classvcl_1_1Segment.html">last</a> = e.adjEdgeMod(-1); <span class="comment">// the adj edge in position</span></div>
@@ -882,8 +882,8 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">bool</a> STORE_INDICES
 <div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keyword">auto</span>* <a class="code hl_function" href="classvcl_1_1comp_1_1AdjacentEdges.html#ac3ba354a27f43f2e5b6f6661ce225b2d">adjEdge</a> : <a class="code hl_class" href="classvcl_1_1Segment.html">el</a>.<a class="code hl_function" href="classvcl_1_1comp_1_1AdjacentEdges.html#a689a884fbd85c0ebe530deff8c64cf5d">adjEdges</a>()) {</div>
 <div class="line">    <span class="comment">// Do something with adjEdge</span></div>
 <div class="line">}</div>
-<div class="ttc" id="aclassvcl_1_1comp_1_1AdjacentEdges_html_a689a884fbd85c0ebe530deff8c64cf5d"><div class="ttname"><a href="classvcl_1_1comp_1_1AdjacentEdges.html#a689a884fbd85c0ebe530deff8c64cf5d">vcl::comp::AdjacentEdges::adjEdges</a></div><div class="ttdeci">View&lt; AdjacentEdgeIterator &gt; adjEdges()</div><div class="ttdoc">Returns a lightweight view object that stores the begin and end iterators of the container of adjacen...</div><div class="ttdef"><b>Definition</b> adjacent_edges.h:562</div></div>
-<div class="ttc" id="aclassvcl_1_1comp_1_1AdjacentEdges_html_ac3ba354a27f43f2e5b6f6661ce225b2d"><div class="ttname"><a href="classvcl_1_1comp_1_1AdjacentEdges.html#ac3ba354a27f43f2e5b6f6661ce225b2d">vcl::comp::AdjacentEdges::adjEdge</a></div><div class="ttdeci">Edge * adjEdge(uint i)</div><div class="ttdoc">Returns the pointer to the i-th adjacent edge of the element.</div><div class="ttdef"><b>Definition</b> adjacent_edges.h:161</div></div>
+<div class="ttc" id="aclassvcl_1_1comp_1_1AdjacentEdges_html_a689a884fbd85c0ebe530deff8c64cf5d"><div class="ttname"><a href="classvcl_1_1comp_1_1AdjacentEdges.html#a689a884fbd85c0ebe530deff8c64cf5d">vcl::comp::AdjacentEdges::adjEdges</a></div><div class="ttdeci">View&lt; AdjacentEdgeIterator &gt; adjEdges()</div><div class="ttdoc">Returns a lightweight view object that stores the begin and end iterators of the container of adjacen...</div><div class="ttdef"><b>Definition</b> adjacent_edges.h:547</div></div>
+<div class="ttc" id="aclassvcl_1_1comp_1_1AdjacentEdges_html_ac3ba354a27f43f2e5b6f6661ce225b2d"><div class="ttname"><a href="classvcl_1_1comp_1_1AdjacentEdges.html#ac3ba354a27f43f2e5b6f6661ce225b2d">vcl::comp::AdjacentEdges::adjEdge</a></div><div class="ttdeci">Edge * adjEdge(uint i)</div><div class="ttdoc">Returns the pointer to the i-th adjacent edge of the element.</div><div class="ttdef"><b>Definition</b> adjacent_edges.h:146</div></div>
 </div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>a lightweight view object that can be used in range-based for loops to iterate over adjacent edges. </dd></dl>
 
 </div>
@@ -1662,7 +1662,7 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">bool</a> STORE_INDICES
 </div><div class="memdoc">
 
 <p>Sets the i-th adjacent edge of the element, but using as index the module between i and the number of adjacent edges. You can use this function if you need to set the "next adjacent edge after position k", without check if it is less than the number of adjacent edges. Works also for negative numbers: </p>
-<div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">k</a> = <a class="code hl_class" href="classvcl_1_1Segment.html">pos</a>; <span class="comment">// some position of an adj edge</span></div>
+<div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">k</a> = pos; <span class="comment">// some position of an adj edge</span></div>
 <div class="line">e.setAdjEdgeMod(<a class="code hl_class" href="classvcl_1_1Segment.html">k</a>+1, <a class="code hl_class" href="classvcl_1_1Segment.html">aEdge</a>); <span class="comment">// set the adj edge next to k, that may also</span></div>
 <div class="line">                              <span class="comment">// be at pos 0</span></div>
 <div class="line">e.setAdjEdgeMod(-1, <a class="code hl_class" href="classvcl_1_1Segment.html">aEdge</a>); <span class="comment">// set the adj edge in position</span></div>
@@ -1714,7 +1714,7 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">bool</a> STORE_INDICES
 </div><div class="memdoc">
 
 <p>Sets the i-th adjacent edge of the element, but using as index the module between i and the number of adjacent edges. You can use this function if you need to set the "next adjacent edge after position k", without check if it is less than the number of adjacent edges. Works also for negative numbers: </p>
-<div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">k</a> = <a class="code hl_class" href="classvcl_1_1Segment.html">pos</a>; <span class="comment">// some position of an adj edge</span></div>
+<div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">k</a> = pos; <span class="comment">// some position of an adj edge</span></div>
 <div class="line">e.setAdjEdgeMod(<a class="code hl_class" href="classvcl_1_1Segment.html">k</a>+1, <a class="code hl_class" href="classvcl_1_1Segment.html">aEdgeInd</a>); <span class="comment">// set the adj edge next to k, that may</span></div>
 <div class="line">                                <span class="comment">// also be at pos 0</span></div>
 <div class="line">e.setAdjEdgeMod(-1, <a class="code hl_class" href="classvcl_1_1Segment.html">aEdgeInd</a>); <span class="comment">// set the adj edge in position</span></div>

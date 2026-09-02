@@ -9,6 +9,7 @@ var classvcl_1_1Image =
     [ "data", "classvcl_1_1Image.html#a1d7f6afd7eabc017ad68dec5cb9f5359", null ],
     [ "deserialize", "classvcl_1_1Image.html#a5a4795d201fe34f04f6115e406a05d5a", null ],
     [ "height", "classvcl_1_1Image.html#a683eb846af3cf88d21ea4da6c9023244", null ],
+    [ "isAlmostEqual", "classvcl_1_1Image.html#a28a682f4333e95971503790f9d90304f", null ],
     [ "isNull", "classvcl_1_1Image.html#ac6df1f2e7f7754ac221a9010820436d1", null ],
     [ "mirror", "classvcl_1_1Image.html#a92962bfc3d6df278d624fcad2abb82a0", null ],
     [ "pixel", "classvcl_1_1Image.html#a4fc0646ce4cb49487b6590881ef48710", null ],

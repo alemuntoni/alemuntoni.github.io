@@ -128,9 +128,13 @@ Inheritance diagram for vcl::Mesh&lt; Args &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="classvcl_1_1Mesh__inherit__graph.png" border="0" usemap="#avcl_1_1Mesh_3_01Args_01_4_inherit__map" alt="Inheritance graph"/></div>
 <map name="avcl_1_1Mesh_3_01Args_01_4_inherit__map" id="avcl_1_1Mesh_3_01Args_01_4_inherit__map">
-<area shape="rect" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ..." alt="" coords="5,79,148,104"/>
-<area shape="rect" title=" " alt="" coords="51,5,102,31"/>
-<area shape="poly" title=" " alt="" coords="79,44,79,79,74,79,74,44"/>
+<area shape="rect" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ..." alt="" coords="131,79,274,104"/>
+<area shape="rect" href="classvcl_1_1EdgeMeshT.html" title=" " alt="" coords="5,152,192,192"/>
+<area shape="poly" title=" " alt="" coords="178,114,125,154,122,150,175,110"/>
+<area shape="rect" href="classvcl_1_1PolyMeshT.html" title=" " alt="" coords="217,152,399,192"/>
+<area shape="poly" title=" " alt="" coords="231,110,284,150,281,154,228,114"/>
+<area shape="rect" title=" " alt="" coords="177,5,228,31"/>
+<area shape="poly" title=" " alt="" coords="205,44,205,79,200,79,200,44"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -404,11 +408,14 @@ requires (<a class="el" href="classvcl_1_1Mesh.html#af76409bf09afd6f60e6bb8f15ee
 <tr class="memitem:a7502ed5070b40b6359b086e1ced76320" id="r_a7502ed5070b40b6359b086e1ced76320"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Mesh.html#a7502ed5070b40b6359b086e1ced76320">swap</a> (<a class="el" href="classvcl_1_1Mesh.html">Mesh</a> &amp;<a class="el" href="classvcl_1_1Segment.html">m2</a>)</td></tr>
 <tr class="memdesc:a7502ed5070b40b6359b086e1ced76320"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps this mesh with the other input <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> m2.  <br /></td></tr>
 <tr class="separator:a7502ed5070b40b6359b086e1ced76320"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e35a62e4b468ad6ab9084bb472bc011" id="r_a8e35a62e4b468ad6ab9084bb472bc011"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="classvcl_1_1Segment.html">uint</a> ELEM_ID&gt; <br />
+<tr class="memitem:a3485f09ee7c81f444bf5fd88ea9fa371" id="r_a3485f09ee7c81f444bf5fd88ea9fa371"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">auto</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Mesh.html#a3485f09ee7c81f444bf5fd88ea9fa371">transformedBoundingBox</a> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
+<tr class="memdesc:a3485f09ee7c81f444bf5fd88ea9fa371"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the transformed bounding box of the mesh.  <br /></td></tr>
+<tr class="separator:a3485f09ee7c81f444bf5fd88ea9fa371"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a80631661a5e1728c464f7780f7b281" id="r_a9a80631661a5e1728c464f7780f7b281"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="classvcl_1_1Segment.html">uint</a> ELEM_ID&gt; <br />
 requires (<a class="el" href="classvcl_1_1Mesh.html#af76409bf09afd6f60e6bb8f15ee21dc0">hasContainerOf</a>&lt;ELEM_ID&gt;())</td></tr>
-<tr class="memitem:a8e35a62e4b468ad6ab9084bb472bc011"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1Mesh.html#a8e35a62e4b468ad6ab9084bb472bc011">updateIndices</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; <a class="el" href="classvcl_1_1Segment.html">uint</a> &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">newIndices</a>)</td></tr>
-<tr class="memdesc:a8e35a62e4b468ad6ab9084bb472bc011"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates all the indices and pointers of the elements of the container of ELEM_ID in the mesh, according to the mapping stored in the newIndices vector, that tells for each old element index, the new index of the element in the same container (or UINT_NULL if the element must be left as unreferenced - useful when a vertex is deleted).  <br /></td></tr>
-<tr class="separator:a8e35a62e4b468ad6ab9084bb472bc011"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a80631661a5e1728c464f7780f7b281"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1Mesh.html#a9a80631661a5e1728c464f7780f7b281">updateReferences</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; <a class="el" href="classvcl_1_1Segment.html">uint</a> &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">newIndices</a>)</td></tr>
+<tr class="memdesc:a9a80631661a5e1728c464f7780f7b281"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates all the indices and pointers of the elements of the container of ELEM_ID in the mesh, according to the mapping stored in the newIndices vector, that tells for each old element index, the new index of the element in the same container (or UINT_NULL if the element must be left as unreferenced - useful when a vertex is deleted).  <br /></td></tr>
+<tr class="separator:a9a80631661a5e1728c464f7780f7b281"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -582,7 +589,7 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">uint</a> ELEM_ID, <a c
 template&lt;ElementConcept T&gt; </td></tr>
 <tr class="memitem:acdc4e75a1d00524606ecfc3a0a501a01"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">class</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><b>mesh::ElementContainer</b></td></tr>
 <tr class="separator:acdc4e75a1d00524606ecfc3a0a501a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2a9548437838ad185162eec3d0bf1e7" id="r_ad2a9548437838ad185162eec3d0bf1e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Mesh.html#ad2a9548437838ad185162eec3d0bf1e7">swap</a> (<a class="el" href="classvcl_1_1Mesh.html">Mesh</a> &amp;<a class="el" href="classvcl_1_1Segment.html">a</a>, <a class="el" href="classvcl_1_1Mesh.html">Mesh</a> &amp;<a class="el" href="classvcl_1_1Segment.html">b</a>)</td></tr>
+<tr class="memitem:ad2a9548437838ad185162eec3d0bf1e7" id="r_ad2a9548437838ad185162eec3d0bf1e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1Mesh.html#ad2a9548437838ad185162eec3d0bf1e7">swap</a> (<a class="el" href="classvcl_1_1Mesh.html">Mesh</a> &amp;a, <a class="el" href="classvcl_1_1Mesh.html">Mesh</a> &amp;b)</td></tr>
 <tr class="memdesc:ad2a9548437838ad185162eec3d0bf1e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specializes the swap function to allow the swapping of two <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> objects.  <br /></td></tr>
 <tr class="separator:ad2a9548437838ad185162eec3d0bf1e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -611,7 +618,7 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">uint</a> ELEM_ID&gt; <
 <p>ContainerType is an alias that exposes the type of the Container that stores the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> identified by the template parameter ELEM_ID. </p>
 <p>To be used, the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> must have an ElementContainer having ID ELEM_ID.</p>
 <p>Usage: </p><div class="fragment"><div class="line"><span class="keyword">using </span>VertexContainer = MeshType::template <a class="code hl_class" href="classvcl_1_1Segment.html">ContainerType&lt;ElemId::VERTEX&gt;</a>;</div>
-<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:41</div></div>
+<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:26</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -1730,8 +1737,8 @@ requires (<a class="el" href="classvcl_1_1Mesh.html#af76409bf09afd6f60e6bb8f15ee
 <div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; <a class="code hl_class" href="classvcl_1_1Segment.html">el</a> : mesh.<a class="code hl_function" href="classvcl_1_1Mesh.html#a273ca1692976bf08ac430042b74599a2">elements</a>&lt;<a class="code hl_struct" href="structvcl_1_1ElemId.html">ElemId</a>::VERTEX&gt;()) {</div>
 <div class="line">    <span class="comment">// Do something with el</span></div>
 <div class="line">}</div>
-<div class="ttc" id="aclassvcl_1_1Mesh_html_a273ca1692976bf08ac430042b74599a2"><div class="ttname"><a href="classvcl_1_1Mesh.html#a273ca1692976bf08ac430042b74599a2">vcl::Mesh::elements</a></div><div class="ttdeci">auto elements(bool jumpDeleted=true)</div><div class="ttdef"><b>Definition</b> mesh.h:1149</div></div>
-<div class="ttc" id="astructvcl_1_1ElemId_html"><div class="ttname"><a href="structvcl_1_1ElemId.html">vcl::ElemId</a></div><div class="ttdoc">The ElemId struct enumerates the elements that can compose a mesh.</div><div class="ttdef"><b>Definition</b> base.h:54</div></div>
+<div class="ttc" id="aclassvcl_1_1Mesh_html_a273ca1692976bf08ac430042b74599a2"><div class="ttname"><a href="classvcl_1_1Mesh.html#a273ca1692976bf08ac430042b74599a2">vcl::Mesh::elements</a></div><div class="ttdeci">auto elements(bool jumpDeleted=true)</div><div class="ttdef"><b>Definition</b> mesh.h:1155</div></div>
+<div class="ttc" id="astructvcl_1_1ElemId_html"><div class="ttname"><a href="structvcl_1_1ElemId.html">vcl::ElemId</a></div><div class="ttdoc">The ElemId struct enumerates the elements that can compose a mesh.</div><div class="ttdef"><b>Definition</b> base.h:39</div></div>
 </div><!-- fragment --><p>The function requires that the <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> has a Container of Elements having ID ELEM_ID. Otherwise, a compiler error will be triggered.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -2158,11 +2165,10 @@ template&lt;ElementConcept El&gt; </div>
 <p>This means that this the only value checked is the ELEMENT_ID unsigned int exposed by the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a>, meaning that it does not check if the Elements of this mesh are exactly the same of El.</p>
 <p>In other words, it returns true also if we pass an <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> of another mesh that is of the same ELEMENT_ID (both Vertices, Faces, ecc).</p>
 <p>Example of usage (Note: EdgeMesh has Vertices, but not Faces):</p>
-<div class="fragment"><div class="line"><span class="keyword">static_assert</span>(<a class="code hl_function" href="classvcl_1_1Segment.html#a9dc942fc1dacb99622a6ffd18b2d8b0f">vcl::EdgeMesh::hasContainerOf&lt;vcl::TriMesh::Vertex&gt;</a>(),</div>
+<div class="fragment"><div class="line"><span class="keyword">static_assert</span>(vcl::EdgeMesh::hasContainerOf&lt;vcl::TriMesh::Vertex&gt;(),</div>
 <div class="line">                   <span class="stringliteral">&quot;EdgeMesh does not have Vertices&quot;</span>);</div>
-<div class="line"><span class="keyword">static_assert</span>(!<a class="code hl_function" href="classvcl_1_1Segment.html#a9dc942fc1dacb99622a6ffd18b2d8b0f">vcl::EdgeMesh::hasContainerOf&lt;vcl::TriMesh::Face&gt;</a>(),</div>
+<div class="line"><span class="keyword">static_assert</span>(!vcl::EdgeMesh::hasContainerOf&lt;vcl::TriMesh::Face&gt;(),</div>
 <div class="line">                   <span class="stringliteral">&quot;EdgeMesh has Faces&quot;</span>);</div>
-<div class="ttc" id="aclassvcl_1_1Segment_html_a9dc942fc1dacb99622a6ffd18b2d8b0f"><div class="ttname"><a href="classvcl_1_1Segment.html#a9dc942fc1dacb99622a6ffd18b2d8b0f">vcl::Segment::Segment</a></div><div class="ttdeci">Segment()</div><div class="ttdoc">Default constructor. Creates a segment with endpoints at the origin.</div><div class="ttdef"><b>Definition</b> segment.h:66</div></div>
 </div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">El</td><td>the <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> type to check. </td></tr>
@@ -2202,9 +2208,9 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">uint</a> ELEM_ID&gt; <
 
 <p>Returns true if this <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> has a container of elements having the same <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> ID of the template ELEM_ID. </p>
 <p>Example of usage (Note: EdgeMesh has Vertices, but not Faces):</p>
-<div class="fragment"><div class="line"><span class="keyword">static_assert</span>(<a class="code hl_function" href="classvcl_1_1Segment.html#a9dc942fc1dacb99622a6ffd18b2d8b0f">vcl::EdgeMesh::hasContainerOf&lt;vcl::ElemId::VERTEX&gt;</a>(),</div>
+<div class="fragment"><div class="line"><span class="keyword">static_assert</span>(vcl::EdgeMesh::hasContainerOf&lt;vcl::ElemId::VERTEX&gt;(),</div>
 <div class="line">                   <span class="stringliteral">&quot;EdgeMesh does not have Vertices&quot;</span>);</div>
-<div class="line"><span class="keyword">static_assert</span>(!<a class="code hl_function" href="classvcl_1_1Segment.html#a9dc942fc1dacb99622a6ffd18b2d8b0f">vcl::EdgeMesh::hasContainerOf&lt;vcl::ElemId::FACE&gt;</a>(),</div>
+<div class="line"><span class="keyword">static_assert</span>(!vcl::EdgeMesh::hasContainerOf&lt;vcl::ElemId::FACE&gt;(),</div>
 <div class="line">                   <span class="stringliteral">&quot;EdgeMesh has Faces&quot;</span>);</div>
 </div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -2799,7 +2805,7 @@ requires (<a class="el" href="classvcl_1_1Mesh.html#acc875ce7d6cf83dedc7750ee582
 <div class="line">   handle[<a class="code hl_class" href="classvcl_1_1Segment.html">m</a>.index(v)] = 5; <span class="comment">// v.customComponent&lt;int&gt;(&quot;cc&quot;) == 5</span></div>
 <div class="line">   <a class="code hl_class" href="classvcl_1_1Segment.html">assert</a>(v.customComponent&lt;<span class="keywordtype">int</span>&gt;(<span class="stringliteral">&quot;cc&quot;</span>) == 5);</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassvcl_1_1Vertex_html"><div class="ttname"><a href="classvcl_1_1Vertex.html">vcl::Vertex</a></div><div class="ttdoc">The Vertex class represents an Vertex element of the vcl::Mesh class.</div><div class="ttdef"><b>Definition</b> vertex.h:46</div></div>
+<div class="ttc" id="aclassvcl_1_1Vertex_html"><div class="ttname"><a href="classvcl_1_1Vertex.html">vcl::Vertex</a></div><div class="ttdoc">The Vertex class represents an Vertex element of the vcl::Mesh class.</div><div class="ttdef"><b>Definition</b> vertex.h:31</div></div>
 </div><!-- fragment --><p>Using handles allows to access more efficiently to custom components rather accessing from an element object. However, note that references are binded to the container of the mesh.</p>
 <dl class="section note"><dt>Note</dt><dd>Since the handle contains references, any operation that changes the size of the container could be destructive and invalidate the references contained in the handle.</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
@@ -3013,7 +3019,7 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">uint</a> ELEM_ID, <a c
 <div class="line">    <a class="code hl_function" href="classvcl_1_1Mesh.html#afbd75f4d57f475eab8e44e493825c4e9">serializePerElementCustomComponentsOfType</a>&lt;</div>
 <div class="line">        ElemId::VERTEX, <span class="keywordtype">float</span>&gt;(<a class="code hl_class" href="classvcl_1_1Segment.html">os</a>);</div>
 <div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">os</a>.close();</div>
-<div class="ttc" id="aclassvcl_1_1Mesh_html_afbd75f4d57f475eab8e44e493825c4e9"><div class="ttname"><a href="classvcl_1_1Mesh.html#afbd75f4d57f475eab8e44e493825c4e9">vcl::Mesh::serializePerElementCustomComponentsOfType</a></div><div class="ttdeci">void serializePerElementCustomComponentsOfType(std::ostream &amp;os) const</div><div class="ttdoc">Serializes the custom components of type K of the element with ID ELEM_ID.</div><div class="ttdef"><b>Definition</b> mesh.h:1607</div></div>
+<div class="ttc" id="aclassvcl_1_1Mesh_html_afbd75f4d57f475eab8e44e493825c4e9"><div class="ttname"><a href="classvcl_1_1Mesh.html#afbd75f4d57f475eab8e44e493825c4e9">vcl::Mesh::serializePerElementCustomComponentsOfType</a></div><div class="ttdeci">void serializePerElementCustomComponentsOfType(std::ostream &amp;os) const</div><div class="ttdoc">Serializes the custom components of type K of the element with ID ELEM_ID.</div><div class="ttdef"><b>Definition</b> mesh.h:1613</div></div>
 </div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">ELEM_ID</td><td>the ID of the element. </td></tr>
@@ -3150,8 +3156,39 @@ template&lt;typename... Args&gt; </div>
 
 </div>
 </div>
-<a id="a8e35a62e4b468ad6ab9084bb472bc011" name="a8e35a62e4b468ad6ab9084bb472bc011"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e35a62e4b468ad6ab9084bb472bc011">&#9670;&#160;</a></span>updateIndices()</h2>
+<a id="a3485f09ee7c81f444bf5fd88ea9fa371" name="a3485f09ee7c81f444bf5fd88ea9fa371"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3485f09ee7c81f444bf5fd88ea9fa371">&#9670;&#160;</a></span>transformedBoundingBox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">auto</a> <a class="el" href="classvcl_1_1Mesh.html">vcl::Mesh</a>&lt; Args &gt;::transformedBoundingBox </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the transformed bounding box of the mesh. </p>
+<p>If the mesh has both the BoundingBox and TransformMatrix components, the bounding box is transformed by the transform matrix. Otherwise, it simply returns the bounding box.</p>
+<dl class="section return"><dt>Returns</dt><dd>The transformed bounding box, or the unmodified bounding box if the transform matrix is not available. </dd></dl>
+
+</div>
+</div>
+<a id="a9a80631661a5e1728c464f7780f7b281" name="a9a80631661a5e1728c464f7780f7b281"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a80631661a5e1728c464f7780f7b281">&#9670;&#160;</a></span>updateReferences()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3165,7 +3202,7 @@ requires (<a class="el" href="classvcl_1_1Mesh.html#af76409bf09afd6f60e6bb8f15ee
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">void</a> <a class="el" href="classvcl_1_1Mesh.html">vcl::Mesh</a>&lt; Args &gt;::updateIndices </td>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">void</a> <a class="el" href="classvcl_1_1Mesh.html">vcl::Mesh</a>&lt; Args &gt;::updateReferences </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; <a class="el" href="classvcl_1_1Segment.html">uint</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>newIndices</em></td><td>)</td>

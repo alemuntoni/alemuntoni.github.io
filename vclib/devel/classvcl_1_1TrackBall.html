@@ -132,21 +132,6 @@ Public Types</h2></td></tr>
 <tr class="memitem:ab69263f2bfae83c4045fe79fe0afb514" id="r_ab69263f2bfae83c4045fe79fe0afb514"><td class="memItemLeft" align="right" valign="top"><a id="ab69263f2bfae83c4045fe79fe0afb514" name="ab69263f2bfae83c4045fe79fe0afb514"></a>
 <a class="el" href="classvcl_1_1Segment.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><b>AtomicMotionArg</b> = std::variant&lt; <a class="el" href="structvcl_1_1TrackBall_1_1TransformArgs.html">TransformArgs</a>, Scalar, <a class="el" href="group__space__core.html#ga13f2718b0763def563b8bd9f65982833">Point3</a>&lt; Scalar &gt;, std::monostate &gt;</td></tr>
 <tr class="separator:ab69263f2bfae83c4045fe79fe0afb514"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f86a22bd9b7875901d8ce38eeddbdb5" id="r_a3f86a22bd9b7875901d8ce38eeddbdb5"><td class="memItemLeft" align="right" valign="top"><a id="a3f86a22bd9b7875901d8ce38eeddbdb5" name="a3f86a22bd9b7875901d8ce38eeddbdb5"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>MotionType</b> { <br />
-&#160;&#160;<b>ARC</b>
-, <b>PAN</b>
-, <b>ZMOVE</b>
-, <b>ROLL</b>
-, <br />
-&#160;&#160;<b>SCALE</b>
-, <b>FOV</b>
-, <b>FOCUS</b>
-, <b>DIR_LIGHT_ARC</b>
-, <br />
-&#160;&#160;<b>MOTION_COUNT</b>
-<br />
- }</td></tr>
-<tr class="separator:a3f86a22bd9b7875901d8ce38eeddbdb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -156,9 +141,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac2bfc0502ed2b5bac7d11ea9d917ce01" id="r_ac2bfc0502ed2b5bac7d11ea9d917ce01"><td class="memItemLeft" align="right" valign="top"><a id="ac2bfc0502ed2b5bac7d11ea9d917ce01" name="ac2bfc0502ed2b5bac7d11ea9d917ce01"></a>
 <a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>applyArc</b> (<a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="group__space__core.html#ga13f2718b0763def563b8bd9f65982833">Point3</a>&lt; Scalar &gt; &amp;axis, Scalar angle)</td></tr>
 <tr class="separator:ac2bfc0502ed2b5bac7d11ea9d917ce01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d1674a577b804a2ce0dd8e5635b1514" id="r_a3d1674a577b804a2ce0dd8e5635b1514"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1TrackBall.html#a3d1674a577b804a2ce0dd8e5635b1514">applyAtomicMotion</a> (MotionType <a class="el" href="classvcl_1_1Segment.html">motion</a>, AtomicMotionArg step=std::monostate())</td></tr>
-<tr class="memdesc:a3d1674a577b804a2ce0dd8e5635b1514"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies an atomic motion to the trackball. Atomic motions are motions that are applied atomically to the camera. The step parameter is a std::variant that can store different values depending on the motion type.  <br /></td></tr>
-<tr class="separator:a3d1674a577b804a2ce0dd8e5635b1514"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90fe08c80cf01bc6b65bd13ace8cabb5" id="r_a90fe08c80cf01bc6b65bd13ace8cabb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1TrackBall.html#a90fe08c80cf01bc6b65bd13ace8cabb5">applyAtomicMotion</a> (TrackballMotionType <a class="el" href="classvcl_1_1Segment.html">motion</a>, AtomicMotionArg step=std::monostate())</td></tr>
+<tr class="memdesc:a90fe08c80cf01bc6b65bd13ace8cabb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies an atomic motion to the trackball. Atomic motions are motions that are applied atomically to the camera. The step parameter is a std::variant that can store different values depending on the motion type.  <br /></td></tr>
+<tr class="separator:a90fe08c80cf01bc6b65bd13ace8cabb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada68927a8102562be9afdbdfa4d882f1" id="r_ada68927a8102562be9afdbdfa4d882f1"><td class="memItemLeft" align="right" valign="top"><a id="ada68927a8102562be9afdbdfa4d882f1" name="ada68927a8102562be9afdbdfa4d882f1"></a>
 <a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>applyPan</b> (<a class="el" href="classvcl_1_1Segment.html">const</a> <a class="el" href="group__space__core.html#ga13f2718b0763def563b8bd9f65982833">Point3</a>&lt; Scalar &gt; &amp;<a class="el" href="classvcl_1_1Segment.html">translation</a>)</td></tr>
 <tr class="separator:ada68927a8102562be9afdbdfa4d882f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -168,9 +153,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a52bf641287f102c4131da11f606cc3a3" id="r_a52bf641287f102c4131da11f606cc3a3"><td class="memItemLeft" align="right" valign="top"><a id="a52bf641287f102c4131da11f606cc3a3" name="a52bf641287f102c4131da11f606cc3a3"></a>
 <a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>applyScale</b> (Scalar value)</td></tr>
 <tr class="separator:a52bf641287f102c4131da11f606cc3a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af30c59b23f55696b2513f61f16f1dea1" id="r_af30c59b23f55696b2513f61f16f1dea1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1TrackBall.html#af30c59b23f55696b2513f61f16f1dea1">beginDragMotion</a> (MotionType <a class="el" href="classvcl_1_1Segment.html">motion</a>)</td></tr>
-<tr class="memdesc:af30c59b23f55696b2513f61f16f1dea1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts a drag motion.  <br /></td></tr>
-<tr class="separator:af30c59b23f55696b2513f61f16f1dea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c0e354293c0215e900b10309a31822e" id="r_a6c0e354293c0215e900b10309a31822e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1TrackBall.html#a6c0e354293c0215e900b10309a31822e">beginDragMotion</a> (TrackballMotionType <a class="el" href="classvcl_1_1Segment.html">motion</a>)</td></tr>
+<tr class="memdesc:a6c0e354293c0215e900b10309a31822e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts a drag motion.  <br /></td></tr>
+<tr class="separator:a6c0e354293c0215e900b10309a31822e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac26cbbf3dcc43164fc7ed36f2b92e766" id="r_ac26cbbf3dcc43164fc7ed36f2b92e766"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Camera.html">Camera</a>&lt; Scalar &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1TrackBall.html#ac26cbbf3dcc43164fc7ed36f2b92e766">camera</a> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
 <tr class="memdesc:ac26cbbf3dcc43164fc7ed36f2b92e766"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the camera containing the current view point of the trackball.  <br /></td></tr>
 <tr class="separator:ac26cbbf3dcc43164fc7ed36f2b92e766"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -180,12 +165,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a588a6bdbc4b9c3f628af74e9f30d2531" id="r_a588a6bdbc4b9c3f628af74e9f30d2531"><td class="memItemLeft" align="right" valign="top"><a id="a588a6bdbc4b9c3f628af74e9f30d2531" name="a588a6bdbc4b9c3f628af74e9f30d2531"></a>
 <a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>changeScale</b> (Scalar <a class="el" href="classvcl_1_1Segment.html">factor</a>)</td></tr>
 <tr class="separator:a588a6bdbc4b9c3f628af74e9f30d2531"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4dbb7480dff3e7b100807dc3002d1219" id="r_a4dbb7480dff3e7b100807dc3002d1219"><td class="memItemLeft" align="right" valign="top"><a id="a4dbb7480dff3e7b100807dc3002d1219" name="a4dbb7480dff3e7b100807dc3002d1219"></a>
-MotionType&#160;</td><td class="memItemRight" valign="bottom"><b>currentMotion</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
-<tr class="separator:a4dbb7480dff3e7b100807dc3002d1219"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46be6a671356f63e0b001417c9a49b16" id="r_a46be6a671356f63e0b001417c9a49b16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1TrackBall.html#a46be6a671356f63e0b001417c9a49b16">endDragMotion</a> (MotionType <a class="el" href="classvcl_1_1Segment.html">motion</a>)</td></tr>
-<tr class="memdesc:a46be6a671356f63e0b001417c9a49b16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ends a drag motion.  <br /></td></tr>
-<tr class="separator:a46be6a671356f63e0b001417c9a49b16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade2a5f2b96c1ec8d0c270a4d5fa80bd2" id="r_ade2a5f2b96c1ec8d0c270a4d5fa80bd2"><td class="memItemLeft" align="right" valign="top"><a id="ade2a5f2b96c1ec8d0c270a4d5fa80bd2" name="ade2a5f2b96c1ec8d0c270a4d5fa80bd2"></a>
+TrackballMotionType&#160;</td><td class="memItemRight" valign="bottom"><b>currentMotion</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
+<tr class="separator:ade2a5f2b96c1ec8d0c270a4d5fa80bd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b7db49bfa5f30bd5bb8fbd88acbe8ab" id="r_a3b7db49bfa5f30bd5bb8fbd88acbe8ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1TrackBall.html#a3b7db49bfa5f30bd5bb8fbd88acbe8ab">endDragMotion</a> (TrackballMotionType <a class="el" href="classvcl_1_1Segment.html">motion</a>)</td></tr>
+<tr class="memdesc:a3b7db49bfa5f30bd5bb8fbd88acbe8ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ends a drag motion.  <br /></td></tr>
+<tr class="separator:a3b7db49bfa5f30bd5bb8fbd88acbe8ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f2aef8862d221fcd420ac70beb1e774" id="r_a5f2aef8862d221fcd420ac70beb1e774"><td class="memItemLeft" align="right" valign="top"><a id="a5f2aef8862d221fcd420ac70beb1e774" name="a5f2aef8862d221fcd420ac70beb1e774"></a>
 Scalar&#160;</td><td class="memItemRight" valign="bottom"><b>fovDeg</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
 <tr class="memdesc:a5f2aef8862d221fcd420ac70beb1e774"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the vertical field of view. <br /></td></tr>
@@ -265,9 +250,9 @@ Scalar&#160;</td><td class="memItemRight" valign="bottom"><b>scale</b> () <a cla
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a98902509e984b0a6e35b8eee95339085" id="r_a98902509e984b0a6e35b8eee95339085"><td class="memItemLeft" align="right" valign="top"><a id="a98902509e984b0a6e35b8eee95339085" name="a98902509e984b0a6e35b8eee95339085"></a>
-<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>drag</b> (MotionType <a class="el" href="classvcl_1_1Segment.html">motion</a>)</td></tr>
-<tr class="separator:a98902509e984b0a6e35b8eee95339085"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3baea97af4afb17170f143956ab76b73" id="r_a3baea97af4afb17170f143956ab76b73"><td class="memItemLeft" align="right" valign="top"><a id="a3baea97af4afb17170f143956ab76b73" name="a3baea97af4afb17170f143956ab76b73"></a>
+<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>drag</b> (TrackballMotionType <a class="el" href="classvcl_1_1Segment.html">motion</a>)</td></tr>
+<tr class="separator:a3baea97af4afb17170f143956ab76b73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c64aad93f2281b267a71ff4d696e899" id="r_a2c64aad93f2281b267a71ff4d696e899"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1TrackBall.html#a2c64aad93f2281b267a71ff4d696e899">dragArc</a> ()</td></tr>
 <tr class="separator:a2c64aad93f2281b267a71ff4d696e899"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4deef1bb7cb0d48ac2da9ab7dd13e331" id="r_a4deef1bb7cb0d48ac2da9ab7dd13e331"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1TrackBall.html#a4deef1bb7cb0d48ac2da9ab7dd13e331">dragDirLightArc</a> ()</td></tr>
@@ -313,8 +298,8 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a18c72b8c4d89a8c3ef39b3e9ecdaa585" id="r_a18c72b8c4d89a8c3ef39b3e9ecdaa585"><td class="memItemLeft" align="right" valign="top"><a id="a18c72b8c4d89a8c3ef39b3e9ecdaa585" name="a18c72b8c4d89a8c3ef39b3e9ecdaa585"></a>
 <a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>rotateDirLight</b> (<a class="el" href="group__space__core.html#ga13f2718b0763def563b8bd9f65982833">Point3</a>&lt; Scalar &gt; axis, Scalar angle)</td></tr>
 <tr class="separator:a18c72b8c4d89a8c3ef39b3e9ecdaa585"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e395dd930277b8fa5c5e2404acb4af3" id="r_a6e395dd930277b8fa5c5e2404acb4af3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1TrackBall.html#a6e395dd930277b8fa5c5e2404acb4af3">setDragMotionValue</a> (MotionType <a class="el" href="classvcl_1_1Segment.html">motion</a>, <a class="el" href="classvcl_1_1Segment.html">bool</a> value)</td></tr>
-<tr class="separator:a6e395dd930277b8fa5c5e2404acb4af3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bc1f891eb2f2807bdc0039c88188633" id="r_a4bc1f891eb2f2807bdc0039c88188633"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1TrackBall.html#a4bc1f891eb2f2807bdc0039c88188633">setDragMotionValue</a> (TrackballMotionType <a class="el" href="classvcl_1_1Segment.html">motion</a>, <a class="el" href="classvcl_1_1Segment.html">bool</a> value)</td></tr>
+<tr class="separator:a4bc1f891eb2f2807bdc0039c88188633"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f42938f4932be2f81eb1d094175bfb9" id="r_a5f42938f4932be2f81eb1d094175bfb9"><td class="memItemLeft" align="right" valign="top"><a id="a5f42938f4932be2f81eb1d094175bfb9" name="a5f42938f4932be2f81eb1d094175bfb9"></a>
 Scalar&#160;</td><td class="memItemRight" valign="bottom"><b>trackballToPixelRatio</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
 <tr class="separator:a5f42938f4932be2f81eb1d094175bfb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -327,9 +312,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a14bc3b87984d513e6a20c6a761adcb19" id="r_a14bc3b87984d513e6a20c6a761adcb19"><td class="memItemLeft" align="right" valign="top"><a id="a14bc3b87984d513e6a20c6a761adcb19" name="a14bc3b87984d513e6a20c6a761adcb19"></a>
 <a class="el" href="classvcl_1_1Camera.html">Camera</a>&lt; Scalar &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mCamera</b></td></tr>
 <tr class="separator:a14bc3b87984d513e6a20c6a761adcb19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c72e4d467aefbc4f45454aa8f634111" id="r_a4c72e4d467aefbc4f45454aa8f634111"><td class="memItemLeft" align="right" valign="top"><a id="a4c72e4d467aefbc4f45454aa8f634111" name="a4c72e4d467aefbc4f45454aa8f634111"></a>
-MotionType&#160;</td><td class="memItemRight" valign="bottom"><b>mCurrDragMotion</b> = MOTION_COUNT</td></tr>
-<tr class="separator:a4c72e4d467aefbc4f45454aa8f634111"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54aafcda7aa25e3dcc54558f47f7a45c" id="r_a54aafcda7aa25e3dcc54558f47f7a45c"><td class="memItemLeft" align="right" valign="top"><a id="a54aafcda7aa25e3dcc54558f47f7a45c" name="a54aafcda7aa25e3dcc54558f47f7a45c"></a>
+TrackballMotionType&#160;</td><td class="memItemRight" valign="bottom"><b>mCurrDragMotion</b> = TrackballMotionType::MOTION_COUNT</td></tr>
+<tr class="separator:a54aafcda7aa25e3dcc54558f47f7a45c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b476fe012e0ced02936bd753789a15d" id="r_a0b476fe012e0ced02936bd753789a15d"><td class="memItemLeft" align="right" valign="top"><a id="a0b476fe012e0ced02936bd753789a15d" name="a0b476fe012e0ced02936bd753789a15d"></a>
 <a class="el" href="group__space__core.html#ga6d15a5d1bc87330938ae9b8a55373334">Point2</a>&lt; Scalar &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mCurrMousePosition</b></td></tr>
 <tr class="separator:a0b476fe012e0ced02936bd753789a15d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -419,8 +404,8 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> Scalar &g
 
 </div>
 </div>
-<a id="a3d1674a577b804a2ce0dd8e5635b1514" name="a3d1674a577b804a2ce0dd8e5635b1514"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d1674a577b804a2ce0dd8e5635b1514">&#9670;&#160;</a></span>applyAtomicMotion()</h2>
+<a id="a90fe08c80cf01bc6b65bd13ace8cabb5" name="a90fe08c80cf01bc6b65bd13ace8cabb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90fe08c80cf01bc6b65bd13ace8cabb5">&#9670;&#160;</a></span>applyAtomicMotion()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -433,7 +418,7 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> Scalar &g
         <tr>
           <td class="memname"><a class="el" href="classvcl_1_1Segment.html">void</a> <a class="el" href="classvcl_1_1TrackBall.html">vcl::TrackBall</a>&lt; Scalar &gt;::applyAtomicMotion </td>
           <td>(</td>
-          <td class="paramtype">MotionType&#160;</td>
+          <td class="paramtype">TrackballMotionType&#160;</td>
           <td class="paramname"><em>motion</em>, </td>
         </tr>
         <tr>
@@ -492,8 +477,8 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> Scalar &g
 
 </div>
 </div>
-<a id="af30c59b23f55696b2513f61f16f1dea1" name="af30c59b23f55696b2513f61f16f1dea1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af30c59b23f55696b2513f61f16f1dea1">&#9670;&#160;</a></span>beginDragMotion()</h2>
+<a id="a6c0e354293c0215e900b10309a31822e" name="a6c0e354293c0215e900b10309a31822e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c0e354293c0215e900b10309a31822e">&#9670;&#160;</a></span>beginDragMotion()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -506,7 +491,7 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> Scalar &g
         <tr>
           <td class="memname"><a class="el" href="classvcl_1_1Segment.html">void</a> <a class="el" href="classvcl_1_1TrackBall.html">vcl::TrackBall</a>&lt; Scalar &gt;::beginDragMotion </td>
           <td>(</td>
-          <td class="paramtype">MotionType&#160;</td>
+          <td class="paramtype">TrackballMotionType&#160;</td>
           <td class="paramname"><em>motion</em></td><td>)</td>
           <td></td>
         </tr>
@@ -615,8 +600,8 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> Scalar &g
 
 </div>
 </div>
-<a id="a46be6a671356f63e0b001417c9a49b16" name="a46be6a671356f63e0b001417c9a49b16"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a46be6a671356f63e0b001417c9a49b16">&#9670;&#160;</a></span>endDragMotion()</h2>
+<a id="a3b7db49bfa5f30bd5bb8fbd88acbe8ab" name="a3b7db49bfa5f30bd5bb8fbd88acbe8ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b7db49bfa5f30bd5bb8fbd88acbe8ab">&#9670;&#160;</a></span>endDragMotion()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -629,7 +614,7 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> Scalar &g
         <tr>
           <td class="memname"><a class="el" href="classvcl_1_1Segment.html">void</a> <a class="el" href="classvcl_1_1TrackBall.html">vcl::TrackBall</a>&lt; Scalar &gt;::endDragMotion </td>
           <td>(</td>
-          <td class="paramtype">MotionType&#160;</td>
+          <td class="paramtype">TrackballMotionType&#160;</td>
           <td class="paramname"><em>motion</em></td><td>)</td>
           <td></td>
         </tr>
@@ -924,8 +909,8 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> Scalar &g
 
 </div>
 </div>
-<a id="a6e395dd930277b8fa5c5e2404acb4af3" name="a6e395dd930277b8fa5c5e2404acb4af3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e395dd930277b8fa5c5e2404acb4af3">&#9670;&#160;</a></span>setDragMotionValue()</h2>
+<a id="a4bc1f891eb2f2807bdc0039c88188633" name="a4bc1f891eb2f2807bdc0039c88188633"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bc1f891eb2f2807bdc0039c88188633">&#9670;&#160;</a></span>setDragMotionValue()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -938,7 +923,7 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> Scalar &g
         <tr>
           <td class="memname"><a class="el" href="classvcl_1_1Segment.html">void</a> <a class="el" href="classvcl_1_1TrackBall.html">vcl::TrackBall</a>&lt; Scalar &gt;::setDragMotionValue </td>
           <td>(</td>
-          <td class="paramtype">MotionType&#160;</td>
+          <td class="paramtype">TrackballMotionType&#160;</td>
           <td class="paramname"><em>motion</em>, </td>
         </tr>
         <tr>

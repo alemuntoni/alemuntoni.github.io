@@ -132,17 +132,20 @@ Public Types</h2></td></tr>
 <tr class="memitem:a3816cab30d019e0d9b862af5580ca0ce" id="r_a3816cab30d019e0d9b862af5580ca0ce"><td class="memItemLeft" align="right" valign="top"><a id="a3816cab30d019e0d9b862af5580ca0ce" name="a3816cab30d019e0d9b862af5580ca0ce"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshInfo.html#a3816cab30d019e0d9b862af5580ca0ce">Component</a> { <br />
 &#160;&#160;<b>POSITION</b>
 , <b>VREFS</b>
+, <b>BIT_FLAGS</b>
 , <b>NORMAL</b>
+, <br />
+&#160;&#160;<b>TANGENT</b>
 , <b>COLOR</b>
-, <br />
-&#160;&#160;<b>QUALITY</b>
+, <b>QUALITY</b>
 , <b>TEXCOORD</b>
-, <b>MATERIAL_INDEX</b>
-, <b>WEDGE_TEXCOORDS</b>
 , <br />
-&#160;&#160;<b>CUSTOM_COMPONENTS</b>
+&#160;&#160;<b>MATERIAL_INDEX</b>
+, <b>WEDGE_TEXCOORDS</b>
+, <b>CUSTOM_COMPONENTS</b>
 , <b>MATERIALS</b>
-, <b>NUM_COMPONENTS</b>
+, <br />
+&#160;&#160;<b>NUM_COMPONENTS</b>
 <br />
  }</td></tr>
 <tr class="memdesc:a3816cab30d019e0d9b862af5580ca0ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum used to describe the type of Components that each <a class="el" href="classvcl_1_1Element.html" title="The Element class.">Element</a> can have. <br /></td></tr>
@@ -211,6 +214,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1d353f89fda4eb28a2eadb7a04465e17" id="r_a1d353f89fda4eb28a2eadb7a04465e17"><td class="memItemLeft" align="right" valign="top"><a id="a1d353f89fda4eb28a2eadb7a04465e17" name="a1d353f89fda4eb28a2eadb7a04465e17"></a>
 <a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>hasMaterials</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
 <tr class="separator:a1d353f89fda4eb28a2eadb7a04465e17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a065faa8335b2ffd4580533b5e579f786" id="r_a065faa8335b2ffd4580533b5e579f786"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshInfo.html#a065faa8335b2ffd4580533b5e579f786">hasPerEdgeBitFlags</a> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
+<tr class="memdesc:a065faa8335b2ffd4580533b5e579f786"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the current object has <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> Bit Flags.  <br /></td></tr>
+<tr class="separator:a065faa8335b2ffd4580533b5e579f786"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c291c8f338555e672856b9f0b8db20f" id="r_a2c291c8f338555e672856b9f0b8db20f"><td class="memItemLeft" align="right" valign="top"><a id="a2c291c8f338555e672856b9f0b8db20f" name="a2c291c8f338555e672856b9f0b8db20f"></a>
 <a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>hasPerEdgeColor</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
 <tr class="separator:a2c291c8f338555e672856b9f0b8db20f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -229,6 +235,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abda8c35eef06c901b55dbe0d33a7f371" id="r_abda8c35eef06c901b55dbe0d33a7f371"><td class="memItemLeft" align="right" valign="top"><a id="abda8c35eef06c901b55dbe0d33a7f371" name="abda8c35eef06c901b55dbe0d33a7f371"></a>
 <a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>hasPerElementComponent</b> (<a class="el" href="classvcl_1_1MeshInfo.html#abb085ab601fbf6c3044c3da811209622">Element</a> <a class="el" href="classvcl_1_1Segment.html">el</a>, <a class="el" href="classvcl_1_1MeshInfo.html#a3816cab30d019e0d9b862af5580ca0ce">Component</a> comp) <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
 <tr class="separator:abda8c35eef06c901b55dbe0d33a7f371"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28f2a5d91d2e376d0ef25eee2dda24b4" id="r_a28f2a5d91d2e376d0ef25eee2dda24b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshInfo.html#a28f2a5d91d2e376d0ef25eee2dda24b4">hasPerFaceBitFlags</a> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
+<tr class="memdesc:a28f2a5d91d2e376d0ef25eee2dda24b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the current object has <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> Bit Flags.  <br /></td></tr>
+<tr class="separator:a28f2a5d91d2e376d0ef25eee2dda24b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4452b7ac9a173e5086705a206a8837ef" id="r_a4452b7ac9a173e5086705a206a8837ef"><td class="memItemLeft" align="right" valign="top"><a id="a4452b7ac9a173e5086705a206a8837ef" name="a4452b7ac9a173e5086705a206a8837ef"></a>
 <a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>hasPerFaceColor</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
 <tr class="separator:a4452b7ac9a173e5086705a206a8837ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -250,6 +259,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a80ae7c5141ec5cae9a325d4c95e7e7bb" id="r_a80ae7c5141ec5cae9a325d4c95e7e7bb"><td class="memItemLeft" align="right" valign="top"><a id="a80ae7c5141ec5cae9a325d4c95e7e7bb" name="a80ae7c5141ec5cae9a325d4c95e7e7bb"></a>
 <a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><b>hasPerFaceWedgeTexCoords</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
 <tr class="separator:a80ae7c5141ec5cae9a325d4c95e7e7bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5185680fa92ddf16b35c3a81c279ad7" id="r_ab5185680fa92ddf16b35c3a81c279ad7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshInfo.html#ab5185680fa92ddf16b35c3a81c279ad7">hasPerVertexBitFlags</a> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
+<tr class="memdesc:ab5185680fa92ddf16b35c3a81c279ad7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the current object has <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Bit Flags.  <br /></td></tr>
+<tr class="separator:ab5185680fa92ddf16b35c3a81c279ad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1204ccacf701cf7db48ed04190e4262c" id="r_a1204ccacf701cf7db48ed04190e4262c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshInfo.html#a1204ccacf701cf7db48ed04190e4262c">hasPerVertexColor</a> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
 <tr class="memdesc:a1204ccacf701cf7db48ed04190e4262c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the current object has <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Colors.  <br /></td></tr>
 <tr class="separator:a1204ccacf701cf7db48ed04190e4262c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -268,6 +280,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afbbd4d80f07ceb89b89f42fb7d5d44b2" id="r_afbbd4d80f07ceb89b89f42fb7d5d44b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshInfo.html#afbbd4d80f07ceb89b89f42fb7d5d44b2">hasPerVertexQuality</a> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
 <tr class="memdesc:afbbd4d80f07ceb89b89f42fb7d5d44b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the current object has <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Quality.  <br /></td></tr>
 <tr class="separator:afbbd4d80f07ceb89b89f42fb7d5d44b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bff032459ea4cf464ed8b1b8ae9d8f7" id="r_a5bff032459ea4cf464ed8b1b8ae9d8f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshInfo.html#a5bff032459ea4cf464ed8b1b8ae9d8f7">hasPerVertexTangent</a> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
+<tr class="memdesc:a5bff032459ea4cf464ed8b1b8ae9d8f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the current object has <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Tangents.  <br /></td></tr>
+<tr class="separator:a5bff032459ea4cf464ed8b1b8ae9d8f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a479fa932782f16eafd34150ebc4c83b5" id="r_a479fa932782f16eafd34150ebc4c83b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvcl_1_1MeshInfo.html#a479fa932782f16eafd34150ebc4c83b5">hasPerVertexTexCoord</a> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
 <tr class="memdesc:a479fa932782f16eafd34150ebc4c83b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the current object has <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> <a class="el" href="classvcl_1_1Texture.html" title="Manages a BGFX texture.">Texture</a> Coordinates.  <br /></td></tr>
 <tr class="separator:a479fa932782f16eafd34150ebc4c83b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -303,6 +318,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a60d1be40c85ff06de2e937262dae0917" id="r_a60d1be40c85ff06de2e937262dae0917"><td class="memItemLeft" align="right" valign="top"><a id="a60d1be40c85ff06de2e937262dae0917" name="a60d1be40c85ff06de2e937262dae0917"></a>
 <a class="el" href="classvcl_1_1MeshInfo.html#afa7c37698fe8e745372cf25f24a322cc">MeshType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>meshType</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
 <tr class="separator:a60d1be40c85ff06de2e937262dae0917"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee73c575f19a983cf4f2d1224049bfc4" id="r_aee73c575f19a983cf4f2d1224049bfc4"><td class="memItemLeft" align="right" valign="top"><a id="aee73c575f19a983cf4f2d1224049bfc4" name="aee73c575f19a983cf4f2d1224049bfc4"></a>
+<a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>perEdgeBitFlagsType</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
+<tr class="separator:aee73c575f19a983cf4f2d1224049bfc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad29156f584eed62fcde10348d11ee235" id="r_ad29156f584eed62fcde10348d11ee235"><td class="memItemLeft" align="right" valign="top"><a id="ad29156f584eed62fcde10348d11ee235" name="ad29156f584eed62fcde10348d11ee235"></a>
 <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>perEdgeColorType</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
 <tr class="separator:ad29156f584eed62fcde10348d11ee235"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -321,6 +339,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1d2114cfe064b31e78d153b3373c1f4e" id="r_a1d2114cfe064b31e78d153b3373c1f4e"><td class="memItemLeft" align="right" valign="top"><a id="a1d2114cfe064b31e78d153b3373c1f4e" name="a1d2114cfe064b31e78d153b3373c1f4e"></a>
 <a class="el" href="classvcl_1_1Segment.html">const</a> std::vector&lt; <a class="el" href="structvcl_1_1MeshInfo_1_1CustomComponent.html">CustomComponent</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>perElementCustomComponents</b> (<a class="el" href="classvcl_1_1MeshInfo.html#abb085ab601fbf6c3044c3da811209622">Element</a> <a class="el" href="classvcl_1_1Segment.html">el</a>) <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
 <tr class="separator:a1d2114cfe064b31e78d153b3373c1f4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0be736586575786b3e6f3aedea1e2b3d" id="r_a0be736586575786b3e6f3aedea1e2b3d"><td class="memItemLeft" align="right" valign="top"><a id="a0be736586575786b3e6f3aedea1e2b3d" name="a0be736586575786b3e6f3aedea1e2b3d"></a>
+<a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>perFaceBitFlagsType</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
+<tr class="separator:a0be736586575786b3e6f3aedea1e2b3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af85b169d1e6db682b0f7d94c2b04a27c" id="r_af85b169d1e6db682b0f7d94c2b04a27c"><td class="memItemLeft" align="right" valign="top"><a id="af85b169d1e6db682b0f7d94c2b04a27c" name="af85b169d1e6db682b0f7d94c2b04a27c"></a>
 <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>perFaceColorType</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
 <tr class="separator:af85b169d1e6db682b0f7d94c2b04a27c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -339,6 +360,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1332f84444015a8a36689c6defaed71f" id="r_a1332f84444015a8a36689c6defaed71f"><td class="memItemLeft" align="right" valign="top"><a id="a1332f84444015a8a36689c6defaed71f" name="a1332f84444015a8a36689c6defaed71f"></a>
 <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>perFaceWedgeTexCoordsType</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
 <tr class="separator:a1332f84444015a8a36689c6defaed71f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae59a6377be4843687ef3c5d2714d9dc7" id="r_ae59a6377be4843687ef3c5d2714d9dc7"><td class="memItemLeft" align="right" valign="top"><a id="ae59a6377be4843687ef3c5d2714d9dc7" name="ae59a6377be4843687ef3c5d2714d9dc7"></a>
+<a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>perVertexBitFlagsType</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
+<tr class="separator:ae59a6377be4843687ef3c5d2714d9dc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7bf202ea4229dec48ecbce712b8d2ad" id="r_ab7bf202ea4229dec48ecbce712b8d2ad"><td class="memItemLeft" align="right" valign="top"><a id="ab7bf202ea4229dec48ecbce712b8d2ad" name="ab7bf202ea4229dec48ecbce712b8d2ad"></a>
 <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>perVertexColorType</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
 <tr class="separator:ab7bf202ea4229dec48ecbce712b8d2ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -357,83 +381,98 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ace658506f6c146dce33be13203da605f" id="r_ace658506f6c146dce33be13203da605f"><td class="memItemLeft" align="right" valign="top"><a id="ace658506f6c146dce33be13203da605f" name="ace658506f6c146dce33be13203da605f"></a>
 <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>perVertexQualityType</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
 <tr class="separator:ace658506f6c146dce33be13203da605f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa8891b54934982a64ff78ff946e24b3" id="r_afa8891b54934982a64ff78ff946e24b3"><td class="memItemLeft" align="right" valign="top"><a id="afa8891b54934982a64ff78ff946e24b3" name="afa8891b54934982a64ff78ff946e24b3"></a>
+<a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>perVertexTangentType</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
+<tr class="separator:afa8891b54934982a64ff78ff946e24b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc77725090a8547377a9d1dbcc70c7ed" id="r_abc77725090a8547377a9d1dbcc70c7ed"><td class="memItemLeft" align="right" valign="top"><a id="abc77725090a8547377a9d1dbcc70c7ed" name="abc77725090a8547377a9d1dbcc70c7ed"></a>
 <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>perVertexTexCoordType</b> () <a class="el" href="classvcl_1_1Segment.html">const</a></td></tr>
 <tr class="separator:abc77725090a8547377a9d1dbcc70c7ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a778d37be6c8d8380765de1bbe23415f3" id="r_a778d37be6c8d8380765de1bbe23415f3"><td class="memItemLeft" align="right" valign="top"><a id="a778d37be6c8d8380765de1bbe23415f3" name="a778d37be6c8d8380765de1bbe23415f3"></a>
-<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setEdges</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1Segment.html">b</a>=<a class="el" href="classvcl_1_1Segment.html">true</a>)</td></tr>
+<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setEdges</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> b=<a class="el" href="classvcl_1_1Segment.html">true</a>)</td></tr>
 <tr class="separator:a778d37be6c8d8380765de1bbe23415f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaea2f5d27e2255c811a3d85bb511b480" id="r_aaea2f5d27e2255c811a3d85bb511b480"><td class="memItemLeft" align="right" valign="top"><a id="aaea2f5d27e2255c811a3d85bb511b480" name="aaea2f5d27e2255c811a3d85bb511b480"></a>
-<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setElement</b> (<a class="el" href="classvcl_1_1MeshInfo.html#abb085ab601fbf6c3044c3da811209622">Element</a> <a class="el" href="classvcl_1_1Segment.html">el</a>, <a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1Segment.html">b</a>=<a class="el" href="classvcl_1_1Segment.html">true</a>)</td></tr>
+<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setElement</b> (<a class="el" href="classvcl_1_1MeshInfo.html#abb085ab601fbf6c3044c3da811209622">Element</a> <a class="el" href="classvcl_1_1Segment.html">el</a>, <a class="el" href="classvcl_1_1Segment.html">bool</a> b=<a class="el" href="classvcl_1_1Segment.html">true</a>)</td></tr>
 <tr class="separator:aaea2f5d27e2255c811a3d85bb511b480"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70ee34075954abb0cb4dfc90e19f99f0" id="r_a70ee34075954abb0cb4dfc90e19f99f0"><td class="memItemLeft" align="right" valign="top"><a id="a70ee34075954abb0cb4dfc90e19f99f0" name="a70ee34075954abb0cb4dfc90e19f99f0"></a>
-<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setFaces</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1Segment.html">b</a>=<a class="el" href="classvcl_1_1Segment.html">true</a>)</td></tr>
+<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setFaces</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> b=<a class="el" href="classvcl_1_1Segment.html">true</a>)</td></tr>
 <tr class="separator:a70ee34075954abb0cb4dfc90e19f99f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae355c54331fe6604216f8a30dbf1cfb2" id="r_ae355c54331fe6604216f8a30dbf1cfb2"><td class="memItemLeft" align="right" valign="top"><a id="ae355c54331fe6604216f8a30dbf1cfb2" name="ae355c54331fe6604216f8a30dbf1cfb2"></a>
-<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setMaterials</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1Segment.html">b</a>=<a class="el" href="classvcl_1_1Segment.html">true</a>)</td></tr>
+<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setMaterials</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> b=<a class="el" href="classvcl_1_1Segment.html">true</a>)</td></tr>
 <tr class="separator:ae355c54331fe6604216f8a30dbf1cfb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ab9264f03b3d10afcfb031e8426d5f4" id="r_a9ab9264f03b3d10afcfb031e8426d5f4"><td class="memItemLeft" align="right" valign="top"><a id="a9ab9264f03b3d10afcfb031e8426d5f4" name="a9ab9264f03b3d10afcfb031e8426d5f4"></a>
 <a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setMeshType</b> (<a class="el" href="classvcl_1_1MeshInfo.html#afa7c37698fe8e745372cf25f24a322cc">MeshType</a> t)</td></tr>
 <tr class="separator:a9ab9264f03b3d10afcfb031e8426d5f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b155fe7d10d97c906e10464435ee074" id="r_a1b155fe7d10d97c906e10464435ee074"><td class="memItemLeft" align="right" valign="top"><a id="a1b155fe7d10d97c906e10464435ee074" name="a1b155fe7d10d97c906e10464435ee074"></a>
+<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerEdgeBitFlags</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> b=<a class="el" href="classvcl_1_1Segment.html">true</a>, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a> t=PrimitiveType::UINT)</td></tr>
+<tr class="separator:a1b155fe7d10d97c906e10464435ee074"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae994baac7b3176abecb74c7f528c6782" id="r_ae994baac7b3176abecb74c7f528c6782"><td class="memItemLeft" align="right" valign="top"><a id="ae994baac7b3176abecb74c7f528c6782" name="ae994baac7b3176abecb74c7f528c6782"></a>
-<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerEdgeColor</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1Segment.html">b</a>=<a class="el" href="classvcl_1_1Segment.html">true</a>, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a> t=PrimitiveType::UCHAR)</td></tr>
+<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerEdgeColor</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> b=<a class="el" href="classvcl_1_1Segment.html">true</a>, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a> t=PrimitiveType::UCHAR)</td></tr>
 <tr class="separator:ae994baac7b3176abecb74c7f528c6782"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69d5436fbd5889817068a6ccd10b78ba" id="r_a69d5436fbd5889817068a6ccd10b78ba"><td class="memItemLeft" align="right" valign="top"><a id="a69d5436fbd5889817068a6ccd10b78ba" name="a69d5436fbd5889817068a6ccd10b78ba"></a>
-<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerEdgeCustomComponents</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1Segment.html">b</a>=<a class="el" href="classvcl_1_1Segment.html">true</a>)</td></tr>
+<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerEdgeCustomComponents</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> b=<a class="el" href="classvcl_1_1Segment.html">true</a>)</td></tr>
 <tr class="separator:a69d5436fbd5889817068a6ccd10b78ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae88445a5ca4b35670cde8b20f70ef439" id="r_ae88445a5ca4b35670cde8b20f70ef439"><td class="memItemLeft" align="right" valign="top"><a id="ae88445a5ca4b35670cde8b20f70ef439" name="ae88445a5ca4b35670cde8b20f70ef439"></a>
-<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerEdgeNormal</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1Segment.html">b</a>=<a class="el" href="classvcl_1_1Segment.html">true</a>, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a> t=PrimitiveType::FLOAT)</td></tr>
+<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerEdgeNormal</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> b=<a class="el" href="classvcl_1_1Segment.html">true</a>, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a> t=PrimitiveType::FLOAT)</td></tr>
 <tr class="separator:ae88445a5ca4b35670cde8b20f70ef439"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02a93ffbab370dc13aa4121914abd500" id="r_a02a93ffbab370dc13aa4121914abd500"><td class="memItemLeft" align="right" valign="top"><a id="a02a93ffbab370dc13aa4121914abd500" name="a02a93ffbab370dc13aa4121914abd500"></a>
-<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerEdgeQuality</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1Segment.html">b</a>=<a class="el" href="classvcl_1_1Segment.html">true</a>, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a> t=PrimitiveType::DOUBLE)</td></tr>
+<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerEdgeQuality</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> b=<a class="el" href="classvcl_1_1Segment.html">true</a>, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a> t=PrimitiveType::DOUBLE)</td></tr>
 <tr class="separator:a02a93ffbab370dc13aa4121914abd500"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9687f02f1efcc2dab2f4d6da8b4eaabc" id="r_a9687f02f1efcc2dab2f4d6da8b4eaabc"><td class="memItemLeft" align="right" valign="top"><a id="a9687f02f1efcc2dab2f4d6da8b4eaabc" name="a9687f02f1efcc2dab2f4d6da8b4eaabc"></a>
-<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerEdgeVertexReferences</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1Segment.html">b</a>=<a class="el" href="classvcl_1_1Segment.html">true</a>)</td></tr>
+<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerEdgeVertexReferences</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> b=<a class="el" href="classvcl_1_1Segment.html">true</a>)</td></tr>
 <tr class="separator:a9687f02f1efcc2dab2f4d6da8b4eaabc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adafdd7977a0a90c0654c77ccf5a5fb0a" id="r_adafdd7977a0a90c0654c77ccf5a5fb0a"><td class="memItemLeft" align="right" valign="top"><a id="adafdd7977a0a90c0654c77ccf5a5fb0a" name="adafdd7977a0a90c0654c77ccf5a5fb0a"></a>
-<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerElementComponent</b> (<a class="el" href="classvcl_1_1MeshInfo.html#abb085ab601fbf6c3044c3da811209622">Element</a> <a class="el" href="classvcl_1_1Segment.html">el</a>, <a class="el" href="classvcl_1_1MeshInfo.html#a3816cab30d019e0d9b862af5580ca0ce">Component</a> c, <a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1Segment.html">b</a>, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a> t)</td></tr>
+<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerElementComponent</b> (<a class="el" href="classvcl_1_1MeshInfo.html#abb085ab601fbf6c3044c3da811209622">Element</a> <a class="el" href="classvcl_1_1Segment.html">el</a>, <a class="el" href="classvcl_1_1MeshInfo.html#a3816cab30d019e0d9b862af5580ca0ce">Component</a> c, <a class="el" href="classvcl_1_1Segment.html">bool</a> b, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a> t)</td></tr>
 <tr class="separator:adafdd7977a0a90c0654c77ccf5a5fb0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85049b86652295e7df816a521e1837fc" id="r_a85049b86652295e7df816a521e1837fc"><td class="memItemLeft" align="right" valign="top"><a id="a85049b86652295e7df816a521e1837fc" name="a85049b86652295e7df816a521e1837fc"></a>
+<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerFaceBitFlags</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> b=<a class="el" href="classvcl_1_1Segment.html">true</a>, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a> t=PrimitiveType::UINT)</td></tr>
+<tr class="separator:a85049b86652295e7df816a521e1837fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2399882036375572d71a6e747d82e48c" id="r_a2399882036375572d71a6e747d82e48c"><td class="memItemLeft" align="right" valign="top"><a id="a2399882036375572d71a6e747d82e48c" name="a2399882036375572d71a6e747d82e48c"></a>
-<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerFaceColor</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1Segment.html">b</a>=<a class="el" href="classvcl_1_1Segment.html">true</a>, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a> t=PrimitiveType::UCHAR)</td></tr>
+<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerFaceColor</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> b=<a class="el" href="classvcl_1_1Segment.html">true</a>, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a> t=PrimitiveType::UCHAR)</td></tr>
 <tr class="separator:a2399882036375572d71a6e747d82e48c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b83e030591c204e334c0ece4cc75a23" id="r_a2b83e030591c204e334c0ece4cc75a23"><td class="memItemLeft" align="right" valign="top"><a id="a2b83e030591c204e334c0ece4cc75a23" name="a2b83e030591c204e334c0ece4cc75a23"></a>
-<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerFaceCustomComponents</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1Segment.html">b</a>=<a class="el" href="classvcl_1_1Segment.html">true</a>)</td></tr>
+<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerFaceCustomComponents</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> b=<a class="el" href="classvcl_1_1Segment.html">true</a>)</td></tr>
 <tr class="separator:a2b83e030591c204e334c0ece4cc75a23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe1ea1af96a2c84d93113688d954968b" id="r_abe1ea1af96a2c84d93113688d954968b"><td class="memItemLeft" align="right" valign="top"><a id="abe1ea1af96a2c84d93113688d954968b" name="abe1ea1af96a2c84d93113688d954968b"></a>
-<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerFaceMaterialIndex</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1Segment.html">b</a>=<a class="el" href="classvcl_1_1Segment.html">true</a>, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a> t=PrimitiveType::USHORT)</td></tr>
+<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerFaceMaterialIndex</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> b=<a class="el" href="classvcl_1_1Segment.html">true</a>, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a> t=PrimitiveType::USHORT)</td></tr>
 <tr class="separator:abe1ea1af96a2c84d93113688d954968b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e6c9edb4a0ef2645191d6d019441b62" id="r_a4e6c9edb4a0ef2645191d6d019441b62"><td class="memItemLeft" align="right" valign="top"><a id="a4e6c9edb4a0ef2645191d6d019441b62" name="a4e6c9edb4a0ef2645191d6d019441b62"></a>
-<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerFaceNormal</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1Segment.html">b</a>=<a class="el" href="classvcl_1_1Segment.html">true</a>, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a> t=PrimitiveType::FLOAT)</td></tr>
+<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerFaceNormal</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> b=<a class="el" href="classvcl_1_1Segment.html">true</a>, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a> t=PrimitiveType::FLOAT)</td></tr>
 <tr class="separator:a4e6c9edb4a0ef2645191d6d019441b62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13d39b7fe015b48a236340130571c52d" id="r_a13d39b7fe015b48a236340130571c52d"><td class="memItemLeft" align="right" valign="top"><a id="a13d39b7fe015b48a236340130571c52d" name="a13d39b7fe015b48a236340130571c52d"></a>
-<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerFaceQuality</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1Segment.html">b</a>=<a class="el" href="classvcl_1_1Segment.html">true</a>, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a> t=PrimitiveType::DOUBLE)</td></tr>
+<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerFaceQuality</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> b=<a class="el" href="classvcl_1_1Segment.html">true</a>, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a> t=PrimitiveType::DOUBLE)</td></tr>
 <tr class="separator:a13d39b7fe015b48a236340130571c52d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f9cb3f1ed70dd4b05a9b72bf7057585" id="r_a1f9cb3f1ed70dd4b05a9b72bf7057585"><td class="memItemLeft" align="right" valign="top"><a id="a1f9cb3f1ed70dd4b05a9b72bf7057585" name="a1f9cb3f1ed70dd4b05a9b72bf7057585"></a>
-<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerFaceVertexReferences</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1Segment.html">b</a>=<a class="el" href="classvcl_1_1Segment.html">true</a>)</td></tr>
+<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerFaceVertexReferences</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> b=<a class="el" href="classvcl_1_1Segment.html">true</a>)</td></tr>
 <tr class="separator:a1f9cb3f1ed70dd4b05a9b72bf7057585"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1036f51254c52bf8e2dfe74ec9c1bf0" id="r_ae1036f51254c52bf8e2dfe74ec9c1bf0"><td class="memItemLeft" align="right" valign="top"><a id="ae1036f51254c52bf8e2dfe74ec9c1bf0" name="ae1036f51254c52bf8e2dfe74ec9c1bf0"></a>
-<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerFaceWedgeTexCoords</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1Segment.html">b</a>=<a class="el" href="classvcl_1_1Segment.html">true</a>, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a> t=PrimitiveType::FLOAT)</td></tr>
+<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerFaceWedgeTexCoords</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> b=<a class="el" href="classvcl_1_1Segment.html">true</a>, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a> t=PrimitiveType::FLOAT)</td></tr>
 <tr class="separator:ae1036f51254c52bf8e2dfe74ec9c1bf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36a4d67d96b47056f9e3b8442c5f8533" id="r_a36a4d67d96b47056f9e3b8442c5f8533"><td class="memItemLeft" align="right" valign="top"><a id="a36a4d67d96b47056f9e3b8442c5f8533" name="a36a4d67d96b47056f9e3b8442c5f8533"></a>
+<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerVertexBitFlags</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> b=<a class="el" href="classvcl_1_1Segment.html">true</a>, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a> t=PrimitiveType::UINT)</td></tr>
+<tr class="separator:a36a4d67d96b47056f9e3b8442c5f8533"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0032c19ad24926753f1353c2c98b7577" id="r_a0032c19ad24926753f1353c2c98b7577"><td class="memItemLeft" align="right" valign="top"><a id="a0032c19ad24926753f1353c2c98b7577" name="a0032c19ad24926753f1353c2c98b7577"></a>
-<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerVertexColor</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1Segment.html">b</a>=<a class="el" href="classvcl_1_1Segment.html">true</a>, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a> t=PrimitiveType::UCHAR)</td></tr>
+<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerVertexColor</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> b=<a class="el" href="classvcl_1_1Segment.html">true</a>, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a> t=PrimitiveType::UCHAR)</td></tr>
 <tr class="separator:a0032c19ad24926753f1353c2c98b7577"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5d00a6a3d901ce6b6d8a3db953f162e" id="r_ae5d00a6a3d901ce6b6d8a3db953f162e"><td class="memItemLeft" align="right" valign="top"><a id="ae5d00a6a3d901ce6b6d8a3db953f162e" name="ae5d00a6a3d901ce6b6d8a3db953f162e"></a>
-<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerVertexCustomComponents</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1Segment.html">b</a>=<a class="el" href="classvcl_1_1Segment.html">true</a>)</td></tr>
+<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerVertexCustomComponents</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> b=<a class="el" href="classvcl_1_1Segment.html">true</a>)</td></tr>
 <tr class="separator:ae5d00a6a3d901ce6b6d8a3db953f162e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa08c74bc3abb25f8bfd2d66fe24d9468" id="r_aa08c74bc3abb25f8bfd2d66fe24d9468"><td class="memItemLeft" align="right" valign="top"><a id="aa08c74bc3abb25f8bfd2d66fe24d9468" name="aa08c74bc3abb25f8bfd2d66fe24d9468"></a>
-<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerVertexMaterialIndex</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1Segment.html">b</a>=<a class="el" href="classvcl_1_1Segment.html">true</a>, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a> t=PrimitiveType::USHORT)</td></tr>
+<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerVertexMaterialIndex</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> b=<a class="el" href="classvcl_1_1Segment.html">true</a>, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a> t=PrimitiveType::USHORT)</td></tr>
 <tr class="separator:aa08c74bc3abb25f8bfd2d66fe24d9468"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a820ac4ac7f9e31c01ec3896308f37cef" id="r_a820ac4ac7f9e31c01ec3896308f37cef"><td class="memItemLeft" align="right" valign="top"><a id="a820ac4ac7f9e31c01ec3896308f37cef" name="a820ac4ac7f9e31c01ec3896308f37cef"></a>
-<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerVertexNormal</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1Segment.html">b</a>=<a class="el" href="classvcl_1_1Segment.html">true</a>, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a> t=PrimitiveType::FLOAT)</td></tr>
+<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerVertexNormal</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> b=<a class="el" href="classvcl_1_1Segment.html">true</a>, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a> t=PrimitiveType::FLOAT)</td></tr>
 <tr class="separator:a820ac4ac7f9e31c01ec3896308f37cef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c202cf9cfe10939f2ead517d83fd8d6" id="r_a7c202cf9cfe10939f2ead517d83fd8d6"><td class="memItemLeft" align="right" valign="top"><a id="a7c202cf9cfe10939f2ead517d83fd8d6" name="a7c202cf9cfe10939f2ead517d83fd8d6"></a>
-<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerVertexPosition</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1Segment.html">b</a>=<a class="el" href="classvcl_1_1Segment.html">true</a>, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a> t=PrimitiveType::DOUBLE)</td></tr>
+<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerVertexPosition</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> b=<a class="el" href="classvcl_1_1Segment.html">true</a>, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a> t=PrimitiveType::DOUBLE)</td></tr>
 <tr class="separator:a7c202cf9cfe10939f2ead517d83fd8d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af89aa6cfcab548636aba28dad3bff157" id="r_af89aa6cfcab548636aba28dad3bff157"><td class="memItemLeft" align="right" valign="top"><a id="af89aa6cfcab548636aba28dad3bff157" name="af89aa6cfcab548636aba28dad3bff157"></a>
-<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerVertexQuality</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1Segment.html">b</a>=<a class="el" href="classvcl_1_1Segment.html">true</a>, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a> t=PrimitiveType::DOUBLE)</td></tr>
+<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerVertexQuality</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> b=<a class="el" href="classvcl_1_1Segment.html">true</a>, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a> t=PrimitiveType::DOUBLE)</td></tr>
 <tr class="separator:af89aa6cfcab548636aba28dad3bff157"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6b98d5e6189a786e809a6e3d73e5438" id="r_ad6b98d5e6189a786e809a6e3d73e5438"><td class="memItemLeft" align="right" valign="top"><a id="ad6b98d5e6189a786e809a6e3d73e5438" name="ad6b98d5e6189a786e809a6e3d73e5438"></a>
+<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerVertexTangent</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> b=<a class="el" href="classvcl_1_1Segment.html">true</a>, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a> t=PrimitiveType::FLOAT)</td></tr>
+<tr class="separator:ad6b98d5e6189a786e809a6e3d73e5438"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab99a3a0436620a7726040cc7ddf1a8af" id="r_ab99a3a0436620a7726040cc7ddf1a8af"><td class="memItemLeft" align="right" valign="top"><a id="ab99a3a0436620a7726040cc7ddf1a8af" name="ab99a3a0436620a7726040cc7ddf1a8af"></a>
-<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerVertexTexCoord</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1Segment.html">b</a>=<a class="el" href="classvcl_1_1Segment.html">true</a>, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a> t=PrimitiveType::FLOAT)</td></tr>
+<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPerVertexTexCoord</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> b=<a class="el" href="classvcl_1_1Segment.html">true</a>, <a class="el" href="group__base.html#ga35a36b617de9550e23e0c1426a783464">DataType</a> t=PrimitiveType::FLOAT)</td></tr>
 <tr class="separator:ab99a3a0436620a7726040cc7ddf1a8af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9698197a077b97ab29072c1b6ccf070c" id="r_a9698197a077b97ab29072c1b6ccf070c"><td class="memItemLeft" align="right" valign="top"><a id="a9698197a077b97ab29072c1b6ccf070c" name="a9698197a077b97ab29072c1b6ccf070c"></a>
 <a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setPolygonMesh</b> ()</td></tr>
@@ -448,7 +487,7 @@ Public Member Functions</h2></td></tr>
 <a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setUnknownMesh</b> ()</td></tr>
 <tr class="separator:a33c841e31381b390a7eb0d4d96f283ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b7a4086de46249949b49778082135e0" id="r_a3b7a4086de46249949b49778082135e0"><td class="memItemLeft" align="right" valign="top"><a id="a3b7a4086de46249949b49778082135e0" name="a3b7a4086de46249949b49778082135e0"></a>
-<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setVertices</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> <a class="el" href="classvcl_1_1Segment.html">b</a>=<a class="el" href="classvcl_1_1Segment.html">true</a>)</td></tr>
+<a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>setVertices</b> (<a class="el" href="classvcl_1_1Segment.html">bool</a> b=<a class="el" href="classvcl_1_1Segment.html">true</a>)</td></tr>
 <tr class="separator:a3b7a4086de46249949b49778082135e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a347dc30ed56464e0cb06880f5800693d" id="r_a347dc30ed56464e0cb06880f5800693d"><td class="memItemLeft" align="right" valign="top"><a id="a347dc30ed56464e0cb06880f5800693d" name="a347dc30ed56464e0cb06880f5800693d"></a>
 <a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><b>updateMeshType</b> (<a class="el" href="classvcl_1_1Segment.html">uint</a> <a class="el" href="classvcl_1_1Segment.html">faceSize</a>)</td></tr>
@@ -492,9 +531,9 @@ std::array&lt; std::vector&lt; <a class="el" href="structvcl_1_1MeshInfo_1_1Cust
 <div class="line">        <span class="comment">// ...</span></div>
 <div class="line">    }</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassvcl_1_1MeshInfo_html"><div class="ttname"><a href="classvcl_1_1MeshInfo.html">vcl::MeshInfo</a></div><div class="ttdoc">A simple class that allows to store which elements and their components have been imported/loaded or ...</div><div class="ttdef"><b>Definition</b> mesh_info.h:76</div></div>
-<div class="ttc" id="aclassvcl_1_1MeshInfo_html_a7eed9cacecf170c7e12b407b5142a516"><div class="ttname"><a href="classvcl_1_1MeshInfo.html#a7eed9cacecf170c7e12b407b5142a516">vcl::MeshInfo::hasFaces</a></div><div class="ttdeci">bool hasFaces() const</div><div class="ttdoc">Returns true if the current object has Face Elements.</div><div class="ttdef"><b>Definition</b> mesh_info.h:420</div></div>
-<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:41</div></div>
+<div class="ttc" id="aclassvcl_1_1MeshInfo_html"><div class="ttname"><a href="classvcl_1_1MeshInfo.html">vcl::MeshInfo</a></div><div class="ttdoc">A simple class that allows to store which elements and their components have been imported/loaded or ...</div><div class="ttdef"><b>Definition</b> mesh_info.h:61</div></div>
+<div class="ttc" id="aclassvcl_1_1MeshInfo_html_a7eed9cacecf170c7e12b407b5142a516"><div class="ttname"><a href="classvcl_1_1MeshInfo.html#a7eed9cacecf170c7e12b407b5142a516">vcl::MeshInfo::hasFaces</a></div><div class="ttdeci">bool hasFaces() const</div><div class="ttdoc">Returns true if the current object has Face Elements.</div><div class="ttdef"><b>Definition</b> mesh_info.h:436</div></div>
+<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:26</div></div>
 </div><!-- fragment --><p>When saving a <a class="el" href="classvcl_1_1Mesh.html" title="The Mesh class represents a generic 3D mesh. A mesh is composed of a generic number of containers of ...">Mesh</a> to a file, an object of this type is used to tell which Elements/Components save on the file and, when the file format supports it, to choose the type used to store a specific component:</p>
 <div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">AMeshType</a> <a class="code hl_class" href="classvcl_1_1Segment.html">m</a>;</div>
 <div class="line"><a class="code hl_class" href="classvcl_1_1MeshInfo.html">MeshInfo</a> info(<a class="code hl_class" href="classvcl_1_1Segment.html">m</a>); <span class="comment">// compute the default MeshInfo object from the Mesh</span></div>
@@ -708,6 +747,62 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> T &gt; </
 
 </div>
 </div>
+<a id="a065faa8335b2ffd4580533b5e579f786" name="a065faa8335b2ffd4580533b5e579f786"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a065faa8335b2ffd4580533b5e579f786">&#9670;&#160;</a></span>hasPerEdgeBitFlags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">bool</a> vcl::MeshInfo::hasPerEdgeBitFlags </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns true if the current object has <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> Bit Flags. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if the current object has <a class="el" href="classvcl_1_1Edge.html" title="The Edge class represents an Edge element of the vcl::Mesh class.">Edge</a> Bit Flags. </dd></dl>
+
+</div>
+</div>
+<a id="a28f2a5d91d2e376d0ef25eee2dda24b4" name="a28f2a5d91d2e376d0ef25eee2dda24b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28f2a5d91d2e376d0ef25eee2dda24b4">&#9670;&#160;</a></span>hasPerFaceBitFlags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">bool</a> vcl::MeshInfo::hasPerFaceBitFlags </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns true if the current object has <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> Bit Flags. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if the current object has <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> Bit Flags. </dd></dl>
+
+</div>
+</div>
 <a id="af7604567ff51a4f973b407e863b0de69" name="af7604567ff51a4f973b407e863b0de69"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af7604567ff51a4f973b407e863b0de69">&#9670;&#160;</a></span>hasPerFaceMaterialIndex()</h2>
 
@@ -761,6 +856,34 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> T &gt; </
 
 <p>Returns true if the current object has per <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> References. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if the current object has per <a class="el" href="classvcl_1_1Face.html" title="The Face class represents an Face element of the vcl::Mesh class.">Face</a> <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> References. </dd></dl>
+
+</div>
+</div>
+<a id="ab5185680fa92ddf16b35c3a81c279ad7" name="ab5185680fa92ddf16b35c3a81c279ad7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5185680fa92ddf16b35c3a81c279ad7">&#9670;&#160;</a></span>hasPerVertexBitFlags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">bool</a> vcl::MeshInfo::hasPerVertexBitFlags </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns true if the current object has <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Bit Flags. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if the current object has <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Bit Flags. </dd></dl>
 
 </div>
 </div>
@@ -929,6 +1052,34 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> T &gt; </
 
 <p>Returns true if the current object has <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Quality. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if the current object has <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Quality. </dd></dl>
+
+</div>
+</div>
+<a id="a5bff032459ea4cf464ed8b1b8ae9d8f7" name="a5bff032459ea4cf464ed8b1b8ae9d8f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bff032459ea4cf464ed8b1b8ae9d8f7">&#9670;&#160;</a></span>hasPerVertexTangent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">bool</a> vcl::MeshInfo::hasPerVertexTangent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns true if the current object has <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Tangents. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if the current object has <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Tangents. </dd></dl>
 
 </div>
 </div>

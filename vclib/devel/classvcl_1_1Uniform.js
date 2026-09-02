@@ -7,6 +7,7 @@ var classvcl_1_1Uniform =
     [ "arraySize", "classvcl_1_1Uniform.html#a37602f0aa7fc5cbdea5921b0c494a6bb", null ],
     [ "bind", "classvcl_1_1Uniform.html#ab1d14306850384a68af4bf097475ce29", null ],
     [ "bind", "classvcl_1_1Uniform.html#a24964f8a2d6d72ced5b17501fad2c2ec", null ],
+    [ "destroy", "classvcl_1_1Uniform.html#a5287cb8e3a9141791cea99f9f1494e8b", null ],
     [ "handle", "classvcl_1_1Uniform.html#aa2927009dd2a70b440407e029b3102b3", null ],
     [ "isValid", "classvcl_1_1Uniform.html#abc4750194cba35214a78dbb0a9607d29", null ],
     [ "name", "classvcl_1_1Uniform.html#a7c718bbbd518619453d117ebd158ac69", null ],

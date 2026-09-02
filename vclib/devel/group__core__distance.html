@@ -197,7 +197,7 @@ requires (PointType::DIM == SegmentType::DIM)</td></tr>
 <tr class="separator:gaf922334c86709526e9bebbf5a47b7410"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3ab7db4e1073112e5de09a8be722dc93" id="r_ga3ab7db4e1073112e5de09a8be722dc93"><td class="memTemplParams" colspan="2">template&lt;PointConcept PointType&gt; </td></tr>
 <tr class="memitem:ga3ab7db4e1073112e5de09a8be722dc93"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">auto</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__distance.html#ga3ab7db4e1073112e5de09a8be722dc93">vcl::distance</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> PointType &amp;point0, <a class="el" href="classvcl_1_1Segment.html">const</a> PointType &amp;point1)</td></tr>
-<tr class="memdesc:ga3ab7db4e1073112e5de09a8be722dc93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the distance between two Points of any dimension.  <br /></td></tr>
+<tr class="memdesc:ga3ab7db4e1073112e5de09a8be722dc93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the distance between two <a class="el" href="classvcl_1_1Points.html" title="Renders a set of 3D points in world space as point splats (squares or circles).">Points</a> of any dimension.  <br /></td></tr>
 <tr class="separator:ga3ab7db4e1073112e5de09a8be722dc93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga39110d08cddd7244befc1c953419cf5f" id="r_ga39110d08cddd7244befc1c953419cf5f"><td class="memTemplParams" colspan="2">template&lt;SegmentConcept SegmentType, PointConcept PointType&gt; <br />
 requires (PointType::DIM == SegmentType::DIM)</td></tr>
@@ -227,7 +227,7 @@ requires (PointType::DIM == SegmentType::DIM)</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>List of distance algorithms. </p>
-<p>You can access these algorithms by including <code>#include &lt;<a class="el" href="algorithms_2core_2distance_8h_source.html">vclib/algorithms/core/distance.h</a>&gt;</code> </p>
+<p>You can access these algorithms by including <code>#include &lt;<a class="el" href="algorithms_2core_8h_source.html">vclib/algorithms/core.h</a>&gt;</code> </p>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="gad75f3d76ef4694a556b372936e9cf95d" name="gad75f3d76ef4694a556b372936e9cf95d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gad75f3d76ef4694a556b372936e9cf95d">&#9670;&#160;</a></span>boundedDistance() <span class="overload">[1/5]</span></h2>
@@ -579,8 +579,8 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> <a class=
 <div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">RemoveCVRefAndPointer&lt;T2&gt;</a>, <span class="keywordtype">double</span>&gt;();</div>
 <div class="line"><span class="comment">// obj1 is of type T1, obj2 is of type T2 (may be pointers or non-pointers)</span></div>
 <div class="line"><span class="keyword">auto</span> dist = f(<a class="code hl_function" href="group__base.html#ga769dac8f4b92030d30690a78b7fc2d79">dereferencePtr</a>(<a class="code hl_class" href="classvcl_1_1Segment.html">obj1</a>), <a class="code hl_function" href="group__base.html#ga769dac8f4b92030d30690a78b7fc2d79">dereferencePtr</a>(<a class="code hl_class" href="classvcl_1_1Segment.html">obj2</a>), maxDist);</div>
-<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:41</div></div>
-<div class="ttc" id="agroup__base_html_ga769dac8f4b92030d30690a78b7fc2d79"><div class="ttname"><a href="group__base.html#ga769dac8f4b92030d30690a78b7fc2d79">vcl::dereferencePtr</a></div><div class="ttdeci">auto &amp; dereferencePtr(T &amp;&amp;obj)</div><div class="ttdoc">Utility function that applies the unary operator '*' to the argument only if the object is a pointer,...</div><div class="ttdef"><b>Definition</b> pointers.h:95</div></div>
+<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:26</div></div>
+<div class="ttc" id="agroup__base_html_ga769dac8f4b92030d30690a78b7fc2d79"><div class="ttname"><a href="group__base.html#ga769dac8f4b92030d30690a78b7fc2d79">vcl::dereferencePtr</a></div><div class="ttdeci">auto &amp; dereferencePtr(T &amp;&amp;obj)</div><div class="ttdoc">Utility function that applies the unary operator '*' to the argument only if the object is a pointer,...</div><div class="ttdef"><b>Definition</b> pointers.h:80</div></div>
 </div><!-- fragment --> </dd></dl>
 
 </div>
@@ -1217,7 +1217,7 @@ template&lt;PointConcept PointType&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Compute the distance between two Points of any dimension. </p>
+<p>Compute the distance between two <a class="el" href="classvcl_1_1Points.html" title="Renders a set of 3D points in world space as point splats (squares or circles).">Points</a> of any dimension. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">PointType</td><td>The type of the input points.</td></tr>

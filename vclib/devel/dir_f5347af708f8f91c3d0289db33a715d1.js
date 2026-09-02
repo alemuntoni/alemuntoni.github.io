@@ -5,5 +5,6 @@ var dir_f5347af708f8f91c3d0289db33a715d1 =
     [ "distance.h", "mesh_2elem__algorithms_2distance_8h_source.html", null ],
     [ "intersection.h", "mesh_2elem__algorithms_2intersection_8h_source.html", null ],
     [ "polygon.h", "mesh_2elem__algorithms_2polygon_8h_source.html", null ],
+    [ "selection.h", "mesh_2elem__algorithms_2selection_8h_source.html", null ],
     [ "visibility.h", "mesh_2elem__algorithms_2visibility_8h_source.html", null ]
 ];

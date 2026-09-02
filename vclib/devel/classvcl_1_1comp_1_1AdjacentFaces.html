@@ -284,12 +284,12 @@ of the adjacent face next to position k", without check if it is less than the n
 <tr class="separator:a379b26aa134e0bf5c99c83d9f860334c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4470008d749ef8d78a6ae7a11746fab4" id="r_a4470008d749ef8d78a6ae7a11746fab4"><td class="memTemplParams" colspan="2">template&lt;Range Rng&gt; <br />
 requires InputRange&lt;<a class="el" href="classvcl_1_1Segment.html">Rng</a>, <a class="el" href="classvcl_1_1Face.html">Face</a>*&gt;</td></tr>
-<tr class="memitem:a4470008d749ef8d78a6ae7a11746fab4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html#a4470008d749ef8d78a6ae7a11746fab4">setAdjFaces</a> (<a class="el" href="classvcl_1_1Segment.html">Rng</a> &amp;&amp;<a class="el" href="classvcl_1_1Segment.html">r</a>)</td></tr>
+<tr class="memitem:a4470008d749ef8d78a6ae7a11746fab4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html#a4470008d749ef8d78a6ae7a11746fab4">setAdjFaces</a> (<a class="el" href="classvcl_1_1Segment.html">Rng</a> &amp;&amp;r)</td></tr>
 <tr class="memdesc:a4470008d749ef8d78a6ae7a11746fab4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all the adjacent faces of this element.  <br /></td></tr>
 <tr class="separator:a4470008d749ef8d78a6ae7a11746fab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0068d6e569eb369793737c4140e45b57" id="r_a0068d6e569eb369793737c4140e45b57"><td class="memTemplParams" colspan="2">template&lt;Range Rng&gt; <br />
 requires InputRange&lt;<a class="el" href="classvcl_1_1Segment.html">Rng</a>, <a class="el" href="classvcl_1_1Segment.html">uint</a>&gt;</td></tr>
-<tr class="memitem:a0068d6e569eb369793737c4140e45b57"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html#a0068d6e569eb369793737c4140e45b57">setAdjFaces</a> (<a class="el" href="classvcl_1_1Segment.html">Rng</a> &amp;&amp;<a class="el" href="classvcl_1_1Segment.html">r</a>)</td></tr>
+<tr class="memitem:a0068d6e569eb369793737c4140e45b57"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">void</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classvcl_1_1comp_1_1AdjacentFaces.html#a0068d6e569eb369793737c4140e45b57">setAdjFaces</a> (<a class="el" href="classvcl_1_1Segment.html">Rng</a> &amp;&amp;r)</td></tr>
 <tr class="memdesc:a0068d6e569eb369793737c4140e45b57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all the adjacent faces of this element.  <br /></td></tr>
 <tr class="separator:a0068d6e569eb369793737c4140e45b57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -335,7 +335,7 @@ class vcl::comp::AdjacentFaces&lt; STORE_INDICES, Face, N, TTVC, ParentElemType,
 <div class="fragment"><div class="line">v.adjFaceCount();</div>
 <div class="line"><span class="keyword">auto</span>* f = v.adjFace(0);</div>
 <div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">uint</a> <a class="code hl_class" href="classvcl_1_1Segment.html">vi</a> = v.adjFaceIndex(0);</div>
-<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:41</div></div>
+<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:26</div></div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>This component could be <em>Tied To <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Count</em>: it means that the size of the container, if dynamic, will change automatically along the <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Count of the Component. Check the <code>TTVC</code> template value on the specialization of your component to check if it is tied to the <a class="el" href="classvcl_1_1Vertex.html" title="The Vertex class represents an Vertex element of the vcl::Mesh class.">Vertex</a> Count. For further details check the documentation of the ContainerComponent class.</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -730,7 +730,7 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">bool</a> STORE_INDICES
 
 <p>Returns the index in the face container of the i-th adjacent face of the element, but using as index the module between i and the number of adjacent faces. You can use this function if you need to get the "index
 of the adjacent face next to position k", without check if it is less than the number of adjacent faces. Works also for negative numbers: </p>
-<div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">k</a> = <a class="code hl_class" href="classvcl_1_1Segment.html">pos</a>; <span class="comment">// some position of an adjacent face</span></div>
+<div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">k</a> = pos; <span class="comment">// some position of an adjacent face</span></div>
 <div class="line"><span class="keyword">auto</span> <a class="code hl_class" href="classvcl_1_1Segment.html">idx</a> = e.adjFaceIndexMod(<a class="code hl_class" href="classvcl_1_1Segment.html">k</a>+1); <span class="comment">// the index of the adjacent face next</span></div>
 <div class="line">                                   <span class="comment">// to k, that may also be at pos 0</span></div>
 <div class="line"><span class="keyword">auto</span> <a class="code hl_class" href="classvcl_1_1Segment.html">lastIdx</a> = e.adjFaceIndexMod(-1); <span class="comment">// the index of the adjacent face</span></div>
@@ -774,7 +774,7 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">bool</a> STORE_INDICES
 <div class="fragment"><div class="line"><span class="keywordflow">for</span> (<a class="code hl_class" href="classvcl_1_1Segment.html">uint</a> <a class="code hl_class" href="classvcl_1_1Segment.html">eid</a> : <a class="code hl_class" href="classvcl_1_1Segment.html">el</a>.<a class="code hl_function" href="classvcl_1_1comp_1_1AdjacentFaces.html#a64f0d8b2d602b7c18c7bee88e2d55d40">adjFaceIndices</a>()) {</div>
 <div class="line">    <span class="comment">// Do something with adj face index...</span></div>
 <div class="line">}</div>
-<div class="ttc" id="aclassvcl_1_1comp_1_1AdjacentFaces_html_a64f0d8b2d602b7c18c7bee88e2d55d40"><div class="ttname"><a href="classvcl_1_1comp_1_1AdjacentFaces.html#a64f0d8b2d602b7c18c7bee88e2d55d40">vcl::comp::AdjacentFaces::adjFaceIndices</a></div><div class="ttdeci">View&lt; ConstAdjacentFaceIndexIterator &gt; adjFaceIndices() const</div><div class="ttdoc">Returns a lightweight view object that stores the begin and end iterators of the container of adjacen...</div><div class="ttdef"><b>Definition</b> adjacent_faces.h:599</div></div>
+<div class="ttc" id="aclassvcl_1_1comp_1_1AdjacentFaces_html_a64f0d8b2d602b7c18c7bee88e2d55d40"><div class="ttname"><a href="classvcl_1_1comp_1_1AdjacentFaces.html#a64f0d8b2d602b7c18c7bee88e2d55d40">vcl::comp::AdjacentFaces::adjFaceIndices</a></div><div class="ttdeci">View&lt; ConstAdjacentFaceIndexIterator &gt; adjFaceIndices() const</div><div class="ttdoc">Returns a lightweight view object that stores the begin and end iterators of the container of adjacen...</div><div class="ttdef"><b>Definition</b> adjacent_faces.h:584</div></div>
 </div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>a lightweight view object that can be used in range-based for loops to iterate over adjacent face indices. </dd></dl>
 
 </div>
@@ -808,7 +808,7 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">bool</a> STORE_INDICES
 <p>Returns the pointer to the i-th adjacent face of this element but using as index the module between i and the number of adjacent faces. </p>
 <p>You can use this function if you need to get the "next
 adjacent face after position k", without check if it is less than the number of adj faces. Works also for negative numbers:</p>
-<div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">k</a> = <a class="code hl_class" href="classvcl_1_1Segment.html">pos</a>; <span class="comment">// some position of an adjacent face</span></div>
+<div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">k</a> = pos; <span class="comment">// some position of an adjacent face</span></div>
 <div class="line"><span class="keyword">auto</span>* <a class="code hl_class" href="classvcl_1_1Segment.html">next</a> = e.adjFaceMod(<a class="code hl_class" href="classvcl_1_1Segment.html">k</a>+1); <span class="comment">// the adj face next to k, that may also</span></div>
 <div class="line">                                <span class="comment">// be at pos 0</span></div>
 <div class="line"><span class="keyword">auto</span>* <a class="code hl_class" href="classvcl_1_1Segment.html">last</a> = e.adjFaceMod(-1); <span class="comment">// the adj face in position</span></div>
@@ -889,8 +889,8 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">bool</a> STORE_INDICES
 <div class="fragment"><div class="line"><span class="keywordflow">for</span> (<span class="keyword">auto</span>* <a class="code hl_function" href="classvcl_1_1comp_1_1AdjacentFaces.html#a29873942596252155c3b4fc30df45d6c">adjFace</a> : <a class="code hl_class" href="classvcl_1_1Segment.html">el</a>.<a class="code hl_function" href="classvcl_1_1comp_1_1AdjacentFaces.html#a40e6f41348a468ef22efcd79493f9aea">adjFaces</a>()) {</div>
 <div class="line">    <span class="comment">// Do something with adjFace</span></div>
 <div class="line">}</div>
-<div class="ttc" id="aclassvcl_1_1comp_1_1AdjacentFaces_html_a29873942596252155c3b4fc30df45d6c"><div class="ttname"><a href="classvcl_1_1comp_1_1AdjacentFaces.html#a29873942596252155c3b4fc30df45d6c">vcl::comp::AdjacentFaces::adjFace</a></div><div class="ttdeci">Face * adjFace(uint i)</div><div class="ttdoc">Returns the pointer to the i-th adjacent face of this element.</div><div class="ttdef"><b>Definition</b> adjacent_faces.h:161</div></div>
-<div class="ttc" id="aclassvcl_1_1comp_1_1AdjacentFaces_html_a40e6f41348a468ef22efcd79493f9aea"><div class="ttname"><a href="classvcl_1_1comp_1_1AdjacentFaces.html#a40e6f41348a468ef22efcd79493f9aea">vcl::comp::AdjacentFaces::adjFaces</a></div><div class="ttdeci">View&lt; AdjacentFaceIterator &gt; adjFaces()</div><div class="ttdoc">Returns a lightweight view object that stores the begin and end iterators of the container of adjacen...</div><div class="ttdef"><b>Definition</b> adjacent_faces.h:560</div></div>
+<div class="ttc" id="aclassvcl_1_1comp_1_1AdjacentFaces_html_a29873942596252155c3b4fc30df45d6c"><div class="ttname"><a href="classvcl_1_1comp_1_1AdjacentFaces.html#a29873942596252155c3b4fc30df45d6c">vcl::comp::AdjacentFaces::adjFace</a></div><div class="ttdeci">Face * adjFace(uint i)</div><div class="ttdoc">Returns the pointer to the i-th adjacent face of this element.</div><div class="ttdef"><b>Definition</b> adjacent_faces.h:146</div></div>
+<div class="ttc" id="aclassvcl_1_1comp_1_1AdjacentFaces_html_a40e6f41348a468ef22efcd79493f9aea"><div class="ttname"><a href="classvcl_1_1comp_1_1AdjacentFaces.html#a40e6f41348a468ef22efcd79493f9aea">vcl::comp::AdjacentFaces::adjFaces</a></div><div class="ttdeci">View&lt; AdjacentFaceIterator &gt; adjFaces()</div><div class="ttdoc">Returns a lightweight view object that stores the begin and end iterators of the container of adjacen...</div><div class="ttdef"><b>Definition</b> adjacent_faces.h:545</div></div>
 </div><!-- fragment --><dl class="section return"><dt>Returns</dt><dd>a lightweight view object that can be used in range-based for loops to iterate over adjacent faces. </dd></dl>
 
 </div>
@@ -1669,7 +1669,7 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">bool</a> STORE_INDICES
 </div><div class="memdoc">
 
 <p>Sets the i-th adjacent face of the element, but using as index the module between i and the number of adjacent faces. You can use this function if you need to set the "next adjacent face after position k", without check if it is less than the number of adjacent faces. Works also for negative numbers: </p>
-<div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">k</a> = <a class="code hl_class" href="classvcl_1_1Segment.html">pos</a>; <span class="comment">// some position of an adj face</span></div>
+<div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">k</a> = pos; <span class="comment">// some position of an adj face</span></div>
 <div class="line">e.setAdjFaceMod(<a class="code hl_class" href="classvcl_1_1Segment.html">k</a>+1, <a class="code hl_class" href="classvcl_1_1Segment.html">aFace</a>); <span class="comment">// set the adj face next to k, that may also</span></div>
 <div class="line">                              <span class="comment">// be at pos 0</span></div>
 <div class="line">e.setAdjFaceMod(-1, <a class="code hl_class" href="classvcl_1_1Segment.html">aFace</a>); <span class="comment">// set the adj face in position</span></div>
@@ -1721,7 +1721,7 @@ template&lt;<a class="el" href="classvcl_1_1Segment.html">bool</a> STORE_INDICES
 </div><div class="memdoc">
 
 <p>Sets the i-th adjacent face of the element, but using as index the module between i and the number of adjacent faces. You can use this function if you need to set the "next adjacent face after position k", without check if it is less than the number of adjacent faces. Works also for negative numbers: </p>
-<div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">k</a> = <a class="code hl_class" href="classvcl_1_1Segment.html">pos</a>; <span class="comment">// some position of an adj face</span></div>
+<div class="fragment"><div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">k</a> = pos; <span class="comment">// some position of an adj face</span></div>
 <div class="line">e.setAdjFaceMod(<a class="code hl_class" href="classvcl_1_1Segment.html">k</a>+1, <a class="code hl_class" href="classvcl_1_1Segment.html">aFaceInd</a>); <span class="comment">// set the adj face next to k, that may</span></div>
 <div class="line">                                <span class="comment">// also be at pos 0</span></div>
 <div class="line">e.setAdjFaceMod(-1, <a class="code hl_class" href="classvcl_1_1Segment.html">aFaceInd</a>); <span class="comment">// set the adj face in position</span></div>

@@ -2,10 +2,8 @@ var classvcl_1_1DrawableObject =
 [
     [ "DrawableObject", "classvcl_1_1DrawableObject.html#af859a3bc1ba66ce1d9287f0a8d852396", null ],
     [ "boundingBox", "classvcl_1_1DrawableObject.html#a48b39c17a077654b03a0017d6a52020b", null ],
-    [ "clone", "classvcl_1_1DrawableObject.html#aa382b5f7ea887d2894c4d7934d3afe83", null ],
-    [ "clone", "classvcl_1_1DrawableObject.html#aed0d44d07cb86a6ac7509f01680db62c", null ],
-    [ "draw", "classvcl_1_1DrawableObject.html#a530baed5108b8e1c7fcefef639ee2f8e", null ],
-    [ "drawId", "classvcl_1_1DrawableObject.html#a9b5238a28d54c19380b1211f20ed4135", null ],
+    [ "draw", "classvcl_1_1DrawableObject.html#a62c5b447e47b1f95fcfb0411d6a86d08", null ],
+    [ "drawId", "classvcl_1_1DrawableObject.html#a594f178f0c685acf8e10ae86f374dfb6", null ],
     [ "info", "classvcl_1_1DrawableObject.html#a4483ff90168a8a58f947ca9ed78cee22", null ],
     [ "info", "classvcl_1_1DrawableObject.html#a9aeb83cb75d2b3165e7de4e410d64265", null ],
     [ "init", "classvcl_1_1DrawableObject.html#ad849ff3a7fab04498e0c040f299294cd", null ],

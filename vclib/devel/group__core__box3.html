@@ -105,14 +105,12 @@ $(document).ready(function(){initNavTree('group__core__box3.html',''); initResiz
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">Core Box3 Algorithms<div class="ingroups"><a class="el" href="group__algorithms__core.html">Core Algorithms</a> &raquo; <a class="el" href="group__core__box.html">Core Box Algorithms</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>List of utility functions for boxes having 3 dimensions.  
-<a href="#details">More...</a></p>
+</p>
 <div class="dynheader">
 Collaboration diagram for Core Box3 Algorithms:</div>
 <div class="dyncontent">
@@ -122,19 +120,6 @@ Collaboration diagram for Core Box3 Algorithms:</div>
 <area shape="rect" title="List of utility functions for boxes having 3 dimensions." alt="" coords="209,5,373,31"/>
 </map>
 </div>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:ga260670c3f06ec07c17c0f97fa764f7c7" id="r_ga260670c3f06ec07c17c0f97fa764f7c7"><td class="memTemplParams" colspan="2">template&lt;Box3Concept BoxType&gt; </td></tr>
-<tr class="memitem:ga260670c3f06ec07c17c0f97fa764f7c7"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">auto</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__box3.html#ga260670c3f06ec07c17c0f97fa764f7c7">vcl::boxEdge</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> BoxType &amp;<a class="el" href="classvcl_1_1Segment.html">box</a>, uint <a class="el" href="classvcl_1_1Segment.html">i</a>) -&gt; <a class="el" href="classvcl_1_1Segment.html">Segment</a>&lt; <a class="el" href="classvcl_1_1Segment.html">typename</a> BoxType::PointType &gt;</td></tr>
-<tr class="memdesc:ga260670c3f06ec07c17c0f97fa764f7c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the ith edge of a 3D box.  <br /></td></tr>
-<tr class="separator:ga260670c3f06ec07c17c0f97fa764f7c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga13a8da076c8ee532f5f1fd55a761256a" id="r_ga13a8da076c8ee532f5f1fd55a761256a"><td class="memTemplParams" colspan="2">template&lt;Box3Concept BoxType&gt; </td></tr>
-<tr class="memitem:ga13a8da076c8ee532f5f1fd55a761256a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classvcl_1_1Segment.html">auto</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__core__box3.html#ga13a8da076c8ee532f5f1fd55a761256a">vcl::boxVertex</a> (<a class="el" href="classvcl_1_1Segment.html">const</a> BoxType &amp;<a class="el" href="classvcl_1_1Segment.html">box</a>, uint <a class="el" href="classvcl_1_1Segment.html">i</a>) -&gt; BoxType::PointType</td></tr>
-<tr class="memdesc:ga13a8da076c8ee532f5f1fd55a761256a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the ith vertex of a 3D box.  <br /></td></tr>
-<tr class="separator:ga13a8da076c8ee532f5f1fd55a761256a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>List of utility functions for boxes having 3 dimensions. </p>
 <p>The order of the vertices, and edges is as follows:</p>
 <div class="fragment"><div class="line">      v2_______e2_____________v3</div>
@@ -159,133 +144,7 @@ Functions</h2></td></tr>
 <div class="line">3: v6, v4, v5, v7</div>
 <div class="line">4: v3, v2, v6, v7</div>
 <div class="line">5: v5, v1, v3, v7</div>
-</div><!-- fragment --><p>You can access these algorithms by including <code>#include &lt;<a class="el" href="box3_8h_source.html">vclib/algorithms/core/box/box3.h</a>&gt;</code> </p>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="ga260670c3f06ec07c17c0f97fa764f7c7" name="ga260670c3f06ec07c17c0f97fa764f7c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga260670c3f06ec07c17c0f97fa764f7c7">&#9670;&#160;</a></span>boxEdge()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;Box3Concept BoxType&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">auto</a> vcl::boxEdge </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">const</a> BoxType &amp;&#160;</td>
-          <td class="paramname"><em>box</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint&#160;</td>
-          <td class="paramname"><em>i</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; <a class="el" href="classvcl_1_1Segment.html">Segment</a>&lt;<a class="el" href="classvcl_1_1Segment.html">typename</a> BoxType::PointType&gt;
-</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the ith edge of a 3D box. </p>
-<div class="fragment"><div class="line">       <a class="code hl_class" href="classvcl_1_1Segment.html">________e2_____________</a></div>
-<div class="line">      /|                    /|</div>
-<div class="line">     / |                   / |</div>
-<div class="line"> <a class="code hl_class" href="classvcl_1_1Segment.html">e10</a>/  |               <a class="code hl_class" href="classvcl_1_1Segment.html">e11</a>/  |</div>
-<div class="line">   /<a class="code hl_class" href="classvcl_1_1Segment.html">___</a>|<a class="code hl_class" href="classvcl_1_1Segment.html">______e6_________</a>/   |</div>
-<div class="line">  |    |                 |   |<a class="code hl_class" href="classvcl_1_1Segment.html">e3</a></div>
-<div class="line">  |    |                 |   |</div>
-<div class="line">  |    |<a class="code hl_class" href="classvcl_1_1Segment.html">e1</a>               |<a class="code hl_class" href="classvcl_1_1Segment.html">e5</a> |</div>
-<div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">e7</a>|    |                 |   |</div>
-<div class="line">  |    |<a class="code hl_class" href="classvcl_1_1Segment.html">_________________</a>|<a class="code hl_class" href="classvcl_1_1Segment.html">___</a>|</div>
-<div class="line">  |   /         <a class="code hl_class" href="classvcl_1_1Segment.html">e0</a>       |   /            ^ y</div>
-<div class="line">  |  /                   |  /             |</div>
-<div class="line">  | /<a class="code hl_class" href="classvcl_1_1Segment.html">e8</a>                  | /<a class="code hl_class" href="classvcl_1_1Segment.html">e9</a>            --&gt; x</div>
-<div class="line">  |/<a class="code hl_class" href="classvcl_1_1Segment.html">_____________________</a>|/              /</div>
-<div class="line">             <a class="code hl_class" href="classvcl_1_1Segment.html">e4</a>                         z</div>
-<div class="ttc" id="aclassvcl_1_1Segment_html"><div class="ttname"><a href="classvcl_1_1Segment.html">vcl::Segment</a></div><div class="ttdoc">A class representing a line segment in n-dimensional space. The class is parameterized by a PointConc...</div><div class="ttdef"><b>Definition</b> segment.h:41</div></div>
-</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">BoxType</td><td>The type of the box. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">box</td><td>The box. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>The index of the edge. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The ith edge of the box. </dd></dl>
-
-</div>
-</div>
-<a id="ga13a8da076c8ee532f5f1fd55a761256a" name="ga13a8da076c8ee532f5f1fd55a761256a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga13a8da076c8ee532f5f1fd55a761256a">&#9670;&#160;</a></span>boxVertex()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;Box3Concept BoxType&gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classvcl_1_1Segment.html">auto</a> vcl::boxVertex </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classvcl_1_1Segment.html">const</a> BoxType &amp;&#160;</td>
-          <td class="paramname"><em>box</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint&#160;</td>
-          <td class="paramname"><em>i</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> -&gt; BoxType::PointType
-</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the ith vertex of a 3D box. </p>
-<div class="fragment"><div class="line">      <a class="code hl_class" href="classvcl_1_1Segment.html">v2______________________v3</a></div>
-<div class="line">      /|                    /|</div>
-<div class="line">     / |                   / |</div>
-<div class="line">    /  |                  /  |</div>
-<div class="line">   /<a class="code hl_class" href="classvcl_1_1Segment.html">___</a>|<a class="code hl_class" href="classvcl_1_1Segment.html">_________________</a>/   |</div>
-<div class="line"><a class="code hl_class" href="classvcl_1_1Segment.html">v6</a>|    |                 |<a class="code hl_class" href="classvcl_1_1Segment.html">v7</a> |</div>
-<div class="line">  |    |                 |   |</div>
-<div class="line">  |    |                 |   |</div>
-<div class="line">  |    |                 |   |</div>
-<div class="line">  |    |<a class="code hl_class" href="classvcl_1_1Segment.html">_________________</a>|<a class="code hl_class" href="classvcl_1_1Segment.html">___</a>|</div>
-<div class="line">  |   / <a class="code hl_class" href="classvcl_1_1Segment.html">v0</a>               |   /v1          ^ y</div>
-<div class="line">  |  /                   |  /             |</div>
-<div class="line">  | /                    | /              --&gt; x</div>
-<div class="line">  |/<a class="code hl_class" href="classvcl_1_1Segment.html">_____________________</a>|/              /</div>
-<div class="line">  <a class="code hl_class" href="classvcl_1_1Segment.html">v4</a>                     <a class="code hl_class" href="classvcl_1_1Segment.html">v5</a>             z</div>
-</div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">BoxType</td><td>The type of the box. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">box</td><td>The box. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>The index of the vertex. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The ith vertex of the box. </dd></dl>
-
-</div>
-</div>
+</div><!-- fragment --><p>You can access these algorithms by including <code>#include &lt;<a class="el" href="algorithms_2core_8h_source.html">vclib/algorithms/core.h</a>&gt;</code> </p>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

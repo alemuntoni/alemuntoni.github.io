@@ -6,7 +6,6 @@ var classvcl_1_1NullLogger =
     [ "log", "classvcl_1_1NullLogger.html#ab807f56a7589654be683a976525a3920", null ],
     [ "log", "classvcl_1_1NullLogger.html#a27ac18737ca17528a3b740ebda88548b", null ],
     [ "progress", "classvcl_1_1NullLogger.html#a3f203d4618a05a0e17ffaa718cfd839a", null ],
-    [ "setPrintLevel", "classvcl_1_1NullLogger.html#a87bd9e8b812231143b529cb19998bb17", null ],
-    [ "startProgress", "classvcl_1_1NullLogger.html#a04f2d2bef6eba7bf4a83ca04bdc27265", null ],
+    [ "startProgress", "classvcl_1_1NullLogger.html#a244cdeade24259ee29d67421be0b692d", null ],
     [ "time", "classvcl_1_1NullLogger.html#a64698c2498b311f3693313fa6986926a", null ]
 ];

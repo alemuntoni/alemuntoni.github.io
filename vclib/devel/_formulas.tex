@@ -1,0 +1,115 @@
+\documentclass{article}
+\usepackage{ifthen}
+\usepackage{epsfig}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{newunicodechar}
+  \makeatletter
+    \def\doxynewunicodechar#1#2{%
+    \@tempswafalse
+    \edef\nuc@tempa{\detokenize{#1}}%
+    \if\relax\nuc@tempa\relax
+      \nuc@emptyargerr
+    \else
+      \edef\@tempb{\expandafter\@car\nuc@tempa\@nil}%
+      \nuc@check
+      \if@tempswa
+        \@namedef{u8:\nuc@tempa}{#2}%
+      \fi
+    \fi
+  }
+  \makeatother
+  \doxynewunicodechar{⁻}{${}^{-}$}% Superscript minus
+  \doxynewunicodechar{²}{${}^{2}$}% Superscript two
+  \doxynewunicodechar{³}{${}^{3}$}% Superscript three
+
+\pagestyle{empty}
+\begin{document}
+$ n_i $
+\pagebreak
+
+$ n_i = \lceil \mathrm{bbox.dim}(i) \;/\; \mathrm{cellLens}(i) \rceil
+  $
+\pagebreak
+
+$ n_i = \lfloor \mathrm{bbox.dim}(i) \;/\; \mathrm{cellLens}(i)
+  \rfloor $
+\pagebreak
+
+$ \prod_{i=0}^{N-1} \mathrm{cellCount}(i) $
+\pagebreak
+
+$ \mathrm{index} = c_0 \cdot s_1 \cdot \ldots \cdot s_{N-1}
+    + c_1 \cdot s_2 \cdot \ldots \cdot s_{N-1} + \ldots + c_{N-1} $
+\pagebreak
+
+$ s_i $
+\pagebreak
+
+$ \prod_{i=0}^{N-1} \mathrm{cellLength}(i) $
+\pagebreak
+
+$ \mathbf{l} $
+\pagebreak
+
+\[
+  \mathbf{w} = \sum_{i=0}^{N-1} l_i \,\mathrm{axis}(i)
+\]
+\pagebreak
+
+\[
+  l_i = \mathbf{w} \cdot \mathrm{axis}(i)
+\]
+\pagebreak
+
+$ e_i $
+\pagebreak
+
+\[
+  \mathbf{w} = \sum_{i=0}^{N-1} \mathrm{local}(i) \cdot \mathrm{axis}(i)
+\]
+\pagebreak
+
+\[
+  \mathrm{local}(i) = \mathbf{world} \cdot \mathrm{axis}(i)
+\]
+\pagebreak
+
+\[ R \, \mathbf{l} = \mathrm{toWorld}(\mathbf{l}) \]
+\pagebreak
+
+\[ R^\top \, \mathbf{w} = \mathrm{toLocal}(\mathbf{w}) \]
+\pagebreak
+
+$ R^{-1} = R^\top $
+\pagebreak
+
+$ l = (l_0, \ldots, l_{N-1}) $
+\pagebreak
+
+\[
+  p = \mathrm{origin} + \sum_{i=0}^{N-1} l_i \,\mathrm{axis}(i)
+\]
+\pagebreak
+
+\[
+  l_i = (p - \mathrm{origin}) \cdot \mathrm{axis}(i)
+\]
+\pagebreak
+
+\[
+  \mathrm{world} = \mathrm{origin} +
+\mathrm{basis.toWorld}(\mathrm{local})
+\]
+\pagebreak
+
+\[
+  \mathrm{local} = \mathrm{basis.toLocal}(\mathrm{world} -
+\mathrm{origin})
+\]
+\pagebreak
+
+\[ T \, \mathbf{l}_{\mathrm{hom}} = \mathbf{w}_{\mathrm{hom}} \]
+\pagebreak
+
+\end{document}

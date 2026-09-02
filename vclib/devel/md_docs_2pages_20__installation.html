@@ -109,95 +109,111 @@ $(document).ready(function(){initNavTree('md_docs_2pages_20__installation.html',
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="autotoc_md1"></a> The library can be used both as a C++ library and as a Python library.</p>
+<blockquote class="doxtable">
+<p>&zwj;[!WARNING] <b>License Disclaimer:</b> While VCLib is licensed under the MPL2 license, please note that when using the <code>External</code> module or the <code>IO</code> module of <code>Core</code>, you are implicitly accepting the licenses of the underlying external third-party libraries, which may differ from MPL2. </p>
+</blockquote>
 <h1><a class="anchor" id="autotoc_md2"></a>
 C++</h1>
-<p>In order to work easily with VCLib, you can use the CMake configuration, but you can also use the core module of the library as a header-only library.</p>
+<p>VCLib requires a compiler that supports C++20 and <b>CMake &gt;= 3.24</b>.</p>
 <h2><a class="anchor" id="autotoc_md3"></a>
-CMake</h2>
-<p>The minimum required version is 3.24.</p>
-<p>CMake will take care to find and download all the required and optional dependencies for each module of the library that you want to build and use. By default, the library is built with the <code>Core</code> module only, but you can enable the other modules by setting the <code>VCLIB_BUILD_MODULE_&lt;module&gt;</code> CMake variable to <code>ON</code>, before adding the VCLib directory to your project or in your CMake configuration.</p>
-<p>There are two very easy ways to include VCLib in your project.</p>
-<h3><a class="anchor" id="autotoc_md4"></a>
-Using FetchContent</h3>
-<p>If you don't want to clone the repository, you can use <code>FetchContent</code> to download the library at configuration time. This is an example of <code>CMakeLists.txt</code> that uses vclib as a dependency:</p>
+Supported Compilers</h2>
+<p>VCLib uses modern C++20 features. The supported compilers are:</p><ul>
+<li><b>GCC 13.3</b> (default in Ubuntu 24.04) or later</li>
+<li><b>Apple Clang 16</b> (Xcode 16.2 on macOS) / <b>Clang 17</b> or later</li>
+<li><b>MSVC 19.36</b> (Visual Studio 2022) or later</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md4"></a>
+Requirements &amp; System Dependencies</h2>
+<p>VCLib bundles some core dependencies (like Eigen, MapBox Earcut, STB). For other dependencies, the requirements vary depending on your Operating System and the modules you want to use.</p>
+<p><b>Windows Users</b>: You do not need to install any system dependencies manually. CMake will automatically download and build everything that is needed (including heavy libraries like CGAL and Embree).</p>
+<p><b>Linux and macOS Users</b>: VCLib relies on the system package manager (e.g., <code>apt</code> on Ubuntu/Debian, <code>brew</code> on macOS) to provide some libraries. Below is the exhaustive list of system dependencies:</p>
+<h3><a class="anchor" id="autotoc_md5"></a>
+Core Module</h3>
+<ul>
+<li><b>Linux Only (Recommended)</b>: <code>libtbb-dev</code> (Ubuntu/Debian) <em>VCLib uses C++17 Parallel STL for performance. Since <code>libstdc++</code> requires TBB for parallel STL, installing it is highly recommended on Linux. On macOS and Windows, parallel STL is supported without TBB. If TBB is not found, VCLib will fallback to a thread-pool implementation (<a href="https://github.com/alugowski/poolSTL">poolSTL</a>).</em></li>
+</ul>
+<h3><a class="anchor" id="autotoc_md6"></a>
+Render Module</h3>
+<ul>
+<li><b>Linux Only (Mandatory)</b>: <code>freeglut3-dev libgl1-mesa-dev libxi-dev libxinerama-dev libxcursor-dev libxrandr-dev</code> (Ubuntu/Debian) <em>Required for windowing and BGFX rendering. On macOS and Windows, the necessary windowing frameworks are already provided natively by the OS.</em></li>
+</ul>
+<h3><a class="anchor" id="autotoc_md7"></a>
+External Module</h3>
+<p>If you enable the External module, you must install the following dependencies on both Linux and macOS:</p><ul>
+<li><b>For CGAL and libigl (Mandatory)</b>:<ul>
+<li>Ubuntu/Debian: <code>libgmp-dev libmpfr-dev</code></li>
+<li>macOS: <code>gmp mpfr</code></li>
+</ul>
+</li>
+<li><b>For Embree (Mandatory)</b>:<ul>
+<li>Ubuntu/Debian: <code>libembree-dev</code></li>
+<li>macOS: <code>embree</code></li>
+</ul>
+</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md8"></a>
+CMake Integration</h2>
+<p>By default, the library is built with the <b>Core</b> module only. You can enable the other modules by setting the <code>VCLIB_BUILD_MODULE_&lt;module&gt;</code> CMake variable to <code>ON</code> <em>before</em> finding or adding VCLib. You can also disable the automatic download of dependencies setting <code>VCLIB_ALLOW_&lt;dependency&gt;</code> to <code>OFF</code>.</p>
+<p>There are three main ways to include VCLib in your CMake project.</p>
+<h3><a class="anchor" id="autotoc_md9"></a>
+1. Using &lt;tt&gt;find_package&lt;/tt&gt; (Pre-compiled Archive)</h3>
+<p>You can download a pre-compiled archive of VCLib from the <a href="https://github.com/cnr-isti-vclab/vclib/releases">GitHub Releases</a> page. We provide archives for both the <code>core</code> version (only the Core module) and the <code>all</code> version (Core, Render, and External modules).</p>
+<p>Once downloaded and extracted, you can use <code>find_package</code>:</p>
 <div class="fragment"><div class="line">cmake_minimum_required(VERSION 3.24)</div>
-<div class="line"> </div>
 <div class="line">project(my_project LANGUAGES CXX)</div>
 <div class="line"> </div>
-<div class="line">set(CMAKE_CXX_STANDARD 20)</div>
-<div class="line">set(CMAKE_CXX_STANDARD_REQUIRED ON)</div>
+<div class="line"># enable any of the vclib modules you require here:</div>
+<div class="line">set(VCLIB_BUILD_MODULE_EXTERNAL OFF)</div>
+<div class="line">set(VCLIB_BUILD_MODULE_RENDER OFF)</div>
+<div class="line"> </div>
+<div class="line">find_package(vclib REQUIRED)</div>
+<div class="line"> </div>
+<div class="line">add_executable(my_project main.cpp)</div>
+<div class="line">target_link_libraries(my_project PRIVATE vclib::vclib)</div>
+</div><!-- fragment --><p><em>Note: If you extracted the archive in a non-standard location, you will need to pass <code>-Dvclib_DIR=/path/to/extracted/vclib/lib/cmake/vclib</code> when configuring your project.</em></p>
+<h3><a class="anchor" id="autotoc_md10"></a>
+2. Using &lt;tt&gt;FetchContent&lt;/tt&gt; (Build from Source)</h3>
+<p>If you prefer to download and build the library at configuration time without dealing with archives, you can use <code>FetchContent</code>:</p>
+<div class="fragment"><div class="line">cmake_minimum_required(VERSION 3.24)</div>
+<div class="line">project(my_project LANGUAGES CXX)</div>
 <div class="line"> </div>
 <div class="line">include(FetchContent)</div>
 <div class="line"> </div>
 <div class="line"># enable any of the vclib modules you require here:</div>
 <div class="line">set(VCLIB_BUILD_MODULE_EXTERNAL OFF)</div>
-<div class="line">set(VCLIB_BUILD_MODULE_PROCESSING OFF)</div>
 <div class="line">set(VCLIB_BUILD_MODULE_RENDER OFF)</div>
 <div class="line"> </div>
 <div class="line">FetchContent_Declare(</div>
 <div class="line">    vclib</div>
 <div class="line">    GIT_REPOSITORY https://github.com/cnr-isti-vclab/vclib.git</div>
-<div class="line">    GIT_TAG        origin/main)</div>
+<div class="line">    GIT_TAG        origin/main) # or a specific tag</div>
 <div class="line"> </div>
 <div class="line">FetchContent_MakeAvailable(vclib)</div>
 <div class="line"> </div>
 <div class="line">add_executable(my_project main.cpp)</div>
-<div class="line"> </div>
 <div class="line">target_link_libraries(my_project PRIVATE vclib::vclib)</div>
-</div><!-- fragment --><p>This will download the library and all its dependencies at configuration time, and it will make the <code>vclib::vclib</code> target available for linking.</p>
-<p>You can enable any of the VCLib modules you require by setting the corresponding <code>VCLIB_BUILD_MODULE_&lt;module&gt;</code> variable to <code>ON</code> before calling <code>FetchContent_MakeAvailable(vclib)</code>.</p>
-<h3><a class="anchor" id="autotoc_md5"></a>
-Using add_subdirectory</h3>
-<p>To include VCLib in your CMake project, first clone (recursively) the VCLib repository into your project directory:</p>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md11"></a>
+3. Using &lt;tt&gt;add_subdirectory&lt;/tt&gt;</h3>
+<p>Alternatively, you can clone the repository directly into your project directory (or add it as a git submodule) and include it:</p>
 <div class="fragment"><div class="line">cd /path/to/your/project</div>
 <div class="line">git clone --recursive https://github.com/cnr-isti-vclab/vclib</div>
-</div><!-- fragment --><p>(alternatively, you can use <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">git submodules</a>).</p>
-<p>Then, in your <code>CMakeLists.txt</code>:</p>
-<div class="fragment"><div class="line"># enable any of the vclib modules you require here:</div>
+</div><!-- fragment --><div class="fragment"><div class="line"># enable any of the vclib modules you require here:</div>
 <div class="line">set(VCLIB_BUILD_MODULE_EXTERNAL OFF)</div>
-<div class="line">set(VCLIB_BUILD_MODULE_PROCESSING OFF)</div>
 <div class="line">set(VCLIB_BUILD_MODULE_RENDER OFF)</div>
 <div class="line"> </div>
 <div class="line">add_subdirectory(vclib)</div>
 <div class="line"> </div>
-<div class="line">[...]</div>
 <div class="line">add_executable(my_target main.cpp)</div>
 <div class="line">target_link_libraries(my_target PRIVATE vclib::vclib)</div>
-</div><!-- fragment --><p>Where <code>my_target</code> is the target of your project.</p>
-<h3><a class="anchor" id="autotoc_md6"></a>
-Setting INCLUDE_PATH</h3>
-<p>You can also use the VCLib Core module just as a header-only library.</p>
-<p>In order to work with VCLib, you must ensure that Eigen is accessible in your <code>INCLUDE_PATH</code>. MapBox Earcut, STB, and poolSTL are already included automatically by VCLib, so you don't need to include them manually. Eigen is also provided within the <code>external</code> directory of VCLib.</p>
-<p>To set your <code>INCLUDE_PATH</code> correctly, follow these steps:</p>
-<div class="fragment"><div class="line">INCLUDE_PATH += path/to/vclib/external/eigen-3.4.0/ # or your favorite Eigen version</div>
-<div class="line">INCLUDE_PATH += path/to/vclib/include/</div>
-</div><!-- fragment --><p>and you are ready to go.</p>
-<h2><a class="anchor" id="autotoc_md7"></a>
-Supported Compilers</h2>
-<p>VCLib requires recent compiler versions in order to build the newly features of the C++20 language, that have been recently integrated in the major compilers:</p>
-<ul>
-<li>GCC 13.3 (default in Ubuntu 24.04)</li>
-<li>Apple CLang 16 (XCode 16.2 on MacOS) or CLang 17</li>
-<li>MSVC 19.36 (Visual Studio 2022)</li>
-</ul>
-<h3><a class="anchor" id="autotoc_md8"></a>
-C++17 Parallel STL</h3>
-<p>The lack of support for C++17 parallel STL in some compilers is still a problem.</p>
-<p>To allow the use of C++17 parallel STL, VCLib uses <a href="https://github.com/alugowski/poolSTL">poolSTL</a> as a fallback. poolSTL will use the parallel STL if it is available, and otherwise, it implements the parallel algorithms using a thread pool.</p>
-<p>In the case of libstdc++, the parallel STL is available only if the <code>Threading Building Blocks</code> library is installed. If you are using libstdc++, we suggest to install TBB in order to bypass poolSTL and use the parallel STL.</p>
-<p>On Ubuntu, you can install it by running the following command in the terminal:</p>
-<div class="fragment"><div class="line">sudo apt install libtbb-dev</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md9"></a>
-Dependencies</h3>
-<p>VCLib has several dependencies that depend on the module you want to use. Along with TBB or poolSTL for parallelism, the Core module depends on the following libraries:</p>
-<ul>
-<li><a href="https://eigen.tuxfamily.org/index.php?title=Main_Page">Eigen</a></li>
-<li><a href="https://github.com/mapbox/earcut.hpp">MapBox Earcut</a></li>
-<li><a href="https://github.com/nothings/stb">STB</a></li>
-</ul>
-<p>All these libraries are bundled with VCLib, so you don't need to install them separately.</p>
-<p>All the other dependencies can be required or optional, and they are needed by the other modules of the library. The CMake configuration, when possible, will take care to download them for you using <code>FetchContent</code>. You can always enable or disable the usage of a dependency by setting the corresponding CMake variable called <code>VCLIB_ALLOW_&lt;dependency&gt;</code> to <code>ON</code> or <code>OFF</code>.</p>
-<h1><a class="anchor" id="autotoc_md10"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md12"></a>
+Header-only Usage (Core Module)</h2>
+<p>If you only need the <b>Core</b> module, you can also use VCLib as a header-only library without involving CMake targets.</p>
+<p>You just need to add the VCLib <code>include</code> directory and the bundled Eigen directory to your project's include path. MapBox Earcut, STB, and poolSTL are included automatically.</p>
+<div class="fragment"><div class="line">target_include_directories(my_target PRIVATE </div>
+<div class="line">    path/to/vclib/external/eigen-3.4.0/ # or your favorite Eigen version</div>
+<div class="line">    path/to/vclib/include/</div>
+<div class="line">)</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md13"></a>
 Python</h1>
 <p>WORK IN PROGRESS </p>
 </div></div><!-- contents -->

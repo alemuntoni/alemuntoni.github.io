@@ -68,7 +68,8 @@ var classvcl_1_1Mesh =
     [ "setContainerBase", "classvcl_1_1Mesh.html#acd9d1f90906e323afdc7b25bbdf618e5", null ],
     [ "setContainerSize", "classvcl_1_1Mesh.html#afcdcb845d89f7683683f07d7bd8c1660", null ],
     [ "swap", "classvcl_1_1Mesh.html#a7502ed5070b40b6359b086e1ced76320", null ],
-    [ "updateIndices", "classvcl_1_1Mesh.html#a8e35a62e4b468ad6ab9084bb472bc011", null ],
+    [ "transformedBoundingBox", "classvcl_1_1Mesh.html#a3485f09ee7c81f444bf5fd88ea9fa371", null ],
+    [ "updateReferences", "classvcl_1_1Mesh.html#a9a80631661a5e1728c464f7780f7b281", null ],
     [ "updateReferencesOfContainerType", "classvcl_1_1Mesh.html#ab1cd159efd657519f13c687daab58273", null ],
     [ "swap", "classvcl_1_1Mesh.html#ad2a9548437838ad185162eec3d0bf1e7", null ]
 ];
