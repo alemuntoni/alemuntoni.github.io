@@ -13,6 +13,7 @@ var classvcl_1_1HeadlessMeshViewer =
     [ "insertDrawableObject", "classvcl_1_1HeadlessMeshViewer.html#a0032fb114863fade9827639d8050f44c", null ],
     [ "pushDrawableObject", "classvcl_1_1HeadlessMeshViewer.html#a4f0732e3282bf6cf56a94f28111e296a", null ],
     [ "pushDrawableObject", "classvcl_1_1HeadlessMeshViewer.html#a5a2a2a3247b843e4d2ec88f2115c46be", null ],
+    [ "pushDrawableObjects", "classvcl_1_1HeadlessMeshViewer.html#a41c271a9ac9bc38216c61e5e87127838", null ],
     [ "pushEditor", "classvcl_1_1HeadlessMeshViewer.html#a8cc5373c6694b5fb8592c480421c6584", null ],
     [ "refreshEditors", "classvcl_1_1HeadlessMeshViewer.html#a1bb9a9f0ca16667230791036a4b3e208", null ],
     [ "removeDrawableObject", "classvcl_1_1HeadlessMeshViewer.html#ae662c3a1ffd860d24784b908387678ba", null ],

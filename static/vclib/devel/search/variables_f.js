@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['uint_5fnull_0',['UINT_NULL',['../group__base.html#ga9ad8104cd9ccfa9352d33bc7e6ba47e6',1,'vcl']]],
-  ['user_5fbit_5fcount_1',['user_bit_count',['../classvcl_1_1comp_1_1BitFlags.html#a63695d521ec7614ca4223cc976d76b05',1,'vcl::comp::BitFlags::USER_BIT_COUNT'],['../classvcl_1_1comp_1_1PolygonBitFlags.html#acf5666b283bebb86ce8d7902a8b17347',1,'vcl::comp::PolygonBitFlags::USER_BIT_COUNT'],['../classvcl_1_1comp_1_1TriangleBitFlags.html#a66b23db1a67d9ed02a558191b6af27fb',1,'vcl::comp::TriangleBitFlags::USER_BIT_COUNT']]],
-  ['ushort_5fnull_2',['USHORT_NULL',['../group__base.html#gaef8d9ec663b370d435ff71c9f2f738aa',1,'vcl']]]
+  ['savetextureimages_0',['saveTextureImages',['../structvcl_1_1SaveSettings.html#aa3349b22705fee5f654f8e8bee22e440',1,'vcl::SaveSettings']]],
+  ['selected_1',['selected',['../group__views.html#ga79db9a8da48a798780c1ac12af450be9',1,'vcl::views']]],
+  ['selection_2',['selection',['../group__views.html#ga4c182e3717afcf8bd1fc9be9e9c5cbf3',1,'vcl::views']]],
+  ['size_3',['SIZE',['../classvcl_1_1BitSet.html#a25f6d819cc88a74cf3026f26cab21d43',1,'vcl::BitSet::SIZE'],['../classvcl_1_1Vector.html#af303936623d10f51443b3b597d65d61b',1,'vcl::Vector::SIZE'],['../classvcl_1_1PointerVector.html#af303936623d10f51443b3b597d65d61b',1,'vcl::PointerVector::SIZE']]],
+  ['str_4',['str',['../structvcl_1_1ComponentString.html#ab1b5fcc41d40f8cafdc4ab36e47b2982',1,'vcl::ComponentString::str'],['../structvcl_1_1ElementString.html#adf709994861b97ace3d6f67096dfe07e',1,'vcl::ElementString::str']]]
 ];

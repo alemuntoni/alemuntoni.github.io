@@ -1,16 +1,19 @@
 var classvcl_1_1MeshPos =
 [
-    [ "MeshPos", "classvcl_1_1MeshPos.html#a17b38bf65a61f08c217c61dc4288d6e7", null ],
-    [ "MeshPos", "classvcl_1_1MeshPos.html#a7a23df9703a7e13b806228b2cfa8a7c9", null ],
-    [ "flipEdge", "classvcl_1_1MeshPos.html#ae9a33614f6743fe0a2c50a471376540c", null ],
-    [ "flipFace", "classvcl_1_1MeshPos.html#ab9317f9b4a13e40d4cc001bb36f6e804", null ],
-    [ "flipVertex", "classvcl_1_1MeshPos.html#a6f2f05c4c5e651dd1b50a18f46a2794d", null ],
-    [ "isCCWOriented", "classvcl_1_1MeshPos.html#a77b070fdeb7578e7f6a5588a03c55cb2", null ],
-    [ "isEdgeOnBorder", "classvcl_1_1MeshPos.html#a6aa32e70ecd58f0f8791260cd87cd9a4", null ],
-    [ "isNull", "classvcl_1_1MeshPos.html#acf50391b0575ed050e6b73f85b702699", null ],
-    [ "isValid", "classvcl_1_1MeshPos.html#afa03c291a734b03395ad284591020e75", null ],
-    [ "isValid", "classvcl_1_1MeshPos.html#a7c9527d771756e3bbf520aeb48ee92db", null ],
-    [ "nextEdgeAdjacentToV", "classvcl_1_1MeshPos.html#ad8e5d6bc221e80b93d95542b95483c92", null ],
-    [ "nextEdgeOnBorderAdjacentToV", "classvcl_1_1MeshPos.html#a8436d8c718a365500e33047297cb6c52", null ],
-    [ "numberOfAdjacentFacesToV", "classvcl_1_1MeshPos.html#a0a4d81e0f37118d2ab24660642752d3f", null ]
+    [ "MeshPos", "classvcl_1_1MeshPos.html#a1a0870d25bab96736fc88517f3d03719", null ],
+    [ "MeshPos", "classvcl_1_1MeshPos.html#aa2cc1880010c0e271037b824310b09b0", null ],
+    [ "MeshPos", "classvcl_1_1MeshPos.html#a7405a253f17d747a0c15f5b0147ca0ee", null ],
+    [ "MeshPos", "classvcl_1_1MeshPos.html#ae264033233d0b049a8a32a91f203e22a", null ],
+    [ "adjFace", "classvcl_1_1MeshPos.html#afa7ba4902bdc2cbc84fa721bc6fc82d0", null ],
+    [ "flipEdge", "classvcl_1_1MeshPos.html#a6a2750f7f163b1da0c00d63ece81e5f2", null ],
+    [ "flipFace", "classvcl_1_1MeshPos.html#a449b0ba325476aebfb95e13d81649885", null ],
+    [ "flipVertex", "classvcl_1_1MeshPos.html#a317b7fcb4d8fd3c72ca4da0ce9fa3b80", null ],
+    [ "isCCWOriented", "classvcl_1_1MeshPos.html#ac0bc628d04edf10366ebd3f72327faeb", null ],
+    [ "isEdgeOnBorder", "classvcl_1_1MeshPos.html#a755b01973c2719473a70b660fe1fd3e5", null ],
+    [ "isNull", "classvcl_1_1MeshPos.html#a1cdead18469625942a4b024522f6e0c2", null ],
+    [ "isValid", "classvcl_1_1MeshPos.html#aec9201b86ada098b04a424d2c98a4998", null ],
+    [ "isValid", "classvcl_1_1MeshPos.html#a97be6c0208b8448c7d1a689493312a99", null ],
+    [ "nextEdgeAdjacentToV", "classvcl_1_1MeshPos.html#ab3d40c500c33e6d835d2f08fd725b803", null ],
+    [ "nextEdgeOnBorderAdjacentToV", "classvcl_1_1MeshPos.html#ad3b756584d89b7db6b3ee5d1bdb1549a", null ],
+    [ "numberOfAdjacentFacesToV", "classvcl_1_1MeshPos.html#a8ce3b6652c0c9596ee7da6c4f876fbe1", null ]
 ];

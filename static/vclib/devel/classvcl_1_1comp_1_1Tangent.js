@@ -1,11 +1,9 @@
 var classvcl_1_1comp_1_1Tangent =
 [
-    [ "TangentType", "classvcl_1_1comp_1_1Tangent.html#acd8ef1f0d37da43537926dcb4f284a09", null ],
-    [ "Tangent", "classvcl_1_1comp_1_1Tangent.html#add453f1baf9e39ff253ae9464f9c9325", null ],
-    [ "bitangent", "classvcl_1_1comp_1_1Tangent.html#af3ed3f64502eee49ab8b26d01694b737", null ],
-    [ "init", "classvcl_1_1comp_1_1Tangent.html#a7ffa11ffebaa2f5c1d1db34754cc2548", null ],
-    [ "tangent", "classvcl_1_1comp_1_1Tangent.html#a3e03d6ded62406167dd909707f53e3e8", null ],
-    [ "tangent", "classvcl_1_1comp_1_1Tangent.html#a2b915743289e03837bbf9cf19d4f2d84", null ],
-    [ "tangentRightHanded", "classvcl_1_1comp_1_1Tangent.html#ab745934358b4b53b1c33d177b344b421", null ],
-    [ "tangentRightHanded", "classvcl_1_1comp_1_1Tangent.html#ad933fd350727949f76e578ca23dea2ea", null ]
+    [ "TangentType", "classvcl_1_1comp_1_1Tangent.html#a20673f08848ec8924702a30433141193", null ],
+    [ "Tangent", "classvcl_1_1comp_1_1Tangent.html#a54a8854d1e7b79e0a2a7f9ecd7c9c80a", null ],
+    [ "bitangent", "classvcl_1_1comp_1_1Tangent.html#a61df0fd0581f0ddf208315aad2d49b1b", null ],
+    [ "defaultValue", "classvcl_1_1comp_1_1Tangent.html#ae5fc5afe4ae265c146c876c797f1b9a1", null ],
+    [ "tangent", "classvcl_1_1comp_1_1Tangent.html#a03f9f4702f86e909ffccb42bb5b36494", null ],
+    [ "tangentRightHanded", "classvcl_1_1comp_1_1Tangent.html#a290cf80741484e1790c17fcc255210af", null ]
 ];

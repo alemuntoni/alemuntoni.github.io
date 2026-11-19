@@ -10,15 +10,12 @@ var classvcl_1_1Lines =
       [ "PER_VERTEX", "classvcl_1_1Lines.html#ab92b1d637b80d7ee067ca02109ad6fefa83e7f44a4d403e1ef4f9171bc7edcf58", null ],
       [ "PER_LINE", "classvcl_1_1Lines.html#ab92b1d637b80d7ee067ca02109ad6fefa9168da24f9a75a3c129a6364dd3fe629", null ]
     ] ],
-    [ "Topology", "classvcl_1_1Lines.html#a79229939340cb5daa71ebad4622799d6", [
-      [ "LINES", "classvcl_1_1Lines.html#a79229939340cb5daa71ebad4622799d6ae585142391f356c60bcfe68279ec2727", null ],
-      [ "LINE_STRIP", "classvcl_1_1Lines.html#a79229939340cb5daa71ebad4622799d6ae64a4d2159ed46d077e21a505575c814", null ]
-    ] ],
+    [ "Topology", "classvcl_1_1Lines.html#a79229939340cb5daa71ebad4622799d6", null ],
     [ "Lines", "classvcl_1_1Lines.html#a3df4de649ef2175e78a35bbd8d75d266", null ],
     [ "Lines", "classvcl_1_1Lines.html#a6fd55fd301b7a34555be3d182d4b6e6e", null ],
     [ "colorSetting", "classvcl_1_1Lines.html#a564994e42a2b7323c8ca5573ae608978", null ],
     [ "depthOffset", "classvcl_1_1Lines.html#a32f5f74f77522219f034eedd6f295a34", null ],
-    [ "draw", "classvcl_1_1Lines.html#afc8ba50be231a9a9dbc2d8154618ab33", null ],
+    [ "draw", "classvcl_1_1Lines.html#af10bd4befc48c2d0c2687d6aaafa6286", null ],
     [ "generalColor", "classvcl_1_1Lines.html#abcf0e663fd2e445a0f2eabc5a0bd3888", null ],
     [ "hasIndices", "classvcl_1_1Lines.html#a1ca5fa2b65ff03c42673fb65b9a61d9e", null ],
     [ "hasLineColors", "classvcl_1_1Lines.html#a5c824bd04d728a0af49e539c7c8c48e3", null ],
@@ -29,6 +26,7 @@ var classvcl_1_1Lines =
     [ "hasVertexNormals", "classvcl_1_1Lines.html#a8388c0b4e54940ff59c3ccfa32d24609", null ],
     [ "indexCount", "classvcl_1_1Lines.html#ac1c1ec0ea6fa6d11204e05fbe986866d", null ],
     [ "isSelectionVisible", "classvcl_1_1Lines.html#a9e51b2c46117c5520e091b2a01491801", null ],
+    [ "linesCount", "classvcl_1_1Lines.html#a88f1c9e7ce131e1dca41f40e4d0cea26", null ],
     [ "selectionColor", "classvcl_1_1Lines.html#a63f2caa0307c48dde4404c82182d7ad2", null ],
     [ "setColorSetting", "classvcl_1_1Lines.html#aeeb45c965eaedacc84af35456c0400ac", null ],
     [ "setDepthOffset", "classvcl_1_1Lines.html#a381698cef31d53fff021df991007ed9b", null ],
@@ -45,6 +43,7 @@ var classvcl_1_1Lines =
     [ "setSelectionVisibility", "classvcl_1_1Lines.html#a4923b1d972e84324731868a2dfd60cae", null ],
     [ "setShading", "classvcl_1_1Lines.html#a08b402841f1e9575707316b32c5c61c5", null ],
     [ "setTopology", "classvcl_1_1Lines.html#a4d027618be7a831aed585b2bac0f4019", null ],
+    [ "setVectorLength", "classvcl_1_1Lines.html#a038370dc344b8e98c08723d793a6343b", null ],
     [ "setVertexColors", "classvcl_1_1Lines.html#ab55d1c3da85f05d06e532181fba5e2eb", null ],
     [ "setVertexColors", "classvcl_1_1Lines.html#aefc036d581a97de7aae87d1d62886923", null ],
     [ "setVertexNormals", "classvcl_1_1Lines.html#ad2d356e1fb8187ee4d464bcb5fe8152e", null ],
@@ -54,6 +53,7 @@ var classvcl_1_1Lines =
     [ "setWidth", "classvcl_1_1Lines.html#a30422a2cc9314ef6017308bfb57f5d8a", null ],
     [ "shading", "classvcl_1_1Lines.html#ad665a3b378c063d99f58c45219365097", null ],
     [ "topology", "classvcl_1_1Lines.html#abf065068c630a562dea051b35feb3779", null ],
+    [ "vectorLength", "classvcl_1_1Lines.html#af0c2d2fb80671d7fdbacb1e61e3de8ee", null ],
     [ "vertexCount", "classvcl_1_1Lines.html#a86f3047357529f8ab0d4fb25cfc16e9e", null ],
     [ "width", "classvcl_1_1Lines.html#abf48e5e8ac8792bea96dbe833914fa4d", null ]
 ];

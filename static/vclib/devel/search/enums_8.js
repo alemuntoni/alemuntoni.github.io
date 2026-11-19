@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['texturetype_0',['texturetype',['../classvcl_1_1Material.html#a12db78645943e2a62e14e6e6a350c622',1,'vcl::Material::TextureType'],['../classvcl_1_1DrawableEnvironment.html#a94ee81484afb0db7b7409a3f33f2c741',1,'vcl::DrawableEnvironment::TextureType']]],
-  ['tonemapping_1',['tonemapping',['../structvcl_1_1ViewerSettings.html#ace7e2a53d9196e69b5360efa978b5986',1,'vcl::ViewerSettings::ToneMapping'],['../classvcl_1_1ViewerDrawerUniforms.html#ace7e2a53d9196e69b5360efa978b5986',1,'vcl::ViewerDrawerUniforms::ToneMapping']]],
-  ['topology_2',['topology',['../classvcl_1_1Lines.html#a79229939340cb5daa71ebad4622799d6',1,'vcl::Lines::Topology'],['../classvcl_1_1ScreenSpaceLines.html#aaa7cb1928fe9f2a5981e928c2b632b7d',1,'vcl::ScreenSpaceLines::Topology'],['../classvcl_1_1DrawableLines.html#a79229939340cb5daa71ebad4622799d6',1,'vcl::DrawableLines::Topology']]]
+  ['shading_0',['Shading',['../classvcl_1_1Lines.html#ab92b1d637b80d7ee067ca02109ad6fef',1,'vcl::Lines::Shading'],['../classvcl_1_1Points.html#accfb0dbbdce572329490d9b8903b3af2',1,'vcl::Points::Shading'],['../classvcl_1_1DrawableLines.html#ab92b1d637b80d7ee067ca02109ad6fef',1,'vcl::DrawableLines::Shading']]],
+  ['shape_1',['Shape',['../classvcl_1_1Points.html#a8301b74b5678f6388836f6e122e860e4',1,'vcl::Points::Shape'],['../classvcl_1_1ScreenSpacePoints.html#a953fdff39b0b2be95171764dcf0380f3',1,'vcl::ScreenSpacePoints::Shape'],['../classvcl_1_1DrawablePoints.html#a8301b74b5678f6388836f6e122e860e4',1,'vcl::DrawablePoints::Shape']]],
+  ['surface_2',['Surface',['../classvcl_1_1MeshRenderInfo.html#a7484200c8959e56605375c4ed01c1a49',1,'vcl::MeshRenderInfo']]]
 ];

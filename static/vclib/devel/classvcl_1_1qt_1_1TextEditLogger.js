@@ -1,4 +1,6 @@
 var classvcl_1_1qt_1_1TextEditLogger =
 [
-    [ "levelStream", "classvcl_1_1qt_1_1TextEditLogger.html#a1bf4eb43763208380c7e2f054082511a", null ]
+    [ "setPercentage", "classvcl_1_1qt_1_1TextEditLogger.html#ad166b7e0983969c6a4402205a8003fef", null ],
+    [ "startTimer", "classvcl_1_1qt_1_1TextEditLogger.html#a9c417122841d31e489294ffd007db859", null ],
+    [ "write", "classvcl_1_1qt_1_1TextEditLogger.html#aaef374d948771ae77a7457b12a1158a1", null ]
 ];

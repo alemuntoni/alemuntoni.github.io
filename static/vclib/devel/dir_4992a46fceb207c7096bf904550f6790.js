@@ -11,6 +11,7 @@ var dir_4992a46fceb207c7096bf904550f6790 =
     [ "screenspace", "dir_f70df5cf2529e443f904d6cc6971ed16.html", "dir_f70df5cf2529e443f904d6cc6971ed16" ],
     [ "selection", "dir_bf3a0235e58475be40a5ae154d852964.html", "dir_bf3a0235e58475be40a5ae154d852964" ],
     [ "settings", "dir_59c4955fd27d589b1586c122708972b5.html", "dir_59c4955fd27d589b1586c122708972b5" ],
+    [ "shapes", "dir_f1928df895b9095859697d308c726707.html", "dir_f1928df895b9095859697d308c726707" ],
     [ "system", "dir_b71b25cb72d7b80d96910f2dfd601c3a.html", "dir_b71b25cb72d7b80d96910f2dfd601c3a" ],
     [ "text", "dir_d298764313ddb75a5ec80454c7069efc.html", "dir_d298764313ddb75a5ec80454c7069efc" ],
     [ "buffers.h", "buffers_8h_source.html", null ],

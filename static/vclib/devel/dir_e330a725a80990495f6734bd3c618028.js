@@ -13,7 +13,7 @@ var dir_e330a725a80990495f6734bd3c618028 =
     [ "filter_types.h", "filter__types_8h_source.html", null ],
     [ "hash.h", "hash_8h_source.html", null ],
     [ "inheritance.h", "inheritance_8h_source.html", null ],
-    [ "iterators.h", "iterators_8h_source.html", null ],
+    [ "iterators.h", "base_2iterators_8h_source.html", null ],
     [ "linearize_index.h", "linearize__index_8h_source.html", null ],
     [ "logger.h", "logger_8h_source.html", null ],
     [ "math.h", "math_8h_source.html", null ],

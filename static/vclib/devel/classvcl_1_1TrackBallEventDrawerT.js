@@ -3,6 +3,7 @@ var classvcl_1_1TrackBallEventDrawerT =
     [ "dragMotionMap", "classvcl_1_1TrackBallEventDrawerT.html#a08d45e790d343f46f320ce667f6c80c2", null ],
     [ "isTrackBallVisible", "classvcl_1_1TrackBallEventDrawerT.html#a748f57ff7cdc33dbee1587ab6776f1bd", null ],
     [ "keyAtomicMap", "classvcl_1_1TrackBallEventDrawerT.html#a06b512761b384b13f4c62a205ac3f795", null ],
+    [ "mouseAtomicMap", "classvcl_1_1TrackBallEventDrawerT.html#ae1af9d289f68788b7f32047edb0b4003", null ],
     [ "registerAtomicAction", "classvcl_1_1TrackBallEventDrawerT.html#a8068e7caacadc721b6ca93c824df15cf", null ],
     [ "scrollAtomicMap", "classvcl_1_1TrackBallEventDrawerT.html#a3c36087dd05ed3f4d6c44afb6d361b53", null ],
     [ "setShortcutToggleTrackballCallback", "classvcl_1_1TrackBallEventDrawerT.html#ac41e4cee136b2b68ab1873592733a4c9", null ],

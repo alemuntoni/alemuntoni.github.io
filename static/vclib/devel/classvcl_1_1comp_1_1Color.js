@@ -1,7 +1,6 @@
 var classvcl_1_1comp_1_1Color =
 [
-    [ "ColorType", "classvcl_1_1comp_1_1Color.html#a4d5101dacef5cc7c2e60d024524f3f1a", null ],
-    [ "Color", "classvcl_1_1comp_1_1Color.html#a4c23632c25c051e0975ae7dc83d88882", null ],
-    [ "color", "classvcl_1_1comp_1_1Color.html#a11607bf7c6abdf14ef3e0469307e534a", null ],
-    [ "color", "classvcl_1_1comp_1_1Color.html#a2b40acc7ff87203c4aee2936069c086d", null ]
+    [ "ColorType", "classvcl_1_1comp_1_1Color.html#a9a4f88944540ab73c431b64c8fe7cff2", null ],
+    [ "Color", "classvcl_1_1comp_1_1Color.html#a2ad8651c7e8bd109b9223fca78c570ac", null ],
+    [ "color", "classvcl_1_1comp_1_1Color.html#a68e4fedf4d68bd127661d55e6386dd9a", null ]
 ];

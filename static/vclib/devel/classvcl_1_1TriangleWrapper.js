@@ -5,6 +5,7 @@ var classvcl_1_1TriangleWrapper =
     [ "barycenter", "classvcl_1_1TriangleWrapper.html#a7c19c6bf7e4aa65020a915a3bef8a57a", null ],
     [ "barycentricCoordinatePoint", "classvcl_1_1TriangleWrapper.html#aa0fd8059c0eb275b3c8180f22202e9e8", null ],
     [ "barycentricCoordinatePoint", "classvcl_1_1TriangleWrapper.html#ac2a0de6ecf0771582c474e0b657f85d5", null ],
+    [ "barycentricCoordinates", "classvcl_1_1TriangleWrapper.html#a2088ce588a984f420198b93a1d024af4", null ],
     [ "circumcenter", "classvcl_1_1TriangleWrapper.html#adccf90abf1f3330c353e3d467fa47a6a", null ],
     [ "normal", "classvcl_1_1TriangleWrapper.html#a739ace4049a9696407a18f1764527907", null ],
     [ "perimeter", "classvcl_1_1TriangleWrapper.html#a189d4e25c2cf2476676a0f35931dcaca", null ],

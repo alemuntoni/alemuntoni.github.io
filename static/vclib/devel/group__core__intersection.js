@@ -16,6 +16,7 @@ var group__core__intersection =
     [ "vcl::intersect", "group__core__intersection.html#gab63d75727927f75c748b1e34a7f4d75a", null ],
     [ "vcl::intersect", "group__core__intersection.html#gab633900360b597e485ea13d53e6e0050", null ],
     [ "vcl::intersect", "group__core__intersection.html#ga4d7bb86c7eb506e9427d45251a544367", null ],
+    [ "vcl::intersect", "group__core__intersection.html#ga056de5bfd9564c0f96eee135c2dffd42", null ],
     [ "vcl::intersect", "group__core__intersection.html#gade6db22655a1ca326cf297f99fdbb1ae", null ],
     [ "vcl::intersect", "group__core__intersection.html#ga2dfd2f8e334603c2ee283c006bb177e6", null ],
     [ "vcl::intersect", "group__core__intersection.html#gade80e457f74feb3c7dff49a46cf30b64", null ],
@@ -25,8 +26,9 @@ var group__core__intersection =
     [ "vcl::intersect", "group__core__intersection.html#ga02a5b84d120368279d86092e4c6b2abf", null ],
     [ "vcl::intersect", "group__core__intersection.html#ga6d3ec9a7c7ef081d6b8e1845f2c87654", null ],
     [ "vcl::intersectFunction", "group__core__intersection.html#ga70dad48ffd4a840c11d422b0c3121393", null ],
+    [ "vcl::intersection", "group__core__intersection.html#ga7b79d4eedf32fad30b018aee8f8f5b88", null ],
     [ "vcl::intersection", "group__core__intersection.html#ga5dee7f78e8443c9bdf0d382997a20e44", null ],
     [ "vcl::intersection", "group__core__intersection.html#gaba60df4752cc6a0ad3deb049beb2a289", null ],
-    [ "vcl::intersection", "group__core__intersection.html#ga28d22facda85898598d7087418b05970", null ],
+    [ "vcl::intersection", "group__core__intersection.html#ga87f8c90709c6a23414fcd0ebfdaa65b7", null ],
     [ "vcl::intersection", "group__core__intersection.html#ga27727a8f2e75a537dd740f7aad6c9b98", null ]
 ];

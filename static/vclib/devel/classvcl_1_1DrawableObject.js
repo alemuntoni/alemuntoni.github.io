@@ -13,5 +13,5 @@ var classvcl_1_1DrawableObject =
     [ "setVisibility", "classvcl_1_1DrawableObject.html#a2837de277aad624274f0aaf7fe0b286e", null ],
     [ "swap", "classvcl_1_1DrawableObject.html#a02d15a9a9869a0d72397cd15b54e0f68", null ],
     [ "mInfo", "classvcl_1_1DrawableObject.html#a1f17ca3194eda2318237a30ada604270", null ],
-    [ "mName", "classvcl_1_1DrawableObject.html#a1ed54457efa241877d34c3b450e43aa0", null ]
+    [ "mObjName", "classvcl_1_1DrawableObject.html#a6e12c4405d5f17127b59fdc21c623bd0", null ]
 ];
