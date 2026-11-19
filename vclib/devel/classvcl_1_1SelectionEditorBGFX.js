@@ -9,6 +9,7 @@ var classvcl_1_1SelectionEditorBGFX =
     [ "name", "classvcl_1_1SelectionEditorBGFX.html#afd794d315ec3ba2eee821ae451e845ca", null ],
     [ "onKeyPress", "classvcl_1_1SelectionEditorBGFX.html#a522c67c766519b01b84d1bc90362565d", null ],
     [ "onKeyRelease", "classvcl_1_1SelectionEditorBGFX.html#a636bf9c0a9319cd680b3456e238a720c", null ],
+    [ "onMouseDoubleClick", "classvcl_1_1SelectionEditorBGFX.html#a3006ccd04d15d1299cb523351ef39714", null ],
     [ "onMouseMove", "classvcl_1_1SelectionEditorBGFX.html#a3a7ac44b1191ae184b2fc22983363e01", null ],
     [ "onMousePress", "classvcl_1_1SelectionEditorBGFX.html#a858f9d43a7bcc56defce4b9b72847cdb", null ],
     [ "onMouseRelease", "classvcl_1_1SelectionEditorBGFX.html#a7b546751d85c958a5863679beab45716", null ],

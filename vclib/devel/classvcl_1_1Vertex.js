@@ -1,5 +1,6 @@
 var classvcl_1_1Vertex =
 [
-    [ "Vertex", "classvcl_1_1Vertex.html#a8f52576067e73686e43cf48c186a9b32", null ],
-    [ "swap", "classvcl_1_1Vertex.html#aa263a161c74ac8398a40565ad6c0dc01", null ]
+    [ "swap", "classvcl_1_1Vertex.html#afcfd670995efbf3631e0fb982b4e2f3d", null ],
+    [ "mesh::ElementContainer", "classvcl_1_1Vertex.html#a163013c304f54c1a97a729ef02cbcffb", null ],
+    [ "swap", "classvcl_1_1Vertex.html#a85e791a210b680629afc4ebf817e6db9", null ]
 ];

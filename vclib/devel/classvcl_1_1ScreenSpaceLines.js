@@ -5,10 +5,7 @@ var classvcl_1_1ScreenSpaceLines =
       [ "PER_LINE", "classvcl_1_1ScreenSpaceLines.html#a2adb4b77325e86e8c556418cd133902ca9168da24f9a75a3c129a6364dd3fe629", null ],
       [ "GENERAL", "classvcl_1_1ScreenSpaceLines.html#a2adb4b77325e86e8c556418cd133902cab61773b9b3968a9988d765d728985862", null ]
     ] ],
-    [ "Topology", "classvcl_1_1ScreenSpaceLines.html#aaa7cb1928fe9f2a5981e928c2b632b7d", [
-      [ "LINES", "classvcl_1_1ScreenSpaceLines.html#aaa7cb1928fe9f2a5981e928c2b632b7dae585142391f356c60bcfe68279ec2727", null ],
-      [ "LINE_STRIP", "classvcl_1_1ScreenSpaceLines.html#aaa7cb1928fe9f2a5981e928c2b632b7dae64a4d2159ed46d077e21a505575c814", null ]
-    ] ],
+    [ "Topology", "classvcl_1_1ScreenSpaceLines.html#aaa7cb1928fe9f2a5981e928c2b632b7d", null ],
     [ "ScreenSpaceLines", "classvcl_1_1ScreenSpaceLines.html#aaac932dca201a37fb6e565fa19d285f7", null ],
     [ "ScreenSpaceLines", "classvcl_1_1ScreenSpaceLines.html#a67d35828b9d7c319afe58421eeff3a29", null ],
     [ "checkAndUpdateProgram", "classvcl_1_1ScreenSpaceLines.html#a38765b87f4091712654fde7a734c2896", null ],
@@ -18,6 +15,7 @@ var classvcl_1_1ScreenSpaceLines =
     [ "hasPositions", "classvcl_1_1ScreenSpaceLines.html#a85a3b454839b43bae950640a04ced651", null ],
     [ "hasVertexColors", "classvcl_1_1ScreenSpaceLines.html#aa1a1c5b194993f90f615cb7f31da5057", null ],
     [ "indexCount", "classvcl_1_1ScreenSpaceLines.html#a4a853740ced6d2fcbaf3d493e718f436", null ],
+    [ "linesCount", "classvcl_1_1ScreenSpaceLines.html#a0da24166e4a17ddf66016b623191d839", null ],
     [ "screenspaceLinesProgramSelector", "classvcl_1_1ScreenSpaceLines.html#a6f8a4d23b8a7c4340bd8cc2d325523ed", null ],
     [ "setColorSetting", "classvcl_1_1ScreenSpaceLines.html#a6c9ec92acbffaecf266c8b5222462ccc", null ],
     [ "setGeneralColor", "classvcl_1_1ScreenSpaceLines.html#a65ae1bc5485ad597ad56332197892d6f", null ],

@@ -1,8 +1,10 @@
 \documentclass{article}
+\usepackage{iftex}
 \usepackage{ifthen}
 \usepackage{epsfig}
 \usepackage[utf8]{inputenc}
 \usepackage{xcolor}
+\ifPDFTeX
 \usepackage{newunicodechar}
   \makeatletter
     \def\doxynewunicodechar#1#2{%
@@ -23,13 +25,14 @@
   \doxynewunicodechar{²}{${}^{2}$}% Superscript two
   \doxynewunicodechar{³}{${}^{3}$}% Superscript three
 
+\fi
 \pagestyle{empty}
 \begin{document}
 $ n_i $
 \pagebreak
 
 $ n_i = \lceil \mathrm{bbox.dim}(i) \;/\; \mathrm{cellLens}(i) \rceil
-  $
+$
 \pagebreak
 
 $ n_i = \lfloor \mathrm{bbox.dim}(i) \;/\; \mathrm{cellLens}(i)
@@ -52,26 +55,22 @@ $ \prod_{i=0}^{N-1} \mathrm{cellLength}(i) $
 $ \mathbf{l} $
 \pagebreak
 
-\[
-  \mathbf{w} = \sum_{i=0}^{N-1} l_i \,\mathrm{axis}(i)
+\[  \mathbf{w} = \sum_{i=0}^{N-1} l_i \,\mathrm{axis}(i)
 \]
 \pagebreak
 
-\[
-  l_i = \mathbf{w} \cdot \mathrm{axis}(i)
+\[  l_i = \mathbf{w} \cdot \mathrm{axis}(i)
 \]
 \pagebreak
 
 $ e_i $
 \pagebreak
 
-\[
-  \mathbf{w} = \sum_{i=0}^{N-1} \mathrm{local}(i) \cdot \mathrm{axis}(i)
+\[  \mathbf{w} = \sum_{i=0}^{N-1} \mathrm{local}(i) \cdot \mathrm{axis}(i)
 \]
 \pagebreak
 
-\[
-  \mathrm{local}(i) = \mathbf{world} \cdot \mathrm{axis}(i)
+\[  \mathrm{local}(i) = \mathbf{world} \cdot \mathrm{axis}(i)
 \]
 \pagebreak
 
@@ -87,24 +86,20 @@ $ R^{-1} = R^\top $
 $ l = (l_0, \ldots, l_{N-1}) $
 \pagebreak
 
-\[
-  p = \mathrm{origin} + \sum_{i=0}^{N-1} l_i \,\mathrm{axis}(i)
+\[  p = \mathrm{origin} + \sum_{i=0}^{N-1} l_i \,\mathrm{axis}(i)
 \]
 \pagebreak
 
-\[
-  l_i = (p - \mathrm{origin}) \cdot \mathrm{axis}(i)
+\[  l_i = (p - \mathrm{origin}) \cdot \mathrm{axis}(i)
 \]
 \pagebreak
 
-\[
-  \mathrm{world} = \mathrm{origin} +
+\[  \mathrm{world} = \mathrm{origin} +
 \mathrm{basis.toWorld}(\mathrm{local})
 \]
 \pagebreak
 
-\[
-  \mathrm{local} = \mathrm{basis.toLocal}(\mathrm{world} -
+\[  \mathrm{local} = \mathrm{basis.toLocal}(\mathrm{world} -
 \mathrm{origin})
 \]
 \pagebreak

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['and_20other_20data_20structures_0',['Spatial and other Data Structures',['../core_space.html',1,'md_docs_2pages_21__core']]]
+  ['1_20pre_20built_20packages_20installers_20recommended_0',['1. Pre-built Packages &amp;amp; Installers (Recommended)',['../md_docs_2pages_20__installation.html#autotoc_md4',1,'']]]
 ];

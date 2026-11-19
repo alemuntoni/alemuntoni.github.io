@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['renderbackgroundpanorama_0',['renderBackgroundPanorama',['../structvcl_1_1ViewerSettings.html#a4ae14ec53fb404cb81fad9c59c870055',1,'vcl::ViewerSettings']]],
-  ['rendermode_1',['renderMode',['../structvcl_1_1ViewerSettings.html#a27cff5fa48ea19bc461eff68a26ede64',1,'vcl::ViewerSettings']]]
+  ['panoramapath_0',['panoramaPath',['../structvcl_1_1ViewerSettings.html#a82c32ced1199a26eb73f901981d90932',1,'vcl::ViewerSettings']]],
+  ['positions_1',['positions',['../group__views.html#ga024277ee104462559734e7c52ed99b71',1,'vcl::views']]],
+  ['principalcurvatures_2',['principalCurvatures',['../group__views.html#gab7d0331e5f5316320f5051daffd49324',1,'vcl::views']]]
 ];

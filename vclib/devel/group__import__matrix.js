@@ -14,7 +14,7 @@ var group__import__matrix =
     [ "vcl::faceColorsFromMatrix", "group__import__matrix.html#ga10a934a6e23cb98ffb7e85394ef213b3", null ],
     [ "vcl::faceColorsFromRange", "group__import__matrix.html#ga7c87ab88b2a96665c1b2b748512bbd08", null ],
     [ "vcl::faceIndicesFromMatrix", "group__import__matrix.html#gae6f090aa8553f5ce74b4aebdbf0d4dfd", null ],
-    [ "vcl::faceMaterialIndicesFromRange", "group__import__matrix.html#ga2f54389cd09841feea90c7479f32b8e0", null ],
+    [ "vcl::faceMaterialIndicesFromRange", "group__import__matrix.html#ga74720d84fc4b8d085671ef1ba18eade9", null ],
     [ "vcl::faceNormalsFromMatrix", "group__import__matrix.html#gaec421ff04aff7e2f1099697219e37ab3", null ],
     [ "vcl::faceQualityFromRange", "group__import__matrix.html#ga3af44fd9a60a88e7b586f346800e10ff", null ],
     [ "vcl::faceSelectionFromRange", "group__import__matrix.html#ga7d6372966261dc0f444280f42762882e", null ],

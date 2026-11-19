@@ -1,14 +1,25 @@
 var searchData=
 [
-  ['name_0',['Name',['../classvcl_1_1comp_1_1Name.html',1,'vcl::comp']]],
+  ['name_0',['Name',['../classvcl_1_1mesh_1_1Name.html',1,'vcl::mesh']]],
   ['nestedinitializerlistsprocessor_1',['NestedInitializerListsProcessor',['../classvcl_1_1NestedInitializerListsProcessor.html',1,'vcl']]],
   ['nestedinitializerlistsprocessor_3c_20t_2c_201_20_3e_2',['NestedInitializerListsProcessor&lt; T, 1 &gt;',['../classvcl_1_1NestedInitializerListsProcessor_3_01T_00_011_01_4.html',1,'vcl']]],
   ['node_3',['Node',['../structvcl_1_1KDTree_1_1Node.html',1,'vcl::KDTree']]],
   ['nodeiterator_4',['NodeIterator',['../classvcl_1_1NodeIterator.html',1,'vcl']]],
-  ['normal_5',['Normal',['../classvcl_1_1comp_1_1Normal.html',1,'vcl::comp']]],
-  ['noteditingframe_6',['NotEditingFrame',['../classvcl_1_1qt_1_1NotEditingFrame.html',1,'vcl::qt']]],
-  ['nulllogger_7',['NullLogger',['../classvcl_1_1NullLogger.html',1,'vcl']]],
-  ['numberoftypes_8',['NumberOfTypes',['../structvcl_1_1NumberOfTypes.html',1,'vcl']]],
-  ['numberoftypes_3c_20args_2e_2e_2e_20_3e_9',['NumberOfTypes&lt; Args... &gt;',['../structvcl_1_1NumberOfTypes.html',1,'vcl']]],
-  ['numberoftypes_3c_20typewrapper_3c_20args_2e_2e_2e_20_3e_20_3e_10',['NumberOfTypes&lt; TypeWrapper&lt; Args... &gt; &gt;',['../structvcl_1_1NumberOfTypes_3_01TypeWrapper_3_01Args_8_8_8_01_4_01_4.html',1,'vcl']]]
+  ['nodeiterator_3c_20typename_20std_3a_3avector_3c_20undirectednode_3c_20t1_20_3e_20_3e_3a_3aconst_5fiterator_20_3e_5',['NodeIterator&lt; typename std::vector&lt; UndirectedNode&lt; T1 &gt; &gt;::const_iterator &gt;',['../classvcl_1_1NodeIterator.html',1,'vcl']]],
+  ['nodeiterator_3c_20typename_20std_3a_3avector_3c_20undirectednode_3c_20t2_20_3e_20_3e_3a_3aconst_5fiterator_20_3e_6',['NodeIterator&lt; typename std::vector&lt; UndirectedNode&lt; T2 &gt; &gt;::const_iterator &gt;',['../classvcl_1_1NodeIterator.html',1,'vcl']]],
+  ['normal_7',['Normal',['../classvcl_1_1comp_1_1Normal.html',1,'vcl::comp']]],
+  ['normal_3c_20point3_3c_20scalar_20_3e_2c_20opt_20_3e_8',['Normal&lt; Point3&lt; Scalar &gt;, OPT &gt;',['../classvcl_1_1comp_1_1Normal.html',1,'vcl::comp']]],
+  ['normal_3c_20point3_3c_20scalar_20_3e_2c_20opt_20_3e_3c_20double_2c_20false_20_3e_9',['Normal&lt; Point3&lt; Scalar &gt;, OPT &gt;&lt; double, false &gt;',['../classvcl_1_1comp_1_1Normal.html',1,'vcl::comp']]],
+  ['normal_3c_20point3_3c_20scalar_20_3e_2c_20opt_20_3e_3c_20double_2c_20true_20_3e_10',['Normal&lt; Point3&lt; Scalar &gt;, OPT &gt;&lt; double, true &gt;',['../classvcl_1_1comp_1_1Normal.html',1,'vcl::comp']]],
+  ['normal_3c_20point3_3c_20scalar_20_3e_2c_20opt_20_3e_3c_20float_2c_20false_20_3e_11',['Normal&lt; Point3&lt; Scalar &gt;, OPT &gt;&lt; float, false &gt;',['../classvcl_1_1comp_1_1Normal.html',1,'vcl::comp']]],
+  ['normal_3c_20point3_3c_20scalar_20_3e_2c_20opt_20_3e_3c_20float_2c_20true_20_3e_12',['Normal&lt; Point3&lt; Scalar &gt;, OPT &gt;&lt; float, true &gt;',['../classvcl_1_1comp_1_1Normal.html',1,'vcl::comp']]],
+  ['normal_3c_20point3_3c_20scalar_20_3e_2c_20opt_20_3e_3c_20scalartype_20_3e_13',['Normal&lt; Point3&lt; Scalar &gt;, OPT &gt;&lt; ScalarType &gt;',['../classvcl_1_1comp_1_1Normal.html',1,'vcl::comp']]],
+  ['normal_3c_20point3_3c_20scalar_20_3e_2c_20opt_20_3e_3c_20scalartype_2c_20opt_20_3e_14',['Normal&lt; Point3&lt; Scalar &gt;, OPT &gt;&lt; ScalarType, OPT &gt;',['../classvcl_1_1comp_1_1Normal.html',1,'vcl::comp']]],
+  ['normal_3c_20point3_3c_20scalar_20_3e_2c_20opt_20_3e_3c_20scalartype_2c_20true_20_3e_15',['Normal&lt; Point3&lt; Scalar &gt;, OPT &gt;&lt; ScalarType, true &gt;',['../classvcl_1_1comp_1_1Normal.html',1,'vcl::comp']]],
+  ['normal_3c_20point_3c_20scalartype_2c_20n_20_3e_2c_20opt_20_3e_16',['Normal&lt; Point&lt; ScalarType, N &gt;, OPT &gt;',['../classvcl_1_1comp_1_1Normal.html',1,'vcl::comp']]],
+  ['noteditingframe_17',['NotEditingFrame',['../classvcl_1_1qt_1_1NotEditingFrame.html',1,'vcl::qt']]],
+  ['nulllogger_18',['NullLogger',['../classvcl_1_1NullLogger.html',1,'vcl']]],
+  ['numberoftypes_19',['NumberOfTypes',['../structvcl_1_1NumberOfTypes.html',1,'vcl']]],
+  ['numberoftypes_3c_20args_2e_2e_2e_20_3e_20',['NumberOfTypes&lt; Args... &gt;',['../structvcl_1_1NumberOfTypes.html',1,'vcl']]],
+  ['numberoftypes_3c_20typewrapper_3c_20args_2e_2e_2e_20_3e_20_3e_21',['NumberOfTypes&lt; TypeWrapper&lt; Args... &gt; &gt;',['../structvcl_1_1NumberOfTypes_3_01TypeWrapper_3_01Args_8_8_8_01_4_01_4.html',1,'vcl']]]
 ];

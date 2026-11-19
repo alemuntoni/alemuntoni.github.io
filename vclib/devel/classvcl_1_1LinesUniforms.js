@@ -5,5 +5,6 @@ var classvcl_1_1LinesUniforms =
     [ "setGeneralColor", "classvcl_1_1LinesUniforms.html#a4a7c4def55dc3200e88a6c68becf29e2", null ],
     [ "setId", "classvcl_1_1LinesUniforms.html#ab78f444c40cfda8a063473eb66889ef1", null ],
     [ "setSelectionColor", "classvcl_1_1LinesUniforms.html#ad1c65ffe8752364a5a001bc4b4e85e98", null ],
+    [ "setVectorLength", "classvcl_1_1LinesUniforms.html#a4ada59a0cfe53b652c89ec1f7878e2eb", null ],
     [ "setWidth", "classvcl_1_1LinesUniforms.html#a39c5cf3eec00c6b609035ca795e16d66", null ]
 ];

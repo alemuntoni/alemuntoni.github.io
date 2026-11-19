@@ -1,14 +1,25 @@
 var group__views =
 [
-    [ "vcl::View< It >", "classvcl_1_1View.html", null ],
+    [ "vcl::View&lt; It &gt;", "classvcl_1_1View.html", null ],
     [ "vcl::views::addrOf", "group__views.html#gaf6d9fd53c02314894e8f6618025ba272", null ],
     [ "vcl::views::adjEdges", "group__views.html#ga10dbeabf3d9487ba15363421eac31040", null ],
     [ "vcl::views::adjFaces", "group__views.html#gabee6d3172e8469247fafcc882e3eb3d5", null ],
     [ "vcl::views::adjVertices", "group__views.html#gac6c6f11bfb2c7e15a79e93285d83a608", null ],
+    [ "vcl::views::colors", "group__views.html#gadf1ef5005674f8a17d8f30e3d67cf5fe", null ],
     [ "vcl::views::constAddrOf", "group__views.html#ga1f47c772a36bc33fb985deffbfd33653", null ],
     [ "vcl::views::deref", "group__views.html#gad4ebfce87b55f302c0475129d0b825e1", null ],
     [ "vcl::views::edges", "group__views.html#ga852cfc37ce46ac50c568fa887771a696", null ],
     [ "vcl::views::faces", "group__views.html#ga33947d4d6db5271a84ac1ae5555d50d7", null ],
+    [ "vcl::views::normals", "group__views.html#ga4d6a23dc026174e9415a8a15088801ba", null ],
     [ "vcl::views::notNull", "group__views.html#ga9259be1defbf4731d9e7e76bdf3e269b", null ],
-    [ "vcl::views::vertices", "group__views.html#gae55a7544cb59464c26959bcc4cec23ea", null ]
+    [ "vcl::views::notSelected", "group__views.html#ga182900586d8814ec187409ca16f9548f", null ],
+    [ "vcl::views::positions", "group__views.html#ga024277ee104462559734e7c52ed99b71", null ],
+    [ "vcl::views::principalCurvatures", "group__views.html#gab7d0331e5f5316320f5051daffd49324", null ],
+    [ "vcl::views::qualities", "group__views.html#ga0b790014970200e518858e6437258bca", null ],
+    [ "vcl::views::selected", "group__views.html#ga79db9a8da48a798780c1ac12af450be9", null ],
+    [ "vcl::views::selection", "group__views.html#ga4c182e3717afcf8bd1fc9be9e9c5cbf3", null ],
+    [ "vcl::views::tangents", "group__views.html#ga86c8b681b57aba01d8261fd9942d5e37", null ],
+    [ "vcl::views::texCoords", "group__views.html#gac7587a6cd2948f792442e83a26fb7276", null ],
+    [ "vcl::views::vertices", "group__views.html#gae55a7544cb59464c26959bcc4cec23ea", null ],
+    [ "vcl::views::wedges", "group__views.html#ga1adeb86a747edccb1e6139e09b654df9", null ]
 ];

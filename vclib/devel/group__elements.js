@@ -1,29 +1,47 @@
 var group__elements =
 [
-    [ "Element Concepts", "group__element__concepts.html", "group__element__concepts" ],
-    [ "vcl::Edge< MeshType, Comps >", "classvcl_1_1Edge.html", [
-      [ "Edge", "classvcl_1_1Edge.html#a2f0fe90f69397e60bdb24d8701456a7b", null ],
-      [ "setVertices", "classvcl_1_1Edge.html#a00039503f4629d6bf7f9204c3b03903b", null ],
-      [ "setVertices", "classvcl_1_1Edge.html#af4defe6830da852c9c36f607b52b2ab6", null ],
-      [ "swap", "classvcl_1_1Edge.html#ad52d229d80966998a6f98fc19f6bcfa7", null ]
+    [ "vcl::Edge&lt; ContainerType &gt;", "classvcl_1_1Edge.html", [
+      [ "swap", "classvcl_1_1Edge.html#ade3f25ad513e91f0a12369881b12c207", null ],
+      [ "mesh::ElementContainer", "classvcl_1_1Edge.html#a163013c304f54c1a97a729ef02cbcffb", null ],
+      [ "swap", "classvcl_1_1Edge.html#a3a5405193ca0a7d33487e20aa9a16116", null ]
     ] ],
-    [ "vcl::Element< ELEM_ID, MeshType, Comps >", "classvcl_1_1Element.html", [
-      [ "Components", "classvcl_1_1Element.html#adfcfcd41c5f2c7353161cf9e96df2b5e", null ]
+    [ "vcl::EdgeComponents&lt; Comps &gt;", "structvcl_1_1EdgeComponents.html", null ],
+    [ "vcl::Face&lt; ContainerType &gt;", "classvcl_1_1Face.html", [
+      [ "swap", "classvcl_1_1Face.html#a82a20b66b623ad2e527f9ad7ab36c37c", null ],
+      [ "wedge", "classvcl_1_1Face.html#a6470756eded8e2ef360edcf48876e053", null ],
+      [ "wedgeMod", "classvcl_1_1Face.html#ab77ff92b74135c7a4e18b3dddd5a61a1", null ],
+      [ "wedges", "classvcl_1_1Face.html#a3ce091f528f1f4bcd90ad53cf6a49f94", null ],
+      [ "mesh::ElementContainer", "classvcl_1_1Face.html#a163013c304f54c1a97a729ef02cbcffb", null ],
+      [ "swap", "classvcl_1_1Face.html#aba6a3d847b27d7bbe515ed39cf41a04f", null ]
     ] ],
-    [ "vcl::Face< MeshType, Comps >", "classvcl_1_1Face.html", [
-      [ "Face", "classvcl_1_1Face.html#a322506e5fa8346509f28551603012ed4", null ],
-      [ "clearTTVCComponent", "classvcl_1_1Face.html#abc16cf25b7d10286cc8513b39719fdda", null ],
-      [ "eraseTTVCComponent", "classvcl_1_1Face.html#a2e8fd54384ff8de54a884532927560f2", null ],
-      [ "insertTTVCComponent", "classvcl_1_1Face.html#a831ae30db73fa7e86f31a7ba881716a2", null ],
-      [ "pushBackTTVCComponent", "classvcl_1_1Face.html#a7d500ea6699ed0de2c15843b35f1a6fc", null ],
-      [ "resizeTTVCComponent", "classvcl_1_1Face.html#a6c53545d2f36041daa7cfab3e581fda8", null ],
-      [ "resizeVertices", "classvcl_1_1Face.html#a184c3c35846d617ec54620457c57374d", null ],
-      [ "setVertices", "classvcl_1_1Face.html#a2ff09cba47db7a6c5b2e42036cfa86c8", null ],
-      [ "setVertices", "classvcl_1_1Face.html#ab9b8bb5b12300ca4edcbd8325a36887e", null ],
-      [ "swap", "classvcl_1_1Face.html#ad73a10568705f191da74a9417f19f3a7", null ]
+    [ "vcl::FaceComponents&lt; Comps &gt;", "structvcl_1_1FaceComponents.html", null ],
+    [ "vcl::Vertex&lt; ContainerType &gt;", "classvcl_1_1Vertex.html", [
+      [ "swap", "classvcl_1_1Vertex.html#afcfd670995efbf3631e0fb982b4e2f3d", null ],
+      [ "mesh::ElementContainer", "classvcl_1_1Vertex.html#a163013c304f54c1a97a729ef02cbcffb", null ],
+      [ "swap", "classvcl_1_1Vertex.html#a85e791a210b680629afc4ebf817e6db9", null ]
     ] ],
-    [ "vcl::Vertex< MeshType, Comps >", "classvcl_1_1Vertex.html", [
-      [ "Vertex", "classvcl_1_1Vertex.html#a8f52576067e73686e43cf48c186a9b32", null ],
-      [ "swap", "classvcl_1_1Vertex.html#aa263a161c74ac8398a40565ad6c0dc01", null ]
+    [ "vcl::VertexComponents&lt; Comps &gt;", "structvcl_1_1VertexComponents.html", null ],
+    [ "vcl::comp::WedgeContainerProxy&lt; FaceType &gt;", "classvcl_1_1comp_1_1WedgeContainerProxy.html", [
+      [ "at", "classvcl_1_1comp_1_1WedgeContainerProxy.html#a9ba8b6f169a84b8b7b6f918861e14c19", null ],
+      [ "colors", "classvcl_1_1comp_1_1WedgeContainerProxy.html#a3257108a84c3dd19189dbfe74a402030", null ],
+      [ "empty", "classvcl_1_1comp_1_1WedgeContainerProxy.html#aef7a775cb66aaa52eeec5506d2c802a0", null ],
+      [ "normals", "classvcl_1_1comp_1_1WedgeContainerProxy.html#afb2603843def93ea80f7c6f7406a1a1c", null ],
+      [ "operator[]", "classvcl_1_1comp_1_1WedgeContainerProxy.html#a9b117d3f48fdf4fe922ad01078f27586", null ],
+      [ "size", "classvcl_1_1comp_1_1WedgeContainerProxy.html#a0536c3cb138378fefb0cc94817912c5c", null ],
+      [ "texCoords", "classvcl_1_1comp_1_1WedgeContainerProxy.html#a4f958721200c4816995ef593081477a2", null ]
+    ] ],
+    [ "vcl::comp::WedgeProxy&lt; FaceType &gt;", "classvcl_1_1comp_1_1WedgeProxy.html", [
+      [ "color", "classvcl_1_1comp_1_1WedgeProxy.html#a99ee874a1acd960f03cb5c374d6e79d0", null ],
+      [ "index", "classvcl_1_1comp_1_1WedgeProxy.html#ac467c37dd8ddf67d7a816f54b4c3d52e", null ],
+      [ "isColorAvailable", "classvcl_1_1comp_1_1WedgeProxy.html#a6d6f3fcff9b139a826c05af0ec84b135", null ],
+      [ "isNormalAvailable", "classvcl_1_1comp_1_1WedgeProxy.html#a4565ba0829189c4f0e4da44ec66b3808", null ],
+      [ "isTexCoordAvailable", "classvcl_1_1comp_1_1WedgeProxy.html#a4d809b3c9e4477399d20e17647bf7273", null ],
+      [ "normal", "classvcl_1_1comp_1_1WedgeProxy.html#a1c12c3fccd084e4bcc85bb5d3b118172", null ],
+      [ "parentFace", "classvcl_1_1comp_1_1WedgeProxy.html#adce8eee0c4a2fb6d4a7ed3467b37358b", null ],
+      [ "swap", "classvcl_1_1comp_1_1WedgeProxy.html#a4aae2c7f27dcfe8f64c447d3dd99dcdb", null ],
+      [ "texCoord", "classvcl_1_1comp_1_1WedgeProxy.html#a9296b406f082137a714a2a0ff211fb82", null ],
+      [ "vertex", "classvcl_1_1comp_1_1WedgeProxy.html#aa9a56e84f06943bab45a331e0eef8e4a", null ],
+      [ "vertexIndex", "classvcl_1_1comp_1_1WedgeProxy.html#a503df0afad97ca9b1471a15dc4ae3a90", null ],
+      [ "swap", "classvcl_1_1comp_1_1WedgeProxy.html#a2f994cbb6daba6e4c92ba25bb35f5839", null ]
     ] ]
 ];

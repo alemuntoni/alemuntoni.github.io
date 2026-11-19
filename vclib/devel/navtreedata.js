@@ -28,47 +28,34 @@ var NAVTREE =
     [ "Installation", "md_docs_2pages_20__installation.html", [
       [ "C++", "md_docs_2pages_20__installation.html#autotoc_md2", [
         [ "Supported Compilers", "md_docs_2pages_20__installation.html#autotoc_md3", null ],
-        [ "Requirements & System Dependencies", "md_docs_2pages_20__installation.html#autotoc_md4", [
-          [ "Core Module", "md_docs_2pages_20__installation.html#autotoc_md5", null ],
-          [ "Render Module", "md_docs_2pages_20__installation.html#autotoc_md6", null ],
-          [ "External Module", "md_docs_2pages_20__installation.html#autotoc_md7", null ]
+        [ "1. Pre-built Packages &amp; Installers (Recommended)", "md_docs_2pages_20__installation.html#autotoc_md4", [
+          [ "Windows (.exe / .msi)", "md_docs_2pages_20__installation.html#autotoc_md5", null ],
+          [ "macOS (Homebrew)", "md_docs_2pages_20__installation.html#autotoc_md6", null ],
+          [ "Linux (.deb / .rpm)", "md_docs_2pages_20__installation.html#autotoc_md7", null ]
         ] ],
-        [ "CMake Integration", "md_docs_2pages_20__installation.html#autotoc_md8", [
-          [ "1. Using <tt>find_package</tt> (Pre-compiled Archive)", "md_docs_2pages_20__installation.html#autotoc_md9", null ],
-          [ "2. Using <tt>FetchContent</tt> (Build from Source)", "md_docs_2pages_20__installation.html#autotoc_md10", null ],
-          [ "3. Using <tt>add_subdirectory</tt>", "md_docs_2pages_20__installation.html#autotoc_md11", null ]
+        [ "2. CMake Integration (Build from Source or Archives)", "md_docs_2pages_20__installation.html#autotoc_md9", [
+          [ "Using Pre-compiled Archives", "md_docs_2pages_20__installation.html#autotoc_md10", null ],
+          [ "Using FetchContent (Build from Source)", "md_docs_2pages_20__installation.html#autotoc_md11", null ],
+          [ "Using add_subdirectory (Build from Source)", "md_docs_2pages_20__installation.html#autotoc_md12", null ]
         ] ],
-        [ "Header-only Usage (Core Module)", "md_docs_2pages_20__installation.html#autotoc_md12", null ]
+        [ "3. Header-only Usage (Core Module)", "md_docs_2pages_20__installation.html#autotoc_md14", null ],
+        [ "4. System Dependencies", "md_docs_2pages_20__installation.html#autotoc_md16", [
+          [ "Core Module", "md_docs_2pages_20__installation.html#autotoc_md17", null ],
+          [ "Render Module", "md_docs_2pages_20__installation.html#autotoc_md18", null ],
+          [ "External Module", "md_docs_2pages_20__installation.html#autotoc_md19", null ]
+        ] ]
       ] ],
-      [ "Python", "md_docs_2pages_20__installation.html#autotoc_md13", null ]
+      [ "Python", "md_docs_2pages_20__installation.html#autotoc_md20", null ]
     ] ],
-    [ "VCLib Core Module", "md_docs_2pages_21__core.html", [
-      [ "Basic Concepts", "core_basic_concepts.html", [
-        [ "Let's start", "core_basic_concepts.html#autotoc_md15", null ],
-        [ "Access Elements", "core_basic_concepts.html#autotoc_md16", null ],
-        [ "Add, set and delete Elements", "core_basic_concepts.html#autotoc_md17", null ],
-        [ "Components", "core_basic_concepts.html#autotoc_md18", null ]
-      ] ],
-      [ "Spatial and other Data Structures", "core_space.html", [
-        [ "Spatial Data Structures", "core_space.html#autotoc_md19", null ]
-      ] ],
-      [ "Built-in Meshes", "core_meshes.html", null ],
-      [ "Load/Save", "core_load_save.html", null ],
-      [ "VCLib Meshes", "core_mesh.html", [
-        [ "Components", "mesh_components_page.html", null ],
-        [ "Elements", "mesh_elements_page.html", null ],
-        [ "Containers", "mesh_containers_page.html", null ]
-      ] ],
-      [ "Organization of the Core Module", "core_organization.html", null ]
-    ] ],
+    [ "VCLib Core Module", "md_docs_2pages_21__core.html", "md_docs_2pages_21__core" ],
     [ "VCLib Render Module", "md_docs_2pages_22__render.html", null ],
     [ "VCLib Version Management", "md_docs_2VERSION__MANAGEMENT.html", [
-      [ "Overview", "md_docs_2VERSION__MANAGEMENT.html#autotoc_md23", null ],
-      [ "Version Update Workflow", "md_docs_2VERSION__MANAGEMENT.html#autotoc_md24", [
-        [ "Usage", "md_docs_2VERSION__MANAGEMENT.html#autotoc_md25", null ],
-        [ "Dry Run", "md_docs_2VERSION__MANAGEMENT.html#autotoc_md26", null ]
+      [ "Overview", "md_docs_2VERSION__MANAGEMENT.html#autotoc_md34", null ],
+      [ "Version Update Workflow", "md_docs_2VERSION__MANAGEMENT.html#autotoc_md35", [
+        [ "Usage", "md_docs_2VERSION__MANAGEMENT.html#autotoc_md36", null ],
+        [ "Dry Run", "md_docs_2VERSION__MANAGEMENT.html#autotoc_md37", null ]
       ] ],
-      [ "Using Version in C++ Code", "md_docs_2VERSION__MANAGEMENT.html#autotoc_md27", null ]
+      [ "Using Version in C++ Code", "md_docs_2VERSION__MANAGEMENT.html#autotoc_md38", null ]
     ] ],
     [ "Todo List", "todo.html", null ],
     [ "Topics", "topics.html", "topics" ],
@@ -95,26 +82,27 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "abstract__drawable__mesh_8h_source.html",
-"classvcl_1_1BitVector.html#aebe4140f9df68e8054ba9389468abe9c",
-"classvcl_1_1DrawableLines.html#a041bc42d98efb9016e96f2bb06be0d26",
-"classvcl_1_1HeadlessManager.html#ae6a09e2bb26942ba8fd13e3bacfa1451",
-"classvcl_1_1Mesh.html#a3485f09ee7c81f444bf5fd88ea9fa371",
-"classvcl_1_1MeshRenderInfo.html#a0a3f8646d2bb2a3777bd6f21f10179d2ad230b9dc271eba968f6911d7228e5195",
-"classvcl_1_1PointSampler.html#a1c34a296377e665aba9c01517127a86d",
-"classvcl_1_1RenderApp_1_1DRW.html",
-"classvcl_1_1TrackBallEventDrawerT.html#a3c36087dd05ed3f4d6c44afb6d361b53",
-"classvcl_1_1comp_1_1AdjacentFaces.html#a80ac4ce6ae61fd697e81f337a7615200",
-"classvcl_1_1comp_1_1VertexReferences.html#a09ab5d68d17d89ec226cc2fdcf031800",
-"classvcl_1_1mesh_1_1VertexContainer.html#a3140ae97a7243135bb2e762309d3ac42",
-"conceptvcl_1_1HasPerFaceColor.html",
-"conceptvcl_1_1edge_1_1HasOptionalColor.html",
-"dir_01c02a8cb29e470904ba2725b635cf04.html",
-"functions_i.html",
-"group__core__polygon.html#ga3a8d4a5e28ec3ba08e0525b15aebeb1c",
-"group__mesh__requirements.html#ga64d5aafc5d7a737a9654c763ee5a8132",
-"mesh_2elem__algorithms_2polygon_2ear__cut_8h_source.html",
-"structvcl_1_1NumberOfTypes_3_01TypeWrapper_3_01Args_8_8_8_01_4_01_4.html"
+"classvcl_1_1BitSet.html#ac2f38093f9e5250dd515a3566255e2f5",
+"classvcl_1_1DrawableLines.html#a2579897bb690132225bd20ccfe6976c1",
+"classvcl_1_1HeadlessMeshViewer.html#a0bfec12541b109c8f2d12cf8a307f952",
+"classvcl_1_1Mesh.html#a2751582fd4c409e660b96aa8f37e9371",
+"classvcl_1_1MeshSelectionBuffers.html#a69cc8471241213acd6e5afcc09df5f31",
+"classvcl_1_1Points.html#a3ecd81fa56e9d44f7cab900f8dfaeec2",
+"classvcl_1_1ScreenSpacePointsUniforms.html#ab0061319cda638fe4cd6166867defc52",
+"classvcl_1_1TriangleWrapper.html#a6aac9f24e988794e7eaf14bfa7b5233a",
+"classvcl_1_1comp_1_1MaterialIndex.html#a398366d33f9a8e39cfa32e7bdd9c1d24",
+"classvcl_1_1mesh_1_1ElementContainer.html#a2efaec59f4379d27cc54c826c8189218",
+"classvcl_1_1qt_1_1ScreenShotDialog.html",
+"conceptvcl_1_1LoggerConcept.html",
+"container__component_8h_source.html",
+"filter_8h_source.html",
+"group__core__distance.html#gaaf9cbf4ee5d585ac72239720d23c13c5",
+"group__load__mesh.html#ga0f8e92f1b0fb7f135ec498cf08a91578",
+"imgui_2gui_2toolbar__frames_2bounding__box__editor__frame_8h_source.html",
+"selection__mode_8h_source.html",
+"tri__mesh_8h_source.html"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronisation';
-var SYNCOFFMSG = 'click to enable panel synchronisation';
+var SYNCONMSG = 'click to disable panel synchronization';
+var SYNCOFFMSG = 'click to enable panel synchronization';
+var LISTOFALLMEMBERS = 'List of all members';

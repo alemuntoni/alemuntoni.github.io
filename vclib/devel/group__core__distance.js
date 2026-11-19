@@ -1,12 +1,14 @@
 var group__core__distance =
 [
     [ "vcl::boundedDistance", "group__core__distance.html#gad75f3d76ef4694a556b372936e9cf95d", null ],
+    [ "vcl::boundedDistance", "group__core__distance.html#ga6994c233e6ab203f9e1114153a665754", null ],
     [ "vcl::boundedDistance", "group__core__distance.html#gacabbf35976801227ea6f0691c4591d4b", null ],
     [ "vcl::boundedDistance", "group__core__distance.html#gaaf9cbf4ee5d585ac72239720d23c13c5", null ],
     [ "vcl::boundedDistance", "group__core__distance.html#gaa8e5845727a87961c75fcc5ff6417afe", null ],
     [ "vcl::boundedDistance", "group__core__distance.html#ga1e0dc8f2c661213d08babd63a52e4540", null ],
     [ "vcl::boundedDistFunction", "group__core__distance.html#ga1b9b1898fbdb7ba13f1e1adaf832ba4d", null ],
     [ "vcl::distance", "group__core__distance.html#gaa0772a9cd89d28cb7b9b3fca3017a7c4", null ],
+    [ "vcl::distance", "group__core__distance.html#gaa4862fb255100da1e40deeadc718d2b3", null ],
     [ "vcl::distance", "group__core__distance.html#ga84b245a708467194d220c0169da55ceb", null ],
     [ "vcl::distance", "group__core__distance.html#ga5e21c22f72f4672c0ba2c9d284a5a933", null ],
     [ "vcl::distance", "group__core__distance.html#ga3654b81a941f0948ab837713a3bca3d0", null ],

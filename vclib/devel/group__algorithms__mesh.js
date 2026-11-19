@@ -6,6 +6,7 @@ var group__algorithms__mesh =
     [ "Import/Export Mesh Algorithms", "group__import__export.html", "group__import__export" ],
     [ "Mesh Intersection Algorithms", "group__intersection__mesh.html", "group__intersection__mesh" ],
     [ "Point Sampling Algorithms", "group__point__sampling.html", "group__point__sampling" ],
+    [ "Shuffling Algorithms", "group__shuffle.html", null ],
     [ "Mesh Statistic Algorithms", "group__mesh__stat.html", "group__mesh__stat" ],
     [ "Update Mesh Algorithms", "group__update.html", "group__update" ],
     [ "vcl::convexHull", "group__algorithms__mesh.html#ga6799a920686c8d65f0d9db3caa515d07", null ],

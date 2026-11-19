@@ -1,11 +1,6 @@
 var classvcl_1_1DrawableEnvironment =
 [
-    [ "TextureType", "classvcl_1_1DrawableEnvironment.html#a94ee81484afb0db7b7409a3f33f2c741", [
-      [ "RAW_CUBE", "classvcl_1_1DrawableEnvironment.html#a94ee81484afb0db7b7409a3f33f2c741a435ca4c3997d276c96d21fa33d83c112", null ],
-      [ "IRRADIANCE", "classvcl_1_1DrawableEnvironment.html#a94ee81484afb0db7b7409a3f33f2c741a259894cccd0fad179d37236a10994132", null ],
-      [ "SPECULAR", "classvcl_1_1DrawableEnvironment.html#a94ee81484afb0db7b7409a3f33f2c741a0df54c320628149300093da5e2ff693d", null ],
-      [ "BRDF_LUT", "classvcl_1_1DrawableEnvironment.html#a94ee81484afb0db7b7409a3f33f2c741afa7f27f43a47bea5faf56ed7928bf898", null ]
-    ] ],
+    [ "TextureType", "classvcl_1_1DrawableEnvironment.html#a94ee81484afb0db7b7409a3f33f2c741", null ],
     [ "DrawableEnvironment", "classvcl_1_1DrawableEnvironment.html#a64896c57afa06c0206a2b9e686b527f8", null ],
     [ "bindTexture", "classvcl_1_1DrawableEnvironment.html#a939b999cf412e5484ee6828e600f34ee", null ],
     [ "canDraw", "classvcl_1_1DrawableEnvironment.html#af25c2813ccf52a6fee51d6e40055a549", null ],

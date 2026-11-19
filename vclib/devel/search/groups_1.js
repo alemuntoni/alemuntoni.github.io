@@ -2,8 +2,8 @@ var searchData=
 [
   ['base_0',['Base',['../group__base.html',1,'']]],
   ['bounding_20box_20algorithms_1',['Core Bounding Box Algorithms',['../group__core__bounding__box.html',1,'']]],
-  ['box_20algorithms_2',['box algorithms',['../group__core__bounding__box.html',1,'Core Bounding Box Algorithms'],['../group__core__box.html',1,'Core Box Algorithms']]],
+  ['box_20algorithms_2',['Box Algorithms',['../group__core__bounding__box.html',1,'Core Bounding Box Algorithms'],['../group__core__box.html',1,'Core Box Algorithms']]],
   ['box2_20algorithms_3',['Core Box2 Algorithms',['../group__core__box2.html',1,'']]],
   ['box3_20algorithms_4',['Core Box3 Algorithms',['../group__core__box3.html',1,'']]],
-  ['buffer_20algorithms_5',['buffer algorithms',['../group__export__buffer.html',1,'Export Mesh to Buffer Algorithms'],['../group__import__buffer.html',1,'Import Mesh from Buffer Algorithms']]]
+  ['buffer_20algorithms_5',['Buffer Algorithms',['../group__export__buffer.html',1,'Export Mesh to Buffer Algorithms'],['../group__import__buffer.html',1,'Import Mesh from Buffer Algorithms']]]
 ];

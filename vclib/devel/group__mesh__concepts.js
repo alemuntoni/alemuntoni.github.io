@@ -1,17 +1,19 @@
 var group__mesh__concepts =
 [
     [ "Components Concepts", "group__components__concepts.html", "group__components__concepts" ],
-    [ "Element Concepts", "group__element__concepts.html", "group__element__concepts" ],
-    [ "vcl::MeshConcept", "conceptvcl_1_1MeshConcept.html", null ],
-    [ "vcl::ElementOrMeshConcept", "conceptvcl_1_1ElementOrMeshConcept.html", null ],
-    [ "vcl::RangeOfMeshes", "conceptvcl_1_1RangeOfMeshes.html", null ],
     [ "vcl::EdgeMeshConcept", "conceptvcl_1_1EdgeMeshConcept.html", null ],
     [ "vcl::FaceMeshConcept", "conceptvcl_1_1FaceMeshConcept.html", null ],
-    [ "vcl::HasBoundingBox", "conceptvcl_1_1HasBoundingBox.html", null ],
-    [ "vcl::HasColor", "conceptvcl_1_1HasColor.html", null ],
-    [ "vcl::HasCustomComponents", "conceptvcl_1_1HasCustomComponents.html", null ],
-    [ "vcl::HasMark", "conceptvcl_1_1HasMark.html", null ],
-    [ "vcl::HasMaterials", "conceptvcl_1_1HasMaterials.html", null ],
-    [ "vcl::HasName", "conceptvcl_1_1HasName.html", null ],
-    [ "vcl::HasTransformMatrix", "conceptvcl_1_1HasTransformMatrix.html", null ]
+    [ "vcl::HasContainerOf", "conceptvcl_1_1HasContainerOf.html", null ],
+    [ "vcl::HasEdges", "conceptvcl_1_1HasEdges.html", null ],
+    [ "vcl::HasElementComponent", "conceptvcl_1_1HasElementComponent.html", null ],
+    [ "vcl::HasElementOptionalComponent", "conceptvcl_1_1HasElementOptionalComponent.html", null ],
+    [ "vcl::HasFaces", "conceptvcl_1_1HasFaces.html", null ],
+    [ "vcl::HasPolygons", "conceptvcl_1_1HasPolygons.html", null ],
+    [ "vcl::HasQuads", "conceptvcl_1_1HasQuads.html", null ],
+    [ "vcl::HasTriangles", "conceptvcl_1_1HasTriangles.html", null ],
+    [ "vcl::MeshConcept", "conceptvcl_1_1MeshConcept.html", null ],
+    [ "vcl::PolygonMeshConcept", "conceptvcl_1_1PolygonMeshConcept.html", null ],
+    [ "vcl::QuadMeshConcept", "conceptvcl_1_1QuadMeshConcept.html", null ],
+    [ "vcl::RangeOfMeshes", "conceptvcl_1_1RangeOfMeshes.html", null ],
+    [ "vcl::TriangleMeshConcept", "conceptvcl_1_1TriangleMeshConcept.html", null ]
 ];
